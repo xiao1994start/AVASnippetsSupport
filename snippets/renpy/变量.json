@@ -1,0 +1,21 @@
+{
+  "define 常量 定义语句": {
+    "prefix": "new define ",
+    "body": "define ${1:const} = ${2:value}",
+    "description": [
+      "define 常量 定义语句",
+      "\t1.在初始化阶段给一个全局变量赋值",
+      "\t2.设定游戏配置项变量"
+    ]
+  },
+  "default 变量 定义语句": {
+    "prefix": "new default ",
+    "body": "default ${1:var} = ${2:value}",
+    "description": [
+      "default 变量 定义语句",
+      "\t1.定义临时变量",
+      "\t2.修改已经定义过的全局变量 (如使用 default 语句定义的变量)",
+      "\t3.调用函数或方法"
+    ]
+  }
+}

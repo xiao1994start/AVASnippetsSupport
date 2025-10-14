@@ -34,7 +34,7 @@
     "description": ["创建 else_if 条件判断"]
   },
   "创建 switch_case 条件判断": {
-    "prefix": ["create switch case", "c switch case", "switch case"],
+    "prefix": ["new switch case", "switch case -switch"],
     "body": [
       "switch (${1:key}) {",
       "    case ${2:value}:",
@@ -48,7 +48,7 @@
     "description": ["创建 switch_case 条件判断"]
   },
   "创建 case 判断": {
-    "prefix": ["create case", "c case", "case"],
+    "prefix": ["new case", "case -switch"],
     "body": ["case ${1:value}:", "$0", "  break"],
     "description": ["创建 case 判断"]
   }

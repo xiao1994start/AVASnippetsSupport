@@ -4,7 +4,6 @@
     "body": "#region ${1:Region name}\n$0\n#endregion ${1:Region name}",
     "description": "创建新的折叠区域."
   },
-
   "Label 创建新标签": {
     "prefix": "label",
     "body": "label ${1:label_name}:\n\t${2:...}",

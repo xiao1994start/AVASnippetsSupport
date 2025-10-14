@@ -12,7 +12,7 @@
     "description": ["引入 enum 枚举类.常用模块"]
   },
   "enum.object 创建枚举类对象.tmpl": {
-    "prefix": ["create class enum =-enum", "c class enum =-enum"],
+    "prefix": ["new class enum =-enum"],
     "body": [
       "class ${1:EnumObject}(Enum):",
       "    # * NAME = value: int | str | ...",

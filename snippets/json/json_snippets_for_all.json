@@ -3,14 +3,14 @@
     "prefix": ["language -json-snippets"],
     "body": [
       "{",
-      "  \"language\": \"${1|python,bat,vue,scss,typescript,html,vue-html,javascript,json,snippets|}\",",
+      "  \"language\": \"${1|python,bat,renpy,vue,scss,typescript,html,vue-html,javascript,json,snippets|}\",",
       "  \"path\": \"./$0\"",
       "},"
     ],
     "description": ["代码片段语言"]
   },
   "snippets.new 新建代码片段": {
-    "prefix": ["new snippets -json-snippets", "n snippets -json-snippets"],
+    "prefix": ["new snippets -json-snippets"],
     "body": [
       "\"描述\": {",
       "  \"prefix\": [\"${2:钩子}\"],",
@@ -68,12 +68,12 @@
   },
   "snippets.换行": {
     "prefix": [" nn -snippets"],
-    "body": ["\\$0"],
+    "body": ["\\n"],
     "description": ["换行"]
   },
   "snippets.缩进": {
     "prefix": [" tt -snippets"],
-    "body": ["\\$0"],
+    "body": ["\\t"],
     "description": ["缩进"]
   }
 }

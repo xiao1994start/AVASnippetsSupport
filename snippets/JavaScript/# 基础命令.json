@@ -1,6 +1,6 @@
 {
   "创建 function 方法函数": {
-    "prefix": ["new func -function", "n func -function"],
+    "prefix": ["new func -function"],
     "body": ["function ${1:name}(${2:params}) {", "  $0", "}", ""],
     "description": "创建 function 方法函数"
   },
@@ -16,5 +16,20 @@
       "导出语法",
       "将一个对象、函数、类或值作为模块的默认导出(暴露)，供其他文件引入使用"
     ]
+  },
+  "var 变量-函数作用域": {
+    "prefix": ["var", "new var"],
+    "body": ["var $0"],
+    "description": ["var 变量-函数作用域"]
+  },
+  "let 变量-块级作用域": {
+    "prefix": ["let", "new let"],
+    "body": ["let $0"],
+    "description": ["let 变量-块级作用域"]
+  },
+  "const 常量-块级作用域": {
+    "prefix": ["const", "new const"],
+    "body": ["const $0"],
+    "description": ["const 常量-块级作用域"]
   }
 }

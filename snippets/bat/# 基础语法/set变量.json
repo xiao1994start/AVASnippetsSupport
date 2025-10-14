@@ -1,6 +1,6 @@
 {
   "设置变量": {
-    "prefix": ["set -set"],
+    "prefix": ["set -set", "new -set"],
     "body": ["set $0"],
     "description": "设置变量"
   },

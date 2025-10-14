@@ -807,6 +807,10 @@
       },
       {
         "language": "renpy",
+        "path": "./snippets/renpy/变量.json"
+      },
+      {
+        "language": "renpy",
         "path": "./snippets/renpy/基础语法.json"
       },
       {

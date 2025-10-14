@@ -1,6 +1,6 @@
 {
   "创建 class 对象": {
-    "prefix": ["new class", "n class"],
+    "prefix": ["new class", "class -class"],
     "body": [
       "class ${1:NewObject}(${2:}):",
       "    # * class default args(类变量) | signal(信号)",
@@ -21,7 +21,7 @@
     "description": ["class 父类初始化方法初始化继承属性"]
   },
   "class初始化": {
-    "prefix": ["new class init -class", "n class init -class"],
+    "prefix": ["new class init -class", "class init -class"],
     "body": [
       "def __init__(self) -> None:",
       "    \"\"\"",
@@ -37,7 +37,7 @@
     "description": ["class类self"]
   },
   "创建class - def函数": {
-    "prefix": ["new class def -class", "n class def -class"],
+    "prefix": ["new class def -class", "class def -class"],
     "body": [
       "def ${1:name}(self):",
       "    \"\"\"",
@@ -48,7 +48,7 @@
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
-    "prefix": ["new def", "n def"],
+    "prefix": ["new def", "def -def"],
     "body": [
       "def ${1:name}():",
       "    \"\"\"",
@@ -59,7 +59,7 @@
     "description": ["创建def函数"]
   },
   "lambda:匿名函数": {
-    "prefix": ["new lambda", "n lambda"],
+    "prefix": ["new lambda", "lambda -lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },

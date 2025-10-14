@@ -6,8 +6,8 @@ for %%v in ("AVASnippetsSupport*.vsix") do (
     del /F /Q "%%v"
 )
 
-CD /D "%~dp0\.."
-ECHO %cd%
+CD /D "%~dp0\..\..\env"
+ECHO %CD%
 
 @REM 标准化文件名
 if exist "%cd%\*node*" (
@@ -40,7 +40,7 @@ ECHO 正在安装 yo generate-code 库
 call npm install --global yo generator-code --registry https://registry.npmmirror.com/
 ECHO 安装 - 更新 完成 & ECHO.
 
-CD /D "%cd%\AVASnippetsSupport"
+CD /D "%~dp0"
 call vsce package
 ECHO 封装完成
 for %%i in (*.vsix) do (
