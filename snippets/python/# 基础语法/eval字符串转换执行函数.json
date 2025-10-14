@@ -1,0 +1,10 @@
+{
+  "eval 字符串表达式": {
+    "prefix": ["eval =-eval"],
+    "body": ["eval(${1:字符串表达式}, ${2:globals, locals})"],
+    "description": [
+      "eval() 函数用来执行一个字符串表达式, 并返回表达式的值",
+      "\n字符串表达式可以包含变量、函数调用、运算符和其他 Python 语法元素"
+    ]
+  }
+}

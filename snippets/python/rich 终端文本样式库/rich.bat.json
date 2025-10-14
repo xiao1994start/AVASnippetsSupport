@@ -1,0 +1,18 @@
+{
+  "pip.rich 终端输出文本样式库": {
+    "prefix": ["pip rich"],
+    "body": [
+      "pip install -U rich -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["rich 终端输出文本样式库"]
+  },
+  "uv.rich 终端输出文本样式库": {
+    "prefix": ["uv rich"],
+    "body": [
+      "uv add \"rich\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["rich 终端输出文本样式库"]
+  }
+}

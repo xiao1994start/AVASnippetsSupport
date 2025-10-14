@@ -1,0 +1,43 @@
+{
+  "flet.Icon 使用Flet自带图标": {
+    "prefix": ["ft Icon -ft", "flet Icon -flet"],
+    "body": ["ft.Icon(name=${1:'settings'})"],
+    "description": ["flet.Icon 使用Flet自带图标"]
+  },
+  "flet.Image 图像": {
+    "prefix": ["ft Image -ft", "flet Image -flet"],
+    "body": [
+      "ft.Image(src='Path对象需要转换为字符串', width=32, height=32, border_radius=16)"
+    ],
+    "description": ["flet.Image 图像"]
+  },
+  "flet.Markdown 以 Markdown 格式呈现文本": {
+    "prefix": ["ft Markdown -ft", "flet Markdown -flet"],
+    "body": [
+      "ft.Markdown(",
+      "    value=$0,",
+      "    # selectable=True,  # 允许选择",
+      "    # extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,  # * 启用 GitHub Web 样式",
+      ")"
+    ],
+    "description": ["flet.Markdown 以 Markdown 格式呈现文本"]
+  },
+  "flet.Text 文本显示控件": {
+    "prefix": ["ft Text -ft", "flet Text -flet"],
+    "body": ["ft.Text(value=$0)"],
+    "description": ["flet.Text 文本显示控件"]
+  },
+  "flet.TextSpan ft.Text文本控件[spans]子控件": {
+    "prefix": ["ft TextSpan -ft", "flet TextSpan -flet"],
+    "body": ["ft.TextSpan(text=$0)"],
+    "description": [
+      "flet.TextSpan ft.Text文本控件[spans]子控件",
+      "\n\t-富文本显示控件,适用于精细化控制文本显示样式"
+    ]
+  },
+  "flet.ProgressRing 环形循环旋转进度指示器": {
+    "prefix": ["ft ProgressRing -ft", "flet ProgressRing -flet"],
+    "body": ["ft.ProgressRing()"],
+    "description": ["flet.ProgressRing 环形循环旋转进度指示器"]
+  }
+}

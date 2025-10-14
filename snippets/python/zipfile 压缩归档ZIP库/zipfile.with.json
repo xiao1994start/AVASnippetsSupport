@@ -1,0 +1,23 @@
+{
+  "zipfile.extractall 解压全部文件到": {
+    "prefix": ["zipfile extractall"],
+    "body": [".extractall(${1:out_path})  # 解压全部文件到"],
+    "description": ["zipfile.extractall 解压全部文件到"]
+  },
+  "with ZipFile -r 解压文件到": {
+    "prefix": ["with zipfile ZipFile -r"],
+    "body": [
+      "with zipfile.ZipFile(zip_path, \"r\") as zip_ref:",
+      "    zip_ref.extractall(${1:out_path})  # 解压到目录"
+    ],
+    "description": ["with ZipFile -r 解压文件到"]
+  },
+  "with ZipFile -w 解压文件到": {
+    "prefix": ["with zipfile ZipFile -w"],
+    "body": [
+      "with zipfile.ZipFile(out_zip, \"w\", zipfile.ZIP_DEFLATED) as zip_ref:",
+      "    zip_ref.write(${1:file_path})  # 解压到目录"
+    ],
+    "description": ["with ZipFile -w 解压文件到"]
+  }
+}

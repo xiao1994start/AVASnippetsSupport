@@ -1,0 +1,107 @@
+{
+  "引入 multiprocessing 多进程依赖": {
+    "prefix": ["import multiprocessing", "im multiprocessing as mp"],
+    "body": [
+      "import multiprocessing as mp  # * 多进程依赖",
+      "from multiprocessing import Pool, Process, Queue  # 进程池, 进程, 队列"
+    ],
+    "description": ["引入 multiprocessing 多进程依赖"]
+  },
+  "multiprocessing.Process 创建单个进程": {
+    "prefix": ["mp Process -multiprocessing", "Process -multiprocessing"],
+    "body": ["Process(target=${1:func}, args=[${2:args}])"],
+    "description": [
+      "multiprocessing.Process 创建单个进程",
+      "适合场景:",
+      "\n\t-每个进程执行的任务相互独立, 没有依赖关系",
+      "\n\t-需要对每个进程进行详细的控制和管理",
+      "\n\t-需要获得每个进程的返回结果",
+      "\n\t-需要控制每个进程的生命周期"
+    ]
+  },
+  "multiprocessing.start 启动进程": {
+    "prefix": ["mp start -multiprocessing", "start -multiprocessing"],
+    "body": ["start()"],
+    "description": ["multiprocessing.start 启动进程"]
+  },
+  "multiprocessing.join 在当前位置阻塞主进程": {
+    "prefix": ["mp join -multiprocessing"],
+    "body": ["join()"],
+    "description": [
+      "multiprocessing.join 在当前位置阻塞主进程",
+      "等待带执行 join() 的进程结束后再继续执行主进程"
+    ]
+  },
+  "with multiprocessing.Pool 创建进程池": {
+    "prefix": [
+      "with multiprocessing Pool -multiprocessing",
+      "with mp Pool -multiprocessing"
+    ],
+    "body": [
+      "with Pool(processes=4) as p:",
+      "    \"\"\"",
+      "    创建进程池 p, 进程数: [processes]",
+      "    apply(func, args=(arg_1, ...)):  同步执行任务, 进程池中的一个工作进程中阻塞式执行, 直接返回结果; args非必要时可以省略, 或使用 Iterable 可迭代对象(list/tuple/set/dict/range/str/...)",
+      "        result_apply = p.apply(func, ('task_apply_name', args))",
+      "",
+      "    apply_async(func, args=(arg_1, ...)): 异步执行任务, 会在进程池中的任意一个工作进程中执行, 返回一个 AsyncResult 对象, 可以通过 AsyncResult 对象获取结果; args非必要时可以省略, 或使用 Iterable 可迭代对象",
+      "    [更灵活，但需手动循环添加任务]",
+      "        result_apply_async = p.apply_async(func, ('task_apply_async_name', args)).get()",
+      "            get(timeout=None) 用于获取执行结果",
+      "            wait(timeout=None) 阻塞, 直到返回结果, 或者 timeout 秒后超时",
+      "            ready() 返回 bool 执行状态, 是否已经完成",
+      "            successful() 返回 bool 判断调用是否已经完成并且未引发异常",
+      "",
+      "    map(func, iterable=(arg, ...)): 批量执行\"单一\"参数函数, iterable 为可迭代对象, 只接受单参数",
+      "        result_map = p.map(func, ['map_tesk'])  # 完整的 str 字符串参数不要使用 tuple 元组传入, 否则会被遍历迭代",
+      "",
+      "    starmap(func, iterable=[(), (arg_1, ...)]): 批量执行\"多个\"参数函数, iterable 为 [()] 空的可迭代对象作为形式参数",
+      "    [最适合带多个参数的任务]",
+      "        result_starmap = p.starmap(func, iterable=[('starmap_tesk', args), ()])",
+      "",
+      "    close(): 阻止后续任务提交到进程池, 当所有任务执行完成后, 工作进程会退出 ",
+      "    terminate(): 不必等待未完成的任务, 立即停止工作进程. 当进程池对象被垃圾回收时, 会立即调用 terminate()",
+      "    join(): 等待工作进程结束[调用 join() 前必须先调用 close() 或者 terminate()]",
+      "",
+      "    eg.示例:",
+      "        def func(name='默认进程任务', t=2):",
+      "            import time",
+      "",
+      "            print(f'线程 {name} 开始执行')",
+      "            time.sleep(t)",
+      "            print(f'线程 {name} 结束执行 等待{t}s')",
+      "            return f'{name} 执行完毕'",
+      "        if __name__ == '__main__':",
+      "            # * multiprocessing 的 Pool 必须在 if __name__ == '__main__': 运行入口中创建并测试运行",
+      "            p = Pool(processes=4)",
+      "            result_apply = p.apply(func, ('apply_tesk', 1))",
+      "            print(result_apply)",
+      "            result_apply_async = p.apply_async(func, ('apply_async_tesk', 1)).get()",
+      "            print(result_apply_async)",
+      "            result_map = p.map(func, ['map_tesk'])",
+      "            print(result_map)",
+      "            result_starmap = p.starmap(func, [('starmap_tesk', 1), ()])",
+      "            print(result_starmap)",
+      "            p.terminate()",
+      "            p.close()",
+      "            p.join()",
+      "    \"\"\"",
+      "    ...",
+      "    $0",
+      ""
+    ],
+    "description": [
+      "with multiprocessing.Pool 创建进程池",
+      "适合场景:",
+      "\n\t-任务可以并行执行, 且相互之间没有依赖关系",
+      "\n\t-任务的数量较大, 可以使用进程池进行复用",
+      "\n\t-只需要获取任务的返回结果, 而不需要对每个进程进行详细的控制和管理",
+      "\n\t-需要限制并行执行的进程数量"
+    ]
+  },
+  "multiprocessing.cpu_count 获取CPU核心数": {
+    "prefix": ["mp cpu_count -multiprocessing", "cpu_count -multiprocessing"],
+    "body": ["cpu_count()"],
+    "description": ["获取CPU核心数"]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "导入 shutil 高级文件管理模块": {
+    "prefix": ["import shutil", "im shutil"],
+    "body": ["import shutil"],
+    "description": ["导入shutil高级文件管理模块"]
+  },
+  "shutil.copyfile 文件拷贝": {
+    "prefix": ["shutil copyfile"],
+    "body": [
+      "shutil.copyfile(${1:src_StrOrBytesPath}, ${2:dst_StrOrBytesPath})"
+    ],
+    "description": [
+      "shutil.copyfile",
+      "    将名为 src 的文件的内容(不带元数据)拷贝到名为 dst 的文件并以尽可能高效的方式返回 dst.  src 和 dst 均为 数据型对象 或字符串形式的路径名",
+      "    dst 必须是完整的目标文件名; 对于接受目标目录路径的拷贝请参见 copy().  如果 src 和 dst 指定了同一个文件, 则将引发 SameFileError",
+      "    目标位置必须是可写的; 否则将引发 OSError 异常.  如果 dst 已经存在, 它将被替换.  特殊文件如字符或块设备以及管道无法用此函数来拷贝",
+      "    如果 follow_symlinks 为假值且 src 为符号链接, 则将创建一个新的符号链接而不是拷贝 src 所指向的文件",
+      "    引发一个 审计事件 shutil.copyfile 附带参数 src, dst"
+    ]
+  },
+  "shutil.copymode 权限拷贝": {
+    "prefix": ["shutil copymode"],
+    "body": ["shutil.copymode(${1:srcObject}, ${2:dstObject})"],
+    "description": [
+      "shutil.copymode 将权限位从 src 拷贝到 dst.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名.  如果 follow_symlinks 为假值, 并且 src 和 dst 均为符号链接, 则 copymode() 将尝试修改 dst 本身的模式(而不是它所指向的文件).  此功能并不是在所有平台上均可用; 请参阅 copystat() 了解详情.  如果 copymode() 无法修改本机平台上的符号链接, 而它被要求这样做, 它将不做任何操作即返回",
+      "    引发一个 审计事件 shutil.copymode 附带参数 src, dst"
+    ]
+  },
+  "shutil.copystat 属性拷贝": {
+    "prefix": ["shutil copystat"],
+    "body": ["shutil.copystat(${1:srcObject}, ${2:dstObject})"],
+    "description": [
+      "shutil.copystat 将权限位、最近访问时间、最近修改时间和旗标从 src 拷贝到 dst.  在 Linux 上, copystat() 还会在可能的情况下拷贝“扩展属性”.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名",
+      "    如果 follow_symlinks 为假值, 并且 src 和 dst 均指向符号链接, copystat() 将作用于符号链接本身而非该符号链接所指向的文件 — 从 src 符号链接读取信息, 并将信息写入 dst 符号链接"
+    ]
+  },
+  "shutil.copy 文件或目录拷贝": {
+    "prefix": ["shutil copy"],
+    "body": ["shutil.copy(${1:srcObject}, ${2:dstPath})"],
+    "description": [
+      "shutil.copy 将文件 src 拷贝到文件或目录 dst.  src 和 dst 应为 路径类对象 或字符串.  如果 dst 指定了一个目录, 文件将使用 src 中的基准文件名拷贝到 dst 中.  如果 dst 指定了一个已存在的文件, 它将被替换.  返回新创建文件所对应的路径",
+      "    如果 follow_symlinks 为假值且 src 为符号链接, 则 dst 也将被创建为符号链接.  如果 follow_symlinks 为真值且 src 为符号链接, dst 将成为 src 所指向的文件的一个副本",
+      "    copy() 会拷贝文件数据和文件的权限模式 (参见 os.chmod()).  其他元数据, 例如文件的创建和修改时间不会被保留.  要保留所有原有的元数据, 请改用 copy2() ",
+      "    引发一个 审计事件 shutil.copyfile 附带参数 src, dst",
+      "    引发一个 审计事件 shutil.copymode 附带参数 src, dst"
+    ]
+  },
+  "shutil.copy2 文件或目录拷贝(尝试保留文件的元数据)": {
+    "prefix": ["shutil copy2"],
+    "body": ["shutil.copy2(${1:srcObject}, ${2:dstPaht})"],
+    "description": [
+      "shutil.copy2 类似于 copy(), 区别在于 copy2() 还会尝试保留文件的元数据",
+      "    当 follow_symlinks 为假值, 并且 src 为符号链接时, copy2() 会尝试将来自 src 符号链接的所有元数据拷贝到新创建的 dst 符号链接.  但是, 此功能不是在所有平台上均可用.  在此功能部分或全部不可用的平台上, copy2() 将尽量保留所有元数据, copy2() 一定不会由于无法保留文件元数据而引发异常",
+      "    copy2() 会使用 copystat() 来拷贝文件元数据.  请参阅 copystat() 了解有关修改符号链接元数据的平台支持的更多信息",
+      "    引发一个 审计事件 shutil.copyfile 附带参数 src, dst",
+      "    引发一个 审计事件 shutil.copystat 附带参数 src, dst"
+    ]
+  },
+  "shutil.copytree 递归目录树拷贝": {
+    "prefix": ["shutil copytree"],
+    "body": [
+      "shutil.copytree(${1:src}, ${2:dst}, dirs_exist_ok=${3|True,False|})"
+    ],
+    "description": [
+      "shutil.copytree 递归地将以 src 为根起点的整个目录树拷贝到名为 dst 的目录并返回目标目录.  所需的包含 dst 的中间目录在默认情况下也将被创建",
+      "    目录的权限和时间会通过 copystat() 来拷贝, 单个文件则会使用 copy2() 来拷贝",
+      "    如果 symlinks 为真值, 源目录树中的符号链接会在新目录树中表示为符号链接, 并且原链接的元数据在平台允许的情况下也会被拷贝; 如果为假值或省略, 则会将被链接文件的内容和元数据拷贝到新目录树",
+      "    当 symlinks 为假值时, 如果符号链接所指向的文件不存在, 则会在拷贝进程的末尾将一个异常添加到 Error 异常中的错误列表.  如果你希望屏蔽此异常那就将可选的 ignore_dangling_symlinks 旗标设为真值.  请注意此选项在不支持 os.symlink() 的平台上将不起作用",
+      "    如果给出了 ignore, 它必须是一个可调用对象, 该对象将接受 copytree() 所访问的目录以及 os.listdir() 所返回的目录内容列表作为其参数.  由于 copytree() 是递归地被调用的, ignore 可调用对象对于每个被拷贝目录都将被调用一次.  该可调用对象必须返回一个相对于当前目录的目录和文件名序列(即其第二个参数的子集); 随后这些名称将在拷贝进程中被忽略",
+      "    ignore_patterns() 可被用于创建这种基于 glob 风格模式来忽略特定名称的可调用对象",
+      "    如果发生了(一个或多个)异常, 将引发一个附带原因列表的 Error",
+      "    如果给出了 copy_function, 它必须是一个将被用来拷贝每个文件的可调用对象.  它在被调用时会将源路径和目标路径作为参数传入.  默认情况下, copy2() 将被使用, 但任何支持同样签名(与 copy() 一致)都可以使用",
+      "    如果 dirs_exist_ok 为(默认的)假值且 dst 已存在, 则会引发 FileExistsError.  如果 dirs_exist_ok 为真值, 则如果拷贝操作遇到已存在的目录时将继续执行, 并且在 dst 目录树中的文件将被 src 目录树中对应的文件所覆盖",
+      "    引发一个 审计事件 shutil.copytree 附带参数 src, dst"
+    ]
+  },
+  "shutil.rmtree 删除一个完整的目录树": {
+    "prefix": ["shutil rmtree"],
+    "body": ["shutil.rmtree(${1:StrPath_Path})"],
+    "description": [
+      "shutil.rmtree 删除一个完整的目录树; path 必须指向一个目录(但不能是一个目录的符号链接).  如果 ignore_errors 为真值, 则删除失败导致的错误将被忽略; 如果为假值或被省略, 则此类错误将通过调用由 onexc 或 onerror 所指定的处理句柄来处理, 或者如果此参数被省略, 异常将被传播给调用方",
+      "    如果提供了 onexc, 它必须为接受三个形参的可调用对象: function, path 和 excinfo",
+      "    第一个形参 function 是引发异常的函数; 它依赖于具体的平台和实现.  第二个形参 path 将为传递给 function 的路径名称.  第三个形参 excinfo 是被引发的异常.  由 onexc 所引发的异常将不会被捕获",
+      "    引发了个 审计事件 shutil.rmtree, 附带参数 path, dir_fd"
+    ]
+  },
+  "shutil.move 文件或目录 (src) 移到另一位置": {
+    "prefix": ["shutil move"],
+    "body": ["shutil.move(${1:src}, ${2:dst})"],
+    "description": [
+      "shutil.move 递归地将一个文件或目录 (src) 移到另一位置并返回目标位置",
+      "    如果 dst 为已存在的目录或指向目录的符号链接, 则 src 将被移到该目录中.  目标路径在该目录中不能已存在",
+      "    如果 dst 已存在但不是一个目录, 则它可能会被覆盖, 具体取决于 os.rename() 的语义",
+      "    如果目标是在当前文件系统中, 则会使用 os.rename().  在其他情况下, 则使用 copy_function 将 src 拷贝至目标然后移除它.  对于符号链接, 则将创建一个指向 src 目标的新符号链接作为目标位置而 src 将被移除",
+      "    如果给出了 copy_function, 则它必须为接受两个参数 src 和目标位置的可调用对象, 并将在 os.rename() 无法使用时被用来将 src 拷贝到目标位置.  如果源是一个目录, 则会调用 copytree(), 并向它传入 copy_function.  默认的 copy_function 是 copy2().  使用 copy() 作为 copy_function 将允许在无法附带拷贝元数据时让移动操作成功执行, 但其代价是不拷贝任何元数据",
+      "    引发一个 审计事件 shutil.move 附带参数 src, dst"
+    ]
+  },
+  "shutil.make_archive 压缩和归档": {
+    "prefix": ["shutil make_archive"],
+    "body": [
+      "shutil.make_archive(base_name=${1:base_name}, format=${2:'zip'}, root_dir=${3:root_dir})"
+    ],
+    "description": [
+      "shutil.make_archive 创建一个归档文件(例如 zip 或 tar)并返回其名称",
+      "    base_name 是要创建的文件的名称, 包括路径, 去除任何格式专属的扩展名",
+      "    format 是归档格式: 为 \"zip\" (如果 zlib 模块可用), \"tar\", \"gztar\" (如果 zlib 模块可用), \"bztar\" (如果 bz2 模块可用) 或 \"xztar\" (如果 lzma 模块可用) 中的一个",
+      "    root_dir 是一个目录, 它将作为归档文件的根目录, 归档中的所有路径都将是它的相对路径; 例如, 我们通常会在创建归档之前用 chdir 命令切换到 root_dir",
+      "    base_dir 是我们要执行归档的起始目录; 也就是说 base_dir 将成为归档中所有文件和目录共有的路径前缀",
+      "    base_dir 必须相对于 root_dir 给出.  请参阅 使用 base_dir 的归档程序示例 了解如何同时使用 base_dir 和 root_dir",
+      "    root_dir 和 base_dir 默认均为当前目录",
+      "    如果 dry_run 为真值, 则不会创建归档文件, 但将要被执行的操作会被记录到 logger",
+      "    owner 和 group 将在创建 tar 归档文件时被使用.  默认会使用当前的所有者和分组",
+      "    logger 必须是一个兼容 PEP 282 的对象, 通常为 logging.Logger 的实例"
+    ]
+  },
+  "shutil.unpack_archive 解包归档文件": {
+    "prefix": ["shutil unpack_archive"],
+    "body": [
+      "shutil.unpack_archive(filename=${1:filename.zip}, extract_dir=${2:'解包的目标目录名称'}, format=${3:'zip'})"
+    ],
+    "description": [
+      "shutil.unpack_archive 解包一个归档文件.  filename 是归档文件的完整路径",
+      "    extract_dir 是归档文件解包的目标目录名称.  如果未提供, 则将使用当前工作目录",
+      "    format 是归档格式: 应为 \"zip\", \"tar\", \"gztar\", \"bztar\" 或 \"xztar\" 之一",
+      "    或者任何通过 register_unpack_format() 注册的其他格式.  如果未提供, unpack_archive() 将使用归档文件的扩展名来检查是否注册了对应于该扩展名的解包器.  在未找到任何解包器的情况下, 将引发 ValueError",
+      "    仅限关键字参数 filter 将被传给下层的解包函数.  对于 zip 文件, filter 将不被接受.  对于 tar 文件, 推荐将其设为 'data', 除非使用了 tar 专属的特征且为 UNIX 类文件系统.  (请参阅 解压缩过滤器 了解详情. ) 'data' 将在 Python 3.14 中成为 tar 文件的默认过滤器",
+      "    引发一个 审计事件 shutil.unpack_archive 附带参数 filename, extract_dir, format"
+    ]
+  }
+}

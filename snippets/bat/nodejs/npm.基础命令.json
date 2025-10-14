@@ -1,0 +1,36 @@
+{
+  "npm 版本号": {
+    "prefix": ["call npm -v -node-js-npm"],
+    "body": ["ECHO NPM 版本号:", "call npm -v", ""],
+    "description": "NPM 版本号"
+  },
+  "npm 检查 软件仓库位置": {
+    "prefix": ["call npm root -g -node-js-npm"],
+    "body": ["ECHO 检查 软件仓库位置:", "call npm root -g", ""],
+    "description": "npm 检查 软件仓库位置"
+  },
+  "npm 自定义仓库位置": {
+    "prefix": [
+      "call npm config prefix -node-js-npm",
+      "call npm config node global -node-js-npm"
+    ],
+    "body": ["call npm config set prefix ${1:仓库位置}", ""],
+    "description": ["自定义npm仓库位置"]
+  },
+  "npm 自定义缓存位置": {
+    "prefix": ["call npm config cache -node-js-npm"],
+    "body": ["call npm config set cache ${1:缓存位置}", ""],
+    "description": ["自定义npm缓存位置"]
+  },
+  "npm 切换国内镜像源": {
+    "prefix": ["call npm config set registry -node-js-npm"],
+    "body": [
+      "ECHO 设置为淘宝镜像源",
+      "call npm config set registry https://registry.npmmirror.com/",
+      "@REM ECHO 还原为官方源",
+      "@REM call npm config set registry https://registry.npmjs.org/",
+      ""
+    ],
+    "description": ["切换npm国内镜像源"]
+  }
+}

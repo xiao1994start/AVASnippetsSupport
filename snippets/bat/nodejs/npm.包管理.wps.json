@@ -1,0 +1,12 @@
+{
+  "npm安装 wpsjs 插件开发环境": {
+    "prefix": ["call npm install -wpsjs -npm-i-wpsjs"],
+    "body": [
+      "ECHO 正在安装 wpsjs",
+      "call npm install -g wpsjs --registry https://registry.npmmirror.com/",
+      "ECHO 已安装 wpsjs",
+      ""
+    ],
+    "description": ["npm安装 wpsjs 插件开发环境"]
+  }
+}

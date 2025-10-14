@@ -1,0 +1,117 @@
+{
+  "引入 configparser 模块": {
+    "prefix": ["import onfigparser", "im onfigparser"],
+    "body": ["import configparser"],
+    "description": ["引入configparser->ini控制模块"]
+  },
+  "configparser.tmpl": {
+    "prefix": ["configparser config =-configparser"],
+    "body": [
+      "config = configparser.ConfigParser()",
+      "config.read(${1:'db_ini'}, encoding='utf-8')",
+      "# 读取节点-键->值",
+      "# config.get('section', 'key')",
+      "# config['section']['key'] = 'value'",
+      "# 读取节点",
+      "# config.sections()",
+      "# 读取键值",
+      "# config.items('section')",
+      "# 读取键",
+      "# config.options('section')",
+      "# 写入节点-键-值",
+      "# config.set(section, key, value)"
+    ],
+    "description": ["configparser.tmpl"]
+  },
+  "configparser.sections 读取节点": {
+    "prefix": ["configparser sections -configparser"],
+    "body": ["sections($0)"],
+    "description": ["configparser.sections 读取节点"]
+  },
+  "configparser.item 读取节点下键-值": {
+    "prefix": ["configparser item -configparser"],
+    "body": ["item(section${1:section})"],
+    "description": ["configparser.item 读取节点下键-值"]
+  },
+  "configparser.get 读取节点-键->值": {
+    "prefix": ["configparser get -configparser"],
+    "body": ["get(section=${1:section}, option=${2:option})"],
+    "description": ["configparser.get 读取节点-键->值"]
+  },
+  "configparser.has_section 判断存在节点": {
+    "prefix": ["configparser has_section -configparser"],
+    "body": ["has_section($0)"],
+    "description": ["configparser.has_section 判断存在节点, 返回bool"]
+  },
+  "configparser.has_option 判断存在节点": {
+    "prefix": ["configparser has_option -configparser"],
+    "body": ["has_option(section=${1:section}, option=${2:option})"],
+    "description": ["configparser.has_option 判断存在节点, 返回bool"]
+  },
+  "configparser.add_section 写入节点数据": {
+    "prefix": ["configparser add_section -configparser"],
+    "body": [
+      "add_section(section=${1:section})",
+      "# 写入节点数据",
+      "# config['section']['option'] = 'value'",
+      "# 或 config.set('section', 'option', 'value')"
+    ],
+    "description": ["configparser.sections 写入节点数据"]
+  },
+  "configparser.remove_section 删除节点": {
+    "prefix": ["configparser remove_section -configparser"],
+    "body": ["remove_section(section=${1:'section'})"],
+    "description": ["configparser.sections 删除指定节点"]
+  },
+  "configparser.remove_option 删除指定节点 -键": {
+    "prefix": ["configparser remove_option -configparser"],
+    "body": ["remove_option(section=${1:'section'}, option=${2:'option'})"],
+    "description": ["configparser.remove_option 删除指定节点 -键"]
+  },
+  "configparser.set 修改指定节点键 -值": {
+    "prefix": ["configparser set -configparser"],
+    "body": [
+      "set(section=${1:'section'}, option=${2:'option'}, value=${3:'value'})"
+    ],
+    "description": ["configparser.set 修改指定节点键 -值"]
+  },
+  "configparser.write 写入节点数据": {
+    "prefix": [
+      "configparser with configwrite -configparser",
+      "with configparser configwrite -configparser"
+    ],
+    "body": [
+      "with open(config_file, 'w', encoding='utf-8') as configfile:",
+      "    config.write(configfile)"
+    ],
+    "description": ["configparser.set 写入节点数据"]
+  },
+  "configparser.ini_to_dict ini配置转换字典": {
+    "prefix": ["configparser ini_to_dict -configparser"],
+    "body": [
+      "def ini_to_dict(arg):",
+      "\t\"\"\"ini配置转换字典",
+      "",
+      "\tArgs:",
+      "\t\targ (Path): 字典路径",
+      "",
+      "\tReturns:",
+      "\t\tdict: ini配置->字典",
+      "\t\"\"\"",
+      "\tini = {}",
+      "\tconfig = configparser.ConfigParser()",
+      "\tconfig.read(arg, encoding=\"utf-8\")",
+      "\tsections_list = config.sections()",
+      "\tfor section in sections_list:",
+      "\t\tini[section] = {}",
+      "\t\tfor key in config[section]:",
+      "\t\t\tini[section][key] = config[section][key]",
+      "\t# 引入json模块",
+      "\timport json",
+      "\t# 字典展示格式化",
+      "\tprint(json.dumps(ini, indent=2, ensure_ascii=False))",
+      "\treturn ini"
+    ],
+    "description": ["configparser.ini_to_dict ini配置转换字典"]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "引入 selenium 模块": {
+    "prefix": ["import selenium webdriver", "im selenium webdriver"],
+    "body": [
+      "from pathlib import Path  # 路径设置",
+      "from selenium import webdriver  # 实例化网络请求模块",
+      "",
+      "from selenium.webdriver import ActionChains  # selenium 动作链(动作结尾 .perform() 执行动作)",
+      "from selenium.webdriver.common.by import By  # 选择器类",
+      "from selenium.webdriver.common.keys import Keys  # 键盘按键类",
+      "from selenium.webdriver.support.wait import WebDriverWait  # 显式等待机制类",
+      "from selenium.webdriver.support import expected_conditions as EC  # 网页元素判断条件类",
+      "",
+      "",
+      "chromedriver_path = str(Path(Path(__file__).parent, '${1:chromedriver_exe}').resolve())",
+      "chrome_path = str(Path(Path(__file__).parent, '${2:chrome_exe}').resolve())",
+      "",
+      "service = webdriver.ChromeService(executable_path=chromedriver_path)  # 实例化浏览器驱动",
+      "",
+      "options = webdriver.ChromeOptions()  # 实例化浏览器options配置对象",
+      "options.binary_location = chrome_path  # 设置浏览器路径",
+      "# options.add_argument('--headless')  # 设置浏览器无界面模式",
+      "# options.add_argument('--ignore-certificate-errors')  # 忽略SSL证书验证",
+      "options.add_experimental_option('detach', True)  # 浏览器debug模式(浏览器运行完成不会自动关闭)",
+      "# options.add_experimental_option('prefs', {'profile.default_content_setting_values': {'notifications': 2}})  # 禁用浏览器弹窗",
+      "# options.add_experimental_option('prefs', {'profile.default_content_setting_values': {'images': 2}})  # 禁用图片加载",
+      "",
+      "driver = webdriver.Chrome(service=service, options=options)  # 实例化浏览器对象",
+      "$0"
+    ],
+    "description": ["引入 selenium 模块"]
+  },
+  "selenium.add_argument 浏览器无界面模式": {
+    "prefix": ["selenium options add_argument --headless"],
+    "body": ["options.add_argument('--headless')  # 设置浏览器无界面模式"],
+    "description": ["selenium.add_argument 浏览器无界面模式"]
+  },
+  "selenium.add_argument 忽略SSL证书验证": {
+    "prefix": [
+      "selenium_options_add_argument_ignoreSSL __ignore_certificate_errors"
+    ],
+    "body": [
+      "options.add_argument('--ignore-certificate-errors')  # 忽略SSL证书验证"
+    ],
+    "description": ["selenium.add_argument 忽略SSL证书验证"]
+  },
+  "selenium.add_experimental_option 浏览器debug模式(浏览器运行完成不会自动关闭)": {
+    "prefix": ["selenium options add_experimental_option --detach"],
+    "body": [
+      "options.add_experimental_option('detach', True)  # 浏览器debug模式(浏览器运行完成不会自动关闭)"
+    ],
+    "description": [
+      "selenium.add_experimental_option 浏览器debug模式(浏览器运行完成不会自动关闭)"
+    ]
+  },
+  "selenium.add_experimental_option 禁用浏览器弹窗": {
+    "prefix": [
+      "selenium options add_experimental_option -prefs--notifications"
+    ],
+    "body": [
+      "options.add_experimental_option('prefs', {'profile.default_content_setting_values': {'notifications': 2}})  # 禁用浏览器弹窗"
+    ],
+    "description": ["selenium.add_experimental_option 禁用浏览器弹窗"]
+  },
+  "selenium.add_experimental_option 禁用图片加载": {
+    "prefix": ["selenium options add_experimental_option -prefs--images"],
+    "body": [
+      "options.add_experimental_option('prefs', {'profile.default_content_setting_values': {'images': 2}})  # 禁用图片加载"
+    ],
+    "description": ["selenium.add_experimental_option 禁用图片加载"]
+  },
+  "selenium.get_cookies 获取python对象格式cookies": {
+    "prefix": ["selenium get_cookies ", "get_cookies -selenium"],
+    "body": [".get_cookies()  # python对象格式"],
+    "description": ["selenium.get_cookies 获取python对象格式cookies"]
+  },
+  "selenium.execute_script 发送JavaScript命令": {
+    "prefix": ["selenium execute_script ", "execute_script -selenium"],
+    "body": [".execute_script('${1:console}')  # 发送JavaScript命令"],
+    "description": ["selenium.execute_script 发送JavaScript命令"]
+  },
+  "selenium.execute_script 获取浏览器user-agent": {
+    "prefix": [
+      "selenium execute_script --userAgent",
+      "execute_script --userAgent -selenium"
+    ],
+    "body": [
+      ".execute_script('return navigator.userAgent')  # 获取浏览器user-agent"
+    ],
+    "description": ["selenium.execute_script 获取浏览器user-agent"]
+  },
+  "selenium.execute_script 打印页面内容": {
+    "prefix": [
+      "selenium execute_script windowPrint",
+      "execute_script windowPrint -selenium"
+    ],
+    "body": [".execute_script('window.print()')  # 打印页面内容"],
+    "description": ["selenium.execute_script 打印页面内容"]
+  },
+  "selenium.implicitly_wait 隐式等待(自动等待元素)": {
+    "prefix": ["selenium implicitly_wait ", "implicitly_wait -selenium"],
+    "body": [".implicitly_wait(30)  # 隐式等待(自动等待元素)/秒"],
+    "description": ["selenium.implicitly_wait 隐式等待(自动等待元素)"]
+  },
+  "selenium..set_window_size 设置浏览器窗口大小": {
+    "prefix": ["selenium set_window_size", "set_window_size -selenium"],
+    "body": [
+      ".set_window_size(width=1920, height=1080)  # 设置浏览器窗口大小(可以作用于无界面模式)"
+    ],
+    "description": ["selenium..set_window_size 设置浏览器窗口大小"]
+  },
+  "selenium..screenshot 截图保存png": {
+    "prefix": ["selenium screenshot", "screenshot -selenium"],
+    "body": [".screenshot(${1:'strPath'})  # 截图保存png"],
+    "description": ["selenium..screenshot 截图保存png"]
+  }
+}

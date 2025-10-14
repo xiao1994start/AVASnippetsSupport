@@ -1,0 +1,128 @@
+{
+  "引入 uiautomation Windows桌面程序自动化控制依赖": {
+    "prefix": ["import uiautomation", "im uiautomation"],
+    "body": [
+      "from uiautomation import ButtonControl, ListItemControl, MenuControl, WalkControl, WindowControl  # Windows桌面程序自动化控制依赖",
+      ""
+    ],
+    "description": [
+      "引入 uiautomation Windows桌面程序自动化控制依赖",
+      "MenuControl: 菜单控件; WindowControl: 窗口控件"
+    ]
+  },
+  "uiautomation.WindowControl 实例化绑定窗口": {
+    "prefix": ["uiautomation WindowControl", "WindowControl -uiautomation"],
+    "body": [
+      "WindowControl(searchDepth=1, searchInterval=0.1, Name=${1:'窗口名称'})",
+      "# 实例化绑定窗口",
+      "# searchDepth=1 限制搜索只在直接子控件层级(即第一层子控件); =2 搜索包括子级及其下一级(孙子级)控件; 以此类推",
+      "# 不设置 searchDepth 则递归地遍历搜索整个桌面控件,直到找到匹配项或到达控件树的末端",
+      "# searchInterval=0.1 搜索间隔时间(秒); 默认为0.5秒"
+    ],
+    "description": [
+      "uiautomation.WindowControl 实例化绑定窗口",
+      "实例化绑定窗口",
+      "searchDepth=1 限制搜索只在直接子控件层级(即第一层子控件); =2 搜索包括子级及其下一级(孙子级)控件; 以此类推",
+      "不设置 searchDepth 则递归地遍历搜索整个桌面控件,直到找到匹配项或到达控件树的末端",
+      "searchInterval=0.1 搜索间隔时间(秒); 默认为0.5秒"
+    ]
+  },
+  "uiautomation.WalkControl 遍历控件": {
+    "prefix": ["uiautomation WalkControl", "WalkControl -uiautomation"],
+    "body": ["WalkControl(${1:Control}, maxDepth=4294967295)$0"],
+    "description": [
+      "uiautomation.WalkControl 遍历控件",
+      "遍历搜索控件对象, c: 控件对象, d: 控件深度; maxDepth: 最大遍历深度(减少需要检查的控件数量,提升效率"
+    ]
+  },
+  "uiautomation.WalkControl 遍历控件.示例": {
+    "prefix": ["for WalkControl =uiautomation"],
+    "body": [
+      "for c, d in WalkControl(${1:Control}, maxDepth=4294967295):",
+      "    # 遍历搜索控件对象, c: 控件对象, d: 控件深度; maxDepth: 最大遍历深度(减少需要检查的控件数量,提升效率)",
+      "    print(d, ':', c)",
+      ""
+    ],
+    "description": "uiautomation.WalkControl 遍历控件.示例"
+  },
+  "uiautomation.Exists 检查目标控件是否存在": {
+    "prefix": ["uiautomation Exists", "Exists -uiautomation"],
+    "body": ["Exists()"],
+    "description": ["uiautomation.Exists 检查目标控件是否存在"]
+  },
+  "uiautomation.SetTopmost 窗口置顶": {
+    "prefix": ["uiautomation SetTopmost", "SetTopmost -uiautomation"],
+    "body": ["SetTopmost(${1:True})", "# 窗口置顶"],
+    "description": ["uiautomation.SetTopmost 窗口置顶"]
+  },
+  "uiautomation.SetFocus 获取文本框焦点": {
+    "prefix": ["uiautomation SetFocus", "SetFocus -uiautomation"],
+    "body": ["SetFocus()"],
+    "description": ["uiautomation.SetFocus 获取文本框焦点"]
+  },
+  "uiautomation.SwitchToThisWindow 切换到绑定的窗口": {
+    "prefix": [
+      "uiautomation SwitchToThisWindow",
+      "SwitchToThisWindow -uiautomation"
+    ],
+    "body": ["SwitchToThisWindow()", "# 切换到绑定的窗口"],
+    "description": ["uiautomation.SwitchToThisWindow 切换到绑定的窗口"]
+  },
+  "uiautomation.MoveToCenter 移动窗口到屏幕中心位置": {
+    "prefix": ["uiautomation MoveToCenter", "MoveToCenter -uiautomation"],
+    "body": ["MoveToCenter()", "# 移动窗口到屏幕中心位置"],
+    "description": ["uiautomation.MoveToCenter 移动窗口到屏幕中心位置"]
+  },
+  "uiautomation.EditControl 输入框控件": {
+    "prefix": ["uiautomation EditControl", "EditControl -uiautomation"],
+    "body": ["EditControl(Name=${1:输入框名称})"],
+    "description": ["uiautomation.EditControl 输入框控件"]
+  },
+  "uiautomation.ButtonControl 按钮控件": {
+    "prefix": ["uiautomation ButtonControl", "ButtonControl -uiautomation"],
+    "body": ["ButtonControl(Name=${1:按钮名称})"],
+    "description": ["uiautomation.ButtonControl 按钮控件"]
+  },
+  "uiautomation.TextControl 文本控件": {
+    "prefix": ["uiautomation TextControl", "TextControl -uiautomation"],
+    "body": ["TextControl(Name=${1:文本名称})"],
+    "description": ["uiautomation.TextControl 文本控件"]
+  },
+  "uiautomation.ListControl 列表控件": {
+    "prefix": ["uiautomation ListControl", "ListControl -uiautomation"],
+    "body": ["ListControl(Name=${1:列表名称})"],
+    "description": ["uiautomation.ListControl 列表控件"]
+  },
+  "uiautomation.Click 点击(不显示鼠标移动的过程)": {
+    "prefix": ["uiautomation Click", "Click -uiautomation"],
+    "body": ["Click(simulateMove=False)"],
+    "description": ["uiautomation.Click 点击(不显示鼠标移动的过程)"]
+  },
+  "uiautomation.SendKeys 点击(不显示鼠标移动的过程)": {
+    "prefix": ["uiautomation SendKeys", "SendKeys -uiautomation"],
+    "body": [
+      "SendKeys(${1:text}, waitTime=0.5)  # waitTime 可以更好的模拟输入的过程",
+      ""
+    ],
+    "description": ["uiautomation.SendKeys 点击(不显示鼠标移动的过程)"]
+  },
+  "uiautomation.GetChildren 获取窗口内所有控件": {
+    "prefix": [
+      "uiautomation GetChildren=",
+      "uiautomation get_windows_control="
+    ],
+    "body": [
+      "def get_windows_control(windows):",
+      "    \"\"\"",
+      "    获取窗口内所有控件",
+      "    \"\"\"",
+      "    def enum_child_windows(parent):",
+      "        for child in parent.GetChildren():",
+      "            print(child)",
+      "            enum_child_windows(child)",
+      "    enum_child_windows(windows)",
+      ""
+    ],
+    "description": ["uiautomation.GetChildren 获取窗口内所有控件"]
+  }
+}

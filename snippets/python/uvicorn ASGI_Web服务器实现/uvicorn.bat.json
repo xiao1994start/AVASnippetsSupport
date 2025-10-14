@@ -1,0 +1,18 @@
+{
+  "pip.uvicorn ASGI Web 服务器实现": {
+    "prefix": ["pip uvicorn"],
+    "body": [
+      "pip install -U uvicorn -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["uvicorn ASGI Web 服务器实现"]
+  },
+  "uv.uvicorn ASGI Web 服务器实现": {
+    "prefix": ["uv uvicorn"],
+    "body": [
+      "uv add \"uvicorn\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["uvicorn ASGI Web 服务器实现"]
+  }
+}

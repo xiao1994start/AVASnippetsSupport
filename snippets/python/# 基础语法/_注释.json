@@ -1,0 +1,17 @@
+{
+  "Python 注释_描述": {
+    "prefix": ["xxx"],
+    "body": [
+      "#!/usr/bin/python",
+      "# -*- coding: utf-8 -*-",
+      "# Copyright (c) $CURRENT_YEAR, ${1:Administrator}. All rights reserved.",
+      "# @Author  : ${1:Administrator}",
+      "# @Date    : $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "# @File    : $TM_FILENAME",
+      "# @version : 0.0.1",
+      "# @Desc    : ${2:描述}",
+      "$0"
+    ],
+    "description": ["Python 注释_描述"]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "flet.NavigationRail 创建 NavigationRail 常驻导航栏": {
+    "prefix": ["ft NavigationRail =-ft", "flet NavigationRail =-flet"],
+    "body": [
+      "ft.NavigationRail(",
+      "    # expand: 自适应填充(将 NavigationRail 置于子控件中时[expand=True], 子控件会根据 NavigationRail 的宽度自适应)",
+      "    expand=True,",
+      "    # selected_index=0: 默认选中第一个",
+      "    selected_index=0,  # 0: 默认选中[destinations]中第一个[e.control.selected_index: 当前选中控件索引]",
+      "    # label_type=ft.NavigationRailLabelType.ALL: 显示所有标签",
+      "    label_type=ft.NavigationRailLabelType.ALL,  # ft.NavigationRailLabelType.ALL: 显示所有标签",
+      "    # min_width=72(默认): 最小宽度",
+      "    min_width=72,  # 最小宽度",
+      "    # min_extended_width=256(默认): 最小扩展宽度",
+      "    min_extended_width=128,  # 最小扩展宽度[128: 两个汉字宽度]",
+      "    # extended=None(默认): 导航栏扩展状态",
+      "    extended=False,  # 导航栏扩展状态",
+      "    # leading: 导航栏第一顺位控件(不参与selected_index)",
+      "    # group_alignment=0.0: 导航栏控件对齐方式[-1.0: 左对齐; 0.0: 居中对齐; 1.0: 右对齐]",
+      "    group_alignment=-0.9,  # 导航栏控件对齐方式[-1.0: 左/顶 对齐; 0.0: 居中对齐; 1.0: 右/底 对齐]",
+      "    # destinations: 导航栏中间控件(不少于 2 个)",
+      "    destinations=[  # 导航栏中间控件(不少于 2 个, selected_index: 当前选中控件索引,从 0 开始)[ft.NavigationRailDestination: 导航栏中间控件]",
+      "        #  - ft.NavigationRailDestination: 导航栏中间控件[icon: 图标, selected_icon: 选中图标, label: 标签]",
+      "        ft.NavigationRailDestination(icon=ft.Icons.CHAT_BUBBLE_OUTLINE_ROUNDED, selected_icon=ft.Icons.CHAT_BUBBLE_OUTLINED, label='选项一'),",
+      "        ft.NavigationRailDestination(icon=ft.Icons.SETTINGS_OUTLINED, selected_icon=ft.Icons.SETTINGS, label='设置'),",
+      "    ],",
+      "    # on_change: 导航栏中间控件点击事件[e.control.selected_index: 当前选中控件索引]",
+      "    # trailing: 导航栏最后顺位控件(不参与selected_index)",
+      ")",
+      ""
+    ],
+    "description": ["flet.NavigationRail 创建 NavigationRail 常驻导航栏"]
+  },
+  "flet.NavigationRailDestination 常驻导航栏(NavigationRail)内部控件": {
+    "prefix": [
+      "ft_NavigationRailDestination",
+      "flet_NavigationRailDestination"
+    ],
+    "body": [
+      "ft.NavigationRailDestination(",
+      "    icon=ft.Icons.SETTINGS_OUTLINED,  # icon: 图标",
+      "    selected_icon=ft.Icons.SETTINGS,  # selected_icon: 选中时的图标",
+      "    label='设置',  # label: 标签",
+      ")",
+      ""
+    ],
+    "description": [
+      "flet.NavigationRailDestination 常驻导航栏(NavigationRail)内部控件(NavigationRailDestination)对象"
+    ]
+  }
+}

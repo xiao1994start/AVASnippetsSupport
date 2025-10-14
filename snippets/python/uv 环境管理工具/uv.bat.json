@@ -1,0 +1,105 @@
+{
+  "uv 当前文件夹创建新项目": {
+    "prefix": ["uv init"],
+    "body": [
+      "ECHO uv 当前文件夹创建新项目...(默认当前文件夹)",
+      "uv init ${1:项目名}",
+      ""
+    ],
+    "description": ["uv 当前文件夹创建新项目"]
+  },
+
+  "设置 uv 镜像源": {
+    "prefix": ["set UV DEFAULT INDEX", "set uv index"],
+    "body": [
+      "ECHO 设置 uv 镜像源",
+      "set UV_DEFAULT_INDEX=https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["设置 uv 镜像源"]
+  },
+  "创建 uv 虚拟环境": {
+    "prefix": ["uv venv"],
+    "body": ["ECHO 创建 uv 虚拟环境...", "uv venv", ""],
+    "description": ["创建 uv 虚拟环境"]
+  },
+  "激活 python 虚拟环境": {
+    "prefix": ["uv activate"],
+    "body": ["ECHO 激活 python 虚拟环境", ".venv\\Scripts\\activate", ""],
+    "description": ["激活 python 虚拟环境"]
+  },
+  "uv 运行 py 脚本": {
+    "prefix": ["uv run"],
+    "body": ["uv run ${1:main.py}", ""],
+    "description": ["uv 运行 py 脚本"]
+  },
+  "uv 安装依赖|允许包升级": {
+    "prefix": ["uv add upgrade"],
+    "body": [
+      "uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "description": ["uv 安装依赖|允许包升级"]
+  },
+  "uv 卸载依赖": {
+    "prefix": ["uv remove"],
+    "body": ["uv remove \"${1:包名}\""],
+    "description": ["uv 卸载依赖"]
+  },
+  "uv 更新配置项目环境": {
+    "prefix": ["uv sync"],
+    "body": [
+      "ECHO 将项目的依赖项与环境同步",
+      "@REM * 根据 pyproject.toml 和 uv.lock 锁文件创建或更新虚拟环境",
+      "uv sync"
+    ],
+    "description": [
+      "uv 更新配置项目环境",
+      "根据 pyproject.toml 和锁文件创建或更新虚拟环境"
+    ]
+  },
+  "uv 仅同步生产依赖": {
+    "prefix": ["uv sync -p"],
+    "body": ["ECHO uv 仅同步生产依赖", "uv sync --production"],
+    "description": ["uv 仅同步生产依赖"]
+  },
+  "uv 同步并清理多余包": {
+    "prefix": ["uv sync -c"],
+    "body": ["ECHO uv 同步并清理多余包", "uv sync --clean"],
+    "description": ["uv 同步并清理多余包"]
+  },
+  "uv 更新项目的锁定文件": {
+    "prefix": ["uv lock"],
+    "body": ["ECHO 生成 uv 新锁定文件", "uv lock"],
+    "description": ["uv 更新项目的锁定文件"]
+  },
+  "uv 检查更新但不写入 (dry-run)": {
+    "prefix": ["uv lock -c"],
+    "body": ["ECHO uv 检查更新但不写入 (dry-run)", "uv lock --check"],
+    "description": ["uv 检查更新但不写入 (dry-run)"]
+  },
+  "uv 强制重新解析": {
+    "prefix": ["uv lock -u"],
+    "body": ["ECHO uv 强制重新解析", "uv lock --update"],
+    "description": ["uv 强制重新解析"]
+  },
+  "uv 显示项目的完整依赖树": {
+    "prefix": ["uv tree"],
+    "body": ["ECHO uv 显示项目的完整依赖树", "uv tree"],
+    "description": ["uv 显示项目的完整依赖树"]
+  },
+  "UV 使用兼容PIP兼容的接口管理Python软件包": {
+    "prefix": ["uv pip"],
+    "body": ["uv pip ${1:pip命令}"],
+    "description": ["UV 使用兼容PIP兼容的接口管理Python软件包"]
+  },
+  "显示UV的版本": {
+    "prefix": ["uv version"],
+    "body": ["ECHO UV版本:", "uv version"],
+    "description": ["显示UV的版本"]
+  },
+  "显示UV命令的文档": {
+    "prefix": ["uv help"],
+    "body": ["ECHO UV命令文档:", "uv help"],
+    "description": ["显示UV命令的文档"]
+  }
+}

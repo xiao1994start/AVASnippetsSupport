@@ -1,0 +1,24 @@
+{
+  "zip 打包可迭代对象 -> tuple": {
+    "prefix": ["zip iterable -zip"],
+    "body": ["zip($0)"],
+    "description": ["zip 打包可迭代对象 -> tuple"]
+  },
+  "next 返回迭代器的下一个项目": {
+    "prefix": ["next iterable -next"],
+    "body": ["next($0)"],
+    "description": ["next 返回迭代器的下一个项目"]
+  },
+  "next.list[dict[str] 匹配 list[dict[str]] 列表嵌套字典对象中指定键的值 -> dict": {
+    "prefix": ["next list dict str =-next"],
+    "body": ["next(item for item in data_list if item['key'] == 'value')"],
+    "description": [
+      "next.list[dict[str] 匹配 list[dict[str]] 列表嵌套字典对象中指定键的值 -> dict"
+    ]
+  },
+  "iter 生成迭代器": {
+    "prefix": ["iter iterable -iter"],
+    "body": ["iter($0)"],
+    "description": ["iter 生成迭代器"]
+  }
+}

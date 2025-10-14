@@ -1,0 +1,18 @@
+{
+  "pip.OpenAI API 大语言模型依赖": {
+    "prefix": ["pip openai"],
+    "body": [
+      "pip install -U openai -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["OpenAI API 大语言模型依赖"]
+  },
+  "uv.OpenAI API 大语言模型依赖": {
+    "prefix": ["uv openai"],
+    "body": [
+      "uv add \"openai\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["OpenAI API 大语言模型依赖"]
+  }
+}

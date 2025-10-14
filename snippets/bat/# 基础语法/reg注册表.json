@@ -1,0 +1,71 @@
+{
+  "REG静默运行": {
+    "prefix": ["REG -s"],
+    "body": ["CALL REG -s ${1:reg文件路径}"],
+    "description": ["REG静默运行"]
+  },
+  "REG导入": {
+    "prefix": ["REG -import"],
+    "body": ["CALL REG import ${1:reg文件路径}"],
+    "description": ["REG导入"]
+  },
+  "REG添加键值": {
+    "prefix": ["REG -add"],
+    "body": [
+      "CALL REG add \"${1:reg路径}\" /v \"key_名称\" /t REG_SZ /d \"value_数据\" /F"
+    ],
+    "description": ["REG添加键值"]
+  },
+  "REG删除键值": {
+    "prefix": ["REG -delete"],
+    "body": ["CALL REG delete \"${1:reg路径\" /v \"key_名称}\" /F"],
+    "description": ["REG删除键值"]
+  },
+  "REG批量注入": {
+    "prefix": ["for REG -import"],
+    "body": ["for %%r in (${1:reg_path}) do ( CALL REG import \"%%r\" )", ""],
+    "description": "REG批量注入"
+  },
+  "路径变量path设置并添加修复注册表": {
+    "prefix": ["REG =Edit"],
+    "body": [
+      "@REM 注册表自定义编辑注入",
+      "@REM 获取当前路径 并 设为变量df",
+      "@REM set df=%~dp0",
+      "@REM 强调显示变量 %df%",
+      "@REM ECHO %df%",
+      "@REM 注册表中的应用",
+      "@REM 注册表创建自启动项",
+      "@REM REG add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"key_名称\" /t REG_SZ /d \"value_数据\" /F",
+      "@REM 注册表删除自启动项",
+      "@REM REG delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"key_名称\" /F",
+      "@REM REG add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /F",
+      "@REM 也可以不用变量直接写入",
+      "@REM REG add \"HKEY_CURRENT_USER\\Software\\illusion\" /v \"key_名称\" /d \"value_数据\" /F",
+      "@REM 路径“%~dp0”就是注册路径"
+    ],
+    "description": ["路径变量path设置并添加修复注册表"]
+  },
+  "REG数据类型": {
+    "prefix": ["REG Type"],
+    "body": [
+      "@REM * REG_SZ REG_MULTI_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR REG_EXPAND_SZ",
+      ""
+    ],
+    "description": "REG数据类型"
+  },
+  "REG帮助": {
+    "prefix": ["REG Help"],
+    "body": [
+      "@REM * 参数",
+      "@REM * /ve 指定[默认值]",
+      "@REM * /v [EntryName] 指定特点的键",
+      "@REM * /t DataType 指定数据类型",
+      "    @REM * REG_SZ REG_MULTI_SZ REG_EXPAND_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR",
+      "@REM * /d [value] 指定新注册表项的值",
+      "@REM * /f 不用询问信息而直接添加子项或项",
+      ""
+    ],
+    "description": "REG帮助"
+  }
+}

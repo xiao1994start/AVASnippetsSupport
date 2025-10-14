@@ -1,0 +1,24 @@
+{
+  "pip.flet 基于 Flutter(Google) 的WebUI框架": {
+    "prefix": ["pip flet"],
+    "body": [
+      "pip install -U flet[all] setuptools pyinstaller -i https://mirrors.aliyun.com/pypi/simple/",
+      "@REM Flet 基于 Flutter(Google) 的WebUI框架",
+      "pip install -U darkdetect -i https://mirrors.aliyun.com/pypi/simple/",
+      "@REM 智能主题模式检测库",
+      ""
+    ],
+    "description": ["flet 基于 Flutter(Google) 的WebUI框架"]
+  },
+  "uv.flet 基于 Flutter(Google) 的WebUI框架": {
+    "prefix": ["uv flet"],
+    "body": [
+      "uv add \"flet[all]\" \"setuptools\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "@REM Flet 基于 Flutter(Google) 的WebUI框架",
+      "uv add \"darkdetect\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "@REM 智能主题模式检测库",
+      ""
+    ],
+    "description": ["flet 基于 Flutter(Google) 的WebUI框架"]
+  }
+}

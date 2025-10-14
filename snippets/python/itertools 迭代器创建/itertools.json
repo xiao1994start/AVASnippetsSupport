@@ -1,0 +1,12 @@
+{
+  "引入 itertools 为高效循环创建迭代器的函数": {
+    "prefix": ["import itertools", "im itertools"],
+    "body": ["import itertools  # 生成器 | 迭代器"],
+    "description": ["引入 itertools 为高效循环创建迭代器的函数"]
+  },
+  "itertools.repeat 重复迭代创建": {
+    "prefix": ["itertools repeat -itertools"],
+    "body": ["itertools.repeat(${1|(),value|}, ${2:times})"],
+    "description": ["itertools.repeat 重复迭代创建"]
+  }
+}

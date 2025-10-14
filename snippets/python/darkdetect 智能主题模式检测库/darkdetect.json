@@ -1,0 +1,22 @@
+{
+  "引入 darkdetect 智能主题模式检测库": {
+    "prefix": ["import darkdetect", "im darkdetect"],
+    "body": ["import darkdetect  # * 引入 darkdetect 智能主题模式检测库"],
+    "description": ["引入 darkdetect 智能主题模式检测库"]
+  },
+  "darkdetect.theme 获取当前主题模式": {
+    "prefix": ["darkdetect theme -darkdetect"],
+    "body": ["darkdetect.theme()"],
+    "description": ["darkdetect.theme 获取当前主题模式"]
+  },
+  "darkdetect.isDark 判断当前主题模式是否为暗黑模式": {
+    "prefix": ["darkdetect isDark -darkdetect"],
+    "body": ["darkdetect.isDark()"],
+    "description": ["darkdetect.isDark 判断当前主题模式是否为暗黑模式"]
+  },
+  "darkdetect.isLight 判断当前主题模式是否为明亮模式": {
+    "prefix": ["darkdetect isLight -darkdetect"],
+    "body": ["darkdetect.isLight()"],
+    "description": ["darkdetect.isLight 判断当前主题模式是否为明亮模式"]
+  }
+}

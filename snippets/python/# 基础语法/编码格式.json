@@ -1,0 +1,12 @@
+{
+  "编码: UTF-8": {
+    "prefix": ["utf8 -coding"],
+    "body": ["'utf-8'"],
+    "description": ["编码: UTF-8"]
+  },
+  "编码: GBK": {
+    "prefix": ["gbk -coding"],
+    "body": ["'gbk'"],
+    "description": ["编码: GBK"]
+  }
+}

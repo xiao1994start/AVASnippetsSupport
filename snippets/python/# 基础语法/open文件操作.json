@@ -1,0 +1,182 @@
+{
+  "open 文件操作对象": {
+    "prefix": ["open file"],
+    "body": [
+      "open(${1:file_path}, '${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', ${3:encoding='utf-8'})"
+    ],
+    "description": ["open -文件操作对象"]
+  },
+  "with open 文件操作": {
+    "prefix": ["with open"],
+    "body": [
+      "with open(${1:file_path}, '${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', ${3:encoding='utf-8'}) as file:",
+      "    # b 模式下, 删除 encoding 配置",
+      "    ${4:pass}$0",
+      "    file.flush()  # 写文件刷新缓存"
+    ],
+    "description": ["open -文件操作"]
+  },
+  "open.read 读取文件内容": {
+    "prefix": ["open read -open"],
+    "body": ["read(${1:size})"],
+    "description": [
+      "open.read: size 未指定则返回整个文件, 如果文件大小 >2 倍内存则有问题, file.read()读到文件尾时返回\"\"(空字串)"
+    ]
+  },
+  "open.readline 返回一行": {
+    "prefix": ["open readline -open"],
+    "body": ["readline($0)"],
+    "description": ["open.readline 返回一行"]
+  },
+  "open.readlines 按行读取->list": {
+    "prefix": ["open readlines -open"],
+    "body": ["readlines(${1:size})"],
+    "description": [
+      "open.readlines 返回包含size行的列表, size 未指定则返回全部行"
+    ]
+  },
+  "open.write 写入文件": {
+    "prefix": ["open write -open"],
+    "body": ["write($0)"],
+    "description": ["open.write 如果要写入字符串以外的数据,先将他转换为字符串"]
+  },
+  "open.flush 刷新缓存": {
+    "prefix": ["open flush -open"],
+    "body": ["flush()"],
+    "description": ["open.flush 刷新缓存"]
+  },
+  "open.close 关闭文件": {
+    "prefix": ["open close -open"],
+    "body": ["close()"],
+    "description": ["open.close 关闭文件"]
+  },
+  "open -r 只读模式": {
+    "prefix": ["with open r -open"],
+    "body": [
+      "with open(${1:file_path}, 'r', encoding='utf-8') as f:",
+      "    content = f.read()",
+      "    $0"
+    ],
+    "description": [
+      "open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式",
+      "文件必须存在, 不存在抛出错误"
+    ]
+  },
+  "open -rb 二进制只读": {
+    "prefix": ["with open rb -open"],
+    "body": ["with open(${1:file_path}, 'rb') as f:", "    f.read()", "    $0"],
+    "description": [
+      "open -rb 以二进制格式打开一个文件用于只读常用于读取图片、声音、视频等文件"
+    ]
+  },
+  "open -r+ 读写 |->开头": {
+    "prefix": ["with open r+ -open"],
+    "body": [
+      "with open(${1:file_path}, 'r+', encoding='utf-8') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -r+ 打开一个文件用于读写文件指针将会放在文件的开头读完就追加"
+    ]
+  },
+  "open -w 只写模式(创建/覆盖)": {
+    "prefix": ["with open w -open"],
+    "body": [
+      "with open(${1:file_path}, 'w', encoding='utf-8') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": ["open -w 只用于写入模式(覆盖原来内容)"]
+  },
+  "open -wb 二进制只写(创建/覆盖)": {
+    "prefix": ["with open wb -open"],
+    "body": [
+      "with open(${1:file_path}, 'wb') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -wb 二进制只用于写入模式(覆盖原来内容), 常用于写入图片、声音、视频等非文本文件如图片等"
+    ]
+  },
+  "open -w+ 读写模式 |->开头": {
+    "prefix": ["with open w+ -open"],
+    "body": [
+      "with open(${1:file_path}, 'w+', encoding='utf-8') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -w+ 打开一个文件用于读写如果该文件已存在则打开文件, 并从开头开始编辑, 即原有内容会被删除如果该文件不存在, 创建新文件"
+    ]
+  },
+  "open -wb+ 二进制读写 |->开头": {
+    "prefix": ["with open wb+ -open"],
+    "body": [
+      "with open(${1:file_path}, 'wb+') as f",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -wb+ 以二进制格式打开一个文件用于读写如果该文件已存在则打开文件, 并从开头开始编辑, 即原有内容会被删除",
+      "    如果该文件不存在, 创建新文件一般用于非文本文件如图片等"
+    ]
+  },
+  "open -a 追加模式 结尾->|": {
+    "prefix": ["with open a -open"],
+    "body": [
+      "with open(${1:file_path}, 'a', encoding='utf-8') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -a 打开一个文件用于追加如果该文件已存在, 文件指针将会放在文件的结尾也就是说, 新的内容将会被写入到已有内容之后如果该文件不存在, 创建新文件进行写入"
+    ]
+  },
+  "open -ab 追加模式 结尾->|": {
+    "prefix": ["with open ab -open"],
+    "body": [
+      "with open(${1:file_path}, 'ab') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -ab 以二进制格式打开一个文件用于追加如果该文件已存在, 文件指针将会放在文件的结尾也就是说, 新的内容将会被写入到已有内容之后",
+      "    如果该文件不存在, 创建新文件进行写入"
+    ]
+  },
+  "open -a+ 追加模式 结尾->|": {
+    "prefix": ["with open a+ -open"],
+    "body": [
+      "with open(${1:file_path}, 'a+', encoding='utf-8') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -a+ 打开一个文件用于读写如果该文件已存在, 文件指针将会放在文件的结尾",
+      "    文件打开时会是追加模式如果该文件不存在, 创建新文件用于读写"
+    ]
+  },
+  "open -ab+ 二进制追加 结尾->|": {
+    "prefix": ["with open ab+ -open"],
+    "body": [
+      "with open(${1:file_path}, 'ab+') as f:",
+      "    content = ${2:写入内容}",
+      "    f.write(content)",
+      "    f.flush()  # 写文件刷新缓存"
+    ],
+    "description": [
+      "open -ab+ 以二进制格式打开一个文件用于追加如果该文件已存在, 文件指针将会放在文件的结尾",
+      "    如果该文件不存在, 创建新文件用于读写"
+    ]
+  }
+}

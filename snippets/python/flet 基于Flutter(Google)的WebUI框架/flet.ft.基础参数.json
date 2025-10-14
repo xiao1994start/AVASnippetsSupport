@@ -1,0 +1,94 @@
+{
+  "flet.app 运行 Flet 应用": {
+    "prefix": ["ft app -ft", "flet app -flet"],
+    "body": [
+      "ft.app(",
+      "    target=${1:main},  # * 运行目标[包含 page.add 的函数或类名],",
+      "    use_color_emoji=True,  # * emoji表情是否使用颜色,",
+      "    # view=ft.WEB_BROWSER,  # *运行模式: (默认:独立窗口, WEB_BROWSER:浏览器)",
+      ")",
+      ""
+    ],
+    "description": ["flet.app 运行 Flet 应用"]
+  },
+  "flet.ControlEvent Flet控件对象事件": {
+    "prefix": [":ft ControlEvent", ":flet ControlEvent"],
+    "body": [": ft.ControlEvent"],
+    "description": ["flet.ControlEvent Flet控件对象事件"]
+  },
+  "flet.Control 父级控件对象": {
+    "prefix": ["ft Control -ft", "flet Control -flet"],
+    "body": ["ft.Control"],
+    "description": ["flet.Control 父级控件对象"]
+  },
+  "flet.e.control Flet事件属性": {
+    "prefix": ["ft e control =-ft", "flet e control =-flet"],
+    "body": ["e.control"],
+    "description": ["flet.e.control Flet事件属性"]
+  },
+  "flet.e.control.data Flet事件属性值": {
+    "prefix": ["ft e contro data =-ft", "flet e control data =-flet"],
+    "body": ["e.control.data"],
+    "description": ["flet.e.control.data Flet事件属性值"]
+  },
+  "flet.e.control.value Flet事件属性值": {
+    "prefix": ["ft e contro value =-ft", "flet e control value =-flet"],
+    "body": ["e.control.value"],
+    "description": ["flet.e.control.value Flet事件属性值"]
+  },
+  "flet.e.control.selected Flet事件属性值": {
+    "prefix": ["ft e contro selected =-ft", "flet e control selected =-flet"],
+    "body": ["e.control.selected"],
+    "description": ["flet.e.control.selected Flet事件属性值"]
+  },
+  "flet.Offset 控件的相对偏移": {
+    "prefix": ["ft Offset -ft", "flet Offset -flet"],
+    "body": ["ft.Offset(0, 0)"],
+    "description": ["flet.Offset 控件的相对偏移"]
+  },
+  "flet.ThemeMode 主题模式": {
+    "prefix": ["ft ThemeMode -ft", "flet ThemeMode -flet"],
+    "body": ["ft.ThemeMode.${1:DARK}"],
+    "description": ["flet.ThemeMode 主题模式"]
+  },
+  "flet.ThemeMode.SYSTEM 更随系统主题模式": {
+    "prefix": ["ft ThemeMode SYSTEM -ft", "flet ThemeMode SYSTEM -flet"],
+    "body": [
+      "ft.ThemeMode.SYSTEM  # SYSTEM[默认]: 系统默认, LIGHT: 浅色, DARK: 深色"
+    ],
+    "description": ["flet.ThemeMode.SYSTEM 更随系统主题模式"]
+  },
+  "flet.FontWeight 字体粗细属性": {
+    "prefix": ["ft FontWeight -ft", "flet FontWeight -flet"],
+    "body": ["ft.FontWeight.${1:NORMAL}"],
+    "description": ["flet.FontWeight 字体粗细属性"]
+  },
+  "flet.BorderSide 边框[style.side属性]样式": {
+    "prefix": ["ft BorderSide -ft", "flet BorderSide -flet"],
+    "body": [
+      "ft.BorderSide(${1:width=2, color=ft.Colors.LIGHT_GREEN_ACCENT_700})"
+    ],
+    "description": ["flet.BorderSide 边框[side属性]样式"]
+  },
+  "flet.TextStyle 文字[style.text_style]样式属性": {
+    "prefix": ["ft TextStyle -ft", "flet TextStyle -flet"],
+    "body": ["ft.TextStyle($0)"],
+    "description": ["flet.TextStyle 文字[style.text_style]样式属性"]
+  },
+  "flet.width 动态宽度属性": {
+    "prefix": [
+      "ft width auto -ft",
+      "flet width auto -flet",
+      "ft width dynamic -ft",
+      "flet width dynamic -flet"
+    ],
+    "body": [
+      "width=len('text') * 14 + 26 + 12,  # * 文字长度 * 14:文字默认尺寸 + 26:图标及其他控件尺寸 + 12:预留Padding空间"
+    ],
+    "description": [
+      "flet.width 动态宽度属性",
+      "\n\t-对控件进行封装会更方便, 减少重复代码",
+      "\n\t-使用时,需设置父级控件属性: wrap=True"
+    ]
+  }
+}

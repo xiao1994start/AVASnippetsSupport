@@ -1,0 +1,168 @@
+{
+  "进入指定当前目录": {
+    "prefix": ["cd -d cwd"],
+    "body": ["CD /D \"%~dp0\""],
+    "description": ["进入指定当前目录"]
+  },
+  "CD /D 更改当前directory": {
+    "prefix": ["cd -d"],
+    "body": ["CD /D $0"],
+    "description": ["CD /D 更改当前directory"]
+  },
+  "当前目录": {
+    "prefix": ["cwd"],
+    "body": ["\"%~dp0${1:}\""],
+    "description": ["当前目录"]
+  },
+  "当前目录下R2R文件夹": {
+    "prefix": ["dr2r"],
+    "body": ["\"%~dp0R2R\\\\${1:example}\""],
+    "description": ["当前目录下R2R文件夹"]
+  },
+  "当前系统盘": {
+    "prefix": ["SystemDrive", "HomeDrive"],
+    "body": ["\"%SystemDrive%\\\\$0\""],
+    "description": ["当前系统盘"]
+  },
+  "ProTools系统默认文件夹": {
+    "prefix": ["AXX -ProTools"],
+    "body": ["\"%COMMONPROGRAMFILES%\\Avid\\Audio\\Plug-Ins\\\\${1:example}\""],
+    "description": ["ProTools系统默认文件夹"]
+  },
+  "CommonFiles": {
+    "prefix": ["CommonFiles"],
+    "body": ["\"%COMMONPROGRAMFILES%\\\\${1:example}\""],
+    "description": ["CommonFiles"]
+  },
+  "CommonFiles(x86)": {
+    "prefix": ["CommonFiles-86"],
+    "body": ["\"%COMMONPROGRAMFILES(x86)%\\\\${1:example}\""],
+    "description": ["CommonFiles(x86)"]
+  },
+  "ProgramData": {
+    "prefix": ["ProgramData"],
+    "body": ["\"%PROGRAMDATA%\\\\${1:example}\""],
+    "description": ["ProgramData"]
+  },
+  "ProgramFiles": {
+    "prefix": ["ProgramFiles"],
+    "body": ["\"%PROGRAMFILES%\\\\${1:example}\""],
+    "description": ["ProgramFiles"]
+  },
+  "ProgramFiles(x86)": {
+    "prefix": ["ProgramFiles-86"],
+    "body": ["\"%PROGRAMFILES(X86)%\\\\${1:example}\""],
+    "description": ["ProgramFiles(x86)"]
+  },
+  "系统公共用户文件夹": {
+    "prefix": ["public"],
+    "body": ["\"%PUBLIC%\\\\${1:example}\""],
+    "description": ["系统公共用户文件夹"]
+  },
+  "AppData文件夹": {
+    "prefix": ["AppData"],
+    "body": ["\"%USERPROFILE%\\AppData\\\\${1:example}\""],
+    "description": ["AppData文件夹"]
+  },
+  "Local安装程序相关的文件": {
+    "prefix": ["Local"],
+    "body": ["\"%USERPROFILE%\\AppData\\Local\\\\${1:example}\""],
+    "description": ["Local安装程序相关的文件"]
+  },
+  "LocalLow无法随用户配置文件移动的数据": {
+    "prefix": ["LocalLow"],
+    "body": ["\"%USERPROFILE%\\AppData\\LocalLow\\\\${1:example}\""],
+    "description": ["LocalLow无法随用户配置文件移动的数据"]
+  },
+  "Roaming可以轻松与服务器同步的文件夹": {
+    "prefix": ["Roaming"],
+    "body": ["\"%USERPROFILE%\\AppData\\Roaming\\\\${1:example}\""],
+    "description": ["Roaming可以轻松与服务器同步的文件夹"]
+  },
+  "当前用户文件夹": {
+    "prefix": ["Users"],
+    "body": ["\"%USERPROFILE%\\\\${1:example}\""],
+    "description": ["当前用户文件夹"]
+  },
+  "VSTPlugins系统默认文件夹": {
+    "prefix": ["VSTPlugins"],
+    "body": ["\"%PROGRAMFILES%\\VSTPlugins\\\\${1:example}\""],
+    "description": ["VSTPlugins系统默认文件夹"]
+  },
+  "VST3系统默认文件夹": {
+    "prefix": ["VST3"],
+    "body": ["\"%COMMONPROGRAMFILES%\\VST3\\\\${1:example}\""],
+    "description": ["VST3系统默认文件夹"]
+  },
+  "Windows系统目录": {
+    "prefix": ["Windir"],
+    "body": ["\"%WINDIR%\\\\${1:example}\""],
+    "description": ["Windows系统目录"]
+  },
+  "WindowsSystem32系统文件目录": {
+    "prefix": ["System32"],
+    "body": ["\"%WINDIR%\\system32\\\\${1:example}\""],
+    "description": ["WindowsSystem32系统文件目录"]
+  },
+  "用户 Desktop 桌面": {
+    "prefix": ["UserDesktop"],
+    "body": ["\"%USERPROFILE%\\Desktop\\\\${1:example}\""],
+    "description": ["用户 Desktop 桌面"]
+  },
+  "当前用户Documents文档": {
+    "prefix": ["Documents"],
+    "body": ["\"%USERPROFILE%\\Documents\\\\${1:example}\""],
+    "description": ["当前用户Documents文档"]
+  },
+  "windows系统路径环境变量常用": {
+    "prefix": ["path-Info"],
+    "body": [
+      "goto :aboutPathInfo",
+      "%SystemDrive%   ^|  %HOMEDRIVE%       = C:\\               当前系统盘符",
+      "%SystemRoot%    ^|  %Windir%          = C:\\WINDOWS        当前系统目录",
+      "%ALLUSERSPROFILE%                     = C:\\ProgramData",
+      "%APPDATA%                             = C:\\Users\\用户名\\AppData\\Roaming",
+      "%COMMONPROGRAMFILES%                  = C:\\Program Files\\Common Files",
+      "%COMMONPROGRAMFILES(x86)%             = C:\\Program Files (x86)\\Common Files",
+      "%COMSPEC%       ^|  %USERPROFILE%     = C:\\Windows\\System32\\cmd.exe",
+      "%HOMEPATH%                            = C:\\Users用户名",
+      "%LOCALAPPDATA%                        = C:\\Users用户名AppDataLocal",
+      "%PROGRAMDATA%                         = C:\\ProgramData",
+      "%PROGRAMFILES%                        = C:\\Program Files",
+      "%PROGRAMFILES(X86)%                   = C:\\Program Files (x86)",
+      "%PUBLIC%                              = C:\\UsersPublic",
+      "%TEMP%          ^|   %TMP%            = C:\\Users用户名AppDataLocalTemp",
+      ":aboutPathInfo"
+    ],
+    "description": "windows系统路径环境变量常用"
+  },
+  "%%~应用说明": {
+    "prefix": ["var=info", "let=info", "set=info"],
+    "body": [
+      "goto :参数扩展处理特殊语法",
+      "@REM * %%~ 参数及其含义:",
+      "%%~f        : 扩展到一个完全合格的路径名称 (包括驱动器盘符)",
+      "%%~d        : 仅扩展到驱动器盘符",
+      "%%~p        : 仅扩展到路径, 不包括驱动器盘符和文件名",
+      "%%~n        : 仅扩展到文件的基本名称 (不含路径和扩展名)",
+      "%%~x        : 仅扩展到文件的扩展名 (包含点)",
+      "%%~s        : 扩展的路径只含有短文件名 (如果存在的话)",
+      "%%~a        : 文件的属性 (如RASHNOC)",
+      "%%~t        : 文件的创建时间",
+      "%%~z        : 文件的大小 (以字节为单位)",
+      "%%~\\$PATH:   : 查找列在PATH环境变量中的目录, 并将扩展到找到的第一个文件的完全合格名称",
+      "@REM * 应用实例",
+      "%%~fi : 全路径名称 (带驱动器盘符的完整路径)",
+      "%%~di : 驱动器盘符",
+      "%%~pi : 路径. 此选项不包括最后的反斜杠()",
+      "%%~ni : 文件的基本名称 (不含路径和扩展名)",
+      "%%~xi : 文件的扩展名 (包含点)",
+      "%%~si : 短文件名 (如果存在的话)",
+      "%%~ai : 文件属性",
+      "%%~ti : 文件创建时间/修改时间",
+      "%%~zi : 文件大小 (字节)",
+      ":参数扩展处理特殊语法"
+    ],
+    "description": "%%~应用说明"
+  }
+}

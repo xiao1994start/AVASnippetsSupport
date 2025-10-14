@@ -1,0 +1,838 @@
+{
+  "name": "avasnippetssupport",
+  "displayName": "AVASnippetsSupport",
+  "description": "Ren'Py Language Support and Code Snippets.",
+  "version": "0.0.1",
+  "publisher": "AVA",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiao1994start"
+  },
+  "keywords": [
+    "python",
+    "renpy",
+    "bat",
+    "json",
+    "markdown",
+    "python",
+    "scss",
+    "typescript"
+  ],
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": [
+    "workspaceContains:**/*.rpy",
+    "workspaceContains:**/_ren.py",
+    "onDebugResolve:renpy"
+  ],
+  "main": "./dist/extension",
+  "browser": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "renpy",
+        "aliases": [
+          "Ren'Py",
+          "renpy",
+          "rpy"
+        ],
+        "extensions": [
+          ".rpy",
+          ".rpym",
+          ".rpymc",
+          ".rpyc"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./img/renpy.svg",
+          "dark": "./img/renpy.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "renpy",
+        "scopeName": "source.renpy",
+        "path": "./syntaxes/renpy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.atl",
+        "path": "./syntaxes/renpy.atl.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.python",
+        "path": "./syntaxes/renpy.python.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.screen",
+        "path": "./syntaxes/renpy.screen.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.style",
+        "path": "./syntaxes/renpy.style.tmLanguage.json"
+      },
+      {
+        "scopeName": "renpy.comment.injection",
+        "path": "./syntaxes/injection.json",
+        "injectTo": [
+          "source.python"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.renpy": "renpy"
+        }
+      },
+      {
+        "scopeName": "text.log.injection",
+        "path": "./syntaxes/log.injection.json",
+        "injectTo": [
+          "text.log"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/# 基础命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/管理员权限获取.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/文件操作.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/attrib文件属性.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/certutil系统证书.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/choice选择器.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/encoding编码语言页.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/env环境变量.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/exit退出.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/Explorer资源管理器.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/for循环语句.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/goto语句.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/if条件语句.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/kill进程关闭.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/rd删除命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/reg注册表.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/robocopy智能复制.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/Script.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/set变量.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/shutdown系统命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/# 基础语法/type显示文本文件内容.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/7z/commands.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/Bandizip/commands.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/Bat To Exe Converter/bat2exe.tmpl.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/cURL/cURL.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/DeskEdit/commands.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/github/git.初始化.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/github/git.基础命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/github/git.protable.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/HTML/Vue功能.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/node.初始化.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/node.基础命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/npm.包管理.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/npm.包管理.vscode.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/npm.包管理.wps.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/nodejs/npm.基础命令.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/python/python.embed.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/python/python基础.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/vscode/vscodePlugin插件创建.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/# 基础命令.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/console控制台.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/filter过滤.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/for循环.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/if 和 swith 条件判断.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/JavaScript/try.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/json_snippets_for_all.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/json_snippets_for_python.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/_注释.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/编码格式.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/attr动态属性操作.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/class类_def_函数.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/configparser编辑ini.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/datetime高级时间模块.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/dict字典.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/dict字典多态性应用.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/enumerate枚举函数.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/eval字符串运算.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/eval字符串转换执行函数.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/for_while循环语句.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/functools函数工具.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/if条件判断.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/import导包.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/list列表.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/match_case条件判断.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/open文件操作.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/pass结构语句.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/pprint高级打印.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/print打印.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/requests网络请求.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/set集合.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/str字符串.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/time时间模块.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/try异常处理.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/tuple元组.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/zip_next_iter迭代对象.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/# 基础语法/type数据类型.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/多线程相关/asyncio 协程与异步IO/asyncio.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/多线程相关/multiprocessing 多进程/multiprocessing.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/多线程相关/threading 多线程/threading.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/多线程相关/ThreadPoolExecutor 线程池和进程池/ThreadPoolExecutor.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/其他pip依赖/python.pip.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/argparse 命令行参数模块/argparse.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/beautifulsoup4 解析HTML/beautifulsoup4.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/beautifulsoup4 解析HTML/beautifulsoup4.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/darkdetect 智能主题模式检测库/darkdetect.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/darkdetect 智能主题模式检测库/darkdetect.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/Django/Django.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/Django/Django.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/DrissionPage 自动化网络请求模块/DrissionPage.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/DrissionPage 自动化网络请求模块/DrissionPage.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/enum 枚举类/enum.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/FastAPI/FastAPI.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/FastAPI/FastAPI.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.bat.debug.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.按钮_Buttons.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.布局_Layout.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.导航_Navigation.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.对话框_Dialogs.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.输入选择_Input and Selections.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Controls.信息显示_Information Displays.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.ft.基础参数.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.import.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.page.页面设置.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.Reference.引用参考.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/flet 基于Flutter(Google)的WebUI框架/flet.tmpl.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/httpx 网络请求/httpx.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/httpx 网络请求/httpx.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/itertools 迭代器创建/itertools.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/json 数据处理/json.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/logging 日志管理/logging.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/loguru 日志模块/loguru.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/loguru 日志模块/loguru.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/msvcrt 终端交互库Windows/msvcrt.import.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/msvcrt 终端交互库Windows/msvcrt.tmpl.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/msvcrt 终端交互库Windows/msvcrt控制台IO.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/niceGUI web应用开发/nicegui.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/niceGUI web应用开发/nicegui.import.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/niceGUI web应用开发/nicegui.ui.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/niceGUI web应用开发/nicegui.pyinstaller.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/NumPy/numpy.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/NumPy/numpy.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/OpenAI/OpenAI.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/OpenAI/OpenAI.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/opencv python计算机视觉库/cv2.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/opencv python计算机视觉库/cv2.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/os 多种操作系统接口/os.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/pandas CSV数据处理/pandas.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pandas CSV数据处理/pandas.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pathlib 面向对象的文件系统路径/pathlib.基础语法.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pathlib 面向对象的文件系统路径/pathlib.glob.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/Pillow 图像处理模块/Pillow.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/Pillow 图像处理模块/Pillow.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/pyautogui 自动化/pyautogui.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pyautogui 自动化/pyautogui.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/PyInstaller 打包模块/pyinstaller.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/PyInstaller 打包模块/pyinstaller.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/PySide GUI图形界面/pyside6.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/PySide GUI图形界面/pyside6.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/Pywebview 创建Webview窗口/webview.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/Pywebview 创建Webview窗口/webview.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/pywin32 系统API接口/win32.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pywin32 系统API接口/win32系统信号模块.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pywin32 系统API接口/win32api.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pywin32 系统API接口/win32print.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/random 随机模块/random.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/re 正则表达式/re.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/re 正则表达式/re.常用输入类型正则表达式示例.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/Reflex 全栈WebApp框架/reflex.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/Reflex 全栈WebApp框架/reflex.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/rich 终端文本样式库/rich.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/rich 终端文本样式库/rich.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/selenium 自动化web测试/selenium.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/selenium 自动化web测试/selenium.jsScript.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/selenium 自动化web测试/selenium.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/shutil 高阶文件操作/shutil.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/socket 网络通讯模块/socket.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/streamlit 快速WebApp框架/streamlit.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/streamlit 快速WebApp框架/streamlit.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/subprocess 执行系统命令/subprocess.cmdScript.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/subprocess 执行系统命令/subprocess.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/sys 系统相关的形参和函数/sys.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/uvicorn ASGI_Web服务器实现/uvicorn.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/tkinter 内置TkGUI界面框架/tkinter.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/tqdm 高效进度条神器/tqdm.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/tqdm 高效进度条神器/tqdm.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/typing 对类型提示的支持/typing.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/uiautomation 微软桌面程序自动化操作库/uiautomation.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/uiautomation 微软桌面程序自动化操作库/uiautomation.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/uv 环境管理工具/python.embed_uv.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/uv 环境管理工具/uv.base.bat.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/uv 环境管理工具/uv.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/uvicorn ASGI_Web服务器实现/uvicorn.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/winreg 注册表管理模块/winreg.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/zipfile 压缩归档ZIP库/zipfile.Import.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/zipfile 压缩归档ZIP库/zipfile.with.json"
+      },
+      {
+        "language": "renpy",
+        "path": "./snippets/renpy/基础语法.json"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/scss/button按钮.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript/axios网络请求库.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript/element-plus样式组件.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript/vue基础设置.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/xml/wps/wps_xml.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/xml/常用属性.json"
+      }
+    ]
+  }
+}

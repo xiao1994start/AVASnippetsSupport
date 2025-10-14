@@ -1,0 +1,11 @@
+{
+  "引入 flet WebUI框架": {
+    "prefix": ["import flet", "im flet as ft"],
+    "body": [
+      "import flet as ft  # * 引入 flet WebUI框架",
+      "from flet import *  # * 引入 flet 框架所有子控件",
+      ""
+    ],
+    "description": ["引入 flet WebUI框架"]
+  }
+}

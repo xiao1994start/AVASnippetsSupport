@@ -1,0 +1,44 @@
+{
+  "跳转到标签": {
+    "prefix": ["goto "],
+    "body": ["goto :$0"],
+    "description": ["跳转到标签"]
+  },
+  "脚本跳转到文件的结束处": {
+    "prefix": ["goto -end"],
+    "body": ["goto :end"],
+    "description": ["脚本跳转到文件的结束处"]
+  },
+  "批量拖入文件处理": {
+    "prefix": ["input files"],
+    "body": [
+      ":process_files",
+      "if \"%~1\"==\"\" goto :end_process_files",
+      "",
+      "set \"fullpath=%~f1\"",
+      "ECHO 完整路径: !fullpath!",
+      "set \"fullfilename=%~nx1\"",
+      "ECHO 文件名: !fullfilename!",
+      "set \"filename=%~n1\"",
+      "ECHO 仅文件名: !filename!",
+      "set \"filepath=%~dp1\"",
+      "ECHO 文件目录: !filepath!",
+      "set \"filesize=%~z1\"",
+      "ECHO 文件大小: !filesize! 字节",
+      "set \"fileext=%~x1\"",
+      "ECHO 文件扩展名: !fileext!",
+      "",
+      "",
+      "goto :end",
+      "",
+      "",
+      ":output_files",
+      "shift",
+      "goto :process_files",
+      "",
+      ":end_process_files",
+      ""
+    ],
+    "description": "批量拖入文件处理"
+  }
+}

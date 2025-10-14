@@ -1,0 +1,128 @@
+{
+  "引入 pandas 模块": {
+    "prefix": ["import pandas", "im pandas as pd"],
+    "body": ["import pandas as pd  # * pandas 数据处理模块"],
+    "description": ["引入 pandas 数据处理模块"]
+  },
+  "pandas.DataFrame 创建二维表格": {
+    "prefix": ["pd DataFrame", "pandas DataFrame"],
+    "body": ["pd.DataFrame(data=${1:data}, index=None)"],
+    "description": [
+      "pandas.DataFrame 创建二维表格",
+      "data: 可以是字典、列表、元组、NumPy数组、pandas的Series或DataFrame",
+      "** data: dict 会自动添加 columns 指定列索引",
+      "** index: 指定行索引",
+      "** columns: 指定列索引",
+      "** dtype: 指定数据类型",
+      "** copy: 是否复制数据",
+      "** name: 指定名称"
+    ]
+  },
+  "pandas.DataFrame.from_dict 直接从字典构建DataFrame": {
+    "prefix": ["pd DataFrame_from dict", "pandas DataFrame_from dict"],
+    "body": ["pd.DataFrame.from_dict(data=${1:dict()}, orient='index')"],
+    "description": ["pandas.DataFrame.from_dict 直接从字典构建DataFrame"]
+  },
+  "pandas.index 行索引": {
+    "prefix": ["pd index", "pandas index", "index -pd", "index -pandas"],
+    "body": ["index"],
+    "description": ["pandas.index 行索引"]
+  },
+  "pandas.index.intersection 行索引交集": {
+    "prefix": [
+      "pd index intersection",
+      "index intersection -pd",
+      "pandas index intersection",
+      "index intersection -pandas"
+    ],
+    "body": ["index.intersection(${1:DataFrame}.index)"],
+    "description": ["pandas.index.intersection 行索引交集"]
+  },
+  "pandas.columns 列索引": {
+    "prefix": [
+      "pd columns",
+      "pandas columns",
+      "columns -pd",
+      "columns -pandas"
+    ],
+    "body": ["columns"],
+    "description": ["pandas.columns 列索引"]
+  },
+  "pandas.update 更新数据的值": {
+    "prefix": ["pd update", "pandas update", "update -pd", "update -pandas"],
+    "body": [
+      "update(",
+      "    other=${1:pd.DataFrame()},  # * 更新当前对象的另一个DataFrame或Series对象",
+      "    join='left',  # * 更新方式: 'left':(默认)更新左表",
+      "    overwrite=True,  # * 覆盖, True:(默认)完全覆盖; False:只覆盖NaN空值",
+      "    errors='ignore',  # * 错误处理, 默认值: 'ignore':(默认)忽略错误; 'raise':抛出错误",
+      ")",
+      ""
+    ],
+    "description": ["pandas.update 更新数据的值"]
+  },
+  "pandas.loc 提取索引取值": {
+    "prefix": ["pd loc", "pandas loc", "loc -pd", "loc -pandas"],
+    "body": ["loc[$0]"],
+    "description": [
+      "pandas.loc 提取索引取值",
+      "Series: .loc[index]",
+      "** index: 索引",
+      "DataFrame: .loc[index, columns]",
+      "** index: 行索引",
+      "** columns: 列索引"
+    ]
+  },
+  "pandas.drop 删除指定列": {
+    "prefix": ["pd drop", "pandas drop", "drop -pd", "drop -pandas"],
+    "body": ["drop(labels=[labelsList], axis=1, inplace=True)"],
+    "description": [
+      "pandas.values 删除指定列",
+      "** labels: 列索引列表",
+      "** axis: 0 行索引, 1 列索引",
+      "** inplace: 是否修改原对象"
+    ]
+  },
+  "pandas.values 值": {
+    "prefix": ["pd values", "pandas values", "values -pd", "values -pandas"],
+    "body": ["values"],
+    "description": ["pandas.values 值"]
+  },
+  "pandas.isnull NaN空值->True": {
+    "prefix": ["pd isnull", "pandas isnull", "isnull -pd", "isnull -pandas"],
+    "body": ["isnull()"],
+    "description": ["pandas.isnull NaN空值->True"]
+  },
+  "pandas.notnull NaN空值->False": {
+    "prefix": [
+      "pd notnull",
+      "pandas notnull",
+      "notnull -pd",
+      "notnull -pandas"
+    ],
+    "body": ["notnull()"],
+    "description": ["pandas.notnull NaN空值->False"]
+  },
+  "pandas.to_dict 将DataFrame转为字典": {
+    "prefix": [
+      "pd to_dict",
+      "pandas to_dict",
+      "to_dict -pd",
+      "to_dict -pandas"
+    ],
+    "body": ["to_dict(orient='index')"],
+    "description": ["pandas.to_dict 将DataFrame转为字典"]
+  },
+  "pandas.to_csv 保存为CSV文件": {
+    "prefix": ["pd to_csv", "pandas to_csv", "to_csv -pd", "to_csv -pandas"],
+    "body": [".to_csv(path_or_buf=${1:file_path}, header=True, index=True)"],
+    "description": [
+      "pandas.values 保存为CSV文件",
+      "** path_or_buf: 保存路径",
+      "** header: 是否保存列索引",
+      "** index: 是否保存行索引",
+      "** mode: 文件打开模式",
+      "** encoding: 文件编码"
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "flet.Alignment 对齐方式": {
+    "prefix": ["ft Alignment -ft", "flet Alignment -flet"],
+    "body": ["ft.Alignment(0, 0)"],
+    "description": [
+      "flet.Alignment 对齐方式",
+      "[ft.Alignment: 居中:(0,0); 左上:(-1, -1); 右下:(1, 1)]"
+    ]
+  },
+  "flet.alignment 对齐方式 (快速设置)": {
+    "prefix": ["ft alignment -ft", "flet alignment -flet"],
+    "body": [
+      "ft.alignment.${1|top_center,center,bottom_center,top_left,center_left,bottom_left,top_right,center_right,bottom_right|}"
+    ],
+    "description": [
+      "flet.alignment 对齐方式",
+      "top_center = Alignment(0, -1)",
+      "center = Alignment(0, 0)",
+      "bottom_center = Alignment(0, 1)",
+      "top_left = Alignment(-1, -1)",
+      "center_left = Alignment(-1, 0)",
+      "bottom_left = Alignment(-1, 1)",
+      "top_right = Alignment(1, -1)",
+      "center_right = Alignment(1, 0)",
+      "bottom_right = Alignment(1, 1)"
+    ]
+  },
+  "flet.ButtonStyle.RoundedRectangleBorder 按钮[style]样式属性": {
+    "prefix": [
+      "ft ButtonStyle --RoundedRectangleBorder -ft",
+      "flet ButtonStyle --RoundedRectangleBorder -flet"
+    ],
+    "body": ["style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=4))"],
+    "description": ["flet.ButtonStyle 按钮[style]样式属性"]
+  },
+  "flet.MainAxisAlignment Y轴(vertical_alignment|垂直)对齐": {
+    "prefix": ["ft MainAxisAlignment -ft", "flet MainAxisAlignment -flet"],
+    "body": ["ft.MainAxisAlignment.${1:CENTER}"],
+    "description": [
+      "flet.MainAxisAlignment Y轴(vertical_alignment|垂直)对齐",
+      "对齐方式:",
+      "START[默认]: 顶部, CENTER: 居中, END: 底部, SPACE_BETWEEN: 首尾两端对齐, SPACE_AROUND: 相等间隔对齐, SPACE_EVENLY: 等间隔对齐"
+    ]
+  },
+  "flet.CrossAxisAlignment X轴(horizontal_alignment|水平)对齐": {
+    "prefix": ["ft CrossAxisAlignment -ft", "flet CrossAxisAlignment -flet"],
+    "body": ["ft.CrossAxisAlignment.${1:CENTER}"],
+    "description": [
+      "flet.CrossAxisAlignment X轴(horizontal_alignment|水平)对齐",
+      "对齐方式:",
+      "START[默认]: 左侧, CENTER: 居中, END: 右侧, STRETCH: 拉伸, BASELINE: 基线对齐"
+    ]
+  },
+  "flet.BorderRadius 圆角": {
+    "prefix": ["ft BorderRadius -ft", "flet BorderRadius -flet"],
+    "body": [
+      "border_radius=ft.BorderRadius(top_left=3, top_right=3, bottom_left=3, bottom_right=3)"
+    ],
+    "description": ["flet.BorderRadius 圆角 (分别设置)"]
+  },
+  "flet.border_radius 圆角 (快速设置)": {
+    "prefix": ["ft border_radius -ft", "flet border_radius -flet"],
+    "body": ["border_radius=ft.border_radius.all(value=3)"],
+    "description": ["flet.border_radius 圆角 (快速设置)"]
+  },
+  "flet.Colors 颜色": {
+    "prefix": ["ft Colors -ft", "flet Colors -flet"],
+    "body": [
+      "ft.Colors.${1|BLUE_ACCENT_400,LIGHT_BLUE_ACCENT_400,GREEN_ACCENT_400,LIGHT_GREEN_ACCENT_400,PINK_ACCENT_400,PURPLE_ACCENT_400,RED_ACCENT_400,DEEP_PURPLE_ACCENT_400|}"
+    ],
+    "description": ["flet.Colors 颜色"]
+  },
+  "flet.Colors.with_opacity 自定义颜色": {
+    "prefix": ["ft Colors with_opacity -ft", "flet Colors with_opacity -flet"],
+    "body": ["ft.Colors.with_opacity(opacity=0, color='#000000')"],
+    "description": ["flet.Colors.with_opacity 自定义颜色"]
+  },
+  "flet.KeyboardType 文本编辑类型": {
+    "prefix": ["ft KeyboardType -ft", "flet KeyboardType -flet"],
+    "body": [
+      "keyboard_type=ft.KeyboardType.${1|MULTILINE,TEXT,NUMBER,PHONE,DATETIME,EMAIL,URL,VISIBLE_PASSWORD,NAME,STREET_ADDRESS,NONE|}"
+    ],
+    "description": ["flet.KeyboardType 文本编辑类型"]
+  },
+  "flet.Icons 使用Flet自带图标": {
+    "prefix": ["ft Icons -ft", "flet Icons -flet"],
+    "body": ["ft.Icons.${1:HOUSE}"],
+    "description": [
+      "flet.Icons 使用Flet自带图标",
+      "https://gallery.flet.dev/icons-browser/"
+    ]
+  },
+  "felt.InputFilter 输入过滤器": {
+    "prefix": ["ft InputFilter -felt", "felt InputFilter -felt"],
+    "body": [
+      "input_filter=ft.InputFilter(",
+      "    allow=True,  # 允许还是拒绝/阻止匹配的模式, 默认为 True",
+      "    regex_string=${1|r'^-?\\d*\\.?\\d*$',r'^-?\\d+$'|},# * 筛选器的正则表达式模式, 使用原始字符串(在字符串前面加上 r)作为模式,例如:r'pattern'",
+      "    replacement_string='',  # 替换 banned/denied 模式的字符串, 默认为空字符串",
+      ")"
+    ],
+    "description": ["felt.InputFilter 输入过滤器"]
+  },
+  "flet.Margin 外边距": {
+    "prefix": ["ft Margin -ft", "flet Margin -felt"],
+    "body": ["margin=ft.Margin(left=10, top=10, right=10, bottom=10)"],
+    "description": ["flet.margin.only 仅设置一个方向的外边距"]
+  },
+  "flet.margin.only 仅设置一个方向的外边距": {
+    "prefix": ["ft margin only -ft", "flet margin only -felt"],
+    "body": ["margin=ft.margin.only(${1:top=10})"],
+    "description": ["flet.margin.only 仅设置一个方向的外边距"]
+  },
+  "flet.Padding 内边距": {
+    "prefix": ["ft Padding -ft", "flet Padding -felt"],
+    "body": ["padding=ft.Padding(left=5, top=5, right=5, bottom=5)"],
+    "description": ["flet.Padding 内边距"]
+  },
+  "flet.ScrollMode 滚动模式": {
+    "prefix": ["ft ScrollMode -ft", "flet ScrollMode -flet"],
+    "body": ["scroll=ft.ScrollMode.${1|AUTO,ALWAYS,HIDDEN,ADAPTIVE,None|},"],
+    "description": [
+      "flet.ScrollMode 滚动模式",
+      "\n\t-AUTO:启用滚动, 并且仅在发生滚动时显示滚动条",
+      "\n\t-ALWAYS:启用滚动, 并且始终显示滚动条",
+      "\n\t-HIDDEN:启用滚动, 但滚动条始终处于隐藏状态",
+      "\n\t-ADAPTIVE:启用滚动, 并且当将应用程序作为 Web 或桌面运行时, 始终显示滚动条",
+      "\n\t-None:该列是不可滚动的, 其内容可能会溢出"
+    ]
+  },
+  "flet.TextOnlyInputFilter 输入控件仅允许文本": {
+    "prefix": ["ft TextOnlyInputFilter -ft", "flet TextOnlyInputFilter -flet"],
+    "body": ["input_filter=ft.TextOnlyInputFilter()"],
+    "description": ["flet.TextOnlyInputFilter 输入控件仅允许文本"]
+  },
+  "flet.NumbersOnlyInputFilter 输入控件只允许数字": {
+    "prefix": [
+      "ft NumbersOnlyInputFilter -ft",
+      "flet NumbersOnlyInputFilter -flet"
+    ],
+    "body": ["input_filter=ft.NumbersOnlyInputFilter()"],
+    "description": ["flet.NumbersOnlyInputFilter 输入控件只允许数字"]
+  }
+}

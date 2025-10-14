@@ -1,0 +1,66 @@
+{
+  "flet.AlertDialog 警报(弹窗)对话框": {
+    "prefix": ["ft AlertDialog =-ft", "flet AlertDialog =-flet"],
+    "body": [
+      "ft.AlertDialog(",
+      "    modal=True,  # 是否可以通过单击外部区域关闭弹窗[默认:False 可通过单击外部的区域关闭对话框](modal 属性无法改变)",
+      "    title=ft.Text(value='☣️', size=64),  # 弹窗标题",
+      "    content=ft.Row(  # * 弹窗内容",
+      "        controls=[",
+      "            ft.ProgressRing(),  # 环形循环旋转进度指示器",
+      "            ft.Text(value='正在处理……', size=32),",
+      "        ],",
+      "    ),",
+      "    alignment=ft.alignment.center,  # 弹窗对齐方式",
+      "    actions=[],  # 弹窗底部容器",
+      "    actions_alignment=ft.MainAxisAlignment.END,  # 弹窗底部容器水平布局",
+      "    on_dismiss=lambda e: print(f'弹窗关闭:{e}'),  # 关闭对话框时触发事件",
+      ")",
+      ""
+    ],
+    "description": ["flet.AlertDialog 警报(弹窗)对话框"]
+  },
+  "flet.AlertDialog for class def 创建AlertDialog耗时事件处理.tmpl": {
+    "prefix": [
+      "ft_class_def_for_AlertDialog=",
+      "flet_class_def_for_AlertDialog="
+    ],
+    "body": [
+      "def dialog_tmpl(self, e: ft.ControlEvent):",
+      "    \"\"\"",
+      "    AlertDialog 界面模版",
+      "    :param e: ft.ControlEvent 事件对象",
+      "    \"\"\"",
+      "    e_control: ft.ElevatedButton = e.control  # 获取当前点击的按钮",
+      "    e_control.disabled = True  # 禁用按钮",
+      "    e_control.update()  # 更新按钮",
+      "    dlg = ft.AlertDialog(",
+      "        modal=True,  # 是否可以通过单击外部区域关闭弹窗[默认:False 可通过单击外部的区域关闭对话框](modal 属性无法改变)",
+      "        title=ft.Text(value='☣️', size=64),  # 弹窗标题",
+      "        content=ft.Row(  # * 弹窗内容",
+      "            controls=[",
+      "                ft.ProgressRing(),  # 环形循环旋转进度指示器",
+      "                ft.Text(value='正在处理……', size=32),",
+      "            ],",
+      "        ),",
+      "        alignment=ft.alignment.center,  # 弹窗对齐方式",
+      "        actions=[],  # 弹窗底部容器",
+      "        actions_alignment=ft.MainAxisAlignment.END,  # 弹窗底部容器水平布局",
+      "        on_dismiss=lambda e: print(f'弹窗关闭事件:{e}'),  # 关闭对话框时触发事件",
+      "    )",
+      "    self.page.open(dlg)",
+      "    # * 模拟处理耗时...",
+      "",
+      "    # * 更新弹窗内容并允许关闭",
+      "    dlg.content = ft.Text(value='处理完毕！', size=32)",
+      "    dlg.actions.append(ft.ElevatedButton(text='确定', on_click=lambda e: self.page.close(dlg)))",
+      "    dlg.update()",
+      "    e_control.disabled = False  # 恢复按钮可用",
+      "    e_control.update()  # 更新按钮",
+      ""
+    ],
+    "description": [
+      "flet.AlertDialog for class def 创建AlertDialog耗时事件处理.tmpl"
+    ]
+  }
+}

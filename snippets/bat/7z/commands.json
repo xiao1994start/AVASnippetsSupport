@@ -1,0 +1,20 @@
+{
+  "7za.exe 解压": {
+    "prefix": ["7za -x", "za -x"],
+    "body": [
+      "@REM 7za.exe x [压缩包] -o[到指定目录] -y{自动覆盖同名文件} -p[密码]",
+      "call ${1:7za_exe} x ${2:压缩包} -o${3:解压路径} -y",
+      "$0"
+    ],
+    "description": ["7za.exe 解压"]
+  },
+  "7za.exe 压缩": {
+    "prefix": ["7za -a", "za -a"],
+    "body": [
+      "@REM 7za.exe a -t[压缩格式:7z/zip] -o[输出目录] -mmt=on:启用多线程,默认开启 -mx=[0-9]:最高压缩级别 -r:递归子目录 -p[密码] -x!*.*:排除指定文件",
+      "call ${1:7za_exe} a -t${2|7z,zip|} -o${4|\"%~dp0\",., |} \"${3:压缩文件名}.${2|7z,zip|}\" ${5:压缩的文件或目录} -r",
+      "$0"
+    ],
+    "description": ["7za.exe 压缩"]
+  }
+}

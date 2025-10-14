@@ -1,0 +1,54 @@
+{
+  "引入 PIL.Image 图像处理模块": {
+    "prefix": ["import PIL Image", "im PIL Image"],
+    "body": ["from PIL import Image"],
+    "description": ["引入 PIL.Image 图像处理模块"]
+  },
+  "PIL.Image.open 打开图形文件": {
+    "prefix": ["PIL-Image open"],
+    "body": ["Image.open(${1:strImgPath})"],
+    "description": ["PIL.Image.open 打开图形文件"]
+  },
+  "PIL.Image.save 打开图形文件": {
+    "prefix": ["PIL-Image save"],
+    "body": ["Image.save($0)"],
+    "description": ["PIL.Image.open 打开图形文件"]
+  },
+  "PIL.Image.convert('RGB') 转换图像格式RGB彩色": {
+    "prefix": ["PIL Image convertRGB", "convertRGB -PIL-Image"],
+    "body": ["convert('RGB')"],
+    "description": ["PIL.Image.convert 转换图像格式RGB彩色"]
+  },
+  "PIL.Image.convert('L') 转换图像格式RGB灰度": {
+    "prefix": ["PIL Image convertL", "convertL -PIL-Image"],
+    "body": ["convert('L')"],
+    "description": ["PIL.Image.convert 转换图像格式RGB灰度"]
+  },
+  "PIL.Image.format 识别图像格式": {
+    "prefix": ["PIL Image format", "format -PIL-Image"],
+    "body": ["format"],
+    "description": ["PIL.Image.format 识别图像格式"]
+  },
+  "PIL.Image.mode 图像色彩模式": {
+    "prefix": ["PIL Image mode", "mode -PIL-Image"],
+    "body": ["mode"],
+    "description": ["PIL.Image.mode 图像色彩模式"]
+  },
+  "PIL.Image.size 图像尺寸": {
+    "prefix": ["PIL Image size", "size -PIL-Image"],
+    "body": ["size"],
+    "description": ["PIL.Image.size 图像尺寸"]
+  },
+  "PIL.Image.resize 修改图像尺寸": {
+    "prefix": ["PIL Image resize", "resize -PIL-Image"],
+    "body": ["resize((${1:512},.${1:512}), Image.Resampling.LANCZOS)"],
+    "description": ["PIL.Image.resize 修改图像尺寸"]
+  },
+  "PIL.Image.save 对象保存": {
+    "prefix": ["save -PIL-Image", "PIL-Image save"],
+    "body": [
+      "save(${1:strImgPath}, format='${2:ICO}', size=(${3:512}, ${3:512}))"
+    ],
+    "description": ["对象保存"]
+  }
+}

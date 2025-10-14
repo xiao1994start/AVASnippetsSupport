@@ -1,0 +1,7 @@
+{
+  "引入 win32 windows系统API操作模块": {
+    "prefix": ["import win32", "im win32"],
+    "body": ["import win32"],
+    "description": ["引入 win32 windows系统API操作模块"]
+  }
+}

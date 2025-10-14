@@ -1,0 +1,12 @@
+{
+  "msvcrt.getch 读取一个按键并将结果字符返回为一个字节串": {
+    "prefix": ["msvcrt getch"],
+    "body": [
+      "msvcrt.getch()  # 获取键盘输入按键的ASCII码 -> bytes 类型; 需要 ord() 方法解码为十进制整数"
+    ],
+    "description": [
+      "msvcrt.getch 读取一个按键并将结果字符返回为一个字节串",
+      "获取键盘输入按键的ASCII码 -> bytes 类型; 需要 ord() 方法解码为十进制整数"
+    ]
+  }
+}

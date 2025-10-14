@@ -1,0 +1,12 @@
+{
+  "引入 type 库描述": {
+    "prefix": ["import type", "im type"],
+    "body": ["import type"],
+    "description": ["库描述"]
+  },
+  "type.object 描述": {
+    "prefix": ["type object", "object type"],
+    "body": ["type.object"],
+    "description": ["描述"]
+  }
+}

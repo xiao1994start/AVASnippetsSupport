@@ -1,0 +1,80 @@
+{
+  "引入 logging 内置日志库": {
+    "prefix": ["import logging", "im logging"],
+    "body": ["import logging", ""],
+    "description": ["引入 logging 内置日志库"]
+  },
+  "引入 logging 内置日志库.tmpl": {
+    "prefix": ["import logging =basicConfig", "im logging =basicConfig"],
+    "body": [
+      "import logging",
+      "",
+      "\"\"\"选择不同级别来记录日志. 设置一个级别, 严重程度低于设置值的日志消息将被忽略",
+      "    | 日志级别   丨 数值 丨",
+      "    | CRITICAL  |  50  |",
+      "    | ERROR     |  40  |",
+      "    | WARNING   |  30  | Default level",
+      "    | INFO      |  20  |",
+      "    | DEBUG     |  10  |",
+      "    | NOTSET    |   0  |",
+      "设置日志消息格式",
+      "    | %(message)s    | 日志消息内容",
+      "    | %(asctime)s    | 创建日志记录可读时间",
+      "    | %(filename)s   | 调用日志记录的源文件的文件名",
+      "    | %(funcName)s   | 调用日志记录的函数名",
+      "    | %(levelname)s  | 当前日志记录的日志级别名称",
+      "    | %(lineno)d     | 调用日志记录的源代码所在的行号",
+      "    | %(module)s     | 调用日志记录的源代码所在的模块名",
+      "    | %(pathname)s   | 调用日志记录的源代码所在的完整路径名",
+      "    | %(process)d    | 当前进程ID",
+      "    | %(thread)d     | 当前线程ID",
+      "    | %(threadName)s | 当前线程名",
+      "    | %(exc_info)s   | 异常信息",
+      "    | %(exc_text)s   | 异常信息",
+      "    | %(stack_info)s | 堆栈信息",
+      "\"\"\"",
+      "logging.basicConfig(",
+      "    level=logging.DEBUG,",
+      "    format='\\033[1;34m%(pathname)s:%(lineno)-2d \\033[0;1m(%(levelname)s) \\033[0;2m| %(module)s.%(funcName)s | \\033[0m%(message)s',",
+      ")",
+      ""
+    ],
+    "description": "引入 logging 内置日志库.tmpl"
+  },
+  "logging.basicConfig 日志模块基础配置": {
+    "prefix": ["logging basicConfig"],
+    "body": [
+      "logging.basicConfig(",
+      "    level=logging.DEBUG,",
+      "    format='\\033[1;34m%(pathname)s:%(lineno)-2d \\033[0;1m(%(levelname)s) \\033[0;2m| %(module)s.%(funcName)s | \\033[0m%(message)s',",
+      ")",
+      ""
+    ],
+    "description": ["logging.basicConfig 日志模块基础配置"]
+  },
+  "logging.debug(...)": {
+    "prefix": ["logging debug -logging"],
+    "body": ["logging.debug($0)"],
+    "description": ["logging.debug(...)"]
+  },
+  "logging.info(...)": {
+    "prefix": ["logging info -logging"],
+    "body": ["logging.info($0)"],
+    "description": ["logging.info(...)"]
+  },
+  "logging.warning(...)": {
+    "prefix": ["logging warning -logging"],
+    "body": ["logging.warning($0)"],
+    "description": ["logging.warning(...)"]
+  },
+  "logging.error(...)": {
+    "prefix": ["logging error -logging"],
+    "body": ["logging.error($0)"],
+    "description": ["logging.error(...)"]
+  },
+  "logging.critical(...)": {
+    "prefix": ["logging critical -logging"],
+    "body": ["logging.critical($0)"],
+    "description": ["logging.critical(...)"]
+  }
+}

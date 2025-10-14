@@ -1,0 +1,22 @@
+{
+  "npm安装 vscode 插件开发环境": {
+    "prefix": ["call npm install -vscode -npm-i-vscode"],
+    "body": [
+      "ECHO 正在安装 @vscode/vsce",
+      "call npm install -g @vscode/vsce --registry https://registry.npmmirror.com/",
+      "ECHO 已安装 @vscode/vsce",
+      ""
+    ],
+    "description": ["npm安装 vscode 插件开发环境"]
+  },
+  "vsce 打包 vscode 插件": {
+    "prefix": ["call_vsce_package"],
+    "body": ["CD /D ${1:打包插件位置}", "call vsce package", ""],
+    "description": ["vsce 打包 vscode 插件"]
+  },
+  "code 安装vsix插件包": {
+    "prefix": ["call_code_install_extension -code", "call_code_vsix -code"],
+    "body": ["call code --install-extension ${1:vsix插件包位置}", ""],
+    "description": ["code 安装vsix插件包"]
+  }
+}

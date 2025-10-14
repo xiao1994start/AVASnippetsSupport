@@ -1,0 +1,7 @@
+{
+  "引入 reflex 全栈WebApp框架": {
+    "prefix": ["import reflex", "im reflex"],
+    "body": ["import reflex as rx"],
+    "description": ["引入 reflex 全栈WebApp框架"]
+  }
+}

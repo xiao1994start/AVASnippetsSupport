@@ -1,0 +1,32 @@
+{
+  "引入 argparse 命令行参数模块": {
+    "prefix": ["import argparse", "im argparse"],
+    "body": [
+      "import argparse  # * 命令行参数模块",
+      "",
+      "# todo 创建 ArgumentParser 对象",
+      "parser = argparse.ArgumentParser(prog='程序名', description='描述')",
+      "# * add_argument 添加命令行参数",
+      "# *     在 .py 文件中调用参数时,必须使用参数全称 args.参数全称 获取参数值",
+      "# *     default=默认值",
+      "# *     dest=参数访问的属性名,默认为参数全称",
+      "# *     choices=['选项A', '选项B'] 可以指定参数的选项",
+      "# *     required=True 参数必须输入 | required=False 参数可选",
+      "# *     nargs='?' 表示该参数最多接收一个值. 如果提供了值, 则使用该值; 如果没有提供值, 则使用默认值 或 None",
+      "# *     nargs='*' 表示该参数可以接收零个或多个值, 并将这些值作为一个列表",
+      "# *     nargs='+' 表示该参数必须接收一个或多个值, 并将这些值作为一个列表",
+      "# *     nargs=int 表示该参数必须接收指定数量的值, 并将这些值作为一个列表",
+      "# *     type=str 在明确参数必须为字符串时使用, 否则不要添加 type 参数, 让程序自行判断",
+      "# todo 创建参数组",
+      "# * 单独参数可以直接使用: parser.add_argument('-参数缩写', '--参数全称', default=[], nargs='*', help='帮助信息')",
+      "# * 获取参数: args = parser.parse_args()",
+      "group = parser.add_argument_group('参数组')",
+      "group.add_argument('-参数缩写', '--参数全称', default=[], nargs='*', help='帮助信息')",
+      "# * 解析命令行参数",
+      "# * 使用 args.参数全称 获取参数值",
+      "args = parser.parse_args()",
+      ""
+    ],
+    "description": ["引入 argparse 命令行参数模块"]
+  }
+}

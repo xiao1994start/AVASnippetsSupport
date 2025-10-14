@@ -1,0 +1,12 @@
+{
+  "utf-8": {
+    "prefix": ["utf-8"],
+    "body": [":: UTF-8", "chcp 65001"],
+    "description": ["utf-8"]
+  },
+  "gbk_cn": {
+    "prefix": ["gbk-zh-cn"],
+    "body": [":: GBK中文", "chcp 936"],
+    "description": ["gbk_cn"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "水平排列布局": {
+    "prefix": ["hor", "horizontal"],
+    "body": ["horizontal"],
+    "description": ["水平排列布局"]
+  },
+  "垂直排列布局": {
+    "prefix": ["ver", "vertical"],
+    "body": ["vertical"],
+    "description": ["垂直排列布局"]
+  },
+  "normal": {
+    "prefix": ["nor"],
+    "body": ["normal"],
+    "description": ["normal"]
+  },
+  "large": {
+    "prefix": ["lar"],
+    "body": ["large"],
+    "description": ["large"]
+  }
+}

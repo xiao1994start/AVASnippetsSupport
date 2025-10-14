@@ -1,0 +1,18 @@
+{
+  "pip.numpy NumPy维度数组与矩阵运算科学计算的基础库": {
+    "prefix": ["pip numpy"],
+    "body": [
+      "pip install -U numpy -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["NumPy维度数组与矩阵运算科学计算的基础库"]
+  },
+  "uv.numpy NumPy维度数组与矩阵运算科学计算的基础库": {
+    "prefix": ["uv numpy"],
+    "body": [
+      "uv add \"numpy\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["NumPy维度数组与矩阵运算科学计算的基础库"]
+  }
+}

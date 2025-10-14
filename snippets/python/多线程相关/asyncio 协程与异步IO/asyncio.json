@@ -1,0 +1,86 @@
+{
+  "引入 asyncio 异步IO实现更高的并发性": {
+    "prefix": ["import asyncio", "im asyncio"],
+    "body": ["import asyncio  # * 异步IO实现更高的并发性"],
+    "description": ["引入 asyncio 异步IO实现更高的并发性"]
+  },
+  "async def 创建异步IO协程函数": {
+    "prefix": ["creat async def", "c async def", "asc def"],
+    "body": [
+      "async def ${1:name}():",
+      "    \"\"\"",
+      "    ${2:_summary_}",
+      "    \"\"\"",
+      "    # * await [异步函数] 包装协程任务, 可以获取结果",
+      "    # * asyncio.to_thread(func) 将同步函数转换为异步函数运行",
+      "    # * asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
+      "    # ! 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
+      "    # * asyncio.run(async_func) 运行事件循环的异步协程函数",
+      "    ...",
+      ""
+    ],
+    "description": [
+      "async def 创建异步IO协程函数",
+      "\n\t-await [异步函数] 包装协程任务, 可以获取结果",
+      "\n\t-asyncio.to_thread(func) 将同步函数转换为异步函数运行",
+      "\n\t-asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
+      "\n\t-注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
+      "\n\t-asyncio.run(async_func) 运行事件循环的异步协程函数"
+    ]
+  },
+  "asyncio 协程异步IO函数": {
+    "prefix": ["asyncio "],
+    "body": ["asyncio.$0"],
+    "description": ["asyncio 协程异步IO函数"]
+  },
+  "asyncio.Event 异步事件对象": {
+    "prefix": ["asyncio Event -asyncio"],
+    "body": ["asyncio.Event()  # 异步事件对象"],
+    "description": ["asyncio.Event 异步事件对象"]
+  },
+  "asyncio.create_task 创建异步程序": {
+    "prefix": ["asyncio create_task -asyncio"],
+    "body": ["asyncio.create_task(${1:async_func})"],
+    "description": [
+      "asyncio.create_task 创建异步程序",
+      "\n\t-*注意: 创建对象必须是 async def 函数"
+    ]
+  },
+  "asyncio.to_thread 将同步函数转换为异步函数": {
+    "prefix": ["asyncio to_thread -asyncio"],
+    "body": ["asyncio.to_thread(${1:函数名}, ${2:参数})"],
+    "description": [
+      "asyncio.to_thread 将同步函数转换为异步函数",
+      "\n\t-*注意: 转换后的函数需要 await 调用"
+    ]
+  },
+  "asyncio.gather 异步程序批量执行": {
+    "prefix": ["await asyncio gather -asyncio"],
+    "body": ["await asyncio.gather(*[${1:async_func}])"],
+    "description": [
+      "asyncio.gather 异步程序批量执行",
+      "\n\t-返回值为函数执行结果列表",
+      "\n\t-且返回值的顺序与传入函数的顺序一致",
+      "\n\t-*注意: 需要使用 await asyncio.gather(*[${1:async_func}]) 运行"
+    ]
+  },
+  "asyncio.as_completed 异步程序批量执行": {
+    "prefix": ["asyncio as_completed -asyncio", "ascio as_completed -asyncio"],
+    "body": ["asyncio.as_completed([${1:async_func}])"],
+    "description": [
+      "asyncio.as_completed 异步程序批量执行",
+      "\n\t-返回值为函数执行结果迭代器",
+      "\n\t-获取完成结果时需要通过: await",
+      "\n\t- results = asyncio.as_completed([...])",
+      "\n\t- for result in results:",
+      "\n\t-   result = await result",
+      "\n\t-   print(result)",
+      "\n\t-*注意: asyncio.as_completed 不会等待所有任务完成, 而是谁先完成先返回谁"
+    ]
+  },
+  "asyncio.run 运行异步程序": {
+    "prefix": ["asyncio run -asyncio", "ascio run -asyncio"],
+    "body": ["asyncio.run(${1:async_func})"],
+    "description": ["asyncio.run 运行异步程序"]
+  }
+}

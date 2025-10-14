@@ -1,0 +1,16 @@
+{
+  "引入 DrissionPage 网页自动化工具": {
+    "prefix": ["import DrissionPage", "im DrissionPage"],
+    "body": [
+      "from pathlib import Path",
+      "from DrissionPage import ChromiumOptions, ChromiumPage",
+      "chrom_path = Path()  # 配置浏览器路径",
+      "ChromiumOptions().set_browser_path(chrom_path).save()  # 全局配置浏览器",
+      "ChromiumOptions().ignore_certificate_errors(on_off=False).save()  # 全局配置忽略证书",
+      "co = ChromiumPage()  # 实例化浏览器对象",
+      "url = \"url\"",
+      "co.get(url=url)  # 打开url"
+    ],
+    "description": ["引入 DrissionPage 网页自动化工具"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "Git 配置user.name&user.email": {
+    "prefix": ["git config User -git-config"],
+    "body": [
+      "@ECHO 全局配置global 用户名称 邮箱",
+      "call git config --global user.name '${1:name}'",
+      "call git config --global user.email '${2:email}'"
+    ],
+    "description": ["配置user.name&user.email"]
+  },
+  "Git 验证ssl": {
+    "prefix": ["git config Http SSL -git-config"],
+    "body": [
+      "@ECHO 全局配置global ssl验证",
+      "git config --global http.sslVerify '${1|false,true|}'"
+    ],
+    "description": ["Git 验证ssl"]
+  }
+}

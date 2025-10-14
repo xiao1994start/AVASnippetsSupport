@@ -1,0 +1,12 @@
+{
+  "nicegui.ui.notification 通知 loading": {
+    "prefix": ["ui notification", "nicegui notification"],
+    "body": ["ui.notification(position='top', timeout=None)"],
+    "description": ["nicegui.ui.notification 通知 loading"]
+  },
+  "nicegui.ui.button_color 自定义 UI 按钮颜色样式": {
+    "prefix": ["ui button -color", "nicegui button -color"],
+    "body": ["ui.button(color=None).style('background:#1e40af')"],
+    "description": ["nicegui.ui.button_color 自定义 UI 按钮颜色样式"]
+  }
+}

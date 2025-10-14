@@ -1,0 +1,84 @@
+{
+  "引入 json 格式模块": {
+    "prefix": ["import json", "im json"],
+    "body": ["import json"],
+    "description": ["引入JSON格式模块"]
+  },
+  "json.dumps 编码JSON->字符串": {
+    "prefix": ["json dumps"],
+    "body": ["json.dumps(${1:数据对象}, indent = ${2:2}, ensure_ascii=False)"],
+    "description": ["json.dumps 用于将 Python 对象编码成 JSON 字符串"]
+  },
+  "json.dump 编码JSON->文件": {
+    "prefix": ["json dump"],
+    "body": [
+      "json.dump(${1:文件对象}, ${2:as_file}, indent = 2, ensure_ascii=False)"
+    ],
+    "description": ["json.dump 用于将 Python 对象编码成 JSON -> 文件"]
+  },
+  "json.loads 解码JSON数据->dict": {
+    "prefix": ["json loads"],
+    "body": ["json.loads(${1:JSON数据})"],
+    "description": [
+      "json.loads 用于解码 JSON 数据, 将已编码的 JSON 字符串解码为 Python 对象",
+      "    该函数返回 Python 字段的数据类型"
+    ]
+  },
+  "json.load 文件->解码JSON数据": {
+    "prefix": ["json load"],
+    "body": ["json.load(${1:JSON文件})"],
+    "description": [
+      "json.load 用于解码 JSON 文件, 将已编码的 JSON 字符串解码为 Python 对象",
+      "    该函数返回 Python 字段的数据类型"
+    ]
+  },
+  "with.open.json -r 只读json": {
+    "prefix": ["with open json -r"],
+    "body": [
+      "with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
+      "    # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
+      "    json_data = json.load(f_JSON)",
+      "    $0",
+      ""
+    ],
+    "description": [
+      "open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式",
+      "文件必须存在, 不存在抛出错误"
+    ]
+  },
+  "with.open.json -w 只写json": {
+    "prefix": ["with open json -w"],
+    "body": [
+      "with open(${1:json_path}, 'w', encoding='utf-8') as f_JSON:",
+      "    # w 只写(清空文件), 不可读, 文件不存在创建新文件, 文件存在清空文件, 文件指针在开头",
+      "    json_data = {}",
+      "    f_JSON.write(json.dumps(json_data, indent=2, ensure_ascii=False))",
+      "    f_JSON.flush()  # 写文件刷新缓存",
+      ""
+    ],
+    "description": [
+      "open -w 打开一个文件用于写如果该文件已存在则打开文件, 并从开头开始编辑, 即原有内容会被删除如果该文件不存在, 创建新文件"
+    ]
+  },
+  "with.open.json -rw 更新读写json": {
+    "prefix": ["with open json -rw--updata"],
+    "body": [
+      "with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
+      "    # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
+      "    json_data = json.load(f_JSON)",
+      "",
+      "# 数据更新操作$0",
+      "",
+      "with open(${1:json_path}, 'w', encoding='utf-8') as f_JSON:",
+      "    # w 只写(清空文件), 不可读, 文件不存在创建新文件, 文件存在清空文件, 文件指针在开头",
+      "    json_updata = json_data",
+      "    f_JSON.write(json.dumps(json_updata, indent=2, ensure_ascii=False))",
+      "    f_JSON.flush()  # 写文件刷新缓存",
+      ""
+    ],
+    "description": [
+      "open -r 只读(不清空文件)打开原始json文件 ->",
+      "open -w 只写(清空文件)将更新后的json数据写入文件"
+    ]
+  }
+}

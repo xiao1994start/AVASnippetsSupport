@@ -1,0 +1,17 @@
+{
+  "npm 帮助说明": {
+    "prefix": ["help npm =npm-help"],
+    "body": [
+      "@REM npm 说明",
+      "@REM 临时代理 --registry https://registry.npmmirror.com/",
+      "@REM 配置参数:{",
+      "@REM \t-G 全局安装",
+      "@REM \t-S 局部安装的插件写入package.json文件中的dependencie(默认)",
+      "@REM \t-D 局部安装的插件写入package.json文件中的devDependencie",
+      "@REM \t-O 局部安装的插件写入package.json文件中的optionalDependencie",
+      "@REM }",
+      ""
+    ],
+    "description": ["npm帮助说明"]
+  }
+}

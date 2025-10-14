@@ -1,0 +1,30 @@
+{
+  "flet.Button 按钮(同:ElevatedButton)": {
+    "prefix": ["ft Button", "flet Button"],
+    "body": ["ft.Button($0)"],
+    "description": ["flet.Button 按钮(同:ElevatedButton)"]
+  },
+  "flet.ElevatedButton 凸起按钮": {
+    "prefix": ["ft ElevatedButton", "flet ElevatedButton"],
+    "body": ["ft.ElevatedButton($0)"],
+    "description": [
+      "flet.ElevatedButton 凸起按钮",
+      "ElevatedButton 有别名 Button , 可以互换使用"
+    ]
+  },
+  "flet.IconButton 图标按钮": {
+    "prefix": ["ft IconButton", "flet IconButton"],
+    "body": [
+      "ft.IconButton(",
+      "    icon=ft.Icons.SEND,",
+      "    # content=ft.Container(可替代icon属性自定义图标内容),",
+      "    # selected_icon=ft.Icons.SETTINGS_ROUNDED,",
+      "    # selected=False,",
+      "    icon_size=32,",
+      "    on_click=lambda e: print(e),",
+      ")",
+      ""
+    ],
+    "description": ["flet.IconButton 图标按钮"]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "引入 beautifulsoup4 模块": {
+    "prefix": ["import bs4 beautifulsoup4", "im bs4 beautifulsoup4"],
+    "body": ["from bs4 import BeautifulSoup"],
+    "description": ["引入 beautifulsoup4 模块"]
+  },
+  "bs4.BeautifulSoup 转换HTML对象": {
+    "prefix": ["bs4 BeautifulSoup -bs4"],
+    "body": [
+      "BeautifulSoup(${1:HTML.text}, features=${2|'html.parser','lxml','html5lib','xml'|})"
+    ],
+    "description": ["BeautifulSoup 转换HTML对象"]
+  },
+  "bs4.select 选择器匹配->list": {
+    "prefix": ["bs4 select -bs4"],
+    "body": ["select('$0')"],
+    "description": [
+      "bs4.select 选择器(Selector)来定位和提取 HTML 页面中的元素",
+      "\n用法: ",
+      "\n通过标签名定位: .select('tag')",
+      "\n通过类名定位: .select('.class_value')",
+      "\n通过id定位: .select('#id_value')",
+      "\n通过属性定位: .select('[attribute]')",
+      "\n通过属性值定位: .select('[attribute=\"value\"]')",
+      "\n通过CSS选择器定位: .select('css选择器')",
+      "\n通过组合定位: .select('tag1 tag3 ...')",
+      "\n通过组合定位: .select('tag1_1,tag1_2,...')",
+      "\n通过组合定位: .select('tag1 > tag2 > tag3...')",
+      "\n通过组合定位: .select('tag.class_value')",
+      "\n通过组合定位: .select('tag[attribute]')",
+      "\n通过组合定位: .select('tag[attribute=\"value\"]')",
+      "\n通过组合定位: .select('tag[attribute=\"value\"].class_value')",
+      "\n通过组合定位: .select('tag[attribute=\"value\"].class_value[attribute=\"value\"]')"
+    ]
+  },
+  "bs4.find 第一个匹配的标签": {
+    "prefix": ["bs4 find -bs4"],
+    "body": [
+      "find(",
+      "\tname=['${1:Tag标签}'],",
+      "\tattrs={",
+      "\t\t'${2:属性}': '${3:属性值}',",
+      "\t}",
+      ")"
+    ],
+    "description": [
+      "bs4.find 第一个匹配的标签",
+      "\n根据参数来找出对应的标签, 但只返回第一个符合条件的结果",
+      "\n如果需要匹配class,需要使用class_"
+    ]
+  },
+  "bs4.find_all 全局搜索标签": {
+    "prefix": ["bs4 find_all -bs4"],
+    "body": [
+      "find_all(",
+      "\tname=['${1:Tag标签}'],",
+      "\tattrs={",
+      "\t\t'${2:属性}': '${3:属性值}',",
+      "\t}",
+      ")"
+    ],
+    "description": [
+      "bs4.find_all 全局搜索标签",
+      "\n根据参数来找出对应的标签, 但只返回所有符合条件的结果",
+      "\n如果需要匹配class,需要使用class_"
+    ]
+  },
+  "bs4.get_text 标签内容": {
+    "prefix": ["bs4 get_text -bs4"],
+    "body": ["get_text()"],
+    "description": [
+      "bs4.get_text 返回Tag标签中的文本内容",
+      "\n不包括子标签中的文本内容"
+    ]
+  },
+  "bs4.prettify 打印格式美化": {
+    "prefix": ["bs4_prettify -bs4"],
+    "body": ["bs4_prettify(formatter=${1|'html','html5','minimal'|})"],
+    "description": ["bs4.prettify 打印格式解构化美化处理"]
+  },
+  "bs4.attrs 标签属性:值->dict": {
+    "prefix": ["bs4 attrs -bs4"],
+    "body": ["attrs"],
+    "description": ["bs4.attrs 获取Tag标签的属性, 返回一个字典"]
+  }
+}

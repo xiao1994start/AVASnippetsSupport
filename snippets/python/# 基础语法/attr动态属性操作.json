@@ -1,0 +1,84 @@
+{
+  "dir.object 查看对象属性": {
+    "prefix": ["dir ", "dir object"],
+    "body": ["dir($0)"],
+    "description": [
+      "dir.object 查看对象属性",
+      "返回当前作用域中的所有变量, 方法和定义的类型"
+    ]
+  },
+  "@property.装饰器 将class对象中的方法转换为属性": {
+    "prefix": ["@property ", "at property"],
+    "body": ["@property  # * ${1:属性方法}"],
+    "description": [
+      "@property.装饰器 设置class中方法对象的属性",
+      "class Student:",
+      "    def __init__(self, score):",
+      "        self._score = score  # 私有属性，通常用下划线开头表示",
+      "",
+      "    @property",
+      "    def score(self):",
+      "        return self._score",
+      "",
+      "    @score.setter",
+      "    def score(self, value):",
+      "        if not isinstance(value, (int, float)):",
+      "            raise ValueError('分数必须是数字')",
+      "        if not 0 <= value <= 100:",
+      "            raise ValueError('分数必须在0到100之间')",
+      "        self._score = value",
+      "",
+      "s = Student(85)",
+      "print(s.score)  # 访问属性，调用 @property 修饰的 score 方法",
+      "s.score = 92    # 设置属性，调用 @score.setter 修饰的 score 方法",
+      "# s.score = 101 # 会抛出 ValueError",
+      "# s.score = 'abc' # 会抛出 ValueError"
+    ]
+  },
+  "@setter.装饰器 设置class中方法对象的属性": {
+    "prefix": ["@setter ", "at setter"],
+    "body": [
+      "@${1:defName}.setter  # * ${2:设置方法对象属性}",
+      "def ${1:defName}(self, value):",
+      "    \"\"\"",
+      "    设置属性",
+      "    \"\"\"",
+      "    $0",
+      ""
+    ],
+    "description": [
+      "@property.装饰器 设置class中方法对象的属性",
+      "class Student:",
+      "    def __init__(self, score):",
+      "        self._score = score  # 私有属性，通常用下划线开头表示",
+      "",
+      "    @property",
+      "    def score(self):",
+      "        return self._score",
+      "",
+      "    @score.setter",
+      "    def score(self, value):",
+      "        if not isinstance(value, (int, float)):",
+      "            raise ValueError('分数必须是数字')",
+      "        if not 0 <= value <= 100:",
+      "            raise ValueError('分数必须在0到100之间')",
+      "        self._score = value",
+      "",
+      "s = Student(85)",
+      "print(s.score)  # 访问属性，调用 @property 修饰的 score 方法",
+      "s.score = 92    # 设置属性，调用 @score.setter 修饰的 score 方法",
+      "# s.score = 101 # 会抛出 ValueError",
+      "# s.score = 'abc' # 会抛出 ValueError"
+    ]
+  },
+  "setattr.object 设置对象属性": {
+    "prefix": ["setattr ", "setattr object"],
+    "body": ["setattr(${1:object}, ${2:'name'}, ${3:value})"],
+    "description": ["setattr.object 设置对象属性"]
+  },
+  "getattr.object 获取对象属性": {
+    "prefix": ["getattr ", "getattr object"],
+    "body": ["getattr(${1:object}, ${2:'name'}, ${3|None,0,False|})"],
+    "description": ["getattr.object 获取对象属性"]
+  }
+}

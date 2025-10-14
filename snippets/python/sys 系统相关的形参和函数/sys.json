@@ -1,0 +1,156 @@
+{
+  "导入 sys 模块": {
+    "prefix": ["import sys", "im sys"],
+    "body": ["import sys"],
+    "description": ["导入 sys 模块"]
+  },
+  "sys.argv 脚本传入参数": {
+    "prefix": ["sys argv"],
+    "body": [
+      "sys.argv  # -> list[str]: [0]->脚本名, [1]->参数1, [2]->参数2, ..."
+    ],
+    "description": [
+      "sys.argv 一个列表, 其中包含了被传递给 Python 脚本的命令行参数",
+      "\nargv[0] 为脚本的名称(是否是完整的路径名取决于操作系统)",
+      "\n如果是通过 Python 解释器的命令行参数 -c 来执行的,  argv[0] 会被设置成字符串 '-c' ",
+      "\n如果没有脚本名被传递给 Python 解释器,  argv[0] 为空字符串"
+    ]
+  },
+  "sys.path 解释器搜索依赖的路径列表": {
+    "prefix": ["sys path"],
+    "body": ["sys.path"],
+    "description": [
+      "sys.path 一个列表, 其中包含了 Python 解释器搜索依赖的路径列表"
+    ]
+  },
+  "sys.path.append 添加python环境依赖路径": {
+    "prefix": ["sys path append"],
+    "body": ["sys.path.append($0)", ""],
+    "description": ["sys.path.append 添加python环境依赖路径"]
+  },
+  "sys.path.append_file 添加当前文件所在目录到python环境依赖路径": {
+    "prefix": ["sys path append -file"],
+    "body": ["sys.path.append(str(Path(__file__).parent.resolve()))", ""],
+    "description": [
+      "sys.path.append_file 添加当前文件所在目录到python环境依赖路径"
+    ]
+  },
+  "sys.path.append_list 添加当前文件所在目录到python环境依赖路径": {
+    "prefix": ["sys path append -list"],
+    "body": [
+      "[",
+      "    sys.path.append(str(i))",
+      "    for i in [Path(__file__).parent.resolve(), Path(__file__).parent.parent.resolve()]",
+      "    if i and i not in [Path(s) for s in sys.path]",
+      "]",
+      ""
+    ],
+    "description": [
+      "sys.path.append_list 添加当前文件所在目录到python环境依赖路径"
+    ]
+  },
+  "sys.path.__init__.py添加当前文件所在目录到python环境依赖路径 init模版": {
+    "prefix": ["sys path append -init="],
+    "body": [
+      "import sys",
+      "from pathlib import Path",
+      "",
+      "[",
+      "    sys.path.append(str(i))",
+      "    for i in [Path(__file__).parent.resolve(), Path(__file__).parent.parent.resolve()]",
+      "    if i and i not in [Path(s) for s in sys.path]",
+      "]",
+      ""
+    ],
+    "description": "sys.path.__init__.py添加当前文件所在目录到python环境依赖路径 init模版"
+  },
+  "sys.path.insert 脚本传入参数": {
+    "prefix": ["sys insert"],
+    "body": ["sys.insert(0, '${1:path}')"],
+    "description": ["sys.path.insert 脚本传入参数"]
+  },
+  "sys.platform 平台": {
+    "prefix": ["sys platform"],
+    "body": ["sys.platform"],
+    "description": ["sys.platform 平台"]
+  },
+  "sys.stdin 标准输入": {
+    "prefix": ["sys stdin"],
+    "body": ["sys.stdin"],
+    "description": ["sys.stdin 标准输入"]
+  },
+  "sys.version 解释器版本": {
+    "prefix": ["sys version"],
+    "body": ["sys.version"],
+    "description": ["sys.version 解释器版本"]
+  },
+  "sys.version_info 解释器版本信息": {
+    "prefix": ["sys version info"],
+    "body": ["sys.version_info"],
+    "description": ["sys.version_info 解释器版本信息"]
+  },
+  "sys.executable 解释器路径": {
+    "prefix": ["sys executable"],
+    "body": ["sys.executable"],
+    "description": ["sys.executable 解释器路径"]
+  },
+  "sys.getdefaultencoding 默认编码": {
+    "prefix": ["sys getdefaultencoding"],
+    "body": ["sys.getdefaultencoding()"],
+    "description": ["sys.getdefaultencoding 默认编码"]
+  },
+  "sys.getfilesystemencoding 文件系统编码": {
+    "prefix": ["sys getfilesystemencoding"],
+    "body": ["sys.getfilesystemencoding()"],
+    "description": ["sys.getfilesystemencoding 文件系统编码"]
+  },
+  "sys.getrecursionlimit 递归限制": {
+    "prefix": ["sys getrecursionlimit"],
+    "body": ["sys.getrecursionlimit()"],
+    "description": ["sys.getrecursionlimit 递归限制"]
+  },
+  "sys.setrecursionlimit 设置递归限制": {
+    "prefix": ["sys setrecursionlimit"],
+    "body": ["sys.setrecursionlimit(${1:1000})"],
+    "description": ["sys.setrecursionlimit 设置递归限制"]
+  },
+  "sys.getcheckinterval 检查间隔": {
+    "prefix": ["sys getcheckinterval"],
+    "body": ["sys.getcheckinterval()"],
+    "description": ["sys.getcheckinterval 检查间隔"]
+  },
+  "sys.setcheckinterval 设置检查间隔": {
+    "prefix": ["sys setcheckinterval"],
+    "body": ["sys.setcheckinterval(${1:1000})"],
+    "description": ["sys.setcheckinterval 设置检查间隔"]
+  },
+  "sys.gettrace 跟踪函数": {
+    "prefix": ["sys gettrace"],
+    "body": ["sys.gettrace()"],
+    "description": ["sys.gettrace 跟踪函数"]
+  },
+  "sys.settrace 设置跟踪函数": {
+    "prefix": ["sys settrace"],
+    "body": ["sys.settrace(${1:tracefunc})"],
+    "description": ["sys.settrace 设置跟踪函数"]
+  },
+  "sys.getwindowsversion 获取 Windows 版本信息": {
+    "prefix": ["sys getwindowsversion"],
+    "body": ["sys.getwindowsversion()"],
+    "description": ["sys.getwindowsversion 获取 Windows 版本信息"]
+  },
+  "sys.platform 系统平台标识符": {
+    "prefix": ["sys platform"],
+    "body": ["sys.platform"],
+    "description": [
+      "sys.platform 系统平台标识符",
+      "\n本字符串是一个平台标识符, 举例而言, 该标识符可用于将特定平台的组件追加到 sys.path 中",
+      "\n对于 Unix 系统(除 Linux 和 AIX 外), 该字符串是 Python 构建时的 uname -s 返回的小写操作系统名称, 并附加了 uname -r 返回的系统版本的第一部分, 如 'sunos5' 或 'freebsd8'"
+    ]
+  },
+  "sys.exit 退出": {
+    "prefix": ["sys exit"],
+    "body": ["sys.exit(${1| ,0,[0]|})"],
+    "description": ["sys.exit 退出"]
+  }
+}

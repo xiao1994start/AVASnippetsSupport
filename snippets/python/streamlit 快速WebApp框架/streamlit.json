@@ -1,0 +1,7 @@
+{
+  "引入 streamlit 快速创建web应用框架": {
+    "prefix": ["import streamlit", "im streamlit as st"],
+    "body": ["import streamlit as st  # 引入 streamlit 快速创建web应用框架"],
+    "description": ["引入 streamlit 快速创建web应用框架"]
+  }
+}

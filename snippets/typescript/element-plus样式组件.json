@@ -1,0 +1,12 @@
+{
+  "导入element-plus": {
+    "prefix": ["import ElementPlus", "import ElementPlus"],
+    "body": [
+      "import ElementPlus from 'element-plus'",
+      "import 'element-plus/dist/index.css'",
+      "//\tcreateApp(App)",
+      "//\t\t.use(ElementPlus)"
+    ],
+    "description": ["导入element-plus"]
+  }
+}

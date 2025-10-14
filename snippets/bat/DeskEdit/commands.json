@@ -1,0 +1,14 @@
+{
+  "DeskEdit S 修改目标文件夹图标": {
+    "prefix": ["DeskEdit -S"],
+    "body": [
+      "CALL ${1:DeskEdit_exe_PATH} /F=${2:dst_folder} /S=.ShellClassInfo \"/L=IconResource=${3:src_ico},0\""
+    ],
+    "description": ["DeskEdit S 修改目标文件夹图标"]
+  },
+  "DeskEdit D 文件夹图标还原默认值": {
+    "prefix": ["DeskEdit -D"],
+    "body": ["CALL ${1:DeskEdit_exe_PATH} /F=${2:dst_folder} /D"],
+    "description": ["DeskEdit D 文件夹图标还原默认值"]
+  }
+}

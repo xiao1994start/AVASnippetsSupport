@@ -1,0 +1,7 @@
+{
+  "数组过滤空值": {
+    "prefix": ["filterEmpty"],
+    "body": ["filter((item) => item !== '')"],
+    "description": ["数组过滤空值"]
+  }
+}

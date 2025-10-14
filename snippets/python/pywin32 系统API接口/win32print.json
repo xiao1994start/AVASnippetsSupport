@@ -1,0 +1,27 @@
+{
+  "引入 win32.win32print 打印机API模块": {
+    "prefix": ["import win32 win32print", "im win32 win32print"],
+    "body": ["from win32 import win32print"],
+    "description": ["引入 win32.win32print 打印机API模块"]
+  },
+  "win32print.GetDefaultPrinter 获取默认打印机": {
+    "prefix": ["win32print GetDefaultPrinter"],
+    "body": ["win32print.GetDefaultPrinter()"],
+    "description": ["win32print.GetDefaultPrinter 获取默认打印机"]
+  },
+  "win32print.EnumPrinters 获取所有打印机": {
+    "prefix": ["win32print EnumPrinters"],
+    "body": ["win32print.EnumPrinters(2)  # 参数一般使用[2:3],返回嵌套元组"],
+    "description": ["win32print.EnumPrinters 获取所有打印机"]
+  },
+  "win32print.SetDefaultPrinter 设置默认打印机": {
+    "prefix": ["win32print SetDefaultPrinter"],
+    "body": ["win32print.SetDefaultPrinter($0)  # 参数为打印机名称"],
+    "description": ["win32print.SetDefaultPrinter 设置默认打印机"]
+  },
+  "win32print.OpenPrinter 打开指定打印机": {
+    "prefix": ["win32print OpenPrinter"],
+    "body": ["win32print.OpenPrinter(${1:strPrinterName})  # 参数为打印机名称"],
+    "description": ["win32print.OpenPrinter 打开指定打印机"]
+  }
+}

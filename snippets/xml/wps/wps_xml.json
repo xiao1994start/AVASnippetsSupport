@@ -1,0 +1,78 @@
+{
+  "WPS 控件组": {
+    "prefix": ["wps group"],
+    "body": [
+      "<group id=\"${1:控件组}\" label=\"${1:控件组}\">",
+      "    $0",
+      "    <separator id=\"separator\" />",
+      "</group>",
+      ""
+    ],
+    "description": ["WPS 控件组"]
+  },
+  "WPS 控件盒子": {
+    "prefix": ["wps box"],
+    "body": [
+      "<box id=\"box\" boxStyle=\"${1|horizontal,vertical|}\">",
+      "    ",
+      "</box>"
+    ],
+    "description": ["WPS 控件盒子"]
+  },
+  "WPS 分割线": {
+    "prefix": ["wps separator"],
+    "body": ["<separator id=\"separator\" />", "$0"],
+    "description": ["WPS 分割线", "只能在Group中使用"]
+  },
+  "WPS 按钮组": {
+    "prefix": ["wps btnGroup", "wps buttonGroup"],
+    "body": [
+      "<buttonGroup id=\"${1:buttonGroup_}\">",
+      "    $0",
+      "    <separator id=\"separator\" />",
+      "</buttonGroup>",
+      ""
+    ],
+    "description": ["WPS 按钮组"]
+  },
+  "WPS 按钮": {
+    "prefix": ["wps btn", "wps button"],
+    "body": [
+      "<button id=\"${1:唯一标识}\" label=\"${2:标签}\" onAction=\"ribbon.OnAction\"",
+      "    getEnabled=\"ribbon.OnGetEnabled\" getImage=\"ribbon.GetImage\" visible=\"true\"",
+      "    size=\"normal\" />",
+      "$0"
+    ],
+    "description": [
+      "WPS 按钮",
+      "默认尺寸:大图标按钮",
+      "大尺寸按钮: size=\"large\""
+    ]
+  },
+  "WPS imageMso 按钮": {
+    "prefix": ["wps btn imageMso", "wps button imageMso"],
+    "body": [
+      "<button id=\"${1:唯一标识}\" label=\"${2:标签}\" imageMso=\"${3|Bold,Italic,Underline,Fontsize|}\" onAction=\"ribbon.OnAction\"/>",
+      "$0"
+    ],
+    "description": [
+      "WPS imageMso 按钮",
+      "\t仅携带原生控件图标, 需要定义onAction来实现功能"
+    ]
+  },
+  "WPS 按钮尺寸": {
+    "prefix": ["wps btn size", "wps button size"],
+    "body": ["size=\"${1|large,normal|}\""],
+    "description": ["WPS 按钮尺寸"]
+  },
+  "WPS idMso 按钮": {
+    "prefix": ["wps btn idMso", "wps button idMso"],
+    "body": ["<button idMso=\"${1|Bold,Italic,Underline,Fontsize|}\" />", "$0"],
+    "description": ["WPS idMso 按钮", "\t携带原生控件图标和功能"]
+  },
+  "WPS 组合框": {
+    "prefix": "wps comboBox",
+    "body": ["<comboBox idMso=\"FontSize\" id=\"xFontSize\" label=\"字号\" />"],
+    "description": "WPS 组合框"
+  }
+}

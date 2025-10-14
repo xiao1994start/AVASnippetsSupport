@@ -1,0 +1,42 @@
+{
+  "tuple 数据类型转换": {
+    "prefix": ["tuple "],
+    "body": ["tuple(${1:arg})"],
+    "description": ["数据类型转换->tuple"]
+  },
+  "tuple 类型声明": {
+    "prefix": [":tuple"],
+    "body": [": tuple"],
+    "description": ["类型声明: tuple"]
+  },
+  "tuple.count 计数器": {
+    "prefix": ["tuple count"],
+    "body": "count(${1:value})",
+    "description": ["返回指定值在tuple中出现的次数"]
+  },
+  "tuple.count 示例": {
+    "prefix": ["tuple count =-tuple"],
+    "body": [
+      "thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)",
+      "x = thistuple.count(5)",
+      "print(x)"
+    ],
+    "description": ["使用 tuple.count 的示例"]
+  },
+  "tuple.index 指定值索引位置": {
+    "prefix": ["tuple index -tuple"],
+    "body": "index(${1:value})",
+    "description": [
+      "tuple.index 在元组中搜索指定值并返回找到它的位置(默认: 元素第一次出现位置索引)"
+    ]
+  },
+  "tuple.index 示例": {
+    "prefix": ["tuple index =-tuple"],
+    "body": [
+      "thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)",
+      "x = thistuple.index(8)",
+      "print(x)"
+    ],
+    "description": ["使用 tuple.index 的示例"]
+  }
+}

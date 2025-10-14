@@ -1,0 +1,100 @@
+{
+  "flet.Dropdown 下拉列表": {
+    "prefix": ["ft Dropdown -ft", "flet Dropdown -flet"],
+    "body": [
+      "ft.Dropdown(",
+      "    label='标题',  # * 标题",
+      "    options=[  # * 下拉框选项(非结构性内容)",
+      "        ft.DropdownOption(key='key_name', text='不设置text会直接显示key'),",
+      "    ],",
+      "    value='key_name',  # * 默认选中项(非结构性内容)",
+      "    editable=False,  # * 禁用输入",
+      "    enable_filter=False,  # * 禁用筛选(关联editable输入开关)",
+      "    enable_search=False,  # * 禁用搜索(关联editable输入开关)",
+      "    border_color=ft.Colors.BLUE_ACCENT_400,  # * 默认状态下边框颜色",
+      "    focused_border_color=ft.Colors.LIGHT_BLUE_ACCENT_400,  # * 焦点(输入)状态下边框颜色",
+      "    width=320,",
+      "    on_change=lambda e: print(e),  # * e: ft.ControlEvent",
+      ")",
+      ""
+    ],
+    "description": ["flet.Dropdown 下拉列表"]
+  },
+  "flet.DropdownOption 下拉框选项": {
+    "prefix": ["ft object -ft", "flet object -flet"],
+    "body": [
+      "ft.DropdownOption(key='key_name', text='不设置text会直接显示key'),"
+    ],
+    "description": ["flet.DropdownOption 下拉框选项"]
+  },
+  "flet.DropdownM2 下拉列表M2样式": {
+    "prefix": ["ft DropdownM2 -ft", "flet DropdownM2 -flet"],
+    "body": [
+      "ft.DropdownM2(",
+      "    label='服务器',  # * 标题",
+      "    options=[  # * 下拉框选项(非结构性内容)",
+      "        ft.dropdownm2.Option(key='key_name', text='不设置text会直接显示key'),",
+      "    ],",
+      "    value='key_name',  # * 默认选中项(非结构性内容)",
+      "    border_color=ft.Colors.BLUE_ACCENT_400,  # * 默认状态下边框颜色",
+      "    focused_border_color=ft.Colors.LIGHT_BLUE_ACCENT_400,  # * 焦点(输入)状态下边框颜色",
+      "    width=320,",
+      "    on_change=lambda e: self.get_api(e),  # * e: ft.ControlEvent",
+      ")",
+      ""
+    ],
+    "description": ["flet.DropdownM2 下拉列表M2样式"]
+  },
+  "flet.Slider 滑块": {
+    "prefix": ["ft Slider -ft", "flet Slider -flet"],
+    "body": [
+      "ft.Slider(",
+      "    value=70,  # * 默认值",
+      "    # label='{value}',  # * 显示标签[格式为: {value}; 需要显示小数值时, 不要定义 label 属性, 使用 on_change_start 和 on_change 调用单独的函数定义]",
+      "    min=0,",
+      "    max=100,",
+      "    divisions=100,  # * 刻度(浮点数会出现精确度不够的情况): divisions = int((max - min) / 预期刻度值)[!注意: 滑块最佳的宽度不得低于 divisions 的 1.2 倍]",
+      "    # round=0,  # * 保留小数位数(不设置时, 会根据实际情况保留小数位数)",
+      "    # on_change_start=lambda e: print(e, e.control.value),  # * 值改变开始(常用于处理 label 需要显示小数的情况)",
+      "    # on_change=lambda e: print(e, e.control.value),  # * 值改变过程中(常用于处理 label 需要显示小数的情况)",
+      "    on_change_end=lambda e: print(e, e.control.value),  # * 值改变结束(常用于确认数值后的 IO 操作等)",
+      ")",
+      ""
+    ],
+    "description": ["flet.Slider 滑块"]
+  },
+  "flet.Switch 开关": {
+    "prefix": ["ft Switch -ft", "flet Switch -flet"],
+    "body": [
+      "ft.Switch(",
+      "    label='标签',",
+      "    label_position=ft.LabelPosition.RIGHT,  # * 标签位置",
+      "    value=False,",
+      "    on_change=lambda e: print(e),",
+      ")",
+      ""
+    ],
+    "description": ["flet.Switch 开关"]
+  },
+  "flet.TextField 文本输入控件": {
+    "prefix": ["ft TextField -ft", "flet TextField -flet"],
+    "body": [
+      "ft.TextField(",
+      "    label='标签',  # * 标签",
+      "    hint_text='自动隐藏提示文本',  # * 自动隐藏提示文本",
+      "    # value='默认值',  # * 默认值",
+      "    # border_color=ft.Colors.BLUE_ACCENT_400,  # * 默认状态下边框颜色",
+      "    # focused_border_color=ft.Colors.LIGHT_BLUE_ACCENT_400,  # * 焦点(输入)状态下边框颜色",
+      "    multiline=True,  # * 如果 TextField 可以包含多行文本, 则为 True. 使用 multiline 时, max_lines 设置无效",
+      "    keyboard_type=ft.KeyboardType.MULTILINE,  # * 富文本(带格式支持)编辑器",
+      "    # * 执行函数[on_focus:获得焦点时触发; on_change:发生更改时触发; on_blur:失去焦点时触发; on_submit:ENTER(回车)键时触发]",
+      "    # shift_enter=True,  # * ENTER(回车)键时触发 on_submit 事件; 默认为 False",
+      ")",
+      ""
+    ],
+    "description": [
+      "flet.TextField 文本输入控件",
+      "文本字段允许用户使用硬件键盘或屏幕键盘输入文本"
+    ]
+  }
+}

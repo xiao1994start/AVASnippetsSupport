@@ -1,0 +1,7 @@
+{
+  "引入 numpy 维度数组与矩阵运算科学计算的基础库": {
+    "prefix": ["import numpy", "im numpy"],
+    "body": ["import numpy as np"],
+    "description": ["引入 numpy 维度数组与矩阵运算科学计算的基础库"]
+  }
+}

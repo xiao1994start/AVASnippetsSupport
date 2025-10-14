@@ -1,0 +1,18 @@
+{
+  "pip.tqdm 高效进度条神器": {
+    "prefix": ["pip tqdm"],
+    "body": [
+      "pip install -U tqdm -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["tqdm 高效进度条神器", "需要导入 multiprocessing 搭配使用"]
+  },
+  "uv.tqdm 高效进度条神器": {
+    "prefix": ["uv tqdm"],
+    "body": [
+      "uv add \"tqdm\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["tqdm 高效进度条神器", "需要导入 multiprocessing 搭配使用"]
+  }
+}

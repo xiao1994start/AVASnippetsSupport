@@ -1,0 +1,7 @@
+{
+  "eval(...) 字符串运算符": {
+    "prefix": ["eval "],
+    "body": ["eval('${1:1+1}')"],
+    "description": ["eval(...) 字符串运算符"]
+  }
+}

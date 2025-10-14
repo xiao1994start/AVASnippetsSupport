@@ -1,0 +1,141 @@
+{
+  "引入 winreg 注册表管理库": {
+    "prefix": ["import winreg", "im winreg"],
+    "body": ["import winreg"],
+    "description": ["引入 winreg 注册表管理库"]
+  },
+  "winreg.CreateKey 创建或打开特定的键": {
+    "prefix": ["winreg CreateKey"],
+    "body": [
+      "winreg.CreateKey(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      ")"
+    ],
+    "description": ["winreg.CreateKey 创建或打开特定的键"]
+  },
+  "winreg.CreateKeyEx 创建或打开特定的键": {
+    "prefix": ["winreg CreateKeyEx"],
+    "body": [
+      "winreg.CreateKeyEx(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      "    0,  # reserved 是一个保留的整数, 必须是0, 默认值为0",
+      "    winreg.KEY_ALL_ACCESS,  # access(访问权限), KEY_ALL_ACCESS 表示所有权限; 默认值为 KEY_WRITE",
+      ")"
+    ],
+    "description": ["winreg.CreateKeyEx 创建或打开特定的键"]
+  },
+  "winreg.DeleteKey 删除指定的键": {
+    "prefix": ["winreg DeleteKey"],
+    "body": [
+      "winreg.DeleteKey(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      ")"
+    ],
+    "description": [
+      "winreg.DeleteKey 删除指定的键",
+      "\n该方法不能删除带有子项的键",
+      "\n如果方法成功, 则整个键, 包括其所有值项都会被移除. 如果方法失败, 则引发一个 OSError 异常"
+    ]
+  },
+  "winreg.DeleteKeyEx 删除指定的键": {
+    "prefix": ["winreg DeleteKeyEx"],
+    "body": [
+      "winreg.DeleteKeyEx(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      "    0,  # reserved 是一个保留的整数, 必须是0, 默认值为0",
+      "    winreg.KEY_ALL_ACCESS,  # access(访问权限), KEY_ALL_ACCESS 表示所有权限; 默认值为 KEY_WRITE",
+      ")"
+    ],
+    "description": [
+      "winreg.DeleteKeyEx 删除指定的键",
+      "\n该方法不能删除带有子项的键",
+      "\n如果方法成功, 则整个键, 包括其所有值项都会被移除. 如果方法失败, 则引发一个 OSError 异常"
+    ]
+  },
+  "winreg.DeleteValue 从某个注册键中删除一个命名值项": {
+    "prefix": ["winreg DeleteValue"],
+    "body": [
+      "winreg.DeleteValue(",
+      "    ${1:key_OpenKey},  # key 为某个winreg.OpenKey已经打开的键",
+      "    ${2:value_name},  # value_name 为标识所要删除值项的字符串",
+      ")"
+    ],
+    "description": ["winreg.DeleteValue 从某个注册键中删除一个命名值项"]
+  },
+  "winreg.OpenKey 打开注册表": {
+    "prefix": ["winreg OpenKey"],
+    "body": [
+      "winreg.OpenKey(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      "    0,  # reserved 是一个保留的整数, 必须是0, 默认值为0",
+      "    winreg.KEY_ALL_ACCESS,  # access(访问权限), KEY_ALL_ACCESS 表示所有权限; 默认值为 KEY_WRITE",
+      ")"
+    ],
+    "description": ["winreg.OpenKey 打开注册表"]
+  },
+  "with winreg.OpenKey 打开注册表": {
+    "prefix": ["with winreg OpenKey"],
+    "body": [
+      "with winreg.OpenKey(",
+      "    winreg.HKEY_LOCAL_MACHINE,  # HKEY_CLASSES_ROOT(文件类型及相关属性) HKEY_CURRENT_USER(当前用户的偏好) HKEY_LOCAL_MACHINE(计算机的物理状态) HKEY_USERS(当前计算机中新用户的默认配置和当前用户配置)",
+      "    SOFTWARE,  # sub_key注册表路径",
+      "    0,  # reserved 是一个保留的整数, 必须是0, 默认值为0",
+      "    winreg.KEY_ALL_ACCESS,  # access(访问权限), KEY_ALL_ACCESS 表示所有权限; 默认值为 KEY_WRITE",
+      ") as key:",
+      "    print(key)",
+      ""
+    ],
+    "description": ["with winreg.OpenKey 打开注册表"]
+  },
+  "winreg.QueryValue 读取某键的未命名值, 形式为字符串": {
+    "prefix": ["winreg QueryValue"],
+    "body": [
+      "winreg.QueryValue(",
+      "    ${1:key_OpenKey},  # key 为某个winreg.OpenKey已经打开的键",
+      "    ${2:value_name},  # value_name 为标识所要读取值项的字符串",
+      ")"
+    ],
+    "description": [
+      "winreg.QueryValue 读取某键的未命名值, 形式为字符串",
+      "\n注册表中的值包含名称 类型 数据",
+      "\n本方法将读取注册表键值的第一个名称为 NULL 的数据",
+      "\n可是底层的 API 调用不会返回类型",
+      "\n所以只要有可能就一定要使用 QueryValueEx()"
+    ]
+  },
+  "winreg.QueryValueEx 读取已打开注册表键指定值名称的类型和数据": {
+    "prefix": ["winreg QueryValueEx"],
+    "body": [
+      "winreg.QueryValueEx(",
+      "    ${1:key_OpenKey},  # key 为某个winreg.OpenKey已经打开的键",
+      "    ${2:value_name},  # value_name 为标识所要读取值项的字符串",
+      ")"
+    ],
+    "description": [
+      "winreg.QueryValueEx 读取已打开注册表键指定值名称的类型和数据"
+    ]
+  },
+  "winreg.SetValueEx 写入注册表键值": {
+    "prefix": ["winreg SetValueEx"],
+    "body": [
+      "winreg.SetValueEx(",
+      "    ${1:key_OpenKey},  # key 为某个winreg.OpenKey已经打开的键",
+      "    ${2:value_name},  # 字符串, 用于命名与值相关的子键",
+      "    0,  # reserved 可以是任意数据 -- 传给 API 的总是 0 (传入 0 即可)",
+      "    winreg.${3:REG_SZ},  # 键值类型: REG_BINARY 任意格式的二进制数据 | REG_DWORD 32位数字 | REG_EXPAND_SZ 包含环境变量(%PATH%)的字符串, 以空字符结尾 | REG_SZ 空字符结尾的字符串",
+      "    ${4:value},  # 设置新值的字符串",
+      ")"
+    ],
+    "description": ["winreg.SetValueEx 写入注册表键值"]
+  },
+  "winreg.CloseKey 关闭注册表键": {
+    "prefix": ["winreg CloseKey"],
+    "body": ["winreg.CloseKey($0)"],
+    "description": ["winreg.CloseKey 关闭注册表键"]
+  }
+}

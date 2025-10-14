@@ -1,0 +1,14 @@
+{
+  "引入 uvicorn ASGI Web 服务器实现": {
+    "prefix": ["import uvicorn", "im uvicorn"],
+    "body": ["import uvicorn"],
+    "description": ["引入 uvicorn ASGI Web 服务器实现"]
+  },
+  "uvicorn.run 运行服务器": {
+    "prefix": ["uvicorn run"],
+    "body": [
+      "uvicorn.run(app=${1:py:app}, host='localhost', port=8000, debug=True, reload=True)"
+    ],
+    "description": ["uvicorn.run 运行服务器"]
+  }
+}

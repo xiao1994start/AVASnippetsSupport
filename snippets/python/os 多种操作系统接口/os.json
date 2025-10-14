@@ -1,0 +1,40 @@
+{
+  "引入 os 多种操作系统接口库": {
+    "prefix": ["import os", "im os"],
+    "body": ["import os"],
+    "description": ["引入 os 多种操作系统接口库"]
+  },
+  "os.getenv 获取系统环境变量路径": {
+    "prefix": ["os getenv", "getenv -os"],
+    "body": ["os.getenv($0)"],
+    "description": ["os.getenv 获取系统环境变量路径"]
+  },
+  "os.startfile 打开文件 或 文件夹": {
+    "prefix": ["os startfile", "startfile -os"],
+    "body": ["os.startfile($0)"],
+    "description": ["os.startfile 打开文件 或 文件夹"]
+  },
+  "os.popen 从一个命令打开一个管道": {
+    "prefix": ["os popen", "popen -os"],
+    "body": ["os.popen()"],
+    "description": [
+      "os.popen 从一个命令打开一个管道",
+      "常用 os.popen('[cmdCommand]').readlines() ->list[str] 获取结果, 便于循环选取需要的结果",
+      "也可用 os.popen('[cmdCommand]').read() ->str 获取全部结果",
+      "或是 os.popen('[cmdCommand]').readline() ->str 获取第一行结果"
+    ]
+  },
+  "os.pathsep 操作系统通常用于分隔搜索路径": {
+    "prefix": ["os pathsep", "pathsep -os"],
+    "body": ["os.pathsep"],
+    "description": [
+      "os.pathsep 操作系统通常用于分隔搜索路径",
+      "Windows 上是 ';'"
+    ]
+  },
+  "os.sep 操作系统用来分隔路径符": {
+    "prefix": ["os sep", "sep -os"],
+    "body": ["os.sep"],
+    "description": ["os.sep 操作系统用来分隔路径符", "在 Windows 上是是 '\\'"]
+  }
+}

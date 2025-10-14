@@ -1,0 +1,55 @@
+{
+  "创建 if 条件判断": {
+    "prefix": ["if"],
+    "body": ["if (${1:condition}) {", "  $0", "}", ""],
+    "description": ["创建 if 条件判断"]
+  },
+  "创建 if_else 条件判断": {
+    "prefix": ["if else"],
+    "body": ["if (${1:condition}) {", "  $0", "} else {", "  ", "}", ""],
+    "description": ["创建 if_else 条件判断"]
+  },
+  "创建 else 判断": {
+    "prefix": ["else"],
+    "body": ["else {", "  $0", "}"],
+    "description": ["创建 else 判断"]
+  },
+  "创建 if_else_if 条件判断": {
+    "prefix": ["if else if"],
+    "body": [
+      "if (${1:condition}) {",
+      "  $0",
+      "} else if {",
+      "  ",
+      "} else {",
+      "  ",
+      "}",
+      ""
+    ],
+    "description": ["创建 if_else_if 条件判断"]
+  },
+  "创建 else_if 条件判断": {
+    "prefix": ["else if"],
+    "body": ["else if (${1:condition}) {", "  $0", "}"],
+    "description": ["创建 else_if 条件判断"]
+  },
+  "创建 switch_case 条件判断": {
+    "prefix": ["create switch case", "c switch case", "switch case"],
+    "body": [
+      "switch (${1:key}) {",
+      "    case ${2:value}:",
+      "    $0",
+      "    break",
+      "  default:",
+      "    break",
+      "}",
+      ""
+    ],
+    "description": ["创建 switch_case 条件判断"]
+  },
+  "创建 case 判断": {
+    "prefix": ["create case", "c case", "case"],
+    "body": ["case ${1:value}:", "$0", "  break"],
+    "description": ["创建 case 判断"]
+  }
+}

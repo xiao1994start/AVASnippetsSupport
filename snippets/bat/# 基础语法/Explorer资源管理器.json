@@ -1,0 +1,15 @@
+{
+  "资源管理器 打开文件夹": {
+    "prefix": ["open -Explorer"],
+    "body": ["call Explorer ${1:dst目标文件夹路径}"],
+    "description": ["资源管理器 打开文件夹"]
+  },
+  "资源管理器 打开文件路径": {
+    "prefix": ["open -select -Explorer"],
+    "body": ["call Explorer /select ${1:dst目标文件路径}"],
+    "description": [
+      "资源管理器 打开文件路径",
+      "打开一个窗口视图, 指定的 文件夹 | 文件 | 程序 被选中"
+    ]
+  }
+}

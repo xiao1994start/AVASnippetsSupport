@@ -1,0 +1,18 @@
+{
+  "pip.PyInstaller 打包库": {
+    "prefix": ["pip PyInstaller"],
+    "body": [
+      "pip install -U pyinstaller -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["PyInstaller 打包库"]
+  },
+  "uv.PyInstaller 打包库": {
+    "prefix": ["uv PyInstaller"],
+    "body": [
+      "uv add \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["PyInstaller 打包库"]
+  }
+}

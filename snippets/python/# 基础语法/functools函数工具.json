@@ -1,0 +1,60 @@
+{
+  "引入 functools 高阶函数": {
+    "prefix": ["import functools", "im functools"],
+    "body": ["import functools"],
+    "description": ["引入 functools 高阶函数"]
+  },
+  "使用 functools.wraps 保留原函数元信息的函数装饰器": {
+    "prefix": ["c functools wraps def", "creat functools wraps def"],
+    "body": [
+      "def ${1:decorator}(func):",
+      "    \"\"\"",
+      "    创建装饰器: 描述",
+      "    :param func: (形参)被装饰的函数",
+      "    \"\"\"",
+      "",
+      "    @functools.wraps(func)  # 保留原函数元信息",
+      "    def wrapper(*args, **kwargs):",
+      "        \"\"\"",
+      "        包装函数: 描述",
+      "        :param args: (形参)元组参数",
+      "        :param kwargs: (形参)字典参数",
+      "        \"\"\"",
+      "        print(f'{func.__name__}开始执行...')",
+      "        result = func(*args, **kwargs)",
+      "        print(f'{func.__name__}执行完毕...')",
+      "        return result",
+      "",
+      "    return wrapper",
+      ""
+    ],
+    "description": ["使用 functools.wraps 保留原函数元信息的函数装饰器"]
+  },
+  "functools.wraps => timer 创建计算函数运行时间的装饰器": {
+    "prefix": [
+      "c functools wraps def --timer =-functools wraps",
+      "creat functools wraps def --timer =-functools wraps"
+    ],
+    "body": [
+      "def timer(func):",
+      "    \"\"\"计算并打印函数执行时长的装饰器\"\"\"",
+      "    import time",
+      "",
+      "    @functools.wraps(func)  # 保留原始函数的元信息",
+      "    def wrapper(*args, **kwargs):",
+      "        # 记录开始时间",
+      "        start_time = time.perf_counter()",
+      "        # 执行目标函数并记录结果",
+      "        result = func(*args, **kwargs)",
+      "        # 计算并打印耗时",
+      "        duration = time.perf_counter() - start_time",
+      "        print(f'函数 {func.__name__} 执行耗时: {duration:.2f} 秒')  # :.2f 保留两位小数",
+      "",
+      "        return result",
+      "",
+      "    return wrapper",
+      ""
+    ],
+    "description": ["functools.wraps => timer 创建计算函数运行时间的装饰器"]
+  }
+}

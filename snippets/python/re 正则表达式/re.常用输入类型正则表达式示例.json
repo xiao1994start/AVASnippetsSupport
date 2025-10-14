@@ -1,0 +1,20 @@
+{
+  "regexp 常用输入类型正则表达式示例": {
+    "prefix": ["regexp "],
+    "body": ["${1|r'^-?\\d+$',r'^-?\\d*\\.?\\d*$'|}"],
+    "description": ["regexp 常用输入类型正则表达式示例"]
+  },
+  "regexp 仅整数-允许负号": {
+    "prefix": ["regexp int"],
+    "body": ["r'^-?\\d+$'"],
+    "description": ["regexp 仅整数-允许负号", "\n\t-只能输入整数、负整数"]
+  },
+  "regexp 仅浮点数-允许小数点和负号": {
+    "prefix": ["regexp float"],
+    "body": ["r'^-?\\d*\\.?\\d*$'"],
+    "description": [
+      "regexp 仅浮点数-允许小数点和负号",
+      "\n\t-只能输入整数、负整数、浮点数、负浮点数(推荐,更常用)"
+    ]
+  }
+}

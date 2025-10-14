@@ -1,0 +1,20 @@
+{
+  "创建 function 方法函数": {
+    "prefix": ["new func -function", "n func -function"],
+    "body": ["function ${1:name}(${2:params}) {", "  $0", "}", ""],
+    "description": "创建 function 方法函数"
+  },
+  "弹窗": {
+    "prefix": ["prt -alert", "alert"],
+    "body": ["alert(${1:content})", ""],
+    "description": ["弹窗"]
+  },
+  "导出语法": {
+    "prefix": ["export default", "expt default -export"],
+    "body": ["export default { $0 }", ""],
+    "description": [
+      "导出语法",
+      "将一个对象、函数、类或值作为模块的默认导出(暴露)，供其他文件引入使用"
+    ]
+  }
+}

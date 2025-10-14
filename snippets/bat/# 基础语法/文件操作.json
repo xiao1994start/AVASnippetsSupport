@@ -1,0 +1,137 @@
+{
+  "新建路径": {
+    "prefix": ["md ", "mkdir "],
+    "body": ["md ${1:新建路径}"],
+    "description": ["新建路径"]
+  },
+  "复制文件": {
+    "prefix": ["copy -V"],
+    "body": ["copy /V /Y ${1:src源路径} ${2:dst目标路径}"],
+    "description": ["复制文件"]
+  },
+  "二进制合并文件": {
+    "prefix": ["copy -B"],
+    "body": [
+      "copy /B ${1:src图片源路径} + ${2:src数据源路径} ${3:dst目标路径_jpg_png}"
+    ],
+    "description": [
+      "二进制合并文件",
+      "\n一般用于合并大文件, 如合并大视频文件, 合并大音频文件等",
+      "\n同时也可以用于伪装文件"
+    ]
+  },
+  "复制文件夹": {
+    "prefix": ["xcopy"],
+    "body": ["xcopy /S /E /I /Y ${1:src源路径} ${2:dst目标路径}"],
+    "description": ["复制文件夹"]
+  },
+  "移动文件夹": {
+    "prefix": ["move "],
+    "body": ["move /Y ${1:src源路径} ${2:dst目标路径}"],
+    "description": ["移动文件夹"]
+  },
+  "重命名": {
+    "prefix": ["ren "],
+    "body": ["ren ${1:src源文件路径_后缀} \"${2:dst修改后的文件名_后缀}\""],
+    "description": ["重命名"]
+  },
+  "删除文件 强制|安静": {
+    "prefix": ["del -FQ"],
+    "body": ["del /F /Q ${1:dst目标文件路径}"],
+    "description": ["删除文件", "/F 强制删除只读文件", "/Q 安静模式"]
+  },
+  "删除文件 强制|子目录|安静": {
+    "prefix": ["del -FSQ"],
+    "body": ["del /F /S /Q ${1:dst目标文件路径_含子目录}"],
+    "description": [
+      "删除文件",
+      "/F 强制删除只读文件",
+      "/S 从所有子目录删除指定文件",
+      "/Q 安静模式"
+    ]
+  },
+  "删除符号链接_删除空文件夹": {
+    "prefix": ["rmdir "],
+    "body": ["rmdir ${1:dst删除目标_空文件夹_符号链接_路径}"],
+    "description": ["删除符号链接_删除空文件夹"]
+  },
+  "创建符号链接文件": {
+    "prefix": ["mklink "],
+    "body": ["mklink ${2:dst目标文件_文件夹路径} ${1:src源文件_文件夹路径}"],
+    "description": ["创建符号链接文件"]
+  },
+  "创建符号链接文件或文件夹": {
+    "prefix": ["mklink -D"],
+    "body": ["mklink /D ${2:dst目标文件_文件夹路径} ${1:src源文件_文件夹路径}"],
+    "description": ["创建符号链接文件或文件夹(可以使用相对路径_快捷方式)"]
+  },
+  "创建符号链接文件或文件夹(必须绝对路径)": {
+    "prefix": ["mklink -J"],
+    "body": ["mklink /J ${2:dst目标文件夹路径} ${1:src源文件夹路径}"],
+    "description": ["创建符号链接文件或文件夹(必须绝对路径)"]
+  },
+  "重建Symlink文件": {
+    "prefix": ["delLnk", "new Lnk"],
+    "body": [
+      "del /F /S /Q ${2:dst目标文件路径}",
+      "mklink ${2:dst目标文件路径} ${1:src源文件路径}"
+    ],
+    "description": ["重建Symlink文件"]
+  },
+  "重建符号硬链接": {
+    "prefix": ["delLnk -H", "newLnk -H"],
+    "body": [
+      "del /F /S /Q ${2:dst目标文件路径}",
+      "mklink /H ${2:dst目标文件路径} ${1:src源文件路径}"
+    ],
+    "description": ["重建符号硬链接(/H 只能在同相同盘符)"]
+  },
+  "重建快捷方式符号链接": {
+    "prefix": ["reLnk -D", "newLnk -D"],
+    "body": [
+      "rd /S /Q ${2:dst目标文件夹路径}",
+      "mklink /D ${2:dst目标文件夹路径} ${1:src源文件夹路径}"
+    ],
+    "description": ["重建mklink /D快捷方式符号链接"]
+  },
+  "重建mklink /J符号链接": {
+    "prefix": ["reLnk -J", "newLnk -J"],
+    "body": [
+      "rd /S /Q ${2:dst目标文件夹路径}",
+      "mklink /J ${2:dst目标文件夹路径} ${1:src源文件夹路径}"
+    ],
+    "description": ["重建mklink /J符号链接"]
+  },
+  "向上一级目录寻找文件夹或文件": {
+    "prefix": ["findLoop ="],
+    "body": [
+      "set \"root=%cd:~,3%\"",
+      "ECHO 当前根目录: %root%",
+      "set \"findName=NAME\"",
+      "",
+      ":findLoop",
+      "if not exist %findName% (",
+      "    echo 未找到对应文件, 返回上级目录",
+      "    cd ..",
+      "    if \"%cd%\" == \"%root%\" (",
+      "        echo 已到达根目录, 但未找到文件或文件夹",
+      "        PAUSE",
+      "        goto :eof",
+      "    )",
+      "    @REM echo 当前目录: %cd%",
+      "    goto :findLoop",
+      ") else (",
+      "    @REM echo 找到对应文件, 位于目录: %cd%",
+      "    set \"currentDir=%cd%\"",
+      "    goto :findLoopOut",
+      ")",
+      "",
+      ":findLoopOut",
+      "ECHO 当前目录: !currentDir!",
+      "CD /D !currentDir!",
+      "",
+      ""
+    ],
+    "description": ["向上一级目录寻找文件夹或文件"]
+  }
+}

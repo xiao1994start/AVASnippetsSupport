@@ -1,0 +1,70 @@
+{
+  "引入 threading 线程库": {
+    "prefix": ["import threading", "im threading"],
+    "body": ["import threading  # * 多线程实现高的并发性"],
+    "description": ["引入 threading 线程库"]
+  },
+  "threading.Event 线程事件对象": {
+    "prefix": ["threading Event -threading"],
+    "body": ["threading.Event()  # 线程事件对象"],
+    "description": [
+      "threading.Event 线程事件对象",
+      "\n\t-用于线程间通信的简单机制, 用于线程间通信",
+      "\n\t-threading.Event()对象默认的内部状态 布尔标志 为False"
+    ]
+  },
+  "threading.Event.set() 设置线程事件对象状态为True": {
+    "prefix": ["threading Event set -threading"],
+    "body": ["set()"],
+    "description": [
+      "threading.Event.set() 设置线程事件对象状态为True",
+      "\n\t-可以用于线程间通信, 可以结合 is_set() 方法判断线程事件对象状态"
+    ]
+  },
+  "threading.Event.clear() 设置线程事件对象状态为False": {
+    "prefix": ["threading Event clear -threading"],
+    "body": ["clear()"],
+    "description": [
+      "threading.Event.clear() 设置线程事件对象状态为False",
+      "\n\t-可以用于线程间通信, 可以结合 is_set() 方法判断线程事件对象状态"
+    ]
+  },
+  "threading.Event.is_set() 检查标志状态": {
+    "prefix": ["threading Event is_set-threading"],
+    "body": ["is_set()"],
+    "description": ["threading.Event.is_set() 检查标志状态"]
+  },
+  "threading.Event.wait(timeout=None) 设置阻塞线程超时": {
+    "prefix": ["threading Event -threading"],
+    "body": ["wait(timeout=None)"],
+    "description": [
+      "threading.Event.wait(timeout=None) 设置阻塞线程超时",
+      "\n\t-阻塞线程直到内部标志为 True 或超时",
+      "\n\t-返回 True 表示标志为 True",
+      "\n\t-返回 False 表示超时"
+    ]
+  },
+  "threading.Thread 创建线程事件对象": {
+    "prefix": [
+      "creat threading Thread -threading",
+      "c threading Thread -threading"
+    ],
+    "body": ["threading.Thread(target=${1:func}, kwargs={'args_1': '参数_1'})"],
+    "description": ["threading.Thread 创建线程"]
+  },
+  "threading.Thread.start() 启动线程事件对象": {
+    "prefix": ["threading Thread start -threading"],
+    "body": ["start()  # 启动线程事件对象"],
+    "description": ["threading.Thread.start() 启动线程事件对象"]
+  },
+  "threading.Thread.join() 等待线程事件对象结束": {
+    "prefix": ["threading Thread join -threading"],
+    "body": ["join()  # 等待线程事件对象结束"],
+    "description": ["threading.Thread.join() 等待线程事件对象结束"]
+  },
+  "threading.get_ident 获取线程ID": {
+    "prefix": ["threading get_ident -threading"],
+    "body": ["threading.get_ident()"],
+    "description": ["threading.get_ident 获取线程ID"]
+  }
+}

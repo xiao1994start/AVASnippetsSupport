@@ -1,0 +1,14 @@
+{
+  "创建 try_catch 尝试语句": {
+    "prefix": ["try catch"],
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (error) {",
+      "  // alert(\"发生错误:\" + error)",
+      "  // console.error(\"发生错误:\", error)",
+      "}"
+    ],
+    "description": ["创建 try_catch 尝试语句"]
+  }
+}

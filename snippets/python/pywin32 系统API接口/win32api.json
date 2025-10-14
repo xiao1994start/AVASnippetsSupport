@@ -1,0 +1,7 @@
+{
+  "引入 win32.win32api API系统通信模块": {
+    "prefix": ["import win32 win32api", "im win32 win32api"],
+    "body": ["from win32 import win32api"],
+    "description": ["引入 win32.win32api API系统通信模块"]
+  }
+}

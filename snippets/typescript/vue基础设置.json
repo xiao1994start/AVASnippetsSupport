@@ -1,0 +1,21 @@
+{
+  "server.proxyAPI跨域代理": {
+    "prefix": ["server proxy -vue"],
+    "body": [
+      "server: {",
+      "proxy: {",
+      "\t\t'/api': {",
+      "\t\t\t// 配置需要代理的路径 => 代理 \"http://[host]:[port]/api/\" 后的所有路由",
+      "\t\t\ttarget: 'http://[host]:[port]/api/', // restful 接口规范",
+      "\t\t\tchangeOrigin: true, // 允许跨域",
+      "\t\t\tws: true, // 允许 websocket 代理",
+      "\t\t\t// 重写代理路径 => 作用与 vue 配置 pathRewrite 相同",
+      "\t\t\t// 发送请求 url: '/api/[服务器响应地址]'",
+      "\t\t\trewrite: (path) => path.replace(/^\\/api/, '')",
+      "\t\t}",
+      "\t}",
+      "},"
+    ],
+    "description": ["server.proxyAPI跨域代理"]
+  }
+}

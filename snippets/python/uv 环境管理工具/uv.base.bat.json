@@ -1,0 +1,17 @@
+{
+  "pip.uv 环境管理工具": {
+    "prefix": ["pip uv"],
+    "body": [
+      "ECHO UV 环境管理器...",
+      "pip install -U uv -i https://mirrors.aliyun.com/pypi/simple/",
+      "ECHO 设置 uv 镜像源",
+      "set UV_DEFAULT_INDEX=https://mirrors.aliyun.com/pypi/simple/",
+      "@REM * 载入 uv 时,注意 python 版本报错提示",
+      "",
+      "",
+      "$0",
+      ""
+    ],
+    "description": ["uv 环境管理工具"]
+  }
+}

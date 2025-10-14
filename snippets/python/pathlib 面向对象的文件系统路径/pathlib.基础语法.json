@@ -1,0 +1,383 @@
+{
+  "导入 pathlib 模块 Path 类方法": {
+    "prefix": ["import Path", "im Path"],
+    "body": ["from pathlib import Path"],
+    "description": ["导入pathlib模块Path类方法"]
+  },
+  "Path() ->拼接路径/类型转换/类方法": {
+    "prefix": ["Path "],
+    "body": ["Path(${1:\"root\" , \"dir\" / \"file\"})"],
+    "description": ["Path() ->拼接路径/类型转换"]
+  },
+  "Path.cwd 当前路径": {
+    "prefix": ["Path-cwd"],
+    "body": ["Path.cwd()"],
+    "description": [
+      "Path.cwd 返回一个新的表示当前目录的路径对象",
+      "    和 os.getcwd() 返回的相同",
+      "    在 3.8 版本发生变更: 返回一个新的表示当前目录的路径对象, 而不是一个 Path 实例"
+    ]
+  },
+  "Path.cwd.resolve 当前目录路径": {
+    "prefix": ["Path-cwd-resolve"],
+    "body": ["Path.cwd().resolve()"],
+    "description": [
+      "Path.cwd -Path 返回一个新的表示当前目录的路径对象",
+      "    和 os.getcwd() 返回的相同",
+      "    在 3.8 版本发生变更: 返回一个新的表示当前目录的路径对象, 而不是一个 Path 实例"
+    ]
+  },
+  "Path__file__.parent 当前脚本文件父级绝对路径(脚本所在文件夹路径)": {
+    "prefix": ["Path-file-parent"],
+    "body": ["Path(__file__).parent"],
+    "description": [
+      "Path__file__.parent 当前脚本文件父级绝对路径(脚本所在文件夹路径)"
+    ]
+  },
+  "Path__file__.parent.resolve 当前脚本文件父级绝对路径(脚本所在文件夹路径)": {
+    "prefix": ["Path-file-parent-resolve"],
+    "body": ["Path(__file__).parent.resolve()"],
+    "description": [
+      "Path__file__.parent.resolve 当前脚本文件父级绝对路径(脚本所在文件夹路径)"
+    ]
+  },
+  "Path.home ~:用户目录绝对路径": {
+    "prefix": ["Path-home"],
+    "body": ["Path.home()"],
+    "description": [
+      "Path.home 返回一个表示用户家目录的新路径对象(与带 ~ 构造的 os.path.expanduser() 所返回的相同)",
+      "    如果无法解析家目录, 则会引发 RuntimeError"
+    ]
+  },
+  "Path.absolute 将相对路径改为绝对路径": {
+    "prefix": ["Path absolute", "absolute -Path"],
+    "body": ["absolute()"],
+    "description": ["Path.absolute 将相对路径改为绝对路径"]
+  },
+  "Path.resolve 路径绝对化": {
+    "prefix": ["Path resolve", "resolve -Path"],
+    "body": ["resolve()"],
+    "description": [
+      "Path.resolve 将路径绝对化, 解析任何符号链接->返回新的路径对象",
+      "在入口文件使用, 防止跨盘操作, 以及打包时无法识别路径问题"
+    ]
+  },
+  "Path.chmod 改变文件模式和权限": {
+    "prefix": ["Path chmod", "chmod -Path"],
+    "body": [
+      "chmod(",
+      "    mode=${1|stat.S_IREAD#:windows+只读,stat.S_IWRITE#:windows-只读,stat.S_IXOTH#:其他用户有执行权0o001,stat.S_IWOTH#:其他用户有写权限0o002,stat.S_IROTH#:其他用户有读权限0o004,stat.S_IRWXO#:其他用户有全部权限(权限掩码)0o007,stat.S_IXGRP#:组用户有执行权限0o010,stat.S_IWGRP#:组用户有写权限0o020,stat.S_IRGRP#:组用户有读权限0o040,stat.S_IRWXG#:组用户有全部权限(权限掩码)0o070,stat.S_IXUSR#:拥有者具有执行权限0o100,stat.S_IWUSR#:拥有者具有写权限0o200,stat.S_IRUSR#:拥有者具有读权限0o400,stat.S_IRWXU#:拥有者有全部权限(权限掩码)0o700,stat.S_ISVTX#:目录里文件目录只有拥有者才可删除更改0o1000,stat.S_ISGID#:执行此文件其进程有效组为文件所在组0o2000,stat.S_ISUID#:执行此文件其进程有效用户为文件所有者0o4000|}",
+      ")"
+    ],
+    "description": ["Path.chmod 改变文件模式和权限"]
+  },
+  "Path.touch 使用给定的路径创建文件": {
+    "prefix": ["Path touch", "touch -Path"],
+    "body": ["touch(exist_ok=True)"],
+    "description": [
+      "Path.touch 使用给定的路径创建文件",
+      "    如果给出了 mode (eg:mode=0o666 设置读写权限), 它将与进程的 umask 值合并以确定文件模式和访问旗标",
+      "    如果文件已存在, 则当 exist_ok 为真值时函数将成功执行 (并且其修改时间将更新为当前时间) 在其他情况下则会引发 FileExistsError"
+    ]
+  },
+  "Path.mkdir 新建给定路径的目录": {
+    "prefix": ["Path mkdir", "mkdir -Path"],
+    "body": ["mkdir(parents=True, exist_ok=True)"],
+    "description": [
+      "Path.mkdir (mode=0o777, parents=False, exist_ok=False)",
+      "    新建给定路径的目录; 如果给出了 mode , 它将与当前进程的 umask 值合并来决定文件模式和访问标志; 如果路径已经存在, 则抛出 FileExistsError",
+      "    如果 parents 为真值, 任何找不到的父目录都会伴随着此路径被创建; 它们会以默认权限被创建, 而不考虑 mode 设置(模仿 POSIX 的 mkdir -p 命令)",
+      "    如果 parents 为假值 (默认), 则找不到的父级目录会引发 FileNotFoundError",
+      "    如果 exist_ok 为 false (默认), 则在目标已存在的情况下抛出 FileExistsError",
+      "    如果 exist_ok 为真值, 则 FileExistsError 将不会被引发除非给定的路径在文件系统中已存在并且不是目录(与 POSIX mkdir -p 命令的行为相同)",
+      "    在 3.5 版本发生变更: exist_ok 形参被加入"
+    ]
+  },
+  "Path.rename 重命名": {
+    "prefix": ["Path rename", "rename -Path"],
+    "body": ["rename(${1:targetName})"],
+    "description": ["Path.rename 重命名"]
+  },
+  "Path.replace 将文件或目录重命名/移动target": {
+    "prefix": ["Path replace", "replace -Path"],
+    "body": ["replace(${1:target})"],
+    "description": [
+      "Path.replace 将文件或目录重命名为给定的 target, 并返回一个新的指向 target 的 Path 实例. 如果 target 指向一个现有文件或空目录, 则它将被无条件地替换",
+      "    目标路径可能为绝对或相对路径. 相对路径将被解释为相对于当前工作目录, 而 不是 相对于 Path 对象的目录",
+      "    在 3.8 版本发生变更: 添加了返回值, 返回新的 Path 实例"
+    ]
+  },
+  "Path.rmdir 移除必须为空的目录": {
+    "prefix": ["Path rmdir", "rmdir -Path"],
+    "body": ["rmdir()"],
+    "description": ["Path.rmdir 移除此目录, 此目录必须为空的"]
+  },
+  "Path.unlink 移除此文件或符号链接": {
+    "prefix": ["Path unlink", "unlink -Path"],
+    "body": ["unlink(missing_ok=True)"],
+    "description": [
+      "Path.unlink 移除此文件或符号链接. 如果路径指向目录, 则用 Path.rmdir() 代替",
+      "    如果 missing_ok 为假值(默认), 则如果路径不存在将会引发 FileNotFoundError",
+      "    如果 missing_ok 为真值, 则 FileNotFoundError 异常将被忽略(和 POSIX rm -f 命令的行为相同)",
+      "    在 3.8 版本发生变更: 增加了 missing_ok 形参"
+    ]
+  },
+  "Path.exists 判断文件或目录存在": {
+    "prefix": ["Path exists", "exists -Path"],
+    "body": ["exists(${1:follow_symlinks=False})"],
+    "description": [
+      "Path.exists 如果路径指向现有的文件或目录则返回 True",
+      "    此方法通常会跟随符号链接; 要检查符号链接是否存在, 请添加参数 follow_symlinks=False"
+    ]
+  },
+  "Path.expanduser ~/~user:用户目录绝对路径": {
+    "prefix": ["Path expanduser", "expanduser -Path"],
+    "body": ["expanduser()"],
+    "description": [
+      "Path.expanduser 返回带有扩展 ~ 和 ~user 构造的新路径, 与 os.path.expanduser() 所返回的相同",
+      "    如果无法解析家目录, 则会引发 RuntimeError"
+    ]
+  },
+  "Path.iterdir 循环目录->list": {
+    "prefix": ["Path iterdir", "iterdir -Path"],
+    "body": ["iterdir()"],
+    "description": [
+      "Path.iterdir 当路径指向一个目录时, 产生该路径下的对象的路径",
+      "    子条目会以任意顺序生成, 并且不包括特殊条目 '.' 和 '..'",
+      "    如果迭代器创建之后有文件在目录中被移除或添加, 是否要包括该文件所对应的路径对象并没有明确规定"
+    ]
+  },
+  "Path.iterdir 示例": {
+    "prefix": ["iterdir =Path", "Path iterdir=", "iterdir =-Path"],
+    "body": [
+      "for child in Path(${1:path}).iterdir(): child",
+      "    print(child)",
+      "    pass"
+    ],
+    "description": [
+      "for.iterdir -Path 当路径指向一个目录时, 产生该路径下的对象的路径"
+    ]
+  },
+  "Path.walk 遍历目录->tuple(list)": {
+    "prefix": ["Path walk", "walk -Path"],
+    "body": [
+      "walk()  # =>generator(生成器) =解包> root: str, dirs: list, files: list"
+    ],
+    "description": [
+      "Path.walk 通过对目录树自上而下或自下而上的遍历来生成其中的文件名",
+      "    对于根位置为 self 的目录树中的每个目录(包括 self 但不包括 '.' 和 '..'), 该方法会产生一个 3 元组 (dirpath, dirnames, filenames)",
+      "    dirpath 是指向当前正被遍历到的目录的 Path, dirnames 是由表示 dirpath 中子目录名称的字符串组成的列表 (不包括 '.' 和 '..'), filenames 是由表示 dirpath 中非目录文件名称的字符串组成的列表. 要获取 dirpath 中文件或目录的完整路径 (以 self 开头), 可使用 dirpath / name. 这些列表是否排序取决于具体的文件系统",
+      "    如果可选参数 top_down 为(默认的)真值, 则会在所有子目录的三元组生成之前生成父目录的三元组(目录是自上而下遍历的). 如果 top_down 为假值, 则会在所有子目录的三元组生成之后再生成父目录的三元组(目录是是自下而上遍历的). 无论 top_down 的值是什么, 都会在遍历目录及其子目录的三元组之前提取子目录列表",
+      "    当 top_down 为真值时, 调用者可以就地修改 dirnames 列表(例如, 使用 del 或切片赋值), 而 Path.walk() 将只向名称保留在 dirnames 中的子目录递归. 这可用于减少搜索量, 或加入特定的访问顺序, 甚至是在继续 Path.walk() 之前通知 Path.walk() 调用者创建或重命名的目录的相关信息. 当 top_down 为假值时修改 dirnames 不会影响 Path.walk() 的行为, 因为在 dirnames 被提供给调用者时 dirnames 中的目录已经生成了",
+      "    在默认情况下, 来自 os.scandir() 的错误将被忽略. 如果指定了可选参数 on_error, 则它应为一个可调用对象; 调用它需要传入一个参数, 即 OSError 的实例. 该可调用对象能处理错误以继续执行遍历或是重新引发错误以停止遍历. 请注意可以通过异常对象的 filename 属性来获取文件名",
+      "    在默认情况下, Path.walk() 不会跟踪符号链接, 而是将其添加到 filenames 列表中. 将 follow_symlinks*设为真值可解析符号链接并根据它们的目标将其放入*dirnames 和 filenames 中, 从而(在受支持的系统上)访问符号链接所指向的目录"
+    ]
+  },
+  "Path.walk 示例": {
+    "prefix": ["walk =-Path", "Path walk="],
+    "body": [
+      "for root, dirs, files in ${1:Path(path)}.walk():  # =>generator(生成器) =解包> root: str, dirs: list, files: list",
+      "    for dir in dirs:",
+      "        print(root / dir)",
+      "    for file in files:",
+      "        print(root / file)"
+    ],
+    "description": ["Path -for.walk -Path 循环输出示例"]
+  },
+  "Path.is_dir 判断目录或目录的符号链接": {
+    "prefix": ["Path is_dir", "is_dir -Path"],
+    "body": ["is_dir()"],
+    "description": [
+      "Path.is_dir 如果路径指向一个目录(或者一个指向目录的符号链接)则返回 True, 如果指向其他类型的文件则返回 False",
+      "    当路径不存在或者是一个破损的符号链接时也会返回 False; 其他错误(例如权限错误)被传播"
+    ]
+  },
+  "Path.is_file 判断文件或文件的符号链接": {
+    "prefix": ["Path is_file", "is_file -Path"],
+    "body": ["is_file()"],
+    "description": [
+      "Path.is_file 如果路径指向一个正常的文件(或者一个指向正常文件的符号链接)则返回 True, 如果指向其他类型的文件则返回 False",
+      "    当路径不存在或者是一个破损的符号链接时也会返回 False; 其他错误(例如权限错误)被传播"
+    ]
+  },
+  "Path.is_symlink 判断符号链接": {
+    "prefix": ["Path is_symlink", "is_symlink -Path"],
+    "body": ["is_symlink()"],
+    "description": [
+      "Path.is_symlink 如果路径指向符号链接则返回 True,  否则 False",
+      "    如果路径不存在也返回 False; 其他错误(例如权限错误)被传播"
+    ]
+  },
+  "Path.hardlink_to 创建硬链接": {
+    "prefix": ["Path hardlink_to", "hardlink_to -Path"],
+    "body": ["hardlink_to(${1:target})"],
+    "description": [
+      "Path.hardlink_to 将此路径设为一个指向与 target 相同文件的硬链接"
+    ]
+  },
+  "Path.hardlink_to 示例": {
+    "prefix": ["hardlink_to =-Path", "Path hardlink_to="],
+    "body": ["Path(${2:newLink}).hardlink_to(${1:target}):"],
+    "description": ["使用Path.hardlink_to的示例"]
+  },
+  "Path.symlink_to 创建符号连接": {
+    "prefix": ["Path symlink_to", "symlink_to -Path"],
+    "body": [
+      "symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir())"
+    ],
+    "description": [
+      "Path.symlink_to 使该路径成为一个指向 target 的符号连接",
+      "    在 Windows 上, 符号链接可以表示文件或目录两种类型, 并且不会动态改变类型. 如果目标存在, 则新建链接的类型将与目标一致. 否则, 如果 target_is_directory 为 True, 则符号链接将创建为目录链接, 为 False (默认)将创建为文件链接. 在非 Windows 平台上, target_is_directory 被忽略"
+    ]
+  },
+  "Path.symlink_to 示例": {
+    "prefix": ["symlink_to =-Path", "Path symlink_to="],
+    "body": [
+      "Path(${2:dst_path}).symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir()):"
+    ],
+    "description": ["使用Path.symlink_to的示例"]
+  },
+  "Path.readlink 返回符号链接所指向的路径": {
+    "prefix": ["Path readlink"],
+    "body": ["readlink()"],
+    "description": [
+      "Path.readlink 返回符号链接所指向的路径",
+      "    在 3.9 版本加入.readlink()方法"
+    ]
+  },
+  "Path.open 打开文件": {
+    "prefix": ["Path open", "open -Path"],
+    "body": [
+      "open(mode='${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', encoding=${3:'utf-8'})"
+    ],
+    "description": ["Path.open 打开对象文件操作"]
+  },
+  "Path.stat 返回有关路径的信息": {
+    "prefix": ["Path_stat", "stat_Path"],
+    "body": ["stat()"],
+    "description": [
+      "Path.stat 返回一个 os.stat_result 对象, 其中包含有关此路径的信息, 例如 os.stat().  结果会在每次调用此方法时重新搜索",
+      "    此方法通常会跟随符号链接; 要对 symlink 使用 stat 请添加参数 follow_symlinks=False, 或者使用 lstat()",
+      "    在 3.10 版本发生变更: 增加了 follow_symlinks 形参"
+    ]
+  },
+  "Path.stat 示例": {
+    "prefix": ["stat =-Path", "Path stat="],
+    "body": [
+      "p = Path('setup.py')",
+      "p.stat().st_size",
+      "# 956",
+      "p.stat().st_mtime",
+      "# 1327883547.852554"
+    ],
+    "description": ["使用Path.stat的示例"]
+  },
+  "Path.owner 返回拥有此文件的用户名": {
+    "prefix": ["Path owner", "owner -Path"],
+    "body": ["owner()"],
+    "description": [
+      "Path.owner 返回拥有此文件的用户名. 如果文件的 UID 无法在系统数据库中找到, 则抛出 KeyError"
+    ]
+  },
+  "Path.group 返回拥有此文件的用户组": {
+    "prefix": ["Path group", "group -Path"],
+    "body": ["group()"],
+    "description": [
+      "Path.group 返回拥有此文件的用户组. 如果文件的 GID 无法在系统数据库中找到, 将抛出 KeyError "
+    ]
+  },
+  "Path.samefile 此目录是否指向与可能是字符串或者另一个路径对象的 other_path 相同的文件": {
+    "prefix": ["Path samefile", "samefile -Path"],
+    "body": ["samefile()"],
+    "description": [
+      "Path.samefile 返回此目录是否指向与可能是字符串或者另一个路径对象的 other_path 相同的文件. 语义类似于 os.path.samefile() 与 os.path.samestat()",
+      "    如果两者都以同一原因无法访问, 则抛出 OSError",
+      "    在 3.5 版本加入.samefile() 方法"
+    ]
+  },
+  "Path.samefile 示例": {
+    "prefix": ["samefile =-Path", "Path samefile="],
+    "body": [
+      "p = Path('spam')",
+      "q = Path('eggs')",
+      "p.samefile(q)",
+      "# False",
+      "p.samefile('spam')",
+      "# True"
+    ],
+    "description": ["使用Path.samefile的示例"]
+  },
+  "Path.name 当前文件名": {
+    "prefix": ["Path name", "name -Path"],
+    "body": ["name"],
+    "description": [
+      "Path.name 一个表示最后路径组件的字符串, 排除了驱动器与根目录, 如果存在的话",
+      "    例如, 在 Windows 上, Path('C:/path/to/some.file') 的 name 属性是 'some.file'",
+      "    如果是驱动器名或者目录名不被考虑"
+    ]
+  },
+  "Path.parent 父级路径": {
+    "prefix": ["Path parent", "parent Path"],
+    "body": ["parent"],
+    "description": [
+      "Path.parent 此路径的逻辑父路径",
+      "    你不能超过一个 anchor 或空路径"
+    ]
+  },
+  "Path.suffix 文件扩展名": {
+    "prefix": ["Path suffix", "suffix -Path"],
+    "body": ["suffix"],
+    "description": ["Path.suffix 最后一个组件的文件扩展名, 如果存在"]
+  },
+  "Path.suffixes 文件扩展名->list": {
+    "prefix": ["Path suffixes", "suffixes -Path"],
+    "body": ["suffixes"],
+    "description": [
+      "Path.suffixes 路径的文件扩展名列表",
+      "    例如, Path('spam.txt').suffixes 返回 ['txt']",
+      "    例如, Path('spam.tar.gz').suffixes 返回 ['gz', 'tar']"
+    ]
+  },
+  "Path.with_suffix 扩展名替换": {
+    "prefix": ["Path with_suffix", "with_suffix -Path"],
+    "body": ["with_suffix('.${1:suffix}')"],
+    "description": ["Path.with_suffix 有扩展名则替换, 无则补充扩展名"]
+  },
+
+  "Path.stem 除去后缀": {
+    "prefix": ["Path stem", "stem -Path"],
+    "body": ["stem"],
+    "description": ["Path.stem 最后一个路径组件, 除去后缀后的文件名"]
+  },
+  "Path.is_absolute 判断绝对路径": {
+    "prefix": ["Path is_absolute", "is_absolute -Path"],
+    "body": ["is_absolute"],
+    "description": ["Path.is_absolute 判断绝对路径"]
+  },
+  "Path.joinpath 路径拼接": {
+    "prefix": ["Path joinpath", "joinpath -Path"],
+    "body": ["joinpath(${1:\"盘符:后需要加/\", \"dir\"})"],
+    "description": [
+      "Path.joinpath 路径拼接",
+      "    调用此方法等同于依次将路径与给定的每个 pathsegments 组合到一起",
+      "    例如, Path('/home').joinpath('user', 'username', 'documents') 等于 '/home/user/username/documents'",
+      "    如果路径是绝对路径, 则不会与 pathsegments 组合",
+      "    或者, Path('c:').joinpath('/Program Files') 等于 'c:/Program Files'"
+    ]
+  },
+  "Path.as_posix 路径分隔符 Unix 样式[\"/\"]": {
+    "prefix": ["Path as_posix", "as_posix Path"],
+    "body": ["as_posix()"],
+    "description": ["Path.as_posix 路径分隔符 Unix 样式[\"/\"]"]
+  },
+  "Path.relative_to 获取相对路径": {
+    "prefix": ["Path relative_to", "relative_to -Path"],
+    "body": ["relative_to(BASE_DIR)"],
+    "description": [
+      "Path.relative_to 获取相对路径",
+      "\n\t-PurePath.relative_to(other, walk_up=False)",
+      "\n\t-other: 路径对象或字符串",
+      "\n\t-walk_up: 默认为 False, 如果为 True 则向上(other的父级目录)寻找"
+    ]
+  }
+}

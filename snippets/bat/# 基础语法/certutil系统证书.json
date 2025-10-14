@@ -1,0 +1,7 @@
+{
+  "导入证书->受信任的根证书颁发机构": {
+    "prefix": ["cer -addstore Root"],
+    "body": ["certutil -addstore Root ${1:导入根证书路径}"],
+    "description": ["导入证书->受信任的根证书颁发机构"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "引入 datetime 时间模块": {
+    "prefix": ["import datetime", "im datetime"],
+    "body": ["import datetime"],
+    "description": ["datetime的模块, 用于处理日期和时间"]
+  },
+  "引入 datetime 日期时间类": {
+    "prefix": ["from datetime import datetime", "im datetime datetime"],
+    "body": ["from datetime import datetime"],
+    "description": ["datetime模块datetime日期时间类, 用于处理日期和时间"]
+  },
+  "引入 date 日期时间类": {
+    "prefix": ["import datetime date", "im datetime date"],
+    "body": ["from datetime import date"],
+    "description": ["datetime模块date日期时间类, 用于处理日期和时间"]
+  },
+  "datetime.now 当前时间": {
+    "prefix": ["datetime now -datetime"],
+    "body": ["now()"],
+    "description": ["datetime.now 返回当前时间"]
+  },
+  "datetime.strftime 格式化时间": {
+    "prefix": ["datetime strftime -datetime"],
+    "body": ["strftime(${1:'%Y年%m月%d日 %H时%M分%S秒'})"],
+    "description": ["datetime.strftime 返回当前时间的字符串格式"]
+  },
+  "datetime.now.strftime 格式化当前时间": {
+    "prefix": ["datetime now strftime -datetime"],
+    "body": ["datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')"],
+    "description": ["datetime.now.strftime 格式化当前时间"]
+  },
+  "date.today 格式化当前时间": {
+    "prefix": ["datetime today -datetime"],
+    "body": ["today()"],
+    "description": ["date.today 返回当前时间的字符串格式"]
+  }
+}

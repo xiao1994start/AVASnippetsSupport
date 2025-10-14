@@ -1,0 +1,36 @@
+{
+  "引入 fastapi FastAPI": {
+    "prefix": ["import FastAPI", "im FastAPI"],
+    "body": [
+      "import uvicorn  # 引入 uvicorn->ASGI服务器",
+      "from fastapi import FastAPI  # 引入 fastapi->FastAPI服务"
+    ],
+    "description": ["引入fastapi->FastAPI服务"]
+  },
+  "引入 fastapi FastAPI_all服务": {
+    "prefix": ["import FastAPI --all", "im FastAPI --all"],
+    "body": [
+      "import uvicorn  # 引入 uvicorn->ASGI服务器",
+      "from fastapi import FastAPI  # 引入 fastapi->FastAPI服务",
+      "from fastapi.staticfiles import StaticFiles  # 引入 StaticFiles->定义静态文件",
+      "from fastapi.responses import FileResponse, RedirectResponse  # 引入 FileResponse->定义HTML文件, RedirectResponse->定义重定向路由地址"
+    ],
+    "description": ["引入fastapi->FastAPI_all服务"]
+  },
+  "引入 Response 响应方法": {
+    "prefix": ["import FastAPI Response", "im FastAPI Response"],
+    "body": [
+      "from fastapi.responses import FileResponse, RedirectResponse  # 引入 FileResponse->定义HTML文件, RedirectResponse->定义重定向路由地址"
+    ],
+    "description": [
+      "引入FileResponse->定义HTML文件, RedirectResponse->定义重定向路由地址"
+    ]
+  },
+  "引入 StaticFiles 静态文件方法": {
+    "prefix": ["import FastAPI StaticFiles", "im FastAPI StaticFiles"],
+    "body": [
+      "from fastapi.staticfiles import StaticFiles  # 引入 StaticFiles->定义静态文件"
+    ],
+    "description": ["引入StaticFiles->定义静态文件"]
+  }
+}

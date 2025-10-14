@@ -1,0 +1,17 @@
+{
+  "cURL 下载": {
+    "prefix": ["cURL"],
+    "body": [
+      "ECHO cURL 下载",
+      "@REM * -sSL (组合命令) --silent(静默模式) --show-error(静默模式下显示错误) --location(自动跟随重定向)",
+      "@REM *     -s / --silent        静默模式, 隐藏进度条和冗余信息",
+      "@REM *     -S / --show-error    即使静默模式仍显示错误信息. 便于发现问题",
+      "@REM *     -L / --location      自动跟随重定向. 确保获取到最终资源",
+      "@REM * -# / --progress-bar      强制显示进度条 (覆盖 -s 的限制)",
+      "@REM * -o / --output            输出到指定文件",
+      "curl -SL ${1:URL} -o ${2:filename}",
+      ""
+    ],
+    "description": "cURL 下载"
+  }
+}

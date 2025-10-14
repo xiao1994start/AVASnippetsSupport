@@ -1,0 +1,96 @@
+{
+  "flet.Page.window.icon 桌面应用/页面 图标": {
+    "prefix": ["ft Page window icon -ft", "flet Page window icon -flet"],
+    "body": [
+      "# * 桌面应用/页面 图标 (相对路径)",
+      "page.window.icon = 'assets/icon.png'"
+    ],
+    "description": ["flet.Page.window.icon 桌面应用/页面 图标"]
+  },
+  "flet.Page.window.alignment 桌面应用/页面 对齐方式(初始位置)": {
+    "prefix": [
+      "ft Page window alignment -ft",
+      "flet Page window alignment -flet"
+    ],
+    "body": [
+      "# * 桌面应用/页面 对齐方式(初始位置) [ft.Alignment: 居中:(0,0); 左上:(-1, -1); 右下:(1, 1)]",
+      "page.window.alignment = ft.Alignment(0, 0)"
+    ],
+    "description": [
+      "flet.Page.window.alignment 桌面应用/页面 对齐方式(初始位置)"
+    ]
+  },
+  "flet.Page.window.size 桌面应用/页面 宽度 | 高度": {
+    "prefix": ["ft Page window --size -ft", "flet Page window --size -flet"],
+    "body": [
+      "# * 桌面应用/页面 宽度 | 高度",
+      "page.window.width = 1280",
+      "page.window.height = 720"
+    ],
+    "description": ["flet.Page.window.size 桌面应用/页面 宽度 | 高度"]
+  },
+  "flet.Page.window.min_size 桌面应用/页面 宽度 | 高度": {
+    "prefix": ["ft Page window minSize -ft", "flet Page window minSize -flet"],
+    "body": [
+      "# * 桌面应用/页面 最小宽度 | 最小高度",
+      "page.window.min_width = 1280",
+      "page.window.min_height = 720"
+    ],
+    "description": ["flet.Page.window.min_size 桌面应用/页面 宽度 | 高度"]
+  },
+  "flet.Page.update 更新 Flet 应用": {
+    "prefix": ["ft Page update -ft", "flet Page update -flet"],
+    "body": ["page.update()"],
+    "description": ["flet.Page.update() 更新 Flet 应用"]
+  },
+  "flet.Page.add 添加页面控件和处理事件": {
+    "prefix": ["ft Page add -ft", "flet Page add -flet"],
+    "body": ["page.add($0)"],
+    "description": ["flet.Page.add 添加页面控件和处理事件"]
+  },
+  "flet.Page.title 标题": {
+    "prefix": ["ft Page title -ft", "flet Page title -flet"],
+    "body": ["# * 标题", "page.title = '🤖Flet Counter Example'"],
+    "description": ["flet.Page.title 标题"]
+  },
+  "flet.Page.fonts 字体": {
+    "prefix": ["ft Page fonts -ft", "flet Page fonts -flet"],
+    "body": [
+      "# * 字体",
+      "page.fonts = {'字体': '字体路径'}",
+      "page.theme = ft.Theme(font_family='字体')"
+    ],
+    "description": ["flet.Page.fonts 字体"]
+  },
+  "flet.Page.theme_mode 主题模式 (LIGHT: 浅色, DARK: 深色, SYSTEM[默认]: 系统默认)": {
+    "prefix": ["ft Page theme_mode -ft", "flet Page theme_mode -flet"],
+    "body": [
+      "# * 主题模式 (LIGHT: 浅色, DARK: 深色, SYSTEM[默认]: 系统默认)",
+      "page.theme_mode = ft.ThemeMode.SYSTEM"
+    ],
+    "description": [
+      "flet.Page.theme_mode 主题模式 (LIGHT: 浅色, DARK: 深色, SYSTEM[默认]: 系统默认)"
+    ]
+  },
+  "flet.Page.vertical_alignment 页面子控件对齐方式": {
+    "prefix": ["ft Page_alignment -ft", "flet Page_alignment -flet"],
+    "body": [
+      "# * 子控件[垂直]对齐方式 (START[默认]: 顶部, CENTER: 居中, END: 底部, SPACE_BETWEEN: 上下两端对齐, SPACE_AROUND: 上下两端对齐, SPACE_EVENLY: 上下两端对齐)",
+      "# page.vertical_alignment = ft.MainAxisAlignment.CENTER",
+      "# * 子控件[水平]对齐方式 (START[默认]: 左侧, CENTER: 居中, END: 右侧, STRETCH: 拉伸, BASELINE: 基线对齐)",
+      "# page.horizontal_alignment = ft.CrossAxisAlignment.CENTER",
+      ""
+    ],
+    "description": ["flet.Page.vertical_alignment 页面子控件对齐方式"]
+  },
+  "flet.Page.open(control) 打开控件": {
+    "prefix": ["ft Page open -ft", "flet Page open -flet"],
+    "body": ["page.open(${1:control})"],
+    "description": ["flet.Page.open(control) 打开控件"]
+  },
+  "flet.Page.close(control) 关闭控件": {
+    "prefix": ["ft Page close -ft", "flet Page close -flet"],
+    "body": ["page.close(${1:control})"],
+    "description": ["flet.Page.close(control) 关闭控件"]
+  }
+}

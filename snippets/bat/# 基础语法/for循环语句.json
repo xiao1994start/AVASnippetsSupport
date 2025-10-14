@@ -1,0 +1,96 @@
+{
+  "循环目录下文件": {
+    "prefix": ["for do"],
+    "body": ["for %%${1:i} in (\"${2:*}\") do (", "    ECHO %%${1:i}", ")$0"],
+    "description": ["循环目录下文件"]
+  },
+  "循环目录下文件夹": {
+    "prefix": ["for -D do"],
+    "body": ["for /D %%${1:i} in (\"${2:*}\") do (", "    ECHO %%${1:i}", ")"],
+    "description": ["循环目录下文件夹"]
+  },
+  "循环提取 文本|列表|对象 信息": {
+    "prefix": ["for -F do"],
+    "body": [
+      "for /F \"tokens=* delims= \" %%${1:i} in ('tasklist') do (",
+      "    ECHO %%${1:i}",
+      "    $0",
+      ")",
+      ""
+    ],
+    "description": "循环提取 文本|列表|对象 信息"
+  },
+  "搜索获取进程路径": {
+    "prefix": ["for -F do wmic process"],
+    "body": [
+      "set \"pro=wmic process where \"name='${1:cmd.exe}'\" get ExecutablePath\"",
+      "for /F \"skip=1 delims=\" %%${1:i} in ('!pro!') do (",
+      "    ECHO %%${1:i}",
+      ")",
+      ""
+    ],
+    "description": ["搜索获取进程路径"]
+  },
+  "注册表通过键获取对应的值": {
+    "prefix": ["for -F reg"],
+    "body": [
+      "set \"REG_PATH=HKEY_CURRENT_USER\\Software\\kingsoft\\Office\\6.0\\Common\"",
+      "set \"VALUE_NAME=InstallRoot\"",
+      "for /f \"tokens=2*\" %%a in ('reg query \"%REG_PATH%\" /v \"%VALUE_NAME%\"') do (",
+      "    @REM 使用 REG QUERY 获取值",
+      "    @REM /v 开关指定值名称",
+      "    @REM /t REG_SZ 通常用于字符串类型，但 REG_QUERY 通常可以推断。",
+      "    @REM /ve 开关用于默认值(VALUE_NAME 为空字符串)",
+      "    @REM tokens=2*: reg query 命令返回的输出格式通常是: 项(值名称) REG_SZ(数据类型) 值",
+      "    @REM REG_SZ 赋值给 %%a; 实际的值 赋值给 %%b",
+      "    ECHO 键: !REG_PATH!",
+      "    ECHO 项: !VALUE_NAME!",
+      "    ECHO 数据类型: %%a",
+      "    ECHO 值: %%b",
+      "    set \"SearchValue=%%b\"",
+      ")",
+      "ECHO !SearchValue!",
+      ""
+    ],
+    "description": "注册表通过键获取对应的值"
+  },
+  "for /F [参数] 帮助文档": {
+    "prefix": ["for -F do=for"],
+    "body": [
+      "@REM tokens=[Number] : 指每行的哪一个符号被传递到每个迭代的 for 本身. 这会导致额外变量名称的分配. ",
+      "@REM                   [Number]=1   : 指定从每行中提取的列数, 默认为1; 在和 delims 参数一起使用时, 指定要提取到被分割的字符串的段数",
+      "@REM                   [Number]=1,3 : 提取指定序号的多列, ','隔开",
+      "@REM                   [Number]=1-3 : 提取指定开始序号至结束序号的多列, '-'隔开",
+      "@REM eol=[X]         : 指定行(仅一个)首字符, 默认情况下屏蔽这个字符开头的行",
+      "@REM skip=[Number]   : 忽略(屏蔽,隐藏)从第一行到第n行的内容, n>0",
+      "@REM delims=[.]      : 指定分隔符, 只取每行指定分隔符前面的字符串, 可以添加多个, 默认为空格和制表符",
+      "@REM                 注意: 空格和制表符是默认分隔符, 除非在delims中指定",
+      "@REM                 注意: 空行不会被处理, 除非在for /F中指定eol=enter",
+      "@REM                 注意: 注释行不会被处理, 除非在for /F中指定comment=rem",
+      "@REM tasklist        : 循环对象('命令'-单引号包裹; \"字符串\"-双引号包裹; 文件-无需引号包裹,可以使用通配符)",
+      ""
+    ],
+    "description": "for /F [参数] 帮助文档"
+  },
+  "循环目录及子目录文件": {
+    "prefix": ["for -R do"],
+    "body": ["for /R %%${1:i} in (\"*$0\") do (", "    ECHO %%${1:i}", ")", ""],
+    "description": ["forR循环目录及子目录文件"]
+  },
+  "循环文件计数": {
+    "prefix": ["for -FileNumber"],
+    "body": [
+      "set num=0",
+      "for %%${1:i} in (*) do (",
+      "    ECHO %%${1:i}",
+      "    set /A num+=1",
+      ")",
+      "if %num%==0 (",
+      "    ECHO No files found",
+      ") else (",
+      "    ECHO Files found:%num%",
+      ")"
+    ],
+    "description": ["循环文件计数"]
+  }
+}

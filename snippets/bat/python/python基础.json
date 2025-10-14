@@ -1,0 +1,113 @@
+{
+  "python.创建_激活 虚拟环境": {
+    "prefix": ["py venv activate -python"],
+    "body": [
+      "@ECHO OFF",
+      "setlocal enabledelayedexpansion",
+      "CD /D \"%~dp0\\\"",
+      "",
+      "",
+      "@ECHO 创建虚拟环境...",
+      "call python -m venv ./.venv",
+      "@ECHO 创建虚拟环境完成...",
+      "@ECHO 激活虚拟环境...",
+      "call ./.venv/Scripts/activate.bat",
+      "@ECHO 安装Jupyter内核ipykernel依赖库...",
+      "@REM pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/",
+      "",
+      "@ECHO 安装依赖库...",
+      "$0",
+      "",
+      "",
+      "",
+      "",
+      "@ECHO 导出依赖库",
+      "pip freeze  > requirements.txt",
+      "",
+      "@ECHO 完成!"
+    ],
+    "description": ["创建_激活 虚拟环境"]
+  },
+  "python 版本号": {
+    "prefix": ["py version -python"],
+    "body": ["@ECHO python 版本号", "call python --version", ""],
+    "description": "python 版本号"
+  },
+  "pip 版本号": {
+    "prefix": ["pip version -python"],
+    "body": ["@ECHO pip 版本号", "call pip --version", ""],
+    "description": "pip 版本号"
+  },
+  "pip.Jupyter内核ipykernel依赖库": {
+    "prefix": ["pip -Jupyter", "pip -ipykernel"],
+    "body": [
+      "@ECHO 安装Jupyter内核ipykernel依赖库...",
+      "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "description": ["pip.Jupyter内核ipykernel依赖库"]
+  },
+  "pip.镜像源": {
+    "prefix": ["pip -config-index-url"],
+    "body": [
+      "@ECHO 重置pip.ini...",
+      "@REM ECHO.> %USERPROFILE%/AppData/Roaming/pip/pip.ini",
+      "echo 清华",
+      "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
+      "pip config set install.trusted-host https://pypi.tuna.tsinghua.edu.cn",
+      "echo 阿里",
+      "@REM pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/",
+      "@REM pip config set install.trusted-host https://mirrors.aliyun.com/pypi",
+      "echo 豆瓣",
+      "@REM pip config set global.index-url https://pypi.douban.com/simple/",
+      "@REM pip config set install.trusted-host https://pypi.douban.com"
+    ],
+    "description": ["pipconfig.index镜像源"]
+  },
+  "pip.批量镜像源": {
+    "prefix": ["pip -config-extra-index-url"],
+    "body": [
+      "@ECHO 重置pip.ini...",
+      "@REM ECHO.> %USERPROFILE%/AppData/Roaming/pip/pip.ini",
+      "pip config set global.extra-index-url \"https: //pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple http://pypi.douban.com/simple http://pypi.mirrors.ustc.edu.cn/simple\""
+    ],
+    "description": ["pipconfig.index批量镜像源"]
+  },
+  "pip.install 安装库": {
+    "prefix": ["pip -install", "pip -I"],
+    "body": [
+      "pip install ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": ["pip -i 安装库"]
+  },
+  "pip.-reinstall 强制重装库": {
+    "prefix": ["pip -reinstall"],
+    "body": [
+      "pip install --force-reinstall ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": ["pip -reinstall 强制重装库"]
+  },
+  "pip.install-upgrade 安装最新发布库": {
+    "prefix": ["pip -install-U", "pip -U"],
+    "body": [
+      "pip install -U ${1:pip} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": ["pip.install-upgrade 安装最新发布库"]
+  },
+  "pip.uninstall 卸载": {
+    "prefix": ["pip -uninstall", "pip -UN"],
+    "body": ["pip uninstall ${1:库名} -y"],
+    "description": ["pip -uninstall 卸载"]
+  },
+  "pip.freeze 获取安装库列表": {
+    "prefix": ["pip -freeze"],
+    "body": ["pip freeze  > ${1:requirements.txt}"],
+    "description": ["pip -freeze 获取安装库列表"]
+  },
+  "pip.requirements 列式安装库": {
+    "prefix": ["pip -install-requirements", "pip -install-txt"],
+    "body": [
+      "pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "description": ["pip -requirements 列式安装库"]
+  }
+}

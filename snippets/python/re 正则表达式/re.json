@@ -1,0 +1,40 @@
+{
+  "引入 re 正则模块": {
+    "prefix": ["import re", "im re"],
+    "body": ["import re"],
+    "description": ["引入re正则表达式模块"]
+  },
+  "re.findall 查找匹配字符串->list": {
+    "prefix": ["re findall"],
+    "body": ["re.findall(r'${1:正则条件}', ${2:匹配对象})"],
+    "description": [
+      "re.findall 查找匹配字符串",
+      "\n在字符串中找到正则表达式所匹配的所有子串, 并返回一个列表, 如果有多个匹配模式, 则返回元组列表, 如果没有找到匹配的, 则返回空列表"
+    ]
+  },
+  "re.finditer 查找匹配字符串->迭代器": {
+    "prefix": ["re finditer"],
+    "body": ["re.finditer()"],
+    "description": ["re.finditer 查找匹配字符串", "\n返回迭代器"]
+  },
+  "re.match 起始位置匹配": {
+    "prefix": ["re match"],
+    "body": ["re.match(r'${1:正则条件}', ${2:匹配对象})"],
+    "description": ["re.match 起始位置匹配, 返回匹配成功后的第一个对象"]
+  },
+  "re.search 匹配整个字符串": {
+    "prefix": ["re search"],
+    "body": ["re.search(r'${1:正则条件}', ${2:匹配对象})"],
+    "description": ["re.search 匹配整个字符串, 返回第一个成功的匹配"]
+  },
+  "re.sub 替换": {
+    "prefix": ["re sub"],
+    "body": [
+      "re.sub(r'[${1:正则条件}]', r'${2:替换内容}', ${3:匹配对象}, flags=re.DOTALL)",
+      "# pattern=r'([匹配内容{匹配次数}])' 可以指定匹配组",
+      "# repl=r'\\1' 可以指定替换组, \\1表示第一个匹配组, 配合()使用",
+      "# flags=re.DOTALL .就能匹配包括换行符在内的所有字符"
+    ],
+    "description": ["re.sub 替换字符串中的匹配项"]
+  }
+}

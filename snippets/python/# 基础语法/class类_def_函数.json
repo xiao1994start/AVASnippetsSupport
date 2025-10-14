@@ -1,0 +1,90 @@
+{
+  "创建 class 对象": {
+    "prefix": ["new class", "n class"],
+    "body": [
+      "class ${1:NewObject}(${2:}):",
+      "    # * class default args(类变量) | signal(信号)",
+      "    # 调用方法: [className].[argsName] = [value] | self.[argsName] = [value]",
+      "    def __init__(self) -> None:",
+      "        \"\"\"",
+      "        ${3:_summary_}",
+      "        \"\"\"",
+      "        ...",
+      "",
+      "    ..."
+    ],
+    "description": ["创建 class 对象"]
+  },
+  "class 父类初始化方法初始化继承属性": {
+    "prefix": ["super init -class", "class super init"],
+    "body": ["super().__init__()", ""],
+    "description": ["class 父类初始化方法初始化继承属性"]
+  },
+  "class初始化": {
+    "prefix": ["new class init -class", "n class init -class"],
+    "body": [
+      "def __init__(self) -> None:",
+      "    \"\"\"",
+      "    ${2:_summary_}",
+      "    \"\"\"",
+      "    ..."
+    ],
+    "description": ["class初始化"]
+  },
+  "class类self": {
+    "prefix": ["sf -class", "self -class", "class sf", "class self"],
+    "body": ["self.$0"],
+    "description": ["class类self"]
+  },
+  "创建class - def函数": {
+    "prefix": ["new class def -class", "n class def -class"],
+    "body": [
+      "def ${1:name}(self):",
+      "    \"\"\"",
+      "    ${2:_summary_}",
+      "    \"\"\"",
+      "    ..."
+    ],
+    "description": ["创建class - def函数"]
+  },
+  "创建def函数": {
+    "prefix": ["new def", "n def"],
+    "body": [
+      "def ${1:name}():",
+      "    \"\"\"",
+      "    ${2:_summary_}",
+      "    \"\"\"",
+      "    ..."
+    ],
+    "description": ["创建def函数"]
+  },
+  "lambda:匿名函数": {
+    "prefix": ["new lambda", "n lambda"],
+    "body": ["lambda ${1:e}: ${2:expr表达式}"],
+    "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
+  },
+  "if_main:运行入口 | 调试运行": {
+    "prefix": ["if main", "if main ==", "if name == main"],
+    "body": [
+      "if __name__ == '__main__':",
+      "    \"\"\"",
+      "    运行入口 | 调试运行",
+      "    \"\"\"",
+      "    $0",
+      "    ..."
+    ],
+    "description": ["if_main:运行入口 | 调试运行"]
+  },
+  "if_in_main:运行入口 | 调试运行": {
+    "prefix": ["if mmain ==", "if name in mp_main"],
+    "body": [
+      "if __name__ in {'__main__', '__mp_main__'}:",
+      "    \"\"\"",
+      "    运行入口 | 调试运行 | 多进程[multiprocessing]运行",
+      "    \"\"\"",
+      "    $0",
+      "    ..."
+    ],
+    "description": ["if_in_main:运行入口 | 调试运行"]
+  }
+}

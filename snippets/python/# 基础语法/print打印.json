@@ -1,0 +1,7 @@
+{
+  "print(...)": {
+    "prefix": ["prt -print"],
+    "body": "print($0)",
+    "description": ["print语句的代码片段"]
+  }
+}

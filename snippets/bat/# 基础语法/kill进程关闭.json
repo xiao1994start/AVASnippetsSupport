@@ -1,0 +1,12 @@
+{
+  "安全终止进程": {
+    "prefix": ["kill -f", "kill safe"],
+    "body": ["taskkill /F /IM \"${1:dst终止目标进程名称}\""],
+    "description": ["安全终止进程"]
+  },
+  "终止进程": {
+    "prefix": ["kill -t", "kill -all"],
+    "body": ["taskkill /F /T /IM \"${1:dst终止目标进程名称}\""],
+    "description": ["终止进程(可能会发生错误)"]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "pip.requests 网络请求库": {
+    "prefix": ["pip requests"],
+    "body": [
+      "pip install -U requests -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["requests 网络请求库"]
+  },
+  "uv.requests 网络请求库": {
+    "prefix": ["uv requests"],
+    "body": [
+      "uv add \"requests\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["requests 网络请求库"]
+  },
+  "pip.lxml lxml解析库": {
+    "prefix": ["pip lxml"],
+    "body": [
+      "pip install -U lxml -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["lxml解析库"]
+  },
+  "uv.lxml lxml解析库": {
+    "prefix": ["uv lxml"],
+    "body": [
+      "uv add \"lxml\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["lxml解析库"]
+  },
+  "pip.html5lib HTML5解析库": {
+    "prefix": ["pip html5lib"],
+    "body": [
+      "pip install -U html5lib -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["html5lib HTML5解析库"]
+  },
+  "uv.html5lib HTML5解析库": {
+    "prefix": ["uv html5lib"],
+    "body": [
+      "uv add \"html5lib\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["html5lib HTML5解析库"]
+  },
+  "pip.setuptools 包管理工具": {
+    "prefix": ["pip setuptools"],
+    "body": [
+      "pip install -U setuptools -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": [
+      "setuptools 包管理工具",
+      "setuptools是Python distutils增强版的集合, 它可以帮助我们更简单的创建和分发Python包, 尤其是拥有依赖关系的。用户在使用setuptools创建的包时, 并不需要已安装setuptools, 只要一个启动模块即可"
+    ]
+  },
+  "uv.setuptools 包管理工具": {
+    "prefix": ["uv setuptools"],
+    "body": [
+      "uv add \"setuptools\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": [
+      "setuptools 包管理工具",
+      "setuptools是Python distutils增强版的集合, 它可以帮助我们更简单的创建和分发Python包, 尤其是拥有依赖关系的。用户在使用setuptools创建的包时, 并不需要已安装setuptools, 只要一个启动模块即可"
+    ]
+  }
+}

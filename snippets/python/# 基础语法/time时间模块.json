@@ -1,0 +1,27 @@
+{
+  "引入 time 日期时间模块": {
+    "prefix": ["import time", "im time"],
+    "body": ["import time"],
+    "description": ["time的模块, 输出常规格式时间"]
+  },
+  "time.time 基础秒表当前时间戳": {
+    "prefix": ["time -time"],
+    "body": ["time()"],
+    "description": ["time.time 基础秒表当前时间戳"]
+  },
+  "time.ctime 转换可读时间格式": {
+    "prefix": ["time ctime -time", "ctime -time"],
+    "body": ["ctime(${1:time.time()})$0"],
+    "description": ["将时间戳转换为可读的时间格式"]
+  },
+  "time.strftime 格式化当前时间戳": {
+    "prefix": ["time strftime -time", "strftime -time"],
+    "body": ["strftime(${1:'%Y-%m-%d %H:%M:%S', time.localtime(time.time())})"],
+    "description": ["格式化当前时间戳"]
+  },
+  "time.perf_counter 高精时钟": {
+    "prefix": ["time perf_counter -time", "perf_counter -time"],
+    "body": ["perf_counter()"],
+    "description": ["time.perf_counter 高精时钟"]
+  }
+}

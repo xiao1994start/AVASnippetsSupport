@@ -1,0 +1,13 @@
+{
+  "创建 for 循环语句": {
+    "prefix": ["for let loop -for"],
+    "body": [
+      "for (let ${1:index} = ${3:0}; ${1:index} < ${2:array}.length; ${1:index}++) {",
+      "  const element = ${2:array}[${1:index}];",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": ["创建 for 循环语句"]
+  }
+}

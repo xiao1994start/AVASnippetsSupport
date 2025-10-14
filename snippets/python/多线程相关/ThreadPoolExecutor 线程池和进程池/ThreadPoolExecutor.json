@@ -1,0 +1,26 @@
+{
+  "引入 ThreadPoolExecutor 线程池库": {
+    "prefix": ["import ThreadPoolExecutor", "im ThreadPoolExecutor"],
+    "body": [
+      "from concurrent.futures import ThreadPoolExecutor  # 操作系统级别线程池"
+    ],
+    "description": ["引入 ThreadPoolExecutor 线程池库"]
+  },
+  "with ThreadPoolExecutor 应用模板.tmpl": {
+    "prefix": ["with ThreadPoolExecutor =-concurrent futures"],
+    "body": [
+      "with ThreadPoolExecutor(max_workers=3) as ${1:executor}:",
+      "    \"\"\"",
+      "    创建 ThreadPoolExecutor 系统级别线程池实例对象 ${1:executor}",
+      "    future_ = ${1:executor}.submit(fn, agr1, agr2, *args, **kwargs)",
+      "    fn 参数是要执行的函数, *args 和 **kwargs 是 fn 的参数",
+      "    results_ = ${1:executor}.map(func, *iterables可迭代对象, timeout=None, chunksize=1)",
+      "    func 参数是要执行的函数, *iterables 是一个或多个迭代器, timeout 和 chunksize 是可选参数",
+      "    _.shutdown(wait=True) 关闭线程池, wait 参数是可选参数, 表示是否等待所有任务执行完毕后才关闭线程池, 默认为 True",
+      "    \"\"\"",
+      "    pass",
+      ""
+    ],
+    "description": ["with ThreadPoolExecutor 应用模板.tmpl"]
+  }
+}

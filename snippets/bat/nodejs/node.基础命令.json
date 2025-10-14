@@ -1,0 +1,7 @@
+{
+  "node.js 版本号": {
+    "prefix": ["call ndoe v -node-js"],
+    "body": ["ECHO node.js 版本号:", "call node -v", ""],
+    "description": ["node.js 版本号"]
+  }
+}

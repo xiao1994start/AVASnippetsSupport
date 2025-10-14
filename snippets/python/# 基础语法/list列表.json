@@ -1,0 +1,271 @@
+{
+  "list 数据类型转换": {
+    "prefix": ["list "],
+    "body": ["list(${1:arg})"],
+    "description": ["数据类型转换->list"]
+  },
+  "list 类型声明": {
+    "prefix": [":list"],
+    "body": [": list"],
+    "description": ["类型声明: list"]
+  },
+  "list.append 在list末尾添加一个元素": {
+    "prefix": ["list append -list"],
+    "body": ["append(${1:item})"],
+    "description": ["list.append 在list末尾添加一个元素"]
+  },
+  "list.append 示例1": {
+    "prefix": ["list append =1-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "fruits.append('orange')",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.append 的示例1"]
+  },
+  "list.append 示例2": {
+    "prefix": ["list append =2-list"],
+    "body": [
+      "a = ['apple', 'banana', 'cherry']",
+      "b = ['Ford', 'BMW', 'Volvo']",
+      "a.append(b)",
+      "print(a)"
+    ],
+    "description": ["使用 list.append 的示例2"]
+  },
+  "list.clear 清空list": {
+    "prefix": ["list clear -list"],
+    "body": ["clear()"],
+    "description": ["list.clear 删除list中的所有元素"]
+  },
+  "list.clear 示例": {
+    "prefix": ["list clear =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "fruits.clear()",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.clear 的示例"]
+  },
+  "list.copy 返回list的副本": {
+    "prefix": ["list copy -list"],
+    "body": ["copy()"],
+    "description": ["list.copy 返回list的副本"]
+  },
+  "list.copy 示例": {
+    "prefix": ["list copy =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "x = fruits.copy()",
+      "print(x)"
+    ],
+    "description": ["使用 list.copy 的示例"]
+  },
+  "list.count 返回list元素数量": {
+    "prefix": ["list count -list"],
+    "body": ["count()"],
+    "description": ["list.count 返回list中具有指定值的元素数量"]
+  },
+  "list.count 示例1": {
+    "prefix": ["list count =1-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "x = fruits.count('cherry')",
+      "print(x)"
+    ],
+    "description": ["使用 list.count 的示例1"]
+  },
+  "list.count 示例2": {
+    "prefix": ["list count =2-list"],
+    "body": [
+      "fruits = [1, 4, 2, 9, 7, 8, 9, 3, 1]",
+      "x = fruits.count(9)",
+      "print(x)"
+    ],
+    "description": ["使用 list.count 的示例2"]
+  },
+  "list.extend 末尾添加元素": {
+    "prefix": ["list extend -list"],
+    "body": ["extend(${1:iterable})"],
+    "description": [
+      "list.extend 将list (或任何可迭代对象) 的元素添加到当前列表的末尾"
+    ]
+  },
+  "list.extend 示例": {
+    "prefix": ["list extend =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "points = (1, 4, 5, 9)",
+      "fruits.extend(points)",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.extend 的示例"]
+  },
+  "list.index 返回具有指定值的索引": {
+    "prefix": ["list index -list"],
+    "body": ["index(${1:element})"],
+    "description": ["list.index 返回具有指定值的索引(默认返回第一个值的索引)"]
+  },
+  "list.index 示例1": {
+    "prefix": ["list index =1-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "x = fruits.index('cherry')",
+      "print(x)"
+    ],
+    "description": ["使用 list.index 的示例1"]
+  },
+  "list.index 示例2": {
+    "prefix": ["list index =2-list"],
+    "body": [
+      "fruits = [4, 55, 64, 32, 16, 32]",
+      "x = fruits.index(32)",
+      "print(x)"
+    ],
+    "description": ["使用 list.index 的示例2"]
+  },
+  "list.insert 指定位置添加元素": {
+    "prefix": ["list insert -list"],
+    "body": ["insert(index, element)"],
+    "description": ["list.insert 在list中指定位置添加元素"]
+  },
+  "list.insert 示例": {
+    "prefix": ["list insert =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "x = fruits.insert(1, 'orange')",
+      "print(x)"
+    ],
+    "description": ["使用 list.insert 的示例"]
+  },
+  "list.pop 删除指定位置的元素": {
+    "prefix": ["list pop -list"],
+    "body": ["pop($0)"],
+    "description": ["list.pop 删除list中指定位置的元素"]
+  },
+  "list.pop 示例": {
+    "prefix": ["list pop =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "fruits.pop(1)",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.pop 的示例"]
+  },
+  "list.remove 删除具有指定值的项目": {
+    "prefix": ["list remove -list"],
+    "body": ["remove(${1:value})"],
+    "description": ["list.remove 删除具有指定值的项目(默认删除第一个)"]
+  },
+  "list.remove 示例": {
+    "prefix": ["list remove -list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "fruits.remove('banana')",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.remove 的示例"]
+  },
+  "list.reverse 反转list的顺序": {
+    "prefix": ["list reverse -list"],
+    "body": ["reverse()"],
+    "description": ["list.reverse 反转list的顺序"]
+  },
+  "list.reverse 示例": {
+    "prefix": ["list reverse =-list"],
+    "body": [
+      "fruits = ['apple', 'banana', 'cherry']",
+      "fruits.reverse()",
+      "print(fruits)"
+    ],
+    "description": ["使用 list.reverse 的示例"]
+  },
+  "list.sort 排序": {
+    "prefix": ["list sort -list"],
+    "body": ["sort()"],
+    "description": ["list.sort 对list进行排序"]
+  },
+  "list.sort 示例1": {
+    "prefix": ["list sort =1-list"],
+    "body": ["cars = ['Ford', 'BMW', 'Volvo']", "cars.sort()", "print(cars)"],
+    "description": ["使用 list.sort 的示例1"]
+  },
+  "list.sort 示例2": {
+    "prefix": ["list sort =2-list"],
+    "body": [
+      "cars = ['Ford', 'BMW', 'Volvo']",
+      "cars.sort(reverse=True)",
+      "print(cars)"
+    ],
+    "description": ["使用 list.sort 的示例2"]
+  },
+  "list.sort 示例3": {
+    "prefix": ["list sort =3-list"],
+    "body": [
+      "# A function that Return the length of the value:",
+      "def myFunc(e):",
+      "\treturn len(e)",
+      "cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']",
+      "cars.sort(key=myFunc)",
+      "print(cars)"
+    ],
+    "description": ["使用 list.sort 的示例3"]
+  },
+  "list.sort 示例4": {
+    "prefix": ["list sort =4-list"],
+    "body": [
+      "# A function that Return the length of the value:",
+      "def myFunc(e):",
+      "\treturn len(e)",
+      "cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']",
+      "cars.sort(reverse=True, key=myFunc)",
+      "print(cars)"
+    ],
+    "description": ["使用 list.sort 的示例4"]
+  },
+  "list.comprehensions.[推导式] 单条件列表推导式": {
+    "prefix": ["list comp if -list"],
+    "body": ["[${1:item} for ${1:item} in ${2:list} if ${3:conditional}]"],
+    "description": ["list[单条件]推导式"]
+  },
+  "list.comprehensions.[推导式] 多条件列表推导式": {
+    "prefix": ["list comp if else -list"],
+    "body": [
+      "[${1:item} if ${3:true} else ${4:false} for ${1:item} in ${2:list}]"
+    ],
+    "description": ["list[多条件]推导式"]
+  },
+  "list.comp 示例1": {
+    "prefix": ["list comp =1-list"],
+    "body": ["x = [i for i in range(10)]", "print(x)"],
+    "description": ["使用 list.comprehensions 的示例1"]
+  },
+  "list.comp 示例2": {
+    "prefix": ["list comp =2-list"],
+    "body": ["x = [x**2 for x in range(10)]", "print(x)"],
+    "description": ["使用 list.comprehensions 的示例2"]
+  },
+  "list.comp 示例3": {
+    "prefix": ["list comp =3-list"],
+    "body": [
+      "list1 = [3,4,5]",
+      "multiplied = [item*3 for item in list1]",
+      "print(multiplied)"
+    ],
+    "description": ["使用 list.comprehensions 的示例3"]
+  },
+  "list.comp 示例4": {
+    "prefix": ["list comp =4-list"],
+    "body": [
+      "listOfWords = ['this','is','a','list','of','words']",
+      "items = [ word[0] for word in listOfWords ]",
+      "print(items)"
+    ],
+    "description": ["使用 list.comprehensions 的示例4"]
+  },
+  "list.comp 示例5": {
+    "prefix": ["list comp =5-list"],
+    "body": ["x = [double(x) for x in range(10) if x%2==0]", "print(x)"],
+    "description": ["使用 list.comprehensions 的示例5"]
+  }
+}

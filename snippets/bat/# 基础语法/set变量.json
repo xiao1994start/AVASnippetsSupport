@@ -1,0 +1,84 @@
+{
+  "设置变量": {
+    "prefix": ["set -set"],
+    "body": ["set $0"],
+    "description": "设置变量"
+  },
+  "提示输入信息": {
+    "prefix": ["set p -set", "input -set"],
+    "body": ["set /p name="],
+    "description": "提示输入信息"
+  },
+  "添加当前批处理环境变量": {
+    "prefix": ["set addenv path -set path"],
+    "body": ["set path=%path%;${1:临时环境变量};"],
+    "description": "添加设置适用于当前批处理的环境变量"
+  },
+  "修饰符传入单个参数": {
+    "prefix": ["setInput="],
+    "body": ["set \"command=%~${1:1}\""],
+    "description": [
+      "修饰符传入单个参数",
+      "*注意: 仅能传入单个参数, 对多个参数无效"
+    ]
+  },
+  "修饰符传入多个参数": {
+    "prefix": ["setInputs="],
+    "body": ["set \"commands=%*\""],
+    "description": ["修饰符传入多个参数"]
+  },
+  "获取并设置自身bet文件名及后缀": {
+    "prefix": ["set self"],
+    "body": ["set \"bat=%~n0%~x0\""],
+    "description": ["获取并设置自身bet文件名及后缀"]
+  },
+  "设置当前批处理临时环境变量": {
+    "prefix": ["set cmd path -set path"],
+    "body": [
+      "set systemEnv=\"%PATH%\"",
+      "@REM set systemEnv=\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "@REM ECHO 添加临时系统环境变量",
+      "$0",
+      "set path=%systemEnv%;",
+      "ECHO %path%",
+      ""
+    ],
+    "description": "设置当前批处理临时环境变量"
+  },
+  "当前用户桌面路径": {
+    "prefix": ["user desktop dir", "desktop dir"],
+    "body": [
+      "for /F \"tokens=2*\" %%a in ('reg query \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\" /v Desktop') do (",
+      "    set \"desktop_dir=%%b\"",
+      ")",
+      "ECHO 当前用户桌面路径:%desktop_dir%",
+      "",
+      "$0"
+    ],
+    "description": ["当前用户桌面路径"]
+  },
+  "获取当前文件夹名称": {
+    "prefix": ["current folder name"],
+    "body": [
+      "pushd %1 & for %%i in (.) do set curr=%%~ni",
+      "ECHO %curr%",
+      "$0"
+    ],
+    "description": ["获取当前文件夹名称"]
+  },
+  "%%For循环中的元变量": {
+    "prefix": ["let"],
+    "body": ["%%${1:i}"],
+    "description": ["%%For循环中的元变量", ""]
+  },
+  "%环境变量%": {
+    "prefix": ["const"],
+    "body": ["%${1:i}%"],
+    "description": ["%环境变量%"]
+  },
+  "!延迟环境变量扩展!": {
+    "prefix": ["var"],
+    "body": ["!${1:i}!"],
+    "description": ["!延迟环境变量扩展!", ""]
+  }
+}

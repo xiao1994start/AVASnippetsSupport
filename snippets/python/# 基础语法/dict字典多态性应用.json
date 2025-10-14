@@ -1,0 +1,19 @@
+{
+  "dict多态性代替if-elif": {
+    "prefix": ["dict if =-dict", "dict Polymorphism =-dict"],
+    "body": [
+      "commands = {",
+      "    \"condition1\": condition1_function1,",
+      "    \"condition2\": condition2_function2,",
+      "    \"condition3\": condition3_function3,",
+      "}",
+      "command = \"conditions\"",
+      "action = commands.get(command, None)",
+      "if action:",
+      "    action()",
+      "else:",
+      "    print('Unknown Command!')"
+    ],
+    "description": ["dict多态性代替if-elif"]
+  }
+}

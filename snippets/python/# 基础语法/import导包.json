@@ -1,0 +1,12 @@
+{
+  "from 包/模块/依赖 import 对象": {
+    "prefix": ["from import", "from im"],
+    "body": ["from ${1:package/module} import ${2:name}"],
+    "description": ["from 包/模块 import name"]
+  },
+  "import 包/模块/依赖": {
+    "prefix": ["import ", "im "],
+    "body": ["import ${1:name}"],
+    "description": ["import 包/模块/依赖"]
+  }
+}
