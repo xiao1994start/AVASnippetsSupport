@@ -305,7 +305,7 @@
     "description": "Alpha Tag 透明度-标签"
   },
   "Bold Tag 粗体-标签": {
-    "prefix": "b",
+    "prefix": "bBold",
     "body": "{b}$1{/b}",
     "description": "Bold Tag 粗体-标签"
   },
