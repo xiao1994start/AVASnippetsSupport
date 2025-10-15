@@ -1,0 +1,7 @@
+{
+  "注释": {
+    "prefix": ["comment -comment "],
+    "body": ["\"comment\": \"$0\","],
+    "description": ["注释"]
+  }
+}

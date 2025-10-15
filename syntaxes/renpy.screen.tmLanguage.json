@@ -1,16 +1,16 @@
 {
-  "information_for_contributors": [ "Please remember to regenerate the ts token patterns using the 'syntax-to-token-pattern.py' python script" ],
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Ren'Py Screen",
   "scopeName": "source.renpy.screen",
-  "patterns": [ { "include": "#screen-language" } ],
+  "fileTypes": ["rpy", "rpym", "rpymc", "rpyc"],
+  "patterns": [{ "include": "#screen-language" }],
   "repository": {
     "builtin-screens": {
       "name": "support.function.builtin.screen.renpy",
       "match": "(?<!\\.)\\b(?:start|quit|after_load|splashscreen|before_main_menu|main_menu|after_warp|hide_windows)\\b"
     },
     "screen-def-name": {
-      "comment": "TODO: Should combine this with label-def-name",
+      "comment": "TODO: Should combine this with label-def-name\nTODO: 应该将其与label-def-name结合起来",
       "patterns": [
         { "include": "source.renpy.python#builtin-possible-callables" },
         { "include": "#builtin-screens" },
@@ -25,10 +25,10 @@
       ]
     },
     "screen-build-in-properties": {
-      "comment": "These are the ATL keywords, will need to fix this later",
+      "comment": "These are the ATL keywords, will need to fix this later\n这些是ATL关键字, 稍后需要修复此问题",
       "patterns": [
         {
-          "comment": "Special manipulation keywords",
+          "comment": "Special manipulation keywords\n特殊操作关键字",
           "match": "\\b(?<!\\.)(?:(warp)|(circles)|(clockwise)|(counterclockwise))\\b",
           "captures": {
             "1": { "name": "keyword.warp.renpy" },
@@ -38,49 +38,49 @@
           }
         },
         {
-          "comment": "Special manipulation keywords",
+          "comment": "Special manipulation keywords\n特殊操作关键字",
           "match": "\\b(?<!\\.)(key|input|(?:text|image)?button|grid|auto|mousearea|side|timer|[vh]?bar|action|viewport|scrollbars|mousewheel|vpgrid|imagemap)\\b",
           "captures": {
             "1": { "name": "keyword.other.renpy" }
           }
         },
         {
-          "comment": "Random props",
+          "comment": "Random props\n随机道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:[xy]padding|area|(un)?hovered|draggable|cols|spacing|side_[xy]align)\\b"
         },
         {
-          "comment": "position props (int, absolute, or a float)",
+          "comment": "position props (int, absolute, or a float)\n位置道具(int、absolute或float)",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xpos|ypos|xanchor|yanchor|xcenter|ycenter|radius)\\b"
         },
         {
-          "comment": "position pair props",
+          "comment": "position pair props\n位置对道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:pos|anchor|xycenter|around|alignaround|matrixanchor)\\b"
         },
         {
-          "comment": "float props",
+          "comment": "float props\nfloat道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xalign|yalign|zoom|xzoom|yzoom|alpha|additive|angle|delay|events|zpos)\\b"
         },
         {
-          "comment": "float pair props",
+          "comment": "float pair props\nfloat对道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:align|knot)\\b"
         },
         {
-          "comment": "int props",
+          "comment": "int props\nint道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xoffset|yoffset|xtile|ytile|size)\\b"
         },
         {
-          "comment": "int pair props",
+          "comment": "int pair props\nint对道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:offset)\\b"
         },
         {
-          "comment": "boolean props",
+          "comment": "boolean props\nboolean道具",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:rotate_pad|transform_anchor|nearest|crop_relative|subpixel|zzoom)\\b"
         },
@@ -90,7 +90,7 @@
           "match": "\\b(?<!\\.)(?:rotate|xpan|ypan|blur)\\b"
         },
         {
-          "comment": "('#position' | None)",
+          "comment": "('#position' | None)\n('#位置|/无)",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xsize|ysize)\\b"
         },
@@ -120,12 +120,12 @@
           "match": "\\b(?<!\\.)(?:size|maxsize)\\b"
         },
         {
-          "comment": "('#Matrix' | '#MatrixColor' | None)",
+          "comment": "('#Matrix' | '#MatrixColor' | None)\n('#矩阵'|'#矩阵颜色'|无)",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:matrixcolor)\\b"
         },
         {
-          "comment": "('#Matrix' | '#TransformMatrix' | None)",
+          "comment": "('#Matrix' | '#TransformMatrix' | None)\n('#矩阵'|'#变换矩阵'|无)",
           "name": "entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:matrixtransform)\\b"
         },
@@ -160,7 +160,7 @@
         { "include": "source.renpy.python#punctuation" },
         { "include": "source.renpy.python#line-continuation" },
         {
-          "comment": "Tokenize identifiers",
+          "comment": "Tokenize identifiers\n标记标识符",
           "name": "variable.name.python",
           "match": "\\b([[:alpha:]_]\\w*)\\b"
         },
@@ -177,7 +177,7 @@
             "1": { "name": "keyword.sensitive.renpy" }
           },
           "end": "$",
-          "patterns": [ { "include": "#screen-simple-expression" } ]
+          "patterns": [{ "include": "#screen-simple-expression" }]
         },
         {
           "name": "keyword.other.renpy",
@@ -202,9 +202,7 @@
             "2": { "name": "punctuation.section.screen.begin.renpy" }
           },
           "end": "^(?=(?!\\1)[ \\t]*[^\\s#]|\\1[^\\s#])",
-          "patterns": [
-            { "include": "#screen-language" }
-          ]
+          "patterns": [{ "include": "#screen-language" }]
         }
       ]
     },
@@ -245,7 +243,7 @@
             "4": { "name": "punctuation.section.atl.begin.renpy" }
           },
           "end": "^(?=(?!\\1)[ \\t]*[^\\s#]|\\1[^\\s#])",
-          "patterns": [ { "include": "source.renpy.atl" } ]
+          "patterns": [{ "include": "source.renpy.atl" }]
         },
         {
           "name": "meta.screen.text.renpy",
@@ -305,8 +303,8 @@
     },
 
     "screen-fallback": {
-      "comment": "TODO: This is a temp fix for missing pattern references",
-      "patterns": [ { "include": "source.renpy#base-patterns" } ]
+      "comment": "TODO: This is a temp fix for missing pattern references\nTODO: 这是缺失模式引用的临时修复",
+      "patterns": [{ "include": "source.renpy#base-patterns" }]
     },
 
     "screen-language": {

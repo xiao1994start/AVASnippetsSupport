@@ -1,7 +1,7 @@
 {
   "name": "avasnippetssupport",
   "displayName": "AVASnippetsSupport",
-  "description": "Ren'Py Language Support and Code Snippets.",
+  "description": "Python, BAT, Json, MarkDown, Scss, JavaScript, TypeScript Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
   "version": "0.0.1",
   "publisher": "AVA",
   "icon": "icon.png",
@@ -18,8 +18,8 @@
     "bat",
     "json",
     "markdown",
-    "python",
     "scss",
+    "python",
     "typescript"
   ],
   "categories": [
@@ -31,13 +31,6 @@
       "supported": true
     }
   },
-  "activationEvents": [
-    "workspaceContains:**/*.rpy",
-    "workspaceContains:**/_ren.py",
-    "onDebugResolve:renpy"
-  ],
-  "main": "./dist/extension",
-  "browser": "./dist/extension.js",
   "contributes": {
     "languages": [
       {
@@ -67,20 +60,20 @@
         "path": "./syntaxes/renpy.tmLanguage.json"
       },
       {
-        "scopeName": "source.renpy.atl",
-        "path": "./syntaxes/renpy.atl.tmLanguage.json"
-      },
-      {
-        "scopeName": "source.renpy.python",
-        "path": "./syntaxes/renpy.python.tmLanguage.json"
-      },
-      {
         "scopeName": "source.renpy.screen",
         "path": "./syntaxes/renpy.screen.tmLanguage.json"
       },
       {
         "scopeName": "source.renpy.style",
         "path": "./syntaxes/renpy.style.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.atl",
+        "path": "./syntaxes/renpy.atl.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.renpy.python",
+        "path": "./syntaxes/renpy.python.tmLanguage.json"
       },
       {
         "scopeName": "renpy.comment.injection",
@@ -91,13 +84,6 @@
         "embeddedLanguages": {
           "meta.embedded.renpy": "renpy"
         }
-      },
-      {
-        "scopeName": "text.log.injection",
-        "path": "./syntaxes/log.injection.json",
-        "injectTo": [
-          "text.log"
-        ]
       }
     ],
     "snippets": [
@@ -283,11 +269,15 @@
       },
       {
         "language": "json",
-        "path": "./snippets/json/json_snippets_for_all.json"
+        "path": "./snippets/json/snippets/json_snippets_for_all.json"
       },
       {
         "language": "json",
-        "path": "./snippets/json/json_snippets_for_python.json"
+        "path": "./snippets/json/snippets/json_snippets_for_python.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/基础语句.json"
       },
       {
         "language": "python",

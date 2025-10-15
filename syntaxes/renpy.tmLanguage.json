@@ -1,61 +1,10 @@
 {
-  "information_for_contributors": [
-    "Please remember to regenerate the ts token patterns using the 'syntax-to-token-pattern.py' python script",
-    "Keys prefixed with-x are currently unused"
-  ],
-
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "renpy",
-  "patterns": [
-    { "include": "#keywords" },
-    { "include": "#strings" },
-    { "include": "#base-patterns" }
-  ],
+  "name": "Ren'Py",
+  "scopeName": "source.renpy",
+  "fileTypes": ["rpy", "rpym", "rpymc", "rpyc"],
+  "patterns": [{ "include": "#base-patterns" }],
   "repository": {
-    "keywords": {
-      "comment": "Fallback patterns for unmatched keywords",
-      "patterns": [
-        {
-          "comment": "Control flow keywords",
-          "name": "keyword.control.flow.renpy",
-          "match": "\\b(?<!\\.)(?:pass|return|pause|if|elif|else|while|for)\\b"
-        },
-        {
-          "comment": "Python statement keywords",
-          "match": "\\b(?<!\\.)(define|default|early|hide|in|init|python)\\b",
-          "name": "keyword.other.python.renpy"
-        },
-        {
-          "comment": "Renpy keywords",
-          "match": "\\b(?<!\\.)(?:camera|image|label|layeredimage|menu|nvl[ \\t]+clear|play|queue|scene|screen|show|transform|translate|voice(?:[ \\t]+sustain)?|window|frame)\\b",
-          "name": "keyword.other.renpy"
-        },
-        {
-          "comment": "[TODO: Should probably only be a keyword in the expression] Renpy sub expression keywords",
-          "name": "keyword.other.renpy",
-          "match": "\\b(?<!\\.)(?:set|expression|at|with|from|style_prefix|spacing|textbutton)\\b"
-        },
-        {
-          "comment": "[TODO: Should probably only be a keyword in the expression] Renpy sub expression keywords",
-          "name": "keyword.control.flow.other.renpy",
-          "match": "\\b(?<!\\.)(?:action)\\b"
-        }
-      ]
-    },
-    "strings": {
-      "name": "string.quoted.renpy",
-      "begin": "\"\"\"|\"|'''|'|```|`",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.begin.renpy" }
-      },
-      "end": "(?<![^\\\\]\\\\)(((?<=\\0)\\0)|\\0)",
-      "endCaptures": {
-        "1": { "name": "punctuation.definition.string.end.renpy" },
-        "2": { "name": "meta.empty-string.renpy" }
-      },
-      "patterns": [{ "include": "#strings-interior" }]
-    },
-
     "statements": {
       "patterns": [
         { "include": "#renpy-statements" },
@@ -94,7 +43,7 @@
       "name": "punctuation.whitespace.renpy"
     },
     "fallback-characters": {
-      "comment": "NOTE: Having these patterns separated increases performance. Benchmark before making a change!",
+      "comment": "NOTE: Having these patterns separated increases performance. Benchmark before making a change!\n注意: 将这些模式分开会提高性能. 在做出改变之前基准!",
       "patterns": [
         { "include": "#new-line" },
         { "include": "#whitespace" },
@@ -193,7 +142,7 @@
     "literal": {
       "patterns": [
         {
-          "comment": "Python literals",
+          "comment": "Python literals\nPython 文字",
           "name": "constant.language.renpy",
           "match": "\\b(?<!\\.)(True|False|None)\\b"
         },
@@ -293,6 +242,36 @@
       ]
     },
 
+    "keywords": {
+      "comment": "Fallback patterns for unmatched keywords\n不匹配关键字的回退模式",
+      "patterns": [
+        {
+          "comment": "Control flow keywords\n控制流关键字",
+          "name": "keyword.control.flow.renpy",
+          "match": "\\b(?<!\\.)(?:pass|return|pause|if|elif|else|while|for)\\b"
+        },
+        {
+          "comment": "Python statement keywords\nPython 语句关键字",
+          "match": "\\b(?<!\\.)(define|default|early|hide|in|init|python)\\b",
+          "name": "keyword.other.python.renpy"
+        },
+        {
+          "comment": "Renpy keywords\nRenpy 关键词",
+          "match": "\\b(?<!\\.)(?:camera|image|label|layeredimage|menu|nvl[ \\t]+clear|play|queue|scene|screen|show|transform|translate|voice(?:[ \\t]+sustain)?|window|frame)\\b",
+          "name": "keyword.other.renpy"
+        },
+        {
+          "comment": "[TODO: Should probably only be a keyword in the expression] Renpy sub expression keywords\n[TODO: 应该可能只是表达式中的关键字]Renpy 子表达式关键字",
+          "name": "keyword.other.renpy",
+          "match": "\\b(?<!\\.)(?:set|expression|at|with|from|style_prefix|spacing|textbutton)\\b"
+        },
+        {
+          "comment": "[TODO: Should probably only be a keyword in the expression] Renpy sub expression keywords\n[TODO: 应该可能只是表达式中的关键字]Renpy 子表达式关键字",
+          "name": "keyword.control.flow.other.renpy",
+          "match": "\\b(?<!\\.)(?:action)\\b"
+        }
+      ]
+    },
     "region-comment": {
       "name": "comment.line.number-sign.renpy",
       "match": "(?<=^[ \\t]*)(#[ \\t]*(?:end)?region)\\b.*$",
@@ -336,7 +315,7 @@
       }
     },
     "constant_placeholder": {
-      "comment": "Python value interpolation using [ ... ]",
+      "comment": "Python value interpolation using [ ... ]\nPython 值插值使用[ ... ]",
       "name": "constant.other.placeholder.tags.renpy",
       "match": "(\\[)(.*?)(\\])(?![^\\[]*?\\])",
       "captures": {
@@ -399,7 +378,7 @@
     "string-tags-broken": {
       "patterns": [
         {
-          "comment": "Valid tags without params (close required)",
+          "comment": "Valid tags without params (close required)\n没有 params 的有效标签(需要关闭)",
           "contentName": "renpy.meta.${2:/downcase} meta.tagged.string.renpy",
           "begin": "({)\\s*(u|i|b|s|plain|alt|noalt|art|rb|rt)\\s*(})",
           "beginCaptures": {
@@ -418,7 +397,7 @@
           "patterns": [{ "include": "#strings-interior" }]
         },
         {
-          "comment": "Valid tags with numeric params (close required)",
+          "comment": "Valid tags with numeric params (close required)\n带有数字参数的有效标签(需要关闭)",
           "contentName": "renpy.meta.${2:/downcase} meta.tagged.string.renpy",
           "begin": "({)\\s*(alpha|cps|k)(=)(?:(\\*)|(\\-)|(\\+))?(\\d*(?:.\\d+)?)\\s*(})",
           "beginCaptures": {
@@ -446,7 +425,7 @@
           "patterns": [{ "include": "#strings-interior" }]
         },
         {
-          "comment": "Valid tags with numeric params (close required)",
+          "comment": "Valid tags with numeric params (close required)\n带有数字参数的有效标签(需要关闭)",
           "contentName": "renpy.meta.${2:/downcase} meta.tagged.string.renpy",
           "begin": "({)\\s*(size)(=)([\\-+]?)(\\d+)\\s*(})",
           "beginCaptures": {
@@ -472,7 +451,7 @@
           "patterns": [{ "include": "#strings-interior" }]
         },
         {
-          "comment": "Valid tags with file param (close required)",
+          "comment": "Valid tags with file param (close required)\n带有文件参数的有效标签(需要关闭)",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "begin": "({)\\s*(font)(=)([\\w.]+)\\s*(})",
           "beginCaptures": {
@@ -497,7 +476,7 @@
           "patterns": [{ "include": "#strings-interior" }]
         },
         {
-          "comment": "Color tag",
+          "comment": "Color tag\n颜色标签",
           "contentName": "renpy.meta.${2:/downcase}.${4:/downcase} meta.tagged.string.renpy",
           "begin": "({)\\s*(color|outlinecolor)(=)(#?[a-zA-Z0-9]+)\\s*(})",
           "beginCaptures": {
@@ -522,7 +501,7 @@
           "patterns": [{ "include": "#strings-interior" }]
         },
         {
-          "comment": "a tag",
+          "comment": "a tag\nA 标签",
           "contentName": "renpy.meta.${2:/downcase} meta.tagged.string.renpy",
           "begin": "({)\\s*(a)(=)(.*?)\\s*(})",
           "beginCaptures": {
@@ -552,7 +531,7 @@
     "string-tags": {
       "patterns": [
         {
-          "comment": "Valid tags without params (self-closing)",
+          "comment": "Valid tags without params (self-closing)\n没有params的有效标签(自关闭)",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "match": "({)\\s*(nw|done|fast|p|w|clear)\\s*(})",
           "captures": {
@@ -562,7 +541,7 @@
           }
         },
         {
-          "comment": "Valid tags with numeric params (self-closing)",
+          "comment": "Valid tags with numeric params (self-closing)\n带有数字参数的有效标签(自关闭)",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "match": "({)\\s*(p|w)(=)(\\+?)(\\d*(?:.\\d+)?)\\s*(})",
           "captures": {
@@ -579,7 +558,7 @@
           }
         },
         {
-          "comment": "Valid tags with numeric params (self-closing)",
+          "comment": "Valid tags with numeric params (self-closing)\n带有数字参数的有效标签(自关闭)",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "match": "({)\\s*(v?space)(=)(\\+?)(\\d+)\\s*(})",
           "captures": {
@@ -596,7 +575,7 @@
           }
         },
         {
-          "comment": "Comment tag (self-closing)",
+          "comment": "Comment tag (self-closing)\n注释标签(自关闭)",
           "name": "meta.string.tag.comment.self-closing.renpy",
           "match": "({)\\s*(#)\\s*(.*?)\\s*(})",
           "captures": {
@@ -609,7 +588,7 @@
           }
         },
         {
-          "comment": "Valid tags with file param",
+          "comment": "Valid tags with file param\n带有文件参数的有效标签",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "match": "({)\\s*(image)(=)([\\w.]+)\\s*(})",
           "captures": {
@@ -625,7 +604,7 @@
           }
         },
         {
-          "comment": "Valid tags without params (close required)",
+          "comment": "Valid tags without params (close required)\n没有 params 的有效标签(需要关闭)",
           "match": "({)\\s*(u|i|b|s|plain|alt|noalt|art|rb|rt)\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -635,7 +614,7 @@
           }
         },
         {
-          "comment": "Valid tags with numeric params (close required)",
+          "comment": "Valid tags with numeric params (close required)\n带有数字参数的有效标签(需要关闭)",
           "match": "({)\\s*(alpha|cps|k)(=)(?:(\\*)|(\\-)|(\\+))?(\\d*(?:.\\d+)?)\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -654,7 +633,7 @@
           }
         },
         {
-          "comment": "Valid tags with numeric params (close required)",
+          "comment": "Valid tags with numeric params (close required)\nn带有数字参数的有效标签(需要关闭)",
           "match": "({)\\s*(size)(=)([\\-+]?)(\\d+)\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -671,7 +650,7 @@
           }
         },
         {
-          "comment": "Valid tags with file param (close required)",
+          "comment": "Valid tags with file param (close required)\n带有文件参数的有效标签(需要关闭)",
           "name": "meta.string.tag.${2:/downcase}.self-closing.renpy",
           "match": "({)\\s*(font)(=)([\\w.]+)\\s*(})",
           "captures": {
@@ -688,7 +667,7 @@
           }
         },
         {
-          "comment": "Color tag",
+          "comment": "Color tag\n颜色标签",
           "match": "({)\\s*(color|outlinecolor)(=)(#?[a-zA-Z0-9]+)\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -704,7 +683,7 @@
           }
         },
         {
-          "comment": "a tag",
+          "comment": "a tag\nA 标签",
           "match": "({)\\s*(a)(=)(.*?)\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -720,7 +699,7 @@
           }
         },
         {
-          "comment": "Unknown tag (Single line support only cus \\R does not work) (Since we don't know if a tag is self closing, we can't assume that an end pattern exists)",
+          "comment": "Unknown tag (Single line support only cus \\R does not work) (Since we don't know if a tag is self closing, we can't assume that an end pattern exists)\n未知标签(仅支持单行cus\\R不起作用)(因为我们不知道一个标签是否是自关闭的, 所以我们不能假设一个结束模式存在)",
           "match": "({)[ \\t]*(\\w+)\\b(?:(=)(.*?))?\\s*(})((?:.|\\R)+?)\\s*({/)\\s*(\\2)\\s*(})",
           "captures": {
             "1": {
@@ -754,7 +733,7 @@
           }
         },
         {
-          "comment": "Unknown tag start",
+          "comment": "Unknown tag start\n未知标签开始",
           "match": "({)\\s*(\\w*)(?:(=)(.*?))?\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.start.renpy" },
@@ -770,7 +749,7 @@
           }
         },
         {
-          "comment": "Unknown tag end",
+          "comment": "Unknown tag end\n未知标签结束",
           "match": "({/)\\s*(\\w*?)\\b\\s*(})",
           "captures": {
             "0": { "name": "meta.string.tag.${2:/downcase}.end.renpy" },
@@ -780,6 +759,19 @@
           }
         }
       ]
+    },
+    "strings": {
+      "name": "string.quoted.renpy",
+      "begin": "\"\"\"|\"|'''|'|```|`",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.renpy" }
+      },
+      "end": "(?<![^\\\\]\\\\)(((?<=\\0)\\0)|\\0)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.string.end.renpy" },
+        "2": { "name": "meta.empty-string.renpy" }
+      },
+      "patterns": [{ "include": "#strings-interior" }]
     },
 
     "python-statements": {
@@ -803,7 +795,7 @@
           }
         },
         {
-          "comment": "Renpy python block",
+          "comment": "Renpy python block\nRenpy Python 代码块",
           "contentName": "meta.embedded.block.python",
           "begin": "(?<=(^[ \\t]*))(?:(init)(?:([ \\t]+)(-)?(\\d+))?([ \\t]+))?(python)(.*)?(:)",
           "beginCaptures": {
@@ -817,7 +809,7 @@
               "name": "meta.python.block.arguments.renpy",
               "patterns": [
                 {
-                  "comment": "in statement",
+                  "comment": "in statement\n在声明中",
                   "begin": "\\b(in)\\b",
                   "beginCaptures": {
                     "1": { "name": "keyword.control.flow.in.renpy" }
@@ -832,7 +824,7 @@
                   ]
                 },
                 {
-                  "comment": "keywords",
+                  "comment": "keywords\n关键词",
                   "match": "\\b(hide)|(early)|(in)\\b",
                   "captures": {
                     "1": { "name": "keyword.hide.renpy" },
@@ -856,7 +848,7 @@
     "python-block-tester": {
       "patterns": [
         {
-          "comment": "Check for assignments that support python expressions",
+          "comment": "Check for assignments that support python expressions\n检查支持python表达式的赋值",
           "contentName": "meta.python.expression.renpy",
           "begin": "(?<=(^[ \\t]*)(?:image)\\b.*?)(=)",
           "beginCaptures": {
@@ -960,7 +952,7 @@
                   "name": "keyword.voice.renpy"
                 },
                 {
-                  "comment": "Match special characters",
+                  "comment": "Match special characters\n匹配特殊字符",
                   "match": "adv|nvl|narrator|name_only|centered|vcentered",
                   "name": "variable.other.constant.renpy"
                 }
@@ -1293,7 +1285,7 @@
       ]
     },
     "label-call": {
-      "comment": "Note: label params are only allowed at the end of the access expression",
+      "comment": "Note: label params are only allowed at the end of the access expression\n注意: 标签参数只允许在访问表达式的末尾",
       "name": "meta.function-call.label.renpy",
       "begin": "\\b(?=([a-zA-Z_]\\w*)\\s*(\\())",
       "end": "(\\))",
@@ -1307,7 +1299,7 @@
       ]
     },
     "label-access": {
-      "comment": "Note: Labels can't be nested twice in a row!",
+      "comment": "Note: Labels can't be nested twice in a row!\n注意: 标签不能连续嵌套两次!",
       "name": "meta.member.access.label.renpy",
       "begin": "(\\.)\\s*(?!\\.)",
       "end": "(?<=\\S)(?=\\W)|(^|(?<=\\s))(?=[^\\\\\\w\\s])|$",
@@ -1317,7 +1309,7 @@
       "patterns": [{ "include": "#label-call" }, { "include": "#label-name" }]
     },
     "label-def-name": {
-      "comment": "Note: Labels can't be nested twice in a row!",
+      "comment": "Note: Labels can't be nested twice in a row!\n注意: 标签不能连续嵌套两次!",
       "patterns": [
         { "include": "source.renpy.python#builtin-possible-callables" },
         { "include": "#builtin-labels" },
@@ -1382,7 +1374,7 @@
       "patterns": [
         { "include": "#call-jump-expression" },
         {
-          "comment": "Label expression",
+          "comment": "Label expression\n标签表达式",
           "begin": "(?=[a-zA-Z_.])",
           "end": "(?![a-zA-Z_.])(?![ \\t]*\\.[ \\t]*)",
           "patterns": [
@@ -1443,7 +1435,7 @@
           "end": "(?!\\G)(?<=[^ \\t])",
           "patterns": [
             {
-              "comment": "Label expression",
+              "comment": "Label expression\n标签表达式",
               "begin": "(?<=screen[ \\t]+)(?=[a-zA-Z_.])",
               "end": "(?![a-zA-Z_.])(?![ \\t]*\\.[ \\t]*)",
               "patterns": [
@@ -1456,7 +1448,7 @@
           ]
         },
         {
-          "comment": "Label expression",
+          "comment": "Label expression\n标签表达式",
           "begin": "(?<=call[ \\t]+)(?=[a-zA-Z_.])",
           "end": "(?![a-zA-Z_.])(?![ \\t]*\\.[ \\t]*)",
           "patterns": [
@@ -1486,7 +1478,7 @@
           "patterns": [
             { "include": "source.renpy.python#odd-function-call" },
             {
-              "comment": "if condition",
+              "comment": "if condition\nif 条件",
               "begin": "\\b(if)\\b",
               "beginCaptures": {
                 "1": { "name": "keyword.control.conditional.renpy" }
@@ -1519,7 +1511,7 @@
         "3": {
           "patterns": [
             {
-              "comment": "Menu name",
+              "comment": "Menu name\n菜单名称",
               "match": "[a-zA-Z_.]\\w*",
               "name": "entity.name.function.menu.renpy"
             },
@@ -1667,6 +1659,5 @@
     "base-patterns": {
       "patterns": [{ "include": "#statements" }, { "include": "#expressions" }]
     }
-  },
-  "scopeName": "source.renpy"
+  }
 }

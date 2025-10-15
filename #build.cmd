@@ -6,14 +6,16 @@ for %%v in ("AVASnippetsSupport*.vsix") do (
     del /F /Q "%%v"
 )
 
-CD /D "%~dp0\..\..\env"
-ECHO %CD%
+CD /D "%~dp0..\..\env"
+@REM ECHO %CD%
 
 @REM 标准化文件名
 if exist "%cd%\*node*" (
-    for /D %%i in (*node*) do (
-        ECHO %%i
-        ren "%cd%\%%i" "node"
+    for /D %%i in ("*node*") do (
+        ECHO %%~fi
+        if not "%%i"=="node" (
+            ren "%%~fi" "node"
+        )
     )
 )
 @REM 设置环境变量

@@ -1,6 +1,6 @@
 {
   "define 常量 定义语句": {
-    "prefix": "new define ",
+    "prefix": ["define ", "new define ", "new ", "new const"],
     "body": "define ${1:const} = ${2:value}",
     "description": [
       "define 常量 定义语句",
@@ -9,7 +9,7 @@
     ]
   },
   "default 变量 定义语句": {
-    "prefix": "new default ",
+    "prefix": ["default ", "new default ", "new var "],
     "body": "default ${1:var} = ${2:value}",
     "description": [
       "default 变量 定义语句",
@@ -17,5 +17,15 @@
       "\t2.修改已经定义过的全局变量 (如使用 default 语句定义的变量)",
       "\t3.调用函数或方法"
     ]
+  },
+  "var 变量 (Create/Modify)": {
+    "prefix": ["var "],
+    "body": "$ ${1:variable_name} = ${2:# variable value}",
+    "description": "创建/修改 变量."
+  },
+  "$ 变量 (Create/Modify) ": {
+    "prefix": "$ ",
+    "body": "$ ${1:variable_name} = ${2:# variable value}",
+    "description": "创建/修改 变量."
   }
 }

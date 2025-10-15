@@ -6,4 +6,4 @@
 
 ## 安装使用
 
-`Download ZIP` 后直接安装 `auto-snippets-plus-max-*.vsix`
+`Download ZIP` 后直接安装 `*.vsix`

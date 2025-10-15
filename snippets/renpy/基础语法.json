@@ -5,74 +5,64 @@
     "description": "创建新的折叠区域."
   },
   "Label 创建新标签": {
-    "prefix": "label",
+    "prefix": ["label ", "lb "],
     "body": "label ${1:label_name}:\n\t${2:...}",
     "description": "创建新标签."
   },
   "Jump 跳转到标签": {
-    "prefix": "jump",
+    "prefix": ["jump ", "jp "],
     "body": "jump ${1:label_name}",
     "description": "跳转到标签."
   },
   "Call 调用标签": {
-    "prefix": "call",
+    "prefix": ["call"],
     "body": "call ${1:label_name}",
     "description": "调用标签."
   },
   "Pause 等待几秒钟, 然后显示下一个屏幕": {
-    "prefix": "pause",
+    "prefix": ["pause ", "pass "],
     "body": "with Pause($1)\n$2",
     "description": "等待几秒钟, 然后显示下一个屏幕."
   },
   "执行一行Python": {
-    "prefix": "p1",
+    "prefix": ["p1 "],
     "body": "$ ${1:#python statements}",
     "description": "执行一行Python."
   },
   "Python语句采用python代码块": {
-    "prefix": "py",
+    "prefix": ["py "],
     "body": "python:\n\t${1:}",
     "description": "Python语句采用python代码块."
   },
   "Init Block 在初始化时运行代码": {
-    "prefix": "init",
+    "prefix": ["init "],
     "body": "init ${1:#priority number}:\n\t${2:}",
     "description": "在初始化时运行代码."
   },
   "Init with Python Block 带有Python块的init块": {
-    "prefix": "inipy",
+    "prefix": ["inipy "],
     "body": "init ${1:#priority number} python:\n\t${2:}",
     "description": "带有Python块的init块."
   },
   "创建一个角色": {
-    "prefix": "char",
+    "prefix": ["char "],
     "body": "define ${1:character_name} = Character(\"${2:displayable name}\")",
     "description": "创建一个角色"
   },
   "创建一个角色 (NVL)": {
-    "prefix": "charnvl",
+    "prefix": ["charnvl "],
     "body": "define ${1:character_name} = Character(None, kind=nvl)\n${2:}",
     "description": "创建一个角色 (NVL)"
   },
   "预定义转换": {
-    "prefix": "transitions",
+    "prefix": ["transitions "],
     "body": "${1:fade, dissolve, pixellate, move,\nmoveinright (Also: moveinleft, moveintop, moveinbottom),\nmoveoutright (Also: moveoutleft, moveouttop, moveoutbottom),\nease (Also: easeinright, easeinleft, easeintop, easeinbottom, easeoutright, easeoutleft, easeouttop, easeoutbottom),\nzoomin, zoomout, zoominout, vpunch, hpunch, blinds, squares,\nwipeleft (Also: wiperight, wipeup, wipedown),\nslideleft (Also:  slideright, slideup, slidedown),\nslideawayleft (Also: slideawayright, slideawayup, slideawaydown),\nirisin, irisout.}",
     "description": "预定义转换"
   },
   "创建 MultiPersistent": {
-    "prefix": "multipersist",
+    "prefix": ["multipersist "],
     "body": "${1:persistent_name} = MultiPersistent(\"${2:persistent_filename}\")",
     "description": "创建 MultiPersistent"
-  },
-  "var 变量 (Create/Modify)": {
-    "prefix": "var",
-    "body": "$ ${1:variable_name} = ${2:# variable value}",
-    "description": "创建/修改 变量."
-  },
-  "$ 变量 (Create/Modify) ": {
-    "prefix": "$",
-    "body": "$ ${1:variable_name} = ${2:# variable value}",
-    "description": "创建/修改 变量."
   },
   "Renpy 暂停": {
     "prefix": "rpause",
@@ -295,12 +285,12 @@
     "description": "__magic__ 初始化"
   },
   "Anchor Tag URL链接-标签": {
-    "prefix": "a",
+    "prefix": "aAnchor",
     "body": "{a=${1:url}}$2{/a}",
     "description": "Anchor Tag URL链接-标签"
   },
   "Alpha Tag 透明度-标签": {
-    "prefix": "al",
+    "prefix": "alAlpha",
     "body": "{alpha=${1:alpha value}}$2{/alpha}",
     "description": "Alpha Tag 透明度-标签"
   },
@@ -310,7 +300,7 @@
     "description": "Bold Tag 粗体-标签"
   },
   "Color Tag 颜色-标签": {
-    "prefix": "c",
+    "prefix": "cColor",
     "body": "{color=${1:color code}}$2{/color}",
     "description": "Color Tag 颜色-标签"
   },
@@ -320,12 +310,12 @@
     "description": "Characters per second Tag 设置了文本显示速度-标签"
   },
   "Font Tag 字体-标签": {
-    "prefix": "f",
+    "prefix": "fFont",
     "body": "{font=${1:font file}}$2{/font}",
     "description": "Font Tag 字体-标签"
   },
   "Italics Tag 斜体-标签": {
-    "prefix": "i",
+    "prefix": "iItalics",
     "body": "{i}$1{/i}",
     "description": "Italics Tag 斜体-标签"
   },

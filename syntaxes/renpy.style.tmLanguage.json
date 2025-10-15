@@ -1,9 +1,9 @@
 {
-  "information_for_contributors": [ "Please remember to regenerate the ts token patterns using the 'syntax-to-token-pattern.py' python script" ],
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Ren'Py Style",
   "scopeName": "source.renpy.style",
-  "patterns": [ { "include": "#style" } ],
+  "fileTypes": ["rpy", "rpym", "rpymc", "rpyc"],
+  "patterns": [{ "include": "#style" }],
   "repository": {
     "style-block-tester": {
       "patterns": [
@@ -25,7 +25,7 @@
     "style-property": {
       "patterns": [
         {
-          "comment": "ON EDIT: If you update this list, also update it in style-clause",
+          "comment": "ON EDIT: If you update this list, also update it in style-clause\nON EDIT: 如果您更新此列表, 请在样式子句中更新它",
           "name": "support.constant.property-key.test.renpy entity.name.tag.css.style.renpy",
           "match": "\\b(?<!\\.)(?:(?:selected_)?(?:hover_|idle_|insensitive_|activate_)?(?:activate_sound|adjust_spacing|aft_bar|aft_gutter|align|alt|altruby_style|anchor|antialias|area|background|bar_invert|bar_resizing|bar_vertical|base_bar|black_color|bold|bottom_bar|bottom_gutter|bottom_margin|bottom_padding|box_first_spacing|box_layout|box_reverse|box_spacing|box_wrap|box_wrap_spacing|caret|child|clipping|color|debug|drop_shadow|drop_shadow_color|enable_hover|first_indent|first_spacing|fit_first|focus_mask|focus_rect|font|fore_bar|fore_gutter|foreground|hinting|hover_sound|hyperlink_functions|italic|justify|kerning|key_events|keyboard_focus|language|layout|left_bar|left_gutter|left_margin|left_padding|line_leading|line_overlap_split|line_spacing|margin|maximum|min_width|minimum|minwidth|mipmap|modal|mouse|newline_indent|offset|order_reverse|outline_scaling|outlines|padding|pos|rest_indent|right_bar|right_gutter|right_margin|right_padding|ruby_style|size|size_group|slow_abortable|slow_cps|slow_cps_multiplier|slow_speed|sound|spacing|strikethrough|subpixel|subtitle_width|text_align|text_y_fudge|textalign|thumb|thumb_offset|thumb_shadow|time_policy|top_bar|top_gutter|top_margin|top_padding|underline|unscrollable|vertical|xalign|xanchor|xcenter|xfill|xfit|xmargin|xmaximum|xminimum|xoffset|xpadding|xpos|xsize|xspacing|xysize|yalign|yanchor|ycenter|yfill|yfit|ymargin|ymaximum|yminimum|yoffset|ypadding|ypos|ysize|yspacing))\\b"
         },
@@ -34,7 +34,7 @@
           "match": "\\b(?<!\\.)(?:properties)\\b"
         },
         {
-          "comment": "Any other tokens are invalid",
+          "comment": "Any other tokens are invalid\n任何其他令牌都无效",
           "match": ".+",
           "name": "invalid.illegal.style-property.name.renpy"
         }
@@ -44,7 +44,7 @@
     "style-clause": {
       "patterns": [
         {
-          "comment": "is statement",
+          "comment": "is statement\n声明语句",
           "begin": "\\b(?<!\\.)(is)\\b",
           "beginCaptures": {
             "1": { "name": "keyword.operator.logical.python" }
@@ -77,7 +77,7 @@
           "match": "\\b(?<!\\.)(del)\\b[ \\t]*(\\w*)",
           "captures": {
             "1": { "name": "keyword.del.renpy" },
-            "2": { "patterns": [ { "include": "#style-property" } ] }
+            "2": { "patterns": [{ "include": "#style-property" }] }
           }
         },
         {
@@ -86,16 +86,18 @@
           "beginCaptures": {
             "1": { "name": "keyword.variant.renpy" }
           },
-          "patterns": [ { "include": "source.renpy#simple-expression" } ]
+          "patterns": [{ "include": "source.renpy#simple-expression" }]
         },
         {
-          "comment": "ON EDIT: If you update this list, also update it in style-property",
+          "comment": "ON EDIT: If you update this list, also update it in style-property\nON EDIT:如果您更新此列表, 请在style-property中更新它",
           "begin": "\\b(?<!\\.)(properties|(?:(?:selected_)?(?:hover_|idle_|insensitive_|activate_)?(?:activate_sound|adjust_spacing|aft_bar|aft_gutter|align|alt|altruby_style|anchor|antialias|area|background|bar_invert|bar_resizing|bar_vertical|base_bar|black_color|bold|bottom_bar|bottom_gutter|bottom_margin|bottom_padding|box_first_spacing|box_layout|box_reverse|box_spacing|box_wrap|box_wrap_spacing|caret|child|clipping|color|debug|drop_shadow|drop_shadow_color|enable_hover|first_indent|first_spacing|fit_first|focus_mask|focus_rect|font|fore_bar|fore_gutter|foreground|hinting|hover_sound|hyperlink_functions|italic|justify|kerning|key_events|keyboard_focus|language|layout|left_bar|left_gutter|left_margin|left_padding|line_leading|line_overlap_split|line_spacing|margin|maximum|min_width|minimum|minwidth|mipmap|modal|mouse|newline_indent|offset|order_reverse|outline_scaling|outlines|padding|pos|rest_indent|right_bar|right_gutter|right_margin|right_padding|ruby_style|size|size_group|slow_abortable|slow_cps|slow_cps_multiplier|slow_speed|sound|spacing|strikethrough|subpixel|subtitle_width|text_align|text_y_fudge|textalign|thumb|thumb_offset|thumb_shadow|time_policy|top_bar|top_gutter|top_margin|top_padding|underline|unscrollable|vertical|xalign|xanchor|xcenter|xfill|xfit|xmargin|xmaximum|xminimum|xoffset|xpadding|xpos|xsize|xspacing|xysize|yalign|yanchor|ycenter|yfill|yfit|ymargin|ymaximum|yminimum|yoffset|ypadding|ypos|ysize|yspacing)))\\b",
           "end": "(?!\\G)",
           "beginCaptures": {
-            "1": { "name": "support.constant.property-key.renpy entity.name.tag.css.style.renpy" }
+            "1": {
+              "name": "support.constant.property-key.renpy entity.name.tag.css.style.renpy"
+            }
           },
-          "patterns": [ { "include": "source.renpy#simple-expression" } ]
+          "patterns": [{ "include": "source.renpy#simple-expression" }]
         }
       ]
     },

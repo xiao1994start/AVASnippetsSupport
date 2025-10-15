@@ -1,6 +1,6 @@
 {
   "snippets.language 代码片段语言": {
-    "prefix": ["language -json-snippets"],
+    "prefix": ["language -snippets"],
     "body": [
       "{",
       "  \"language\": \"${1|python,bat,renpy,vue,scss,typescript,html,vue-html,javascript,json,snippets|}\",",
@@ -10,7 +10,7 @@
     "description": ["代码片段语言"]
   },
   "snippets.new 新建代码片段": {
-    "prefix": ["new snippets -json-snippets"],
+    "prefix": ["new snippets -snippets"],
     "body": [
       "\"描述\": {",
       "  \"prefix\": [\"${2:钩子}\"],",
@@ -23,7 +23,7 @@
     "description": ["新建代码片段"]
   },
   "snippets.newObject 新建对象代码片段": {
-    "prefix": ["newObject -json-snippets"],
+    "prefix": ["newObject -snippets"],
     "body": [
       "\"type.object 描述\": {",
       "  \"prefix\": [\".object -type\"],",
@@ -36,7 +36,7 @@
     "description": ["新建代码片段"]
   },
   "snippets-new=>示例": {
-    "prefix": ["snippets-new =json-snippets"],
+    "prefix": ["snippets-new =-snippets"],
     "body": [
       "\"${1:fname} -object\": {",
       "\t\"prefix\": [\"${3:prefix}\"],",

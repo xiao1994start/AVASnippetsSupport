@@ -1,9 +1,9 @@
 {
-  "information_for_contributors": [ "Please remember to regenerate the ts token patterns using the 'syntax-to-token-pattern.py' python script" ],
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Ren'Py ATL",
   "scopeName": "source.renpy.atl",
-  "patterns": [ { "include": "#atl" } ],
+  "fileTypes": ["rpy", "rpym", "rpymc", "rpyc"],
+  "patterns": [{ "include": "#atl" }],
   "repository": {
     "atl": {
       "comment": "https://www.renpy.org/doc/html/atl.html#atl-syntax-and-semantics",
@@ -22,7 +22,7 @@
       "comment": "https://www.renpy.org/doc/html/atl.html#list-of-transform-properties",
       "patterns": [
         {
-          "comment": "Special manipulation keywords",
+          "comment": "Special manipulation keywords\n特殊操作关键字",
           "match": "\\b(?<!\\.)(?:(warp)|(circles)|(clockwise)|(counterclockwise))\\b",
           "captures": {
             "1": { "name": "keyword.warp.renpy" },
@@ -32,37 +32,37 @@
           }
         },
         {
-          "comment": "position props (int, absolute, or a float)",
+          "comment": "position props (int, absolute, or a float)\n位置道具(int, absolute 或 float)",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xpos|ypos|xanchor|yanchor|xcenter|ycenter|radius)\\b"
         },
         {
-          "comment": "position pair props",
+          "comment": "position pair props\n位置对道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:pos|anchor|xycenter|around|alignaround|matrixanchor)\\b"
         },
         {
-          "comment": "float props",
+          "comment": "float props\nfloat道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xalign|yalign|zoom|xzoom|yzoom|alpha|additive|angle|delay|events|zpos)\\b"
         },
         {
-          "comment": "float pair props",
+          "comment": "float pair props\nfloat对道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:align|knot)\\b"
         },
         {
-          "comment": "int props",
+          "comment": "int props\nint道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xoffset|yoffset|xtile|ytile)\\b"
         },
         {
-          "comment": "int pair props",
+          "comment": "int pair props\nint对道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:offset)\\b"
         },
         {
-          "comment": "boolean props",
+          "comment": "boolean props\nboolean道具",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:rotate_pad|transform_anchor|nearest|crop_relative|subpixel|zzoom)\\b"
         },
@@ -72,7 +72,7 @@
           "match": "\\b(?<!\\.)(?:rotate|xpan|ypan|blur)\\b"
         },
         {
-          "comment": "('#position' | None)",
+          "comment": "('#position' | None)\n('#位置|/无)",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xsize|ysize)\\b"
         },
@@ -87,7 +87,7 @@
           "match": "\\b(?<!\\.)(?:corner1|corner2)\\b"
         },
         {
-          "comment": "('\\(position, position\\)' | None)",
+          "comment": "('\\(position, position\\)' | None)\n('\\(位置, 位置\\)' | 无)",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:xysize)\\b"
         },
@@ -102,12 +102,12 @@
           "match": "\\b(?<!\\.)(?:size|maxsize)\\b"
         },
         {
-          "comment": "('#Matrix' | '#MatrixColor' | None)",
+          "comment": "('#Matrix' | '#MatrixColor' | None)\n('#矩阵'|'#矩阵颜色'|无)",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:matrixcolor)\\b"
         },
         {
-          "comment": "('#Matrix' | '#TransformMatrix' | None)",
+          "comment": "('#Matrix' | '#TransformMatrix' | None)\n('#矩阵'|'#变换矩阵'|无)",
           "name": "support.type.property-name.transform.renpy entity.name.tag.css.transform.renpy",
           "match": "\\b(?<!\\.)(?:matrixtransform)\\b"
         },
@@ -142,7 +142,7 @@
         { "include": "source.renpy.python#punctuation" },
         { "include": "source.renpy.python#line-continuation" },
         {
-          "comment": "Tokenize identifiers",
+          "comment": "Tokenize identifiers\n标记标识符",
           "name": "variable.name.python",
           "match": "\\b([[:alpha:]_]\\w*)\\b"
         },
@@ -159,7 +159,7 @@
             "1": { "name": "keyword.with.renpy" }
           },
           "end": "$",
-          "patterns": [ { "include": "#atl-simple-expression" } ]
+          "patterns": [{ "include": "#atl-simple-expression" }]
         },
         { "include": "source.renpy.python#expression" }
       ]
@@ -189,7 +189,7 @@
             "3": { "name": "keyword.control.flow.pause.renpy" }
           },
           "end": "$",
-          "patterns": [ { "include": "#atl-simple-expression" } ]
+          "patterns": [{ "include": "#atl-simple-expression" }]
         },
         {
           "comment": "https://www.renpy.org/doc/html/atl.html#expression-statement",
@@ -199,7 +199,7 @@
             "1": { "name": "keyword.with.renpy" }
           },
           "end": "$",
-          "patterns": [ { "include": "#atl-simple-expression" } ]
+          "patterns": [{ "include": "#atl-simple-expression" }]
         },
         {
           "comment": "https://www.renpy.org/doc/html/atl.html#contains-statement",
@@ -209,7 +209,7 @@
             "1": { "name": "keyword.control.flow.contains.renpy" }
           },
           "end": "$",
-          "patterns": [ { "include": "#atl-expression" } ]
+          "patterns": [{ "include": "#atl-expression" }]
         },
         {
           "comment": "TODO: This is a temporary include until we have proper support for all ATL keywords",
@@ -218,7 +218,7 @@
       ]
     },
     "atl-build-in-events": {
-      "comment": "Pre-defined events (https://www.renpy.org/doc/html/atl.html#external-events)",
+      "comment": "Pre-defined events (https://www.renpy.org/doc/html/atl.html#external-events)\n预先定义的事件 (https://www.renpy.org/doc/html/atl.html#external-events)",
       "name": "support.function.event.renpy",
       "match": "\\b(?<!\\.)(?:start|show|replace|hide|replaced|update|hover|idle|selected_hover|selected_idle)\\b"
     },
@@ -248,7 +248,7 @@
       "match": "^[ \\t]*(event)\\b[ \\t]*\\b([[:alpha:]_]\\w*)\\b",
       "captures": {
         "1": { "name": "keyword.event.renpy" },
-        "2": { "patterns": [ { "include": "#atl-event-name" } ] }
+        "2": { "patterns": [{ "include": "#atl-event-name" }] }
       }
     },
     "atl-on": {
@@ -269,7 +269,7 @@
           "name": "punctuation.separator.parameters.renpy"
         },
         {
-          "comment": "TODO: Is this really needed here? I think we need fallback patterns instead",
+          "comment": "TODO: Is this really needed here? I think we need fallback patterns instead\nTODO: 这里真的需要这个吗? 我认为我们需要后备模式",
           "include": "source.renpy#comments"
         }
       ]
@@ -292,7 +292,7 @@
       }
     },
     "atl-build-in-warpers": {
-      "comment": "Pre-defined warpers (https://www.renpy.org/doc/html/atl.html#warpers)",
+      "comment": "Pre-defined warpers (https://www.renpy.org/doc/html/atl.html#warpers)\n预先定义的warpers (https://www.renpy.org/doc/html/atl.html#warpers)",
       "name": "support.function.renpy",
       "match": "\\b(?<!\\.)(?:linear|ease|easein|easeout|ease_back|ease_bounce|ease_circ|ease_cubic|ease_elastic|ease_expo|ease_quad|ease_quart|ease_quint|easein_back|easein_bounce|easein_circ|easein_cubic|easein_elastic|easein_expo|easein_quad|easein_quart|easein_quint|easeout_back|easeout_bounce|easeout_circ|easeout_cubic|easeout_elastic|easeout_expo|easeout_quad|easeout_quart|easeout_quint)\\b"
     },
@@ -308,30 +308,30 @@
       ]
     },
     "atl-warper-broken": {
-      "comment": "TODO: This doesn't work right now, we can't assume all identifiers are warpers",
+      "comment": "TODO: This doesn't work right now, we can't assume all identifiers are warpers\nTODO:这现在不起作用, 我们不能假设所有标识符都是 warpers",
       "name": "meta.atl.warper.renpy",
       "begin": "(?<=^[ \\t]*)([[:alpha:]_]\\w*)\\b",
       "beginCaptures": {
-        "1": { "patterns": [ { "include": "#atl-warper-name" } ] }
+        "1": { "patterns": [{ "include": "#atl-warper-name" }] }
       },
       "end": "(?=[ \\t]*#)|$",
-      "patterns": [ { "include": "#atl-simple-expression" } ]
+      "patterns": [{ "include": "#atl-simple-expression" }]
     },
 
     "atl-warper": {
-      "comment": "(TODO: For now we only support build-in warper highlighting) https://www.renpy.org/doc/html/atl.html#warpers",
+      "comment": "(TODO: For now we only support build-in warper highlighting) https://www.renpy.org/doc/html/atl.html#warpers\n(TODO: 目前我们只支持内置的 warper 高亮) https://www.renpy.org/doc/html/atl.html#warpers",
       "name": "meta.atl.warper.renpy",
       "begin": "(?<=^[ \\t]*)(linear|ease|easein|easeout|ease_back|ease_bounce|ease_circ|ease_cubic|ease_elastic|ease_expo|ease_quad|ease_quart|ease_quint|easein_back|easein_bounce|easein_circ|easein_cubic|easein_elastic|easein_expo|easein_quad|easein_quart|easein_quint|easeout_back|easeout_bounce|easeout_circ|easeout_cubic|easeout_elastic|easeout_expo|easeout_quad|easeout_quart|easeout_quint)\\b",
       "beginCaptures": {
-        "1": { "patterns": [ { "include": "#atl-warper-name" } ] }
+        "1": { "patterns": [{ "include": "#atl-warper-name" }] }
       },
       "end": "(?=[ \\t]*#)|$",
-      "patterns": [ { "include": "#atl-simple-expression" } ]
+      "patterns": [{ "include": "#atl-simple-expression" }]
     },
 
     "atl-fallback": {
-      "comment": "TODO: This is a temp fix for missing pattern references",
-      "patterns": [ { "include": "source.renpy#base-patterns" } ]
+      "comment": "TODO: This is a temp fix for missing pattern references\nTODO: 这是缺失模式引用的临时修复",
+      "patterns": [{ "include": "source.renpy#base-patterns" }]
     },
 
     "atl-choice": {
@@ -344,9 +344,7 @@
       },
       "end": "(?=#|:)|$",
 
-      "patterns": [
-        { "include": "#atl-simple-expression" }
-      ]
+      "patterns": [{ "include": "#atl-simple-expression" }]
     },
 
     "atl-statements": {
@@ -384,7 +382,7 @@
         "2": { "name": "punctuation.section.atl.begin.renpy" }
       },
       "end": "^(?=(?!\\1)[ \\t]*[^\\s#]|\\1[^\\s#])",
-      "patterns": [ { "include": "source.renpy.atl" } ]
+      "patterns": [{ "include": "source.renpy.atl" }]
     },
 
     "transform": {
