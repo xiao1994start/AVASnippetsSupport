@@ -35,7 +35,7 @@
     "description": "Color Tag 深粉红-标签"
   },
   "Bold & Color Tag 深粉红&加粗-标签": {
-    "prefix": ["cbFF1493Bold -ColorBoldTag", "cbDeepPinkBold -ColorBoldTag"],
+    "prefix": ["cFF1493Bold -ColorBoldTag", "cDeepPinkBold -ColorBoldTag"],
     "body": "{color=#FF1493}\\[推荐]{/color}{b}$1{/b}",
     "description": "Bold & Color Tag 深粉红&加粗-标签"
   },
