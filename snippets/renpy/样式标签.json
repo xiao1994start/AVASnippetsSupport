@@ -24,6 +24,11 @@
     "body": "{color=${1:color code}}$2{/color}",
     "description": "Color Tag 颜色-标签"
   },
+  "Color Tag 深粉红-标签": {
+    "prefix": ["cFF1493 -ColorTag", "cDeepPink -ColorTag"],
+    "body": "{color=#FF1493}\\[${1:推荐}]$0{/color}",
+    "description": "Color Tag 深粉红-标签"
+  },
   "Font Tag 字体-标签": {
     "prefix": ["fFont -Tag"],
     "body": "{font=${1:font file}}$2{/font}",
