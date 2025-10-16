@@ -29,6 +29,11 @@
     "body": "{color=#FF1493}\\[${1:推荐}]$0{/color}",
     "description": "Color Tag 深粉红-标签"
   },
+  "Bold & Color Tag 深粉红&加粗-标签": {
+    "prefix": ["cbFF1493Bold -ColorBoldTag", "cbDeepPinkBold -ColorBoldTag"],
+    "body": "{color=#FF1493}\\[推荐]{/color}{b}$1{/b}",
+    "description": "Bold & Color Tag 深粉红&加粗-标签"
+  },
   "Font Tag 字体-标签": {
     "prefix": ["fFont -Tag"],
     "body": "{font=${1:font file}}$2{/font}",
