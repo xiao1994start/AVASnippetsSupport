@@ -1,6 +1,6 @@
 {
   "Region 创建新的折叠区域": {
-    "prefix": ["#region", "region"],
+    "prefix": ["#region ", "region "],
     "body": "#region ${1:Region name}\n$0\n#endregion ${1:Region name}",
     "description": "创建新的折叠区域."
   },
@@ -15,7 +15,7 @@
     "description": "跳转到标签."
   },
   "Call 调用标签": {
-    "prefix": ["call"],
+    "prefix": ["call "],
     "body": "call ${1:label_name}",
     "description": "调用标签."
   },
@@ -65,333 +65,223 @@
     "description": "创建 MultiPersistent"
   },
   "Renpy 暂停": {
-    "prefix": "rpause",
+    "prefix": ["rpause "],
     "body": "$ renpy.pause($1)\n$2",
     "description": "Ren'Py 暂停."
   },
   "电影过场动画": {
-    "prefix": "cutscene",
+    "prefix": ["cutscene "],
     "body": "$ renpy.movie_cutscene('${1:file_name.extension}')",
     "description": "电影过场动画"
   },
   "持久化数据": {
-    "prefix": "persist",
+    "prefix": ["persist "],
     "body": "$ persistent.${1:attribute_name} = ${2:# variable value}",
     "description": "持久化数据."
   },
   "多个游戏数据的持久化": {
-    "prefix": "multisave",
+    "prefix": ["multisave "],
     "body": "$ ${1:persistent_name}.save()",
     "description": "多个游戏数据的持久化"
   },
   "转场 - Fade": {
-    "prefix": "wFade",
+    "prefix": ["wFade "],
     "body": "with fade",
     "description": "转场 - Fade\n 0.5秒时间画面逐渐暗淡至全黑,然后0.5秒时间画面从全黑逐渐变亮成新界面"
   },
   "转场 - dissolve": {
-    "prefix": "wDissolve",
+    "prefix": ["wDissolve "],
     "body": "with dissolve",
     "description": "转场 - dissolve\n 0.5秒时间,使用溶解效果从旧界面切到新界面"
   },
   "转场 - pixellate": {
-    "prefix": "wPixel",
+    "prefix": ["wPixel "],
     "body": "with pixellate",
     "description": "转场 - pixellate\n 0.5秒像素化旧场景,并0.5秒反向像素化至新场景"
   },
   "转场 - Move": {
-    "prefix": "wMove",
+    "prefix": ["wMove "],
     "body": "with move",
     "description": "转场 - Move\n 0.5秒时间,将图像移动到新的位置"
   },
   "转场 - moveinright": {
-    "prefix": "wMoveInRight",
+    "prefix": ["wMoveInRight "],
     "body": "with moveinright",
     "description": "转场 - moveinright\n 从界面上对应的边界移入图像,用时0.5秒"
   },
   "转场 - moveoutright": {
-    "prefix": "wMoveInLeft",
+    "prefix": ["wMoveInLeft "],
     "body": "with moveinleft",
     "description": "转场 - moveoutright\n 从界面上对应的边界移出图像,用时0.5秒"
   },
   "转场 - moveintop": {
-    "prefix": "wMoveInTop",
+    "prefix": ["wMoveInTop "],
     "body": "with moveintop",
     "description": "转场 - moveintop"
   },
   "转场 - moveinbottom": {
-    "prefix": "wMoveInBottom",
+    "prefix": ["wMoveInBottom "],
     "body": "with moveinbottom",
     "description": "转场 - moveinbottom"
   },
   "If (条件语句)": {
-    "prefix": "if",
+    "prefix": ["if "],
     "body": "if ${1:condition}:\n\t${2:#block of code to run}",
     "description": "If (条件语句)"
   },
   "Else If (条件语句)": {
-    "prefix": "elif",
+    "prefix": ["elif "],
     "body": "elif ${1:condition}:\n\t${2:#block of code to run}",
     "description": "Else If (条件语句)"
   },
   "Else (条件语句)": {
-    "prefix": "else",
+    "prefix": ["else "],
     "body": "else:\n\t${1:#block of code to run}",
     "description": "Else (条件语句)"
   },
   "While (循环)": {
-    "prefix": "while",
+    "prefix": ["while "],
     "body": "while ${1:condition}:\n\t${2:#block of code to run}",
     "description": "While (循环)"
   },
   "选择菜单": {
-    "prefix": "menu",
+    "prefix": ["menu "],
     "body": "menu ${1:optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\t#block of code to run\n\t\"${4:Choice 2}\":\n\t\t#block of code to run\n\t${5:}",
     "description": "选择菜单"
   },
   "菜单选择": {
-    "prefix": "choice",
+    "prefix": ["choice "],
     "body": "\"${1:Choice N}\":\n\t${2:#block of code to run}\n\t$3",
     "description": "菜单选择"
   },
   "Ren'Py Docs 文档": {
-    "prefix": "dochelp",
+    "prefix": ["dochelp "],
     "body": "## Visit the site for documentation or help of Ren'Py engine. ##\n## Documentation:\n\t\"${1:http://www.renpy.org/doc/html/}\"\n## Wiki-Old Documentation:\n\t\"${2:http://www.renpy.org/wiki/renpy/Wiki_Home_Page}\"\n## Forum:\n\t\"${3:http://lemmasoft.renai.us/forums/viewforum.php?f=42}\"\n## Extension Documentation:\n\t\"${4:https://github.com/LuqueDaniel/vscode-language-renpy}\"",
     "description": "显示 docs/useful urls"
   },
   "Assert Equal 断言相等": {
-    "prefix": ",ase",
+    "prefix": [",ase "],
     "body": "self.assertEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Equal 断言相等"
   },
   "Assert Not Equal 断言不等": {
-    "prefix": ",asne",
+    "prefix": [",asne "],
     "body": "self.assertNotEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Not Equal 断言不等"
   },
   "Assert Raises 断言异常": {
-    "prefix": ",asr",
+    "prefix": [",asr "],
     "body": "self.assertRaises(${1:exception}, ${2:callable})$0",
     "description": "Assert Raises 断言异常"
   },
   "Assert True 断言真": {
-    "prefix": ",ast",
+    "prefix": [",ast "],
     "body": "self.assertTrue(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert True 断言真"
   },
   "Assert False 断言假": {
-    "prefix": ",asf",
+    "prefix": [",asf "],
     "body": "self.assertFalse(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert False 断言假"
   },
   "Assert Is 断言是...": {
-    "prefix": ",asi",
+    "prefix": [",asi "],
     "body": "self.assertIs(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Is 断言是..."
   },
   "Assert Is Not 断言非...": {
-    "prefix": ",asint",
+    "prefix": [",asint "],
     "body": "self.assertIsNot(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Is Not 断言非..."
   },
   "Assert Is None 断言为空...": {
-    "prefix": ",asino",
+    "prefix": [",asino "],
     "body": "self.assertIsNone(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert Is None 断言为空..."
   },
   "Assert Is Not None 断言不为空...": {
-    "prefix": ",asinno",
+    "prefix": [",asinno "],
     "body": "self.assertIsNotNone(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert Is Not None 断言不为空..."
   },
   "Assert In 断言包含...": {
-    "prefix": ",asin",
+    "prefix": [",asin "],
     "body": "self.assertIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
     "description": "Assert In 断言包含..."
   },
   "Assert Not In 断言不包含...": {
-    "prefix": ",asni",
+    "prefix": [",asni "],
     "body": "self.assertNotIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
     "description": "Assert Not In 断言不包含..."
   },
   "Assert 断言...": {
-    "prefix": ",as",
+    "prefix": [",as "],
     "body": "self.assert_(${1:boolean expression}${2:, '${3:message}'})$0",
     "description": "Assert 断言..."
   },
   "Fail (a test) 失败(测试)": {
-    "prefix": "fail",
+    "prefix": ["fail "],
     "body": "self.fail('${1:message}')$0",
     "description": "Fail (a test) 失败(测试)"
   },
   "New Class 新类": {
-    "prefix": "class",
+    "prefix": ["new class", "class "],
     "body": "class ${1:ClassName}(${2:object}):\n\t\"\"\"${3:docstring for $1}\"\"\"\n\tdef __init__(self, ${4:arg}):\n\t\t${5:super($1, self).__init__()}\n\t\tself.arg = arg\n\t\t$0",
     "description": "New Class 新类"
   },
   "New Method 新方法": {
-    "prefix": "defs",
+    "prefix": ["new defs", "defs "],
     "body": "def ${1:mname}(self, ${2:arg}):\n\t${3:pass}",
     "description": "New Method 新方法"
   },
   "New Function 新函数": {
-    "prefix": "def",
+    "prefix": ["new def", "def "],
     "body": "def ${1:fname}(${2:arg}):\n\t${3:pass}",
     "description": "New Function 新函数"
   },
   "New Property 新样式特性": {
-    "prefix": "property",
+    "prefix": ["new property", "property "],
     "body": "def ${1:foo}():\n    doc = \"${2:The $1 property.}\"\n    def fget(self):\n        ${3:return self._$1}\n    def fset(self, value):\n        ${4:self._$1 = value}\n    def fdel(self):\n        ${5:del self._$1}\n    return locals()\n$1 = property(**$1())$0",
     "description": "New Property 新样式特性"
   },
   "For (Loop) 循环": {
-    "prefix": "for",
+    "prefix": ["for "],
     "body": "for ${1:value} in ${2:variable}:\n\t${3:pass}",
     "description": "For (Loop) 循环"
   },
   "Try/Except 尝试-报错": {
-    "prefix": "try",
+    "prefix": ["try "],
     "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}",
     "description": "Try/Except 尝试-报错"
   },
   "列表推导式": {
-    "prefix": "lc",
+    "prefix": ["lc "],
     "body": "[${1:value} for ${2:value} in ${3:variable}]",
     "description": "列表推导式"
   },
   "列表推导式 (If Else 判断)": {
-    "prefix": "lcie",
+    "prefix": ["lcie"],
     "body": "[${1:value} if ${2:condition} else ${3:condition} for ${4:value} in ${5:variable}]",
     "description": "列表推导式 (If Else 判断)"
   },
   "字典推导式": {
-    "prefix": "dc",
+    "prefix": ["dc "],
     "body": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:variable}}",
     "description": "字典推导式"
   },
   "PDB set trace PDB集跟踪": {
-    "prefix": "pdb",
+    "prefix": ["pdb "],
     "body": "import pdb; pdb.set_trace()\n",
     "description": "PDB set trace PDB集跟踪"
   },
   "iPDB set trace iPDB集跟踪": {
-    "prefix": "ipdb",
+    "prefix": ["ipdb "],
     "body": "import ipdb; ipdb.set_trace()\n",
     "description": "iPDB set trace iPDB集跟踪"
   },
   "__magic__ 初始化": {
-    "prefix": "__",
+    "prefix": ["__ "],
     "body": "__${1:init}__",
     "description": "__magic__ 初始化"
-  },
-  "Anchor Tag URL链接-标签": {
-    "prefix": "aAnchor",
-    "body": "{a=${1:url}}$2{/a}",
-    "description": "Anchor Tag URL链接-标签"
-  },
-  "Alpha Tag 透明度-标签": {
-    "prefix": "alAlpha",
-    "body": "{alpha=${1:alpha value}}$2{/alpha}",
-    "description": "Alpha Tag 透明度-标签"
-  },
-  "Bold Tag 粗体-标签": {
-    "prefix": "bBold",
-    "body": "{b}$1{/b}",
-    "description": "Bold Tag 粗体-标签"
-  },
-  "Color Tag 颜色-标签": {
-    "prefix": "cColor",
-    "body": "{color=${1:color code}}$2{/color}",
-    "description": "Color Tag 颜色-标签"
-  },
-  "Characters per second Tag 设置了文本显示速度-标签": {
-    "prefix": "cp",
-    "body": "{cps=${1:characters per second}}$2{/cps}",
-    "description": "Characters per second Tag 设置了文本显示速度-标签"
-  },
-  "Font Tag 字体-标签": {
-    "prefix": "fFont",
-    "body": "{font=${1:font file}}$2{/font}",
-    "description": "Font Tag 字体-标签"
-  },
-  "Italics Tag 斜体-标签": {
-    "prefix": "iItalics",
-    "body": "{i}$1{/i}",
-    "description": "Italics Tag 斜体-标签"
-  },
-  "Kerning Tag 字偶距调整-标签": {
-    "prefix": "k",
-    "body": "{k=${1:adjust value}}$2{/k}",
-    "description": "Kerning Tag 字偶距调整-标签\n字偶距调整,任意两个字符之间的空白像素数会增加"
-  },
-  "Image Tag 图像-标签": {
-    "prefix": "im",
-    "body": "{image=${1:image file}}",
-    "description": "Image Tag 图像-标签"
-  },
-  "Strikethrough Tag 删除线-标签": {
-    "prefix": "s",
-    "body": "{s}$1{/s}",
-    "description": "Strikethrough Tag 删除线-标签"
-  },
-  "Ruby Text Top Tag": {
-    "prefix": "rt",
-    "body": "{rt}$1{/rt}",
-    "description": "Ruby Text Top Tag\n可选的上标字符标识了标签自身及其闭合标签范围内文本"
-  },
-  "Ruby Text Bottom Tag": {
-    "prefix": "rb",
-    "body": "{rb}$1{/rb}",
-    "description": "Ruby Text Bottom Tag"
-  },
-  "Size Tag 字号-标签": {
-    "prefix": "si",
-    "body": "{size=${1:size value}}$2{/size}",
-    "description": "Size Tag 字号-标签"
-  },
-  "Space Tag 空白-标签": {
-    "prefix": "sp",
-    "body": "{space=${1:space size}}",
-    "description": "Space Tag 空白-标签\n空白标签是一个自闭合标签,在一行文本内内插一段水平的空白"
-  },
-  "Underline Tag 下划线-标签": {
-    "prefix": "u",
-    "body": "{u}$1{/u}",
-    "description": "Underline Tag 下划线-标签"
-  },
-  "Vertical space Tag": {
-    "prefix": "v",
-    "body": "{vspace=${1:space size}}",
-    "description": "Vertical space Tag"
-  },
-  "Fast Tag": {
-    "prefix": "fa",
-    "body": "{fast}",
-    "description": "Fast Tag\n如果一行文本中出现了fast标签,在该标签前面的文本内容会立即显示,即使文本显示速度被设置为低速模式"
-  },
-  "No-wait Tag": {
-    "prefix": "n",
-    "body": "{nw}",
-    "description": "No-wait Tag\n'不等待'标签是一个自闭合标签,该标签前的那行文本内容在显示到一行结尾后立刻消失"
-  },
-  "Paragraph Tag 段落暂停-标签": {
-    "prefix": "p",
-    "body": "{p}",
-    "description": "Paragraph Tag 段落暂停-标签"
-  },
-  "Wait Paragraph Tag 段落暂停-标签": {
-    "prefix": "pp",
-    "body": "{p=${1:wait time}}",
-    "description": "Wait Paragraph Tag 段落暂停-标签"
-  },
-  "Wait Tag 等待-标签": {
-    "prefix": "w",
-    "body": "{w}",
-    "description": "Wait Tag 等待-标签"
-  },
-  "Wait time Tag 等待-标签": {
-    "prefix": "ww",
-    "body": "{w=${1:wait time}}",
-    "description": "Wait time Tag 等待-标签"
   }
 }

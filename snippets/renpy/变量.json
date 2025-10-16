@@ -24,7 +24,7 @@
     "description": "创建/修改 变量."
   },
   "$ 变量 (Create/Modify) ": {
-    "prefix": "$ ",
+    "prefix": ["$ "],
     "body": "$ ${1:variable_name} = ${2:# variable value}",
     "description": "创建/修改 变量."
   }

@@ -36,22 +36,22 @@
     ]
   },
   "open.write 写入文件": {
-    "prefix": ["open write -open"],
+    "prefix": ["open write "],
     "body": ["write($0)"],
     "description": ["open.write 如果要写入字符串以外的数据,先将他转换为字符串"]
   },
   "open.flush 刷新缓存": {
-    "prefix": ["open flush -open"],
+    "prefix": ["open flush "],
     "body": ["flush()"],
     "description": ["open.flush 刷新缓存"]
   },
   "open.close 关闭文件": {
-    "prefix": ["open close -open"],
+    "prefix": ["open close "],
     "body": ["close()"],
     "description": ["open.close 关闭文件"]
   },
   "open -r 只读模式": {
-    "prefix": ["with open r -open"],
+    "prefix": ["with open -r ", "wOpen -r "],
     "body": [
       "with open(${1:file_path}, 'r', encoding='utf-8') as f:",
       "    content = f.read()",
@@ -63,14 +63,14 @@
     ]
   },
   "open -rb 二进制只读": {
-    "prefix": ["with open rb -open"],
+    "prefix": ["with open -rb ", "wOpen -rb "],
     "body": ["with open(${1:file_path}, 'rb') as f:", "    f.read()", "    $0"],
     "description": [
       "open -rb 以二进制格式打开一个文件用于只读常用于读取图片、声音、视频等文件"
     ]
   },
   "open -r+ 读写 |->开头": {
-    "prefix": ["with open r+ -open"],
+    "prefix": ["with open -r+ ", "wOpen -r+ "],
     "body": [
       "with open(${1:file_path}, 'r+', encoding='utf-8') as f:",
       "    content = ${2:写入内容}",
@@ -82,7 +82,7 @@
     ]
   },
   "open -w 只写模式(创建/覆盖)": {
-    "prefix": ["with open w -open"],
+    "prefix": ["with open -w ", "wOpen -w "],
     "body": [
       "with open(${1:file_path}, 'w', encoding='utf-8') as f:",
       "    content = ${2:写入内容}",
@@ -92,7 +92,7 @@
     "description": ["open -w 只用于写入模式(覆盖原来内容)"]
   },
   "open -wb 二进制只写(创建/覆盖)": {
-    "prefix": ["with open wb -open"],
+    "prefix": ["with open -wb ", "wOpen -wb "],
     "body": [
       "with open(${1:file_path}, 'wb') as f:",
       "    content = ${2:写入内容}",
@@ -104,7 +104,7 @@
     ]
   },
   "open -w+ 读写模式 |->开头": {
-    "prefix": ["with open w+ -open"],
+    "prefix": ["with open -w+ ", "wOpen -w+ "],
     "body": [
       "with open(${1:file_path}, 'w+', encoding='utf-8') as f:",
       "    content = ${2:写入内容}",
@@ -116,7 +116,7 @@
     ]
   },
   "open -wb+ 二进制读写 |->开头": {
-    "prefix": ["with open wb+ -open"],
+    "prefix": ["with open -wb+ ", "wOpen -wb+ "],
     "body": [
       "with open(${1:file_path}, 'wb+') as f",
       "    content = ${2:写入内容}",
@@ -129,7 +129,7 @@
     ]
   },
   "open -a 追加模式 结尾->|": {
-    "prefix": ["with open a -open"],
+    "prefix": ["with open -a ", "wOpen -a "],
     "body": [
       "with open(${1:file_path}, 'a', encoding='utf-8') as f:",
       "    content = ${2:写入内容}",
@@ -141,7 +141,7 @@
     ]
   },
   "open -ab 追加模式 结尾->|": {
-    "prefix": ["with open ab -open"],
+    "prefix": ["with open -ab ", "wOpen -ab "],
     "body": [
       "with open(${1:file_path}, 'ab') as f:",
       "    content = ${2:写入内容}",
@@ -154,7 +154,7 @@
     ]
   },
   "open -a+ 追加模式 结尾->|": {
-    "prefix": ["with open a+ -open"],
+    "prefix": ["with open -a+ ", "wOpen -a+ "],
     "body": [
       "with open(${1:file_path}, 'a+', encoding='utf-8') as f:",
       "    content = ${2:写入内容}",
@@ -167,7 +167,7 @@
     ]
   },
   "open -ab+ 二进制追加 结尾->|": {
-    "prefix": ["with open ab+ -open"],
+    "prefix": ["with open -ab+ ", "wOpen -ab+ "],
     "body": [
       "with open(${1:file_path}, 'ab+') as f:",
       "    content = ${2:写入内容}",

@@ -1,0 +1,112 @@
+{
+  "Image Tag 图像-标签": {
+    "prefix": ["imImage -Tag"],
+    "body": "{image=${1:image file}}",
+    "description": "Image Tag 图像-标签"
+  },
+  "Anchor Tag URL链接-标签": {
+    "prefix": ["aAnchor -Tag"],
+    "body": "{a=${1:url}}$2{/a}",
+    "description": "Anchor Tag URL链接-标签"
+  },
+  "Alpha Tag 透明度-标签": {
+    "prefix": ["alAlpha -Tag"],
+    "body": "{alpha=${1:alpha value}}$2{/alpha}",
+    "description": "Alpha Tag 透明度-标签"
+  },
+  "Bold Tag 粗体-标签": {
+    "prefix": ["bBold -Tag"],
+    "body": "{b}$1{/b}",
+    "description": "Bold Tag 粗体-标签"
+  },
+  "Color Tag 颜色-标签": {
+    "prefix": ["cColor -Tag"],
+    "body": "{color=${1:color code}}$2{/color}",
+    "description": "Color Tag 颜色-标签"
+  },
+  "Font Tag 字体-标签": {
+    "prefix": ["fFont -Tag"],
+    "body": "{font=${1:font file}}$2{/font}",
+    "description": "Font Tag 字体-标签"
+  },
+  "Italics Tag 斜体-标签": {
+    "prefix": ["iItalics -Tag"],
+    "body": "{i}$1{/i}",
+    "description": "Italics Tag 斜体-标签"
+  },
+  "Kerning Tag 字偶距调整-标签": {
+    "prefix": ["kKerning -Tag"],
+    "body": "{k=${1:adjust value}}$2{/k}",
+    "description": "Kerning Tag 字偶距调整-标签\n字偶距调整,任意两个字符之间的空白像素数会增加"
+  },
+  "Strikethrough Tag 删除线-标签": {
+    "prefix": ["sStrikethrough -Tag"],
+    "body": "{s}$1{/s}",
+    "description": "Strikethrough Tag 删除线-标签"
+  },
+  "Ruby Text Top Tag": {
+    "prefix": ["rtRubyText -Tag"],
+    "body": "{rt}$1{/rt}",
+    "description": "Ruby Text Top Tag\n可选的上标字符标识了标签自身及其闭合标签范围内文本"
+  },
+  "Ruby Text Bottom Tag": {
+    "prefix": ["rbRubyTextBottom -Tag"],
+    "body": "{rb}$1{/rb}",
+    "description": "Ruby Text Bottom Tag\nRuby文本底部标签"
+  },
+  "Characters per second Tag 设置了文本显示速度-标签": {
+    "prefix": ["cpCharactersPerSecond -Tag"],
+    "body": "{cps=${1:characters per second}}$2{/cps}",
+    "description": "Characters per second Tag 设置了文本显示速度-标签"
+  },
+  "Size Tag 字号-标签": {
+    "prefix": ["siSize -Tag"],
+    "body": "{size=${1:size value}}$2{/size}",
+    "description": "Size Tag 字号-标签"
+  },
+  "Space Tag 空白-标签": {
+    "prefix": ["spSpace -Tag"],
+    "body": "{space=${1:space size}}",
+    "description": "Space Tag 空白-标签\n空白标签是一个自闭合标签,在一行文本内内插一段水平的空白"
+  },
+  "Underline Tag 下划线-标签": {
+    "prefix": ["uUnderline -Tag"],
+    "body": "{u}$1{/u}",
+    "description": "Underline Tag 下划线-标签"
+  },
+  "Vertical space Tag": {
+    "prefix": ["vVerticalSpace -Tag"],
+    "body": "{vspace=${1:space size}}",
+    "description": "Vertical space Tag 垂直空间标签"
+  },
+  "Fast Tag": {
+    "prefix": ["faFast -Tag"],
+    "body": "{fast}",
+    "description": "Fast Tag\n如果一行文本中出现了fast标签,在该标签前面的文本内容会立即显示,即使文本显示速度被设置为低速模式"
+  },
+  "No-wait Tag": {
+    "prefix": ["nNoWait -Tag"],
+    "body": "{nw}",
+    "description": "No-wait Tag\n`不等待`标签是一个自闭合标签,该标签前的那行文本内容在显示到一行结尾后立刻消失"
+  },
+  "Paragraph Tag 段落暂停-标签": {
+    "prefix": ["pParagraph -Tag"],
+    "body": "{p}",
+    "description": "Paragraph Tag 段落暂停-标签"
+  },
+  "Wait Paragraph Tag 段落暂停-标签": {
+    "prefix": ["ppWaitParagraph -Tag"],
+    "body": "{p=${1:wait time}}",
+    "description": "Wait Paragraph Tag 段落暂停-标签"
+  },
+  "Wait Tag 等待-标签": {
+    "prefix": ["wWait -Tag"],
+    "body": "{w}",
+    "description": "Wait Tag 等待-标签"
+  },
+  "Wait time Tag 等待-标签": {
+    "prefix": ["wwWaitTime -Tag"],
+    "body": "{w=${1:wait time}}",
+    "description": "Wait time Tag 等待-标签"
+  }
+}

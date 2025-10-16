@@ -1,35 +1,39 @@
 {
   "node.js 临时环境设置": {
-    "prefix": ["node Portable -node", "npm_Portable -node"],
+    "prefix": ["node Portable -node", "npm Portable -node"],
     "body": [
-      "if exist \"%~dp0\\node*\" (",
-      "    for /D %%i in (*node*) do (",
-      "        ren \"%~dp0\\%%i\" \"node\"",
+      "@REM 定位 node 解释器位置",
+      "",
+      "@REM 标准化文件名",
+      "if exist \"%CD%\\*node*\" (",
+      "    for /D %%i in (\"*node*\") do (",
+      "        ECHO %%~fi",
+      "        if not \"%%i\"==\"node\" (",
+      "            ren \"%%~fi\" \"node\"",
+      "        )",
       "    )",
       ")",
-      "set \"NODE_HOME=%~dp0\\node;%~dp0\\node\\node_modules\"",
-      "set \"path=%NODE_HOME%;%path%;\"",
-      "ECHO Node.js 版本号:",
+      "@REM 设置环境变量",
+      "set \"sysPath=%path%\"",
+      "@REM set \"sysPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "@REM ECHO 添加临时系统环境变量",
+      "set \"NODE_HOME=%CD%\\node;%CD%\\node\\node_modules;\"",
+      "set path=%NODE_HOME%;%sysPath%;",
+      "@REM ECHO %path%",
+      "ECHO 清理 npm 缓存",
+      "call npm cache clean --force",
+      "@REM 环境测试",
+      "ECHO 升级 npm",
+      "call npm i --global npm --registry https://registry.npmmirror.com/",
+      "@ECHO Node.js 版本号:",
       "call node -v",
-      "ECHO NPM 版本号:",
+      "@ECHO NPM 版本号:",
       "call npm -v",
-      "ECHO 检查 软件仓库位置:",
+      "@ECHO 检查 软件仓库位置:",
       "call npm root -g",
+      "",
       ""
     ],
     "description": ["node.js 临时环境设置"]
-  },
-  "node.js 环境变量": {
-    "prefix": ["node Env Path -node"],
-    "body": [
-      "set \"systemPath=%path%\"",
-      "@REM \"set systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "@REM ECHO 添加临时系统环境变量",
-      "set \"NODE_HOME=%~dp0\\node;%~dp0\\node\\node_modules\"",
-      "set path=%NODE_HOME%;%systemPath%;",
-      "ECHO %path%",
-      ""
-    ],
-    "description": ["node.js 环境变量"]
   }
 }

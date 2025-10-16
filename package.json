@@ -804,6 +804,10 @@
         "path": "./snippets/renpy/基础语法.json"
       },
       {
+        "language": "renpy",
+        "path": "./snippets/renpy/样式标签.json"
+      },
+      {
         "language": "scss",
         "path": "./snippets/scss/button按钮.json"
       },

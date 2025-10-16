@@ -10,7 +10,7 @@ CD /D "%~dp0..\..\env"
 @REM ECHO %CD%
 
 @REM 标准化文件名
-if exist "%cd%\*node*" (
+if exist "%CD%\*node*" (
     for /D %%i in ("*node*") do (
         ECHO %%~fi
         if not "%%i"=="node" (
@@ -22,7 +22,7 @@ if exist "%cd%\*node*" (
 set "sysPath=%path%"
 @REM set "sysPath=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\"
 @REM ECHO 添加临时系统环境变量
-set "NODE_HOME=%cd%\node;%cd%\node\node_modules;"
+set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
 set path=%NODE_HOME%;%sysPath%;
 @REM ECHO %path%
 @REM 环境测试
