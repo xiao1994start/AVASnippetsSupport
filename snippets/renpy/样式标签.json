@@ -25,17 +25,17 @@
     "description": "Color Tag 颜色-标签"
   },
   "Color Tag 暗灰色-标签": {
-    "prefix": ["c696969 -ColorTag", "cGray -ColorTag"],
+    "prefix": ["cColor--696969 -Tag", "cColor--Gray -Tag"],
     "body": "{color=#696969}\\[${1:推荐}]$0{/color}",
     "description": "Color Tag 暗灰色-标签"
   },
   "Color Tag 深粉红-标签": {
-    "prefix": ["cFF1493 -ColorTag", "cDeepPink -ColorTag"],
+    "prefix": ["cColor--1493 -Tag", "cColor--DeepPink bBold -Tag"],
     "body": "{color=#FF1493}\\[${1:推荐}]$0{/color}",
     "description": "Color Tag 深粉红-标签"
   },
   "Bold & Color Tag 深粉红&加粗-标签": {
-    "prefix": ["cFF1493Bold -ColorBoldTag", "cDeepPinkBold -ColorBoldTag"],
+    "prefix": ["cColor--149b Bold -Tag", "cColor--DeepPink Bold -Tag"],
     "body": "{color=#FF1493}\\[推荐]{/color}{b}$1{/b}",
     "description": "Bold & Color Tag 深粉红&加粗-标签"
   },
