@@ -45,10 +45,7 @@
     ]
   },
   "threading.Thread 创建线程事件对象": {
-    "prefix": [
-      "creat threading Thread -threading",
-      "c threading Thread -threading"
-    ],
+    "prefix": ["new threading Thread -threading"],
     "body": ["threading.Thread(target=${1:func}, kwargs={'args_1': '参数_1'})"],
     "description": ["threading.Thread 创建线程"]
   },

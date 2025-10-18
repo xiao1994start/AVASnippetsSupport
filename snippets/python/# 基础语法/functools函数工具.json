@@ -5,7 +5,7 @@
     "description": ["引入 functools 高阶函数"]
   },
   "使用 functools.wraps 保留原函数元信息的函数装饰器": {
-    "prefix": ["c functools wraps def", "creat functools wraps def"],
+    "prefix": ["new functools wraps def"],
     "body": [
       "def ${1:decorator}(func):",
       "    \"\"\"",
@@ -31,10 +31,7 @@
     "description": ["使用 functools.wraps 保留原函数元信息的函数装饰器"]
   },
   "functools.wraps => timer 创建计算函数运行时间的装饰器": {
-    "prefix": [
-      "c functools wraps def --timer =-functools wraps",
-      "creat functools wraps def --timer =-functools wraps"
-    ],
+    "prefix": ["new functools wraps def --timer =-functools wraps"],
     "body": [
       "def timer(func):",
       "    \"\"\"计算并打印函数执行时长的装饰器\"\"\"",

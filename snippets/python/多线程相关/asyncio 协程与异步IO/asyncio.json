@@ -5,7 +5,7 @@
     "description": ["引入 asyncio 异步IO实现更高的并发性"]
   },
   "async def 创建异步IO协程函数": {
-    "prefix": ["creat async def", "c async def", "asc def"],
+    "prefix": ["new async def", "asc def"],
     "body": [
       "async def ${1:name}():",
       "    \"\"\"",
