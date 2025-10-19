@@ -12,7 +12,6 @@
     "type": "git",
     "url": "https://github.com/xiao1994start/AVASnippetsSupport"
   },
-  "main": "./out/extension.js",
   "keywords": [
     "python",
     "renpy",
