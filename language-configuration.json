@@ -86,5 +86,14 @@
       "beforeText": "^[ \\t]*(?:class|def|for|if|elif|else|while|try|with|finally|except|async)\\b.*?:[ \\t]*$",
       "action": { "indent": "indent" }
     }
-  ]
+  ],
+
+  // Indentation rules
+  // 缩进规则
+  "indentationRules": {
+    // 匹配块开始的行 (if:, label:, python:, menu:)
+    "increaseIndentPattern": "^\\s*(if|elif|else|while|for|menu|label|screen|init|python|define)\\s*[^:\\n]*:\\s*$",
+    // 匹配 elif: 或 else:，告诉 VS Code 先退格再缩进
+    "decreaseIndentPattern": "^\\s*(elif|else)\\s*:"
+  }
 }
