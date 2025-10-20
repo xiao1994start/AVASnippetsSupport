@@ -104,6 +104,10 @@
         "path": "./snippets/bat/# 基础语法/attrib文件属性.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/bat/# 基础语法/Boolean布尔值.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/bat/# 基础语法/certutil系统证书.json"
       },
@@ -801,7 +805,7 @@
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/布尔值.json"
+        "path": "./snippets/renpy/Boolean布尔值.json"
       },
       {
         "language": "renpy",
