@@ -10,14 +10,19 @@
     "description": ["CD /D 更改当前directory"]
   },
   "当前目录": {
-    "prefix": ["cwd"],
-    "body": ["\"%~dp0${1:}\""],
+    "prefix": ["CD"],
+    "body": ["\"%CD\""],
     "description": ["当前目录"]
   },
-  "当前目录下R2R文件夹": {
+  "脚本当前目录": {
+    "prefix": ["cwd"],
+    "body": ["\"%~dp0${1:}\""],
+    "description": ["脚本当前目录"]
+  },
+  "脚本当前目录下R2R文件夹": {
     "prefix": ["dr2r"],
     "body": ["\"%~dp0R2R\\\\${1:example}\""],
-    "description": ["当前目录下R2R文件夹"]
+    "description": ["脚本当前目录下R2R文件夹"]
   },
   "当前系统盘": {
     "prefix": ["SystemDrive", "HomeDrive"],
