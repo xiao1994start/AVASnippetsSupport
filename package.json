@@ -801,6 +801,10 @@
       },
       {
         "language": "renpy",
+        "path": "./snippets/renpy/布尔值.json"
+      },
+      {
+        "language": "renpy",
         "path": "./snippets/renpy/基础语法.json"
       },
       {

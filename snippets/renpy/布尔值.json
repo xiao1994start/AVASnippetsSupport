@@ -1,0 +1,12 @@
+{
+  "True": {
+    "prefix": ["Tre ", "True "],
+    "body": "True",
+    "description": "True."
+  },
+  "False": {
+    "prefix": ["Fas ", "False "],
+    "body": "False",
+    "description": "False."
+  }
+}
