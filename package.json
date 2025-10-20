@@ -88,6 +88,9 @@
     ],
     "snippets": [
       {
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/bat/# 基础语法/# 基础命令.json"
       },
