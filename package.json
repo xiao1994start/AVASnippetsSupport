@@ -88,6 +88,27 @@
     ],
     "snippets": [
       {
+        "language": "bat",
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
+        "language": "renpy",
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/全局-注释标志.json"
+      },
+      {
+        "language": "xml",
         "path": "./snippets/全局-注释标志.json"
       },
       {
