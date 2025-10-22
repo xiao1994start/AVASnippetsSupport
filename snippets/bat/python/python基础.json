@@ -15,6 +15,7 @@
       "@ECHO 安装Jupyter内核ipykernel依赖库...",
       "@REM pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/",
       "",
+      "",
       "@ECHO 安装依赖库...",
       "$0",
       "",
@@ -27,6 +28,11 @@
       "@ECHO 完成!"
     ],
     "description": ["创建_激活 虚拟环境"]
+  },
+  "python -m": {
+    "prefix": ["call python -m", "call pm"],
+    "body": ["call python -m ${1:pip}"],
+    "description": ["python -m"]
   },
   "python 版本号": {
     "prefix": ["py version -python"],
