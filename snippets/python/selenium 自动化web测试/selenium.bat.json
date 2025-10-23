@@ -2,6 +2,8 @@
   "pip.selenium 自动化web测试": {
     "prefix": ["pip selenium"],
     "body": [
+      "ECHO.",
+      "ECHO * selenium 自动化web测试 *",
       "pip install -U selenium -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM DownloadTheDriver -> https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#download-the-driver",
       "@REM chromedriver -> https://getwebdriver.com/chromedriver",
@@ -13,6 +15,8 @@
   "uv.selenium 自动化web测试": {
     "prefix": ["uv selenium"],
     "body": [
+      "ECHO.",
+      "ECHO * selenium 自动化web测试 *",
       "uv add \"selenium\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM DownloadTheDriver -> https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#download-the-driver",
       "@REM chromedriver -> https://getwebdriver.com/chromedriver",

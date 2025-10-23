@@ -2,6 +2,8 @@
   "pip.Pillow 图像处理库": {
     "prefix": ["pip Pillow"],
     "body": [
+      "ECHO.",
+      "ECHO * Pillow 图像处理库 *",
       "pip install -U Pillow -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.Pillow 图像处理库": {
     "prefix": ["uv Pillow"],
     "body": [
+      "ECHO.",
+      "ECHO * Pillow 图像处理库 *",
       "uv add \"Pillow\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

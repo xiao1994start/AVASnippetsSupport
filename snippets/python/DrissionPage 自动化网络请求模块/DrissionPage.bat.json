@@ -2,6 +2,8 @@
   "pip.DrissionPage 自动化网络请求库": {
     "prefix": ["pip DrissionPage"],
     "body": [
+      "ECHO.",
+      "ECHO * DrissionPage 自动化网络请求库 *",
       "pip install -U DrissionPage -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM DownloadTheDriver -> https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#download-the-driver",
       "@REM chromedriver -> https://getwebdriver.com/chromedriver",
@@ -13,6 +15,8 @@
   "uv.DrissionPage 自动化网络请求库": {
     "prefix": ["uv DrissionPage"],
     "body": [
+      "ECHO.",
+      "ECHO * DrissionPage 自动化网络请求库 *",
       "uv add \"DrissionPage\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM DownloadTheDriver -> https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#download-the-driver",
       "@REM chromedriver -> https://getwebdriver.com/chromedriver",

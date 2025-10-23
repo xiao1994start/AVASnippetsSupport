@@ -2,6 +2,8 @@
   "pip.uiautomation Windows桌面程序自动化控制依赖": {
     "prefix": ["pip uiautomation"],
     "body": [
+      "ECHO.",
+      "ECHO * uiautomation Windows桌面程序自动化控制依赖 *",
       "pip install -U uiautomation -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.uiautomation Windows桌面程序自动化控制依赖": {
     "prefix": ["uv uiautomation"],
     "body": [
+      "ECHO.",
+      "ECHO * uiautomation Windows桌面程序自动化控制依赖 *",
       "uv add \"uiautomation\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

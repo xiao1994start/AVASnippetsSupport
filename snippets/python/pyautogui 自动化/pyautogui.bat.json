@@ -2,6 +2,8 @@
   "pip.pyautogui 自动化计算机行为库": {
     "prefix": ["pip pyautogui"],
     "body": [
+      "ECHO.",
+      "ECHO * pyautogui 自动化计算机行为库 *",
       "pip install -U setuptools pyscreeze Pillow pyautogui -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM 包管理 - pyscreeze(图片处理_截图等功能必备驱动库) - 主库",
       ""
@@ -14,6 +16,8 @@
   "uv.pyautogui 自动化计算机行为库": {
     "prefix": ["uv pyautogui"],
     "body": [
+      "ECHO.",
+      "ECHO * pyautogui 自动化计算机行为库 *",
       "uv add \"setuptools\" \"pyscreeze\" \"Pillow\" \"pyautogui\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM 包管理 - pyscreeze(图片处理_截图等功能必备驱动库) - 主库",
       ""

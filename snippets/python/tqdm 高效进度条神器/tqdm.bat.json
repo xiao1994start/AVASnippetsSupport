@@ -2,6 +2,8 @@
   "pip.tqdm 高效进度条神器": {
     "prefix": ["pip tqdm"],
     "body": [
+      "ECHO.",
+      "ECHO * tqdm 高效进度条神器 *",
       "pip install -U tqdm -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.tqdm 高效进度条神器": {
     "prefix": ["uv tqdm"],
     "body": [
+      "ECHO.",
+      "ECHO * tqdm 高效进度条神器 *",
       "uv add \"tqdm\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

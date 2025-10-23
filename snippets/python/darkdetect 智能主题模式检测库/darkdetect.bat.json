@@ -2,6 +2,8 @@
   "pip.darkdetect 智能主题模式检测库": {
     "prefix": ["pip darkdetect"],
     "body": [
+      "ECHO.",
+      "ECHO * darkdetect 智能主题模式检测库 *",
       "pip install -U darkdetect -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.darkdetect 智能主题模式检测库": {
     "prefix": ["uv darkdetect"],
     "body": [
+      "ECHO.",
+      "ECHO * darkdetect 智能主题模式检测库 *",
       "uv add \"darkdetect\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

@@ -552,6 +552,14 @@
         "path": "./snippets/python/httpx 网络请求/httpx.json"
       },
       {
+        "language": "bat",
+        "path": "./snippets/python/inquirer 交互式命令行终端/inquirer.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/inquirer 交互式命令行终端/inquirer.json"
+      },
+      {
         "language": "python",
         "path": "./snippets/python/itertools 迭代器创建/itertools.json"
       },

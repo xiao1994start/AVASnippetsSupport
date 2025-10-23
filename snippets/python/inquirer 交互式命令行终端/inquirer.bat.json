@@ -1,0 +1,22 @@
+{
+  "pip.inquirer 交互式命令行终端": {
+    "prefix": ["pip inquirer"],
+    "body": [
+      "ECHO.",
+      "ECHO * inquirer 交互式命令行终端 *",
+      "pip install -U inquirer -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["inquirer 交互式命令行终端"]
+  },
+  "uv.inquirer 交互式命令行终端": {
+    "prefix": ["uv inquirer"],
+    "body": [
+      "ECHO.",
+      "ECHO * inquirer 交互式命令行终端 *",
+      "uv add \"inquirer\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["inquirer 交互式命令行终端"]
+  }
+}

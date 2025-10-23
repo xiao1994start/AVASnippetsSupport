@@ -2,6 +2,8 @@
   "pip.FastAPI 网络API接口后端库": {
     "prefix": ["pip fastapi"],
     "body": [
+      "ECHO.",
+      "ECHO * fastapi 网络API接口后端库 *",
       "@REM 安装 fastapi web框架",
       "pip install -U fastapi uvicorn pydantic pywebview pyinstaller -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM 安装 uvicorn 异步服务器",
@@ -135,6 +137,8 @@
   "uv.FastAPI 网络API接口后端库": {
     "prefix": ["uv fastapi"],
     "body": [
+      "ECHO.",
+      "ECHO * fastapi 网络API接口后端库 *",
       "@REM 安装 fastapi web框架",
       "uv add \"fastapi\" \"uvicorn\" \"pydantic\" \"pywebview\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM 安装 uvicorn 异步服务器",

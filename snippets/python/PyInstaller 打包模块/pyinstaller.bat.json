@@ -2,6 +2,8 @@
   "pip.PyInstaller 打包库": {
     "prefix": ["pip PyInstaller"],
     "body": [
+      "ECHO.",
+      "ECHO * PyInstaller 打包库 *",
       "pip install -U pyinstaller -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.PyInstaller 打包库": {
     "prefix": ["uv PyInstaller"],
     "body": [
+      "ECHO.",
+      "ECHO * PyInstaller 打包库 *",
       "uv add \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

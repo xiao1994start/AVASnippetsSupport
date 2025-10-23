@@ -2,6 +2,8 @@
   "pip.httpx 网络请求库": {
     "prefix": ["pip httpx"],
     "body": [
+      "ECHO.",
+      "ECHO * httpx 网络请求库 *",
       "pip install -U httpx httpx[http2] httpx[brotli] httpx[socks] -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.httpx 网络请求库": {
     "prefix": ["uv httpx"],
     "body": [
+      "ECHO.",
+      "ECHO * httpx 网络请求库 *",
       "uv add \"httpx\" \"httpx[http2]\" \"httpx[brotli]\" \"httpx[socks]\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

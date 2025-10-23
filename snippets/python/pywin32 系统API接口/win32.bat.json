@@ -2,6 +2,8 @@
   "pip.pywin32 win系统库": {
     "prefix": ["pip pywin32"],
     "body": [
+      "ECHO.",
+      "ECHO * pywin32 win系统库 *",
       "pip install -U pywin32 -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.pywin32 win系统库": {
     "prefix": ["uv pywin32"],
     "body": [
+      "ECHO.",
+      "ECHO * pywin32 win系统库 *",
       "uv add \"pywin32\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

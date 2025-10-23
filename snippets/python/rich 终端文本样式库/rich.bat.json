@@ -2,6 +2,8 @@
   "pip.rich 终端输出文本样式库": {
     "prefix": ["pip rich"],
     "body": [
+      "ECHO.",
+      "ECHO * rich 终端输出文本样式库 *",
       "pip install -U rich -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.rich 终端输出文本样式库": {
     "prefix": ["uv rich"],
     "body": [
+      "ECHO.",
+      "ECHO * rich 终端输出文本样式库 *",
       "uv add \"rich\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

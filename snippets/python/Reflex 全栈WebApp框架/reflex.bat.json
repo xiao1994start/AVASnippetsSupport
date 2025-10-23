@@ -2,6 +2,8 @@
   "pip.reflex 全栈WebApp框架": {
     "prefix": ["pip reflex"],
     "body": [
+      "ECHO.",
+      "ECHO * reflex 全栈WebApp框架 *",
       "pip install -U reflex -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.reflex 全栈WebApp框架": {
     "prefix": ["uv reflex"],
     "body": [
+      "ECHO.",
+      "ECHO * reflex 全栈WebApp框架 *",
       "uv add \"reflex\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

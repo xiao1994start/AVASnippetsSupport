@@ -2,6 +2,8 @@
   "pip.streamlit 快速WebApp框架": {
     "prefix": ["pip streamlit"],
     "body": [
+      "ECHO.",
+      "ECHO * streamlit 快速WebApp框架 *",
       "pip install -U streamlit -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -10,6 +12,8 @@
   "uv.streamlit 快速WebApp框架": {
     "prefix": ["uv streamlit"],
     "body": [
+      "ECHO.",
+      "ECHO * streamlit 快速WebApp框架 *",
       "uv add \"streamlit\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
