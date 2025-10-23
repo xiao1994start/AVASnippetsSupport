@@ -1,6 +1,11 @@
 {
   "python-embed 嵌入式环境激活": {
-    "prefix": ["embed uv -python", "UV =-python"],
+    "prefix": [
+      "embed uv -python",
+      "UV =-python",
+      "embed -python",
+      "EM -python"
+    ],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
@@ -82,7 +87,7 @@
       "    ECHO       \"name\": \"Python Debug : Current File\",>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"type\": \"debugpy\",>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"request\": \"launch\",>> \"%~dp0.vscode\\launch.json\"",
-      "    ECHO       // \"program\": \"${file}\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
+      "    ECHO       // \"program\": \"\\${file}\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"program\": \"\\${workspaceFolder}/main.py\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"python\": \"${command:python.interpreterPath}\", // * Default settings.json -^> python.defaultInterpreterPath>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"console\": \"integratedTerminal\",>> \"%~dp0.vscode\\launch.json\"",
@@ -109,7 +114,7 @@
       "    ECHO       \"name\": \"Python Debug : Current File\",>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"type\": \"debugpy\",>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"request\": \"launch\",>> \"%~dp0.vscode\\launch.json\"",
-      "    ECHO       // \"program\": \"${file}\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
+      "    ECHO       // \"program\": \"\\${file}\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"program\": \"\\${workspaceFolder}/main.py\", // * Run Debug File>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"python\": \"${command:python.interpreterPath}\", // * Default settings.json -^> python.defaultInterpreterPath>> \"%~dp0.vscode\\launch.json\"",
       "    ECHO       \"console\": \"integratedTerminal\",>> \"%~dp0.vscode\\launch.json\"",
