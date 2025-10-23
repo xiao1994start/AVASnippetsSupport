@@ -148,8 +148,8 @@
     ]
   },
   "sys.exit 退出": {
-    "prefix": ["sys exit"],
-    "body": ["sys.exit(${1| ,0,1|})  # *0=无错误退出 | 1=有错误退出"],
+    "prefix": ["sys exit", "sys0exit", "sys1exit"],
+    "body": ["sys.exit(${1|0,1|})  # *0=无错误退出 | 1=有错误退出"],
     "description": ["sys.exit 退出"]
   }
 }

@@ -245,15 +245,59 @@
       "    在 3.9 版本加入.readlink()方法"
     ]
   },
+  "Path.copy 复制": {
+    "prefix": ["Path copy", "copy -Path"],
+    "body": ["copy(${1:target}, preserve_metadata=True)"],
+    "description": [
+      "Path.copy 将此文件或目录树复制到给定的 target, 并返回一个指向 target 的新 Path 实例",
+      "如果源是符号链接且 follow_symlinks 为 True (默认), 则复制符号链接的目标. 否则, 将在目标位置重新创建符号链接",
+      "preserve_metadata 为False (默认值), 则只保证复制目录结构和文件数据, 将 preserve_metadata 设置为 True 可以确保在支持的情况下复制文件和目录权限、标志、上次访问和修改时间以及扩展属性"
+    ]
+  },
+  "Path.copy_into 复制文件或目录树": {
+    "prefix": ["Path copy_into", "copy_into -Path"],
+    "body": ["copy_into(${1:target_dir}, preserve_metadata=True)"],
+    "description": [
+      "Path.copy_into 将此文件或目录树复制到给定的 target_dir 中, target_dir 应该是一个现有目录",
+      "如果源是符号链接且 follow_symlinks 为 True (默认), 则复制符号链接的目标. 否则, 将在目标位置重新创建符号链接",
+      "preserve_metadata 为False (默认值), 则只保证复制目录结构和文件数据, 将 preserve_metadata 设置为 True 可以确保在支持的情况下复制文件和目录权限、标志、上次访问和修改时间以及扩展属性"
+    ]
+  },
+  "Path.move 移动": {
+    "prefix": ["Path move", "move -Path"],
+    "body": ["move(${1:target})"],
+    "description": [
+      "Path.move 将此文件或目录树移动到给定 target, 并返回指向 target 的新 Path 实例",
+      "如果 target 不存在, 将创建它. 如果此路径和 target 都是现有文件, 则 target 将被覆盖. 如果两个路径指向相同的文件或目录, 或者 target 是非空目录, 则会引发 OSError",
+      "如果两个路径都在同一个文件系统上, 则使用 os.replace() 执行移动. 否则, 此路径将被复制(保留元数据和符号链接), 然后删除"
+    ]
+  },
+  "Path.move_into 移动文件或目录树": {
+    "prefix": ["Path move_into", "move_into -Path"],
+    "body": ["move_into(${1:target_dir})"],
+    "description": [
+      "Path.move_into 将此文件或目录树移动到给定的 target_dir 中, target_dir 应该是一个现有目录. 返回一个指向移动路径的新 Path 实例"
+    ]
+  },
+  "Path.info 查询文件类型信息": {
+    "prefix": ["Path info", "info -Path"],
+    "body": ["info(${1:target}, preserve_metadata=True)"],
+    "description": [
+      "Path.info 一个 PathInfo 对象, 支持查询文件类型信息. 该对象公开了缓存其结果的方法, 这有助于在根据文件类型进行切换时减少所需的系统调用次数",
+      "如果路径是由 Path.iterdir() 生成的, 则此属性会使用从扫描父目录中获取的一些文件类型信息进行初始化. 仅仅访问 Path.info 不会执行任何文件系统查询",
+      "要获取最新信息, 最好调用 Path.is_dir()、is_file() 和 is_symlink(), 而不是此属性的方法",
+      "没有办法重置缓存; 相反, 您可以通过 p = Path(p) 创建一个带有空信息缓存的新路径对象"
+    ]
+  },
   "Path.open 打开文件": {
     "prefix": ["Path open", "open -Path"],
     "body": [
-      "open(mode='${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', encoding=${3:'utf-8'})"
+      "open(mode='${1|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', encoding=${2:'utf-8'})"
     ],
     "description": ["Path.open 打开对象文件操作"]
   },
   "Path.stat 返回有关路径的信息": {
-    "prefix": ["Path_stat", "stat_Path"],
+    "prefix": ["Path stat", "stat -Path"],
     "body": ["stat()"],
     "description": [
       "Path.stat 返回一个 os.stat_result 对象, 其中包含有关此路径的信息, 例如 os.stat().  结果会在每次调用此方法时重新搜索",
