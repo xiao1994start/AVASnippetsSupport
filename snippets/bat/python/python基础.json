@@ -45,7 +45,7 @@
     "description": "pip 版本号"
   },
   "pip.Jupyter内核ipykernel依赖库": {
-    "prefix": ["pip -Jupyter", "pip -ipykernel"],
+    "prefix": ["pip Jupyter", "pip ipykernel"],
     "body": [
       "@ECHO 安装Jupyter内核ipykernel依赖库...",
       "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"
@@ -79,7 +79,7 @@
     "description": ["pipconfig.index批量镜像源"]
   },
   "pip.install 安装库": {
-    "prefix": ["pip -install", "pip -I"],
+    "prefix": ["pip new -install", "pip new -I"],
     "body": [
       "pip install ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
     ],
@@ -93,7 +93,7 @@
     "description": ["pip -reinstall 强制重装库"]
   },
   "pip.install-upgrade 安装最新发布库": {
-    "prefix": ["pip -install-U", "pip -U"],
+    "prefix": ["pip new -install-U", "pip new -U"],
     "body": [
       "pip install -U ${1:pip} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
     ],
@@ -110,7 +110,7 @@
     "description": ["pip -freeze 获取安装库列表"]
   },
   "pip.requirements 列式安装库": {
-    "prefix": ["pip -install-requirements", "pip -install-txt"],
+    "prefix": ["pip -install-requirements", "pip txt -install"],
     "body": [
       "pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"
     ],

@@ -6,9 +6,7 @@
   },
   "shutil.copyfile 文件拷贝": {
     "prefix": ["shutil copyfile"],
-    "body": [
-      "shutil.copyfile(${1:src_StrOrBytesPath}, ${2:dst_StrOrBytesPath})"
-    ],
+    "body": ["shutil.copyfile(${1:str(srcPath)}, ${2:str(dstPath)})"],
     "description": [
       "shutil.copyfile",
       "    将名为 src 的文件的内容(不带元数据)拷贝到名为 dst 的文件并以尽可能高效的方式返回 dst.  src 和 dst 均为 数据型对象 或字符串形式的路径名",
@@ -20,7 +18,7 @@
   },
   "shutil.copymode 权限拷贝": {
     "prefix": ["shutil copymode"],
-    "body": ["shutil.copymode(${1:srcObject}, ${2:dstObject})"],
+    "body": ["shutil.copymode(${1:str(srcPath)}, ${2:str(dstPath)})"],
     "description": [
       "shutil.copymode 将权限位从 src 拷贝到 dst.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名.  如果 follow_symlinks 为假值, 并且 src 和 dst 均为符号链接, 则 copymode() 将尝试修改 dst 本身的模式(而不是它所指向的文件).  此功能并不是在所有平台上均可用; 请参阅 copystat() 了解详情.  如果 copymode() 无法修改本机平台上的符号链接, 而它被要求这样做, 它将不做任何操作即返回",
       "    引发一个 审计事件 shutil.copymode 附带参数 src, dst"
@@ -28,7 +26,7 @@
   },
   "shutil.copystat 属性拷贝": {
     "prefix": ["shutil copystat"],
-    "body": ["shutil.copystat(${1:srcObject}, ${2:dstObject})"],
+    "body": ["shutil.copystat(${1:str(srcPath)}, ${2:str(dstPath)})"],
     "description": [
       "shutil.copystat 将权限位、最近访问时间、最近修改时间和旗标从 src 拷贝到 dst.  在 Linux 上, copystat() 还会在可能的情况下拷贝“扩展属性”.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名",
       "    如果 follow_symlinks 为假值, 并且 src 和 dst 均指向符号链接, copystat() 将作用于符号链接本身而非该符号链接所指向的文件 — 从 src 符号链接读取信息, 并将信息写入 dst 符号链接"
@@ -36,7 +34,7 @@
   },
   "shutil.copy 文件或目录拷贝": {
     "prefix": ["shutil copy"],
-    "body": ["shutil.copy(${1:srcObject}, ${2:dstPath})"],
+    "body": ["shutil.copy(${1:str(srcPath)}, ${2:str(dstPath)})"],
     "description": [
       "shutil.copy 将文件 src 拷贝到文件或目录 dst.  src 和 dst 应为 路径类对象 或字符串.  如果 dst 指定了一个目录, 文件将使用 src 中的基准文件名拷贝到 dst 中.  如果 dst 指定了一个已存在的文件, 它将被替换.  返回新创建文件所对应的路径",
       "    如果 follow_symlinks 为假值且 src 为符号链接, 则 dst 也将被创建为符号链接.  如果 follow_symlinks 为真值且 src 为符号链接, dst 将成为 src 所指向的文件的一个副本",
@@ -47,7 +45,7 @@
   },
   "shutil.copy2 文件或目录拷贝(尝试保留文件的元数据)": {
     "prefix": ["shutil copy2"],
-    "body": ["shutil.copy2(${1:srcObject}, ${2:dstPaht})"],
+    "body": ["shutil.copy2(${1:str(srcPath)}, ${2:str(dstPath)})"],
     "description": [
       "shutil.copy2 类似于 copy(), 区别在于 copy2() 还会尝试保留文件的元数据",
       "    当 follow_symlinks 为假值, 并且 src 为符号链接时, copy2() 会尝试将来自 src 符号链接的所有元数据拷贝到新创建的 dst 符号链接.  但是, 此功能不是在所有平台上均可用.  在此功能部分或全部不可用的平台上, copy2() 将尽量保留所有元数据, copy2() 一定不会由于无法保留文件元数据而引发异常",
@@ -76,7 +74,7 @@
   },
   "shutil.rmtree 删除一个完整的目录树": {
     "prefix": ["shutil rmtree"],
-    "body": ["shutil.rmtree(${1:StrPath_Path})"],
+    "body": ["shutil.rmtree(${1:str(Path)})"],
     "description": [
       "shutil.rmtree 删除一个完整的目录树; path 必须指向一个目录(但不能是一个目录的符号链接).  如果 ignore_errors 为真值, 则删除失败导致的错误将被忽略; 如果为假值或被省略, 则此类错误将通过调用由 onexc 或 onerror 所指定的处理句柄来处理, 或者如果此参数被省略, 异常将被传播给调用方",
       "    如果提供了 onexc, 它必须为接受三个形参的可调用对象: function, path 和 excinfo",

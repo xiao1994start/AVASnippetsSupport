@@ -1,6 +1,6 @@
 {
   "pip.依赖名 依赖描述": {
-    "prefix": ["pip 依赖名"],
+    "prefix": ["pip new", "pip new -install-U"],
     "body": [
       "pip install -U 依赖名 -i https://mirrors.aliyun.com/pypi/simple/",
       ""
@@ -8,7 +8,7 @@
     "description": ["依赖名 依赖描述"]
   },
   "uv.依赖名 依赖描述": {
-    "prefix": ["uv 依赖名"],
+    "prefix": ["uv new", "uv new -add--upgrade"],
     "body": [
       "uv add \"依赖名\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
