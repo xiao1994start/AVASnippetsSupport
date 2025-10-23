@@ -14,7 +14,7 @@
   },
   "textwrap.dedent 移除 text 中每一行的任何相同前缀空白符": {
     "prefix": ["textwrap -dedent", "dedent -textwrap"],
-    "body": ["dedent(${1:RichText})"],
+    "body": ["dedent(${1:Multiline_text})"],
     "description": ["移除 text 中每一行的任何相同前缀空白符"]
   }
 }
