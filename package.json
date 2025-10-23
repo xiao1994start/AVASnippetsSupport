@@ -776,6 +776,10 @@
         "path": "./snippets/python/sys 系统相关的形参和函数/sys.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/textwrap 文本自动换行与填充/textwrap.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/uvicorn ASGI_Web服务器实现/uvicorn.bat.json"
       },

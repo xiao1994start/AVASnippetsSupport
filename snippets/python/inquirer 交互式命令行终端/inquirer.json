@@ -1,7 +1,11 @@
 {
   "引入 inquirer 交互式命令行终端": {
     "prefix": ["import inquirer", "im inquirer"],
-    "body": ["import inquirer  # *交互式命令行终端", ""],
+    "body": [
+      "import inquirer  # *交互式命令行终端",
+      "from inquirer.themes import BlueComposure, GreenPassion, RedSolace  # *交互式命令行终端主题",
+      ""
+    ],
     "description": ["交互式命令行终端"]
   },
   "inquirer.List 列表式选项控制台交互": {
@@ -13,7 +17,7 @@
       "List 列表式选项控制台交互",
       "help:https://pypi.org/project/inquirer/ | https://python-inquirer.readthedocs.io/en/latest/index.html",
       "\"\"\"",
-      "from inquirer.themes import BlueComposure, GreenPassion, RedSolace",
+      "# from inquirer.themes import BlueComposure, GreenPassion, RedSolace",
       "questions = [",
       "    inquirer.List(",
       "        name='id1',  # *`inquirer.prompt` 返回值->`dict`字典: {name_id, choice_选项}",
@@ -28,7 +32,7 @@
       "]",
       "result = inquirer.prompt(",
       "    questions=questions,",
-      "    theme=GreenPassion(),  # *主题,默认:Default. 可选:BlueComposure, GreenPassion, RedSolace",
+      "    theme=inquirer.themes.GreenPassion(),  # *主题,默认:Default. 可选:BlueComposure, GreenPassion, RedSolace",
       ")",
       "print(f'当前执行:{result}')  # *->{name_id, choice_选项}",
       ""

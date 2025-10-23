@@ -36,5 +36,10 @@
     "prefix": ["os sep", "sep -os"],
     "body": ["os.sep"],
     "description": ["os.sep 操作系统用来分隔路径符", "在 Windows 上是是 '\\'"]
+  },
+  "os.system 执行操作系统命令": {
+    "prefix": ["os system", "system -os"],
+    "body": ["os.system('cls' if os.name == 'nt' else 'clear')"],
+    "description": ["os.system 执行操作系统命令"]
   }
 }

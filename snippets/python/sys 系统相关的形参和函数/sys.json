@@ -6,10 +6,9 @@
   },
   "sys.argv 脚本传入参数": {
     "prefix": ["sys argv"],
-    "body": [
-      "sys.argv  # -> list[str]: [0]->脚本名, [1]->参数1, [2]->参数2, ..."
-    ],
+    "body": ["sys.argv"],
     "description": [
+      "sys.argv -> list[str]: [0]->脚本名, [1]->参数1, [2]->参数2, ...",
       "sys.argv 一个列表, 其中包含了被传递给 Python 脚本的命令行参数",
       "\nargv[0] 为脚本的名称(是否是完整的路径名取决于操作系统)",
       "\n如果是通过 Python 解释器的命令行参数 -c 来执行的,  argv[0] 会被设置成字符串 '-c' ",
@@ -150,7 +149,7 @@
   },
   "sys.exit 退出": {
     "prefix": ["sys exit"],
-    "body": ["sys.exit(${1| ,0,[0]|})"],
+    "body": ["sys.exit(${1| ,0,1|})  # *0=无错误退出 | 1=有错误退出"],
     "description": ["sys.exit 退出"]
   }
 }
