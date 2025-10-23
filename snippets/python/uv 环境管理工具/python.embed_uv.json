@@ -155,7 +155,7 @@
       "    if not exist \"%~dp0python\\get-pip.py\" (",
       "        ECHO 初始化 get-pip.py",
       "        ECHO.",
-      "        @REM todo 进入 python 目录(pip documentation:https://pip.pypa.io/en/stable/installation/ ^| 下载get-pip.py: https://www.python.org/downloads/windows/)",
+      "        @REM TODO 进入 python 目录(pip documentation:https://pip.pypa.io/en/stable/installation/ ^| 下载get-pip.py: https://www.python.org/downloads/windows/)",
       "        ECHO 配置 pip 镜像",
       "        ECHO [global]> \"%~dp0python\\pip.ini\"",
       "        ECHO index-url = https://mirrors.aliyun.com/pypi/simple/>> \"%~dp0python\\pip.ini\"",
