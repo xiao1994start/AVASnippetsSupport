@@ -29,7 +29,7 @@
       "    '--log-level=INFO',  # 编译时控制台信息的详细程度(默认值: INFO): TRACE | DEBUG | INFO | WARN | DEPRECATION | ERROR | FATAL",
       "    '--noconfirm',  # 覆盖输出目录中的原有内容(默认值: SPECPATH/dist/SPECNAME), 不请求确认",
       "    '--clean',  # 清理之前的打包文件",
-      "    # TODO 打包资源文件 --add-data=资源路径;目标路径",
+      "    # TODO 打包资源文件 --add-data=资源路径;目标路径[使用 Path(__file__).parent.resolve() 定位脚本位置后, 在加入子路径进行调用]",
       "    f'--add-data={Path(nicegui.__file__).parent}{os.pathsep}nicegui',",
       "    f'--add-data={Path(ex4nicegui.__file__).parent}{os.pathsep}ex4nicegui',",
       "    f'--add-data={Path(Path(__file__).parent,'utils')}{os.pathsep}utils',",
