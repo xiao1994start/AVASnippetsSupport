@@ -1,20 +1,8 @@
 {
   "自动添加语言按钮入口": {
-    "prefix": ["if languages ="],
+    "prefix": ["textbutton _schinese =-action Language"],
     "body": [
-      "if len(renpy.known_languages()) > 0:",
-      "    vbox:",
-      "        style_prefix \"radio\"",
-      "        label _(\"Language\")",
-      "        textbutton _(\"English{#prefs}\"):",
-      "            action Language(None)",
-      "        for lang in renpy.known_languages():",
-      "            $ option_title = language_titles.get(lang, lang)",
-      "            $ option_font = language_title_fonts.get(lang, None)",
-      "            textbutton option_title:",
-      "                action Language(lang)",
-      "                if option_font is not None:",
-      "                    text_font option_font",
+      "textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1|MiSans-Regular.ttf,MiSans-Bold.ttf,SourceHanSansCN-Bold.ttf|}\" action Language(\"schinese\")",
       ""
     ],
     "description": ["自动添加语言按钮入口"]
