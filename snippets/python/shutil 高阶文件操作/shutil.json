@@ -8,7 +8,7 @@
     "prefix": ["shutil copyfile"],
     "body": ["shutil.copyfile(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
-      "shutil.copyfile",
+      "shutil.copyfile 文件拷贝, 拷贝源文件内容, 当目标不存在时会创建文件",
       "    将名为 src 的文件的内容(不带元数据)拷贝到名为 dst 的文件并以尽可能高效的方式返回 dst.  src 和 dst 均为 数据型对象 或字符串形式的路径名",
       "    dst 必须是完整的目标文件名; 对于接受目标目录路径的拷贝请参见 copy().  如果 src 和 dst 指定了同一个文件, 则将引发 SameFileError",
       "    目标位置必须是可写的; 否则将引发 OSError 异常.  如果 dst 已经存在, 它将被替换.  特殊文件如字符或块设备以及管道无法用此函数来拷贝",
@@ -24,7 +24,7 @@
       "    引发一个 审计事件 shutil.copymode 附带参数 src, dst"
     ]
   },
-  "shutil.copystat 属性拷贝": {
+  "shutil.copystat 属性|统计信息 拷贝": {
     "prefix": ["shutil copystat"],
     "body": ["shutil.copystat(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
@@ -57,7 +57,7 @@
   "shutil.copytree 递归目录树拷贝": {
     "prefix": ["shutil copytree"],
     "body": [
-      "shutil.copytree(${1:src}, ${2:dst}, dirs_exist_ok=${3|True,False|})"
+      "shutil.copytree(str(${1:srcPath}), str(${2:dstPath}), dirs_exist_ok=${3|True,False|})"
     ],
     "description": [
       "shutil.copytree 递归地将以 src 为根起点的整个目录树拷贝到名为 dst 的目录并返回目标目录.  所需的包含 dst 的中间目录在默认情况下也将被创建",

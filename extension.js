@@ -101,8 +101,7 @@ function isCursorInsidePairDelimiter(editor, selection) {
   }
   const document = editor.document;
   const currentLine = selection.active.line;
-  const position = selection.active.character;
-  // 核心分隔符：开启符号 -> 对应的关闭符号
+  const position = selection.active.character; // 核心分隔符：开启符号 -> 对应的关闭符号
   const structuralDelimiters = { "(": ")", "{": "}", "[": "]", "<": ">" };
   const stringDelimiters = {
     '"': '"',
@@ -117,7 +116,7 @@ function isCursorInsidePairDelimiter(editor, selection) {
   // --------------------------------------------------------
   // 1. 向上/向左搜索最邻近的未闭合 'Open' 字符 (跨行/跨字符)
   // --------------------------------------------------------
-  let nestedCount = 0; // 用于追踪结构分隔符的嵌套层级
+  let nestedCount = 0; // 用于追踪结构分隔符的嵌套层级, 将字符串分隔符的向左搜索限制在当前行 (i === currentLine)
   for (
     let i = currentLine;
     i >= Math.max(0, currentLine - MAX_LINES_TO_SEARCH);
@@ -126,24 +125,49 @@ function isCursorInsidePairDelimiter(editor, selection) {
     const lineText = document.lineAt(i).text;
     const startPos = i === currentLine ? position - 1 : lineText.length - 1;
     for (let j = startPos; j >= 0; j--) {
-      const char = lineText[j];
-      // 检查多字符字符串分隔符 (如 """ 或 ''')
-      for (const openStr in stringDelimiters) {
-        if (openStr.length > 1 && j >= openStr.length - 1) {
-          const foundStr = lineText.substring(j - openStr.length + 1, j + 1);
-          if (foundStr === openStr) {
-            // 遇到三引号，由于三引号通常不嵌套，且是最高优先级，我们视为找到
-            openChar = openStr;
-            targetCloseChar = stringDelimiters[openStr];
+      const char = lineText[j]; // 仅在当前行 (i === currentLine) 检查字符串分隔符
+      if (i === currentLine) {
+        // 检查多字符字符串分隔符 (如 """ 或 ''')
+        for (const openStr in stringDelimiters) {
+          if (openStr.length > 1 && j >= openStr.length - 1) {
+            const foundStr = lineText.substring(j - openStr.length + 1, j + 1);
+            if (foundStr === openStr) {
+              // 遇到三引号，我们视为找到（仅限于当前行）
+              openChar = openStr;
+              targetCloseChar = stringDelimiters[openStr];
+              delimiterType = "string";
+              j = -1; // 跳出内层循环
+              i = -1; // 跳出外层循环
+              break;
+            }
+          }
+        }
+        if (openChar) break;
+        // --- 单字符字符串分隔符处理 (", ', `) ---
+        else if (stringDelimiters.hasOwnProperty(char)) {
+          // 仅处理单引号。我们寻找最近的未闭合引号。（仅限于当前行）
+          // 搜索一个配对的引号，如果找到，则跳过该配对。
+          let pairFound = false;
+          for (let k = j - 1; k >= 0; k--) {
+            if (lineText[k] === char) {
+              // 找到了匹配的开启引号，意味着 (k, j) 是一对已闭合的引号。
+              pairFound = true;
+              j = k; // 跳过这一对，从 k-1 处继续搜索
+              break;
+            }
+          }
+          if (!pairFound) {
+            // 找不到左侧匹配的引号，则它可能是未闭合的开始引号
+            openChar = char;
+            targetCloseChar = stringDelimiters[char];
             delimiterType = "string";
-            j = -1; // 跳出内层循环
-            i = -1; // 跳出外层循环
+            j = -1;
+            i = -1;
             break;
           }
         }
-      }
-      if (openChar) break;
-      // --- 结构分隔符检查 (括号、花括号、方括号) ---
+      } // end if (i === currentLine)
+      if (openChar) break; // --- 结构分隔符检查 (括号、花括号、方括号) --- (允许跨行)
       if (structuralDelimiters.hasOwnProperty(char)) {
         // 是开启符 ( ( { [ < )
         if (nestedCount === 0) {
@@ -159,30 +183,6 @@ function isCursorInsidePairDelimiter(editor, selection) {
         // 是关闭符 ( ) } ] > )
         nestedCount++;
       }
-      // --- 单字符字符串分隔符处理 (", ', `) ---
-      else if (stringDelimiters.hasOwnProperty(char)) {
-        // 仅处理单引号。我们寻找最近的未闭合引号。
-        // 搜索一个配对的引号，如果找到，则跳过该配对。
-        let pairFound = false;
-        for (let k = j - 1; k >= 0; k--) {
-          if (lineText[k] === char) {
-            // 找到了匹配的开启引号，意味着 (k, j) 是一对已闭合的引号。
-            // 因为我们是从右向左搜索，所以这已经是最近的闭合对。
-            pairFound = true;
-            j = k; // 跳过这一对，从 k-1 处继续搜索
-            break;
-          }
-        }
-        if (!pairFound) {
-          // 找不到左侧匹配的引号，则它可能是未闭合的开始引号
-          openChar = char;
-          targetCloseChar = stringDelimiters[char];
-          delimiterType = "string";
-          j = -1;
-          i = -1;
-          break;
-        }
-      }
     }
     if (openChar) break;
   }
@@ -194,51 +194,27 @@ function isCursorInsidePairDelimiter(editor, selection) {
   // --------------------------------------------------------
   let closeLine = -1;
   let closeIndex = -1;
-  nestedCount = 0; // 重置计数器，用于匹配目标关闭符
-  // 如果是字符串，则不需要嵌套计数，直接找第一个匹配的关闭符
-  if (delimiterType === "string" && targetCloseChar.length === 1) {
-    // 字符串分隔符 (单引号) 搜索
-    for (
-      let i = currentLine;
-      i <= Math.min(document.lineCount - 1, currentLine + MAX_LINES_TO_SEARCH);
-      i++
-    ) {
-      const lineTextI = document.lineAt(i).text;
-      const startPos = i === currentLine ? position : 0;
-      if (i === currentLine) {
-        // 在当前行，只搜索光标之后的部分
-        const index = lineTextI.indexOf(targetCloseChar, startPos);
-        if (index !== -1) {
-          closeLine = i;
-          closeIndex = index;
-          break;
-        }
-      } else {
-        // 在后续行，从行首开始搜索第一个
-        const index = lineTextI.indexOf(targetCloseChar);
-        if (index !== -1) {
-          closeLine = i;
-          closeIndex = index;
-          break;
-        }
+  nestedCount = 0; // 重置计数器，用于匹配目标关闭符, 字符串分隔符的搜索限制在当前行 (i === currentLine)
+  if (delimiterType === "string") {
+    // 字符串分隔符 (单引号/三引号) 搜索：仅在当前行查找
+    let i = currentLine;
+    const lineTextI = document.lineAt(i).text;
+    const startPos = position;
+    if (targetCloseChar.length === 1) {
+      // 单字符字符串分隔符搜索
+      const index = lineTextI.indexOf(targetCloseChar, startPos);
+      if (index !== -1) {
+        closeLine = i;
+        closeIndex = index;
       }
-    }
-  } else if (delimiterType === "string" && targetCloseChar.length > 1) {
-    // 字符串分隔符 (三引号) 搜索
-    const searchRegex = new RegExp(escapeRegExp(targetCloseChar), "g");
-    for (
-      let i = currentLine;
-      i <= Math.min(document.lineCount - 1, currentLine + MAX_LINES_TO_SEARCH);
-      i++
-    ) {
-      const lineTextI = document.lineAt(i).text;
-      let startPos = i === currentLine ? position : 0;
+    } else {
+      // 多字符字符串分隔符搜索
+      const searchRegex = new RegExp(escapeRegExp(targetCloseChar), "g");
       searchRegex.lastIndex = startPos;
       const match = searchRegex.exec(lineTextI);
       if (match) {
         closeLine = i;
         closeIndex = match.index;
-        break;
       }
     }
   } else {
@@ -253,49 +229,46 @@ function isCursorInsidePairDelimiter(editor, selection) {
       const lineTextI = document.lineAt(i).text;
       const startPos = i === currentLine ? position : 0;
       for (let j = startPos; j < lineTextI.length; j++) {
-        const char = lineTextI[j];
-        // 检查多字符引号 (如 Python 的三引号)
-        let matchedMultiQuote = null;
-        for (const multi of multiQuotes) {
-          if (
-            j + multi.length <= lineTextI.length &&
-            lineTextI.substring(j, j + multi.length) === multi
-          ) {
-            matchedMultiQuote = multi;
-            break;
+        const char = lineTextI[j]; // 结构分隔符搜索时，仅检查当前行中的字符串配对，并跳过
+        if (i === currentLine) {
+          // 检查多字符引号 (如 Python 的三引号)
+          let matchedMultiQuote = null;
+          for (const multi of multiQuotes) {
+            if (
+              j + multi.length <= lineTextI.length &&
+              lineTextI.substring(j, j + multi.length) === multi
+            ) {
+              matchedMultiQuote = multi;
+              break;
+            }
           }
-        }
-        if (matchedMultiQuote) {
-          // 找到多字符开启引号，跳过直到找到匹配的结束引号
-          const closingIndex = lineTextI.indexOf(
-            matchedMultiQuote,
-            j + matchedMultiQuote.length
-          );
-          if (closingIndex !== -1) {
-            j = closingIndex + matchedMultiQuote.length - 1; // 跳到结束引号的末尾
-            continue;
-          } else {
-            // 未闭合的多字符引号，跳过本行剩余部分
-            j = lineTextI.length;
-            continue;
+          if (matchedMultiQuote) {
+            // 找到多字符开启引号，跳过直到找到匹配的结束引号
+            const closingIndex = lineTextI.indexOf(
+              matchedMultiQuote,
+              j + matchedMultiQuote.length
+            );
+            if (closingIndex !== -1) {
+              j = closingIndex + matchedMultiQuote.length - 1; // 跳到结束引号的末尾
+              continue;
+            } else {
+              // 未闭合的多字符引号，跳过本行剩余部分
+              j = lineTextI.length;
+              continue;
+            }
+          } // 检查单字符引号
+          if (singleQuotes.includes(char)) {
+            // 找到单字符开启引号，寻找同类型关闭引号
+            const closingIndex = lineTextI.indexOf(char, j + 1);
+            if (closingIndex !== -1) {
+              j = closingIndex; // 跳到结束引号的位置
+              continue;
+            } else {
+              // 如果单引号未在行内闭合，则认为结构分隔符搜索逻辑被中断
+              // 为了避免跨行字符串干扰，我们允许其继续检查，仅在找到配对时跳过
+            }
           }
-        }
-        // 检查单字符引号
-        if (singleQuotes.includes(char)) {
-          // 找到单字符开启引号，寻找同类型关闭引号
-          const closingIndex = lineTextI.indexOf(char, j + 1);
-          if (closingIndex !== -1) {
-            j = closingIndex; // 跳到结束引号的位置
-            continue;
-          } else {
-            // 未闭合的单字符引号，跳过本行剩余部分 (保守处理)
-            // 仅跳到行尾，以防下一行有未闭合的结构分隔符
-            // j = lineTextI.length;
-            // continue;
-            // 如果是结构分隔符，它可能会跨行，所以我们应该只跳过本行内已闭合的字符串
-          }
-        }
-        // 结构分隔符匹配逻辑
+        } // 结构分隔符匹配逻辑
         if (char === targetCloseChar) {
           if (nestedCount === 0) {
             closeLine = i;
@@ -315,8 +288,7 @@ function isCursorInsidePairDelimiter(editor, selection) {
   // 3. 匹配并返回位置
   // --------------------------------------------------------
   if (closeLine !== -1) {
-    const delimiterLength = targetCloseChar.length;
-    // 找到关闭分隔符的位置，光标应该移动到该位置的下一位 (注意多字符分隔符的长度)
+    const delimiterLength = targetCloseChar.length; // 找到关闭分隔符的位置，光标应该移动到该位置的下一位 (注意多字符分隔符的长度)
     const closePosition = new vscode.Position(
       closeLine,
       closeIndex + delimiterLength

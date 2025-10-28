@@ -39,7 +39,7 @@
   },
   "os.system 执行操作系统命令": {
     "prefix": ["os system", "system -os"],
-    "body": ["os.system('cls' if os.name == 'nt' else 'clear')"],
+    "body": ["os.system('cls' ${1:if os.name == 'nt' else 'clear'})"],
     "description": ["os.system 执行操作系统命令"]
   }
 }

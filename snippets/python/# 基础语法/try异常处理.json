@@ -32,7 +32,7 @@
     "description": ["except 抛出异常"]
   },
   "except 异常处理": {
-    "prefix": ["except -try", "except as e -try", "exc -try"],
+    "prefix": ["except -try", "except as e -try", "e -try", "exc -try"],
     "body": [
       "except ${1:Exception} as error:",
       "    # ! Exception: 所有异常的基类, 如需对指定类型的异常进行处理, 在上方添加 except [指定异常类型] 即可",
