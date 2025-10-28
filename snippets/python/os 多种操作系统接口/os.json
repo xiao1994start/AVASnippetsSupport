@@ -39,7 +39,19 @@
   },
   "os.system 执行操作系统命令": {
     "prefix": ["os system", "system -os"],
-    "body": ["os.system('cls' ${1:if os.name == 'nt' else 'clear'})"],
+    "body": ["os.system('$0')"],
     "description": ["os.system 执行操作系统命令"]
+  },
+  "os.system 执行操作系统命令 - 清屏": {
+    "prefix": ["os system --cls", "system --cls -os"],
+    "body": ["os.system('cls' if os.name == 'nt' else 'clear')"],
+    "description": ["os.system 执行操作系统命令 - 清屏"]
+  },
+  "os.system 执行操作系统命令 - xcopy📂文件夹复制": {
+    "prefix": ["os system --xcopy", "system --xcopy -os"],
+    "body": [
+      "os.system(f'xcopy /S /E /I /Y \"{${1:src源路径}}\" \"{${2:dst目标路径}}\"')"
+    ],
+    "description": ["os.system 执行操作系统命令 - xcopy📂文件夹复制"]
   }
 }
