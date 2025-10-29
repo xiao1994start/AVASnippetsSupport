@@ -1,0 +1,12 @@
+{
+  "print(...)": {
+    "prefix": ["prt -print"],
+    "body": "print($0)",
+    "description": ["print 语句的代码片段"]
+  },
+  "input(...)": {
+    "prefix": ["ipt -print"],
+    "body": "input($0)",
+    "description": ["input 语句的代码片段"]
+  }
+}
