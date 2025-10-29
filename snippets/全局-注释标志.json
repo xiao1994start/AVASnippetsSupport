@@ -1,7 +1,7 @@
 {
   "TODO": {
     "prefix": ["TODO ", "TD -TODO"],
-    "body": "TODO",
+    "body": "TODO:",
     "description": ["TODO"]
   }
 }
