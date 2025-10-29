@@ -364,9 +364,10 @@ function activate(context) {
               // 光标在行尾，且该行是空行或纯缩进行 => 执行 tab 命令（插入缩进或触发代码片段）
               vscode.commands.executeCommand("tab");
             } else {
-              // 光标在行尾，且该行有内容 => 执行 outdent (反缩进)
-              // 此时光标在行尾，执行 outdent 可能会跳到下一行并保持缩进，或者进行反缩进
-              vscode.commands.executeCommand("outdent");
+              // 光标在行尾，且该行有内容 => 执行 outdent (反缩进) | cursorRight (光标向右移动一个字符)
+              // 此时光标在行尾，执行 outdent | cursorRight 进行反缩进可，或者 跳转到到下一行并保持缩进
+              // vscode.commands.executeCommand("outdent");
+              vscode.commands.executeCommand("cursorRight");
             }
           } else if (isSingleEmptySelection) {
             // ***情况 B.2：光标不在行尾，且是单个光标点
