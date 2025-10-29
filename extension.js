@@ -83,6 +83,19 @@ function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& 表示匹配的整个字符串
 }
 
+// TODO 辅助函数：✅检查当前行是否只包含空白字符或缩进
+/**
+ * 检查光标所在行是否为空行（只包含空格或不含任何内容）。
+ * @param {vscode.TextEditor} editor 活动编辑器
+ * @param {vscode.Selection} selection 当前光标点
+ * @returns {boolean}
+ */
+function isLinePurelyWhitespace(editor, selection) {
+  const line = editor.document.lineAt(selection.active.line);
+  // trim() 移除行首和行尾的空白符。如果结果长度为 0，则该行只有空白字符。
+  return line.text.trim().length === 0;
+}
+
 // * === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === === ===
 
 // TODO 检查光标是否位于预定义的成对的分隔符之间
@@ -333,6 +346,8 @@ function activate(context) {
       if (editor) {
         const selections = editor.selections;
         const selectedLineCount = getSelectedLineCount(selections);
+        const isSingleEmptySelection =
+          selections.length === 1 && selections[0].isEmpty; // 在 if (editor) 内部获取 isSingleEmptySelection
         // *核心修改逻辑：只要选中的行数大于 1，就执行多行缩进
         if (selectedLineCount > 1) {
           // **情况 A:选中行数 > 1（多行选中或多光标模式）=> 执行`editor.action.indentLines`缩进命令 (适用于多行选中或多个光标点)
@@ -340,12 +355,19 @@ function activate(context) {
           vscode.commands.executeCommand("editor.action.indentLines");
         } else {
           // **情况 B: 单行选中或单个光标点
-          const isSingleEmptySelection =
-            selections.length === 1 && selections[0].isEmpty;
           if (isCursorAtEndOfLine(editor, selections)) {
-            // ***情况 B.1: 光标在行尾
-            // vscode.commands.executeCommand("outdent");
-            vscode.commands.executeCommand("cursorRight");
+            // ***情况 B.1: 光标在行尾 (判断是否为纯空白行)
+            if (
+              isSingleEmptySelection &&
+              isLinePurelyWhitespace(editor, selections[0])
+            ) {
+              // 光标在行尾，且该行是空行或纯缩进行 => 执行 tab 命令（插入缩进或触发代码片段）
+              vscode.commands.executeCommand("tab");
+            } else {
+              // 光标在行尾，且该行有内容 => 执行 outdent (反缩进)
+              // 此时光标在行尾，执行 outdent 可能会跳到下一行并保持缩进，或者进行反缩进
+              vscode.commands.executeCommand("outdent");
+            }
           } else if (isSingleEmptySelection) {
             // ***情况 B.2：光标不在行尾，且是单个光标点
             const delimiterCheck = isCursorInsidePairDelimiter(
@@ -354,7 +376,6 @@ function activate(context) {
             );
             if (delimiterCheck.isInside) {
               // ****情况 B.2.a: 光标在成对的分隔符内
-              console.log("Cursor is inside pair symbols. Jumping out.");
               const newPosition = delimiterCheck.closePosition;
               const newSelection = new vscode.Selection(
                 newPosition,
