@@ -761,7 +761,19 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/rich 终端文本样式库/rich.json"
+        "path": "./snippets/python/rich 终端文本样式库/rich表格管理器Table.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/rich 终端文本样式库/rich控制台输出Console.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/rich 终端文本样式库/rich日志输出管理器logging.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/rich 终端文本样式库/rich替代print.json"
       },
       {
         "language": "bat",
