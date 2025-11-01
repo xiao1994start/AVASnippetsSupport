@@ -48,7 +48,7 @@
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
-    "prefix": ["new def", "def -def"],
+    "prefix": ["new def -def", "def -def"],
     "body": [
       "def ${1:name}():",
       "    \"\"\"",

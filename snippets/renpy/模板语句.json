@@ -2,7 +2,7 @@
   "自动添加语言按钮入口": {
     "prefix": ["textbutton _schinese =-action Language"],
     "body": [
-      "textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1:MapleMono-NF-CN-Bold.ttf}\" action Language(\"schinese\")",
+      "textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1:MiSans-Bold.ttf}\" action Language(\"schinese\")",
       ""
     ],
     "description": ["自动添加语言按钮入口"]
