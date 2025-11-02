@@ -1,0 +1,7 @@
+{
+  "self": {
+    "prefix": ["sf -self"],
+    "body": "self",
+    "description": "self"
+  }
+}
