@@ -19,7 +19,7 @@
     ]
   },
   "var 变量 (Create/Modify)": {
-    "prefix": ["var "],
+    "prefix": ["var ", "let ", "const ", "new "],
     "body": "$ ${1:variable_name} = ${2:# variable value}",
     "description": "创建/修改 变量."
   },
