@@ -1,6 +1,6 @@
 {
   "设置变量": {
-    "prefix": ["set -set", "new -set"],
+    "prefix": ["set -set"],
     "body": ["set $0"],
     "description": "设置变量"
   },
@@ -72,7 +72,7 @@
     "description": ["%%For循环中的元变量", ""]
   },
   "%环境变量%": {
-    "prefix": ["const"],
+    "prefix": ["const", "new"],
     "body": ["%${1:i}%"],
     "description": ["%环境变量%"]
   },
