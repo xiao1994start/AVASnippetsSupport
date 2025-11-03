@@ -425,6 +425,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/# 基础语法/return_yield.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/# 基础语法/set集合.json"
       },
       {

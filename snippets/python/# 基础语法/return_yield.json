@@ -1,0 +1,12 @@
+{
+  "return 退出并返回结果": {
+    "prefix": ["return -return", "ret -return"],
+    "body": ["return $0"],
+    "description": ["return 退出并返回结果"]
+  },
+  "yield 暂停并返回结果": {
+    "prefix": ["yield -yield", "yed -yield"],
+    "body": ["yield $0"],
+    "description": ["yield 暂停并返回结果"]
+  }
+}
