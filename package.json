@@ -156,10 +156,6 @@
         "path": "./snippets/python/# 基础语法/Boolean布尔值.json"
       },
       {
-        "language": "python",
-        "path": "./snippets/bat/# 基础语法/Boolean布尔值.json"
-      },
-      {
         "language": "bat",
         "path": "./snippets/bat/# 基础语法/certutil系统证书.json"
       },
