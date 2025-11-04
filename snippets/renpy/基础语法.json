@@ -145,8 +145,8 @@
     "description": "While (循环)"
   },
   "选择菜单": {
-    "prefix": ["menu "],
-    "body": "menu ${1:optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\t#block of code to run\n\t\"${4:Choice 2}\":\n\t\t#block of code to run\n\t${5:}",
+    "prefix": ["menu ", "mn -menu"],
+    "body": "menu${1: optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\t#block of code to run\n\t\"${4:Choice 2}\":\n\t\t#block of code to run\n\t${5:}",
     "description": "选择菜单"
   },
   "菜单选择": {

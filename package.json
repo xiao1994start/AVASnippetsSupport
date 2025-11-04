@@ -477,147 +477,147 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.bat.debug.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.bat.debug.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.bat.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.按钮_Buttons.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.按钮_Buttons.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.布局_Layout.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.布局_Layout.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.导航_Navigation.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.导航_Navigation.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.对话框_Dialogs.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.对话框_Dialogs.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.输入选择_Input and Selections.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.输入选择_Input and Selections.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.信息显示_Information Displays.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Controls.信息显示_Information Displays.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.ft.基础参数.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.ft.基础参数.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.import.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.import.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.page.页面设置.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.page.页面设置.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Reference.引用参考.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.Reference.引用参考.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/flet 基于Flutter(Google)的WebUI框架/flet.tmpl.json"
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter(Google)的WebUI框架/flet.tmpl.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/niceGUI web应用开发/nicegui.bat.json"
+        "path": "./snippets/python/交互-Gui模块/niceGUI web应用开发/nicegui.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/niceGUI web应用开发/nicegui.import.json"
+        "path": "./snippets/python/交互-Gui模块/niceGUI web应用开发/nicegui.import.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/niceGUI web应用开发/nicegui.ui.json"
+        "path": "./snippets/python/交互-Gui模块/niceGUI web应用开发/nicegui.ui.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/niceGUI web应用开发/nicegui.pyinstaller.json"
+        "path": "./snippets/python/交互-Gui模块/niceGUI web应用开发/nicegui.pyinstaller.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/PySide GUI图形界面/pyside6.bat.json"
+        "path": "./snippets/python/交互-Gui模块/PySide GUI图形界面/pyside6.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/PySide GUI图形界面/pyside6.json"
+        "path": "./snippets/python/交互-Gui模块/PySide GUI图形界面/pyside6.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/Pywebview 创建Webview窗口/webview.bat.json"
+        "path": "./snippets/python/交互-Gui模块/Pywebview 创建Webview窗口/webview.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/Pywebview 创建Webview窗口/webview.json"
+        "path": "./snippets/python/交互-Gui模块/Pywebview 创建Webview窗口/webview.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/Reflex 全栈WebApp框架/reflex.bat.json"
+        "path": "./snippets/python/交互-Gui模块/Reflex 全栈WebApp框架/reflex.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/Reflex 全栈WebApp框架/reflex.json"
+        "path": "./snippets/python/交互-Gui模块/Reflex 全栈WebApp框架/reflex.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立gui模块/streamlit 快速WebApp框架/streamlit.bat.json"
+        "path": "./snippets/python/交互-Gui模块/streamlit 快速WebApp框架/streamlit.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立gui模块/streamlit 快速WebApp框架/streamlit.json"
+        "path": "./snippets/python/交互-Gui模块/streamlit 快速WebApp框架/streamlit.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/argparse 命令行参数模块/argparse.json"
+        "path": "./snippets/python/交互-Tui模块/argparse 命令行参数模块/argparse.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/msvcrt 终端交互库Windows/msvcrt.import.json"
+        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.import.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/msvcrt 终端交互库Windows/msvcrt.tmpl.json"
+        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.tmpl.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/msvcrt 终端交互库Windows/msvcrt控制台IO.json"
+        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt控制台IO.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立tui模块/rich 终端文本样式库/rich.bat.json"
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/rich 终端文本样式库/rich表格管理器Table.json"
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich表格管理器Table.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/rich 终端文本样式库/rich控制台输出Console.json"
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich控制台输出Console.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/rich 终端文本样式库/rich日志输出管理器logging.json"
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich日志输出管理器logging.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/rich 终端文本样式库/rich替代print.json"
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich替代print.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-独立tui模块/tqdm 高效进度条神器/tqdm.bat.json"
+        "path": "./snippets/python/交互-Tui模块/tqdm 高效进度条神器/tqdm.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-独立tui模块/tqdm 高效进度条神器/tqdm.json"
+        "path": "./snippets/python/交互-Tui模块/tqdm 高效进度条神器/tqdm.json"
       },
       {
         "language": "bat",
