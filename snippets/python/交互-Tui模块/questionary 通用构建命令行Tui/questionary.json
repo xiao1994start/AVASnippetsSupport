@@ -1,0 +1,87 @@
+{
+  "引入 questionary 构建命令行Tui界面": {
+    "prefix": ["import questionary", "im questionary"],
+    "body": ["from questionary import questionary  # *构建命令行Tui界面", ""],
+    "description": ["引入 questionary 构建命令行Tui界面"]
+  },
+  "questionary.press_any_key_to_continue 按任意键继续": {
+    "prefix": ["questionary press_any_key_to_continue =-questionary"],
+    "body": [
+      "questionary.press_any_key_to_continue(message='按任意键继续...').ask()  # *按任意键继续",
+      ""
+    ],
+    "description": ["按任意键继续"]
+  },
+  "questionary.rawselect 原始选择": {
+    "prefix": ["questionary rawselect -questionary"],
+    "body": [
+      "questionary.rawselect(",
+      "    message='原始选择',",
+      "    choices=[  # TODO:单选项",
+      "        '选项一',",
+      "        '选项二',",
+      "        '选项三',",
+      "    ],",
+      "    qmark='🤔🧟⚠☢☣🔞❓',  # *message前缀(显示在问题前面)",
+      "    pointer='👉',  # *当前突出显示的元素前面的指针符号(默认`»`)",
+      ").ask()",
+      ""
+    ],
+    "description": ["原始选择"]
+  },
+  "questionary.select 通用单选": {
+    "prefix": ["questionary select -questionary"],
+    "body": [
+      "questionary.select(",
+      "    message='通用单选',",
+      "    choices=[  # TODO:单选项",
+      "        '选项一',",
+      "        '选项二',",
+      "        '选项三',",
+      "    ],",
+      "    qmark='🤔🧟⚠☢☣🔞❓',  # *message前缀(显示在问题前面)",
+      "    pointer='👉',  # *当前突出显示的元素前面的指针符号(默认`»`)",
+      "    use_indicator=True,  # *用于启用列表前的小指示器(高亮显示当前选择光标的位置)",
+      "    use_jk_keys=True,  # *允许用户使用`j`(向上) / `k`(向下)",
+      "    use_shortcuts=True,  # *允许用户使用快捷键从列表中选择项目(快捷键将显示在列表项的前面)",
+      "    show_selected=True,  # *在列表底部显示当前选择项",
+      ").ask()",
+      ""
+    ],
+    "description": ["通用单选"]
+  },
+  "questionary.confirm 确认(Y/n)": {
+    "prefix": ["questionary confirm -questionary"],
+    "body": [
+      "questionary.confirm(message='是否确定 ${1:xxx操作} ?').ask()  # *(Y/n)->bool:True | False"
+    ],
+    "description": ["确认(Y/n)"]
+  },
+  "questionary.checkbox 复选框": {
+    "prefix": ["questionary checkbox -questionary"],
+    "body": [
+      "questionary.checkbox(",
+      "    message='复选框',",
+      "    choices=[  # TODO:复选项",
+      "        '选项一',",
+      "        '选项二',",
+      "        '选项三',",
+      "    ],",
+      "    use_jk_keys=True,  # *允许用户使用`j`(向上) / `k`(向下)",
+      ").ask()",
+      ""
+    ],
+    "description": ["复选框"]
+  },
+  "questionary.path 路径选择器": {
+    "prefix": ["questionary path -questionary"],
+    "body": [
+      "questionary.path(",
+      "    message='输入or拖入项目路径?',",
+      "    # only_files=True,  # !仅允许选择文件",
+      ").ask()",
+      ""
+    ],
+    "description": ["路径选择器"]
+  }
+}

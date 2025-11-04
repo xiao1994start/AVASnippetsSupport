@@ -1,9 +1,0 @@
-{
-  "引入 tqdm 高效进度条神器": {
-    "prefix": ["import tqdm", "im tqdm"],
-    "body": [
-      "from tqdm import tqdm  # 高效进度条神器(需要导入 multiprocessing 搭配使用)"
-    ],
-    "description": ["引入 tqdm 高效进度条神器"]
-  }
-}

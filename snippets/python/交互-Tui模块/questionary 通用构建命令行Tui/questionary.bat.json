@@ -1,0 +1,22 @@
+{
+  "pip.questionary 构建命令行Tui界面": {
+    "prefix": ["pip questionary"],
+    "body": [
+      "ECHO.",
+      "ECHO * questionary 构建命令行Tui界面 *",
+      "pip install -U questionary -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["questionary 构建命令行Tui界面"]
+  },
+  "uv.questionary 构建命令行Tui界面": {
+    "prefix": ["uv questionary"],
+    "body": [
+      "ECHO.",
+      "ECHO * questionary 构建命令行Tui界面 *",
+      "uv add \"questionary\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["questionary 构建命令行Tui界面"]
+  }
+}

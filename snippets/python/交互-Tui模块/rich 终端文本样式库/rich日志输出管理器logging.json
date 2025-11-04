@@ -1,8 +1,8 @@
 {
   "引入 rich.logging.RichHandler 日志记录处理程序": {
     "prefix": [
-      "import rich logging=basicConfig",
-      "im rich logging=basicConfig"
+      "import rich logging =-rich--basicConfig",
+      "im rich logging =-rich--basicConfig"
     ],
     "body": [
       "import logging",

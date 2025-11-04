@@ -593,6 +593,14 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/交互-Tui模块/questionary 通用构建命令行Tui/questionary.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/交互-Tui模块/questionary 通用构建命令行Tui/questionary.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich.bat.json"
       },
       {
@@ -610,14 +618,6 @@
       {
         "language": "python",
         "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich替代print.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/交互-Tui模块/tqdm 高效进度条神器/tqdm.bat.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/交互-Tui模块/tqdm 高效进度条神器/tqdm.json"
       },
       {
         "language": "bat",
