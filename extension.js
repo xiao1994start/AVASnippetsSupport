@@ -291,13 +291,17 @@ function isCursorInsidePairDelimiter(editor, selection) {
 }
 
 // TODO:定义所有要检查的成对分隔符(键是开分隔符)
+/**
+ * * 判断优先级按照字典顺序 先判断 -> 后判断
+ */
+
 const PAIRED_DELIMITERS = {
+  "'": "'",
+  '"': '"',
   "(": ")",
   "{": "}",
   "[": "]",
   "<": ">",
-  '"': '"',
-  "'": "'",
   '"""': '"""', // Python 等多行字符串
   "'''": "'''", // Python 等多行字符串
 };
