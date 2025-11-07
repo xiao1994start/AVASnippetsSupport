@@ -1,0 +1,20 @@
+{
+  "引入 rich.panel 面板": {
+    "prefix": ["import rich panel", "im rich panel"],
+    "body": [
+      "from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
+      "from rich.panel import Panel  # *Panel构造可渲染对象周围绘制边框(需要使用)"
+    ],
+    "description": ["要在文本或其他可渲染对象周围绘制边框, 请构造一个 Panel, 并将可渲染对象作为第一个位置参数"]
+  },
+  "rich.panel 标准面板": {
+    "prefix": ["Panel -rich-panel", "print Panel -rich-panel"],
+    "body": ["print(Panel('${1:Hello[red]World}', title='${2:标题}', subtitle='AVA'))"],
+    "description": ["标准面板"]
+  },
+  "rich.panel.fit 自适应内容面板": {
+    "prefix": ["Panel--fit -rich-panel", "print Panel fit -rich-panel"],
+    "body": ["print(Panel.fit('${1:Hello[red]World}', title='${2:标题}', subtitle='AVA'))"],
+    "description": ["自适应内容面板"]
+  }
+}
