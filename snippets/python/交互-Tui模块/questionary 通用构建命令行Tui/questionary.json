@@ -1,15 +1,12 @@
 {
   "引入 questionary 构建命令行Tui界面": {
     "prefix": ["import questionary", "im questionary"],
-    "body": ["from questionary import questionary  # *构建命令行Tui界面", ""],
+    "body": ["import questionary  # *构建命令行Tui界面", ""],
     "description": ["引入 questionary 构建命令行Tui界面"]
   },
   "questionary.press_any_key_to_continue 按任意键继续": {
     "prefix": ["questionary press_any_key_to_continue =-questionary"],
-    "body": [
-      "questionary.press_any_key_to_continue(message='按任意键继续...').ask()  # *按任意键继续",
-      ""
-    ],
+    "body": ["questionary.press_any_key_to_continue(message='按任意键继续...').ask()  # *按任意键继续", ""],
     "description": ["按任意键继续"]
   },
   "questionary.rawselect 原始选择": {
@@ -52,9 +49,7 @@
   },
   "questionary.confirm 确认(Y/n)": {
     "prefix": ["questionary confirm -questionary"],
-    "body": [
-      "questionary.confirm(message='是否确定 ${1:xxx操作} ?').ask()  # *(Y/n)->bool:True | False"
-    ],
+    "body": ["questionary.confirm(message='是否确定 ${1:xxx操作} ?').ask()  # *(Y/n)->bool:True | False"],
     "description": ["确认(Y/n)"]
   },
   "questionary.checkbox 复选框": {
