@@ -518,12 +518,6 @@ function activate(context) {
         jumpInside(editor, position, bracketContent);
         return context.subscriptions.push(disposable);
       } // *⁉️判断:光标在成对的分隔符内
-      if (isInBracket) {
-        console.log(`🟢选中行数 === 1;光标在成对的分隔符内:${isInBracket} => 跳出分隔符外`);
-        // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
-        jumpOut(editor, delimiterCheck);
-        return context.subscriptions.push(disposable);
-      }
       // *⁉️判断:光标不在成对的分隔符内 且 光标右侧有成对分隔符结构
       if (bracketContent) {
         console.log(`🟢选中行数 === 1;光标右侧有成对分隔符结构 => 跳入分隔符内`);
@@ -539,6 +533,12 @@ function activate(context) {
         console.log(`🟢选中行数 === 1;行尾:${isEndLine} => 光标向右移动一个字符`);
         // TODO:执行触发命令 `cursorRight` 光标向右移动一个字符
         vscode.commands.executeCommand("cursorRight");
+        return context.subscriptions.push(disposable);
+      }
+      if (isInBracket) {
+        console.log(`🟢选中行数 === 1;光标在成对的分隔符内:${isInBracket} => 跳出分隔符外`);
+        // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
+        jumpOut(editor, delimiterCheck);
         return context.subscriptions.push(disposable);
       }
 
