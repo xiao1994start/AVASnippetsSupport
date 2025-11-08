@@ -1,0 +1,42 @@
+{
+  "引入 inquirer 交互式命令行终端": {
+    "prefix": ["import inquirer", "im inquirer"],
+    "body": [
+      "import inquirer  # *交互式命令行终端",
+      "from inquirer.themes import BlueComposure, GreenPassion, RedSolace  # *交互式命令行终端主题",
+      ""
+    ],
+    "description": ["交互式命令行终端"]
+  },
+  "inquirer.List 列表式选项控制台交互": {
+    "prefix": ["inquirer List -inquirer"],
+    "body": [
+      "\"\"\"",
+      "*import inquirer",
+      "*from inquirer.themes import BlueComposure, GreenPassion, RedSolace",
+      "List 列表式选项控制台交互",
+      "help:https://pypi.org/project/inquirer/ | https://python-inquirer.readthedocs.io/en/latest/index.html",
+      "\"\"\"",
+      "# from inquirer.themes import BlueComposure, GreenPassion, RedSolace",
+      "questions = [",
+      "    inquirer.List(",
+      "        name='List_ID',  # *`inquirer.prompt` 返回值->`dict`字典: {name_id, choice_选项}",
+      "        message='这是一个列表选项式交互界面',",
+      "        choices=[",
+      "            '选项1',",
+      "            '选项2',",
+      "            '选项3',",
+      "        ],",
+      "        # carousel=True,  # *默认:`carousel=False`. 若为`True`,选项将循环滚动（即在最后一个选项上按向下键会回到第一个选项，在第一个选项上按向上键会跳到最后一个选项）",
+      "    )",
+      "]",
+      "result = inquirer.prompt(",
+      "    questions=questions,",
+      "    # theme=inquirer.themes.GreenPassion(),  # *主题,默认:Default. 可选:BlueComposure, GreenPassion, RedSolace",
+      ")",
+      "print(f'当前执行:{result}')  # *->{name_id, choice_选项}",
+      ""
+    ],
+    "description": ["列表式选项控制台交互"]
+  }
+}

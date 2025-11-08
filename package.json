@@ -576,6 +576,14 @@
         "path": "./snippets/python/交互-Tui模块/argparse 命令行参数模块/argparse.json"
       },
       {
+        "language": "bat",
+        "path": "./snippets/python/交互-Tui模块/inquirer 交互式命令行终端/inquirer.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/交互-Tui模块/inquirer 交互式命令行终端/inquirer.json"
+      },
+      {
         "language": "python",
         "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.import.json"
       },
@@ -670,14 +678,6 @@
       {
         "language": "python",
         "path": "./snippets/python/httpx 网络请求/httpx.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/inquirer 交互式命令行终端/inquirer.bat.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/inquirer 交互式命令行终端/inquirer.json"
       },
       {
         "language": "python",
