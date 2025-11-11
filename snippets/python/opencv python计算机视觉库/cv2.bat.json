@@ -1,22 +1,22 @@
 {
   "pip.opencv-python 计算机视觉库": {
-    "prefix": ["pip cv2"],
+    "prefix": ["pip cv2", "pip opencv"],
     "body": [
       "ECHO.",
       "ECHO * opencv-python 计算机视觉库 *",
-      "pip install -U opencv-python -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install -U numpy opencv-python -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM opencv 库 (使用opencv-python库时,项目路径不能使用中文)",
       ""
     ],
     "description": ["opencv for python 计算机视觉库"]
   },
   "uv.opencv-python 计算机视觉库": {
-    "prefix": ["uv cv2"],
+    "prefix": ["uv cv2", "uv opencv"],
     "body": [
       "ECHO.",
       "ECHO * opencv-python 计算机视觉库 *",
-      "uv add \"opencv-python\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
-      "@REM opencv 库 (使用opencv-python库时,项目路径不能使用中文)",
+      "uv add \"numpy\" \"opencv-python\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "@REM opencv 库 (前置必备库:numpy; 使用opencv-python库时,项目路径不能使用中文)",
       ""
     ],
     "description": ["opencv for python 计算机视觉库"]

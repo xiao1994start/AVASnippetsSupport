@@ -377,6 +377,82 @@ function hasPairDelimiterRight(lineText, characterIndex) {
   return closestOpenDelimiter;
 }
 
+// TODO:[辅助函数]✅检查光标右侧是否存在对应的结束分隔符
+/**
+ * 检查光标所在行内，在光标右侧相邻或距离n个空格的位置是否存在
+ * 成对分隔符对应的结束符号。
+ * * @param {vscode.TextEditor} editor 活动编辑器
+ * @param {vscode.Position} position 当前光标位置
+ * @param {number} maxSpaces 允许的最大空格数间隔 (n)
+ * @returns {boolean} 如果在允许的间隔内找到结束分隔符，则返回 true。
+ */
+function isCloseDelimiterRightAhead(editor, position, maxSpaces = 64) {
+  const document = editor.document;
+  const lineText = document.lineAt(position.line).text;
+
+  // 获取光标右侧的文本
+  let textAfterCursor = lineText.substring(position.character);
+
+  // 定义所有可能的闭合分隔符，并按长度降序排列，确保 '"""' 优先于 '"' 被检查
+  const closeDelimiters = [
+    '"""',
+    "'''", // 多行字符串
+    ")",
+    "}",
+    "]",
+    ">",
+    '"',
+    "'",
+    "`",
+  ];
+
+  // 构造一个正则表达式，用于匹配 [0 到 maxSpaces 个空格] 后面跟着 [任意一个闭合分隔符]
+  // 这里的正则表达式需要转义所有分隔符中的特殊字符（例如 '()' 等），尽管对于闭合符来说，大部分都不是特殊字符。
+  // 但是为了稳健性，最好对所有分隔符进行转义并用 '|' 连接。
+
+  const escapedDelimiters = closeDelimiters.map(escapeRegExp).join("|");
+
+  // 匹配规则：^：从字符串开头（即光标位置）开始匹配
+  // [\s]：匹配任何空白字符 (空格、Tab等)。注意：如果只允许空格，应该用 ' '。
+  // {0,${maxSpaces}}：匹配 0 到 maxSpaces 次。
+  // (${escapedDelimiters})：匹配任何一个闭合分隔符。
+  const regex = new RegExp(`^[\\s]{0,${maxSpaces}}(${escapedDelimiters})`);
+
+  const match = textAfterCursor.match(regex);
+
+  if (match) {
+    // 匹配成功，match[1] 是捕获到的实际闭合分隔符（例如 ")", '"' 等）
+    const foundDelimiter = match[1];
+
+    // 【重要】我们还需要确认找到的分隔符前面没有转义字符，特别是引号。
+    // 如果找到的字符是引号，且光标左侧紧挨着的是 '\'，通常不需要处理，
+    // 但如果找到的引号前面有空格，转义检查的意义不大。
+    // 这里的重点是：确保找到的闭合符*未被转义*，但在光标右侧的搜索中，
+    // 只需要看它前面是不是空格，然后判断它自己是不是闭合符。
+
+    // 进一步细化：如果找到的分隔符是引号，我们应该跳过它前面可能存在的空格
+    // 找到分隔符在 `textAfterCursor` 中的起始索引
+    const delimiterStart = match[0].length - foundDelimiter.length;
+
+    // 检查光标右侧紧邻分隔符的字符是否是转义符 '\'
+    // 字符在 `lineText` 中的实际索引是：position.character + delimiterStart - 1
+    const charBeforeDelimiterIndex = position.character + delimiterStart - 1;
+
+    if (foundDelimiter.length === 1 && (foundDelimiter === '"' || foundDelimiter === "'") && charBeforeDelimiterIndex >= 0) {
+      // 检查单引号/双引号前面是否有转义符
+      if (lineText[charBeforeDelimiterIndex] === "\\") {
+        // 被转义的引号，我们不认为是有效的闭合符
+        return false;
+      }
+    }
+
+    // 找到了有效的闭合分隔符
+    return true;
+  }
+
+  return false;
+}
+
 // TODO:[辅助函数]将光标位置移动到找到的第一个成对的分隔符内
 /**
  * 辅助函数：将光标位置移动到找到的第一个成对的分隔符内（即跳过开分隔符）。
@@ -480,8 +556,8 @@ function activate(context) {
     const isEmptyLine = isLinePurelyWhitespace(editor, selections[0]); // *判断光标所在行是否为纯空白行
     console.log(`🔵光标在空白行:${isEmptyLine}`);
     const delimiterCheck = isCursorInsidePairDelimiter(editor, selections[0]); // *分隔符检查 -> [object Object]对象
-    const isInBracket = delimiterCheck.isInside; // *光标是否在成对的分隔符内
-    console.log(`🔵分隔符检查=>光标在成对的分隔符内:${isInBracket}`);
+    const isInBracket = delimiterCheck.isInside; // *光标是否在跨行成对的分隔符内
+    console.log(`🔵分隔符检查=>光标在跨行成对的分隔符内:${isInBracket}`);
 
     // *⁉️判断:选中文本为真
     if (isSelection) {
@@ -491,7 +567,9 @@ function activate(context) {
       return context.subscriptions.push(disposable);
     }
 
-    // *⁉️判断:选中行数 === 1
+    // TODO:逻辑判断(条件:复杂条件>简单条件)
+
+    // *⁉️判断:选中行数 == 1
     if (selectedLineCount === 1) {
       // TODO:仅在光标选中行数唯一时获取变量
       const position = editor.selection.active; // *获取当前活动光标的位置
@@ -502,49 +580,20 @@ function activate(context) {
       const isCursorAtStartOfContent = /^[\s]*$/.test(textBeforeCursor); // *使用正则表达式检查光标左侧的文本是否全为空白字符
       console.log(`🔵光标左侧空白字符:${isCursorAtStartOfContent}`);
       const bracketContent = hasPairDelimiterRight(lineText, position.character); // *检查选中行光标右侧否存在一个完整的成对分隔符结构 => 找到的成对分隔符的开分隔符字符串 | null
-      console.log(`🔵光标右侧成对分隔符结构:${Boolean(bracketContent)}`);
+      console.log(`🔵分隔符检查=>光标右侧成对分隔符结构:${Boolean(bracketContent)}`);
+      const isCloseDelimiterAhead = isCloseDelimiterRightAhead(editor, selections[0].active); // *检查光标右侧是否存在闭合分隔符
+      console.log(`🔵分隔符检查=>右侧相邻闭合分隔符:${isCloseDelimiterAhead}`);
 
-      // *⁉️判断:光标左侧空白(光标在行开头区域)
-      if (isCursorAtStartOfContent) {
-        console.log(`🟢选中行数 === 1;左侧空白:${isCursorAtStartOfContent} => 行缩进`);
-        // TODO:执行触发命令 `editor.action.indentLines` 行缩进
-        vscode.commands.executeCommand("editor.action.indentLines");
-        return context.subscriptions.push(disposable);
-      }
-      // *⁉️判断:光标不在成对的分隔符内 且 光标右侧有成对分隔符结构
-      if (bracketContent) {
-        console.log(`🟢选中行数 === 1;光标右侧有成对分隔符结构 => 跳入分隔符内`);
-        // TODO:执行 `jumpInside` 方法 => 跳入分隔符内
-        jumpInside(editor, position, bracketContent);
-        return context.subscriptions.push(disposable);
-      } // *⁉️判断:光标在成对的分隔符内
-      // *⁉️判断:光标不在成对的分隔符内 且 光标右侧有成对分隔符结构
-      if (bracketContent) {
-        console.log(`🟢选中行数 === 1;光标右侧有成对分隔符结构 => 跳入分隔符内`);
-        // TODO:执行 `jumpInside` 方法 => 跳入分隔符内
-        jumpInside(editor, position, bracketContent);
-        return context.subscriptions.push(disposable);
-      }
-      if (isEndLine) {
-        // *⁉️判断:光标在行尾
-        // console.log(`🟢选中行数 === 1;行尾:${isEndLine} => 行减少缩进`);
-        // // TODO:执行触发命令 `outdent` 行减少缩进
-        // vscode.commands.executeCommand("outdent");
-        console.log(`🟢选中行数 === 1;行尾:${isEndLine} => 光标向右移动一个字符`);
-        // TODO:执行触发命令 `cursorRight` 光标向右移动一个字符
-        vscode.commands.executeCommand("cursorRight");
-        return context.subscriptions.push(disposable);
-      }
-      if (isInBracket) {
-        console.log(`🟢选中行数 === 1;光标在成对的分隔符内:${isInBracket} => 跳出分隔符外`);
+      // *⁉️判断:光标在跨行分隔符内 且 右侧空白后接成对分隔符的关闭符
+      if (isInBracket && isCloseDelimiterAhead) {
+        console.log(`🟢光标在跨行成对的分隔符内🟢 => 跳出分隔符外`);
         // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
         jumpOut(editor, delimiterCheck);
         return context.subscriptions.push(disposable);
       }
-
       // *⁉️判断:选中行数 < 光标数 且 光标不在行尾
       if (selectedLineCount < selectedCount && !isEndLine) {
-        console.log(`🟢选中行数 === 1;${selectedCount}光标;行尾:${isEndLine} => 行缩进 && 行减少缩进 ${selectedCount - 1} 次`);
+        console.log(`🟢选中行数 < 光标数 且 光标不在行尾🟢 => 行缩进 && 行减少缩进 ${selectedCount - 1} 次`);
         // TODO:执行触发命令 `editor.action.indentLines` 行缩进,执行一次后需要再执行 (selectedCount - 1) 次 `outdent` 行减少缩进
         vscode.commands.executeCommand("editor.action.indentLines");
         var loopCount = selectedCount - 1;
@@ -553,27 +602,62 @@ function activate(context) {
         }
         return context.subscriptions.push(disposable);
       }
+
+      // *⁉️判断:光标左侧空白(光标在行开头区域)
+      if (isCursorAtStartOfContent) {
+        console.log(`🟢光标左侧空白🟢 => 行缩进`);
+        // TODO:执行触发命令 `editor.action.indentLines` 行缩进
+        vscode.commands.executeCommand("editor.action.indentLines");
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标不在成对分隔符内 且 光标右侧有成对分隔符结构
+      if (bracketContent) {
+        console.log(`🟢光标不在成对分隔符内 且 光标右侧有成对分隔符结构🟢 => 跳入分隔符内`);
+        // TODO:执行 `jumpInside` 方法 => 跳入分隔符内
+        jumpInside(editor, position, bracketContent);
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标在行尾
+      if (isEndLine) {
+        // console.log(`🟢光标在行尾🟢 => 行减少缩进`);
+        // // TODO:执行触发命令 `outdent` 行减少缩进
+        // vscode.commands.executeCommand("outdent");
+        console.log(`🟢光标在行尾🟢 => 光标向右移动一个字符`);
+        // TODO:执行触发命令 `cursorRight` 光标向右移动一个字符
+        vscode.commands.executeCommand("cursorRight");
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标在跨行成对的分隔符内
+      if (isInBracket) {
+        console.log(`🟢光标在跨行成对的分隔符内🟢 => 跳出分隔符外`);
+        // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
+        jumpOut(editor, delimiterCheck);
+        return context.subscriptions.push(disposable);
+      }
     }
 
     // *⁉️判断:选中行数 > 1
     if (selectedLineCount > 1) {
       // *⁉️判断:选中行数 > 光标数 且 光标不在行尾，选中行数 > 1 或 选中文本为真
       if (selectedLineCount > selectedCount && !isEndLine && (selectedLineCount > 1 || isSelection)) {
-        console.log(`🟢${selectedLineCount}行;${selectedCount}光标;选中${isSelection};行尾:${isEndLine} => 行缩进`);
+        console.log(`🟢选中行数 > 光标数 且 光标不在行尾，选中行数 > 1 或 选中文本为真🟢 => 行缩进`);
         // TODO:执行触发命令 `editor.action.indentLines` 行缩进
         vscode.commands.executeCommand("editor.action.indentLines");
         return context.subscriptions.push(disposable);
       }
     }
 
-    console.log("🔴当前处于未指定状态,执行默认`TAB`命令");
+    console.log("🔴当前处于未指定状态🔴 => 执行默认`TAB`命令");
     // **不属于上述任何情况的,执行默认`TAB`命令**
     vscode.commands.executeCommand("tab");
     return context.subscriptions.push(disposable);
   });
 
   // TODO:资源清理和生命周期管理
-  console.log("----🗑资源清理和生命周期管理🚮----");
+  console.log("----🚮🗑资源清理和生命周期管理🗑🚮----");
   context.subscriptions.push(disposable);
 }
 

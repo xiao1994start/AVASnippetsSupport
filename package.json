@@ -688,6 +688,14 @@
         "path": "./snippets/python/json 数据处理/json.json"
       },
       {
+        "language": "bat",
+        "path": "./snippets/python/keyboard 键盘交互工具库/keyboard.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/keyboard 键盘交互工具库/keyboard.json"
+      },
+      {
         "language": "python",
         "path": "./snippets/python/logging 日志管理/logging.json"
       },
@@ -770,10 +778,6 @@
       {
         "language": "bat",
         "path": "./snippets/python/pywin32 系统API接口/win32.bat.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/pywin32 系统API接口/win32系统信号模块.json"
       },
       {
         "language": "python",

@@ -1,7 +1,7 @@
 {
-  "引入 win32.win32api API系统通信模块": {
-    "prefix": ["import win32 win32api", "im win32 win32api"],
-    "body": ["from win32 import win32api"],
-    "description": ["引入 win32.win32api API系统通信模块"]
+  "引入 win32 windows系统API操作模块": {
+    "prefix": ["import win32", "im win32"],
+    "body": ["import win32api  # *提供对基本Windows API函数的访问", "import win32con  # *包含Windows API所需的常量定义"],
+    "description": ["引入 win32 windows系统API操作模块"]
   }
 }

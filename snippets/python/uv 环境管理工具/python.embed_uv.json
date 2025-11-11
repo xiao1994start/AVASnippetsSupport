@@ -1,11 +1,6 @@
 {
   "python-embed 嵌入式环境激活": {
-    "prefix": [
-      "embed uv -python",
-      "UV =-python",
-      "embed -python",
-      "EM -python"
-    ],
+    "prefix": ["Python embed UV =-python"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
@@ -241,7 +236,7 @@
       "    ECHO from pathlib import Path> \"%~dp0base_data.py\"",
       "    ECHO BASE_DIR = Path(__file__^).parent.resolve(^)>> \"%~dp0base_data.py\"",
       "    ECHO import tkinter as tk>> \"%~dp0base_data.py\"",
-      "    ECHO # *tk模块测试>> \"%~dp0base_data.py\"",
+      "    ECHO # *tk_test>> \"%~dp0base_data.py\"",
       "    ECHO tk._test(^)>> \"%~dp0base_data.py\"",
       ")",
       "if not exist \"%~dp0build.py\" (",

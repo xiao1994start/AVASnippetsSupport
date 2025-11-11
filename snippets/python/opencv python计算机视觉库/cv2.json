@@ -1,7 +1,7 @@
 {
   "引入 opencv-python 计算机视觉库": {
-    "prefix": ["import opencv", "im opencv"],
-    "body": ["import cv2  #! opencv-python 计算机视觉库(图像路径不能有中文)"],
+    "prefix": ["import opencv", "im opencv", "import cv2", "im cv2"],
+    "body": ["import cv2  # !opencv-python 计算机视觉库(图像路径不能有中文)"],
     "description": ["引入 opencv-python 计算机视觉库"]
   },
   "OpenCV.imread 读取图像信息": {
@@ -35,9 +35,7 @@
   },
   "OpenCV.cvtColor 图像转换色彩模式": {
     "prefix": ["OpenCV cvtColor", "cvtColor -OpenCV"],
-    "body": [
-      "cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"
-    ],
+    "body": ["cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"],
     "description": ["OpenCV.cvtColor 图像转换色彩模式"]
   },
   "OpenCV.matchTemplate 模板匹配": {
@@ -62,9 +60,7 @@
   },
   "OpenCV.rectangle 绘制矩形": {
     "prefix": ["OpenCV rectangle", "rectangle -OpenCV"],
-    "body": [
-      "rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)"
-    ],
+    "body": ["rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)"],
     "description": ["OpenCV.rectangle 绘制矩形"]
   }
 }
