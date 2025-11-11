@@ -1,0 +1,20 @@
+{
+  "[def]正则中文路径检查": {
+    "prefix": ["re def noChinese -re"],
+    "body": [
+      "def has_chinese():",
+      "    \"\"\"",
+      "    检查脚本运行目录是否存在中文",
+      "",
+      "    Returns:",
+      "        bool: True[路径存在中文] | False[路径不存在中文]",
+      "    \"\"\"",
+      "    import re",
+      "",
+      "    path = str(Path.cwd().resolve())",
+      "    return bool(re.search(r'[\\u4e00-\\u9fff]', path))",
+      ""
+    ],
+    "description": ["[def]正则中文路径检查"]
+  }
+}

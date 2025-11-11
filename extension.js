@@ -547,14 +547,16 @@ function activate(context) {
     // *⭕ 获取基础判断所需的变量 ⭕*
     const selectedLineCount = getSelectedLineCount(selections); // *检查光标选中行数
     console.log(`🔵当前选中行数:${selectedLineCount}`);
+
     const selectedCount = selections.length; // *获取光标数量
     console.log(`🔵当前光标数量:${selectedCount}`);
+
     const isSelection = !selections[0].isEmpty; // *没有选中文本，光标只是一个点
     console.log(`🔵当前选中文本:${isSelection}`);
-    const isEndLine = isCursorAtEndOfLine(editor, selections); // *检查光标位置是否在行尾
-    console.log(`🔵光标是否行尾:${isEndLine}`);
+
     const isEmptyLine = isLinePurelyWhitespace(editor, selections[0]); // *判断光标所在行是否为纯空白行
     console.log(`🔵光标在空白行:${isEmptyLine}`);
+
     const delimiterCheck = isCursorInsidePairDelimiter(editor, selections[0]); // *分隔符检查 -> [object Object]对象
     const isInBracket = delimiterCheck.isInside; // *光标是否在跨行成对的分隔符内
     console.log(`🔵分隔符检查=>光标在跨行成对的分隔符内:${isInBracket}`);
@@ -579,18 +581,16 @@ function activate(context) {
       // 匹配规则: /^[\s]*$/ => 表示从行首开始，匹配零个或多个空白字符（包括空格、Tab 等），直到光标位置
       const isCursorAtStartOfContent = /^[\s]*$/.test(textBeforeCursor); // *使用正则表达式检查光标左侧的文本是否全为空白字符
       console.log(`🔵光标左侧空白字符:${isCursorAtStartOfContent}`);
+
+      const isEndLine = isCursorAtEndOfLine(editor, selections); // *检查光标位置是否在行尾
+      console.log(`🔵光标是否行尾:${isEndLine}`);
+
       const bracketContent = hasPairDelimiterRight(lineText, position.character); // *检查选中行光标右侧否存在一个完整的成对分隔符结构 => 找到的成对分隔符的开分隔符字符串 | null
       console.log(`🔵分隔符检查=>光标右侧成对分隔符结构:${Boolean(bracketContent)}`);
+
       const isCloseDelimiterAhead = isCloseDelimiterRightAhead(editor, selections[0].active); // *检查光标右侧是否存在闭合分隔符
       console.log(`🔵分隔符检查=>右侧相邻闭合分隔符:${isCloseDelimiterAhead}`);
 
-      // *⁉️判断:光标在跨行分隔符内 且 右侧空白后接成对分隔符的关闭符
-      if (isInBracket && isCloseDelimiterAhead) {
-        console.log(`🟢光标在跨行成对的分隔符内🟢 => 跳出分隔符外`);
-        // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
-        jumpOut(editor, delimiterCheck);
-        return context.subscriptions.push(disposable);
-      }
       // *⁉️判断:选中行数 < 光标数 且 光标不在行尾
       if (selectedLineCount < selectedCount && !isEndLine) {
         console.log(`🟢选中行数 < 光标数 且 光标不在行尾🟢 => 行缩进 && 行减少缩进 ${selectedCount - 1} 次`);
@@ -600,6 +600,22 @@ function activate(context) {
         for (let i = 0; i < loopCount; i++) {
           vscode.commands.executeCommand("outdent");
         }
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标在跨行分隔符内 且 右侧空白后接成对分隔符的关闭符
+      if (isInBracket && isCloseDelimiterAhead) {
+        console.log(`🟢光标在跨行分隔符内 且 右侧空白后接成对分隔符的关闭符🟢 => 跳出分隔符外`);
+        // TODO:执行 `jumpOut` 方法 => 跳出分隔符外
+        jumpOut(editor, delimiterCheck);
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标 行首 且 行尾
+      if (isCursorAtStartOfContent && isEndLine) {
+        console.log(`🟢光标 行首 且 行尾🟢 => TAB`);
+        // TODO:执行触发命令 `tab`
+        vscode.commands.executeCommand("tab");
         return context.subscriptions.push(disposable);
       }
 
