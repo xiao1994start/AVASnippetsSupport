@@ -1,0 +1,22 @@
+{
+  "pip.pyscreeze 用于屏幕截图和图像识别": {
+    "prefix": ["pip pyscreeze"],
+    "body": [
+      "ECHO.",
+      "ECHO * pyscreeze 用于屏幕截图和图像识别 *",
+      "pip install -U pyscreeze -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pyscreeze 用于屏幕截图和图像识别"]
+  },
+  "uv.pyscreeze 用于屏幕截图和图像识别": {
+    "prefix": ["uv pyscreeze"],
+    "body": [
+      "ECHO.",
+      "ECHO * pyscreeze 用于屏幕截图和图像识别 *",
+      "uv add \"pyscreeze\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pyscreeze 用于屏幕截图和图像识别"]
+  }
+}

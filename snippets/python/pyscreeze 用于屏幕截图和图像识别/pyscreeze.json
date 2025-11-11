@@ -1,0 +1,12 @@
+{
+  "引入 pyscreeze 用于屏幕截图和图像识别": {
+    "prefix": ["import pyscreeze", "im pyscreeze"],
+    "body": ["import pyscreeze  # *用于屏幕截图和图像识别"],
+    "description": ["用于屏幕截图和图像识别"]
+  },
+  "pyscreeze.USE_IMAGE_NOT_FOUND_EXCEPTION 关闭异常提示(保持程序运行)": {
+    "prefix": ["pyscreeze USE_IMAGE_NOT_FOUND_EXCEPTION -pyscreeze"],
+    "body": ["pyscreeze.USE_IMAGE_NOT_FOUND_EXCEPTION = False  # *关闭异常提示,改为返回None(保持程序运行)"],
+    "description": ["关闭异常提示,改为返回None(保持程序运行)"]
+  }
+}

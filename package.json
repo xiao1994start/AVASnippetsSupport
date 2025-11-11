@@ -769,6 +769,14 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/pyscreeze 用于屏幕截图和图像识别/pyscreeze.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pyscreeze 用于屏幕截图和图像识别/pyscreeze.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/PyInstaller 打包模块/pyinstaller.bat.json"
       },
       {

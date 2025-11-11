@@ -2,7 +2,7 @@
   "引入 rich.console.Console 控制台输出管理器": {
     "prefix": ["import rich console", "im rich console"],
     "body": [
-      "from rich.console import Console  # *控制台输出管理器(用于捕获打印到控制台的结果)[使用 c = Console(color_system='256', style=None)实例化, c.print(...)调用]",
+      "from rich.console import Console  # *用于捕获打印到控制台的结果[使用 c = Console(color_system='256', style=None)实例化, c.print(...)调用]",
       ""
     ],
     "description": ["控制台输出管理器(用于捕获打印到控制台的结果)"]
