@@ -1,1 +1,17 @@
-{}
+{
+  "引入 keyboard 监听和模拟键盘事件": {
+    "prefix": ["import keyboard", "im keyboard"],
+    "body": ["import keyboard  # *监听和模拟键盘事件"],
+    "description": ["监听和模拟键盘事件"]
+  },
+  "keyboard.is_pressed 检查按键是否被按下": {
+    "prefix": ["keyboard is_pressed -keyboard"],
+    "body": ["keyboard.is_pressed('${1:q}')"],
+    "description": [
+      "检查按键是否被按下",
+      "\n rue:按键被按下 | False:按键未被按下",
+      "\n 通常用于TUI按键退出",
+      "\n 或 可用 keyboard.is_pressed('q') == False 重新赋值"
+    ]
+  }
+}

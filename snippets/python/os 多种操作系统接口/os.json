@@ -5,17 +5,17 @@
     "description": ["引入 os 多种操作系统接口库"]
   },
   "os.getenv 获取系统环境变量路径": {
-    "prefix": ["os getenv", "getenv -os"],
+    "prefix": ["os getenv"],
     "body": ["os.getenv($0)"],
     "description": ["os.getenv 获取系统环境变量路径"]
   },
   "os.startfile 打开文件 或 文件夹": {
-    "prefix": ["os startfile", "startfile -os"],
+    "prefix": ["os startfile"],
     "body": ["os.startfile($0)"],
     "description": ["os.startfile 打开文件 或 文件夹"]
   },
   "os.popen 从一个命令打开一个管道": {
-    "prefix": ["os popen", "popen -os"],
+    "prefix": ["os popen"],
     "body": ["os.popen()"],
     "description": [
       "os.popen 从一个命令打开一个管道",
@@ -25,12 +25,9 @@
     ]
   },
   "os.pathsep 操作系统通常用于分隔搜索路径": {
-    "prefix": ["os pathsep", "pathsep -os"],
+    "prefix": ["os pathsep"],
     "body": ["os.pathsep"],
-    "description": [
-      "os.pathsep 操作系统通常用于分隔搜索路径",
-      "Windows 上是 ';'"
-    ]
+    "description": ["os.pathsep 操作系统通常用于分隔搜索路径", "Windows 上是 ';'"]
   },
   "os.sep 操作系统用来分隔路径符": {
     "prefix": ["os sep", "sep -os"],
@@ -38,20 +35,18 @@
     "description": ["os.sep 操作系统用来分隔路径符", "在 Windows 上是是 '\\'"]
   },
   "os.system 执行操作系统命令": {
-    "prefix": ["os system", "system -os"],
+    "prefix": ["os system"],
     "body": ["os.system('$0')"],
     "description": ["os.system 执行操作系统命令"]
   },
-  "os.system 执行操作系统命令 - 清屏": {
-    "prefix": ["os system --cls", "system --cls -os"],
+  "os.system 执行操作系统命令 - cls♻️清屏": {
+    "prefix": ["os system --cls"],
     "body": ["os.system('cls' if os.name == 'nt' else 'clear')"],
     "description": ["os.system 执行操作系统命令 - 清屏"]
   },
   "os.system 执行操作系统命令 - xcopy📂文件夹复制": {
-    "prefix": ["os system --xcopy", "system --xcopy -os"],
-    "body": [
-      "os.system(f'xcopy /S /E /I /Y \"{${1:src源路径}}\" \"{${2:dst目标路径}}\"')"
-    ],
+    "prefix": ["os system --xcopy"],
+    "body": ["os.system(f'xcopy /S /E /I /Y \"{${1:src源路径}}\" \"{${2:dst目标路径}}\"')"],
     "description": ["os.system 执行操作系统命令 - xcopy📂文件夹复制"]
   }
 }
