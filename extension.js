@@ -117,7 +117,13 @@ function isCursorInsidePairDelimiter(editor, selection) {
   const structuralDelimiters = { "(": ")", "{": "}", "[": "]", "<": ">" };
   // 简化字符串分隔符：我们只找单字符引号，三引号交给语言服务器或语法高亮处理
   // 但为了兼容您原有的三引号逻辑，我们保留定义，但在搜索中简化处理。
-  const stringDelimiters = { '"': '"', "'": "'", "`": "`", '"""': '"""', "'''": "'''" };
+  const stringDelimiters = {
+    '"': '"',
+    "'": "'",
+    "`": "`",
+    '"""': '"""', // 多行字符串
+    "'''": "'''", // 多行字符串
+  };
   const allQuotes = { ...stringDelimiters }; // 仅用于快速检查是否为引号
 
   let openChar = null;
@@ -405,8 +411,6 @@ function isCloseDelimiterRightAhead(editor, position, maxSpaces = 64) {
     '"',
     "'",
     "`",
-    ";",
-    ":",
   ];
 
   // 构造一个正则表达式，用于匹配 [0 到 maxSpaces 个空格] 后面跟着 [任意一个闭合分隔符]
@@ -451,6 +455,60 @@ function isCloseDelimiterRightAhead(editor, position, maxSpaces = 64) {
 
     // 找到了有效的闭合分隔符
     return true;
+  }
+
+  return false;
+}
+
+// TODO:[辅助函数]✅检查光标右侧相邻位置或距离n个空格的位置是否存在 : 或 ; 结束符
+/**
+ * 检查光标所在行内，在光标右侧相邻或距离n个空格的位置是否存在
+ * 分号 (;) 或 冒号 (:) 结束符。
+ * 补充识别 (, {, [
+ *
+ * @param {vscode.TextEditor} editor 活动编辑器
+ * @param {vscode.Position} position 当前光标位置
+ * @param {number} maxSpaces 允许的最大空格数间隔 (n)
+ * @returns {{isInside: boolean, closePosition: vscode.Position} | false}
+ * 如果找到，返回一个包含跳转位置信息的对象；否则返回 false。
+ */
+function checkSemicolonColonRightAhead(editor, position, maxSpaces = 64) {
+  const document = editor.document;
+  const lineText = document.lineAt(position.line).text;
+
+  // 获取光标右侧的文本
+  const textAfterCursor = lineText.substring(position.character);
+
+  // 定义要检查的结束符
+  const endDelimiters = [":", ";", "(", "{", "["];
+
+  // 构造正则表达式：匹配 [0 到 maxSpaces 个空白字符] 后面跟着 [分号或冒号]
+  const escapedDelimiters = endDelimiters.map(escapeRegExp).join("|");
+  const regex = new RegExp(`^[\\s]{0,${maxSpaces}}(${escapedDelimiters})`);
+
+  const match = textAfterCursor.match(regex);
+
+  if (match) {
+    // 匹配成功，match[1] 是捕获到的实际结束符（例如 ":", ";", "(", "{", "["）
+    const foundDelimiter = match[1];
+
+    // 找到分隔符在 `textAfterCursor` 中的起始索引
+    const delimiterStart = match[0].length - foundDelimiter.length;
+
+    // 计算分隔符结束的位置 (行号不变，列号 = 当前光标列号 + 分隔符起始索引 + 分隔符长度)
+    const closeLine = position.line;
+    const closeIndex = position.character + delimiterStart;
+    const delimiterLength = foundDelimiter.length;
+
+    // 光标应该移动到该位置的下一位
+    const closePosition = new vscode.Position(closeLine, closeIndex + delimiterLength);
+
+    // 返回一个模拟的 delimiterCheck 结果对象，供 jumpOut 使用
+    return {
+      isInside: true, // 假定为内部，以便通过 isInside 检查
+      closePosition: closePosition,
+      // delimiterType: 'syntax', // 额外信息，如果需要
+    };
   }
 
   return false;
@@ -585,6 +643,9 @@ function activate(context) {
       const isCursorAtStartOfContent = /^[\s]*$/.test(textBeforeCursor); // *使用正则表达式检查光标左侧的文本是否全为空白字符
       console.log(`🔵光标左侧空白字符:${isCursorAtStartOfContent}`);
 
+      const semicolonColonCheck = checkSemicolonColonRightAhead(editor, selections[0].active);
+      console.log(`🔵分隔符检查=>右侧相邻;/:结束符:${Boolean(semicolonColonCheck)}`);
+
       const isEndLine = isCursorAtEndOfLine(editor, selections); // *检查光标位置是否在行尾
       console.log(`🔵光标是否行尾:${isEndLine}`);
 
@@ -635,6 +696,14 @@ function activate(context) {
         console.log(`🟢光标不在成对分隔符内 且 光标右侧有成对分隔符结构🟢 => 跳入分隔符内`);
         // TODO:执行 `jumpInside` 方法 => 跳入分隔符内
         jumpInside(editor, position, bracketContent);
+        return context.subscriptions.push(disposable);
+      }
+
+      // *⁉️判断:光标右侧空白后接分号或冒号
+      if (semicolonColonCheck) {
+        console.log(`🟢光标右侧空白后接分号或冒号🟢 => 跳出结束符外`);
+        // TODO:执行 `jumpOut` 方法 => 跳出结束符外
+        jumpOut(editor, semicolonColonCheck);
         return context.subscriptions.push(disposable);
       }
 
