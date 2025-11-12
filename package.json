@@ -397,6 +397,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/# 基础语法/map高阶函数.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/# 基础语法/match_case条件判断.json"
       },
       {
