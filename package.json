@@ -209,10 +209,6 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/bat/# 基础语法/Script.json"
-      },
-      {
-        "language": "bat",
         "path": "./snippets/bat/# 基础语法/set变量.json"
       },
       {
@@ -258,6 +254,10 @@
       {
         "language": "bat",
         "path": "./snippets/bat/HTML/Vue功能.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/NirCmd命令行辅助工具/NirCmd.json"
       },
       {
         "language": "bat",

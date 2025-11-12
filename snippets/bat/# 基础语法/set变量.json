@@ -6,21 +6,18 @@
   },
   "提示输入信息": {
     "prefix": ["set p -set", "input -set"],
-    "body": ["set /p name="],
+    "body": ["set /p \"name=$0\""],
     "description": "提示输入信息"
   },
   "添加当前批处理环境变量": {
     "prefix": ["set addenv path -set path"],
-    "body": ["set path=%path%;${1:临时环境变量};"],
+    "body": ["set \"path=${1:临时环境变量};%path%;\""],
     "description": "添加设置适用于当前批处理的环境变量"
   },
   "修饰符传入单个参数": {
     "prefix": ["setInput="],
     "body": ["set \"command=%~${1:1}\""],
-    "description": [
-      "修饰符传入单个参数",
-      "*注意: 仅能传入单个参数, 对多个参数无效"
-    ]
+    "description": ["修饰符传入单个参数", "*注意: 仅能传入单个参数, 对多个参数无效"]
   },
   "修饰符传入多个参数": {
     "prefix": ["setInputs="],
@@ -33,13 +30,13 @@
     "description": ["获取并设置自身bet文件名及后缀"]
   },
   "设置当前批处理临时环境变量": {
-    "prefix": ["set cmd path -set path"],
+    "prefix": ["set cmd env -set path"],
     "body": [
-      "set systemEnv=\"%PATH%\"",
-      "@REM set systemEnv=\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "set \"systemEnv=%PATH%\"",
+      "@REM set \"systemEnv=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",
       "@REM ECHO 添加临时系统环境变量",
       "$0",
-      "set path=%systemEnv%;",
+      "set \"path=%newEnv%;%systemEnv%;\"",
       "ECHO %path%",
       ""
     ],
@@ -59,11 +56,7 @@
   },
   "获取当前文件夹名称": {
     "prefix": ["current folder name"],
-    "body": [
-      "pushd %1 & for %%i in (.) do set curr=%%~ni",
-      "ECHO %curr%",
-      "$0"
-    ],
+    "body": ["pushd %1 & for %%i in (.) do set curr=%%~ni", "ECHO %curr%", "$0"],
     "description": ["获取当前文件夹名称"]
   },
   "%%For循环中的元变量": {

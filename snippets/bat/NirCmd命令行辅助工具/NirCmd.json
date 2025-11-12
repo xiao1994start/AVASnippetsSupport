@@ -1,0 +1,40 @@
+{
+  "NirCmd 添加环境变量": {
+    "prefix": ["set NirCmd"],
+    "body": ["set \"systemEnv=%PATH%\"", "set \"nc=%~dp0#NirCmd\\nircmd-x64\"", "set \"path=%nc%;%systemEnv%;\"", ""],
+    "description": ["NirCmd 添加环境变量"]
+  },
+  "NirCmd 环境变量检查": {
+    "prefix": ["nircmd if env"],
+    "body": [
+      ":check_nircmd_env",
+      "if not \"!path:nircmd-x64=!\"==\"!path!\" (",
+      "    ECHO 存在环境变量 nircmd-x64",
+      "    goto :out_nircmd_env",
+      ") else (",
+      "    ECHO 添加环境变量 nircmd-x64",
+      "    set \"systemEnv=%PATH%\"",
+      "    set \"nc=%~dp0#NirCmd\\nircmd-x64\"",
+      "    set \"path=%nc%;%systemEnv%;\"",
+      "    goto :check_nircmd_env",
+      ")",
+      ":out_nircmd_env",
+      ""
+    ],
+    "description": ["NirCmd 环境变量检查"]
+  },
+  "NirCmd 创建快捷方式": {
+    "prefix": ["NirCmd shortcut"],
+    "body": ["call nircmd shortcut \"exe程序路径\" \"快捷方式创建文件夹\" \"快捷方式名称\"", ""],
+    "description": ["NirCmd 创建快捷方式", "\n 需要先添加环境变量"]
+  },
+  "NirCmd 获取桌面路径": {
+    "prefix": ["NirCmd desktop"],
+    "body": [
+      "for /f \"delims=\" %%i in ('nircmd consolewrite \"~\\$folder.desktop\\$\"') do set d=%%i",
+      "ECHO 桌面路径是：%d%",
+      ""
+    ],
+    "description": ["NirCmd 获取桌面路径"]
+  }
+}

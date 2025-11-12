@@ -53,4 +53,4 @@ for %%i in (*.vsix) do (
 )
 ECHO 插件封装脚本执行完毕
 @REM PAUSE > NUL
-@REM timeout /T 1
+timeout /T 1
