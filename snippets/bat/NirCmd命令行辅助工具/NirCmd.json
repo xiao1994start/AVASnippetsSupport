@@ -26,7 +26,7 @@
   "NirCmd 创建快捷方式": {
     "prefix": ["NirCmd shortcut"],
     "body": [
-      "call nircmd shortcut \"exe程序路径\" \"快捷方式创建目录\" \"快捷方式名称\"  \"程序运行参数\" \"ico图标文件\" 0",
+      "call nircmd shortcut \"exe程序路径\" \"快捷方式创建目录\" \"快捷方式名称\" \"程序运行参数\" \"ico图标文件\" 0",
       ""
     ],
     "description": ["NirCmd 创建快捷方式", "\n 需要先添加环境变量"]
