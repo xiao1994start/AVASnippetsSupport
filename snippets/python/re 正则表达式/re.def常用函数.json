@@ -2,7 +2,7 @@
   "[def]正则中文路径检查": {
     "prefix": ["re def noChinese -re"],
     "body": [
-      "def has_chinese():",
+      "def has_chinese(path = str(Path.cwd().resolve())):",
       "    \"\"\"",
       "    检查脚本运行目录是否存在中文",
       "",
@@ -11,7 +11,6 @@
       "    \"\"\"",
       "    import re",
       "",
-      "    path = str(Path.cwd().resolve())",
       "    return bool(re.search(r'[\\u4e00-\\u9fff]', path))",
       ""
     ],

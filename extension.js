@@ -380,6 +380,7 @@ function hasPairDelimiterRight(lineText, characterIndex) {
 // TODO:[辅助函数]✅检查光标右侧是否存在对应的结束分隔符
 /**
  * 检查光标所在行内，在光标右侧相邻或距离n个空格的位置是否存在
+ * 包括 '"""', "'''", ")", "}", "]", ">", '"', "'", "`", ";", ":",
  * 成对分隔符对应的结束符号。
  * * @param {vscode.TextEditor} editor 活动编辑器
  * @param {vscode.Position} position 当前光标位置
@@ -395,7 +396,7 @@ function isCloseDelimiterRightAhead(editor, position, maxSpaces = 64) {
 
   // 定义所有可能的闭合分隔符，并按长度降序排列，确保 '"""' 优先于 '"' 被检查
   const closeDelimiters = [
-    '"""',
+    '"""', // 多行字符串
     "'''", // 多行字符串
     ")",
     "}",
@@ -404,6 +405,8 @@ function isCloseDelimiterRightAhead(editor, position, maxSpaces = 64) {
     '"',
     "'",
     "`",
+    ";",
+    ":",
   ];
 
   // 构造一个正则表达式，用于匹配 [0 到 maxSpaces 个空格] 后面跟着 [任意一个闭合分隔符]

@@ -2,9 +2,9 @@
   "引入 pyautogui 自动化计算机行为": {
     "prefix": ["import pyautogui", "im pyautogui as pg"],
     "body": [
-      "import pyautogui as pg  # 计算机自动化操作库(setuptools自动管理pyscreeze,Pillow)",
+      "import pyautogui as pg  # *计算机自动化操作库(setuptools自动管理pyscreeze,Pillow)",
       "",
-      "pg.PAUSE = 1  # 开启延迟(故障保护), 当pyAutoGUI遇到错误时, 程序会暂停1s(秒); 可根据需要调整PAUSE的值",
+      "pg.PAUSE = 1  # *开启延迟(故障保护), 当pyAutoGUI遇到错误时, 程序会暂停1s(秒); 可根据需要调整PAUSE的值",
       ""
     ],
     "description": ["引入 pyautogui 自动化计算机行为"]
@@ -15,12 +15,7 @@
     "description": ["pyautogui.size 获取当前屏幕分辨率尺寸"]
   },
   "pyautogui.screenshot 截图": {
-    "prefix": [
-      "pg screenshot",
-      "pyautogui screenshot",
-      "screenshot -pg",
-      "screenshot -pyautogui"
-    ],
+    "prefix": ["pg screenshot", "pyautogui screenshot", "screenshot -pg", "screenshot -pyautogui"],
     "body": ["screenshot(${1:savePath_png})  # 截取全屏"],
     "description": ["pyautogui.screenshot 截图"]
   },
@@ -36,19 +31,12 @@
   },
   "pyautogui.moveTo 移动鼠标到指定(绝对)位置": {
     "prefix": ["pg moveTo", "pyautogui moveTo"],
-    "body": [
-      "pg.moveTo(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"
-    ],
-    "description": [
-      "pyautogui.moveTo 移动鼠标到指定(绝对)位置",
-      "duration是指所用时间, 默认是0.25:浮点型, 单位是秒"
-    ]
+    "body": ["pg.moveTo(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"],
+    "description": ["pyautogui.moveTo 移动鼠标到指定(绝对)位置", "duration是指所用时间, 默认是0.25:浮点型, 单位是秒"]
   },
   "pyautogui.move 移动鼠标到相对位置": {
     "prefix": ["pg move", "pyautogui move"],
-    "body": [
-      "pg.move(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"
-    ],
+    "body": ["pg.move(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"],
     "description": ["pyautogui.move 移动鼠标到相对位置"]
   },
   "pyautogui.position 获取鼠标位置的坐标值": {
@@ -63,16 +51,12 @@
   },
   "pyautogui.dragTo 绝对拖拽, 指拖拽到那个位置": {
     "prefix": ["pg dragTo", "pyautogui dragTo"],
-    "body": [
-      "pg.dragTo(x, y, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"
-    ],
+    "body": ["pg.dragTo(x, y, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"],
     "description": ["pyautogui.dragTo 绝对拖拽, 指拖拽到那个位置"]
   },
   "pyautogui.drag 相对拖拽, 相对于当前位置拖拽": {
     "prefix": ["pg drag", "pyautogui drag"],
-    "body": [
-      "pg.drag(xOffset, yOffset, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"
-    ],
+    "body": ["pg.drag(xOffset, yOffset, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"],
     "description": ["pyautogui.drag 相对拖拽, 相对于当前位置拖拽"]
   },
   "pyautogui.click 点击坐标": {
@@ -101,23 +85,17 @@
   },
   "pyautogui.write 输入字符": {
     "prefix": ["pg write", "pyautogui write"],
-    "body": [
-      "pg.write(\"messge\",interval=0.2)  # messge:想要输入的字符; interval:每次输入间隔时间, 默认是0"
-    ],
+    "body": ["pg.write(\"messge\",interval=0.2)  # messge:想要输入的字符; interval:每次输入间隔时间, 默认是0"],
     "description": ["pyautogui.write 输入字符"]
   },
   "pyautogui.press 按键操作": {
     "prefix": ["pg press", "pyautogui press"],
-    "body": [
-      "pg.press('enter',presses=2,interval=0.2)  # presses:按键的次数, 默认是1次; interval:每次按键间隔时间, 默认是0"
-    ],
+    "body": ["pg.press('enter',presses=2,interval=0.2)  # presses:按键的次数, 默认是1次; interval:每次按键间隔时间, 默认是0"],
     "description": ["pyautogui.press 按键操作"]
   },
   "pyautogui.hotkey 热键操作": {
     "prefix": ["pg hotkey", "pyautogui hotkey"],
-    "body": [
-      "pg.hotkey('ctrl','a',interval=0.2)  # interval:每次按键间隔时间, 默认是0"
-    ],
+    "body": ["pg.hotkey('ctrl','a',interval=0.2)  # interval:每次按键间隔时间, 默认是0"],
     "description": ["pyautogui.hotkey 热键操作"]
   },
   "pyautogui.alert 消息框 - 设置一个button": {
@@ -137,9 +115,7 @@
   },
   "pyautogui.password 消息框 - 密码的文本输入框": {
     "prefix": ["pg password=", "pyautogui password="],
-    "body": [
-      "pg.password(title='标题',text='内容',default='输入框默认值',mask='*')"
-    ],
+    "body": ["pg.password(title='标题',text='内容',default='输入框默认值',mask='*')"],
     "description": ["pyautogui.password 消息框 - 密码的文本输入框"]
   }
 }
