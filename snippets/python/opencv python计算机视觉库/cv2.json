@@ -6,7 +6,7 @@
   },
   "cv2.imread 读取图像信息": {
     "prefix": ["cv2 imread -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, 0)  # 读取图片:0灰度模式;1彩色模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, 0)  # 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息"]
   },
   "cv2.imshow 显示图像": {

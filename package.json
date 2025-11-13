@@ -737,6 +737,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/opencv python计算机视觉库/cv2template.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/os 多种操作系统接口/os.json"
       },
       {
