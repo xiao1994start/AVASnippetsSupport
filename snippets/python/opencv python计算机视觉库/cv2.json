@@ -4,66 +4,66 @@
     "body": ["import cv2  # !opencv-python 计算机视觉库(图像路径不能有中文)"],
     "description": ["引入 opencv-python 计算机视觉库"]
   },
-  "OpenCV.imread 读取图像信息": {
-    "prefix": ["OpenCV imread", "imread -OpenCV", "cv2 imread", "imread -cv2"],
-    "body": ["imread(${1:imgPath_png})  # 读取图片"],
-    "description": ["OpenCV.imread 读取图像信息"]
+  "cv2.imread 读取图像信息": {
+    "prefix": ["cv2 imread -cv2"],
+    "body": ["cv2.imread(${1:imgPath_png}, 0)  # 读取图片:0灰度模式;1彩色模式;-1含alpha通道原图模式"],
+    "description": ["cv2.imread 读取图像信息"]
   },
-  "OpenCV.imshow 显示图像": {
-    "prefix": ["OpenCV imshow", "imshow -OpenCV", "cv2 imshow", "imshow -cv2"],
+  "cv2.imshow 显示图像": {
+    "prefix": ["cv2 imshow -cv2"],
     "body": [
-      "imshow(${1:img_window_title}, ${:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
+      "cv2.imshow(${1:img_window_title}, ${:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
       "cv2.waitKey(0)  # *图像显示时间函数(0 为无限时间的显示函数)",
       "cv2.destroyAllWindows()  # *按下任意键便可关闭窗口"
     ],
-    "description": ["OpenCV.imshow 显示图像"]
+    "description": ["cv2.imshow 显示图像"]
   },
-  "OpenCV.waitKey 图像显示时间函数": {
-    "prefix": ["OpenCV waitKey", "waitKey -OpenCV", "cv2 waitKey", "waitKey -cv2"],
-    "body": ["waitKey(0)  # 图像显示时间函数(0 为无限时间的显示函数)"],
-    "description": ["OpenCV.waitKey 图像显示时间函数"]
+  "cv2.waitKey 图像显示时间函数": {
+    "prefix": ["cv2 waitKey -cv2"],
+    "body": ["cv2.waitKey(0)  # 图像显示时间函数(0 为无限时间的显示函数)"],
+    "description": ["cv2.waitKey 图像显示时间函数"]
   },
-  "OpenCV.destroyAllWindows 按下任意键便可关闭窗口": {
-    "prefix": ["OpenCV destroyAllWindows", "destroyAllWindows -OpenCV", "cv2 destroyAllWindows", "destroyAllWindows -cv2"],
-    "body": ["destroyAllWindows()"],
-    "description": ["OpenCV.destroyAllWindows 按下任意键便可关闭窗口"]
+  "cv2.destroyAllWindows 按下任意键便可关闭窗口": {
+    "prefix": ["cv2 destroyAllWindows -cv2"],
+    "body": ["cv2.destroyAllWindows()"],
+    "description": ["cv2.destroyAllWindows 按下任意键便可关闭窗口"]
   },
-  "OpenCV.shape 获取图像 (宽, 高, 通道数)": {
-    "prefix": ["OpenCV shape", "shape -OpenCV", "cv2 shape", "shape -cv2"],
+  "cv2.shape 获取图像 (宽, 高, 通道数)": {
+    "prefix": ["cv2 shape -cv2"],
     "body": ["shape  # -> tuple: (height, width, channel)"],
-    "description": ["OpenCV.shape 获取图像 (宽, 高, 通道数)"]
+    "description": ["cv2.shape 获取图像 (宽, 高, 通道数)"]
   },
-  "OpenCV.cvtColor 图像转换色彩模式": {
-    "prefix": ["OpenCV cvtColor", "cvtColor -OpenCV", "cv2 cvtColor", "cvtColor -cv2"],
-    "body": ["cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"],
-    "description": ["OpenCV.cvtColor 图像转换色彩模式"]
+  "cv2.cvtColor 图像转换色彩模式": {
+    "prefix": ["cv2 cvtColor -cv2"],
+    "body": ["cv2.cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"],
+    "description": ["cv2.cvtColor 图像转换色彩模式"]
   },
-  "OpenCV.matchTemplate 模板匹配": {
-    "prefix": ["OpenCV matchTemplate", "matchTemplate -OpenCV", "cv2 matchTemplate", "matchTemplate -cv2"],
+  "cv2.matchTemplate 模板匹配": {
+    "prefix": ["cv2 matchTemplate -cv2"],
     "body": [
-      "matchTemplate(${1:匹配对象}, ${2:查找对象}, method=cv2.TM_SQDIFF_NORMED)  # (匹配对象, 查找对象, 匹配方式:cv2.TM_SQDIFF_NORMED)"
+      "cv2.matchTemplate(${1:img_gray匹配对象}, ${2:templ查找对象}, method=cv2.TM_CCOEFF_NORMED)  # *img_gray匹配对象, templ查找对象, method匹配方式"
     ],
-    "description": ["OpenCV.matchTemplate 模板匹配"]
+    "description": ["cv2.matchTemplate 模板匹配"]
   },
-  "OpenCV.minMaxLoc 查找匹配结果": {
-    "prefix": ["OpenCV minMaxLoc", "minMaxLoc -OpenCV", "cv2 minMaxLoc", "minMaxLoc -cv2"],
+  "cv2.minMaxLoc 查找匹配结果": {
+    "prefix": ["cv2 minMaxLoc -cv2"],
     "body": [
-      "minMaxLoc(${1:matchTemplate_对象结果})  # 获取最小值, 最大值, 最小值位置(左上角坐标), 最大值位置(右下角坐标) -> tuple[index]: (min_val, max_val, min_loc, max_loc)"
+      "cv2.minMaxLoc(${1:matchTemplate_对象结果})  # 获取最小值, 最大值, 最小值位置(左上角坐标), 最大值位置(右下角坐标) -> tuple[index]: (min_val, max_val, min_loc, max_loc)"
     ],
-    "description": ["OpenCV.minMaxLoc 查找匹配结果"]
+    "description": ["cv2.minMaxLoc 查找匹配结果"]
   },
-  "OpenCV.rectangle 绘制矩形": {
-    "prefix": ["OpenCV rectangle", "rectangle -OpenCV", "cv2 rectangle", "rectangle -cv2"],
+  "cv2.rectangle 绘制矩形": {
+    "prefix": ["cv2 rectangle -cv2"],
     "body": [
-      "rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:(0, 0, 255)-颜色(BGR); 2-线宽"
+      "cv2.rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:(0, 0, 255)-颜色(BGR); 2-线宽"
     ],
-    "description": ["OpenCV.rectangle 绘制矩形"]
+    "description": ["cv2.rectangle 绘制矩形"]
   },
-  "OpenCV.resize 改变图像的尺寸": {
-    "prefix": ["OpenCV resize", "resize -OpenCV", "cv2 resize", "resize -cv2"],
+  "cv2.resize 改变图像的尺寸": {
+    "prefix": ["cv2 resize -cv2"],
     "body": [
-      "resize(${1:image_尺寸调整原始图像}, (0, 0), fx=1, fy=1)  # *缩放图片:cv2.imread()读取的图像对象; (0, 0)不直接指定尺寸; fx/fy缩放比例因子"
+      "cv2.resize(${1:image_尺寸调整原始图像}, (0, 0), fx=1, fy=1)  # *缩放图片:cv2.imread()读取的图像对象; (0, 0)不直接指定尺寸; fx/fy缩放比例因子"
     ],
-    "description": ["OpenCV.resize 改变图像的尺寸"]
+    "description": ["cv2.resize 改变图像的尺寸"]
   }
 }
