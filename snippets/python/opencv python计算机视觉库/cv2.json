@@ -12,9 +12,9 @@
   "OpenCV.imshow 显示图像": {
     "prefix": ["OpenCV imshow", "imshow -OpenCV", "cv2 imshow", "imshow -cv2"],
     "body": [
-      "imshow(\"图片\", ${1:imread_cvtColorIMG})  # 显示 cv2.imread 读取对象图片",
-      "cv2.waitKey(0)  # 图像显示时间函数(0 为无限时间的显示函数)",
-      "cv2.destroyAllWindows()  # 按下任意键便可关闭窗口"
+      "imshow(${1:img_window_title}, ${:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
+      "cv2.waitKey(0)  # *图像显示时间函数(0 为无限时间的显示函数)",
+      "cv2.destroyAllWindows()  # *按下任意键便可关闭窗口"
     ],
     "description": ["OpenCV.imshow 显示图像"]
   },
@@ -54,7 +54,16 @@
   },
   "OpenCV.rectangle 绘制矩形": {
     "prefix": ["OpenCV rectangle", "rectangle -OpenCV", "cv2 rectangle", "rectangle -cv2"],
-    "body": ["rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)"],
+    "body": [
+      "rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:(0, 0, 255)-颜色(BGR); 2-线宽"
+    ],
     "description": ["OpenCV.rectangle 绘制矩形"]
+  },
+  "OpenCV.resize 改变图像的尺寸": {
+    "prefix": ["OpenCV resize", "resize -OpenCV", "cv2 resize", "resize -cv2"],
+    "body": [
+      "resize(${1:image_尺寸调整原始图像}, (0, 0), fx=1, fy=1)  # *缩放图片:cv2.imread()读取的图像对象; (0, 0)不直接指定尺寸; fx/fy缩放比例因子"
+    ],
+    "description": ["OpenCV.resize 改变图像的尺寸"]
   }
 }
