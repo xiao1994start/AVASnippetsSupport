@@ -5,12 +5,12 @@
     "description": ["引入 opencv-python 计算机视觉库"]
   },
   "OpenCV.imread 读取图像信息": {
-    "prefix": ["OpenCV imread", "imread -OpenCV"],
+    "prefix": ["OpenCV imread", "imread -OpenCV", "cv2 imread", "imread -cv2"],
     "body": ["imread(${1:imgPath_png})  # 读取图片"],
     "description": ["OpenCV.imread 读取图像信息"]
   },
   "OpenCV.imshow 显示图像": {
-    "prefix": ["OpenCV imshow", "imshow -OpenCV"],
+    "prefix": ["OpenCV imshow", "imshow -OpenCV", "cv2 imshow", "imshow -cv2"],
     "body": [
       "imshow(\"图片\", ${1:imread_cvtColorIMG})  # 显示 cv2.imread 读取对象图片",
       "cv2.waitKey(0)  # 图像显示时间函数(0 为无限时间的显示函数)",
@@ -19,47 +19,41 @@
     "description": ["OpenCV.imshow 显示图像"]
   },
   "OpenCV.waitKey 图像显示时间函数": {
-    "prefix": ["OpenCV waitKey", "waitKey -OpenCV"],
+    "prefix": ["OpenCV waitKey", "waitKey -OpenCV", "cv2 waitKey", "waitKey -cv2"],
     "body": ["waitKey(0)  # 图像显示时间函数(0 为无限时间的显示函数)"],
     "description": ["OpenCV.waitKey 图像显示时间函数"]
   },
   "OpenCV.destroyAllWindows 按下任意键便可关闭窗口": {
-    "prefix": ["OpenCV destroyAllWindows", "destroyAllWindows -OpenCV"],
+    "prefix": ["OpenCV destroyAllWindows", "destroyAllWindows -OpenCV", "cv2 destroyAllWindows", "destroyAllWindows -cv2"],
     "body": ["destroyAllWindows()"],
     "description": ["OpenCV.destroyAllWindows 按下任意键便可关闭窗口"]
   },
   "OpenCV.shape 获取图像 (宽, 高, 通道数)": {
-    "prefix": ["OpenCV shape", "shape -OpenCV"],
+    "prefix": ["OpenCV shape", "shape -OpenCV", "cv2 shape", "shape -cv2"],
     "body": ["shape  # -> tuple: (height, width, channel)"],
     "description": ["OpenCV.shape 获取图像 (宽, 高, 通道数)"]
   },
   "OpenCV.cvtColor 图像转换色彩模式": {
-    "prefix": ["OpenCV cvtColor", "cvtColor -OpenCV"],
+    "prefix": ["OpenCV cvtColor", "cvtColor -OpenCV", "cv2 cvtColor", "cvtColor -cv2"],
     "body": ["cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"],
     "description": ["OpenCV.cvtColor 图像转换色彩模式"]
   },
   "OpenCV.matchTemplate 模板匹配": {
-    "prefix": ["OpenCV matchTemplate", "matchTemplate -OpenCV"],
+    "prefix": ["OpenCV matchTemplate", "matchTemplate -OpenCV", "cv2 matchTemplate", "matchTemplate -cv2"],
     "body": [
-      "matchTemplate(${1:匹配对象}, ${2:查找对象}, method=cv2.TM_SQDIFF_NORMED)  # (匹配对象, 查找对象, 匹配方式:cv2.TM_SQDIFF_NORMED)",
-      "# TM_SQDIFF 平方差匹配法: 该方法采用平方差来进行匹配; 最好的匹配值为0; 匹配越差, 匹配值越大",
-      "# TM_CCORR 相关匹配法: 该方法采用相关系数来进行匹配; 最好的匹配值为1; 匹配越差, 匹配值越小; 该方法采用乘法操作；数值越大表明匹配程度越好",
-      "# TM_CCOEFF 相关系数匹配法: 1表示完美的匹配, -1表示最差的匹配",
-      "# TM_SQDIFF_NORMED 归一化平方差匹配法",
-      "# TM_CCORR_NORMED 归一化相关匹配法",
-      "# TM_CCOEFF_NORMED 归一化相关系数匹配法"
+      "matchTemplate(${1:匹配对象}, ${2:查找对象}, method=cv2.TM_SQDIFF_NORMED)  # (匹配对象, 查找对象, 匹配方式:cv2.TM_SQDIFF_NORMED)"
     ],
     "description": ["OpenCV.matchTemplate 模板匹配"]
   },
   "OpenCV.minMaxLoc 查找匹配结果": {
-    "prefix": ["OpenCV minMaxLoc", "minMaxLoc -OpenCV"],
+    "prefix": ["OpenCV minMaxLoc", "minMaxLoc -OpenCV", "cv2 minMaxLoc", "minMaxLoc -cv2"],
     "body": [
       "minMaxLoc(${1:matchTemplate_对象结果})  # 获取最小值, 最大值, 最小值位置(左上角坐标), 最大值位置(右下角坐标) -> tuple[index]: (min_val, max_val, min_loc, max_loc)"
     ],
     "description": ["OpenCV.minMaxLoc 查找匹配结果"]
   },
   "OpenCV.rectangle 绘制矩形": {
-    "prefix": ["OpenCV rectangle", "rectangle -OpenCV"],
+    "prefix": ["OpenCV rectangle", "rectangle -OpenCV", "cv2 rectangle", "rectangle -cv2"],
     "body": ["rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)"],
     "description": ["OpenCV.rectangle 绘制矩形"]
   }
