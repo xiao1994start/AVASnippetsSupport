@@ -76,7 +76,7 @@
   "cv2.rectangle 绘制矩形": {
     "prefix": ["cv2 rectangle -cv2"],
     "body": [
-      "cv2.rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:(0, 0, 255)-颜色(BGR); 2-线宽"
+      "cv2.rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:RGB(0, 0, 255)-红色;线宽1|填充-1"
     ],
     "description": ["cv2.rectangle 绘制矩形"]
   },
