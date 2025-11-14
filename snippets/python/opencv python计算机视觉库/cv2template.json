@@ -2,9 +2,10 @@
   "cv2 模板匹配方法测试函数": {
     "prefix": ["cv2 def test_cv2_TM"],
     "body": [
-      "def test_cv2_TM(img, templ):",
+      "def test_cv2_TM_gray(img, templ):",
       "    \"\"\"",
       "    OpenCV模板匹配方法测试(修改分辨率需要重新设置匹配目标)",
+      "    测试模式:gray灰度模式",
       "    [一般情况:cv2.TM_CCOEFF_NORMED效果最佳,cv2.TM_CCORR_NORMED其次]",
       "    Args:",
       "        img (str | Path): 被匹配图像路径",
