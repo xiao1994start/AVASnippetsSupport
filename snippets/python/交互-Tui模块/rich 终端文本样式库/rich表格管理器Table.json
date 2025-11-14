@@ -2,7 +2,7 @@
   "引入 rich.table.Table 表格管理器": {
     "prefix": ["import rich table", "im rich table"],
     "body": [
-      "from rich.table import Table  # *表格管理器(用于捕获打印到控制台的表格)[使用 tb = Table(title='标题')实例化, tb.add_column()|tb.add_row()调用,Console().print(tb)输出]",
+      "from rich.table import Table  # *用于捕获表格打印到控制台[使用tb = Table(title='标题')实例化:.add_column()|.add_row()调用,Console().print(tb)输出]",
       ""
     ],
     "description": ["表格管理器(用于捕获打印到控制台的表格)"]

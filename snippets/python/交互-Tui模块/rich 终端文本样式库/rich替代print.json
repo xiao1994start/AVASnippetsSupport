@@ -1,13 +1,21 @@
 {
   "引入 rich.print 替代 print 函数": {
     "prefix": ["import rich print", "im rich print"],
-    "body": [
-      "from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
-      ""
-    ],
+    "body": ["from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]", ""],
     "description": [
       "使用Rich启动和运行的最快方法是导入替代方案 print 函数",
       "\n该函数接受与内置 print 并且可以用作插入式替代品"
     ]
+  },
+  "引入 rich 常用模块": {
+    "prefix": ["import rich All", "im rich All"],
+    "body": [
+      "from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
+      "from rich.console import Console  # *用于捕获结果打印到控制台[使用 c = Console(color_system='256', style=None)实例化, c.print(...)调用]",
+      "from rich.panel import Panel  # *Panel构造可渲染对象周围绘制边框(需要使用)",
+      "from rich.table import Table  # *用于捕获表格打印到控制台[使用tb = Table(title='标题')实例化:.add_column()|.add_row()调用,Console().print(tb)输出]",
+      ""
+    ],
+    "description": ["引入 rich 常用模块"]
   }
 }
