@@ -1,11 +1,11 @@
 {
   "True": {
-    "prefix": ["T -True", "True "],
+    "prefix": ["T -True", "Tr -True", "True "],
     "body": "True",
     "description": "True."
   },
   "False": {
-    "prefix": ["F -False", "False "],
+    "prefix": ["F -False", "Fa -False", "False "],
     "body": "False",
     "description": "False."
   }
