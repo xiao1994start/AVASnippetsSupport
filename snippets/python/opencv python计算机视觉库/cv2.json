@@ -4,6 +4,11 @@
     "body": ["import cv2  # !opencv-python 计算机视觉库(图像路径不能有中文)"],
     "description": ["引入 opencv-python 计算机视觉库"]
   },
+  "cv2.imread 读取图像信息(默认)": {
+    "prefix": ["cv2 imread -cv2"],
+    "body": ["cv2.imread(${1:imgPath_png})  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "description": ["cv2.imread 读取图像信息(默认)"]
+  },
   "cv2.imread 读取图像信息(GRAY灰度)": {
     "prefix": ["cv2 imread gray -cv2"],
     "body": ["cv2.imread(${1:imgPath_png}, 0)  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
