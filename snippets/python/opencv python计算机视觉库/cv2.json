@@ -27,7 +27,7 @@
   "cv2.imshow 显示图像": {
     "prefix": ["cv2 imshow -cv2"],
     "body": [
-      "cv2.imshow(${1:img_window_title}, ${:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
+      "cv2.imshow(${1:img_window_title}, ${2:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
       "cv2.waitKey(0)  # *图像显示时间函数(0 为无限时间的显示函数)",
       "cv2.destroyAllWindows()  # *按下任意键便可关闭窗口"
     ],
