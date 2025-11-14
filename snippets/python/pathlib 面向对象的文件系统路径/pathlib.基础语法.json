@@ -6,8 +6,13 @@
   },
   "Path() ->拼接路径/类型转换/类方法": {
     "prefix": ["Path "],
-    "body": ["Path(${1:\"root\" , \"dir\" / \"file\"})"],
+    "body": ["Path(${1:'root' , 'dir' / 'file'})"],
     "description": ["Path() ->拼接路径/类型转换"]
+  },
+  "str(Path(...)) ->Path类型转换为字符串": {
+    "prefix": ["strPath "],
+    "body": ["str(Path($0))"],
+    "description": ["str(Path(...)) ->Path类型转换为字符串"]
   },
   "Path.cwd 当前路径": {
     "prefix": ["Path-cwd"],
@@ -30,16 +35,12 @@
   "Path__file__.parent 当前脚本文件父级绝对路径(脚本所在文件夹路径)": {
     "prefix": ["Path-file-parent"],
     "body": ["Path(__file__).parent"],
-    "description": [
-      "Path__file__.parent 当前脚本文件父级绝对路径(脚本所在文件夹路径)"
-    ]
+    "description": ["Path__file__.parent 当前脚本文件父级绝对路径(脚本所在文件夹路径)"]
   },
   "Path__file__.parent.resolve 当前脚本文件父级绝对路径(脚本所在文件夹路径)": {
     "prefix": ["Path-file-parent-resolve"],
     "body": ["Path(__file__).parent.resolve()"],
-    "description": [
-      "Path__file__.parent.resolve 当前脚本文件父级绝对路径(脚本所在文件夹路径)"
-    ]
+    "description": ["Path__file__.parent.resolve 当前脚本文件父级绝对路径(脚本所在文件夹路径)"]
   },
   "Path.home ~:用户目录绝对路径": {
     "prefix": ["Path-home"],
@@ -149,20 +150,12 @@
   },
   "Path.iterdir 示例": {
     "prefix": ["iterdir =Path", "Path iterdir=", "iterdir =-Path"],
-    "body": [
-      "for child in Path(${1:path}).iterdir(): child",
-      "    print(child)",
-      "    pass"
-    ],
-    "description": [
-      "for.iterdir -Path 当路径指向一个目录时, 产生该路径下的对象的路径"
-    ]
+    "body": ["for child in Path(${1:path}).iterdir(): child", "    print(child)", "    pass"],
+    "description": ["for.iterdir -Path 当路径指向一个目录时, 产生该路径下的对象的路径"]
   },
   "Path.walk 遍历目录->tuple(list)": {
     "prefix": ["Path walk", "walk -Path"],
-    "body": [
-      "walk()  # =>generator(生成器) =解包> root: str, dirs: list, files: list"
-    ],
+    "body": ["walk()  # =>generator(生成器) =解包> root: str, dirs: list, files: list"],
     "description": [
       "Path.walk 通过对目录树自上而下或自下而上的遍历来生成其中的文件名",
       "    对于根位置为 self 的目录树中的每个目录(包括 self 但不包括 '.' 和 '..'), 该方法会产生一个 3 元组 (dirpath, dirnames, filenames)",
@@ -211,9 +204,7 @@
   "Path.hardlink_to 创建硬链接": {
     "prefix": ["Path hardlink_to", "hardlink_to -Path"],
     "body": ["hardlink_to(${1:target})"],
-    "description": [
-      "Path.hardlink_to 将此路径设为一个指向与 target 相同文件的硬链接"
-    ]
+    "description": ["Path.hardlink_to 将此路径设为一个指向与 target 相同文件的硬链接"]
   },
   "Path.hardlink_to 示例": {
     "prefix": ["hardlink_to =-Path", "Path hardlink_to="],
@@ -222,9 +213,7 @@
   },
   "Path.symlink_to 创建符号连接": {
     "prefix": ["Path symlink_to", "symlink_to -Path"],
-    "body": [
-      "symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir())"
-    ],
+    "body": ["symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir())"],
     "description": [
       "Path.symlink_to 使该路径成为一个指向 target 的符号连接",
       "    在 Windows 上, 符号链接可以表示文件或目录两种类型, 并且不会动态改变类型. 如果目标存在, 则新建链接的类型将与目标一致. 否则, 如果 target_is_directory 为 True, 则符号链接将创建为目录链接, 为 False (默认)将创建为文件链接. 在非 Windows 平台上, target_is_directory 被忽略"
@@ -232,18 +221,13 @@
   },
   "Path.symlink_to 示例": {
     "prefix": ["symlink_to =-Path", "Path symlink_to="],
-    "body": [
-      "Path(${2:dst_path}).symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir()):"
-    ],
+    "body": ["Path(${2:dst_path}).symlink_to(${1:src_path}, target_is_directory=Path(${1:src_path}).is_dir()):"],
     "description": ["使用Path.symlink_to的示例"]
   },
   "Path.readlink 返回符号链接所指向的路径": {
     "prefix": ["Path readlink"],
     "body": ["readlink()"],
-    "description": [
-      "Path.readlink 返回符号链接所指向的路径",
-      "    在 3.9 版本加入.readlink()方法"
-    ]
+    "description": ["Path.readlink 返回符号链接所指向的路径", "    在 3.9 版本加入.readlink()方法"]
   },
   "Path.copy 复制": {
     "prefix": ["Path copy", "copy -Path"],
@@ -291,9 +275,7 @@
   },
   "Path.open 打开文件": {
     "prefix": ["Path open", "open -Path"],
-    "body": [
-      "open(mode='${1|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', encoding=${2:'utf-8'})"
-    ],
+    "body": ["open(mode='${1|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', encoding=${2:'utf-8'})"],
     "description": ["Path.open 打开对象文件操作"]
   },
   "Path.stat 返回有关路径的信息": {
@@ -307,28 +289,18 @@
   },
   "Path.stat 示例": {
     "prefix": ["stat =-Path", "Path stat="],
-    "body": [
-      "p = Path('setup.py')",
-      "p.stat().st_size",
-      "# 956",
-      "p.stat().st_mtime",
-      "# 1327883547.852554"
-    ],
+    "body": ["p = Path('setup.py')", "p.stat().st_size", "# 956", "p.stat().st_mtime", "# 1327883547.852554"],
     "description": ["使用Path.stat的示例"]
   },
   "Path.owner 返回拥有此文件的用户名": {
     "prefix": ["Path owner", "owner -Path"],
     "body": ["owner()"],
-    "description": [
-      "Path.owner 返回拥有此文件的用户名. 如果文件的 UID 无法在系统数据库中找到, 则抛出 KeyError"
-    ]
+    "description": ["Path.owner 返回拥有此文件的用户名. 如果文件的 UID 无法在系统数据库中找到, 则抛出 KeyError"]
   },
   "Path.group 返回拥有此文件的用户组": {
     "prefix": ["Path group", "group -Path"],
     "body": ["group()"],
-    "description": [
-      "Path.group 返回拥有此文件的用户组. 如果文件的 GID 无法在系统数据库中找到, 将抛出 KeyError "
-    ]
+    "description": ["Path.group 返回拥有此文件的用户组. 如果文件的 GID 无法在系统数据库中找到, 将抛出 KeyError "]
   },
   "Path.samefile 此目录是否指向与可能是字符串或者另一个路径对象的 other_path 相同的文件": {
     "prefix": ["Path samefile", "samefile -Path"],
@@ -341,14 +313,7 @@
   },
   "Path.samefile 示例": {
     "prefix": ["samefile =-Path", "Path samefile="],
-    "body": [
-      "p = Path('spam')",
-      "q = Path('eggs')",
-      "p.samefile(q)",
-      "# False",
-      "p.samefile('spam')",
-      "# True"
-    ],
+    "body": ["p = Path('spam')", "q = Path('eggs')", "p.samefile(q)", "# False", "p.samefile('spam')", "# True"],
     "description": ["使用Path.samefile的示例"]
   },
   "Path.name 当前文件名": {
@@ -363,10 +328,7 @@
   "Path.parent 父级路径": {
     "prefix": ["Path parent", "parent Path"],
     "body": ["parent"],
-    "description": [
-      "Path.parent 此路径的逻辑父路径",
-      "    你不能超过一个 anchor 或空路径"
-    ]
+    "description": ["Path.parent 此路径的逻辑父路径", "    你不能超过一个 anchor 或空路径"]
   },
   "Path.suffix 文件扩展名": {
     "prefix": ["Path suffix", "suffix -Path"],

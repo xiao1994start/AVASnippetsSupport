@@ -10,111 +10,106 @@
     "description": ["引入 pyautogui 自动化计算机行为"]
   },
   "pyautogui.size 获取当前屏幕分辨率尺寸": {
-    "prefix": ["pg size", "pyautogui size"],
+    "prefix": ["pg size -pyautogui"],
     "body": ["pg.size()  # -> tuple: Size(width=int, height=int)"],
     "description": ["pyautogui.size 获取当前屏幕分辨率尺寸"]
   },
   "pyautogui.screenshot 截图": {
-    "prefix": ["pg screenshot", "pyautogui screenshot", "screenshot -pg", "screenshot -pyautogui"],
-    "body": ["screenshot(${1:savePath_png})  # 截取全屏"],
+    "prefix": ["pg screenshot -pyautogui"],
+    "body": ["pg.screenshot(${1:savePath_png})  # 截取全屏"],
     "description": ["pyautogui.screenshot 截图"]
   },
   "pyautogui.locateCenterOnScreen 定位图片中心点坐标": {
-    "prefix": [
-      "pg locateCenterOnScreen",
-      "pyautogui locateCenterOnScreen",
-      "locateCenterOnScreen -pg",
-      "locateCenterOnScreen -pyautogui"
-    ],
-    "body": ["locateCenterOnScreen($0)"],
+    "prefix": ["pg locateCenterOnScreen -pyautogui"],
+    "body": ["pg.locateCenterOnScreen($0)"],
     "description": ["pyautogui.locateCenterOnScreen 定位图片中心点坐标"]
   },
   "pyautogui.moveTo 移动鼠标到指定(绝对)位置": {
-    "prefix": ["pg moveTo", "pyautogui moveTo"],
+    "prefix": ["pg moveTo -pyautogui"],
     "body": ["pg.moveTo(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"],
     "description": ["pyautogui.moveTo 移动鼠标到指定(绝对)位置", "duration是指所用时间, 默认是0.25:浮点型, 单位是秒"]
   },
   "pyautogui.move 移动鼠标到相对位置": {
-    "prefix": ["pg move", "pyautogui move"],
+    "prefix": ["pg move -pyautogui"],
     "body": ["pg.move(${1:intX}, ${2:intY}, duration=0.25)  # duration是指所用时间, 默认是0.25:浮点型, 单位是秒"],
     "description": ["pyautogui.move 移动鼠标到相对位置"]
   },
   "pyautogui.position 获取鼠标位置的坐标值": {
-    "prefix": ["pg position", "pyautogui position"],
+    "prefix": ["pg position -pyautogui"],
     "body": ["pg.position()  # -> tuple:(mouse_x, mouse_y)"],
     "description": ["pyautogui.position 获取鼠标位置的坐标值"]
   },
   "pyautogui.onScreen 检测指定坐标是否在屏幕上": {
-    "prefix": ["pg onScreen", "pyautogui onScreen"],
+    "prefix": ["pg onScreen -pyautogui"],
     "body": ["pg.onScreen(limX, limY)  # 检测指定坐标是否在屏幕上 -> bool"],
     "description": ["pyautogui.onScreen 检测指定坐标是否在屏幕上"]
   },
   "pyautogui.dragTo 绝对拖拽, 指拖拽到那个位置": {
-    "prefix": ["pg dragTo", "pyautogui dragTo"],
+    "prefix": ["pg dragTo -pyautogui"],
     "body": ["pg.dragTo(x, y, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"],
     "description": ["pyautogui.dragTo 绝对拖拽, 指拖拽到那个位置"]
   },
   "pyautogui.drag 相对拖拽, 相对于当前位置拖拽": {
-    "prefix": ["pg drag", "pyautogui drag"],
+    "prefix": ["pg drag -pyautogui"],
     "body": ["pg.drag(xOffset, yOffset, duration=0.25, button='left')  # 默认左键(left)[右键(right), 中键(middle)]"],
     "description": ["pyautogui.drag 相对拖拽, 相对于当前位置拖拽"]
   },
   "pyautogui.click 点击坐标": {
-    "prefix": ["pg click", "pyautogui click"],
+    "prefix": ["pg click -pyautogui"],
     "body": [
       "pg.click(${1:x}, ${2:y}, button=\"left\")  # button:默认左键(left)[右键(right), 中键(middle)]; clicks:点击次数, 默认是1次; interval:每次点击间隔时间, 默认是0; duration:持续时间, 默认是0"
     ],
     "description": ["pyautogui.click 点击坐标"]
   },
   "pyautogui.doubleClick 双击坐标": {
-    "prefix": ["pg doubleClick", "pyautogui doubleClick"],
+    "prefix": ["pg doubleClick -pyautogui"],
     "body": [
       "pg.doubleClick(${1:x}, ${2:y}, button=\"left\")  # button:默认左键(left)[右键(right), 中键(middle)]; clicks:点击次数, 默认是1次; interval:每次点击间隔时间, 默认是0; duration:持续时间, 默认是0"
     ],
     "description": ["pyautogui.doubleClick 双击坐标"]
   },
   "pyautogui.mouseDown 按下鼠标键位": {
-    "prefix": ["pg mouseDown", "pyautogui mouseDown"],
+    "prefix": ["pg mouseDown -pyautogui"],
     "body": ["pg.mouseDown(button='left')  # 单击分布操作 -> 按下鼠标键位"],
     "description": ["pyautogui.mouseDown 按下鼠标键位"]
   },
   "pyautogui.mouseUp 释放鼠标键位": {
-    "prefix": ["pg mouseUp", "pyautogui mouseUp"],
+    "prefix": ["pg mouseUp -pyautogui"],
     "body": ["pg.mouseUp(button='left')  # 单击分布操作 -> 释放鼠标键位"],
     "description": ["pyautogui.mouseUp 释放鼠标键位"]
   },
   "pyautogui.write 输入字符": {
-    "prefix": ["pg write", "pyautogui write"],
+    "prefix": ["pg write -pyautogui"],
     "body": ["pg.write(\"messge\",interval=0.2)  # messge:想要输入的字符; interval:每次输入间隔时间, 默认是0"],
     "description": ["pyautogui.write 输入字符"]
   },
   "pyautogui.press 按键操作": {
-    "prefix": ["pg press", "pyautogui press"],
+    "prefix": ["pg press -pyautogui"],
     "body": ["pg.press('enter',presses=2,interval=0.2)  # presses:按键的次数, 默认是1次; interval:每次按键间隔时间, 默认是0"],
     "description": ["pyautogui.press 按键操作"]
   },
   "pyautogui.hotkey 热键操作": {
-    "prefix": ["pg hotkey", "pyautogui hotkey"],
+    "prefix": ["pg hotkey -pyautogui"],
     "body": ["pg.hotkey('ctrl','a',interval=0.2)  # interval:每次按键间隔时间, 默认是0"],
     "description": ["pyautogui.hotkey 热键操作"]
   },
   "pyautogui.alert 消息框 - 设置一个button": {
-    "prefix": ["pg alert -button=", "pyautogui alert -button="],
+    "prefix": ["pg alert --button = -pyautogui"],
     "body": ["pg.alert(title='标题',text='内容',button='ok')"],
     "description": ["pyautogui.alert 消息框 - 设置一个button"]
   },
   "pyautogui.confirm 消息框 - 设置多个buttons": {
-    "prefix": ["pg confirm=", "pyautogui confirm="],
+    "prefix": ["pg confirm =-pyautogui"],
     "body": ["pg.confirm(title='标题',text='内容',buttons=['ok','cancel'])"],
     "description": ["pyautogui.confirm 消息框 - 设置多个buttons"]
   },
   "pyautogui.prompt 消息框 - 自带文本输入框": {
-    "prefix": ["pg prompt=", "pyautogui prompt="],
+    "prefix": ["pg prompt =-pyautogui"],
     "body": ["pg.prompt(title='标题',text='内容',default='输入框默认值')"],
     "description": ["pyautogui.prompt 消息框 - 自带文本输入框"]
   },
   "pyautogui.password 消息框 - 密码的文本输入框": {
-    "prefix": ["pg password=", "pyautogui password="],
+    "prefix": ["pg password =-pyautogui"],
     "body": ["pg.password(title='标题',text='内容',default='输入框默认值',mask='*')"],
     "description": ["pyautogui.password 消息框 - 密码的文本输入框"]
   }

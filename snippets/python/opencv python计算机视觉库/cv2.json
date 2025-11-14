@@ -6,17 +6,17 @@
   },
   "cv2.imread 读取图像信息(GRAY灰度)": {
     "prefix": ["cv2 imread gray -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, 0)  # 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, 0)  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(GRAY灰度)"]
   },
   "cv2.imread 读取图像信息(RGB)": {
     "prefix": ["cv2 imread RGB -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, 1)  # 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, 1)  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(RGB)"]
   },
   "cv2.imread 读取图像信息(Alpha)": {
     "prefix": ["cv2 imread Alpha -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, -1)  # 读取图片:1彩色模式;0灰度模式;-1含Alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, -1)  # *读取图片:1彩色模式;0灰度模式;-1含Alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(Alpha)"]
   },
   "cv2.imshow 显示图像": {
@@ -40,7 +40,7 @@
   },
   "cv2.shape 获取图像 (宽, 高, 通道数)": {
     "prefix": ["cv2 shape -cv2"],
-    "body": ["shape  # -> tuple: (height, width, channel)"],
+    "body": ["shape  # *获取图像信息 -> tuple: (height, width, channel)"],
     "description": ["cv2.shape 获取图像 (宽, 高, 通道数)"]
   },
   "cv2.cvtColor 图像转换色彩模式": {
@@ -58,7 +58,7 @@
   "cv2.minMaxLoc 查找匹配结果": {
     "prefix": ["cv2 minMaxLoc -cv2"],
     "body": [
-      "cv2.minMaxLoc(${1:matchTemplate_对象结果})  # 获取最小值, 最大值, 最小值位置(左上角坐标), 最大值位置(右下角坐标) -> tuple[index]: (min_val, max_val, min_loc, max_loc)"
+      "cv2.minMaxLoc(${1:matchTemplate_对象结果})  # *结果解析 -> tuple[index]: (min_val最小值, max_val最大值, min_loc左上角坐标, max_loc右下角坐标)"
     ],
     "description": ["cv2.minMaxLoc 查找匹配结果"]
   },
