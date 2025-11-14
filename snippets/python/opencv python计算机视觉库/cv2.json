@@ -45,7 +45,7 @@
   },
   "cv2.cvtColor 图像转换色彩模式": {
     "prefix": ["cv2 cvtColor -cv2"],
-    "body": ["cv2.cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # COLOR_BGR2GRAY: 灰度模式"],
+    "body": ["cv2.cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # *颜色空间转换[cv2.COLOR_BGR2GRAY:灰度模式]"],
     "description": ["cv2.cvtColor 图像转换色彩模式"]
   },
   "cv2.matchTemplate 模板匹配": {
