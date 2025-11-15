@@ -1,22 +1,22 @@
 {
   "引入 typing 对类型提示的支持": {
     "prefix": ["import typing", "im typing"],
-    "body": ["import typing  # * 引入 typing 对类型提示的支持"],
+    "body": ["import typing  # *引入 typing 对类型提示的支持"],
     "description": ["引入 typing 对类型提示的支持"]
   },
   "引入 typing 对类型提示的支持_常用模块": {
-    "prefix": ["import typing=", "im typing="],
+    "prefix": ["import typing All =-typing", "im typing All =-typing"],
     "body": [
-      "from typing import (  # * 引入 typing 对类型提示的支持_常用模块",
-      "    TYPE_CHECKING,  # * 避免定义类时循环引用[if TYPE_CHECKING:...](仅为类型提示,不实例化/参与实际运行)[args: 'ClassObject']",
-      "    Any,  # * 任意类型提示(args: Any)",
-      "    Callable,  # * 函数类型提示(args: Callable[[args], return])",
-      "    Final,  # * args: Final[type] = 常量",
-      "    Optional,  # * 可选参数(args: Optional[Type] = None 即 args: Type | None = None)",
-      "    Self,  # * 链式调用时返回函数本身",
-      "    TypeVar,  # * 泛型类型变量(TypeName = TypeVar('TypeName'[, Type_1, Type_2, ...]))",
-      "    Union,  # * 联合类型(args: Union[Type_1, Type_2] 即 args: Type_1 | Type_2)",
-      "    cast,  # * 伪类型转换[cast(伪类型, 真类型)]",
+      "from typing import (  # *引入 typing 对类型提示的支持_常用模块",
+      "    TYPE_CHECKING,  # *避免定义类时循环引用[if TYPE_CHECKING:...](仅为类型提示,不实例化/参与实际运行)[args: 'ClassObject']",
+      "    Any,  # *任意类型提示(args: Any)",
+      "    Callable,  # *函数类型提示(args: Callable[[args], return])",
+      "    Final,  # *args: Final[type] = 常量",
+      "    Optional,  # *可选参数(args: Optional[Type] = None 即 args: Type | None = None)",
+      "    Self,  # *链式调用时返回函数本身",
+      "    TypeVar,  # *泛型类型变量(TypeName = TypeVar('TypeName'[, Type_1, Type_2, ...]))",
+      "    Union,  # *联合类型(args: Union[Type_1, Type_2] 即 args: Type_1 | Type_2)",
+      "    cast,  # *伪类型转换[cast(伪类型, 真类型)]",
       ")",
       ""
     ],
@@ -24,7 +24,7 @@
   },
   "引入 typing.Literal 枚举类型": {
     "prefix": ["import typing Literal", "im typing Literal"],
-    "body": ["from typing import Literal  # * 枚举类型", ""],
+    "body": ["from typing import Literal  # *枚举类型", ""],
     "description": ["引入 typing.Literal 枚举类型"]
   }
 }
