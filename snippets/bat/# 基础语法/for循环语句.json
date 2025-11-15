@@ -11,13 +11,7 @@
   },
   "循环提取 文本|列表|对象 信息": {
     "prefix": ["for -F do"],
-    "body": [
-      "for /F \"tokens=* delims= \" %%${1:i} in ('tasklist') do (",
-      "    ECHO %%${1:i}",
-      "    $0",
-      ")",
-      ""
-    ],
+    "body": ["for /F \"tokens=* delims= \" %%${1:i} in ('tasklist') do (", "    ECHO %%${1:i}", "    $0", ")", ""],
     "description": "循环提取 文本|列表|对象 信息"
   },
   "搜索获取进程路径": {
@@ -76,6 +70,11 @@
     "prefix": ["for -R do"],
     "body": ["for /R %%${1:i} in (\"*$0\") do (", "    ECHO %%${1:i}", ")", ""],
     "description": ["forR循环目录及子目录文件"]
+  },
+  "循环目录及子目录文件夹": {
+    "prefix": ["for -R -D do"],
+    "body": ["for /R \"%~dp0\" /D %%i in (\"*\") do (", "    ECHO 文件夹:%%i", ")", ""],
+    "description": ["循环目录及子目录文件夹"]
   },
   "循环文件计数": {
     "prefix": ["for -FileNumber"],
