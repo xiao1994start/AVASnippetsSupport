@@ -46,7 +46,10 @@
   },
   "threading.Thread 创建线程事件对象": {
     "prefix": ["new threading Thread -threading"],
-    "body": ["threading.Thread(target=${1:func}, kwargs={'args_1': '参数_1'})"],
+    "body": [
+      "threading.Thread(target=${1:func}, kwargs={'args_1': '参数_1'}, daemon=True)",
+      "# *创建线程[target=目标函数, kwargs={'参数名':值}, daemon=守护线程(主线程结束,守护线程自动结束)]"
+    ],
     "description": ["threading.Thread 创建线程"]
   },
   "threading.Thread.start() 启动线程事件对象": {

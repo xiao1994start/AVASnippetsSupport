@@ -701,6 +701,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/keyboard 键盘交互工具库/keyboard.Template.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/logging 日志管理/logging.json"
       },
       {
@@ -737,7 +741,7 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/opencv python计算机视觉库/cv2template.json"
+        "path": "./snippets/python/opencv python计算机视觉库/cv2.Template.json"
       },
       {
         "language": "python",

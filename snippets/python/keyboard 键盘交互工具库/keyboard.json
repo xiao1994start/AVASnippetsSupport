@@ -13,5 +13,10 @@
       "\n 通常用于TUI按键退出",
       "\n 或 可用 keyboard.is_pressed('q') == False 重新赋值"
     ]
+  },
+  "keyboard.wait 监听键盘按键事件": {
+    "prefix": ["keyboard wait -keyboard"],
+    "body": ["keyboard.wait('${1:esc}')  # *监听键盘按键事件"],
+    "description": ["阻塞当前线程,直到满足某个按键条件为止"]
   }
 }
