@@ -29,7 +29,7 @@
     "description": ["class类self"]
   },
   "创建class - def函数": {
-    "prefix": ["new class def -class", "class def -class"],
+    "prefix": ["new class def -class", "class def s -class"],
     "body": ["def ${1:name}(self):", "    # TODO:${2:_summary_}", "    ..."],
     "description": ["创建class - def函数"]
   },
