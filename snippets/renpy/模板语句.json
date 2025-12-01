@@ -1,15 +1,37 @@
 {
   "自动添加语言按钮入口": {
     "prefix": ["textbutton _schinese =-action Language"],
-    "body": [
-      "textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1:MiSans-Bold.ttf}\" action Language(\"schinese\")",
-      ""
-    ],
+    "body": ["textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1:MiSans-Bold.ttf}\" action Language(\"schinese\")", ""],
     "description": ["自动添加语言按钮入口"]
   },
   "默认语言入口": {
     "prefix": ["config languages ="],
     "body": ["define config.language = \"${1:schinese}\"", ""],
     "description": ["默认语言入口"]
+  },
+  "构建rpa归档文件": {
+    "prefix": ["build archive", "build rpa"],
+    "body": [
+      "init python:",
+      "    # *python语句块*",
+      "    # 定义两个归档文件",
+      "    build.archive(\"archive\", \"all\")",
+      "    build.archive(\"scripts\", \"all\")",
+      "    build.archive(\"images\", \"all\")",
+      "",
+      "    # 将脚本放入scripts归档",
+      "    build.classify(\"game/**.rpy\", \"scripts\")",
+      "    build.classify(\"game/**.rpyc\", \"scripts\")",
+      "",
+      "    # 将图片放入images归档",
+      "    build.classify(\"game/**.jpg\", \"images\")",
+      "    build.classify(\"game/**.png\", \"images\")",
+      "",
+      "    # 将webp|webm放入archive归档",
+      "    build.classify(\"game/**.webp\", \"archive\")",
+      "    build.classify(\"game/**.webm\", \"archive\")",
+      ""
+    ],
+    "description": ["构建rpa归档文件"]
   }
 }

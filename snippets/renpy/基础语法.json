@@ -36,7 +36,7 @@
   },
   "python语句块": {
     "prefix": ["initpy"],
-    "body": ["init python:", "\n\t# *python语句块*", "\n\t$0"],
+    "body": ["init python:", "    # *python语句块*", "    $0"],
     "description": ["python语句块"]
   },
   "Init Block 在初始化时运行代码": {
