@@ -40,7 +40,10 @@ ECHO 正在安装 @vscode/vsce 打包库 (使用Yeoman进行创建:https://code.visualstudio.
 call npm install --global @vscode/vsce --registry https://registry.npmmirror.com/
 ECHO 正在安装 yo generate-code 库
 call npm install --global yo generator-code --registry https://registry.npmmirror.com/
+
+
 ECHO 安装 - 更新 完成 & ECHO.
+
 
 CD /D "%~dp0"
 call vsce package
