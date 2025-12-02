@@ -6,12 +6,12 @@ for %%v in ("AVASnippetsSupport*.vsix") do (
     del /F /Q "%%v"
 )
 
-CD /D "%~dp0..\..\env"
+CD /D "%~dp0..\"
 @REM ECHO %CD%
 
 @REM 标准化文件名
-if exist "%CD%\*node*" (
-    for /D %%i in ("*node*") do (
+if exist "%CD%\*node-*" (
+    for /D %%i in ("*node-*") do (
         ECHO %%~fi
         if not "%%i"=="node" (
             ren "%%~fi" "node"
