@@ -1,7 +1,7 @@
 {
   "引入 socket 网络通讯模块": {
     "prefix": ["import socket", "im socket"],
-    "body": ["import socket  # * socket网络通信模块"],
+    "body": ["import socket  # *socket网络通信模块"],
     "description": ["引入 socket 网络通讯模块"]
   },
   "socket.GetLocalHostName 获取本地计算机名(IP)": {
@@ -17,7 +17,7 @@
       "",
       "",
       "class SocketPort:",
-      "    # * class signal",
+      "    # *class signal",
       "    def __init__(self) -> None:",
       "        \"\"\"",
       "        使用 socket 库获取可用端口号 | 对端口号进行随机化 | 查看端口是否被占用",

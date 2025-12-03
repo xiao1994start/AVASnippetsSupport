@@ -1,7 +1,7 @@
 {
   "导入 subprocess 执行系统命令模块": {
     "prefix": ["import subprocess", "im subprocess"],
-    "body": ["import subprocess  # * 执行系统命令模块"],
+    "body": ["import subprocess  # *执行系统命令模块"],
     "description": ["导入subprocess执行系统命令模块"]
   },
   "subprocess.run 运行命令": {
@@ -11,9 +11,9 @@
       "    '$0',",
       "    shell=True,",
       "    # 下面的参数可以省略",
-      "    capture_output=True,  # * 捕获输出",
-      "    check=True,  # * 检查命令是否执行成功",
-      "    text=True  # * 将输出作为字符串返回",
+      "    capture_output=True,  # *捕获输出",
+      "    check=True,  # *检查命令是否执行成功",
+      "    text=True  # *将输出作为字符串返回",
       ")",
       ""
     ],
@@ -46,14 +46,14 @@
     "prefix": ["subprocess Popen="],
     "body": [
       "subprocess.Popen(",
-      "    $0,  # * 传递给Popen的命令列表",
-      "    shell=True,  # * 是否在shell中运行命令, 如果不需要在shell中运行, 可以设置为False",
-      "    cwd=None,  # * 工作目录, 可以通过cwd='/path/to/dir'来设置工作目录",
-      "    env={},  # * 环境变量, 可以通过env={'PATH': '/usr/local/bin'}来设置环境变量",
-      "    startupinfo=None,  # * 启动信息, 可以通过startupinfo={'title': 'My Program'}来设置启动信息",
-      "    stdin=subprocess.PIPE,  # * 标准输入, 可以通过stdin=subprocess.PIPE来设置标准输入",
-      "    stdout=subprocess.PIPE,  # * 标准输出, 可以通过stdout=subprocess.PIPE来设置标准输出",
-      "    stderr=subprocess.PIPE,  # * 标准错误输出, 可以通过stderr=subprocess.PIPE来设置标准错误输出",
+      "    $0,  # *传递给Popen的命令列表",
+      "    shell=True,  # *是否在shell中运行命令, 如果不需要在shell中运行, 可以设置为False",
+      "    cwd=None,  # *工作目录, 可以通过cwd='/path/to/dir'来设置工作目录",
+      "    env={},  # *环境变量, 可以通过env={'PATH': '/usr/local/bin'}来设置环境变量",
+      "    startupinfo=None,  # *启动信息, 可以通过startupinfo={'title': 'My Program'}来设置启动信息",
+      "    stdin=subprocess.PIPE,  # *标准输入, 可以通过stdin=subprocess.PIPE来设置标准输入",
+      "    stdout=subprocess.PIPE,  # *标准输出, 可以通过stdout=subprocess.PIPE来设置标准输出",
+      "    stderr=subprocess.PIPE,  # *标准错误输出, 可以通过stderr=subprocess.PIPE来设置标准错误输出",
       ")"
     ],
     "description": [

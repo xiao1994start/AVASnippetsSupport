@@ -3,7 +3,7 @@
     "prefix": ["new class", "class -class"],
     "body": [
       "class ${1:NewObject}(${2:}):",
-      "    # * class default args(类变量) | signal(信号)",
+      "    # *class default args(类变量) | signal(信号)",
       "    # 调用方法: [className].[argsName] = [value] | self.[argsName] = [value]",
       "    def __init__(self) -> None:",
       "        # TODO:${3:_summary_}",

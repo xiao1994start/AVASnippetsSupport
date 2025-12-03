@@ -1,7 +1,7 @@
 {
   "引入 httpx 模块": {
     "prefix": ["import httpx", "im httpx"],
-    "body": ["import httpx  # * httpx 新一代全能网络请求库"],
+    "body": ["import httpx  # *httpx 新一代全能网络请求库"],
     "description": ["引入 httpx 模块"]
   },
   "httpx.Client 跨请求共享配置": {
@@ -61,16 +61,12 @@
   "httpx.encoding 编码格式": {
     "prefix": ["httpx encoding", "encoding -httpx"],
     "body": ["encoding${1|  # 自动确定编码格式, = 'utf-8'|}"],
-    "description": [
-      "httpx.encoding 在某些情况下, 响应可能不包含显式编码, 在这种情况下 HTTPX 将尝试自动确定要使用的编码"
-    ]
+    "description": ["httpx.encoding 在某些情况下, 响应可能不包含显式编码, 在这种情况下 HTTPX 将尝试自动确定要使用的编码"]
   },
   "httpx.charset_encoding 识别响应编码格式": {
     "prefix": ["httpx charset_encoding", "charset_encoding -httpx"],
     "body": ["charset_encoding"],
-    "description": [
-      "httpx.charset_encoding 识别响应编码格式, 需要进行格式转化->str()"
-    ]
+    "description": ["httpx.charset_encoding 识别响应编码格式, 需要进行格式转化->str()"]
   },
   "httpx.headers 响应头": {
     "prefix": ["httpx headers", "headers -httpx"],
@@ -85,18 +81,12 @@
   "httpx.content b.响应体": {
     "prefix": ["httpx content", "content -httpx"],
     "body": ["content"],
-    "description": [
-      "httpx.content b.二进制响应内容",
-      "# 对于非文本响应, 响应内容也可以作为字节访问"
-    ]
+    "description": ["httpx.content b.二进制响应内容", "# 对于非文本响应, 响应内容也可以作为字节访问"]
   },
   "httpx.json JSON解码器": {
     "prefix": ["httpx json", "json -httpx"],
     "body": ["json()"],
-    "description": [
-      "httpx.json JSON 响应内容",
-      "    Web API 响应通常会被编码为 JSON"
-    ]
+    "description": ["httpx.json JSON 响应内容", "    Web API 响应通常会被编码为 JSON"]
   },
   "httpx.status_cod 响应状态代码": {
     "prefix": ["httpx status_code", "status_code -httpx"],

@@ -1,7 +1,7 @@
 {
   "引入 threading 线程库": {
     "prefix": ["import threading", "im threading"],
-    "body": ["import threading  # * 多线程实现高的并发性"],
+    "body": ["import threading  # *多线程实现高的并发性"],
     "description": ["引入 threading 线程库"]
   },
   "threading.Event 线程事件对象": {

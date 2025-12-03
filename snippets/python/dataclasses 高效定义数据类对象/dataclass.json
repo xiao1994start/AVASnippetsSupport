@@ -1,0 +1,19 @@
+{
+  "引入 dataclass 高效定义数据类对象": {
+    "prefix": ["import dataclass", "im dataclass"],
+    "body": ["from dataclasses import dataclass  # *引入 dataclass 高效定义数据类对象"],
+    "description": ["引入 dataclass 高效定义数据类对象"]
+  },
+  "创建 dataclass 装饰数据类对象": {
+    "prefix": ["new dataclass", "class -dataclass"],
+    "body": [
+      "@dataclass(slots=True, frozen=True, kw_only=True, order=True)  # *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
+      "class ${1:NewObject}(${2:}):",
+      "    # *class 数据类对象属性(变量)",
+      "    # *class 数据类对象属性(变量)",
+      "    $0",
+      ""
+    ],
+    "description": ["创建 dataclass 装饰数据类对象"]
+  }
+}

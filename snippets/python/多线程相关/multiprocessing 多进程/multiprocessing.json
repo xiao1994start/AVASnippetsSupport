@@ -2,7 +2,7 @@
   "引入 multiprocessing 多进程依赖": {
     "prefix": ["import multiprocessing", "im multiprocessing as mp"],
     "body": [
-      "import multiprocessing as mp  # * 多进程依赖",
+      "import multiprocessing as mp  # *多进程依赖",
       "from multiprocessing import Pool, Process, Queue  # 进程池, 进程, 队列"
     ],
     "description": ["引入 multiprocessing 多进程依赖"]
@@ -27,16 +27,10 @@
   "multiprocessing.join 在当前位置阻塞主进程": {
     "prefix": ["mp join -multiprocessing"],
     "body": ["join()"],
-    "description": [
-      "multiprocessing.join 在当前位置阻塞主进程",
-      "等待带执行 join() 的进程结束后再继续执行主进程"
-    ]
+    "description": ["multiprocessing.join 在当前位置阻塞主进程", "等待带执行 join() 的进程结束后再继续执行主进程"]
   },
   "with multiprocessing.Pool 创建进程池": {
-    "prefix": [
-      "with multiprocessing Pool -multiprocessing",
-      "with mp Pool -multiprocessing"
-    ],
+    "prefix": ["with multiprocessing Pool -multiprocessing", "with mp Pool -multiprocessing"],
     "body": [
       "with Pool(processes=4) as p:",
       "    \"\"\"",
@@ -72,7 +66,7 @@
       "            print(f'线程 {name} 结束执行 等待{t}s')",
       "            return f'{name} 执行完毕'",
       "        if __name__ == '__main__':",
-      "            # * multiprocessing 的 Pool 必须在 if __name__ == '__main__': 运行入口中创建并测试运行",
+      "            # *multiprocessing 的 Pool 必须在 if __name__ == '__main__': 运行入口中创建并测试运行",
       "            p = Pool(processes=4)",
       "            result_apply = p.apply(func, ('apply_tesk', 1))",
       "            print(result_apply)",

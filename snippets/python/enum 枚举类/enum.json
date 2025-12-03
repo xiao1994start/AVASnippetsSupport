@@ -1,25 +1,17 @@
 {
   "引入 enum 枚举类": {
     "prefix": ["import enum Enum", "im enum Enum"],
-    "body": ["from enum import Enum  # * 引入 enum 枚举类"],
+    "body": ["from enum import Enum  # *引入 enum 枚举类"],
     "description": ["引入 enum 枚举类"]
   },
   "引入 enum 枚举类.常用模块": {
     "prefix": ["import enum =-enum", "im enum =-enum"],
-    "body": [
-      "from enum import Enum, IntEnum, StrEnum, auto  # * 引入 enum 枚举类"
-    ],
+    "body": ["from enum import Enum, IntEnum, StrEnum, auto  # *引入 enum 枚举类"],
     "description": ["引入 enum 枚举类.常用模块"]
   },
   "enum.object 创建枚举类对象.tmpl": {
     "prefix": ["new class enum =-enum"],
-    "body": [
-      "class ${1:EnumObject}(Enum):",
-      "    # * NAME = value: int | str | ...",
-      "    $0",
-      "    ...",
-      ""
-    ],
+    "body": ["class ${1:EnumObject}(Enum):", "    # *NAME = value: int | str | ...", "    $0", "    ...", ""],
     "description": ["enum.object 创建枚举类对象.tmpl"]
   }
 }

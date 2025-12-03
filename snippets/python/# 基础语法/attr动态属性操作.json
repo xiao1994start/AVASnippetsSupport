@@ -2,14 +2,11 @@
   "dir.object 查看对象属性": {
     "prefix": ["dir ", "dir object"],
     "body": ["dir($0)"],
-    "description": [
-      "dir.object 查看对象属性",
-      "返回当前作用域中的所有变量, 方法和定义的类型"
-    ]
+    "description": ["dir.object 查看对象属性", "返回当前作用域中的所有变量, 方法和定义的类型"]
   },
   "@property.装饰器 将class对象中的方法转换为属性": {
     "prefix": ["@property ", "at property"],
-    "body": ["@property  # * ${1:属性方法}"],
+    "body": ["@property  # *${1:属性方法}"],
     "description": [
       "@property.装饰器 设置class中方法对象的属性",
       "class Student:",
@@ -38,7 +35,7 @@
   "@setter.装饰器 设置class中方法对象的属性": {
     "prefix": ["@setter ", "at setter"],
     "body": [
-      "@${1:defName}.setter  # * ${2:设置方法对象属性}",
+      "@${1:defName}.setter  # *${2:设置方法对象属性}",
       "def ${1:defName}(self, value):",
       "    \"\"\"",
       "    设置属性",

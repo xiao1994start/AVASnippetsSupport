@@ -1,7 +1,7 @@
 {
   "引入 loguru 日志库": {
     "prefix": ["import loguru", "im loguru"],
-    "body": ["from loguru import logger  # * loguru日志库", ""],
+    "body": ["from loguru import logger  # *loguru日志库", ""],
     "description": "引入 loguru 日志库"
   }
 }

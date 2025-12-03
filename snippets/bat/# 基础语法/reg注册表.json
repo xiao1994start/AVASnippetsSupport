@@ -11,9 +11,7 @@
   },
   "REG添加键值": {
     "prefix": ["REG -add"],
-    "body": [
-      "CALL REG add \"${1:reg路径}\" /v \"key_名称\" /t REG_SZ /d \"value_数据\" /F"
-    ],
+    "body": ["CALL REG add \"${1:reg路径}\" /v \"key_名称\" /t REG_SZ /d \"value_数据\" /F"],
     "description": ["REG添加键值"]
   },
   "REG删除键值": {
@@ -49,7 +47,7 @@
   "REG数据类型": {
     "prefix": ["REG Type"],
     "body": [
-      "@REM * REG_SZ REG_MULTI_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR REG_EXPAND_SZ",
+      "@REM *REG_SZ REG_MULTI_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR REG_EXPAND_SZ",
       ""
     ],
     "description": "REG数据类型"
@@ -57,13 +55,13 @@
   "REG帮助": {
     "prefix": ["REG Help"],
     "body": [
-      "@REM * 参数",
-      "@REM * /ve 指定[默认值]",
-      "@REM * /v [EntryName] 指定特点的键",
-      "@REM * /t DataType 指定数据类型",
-      "    @REM * REG_SZ REG_MULTI_SZ REG_EXPAND_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR",
-      "@REM * /d [value] 指定新注册表项的值",
-      "@REM * /f 不用询问信息而直接添加子项或项",
+      "@REM *参数",
+      "@REM */ve 指定[默认值]",
+      "@REM */v [EntryName] 指定特点的键",
+      "@REM */t DataType 指定数据类型",
+      "    @REM *REG_SZ REG_MULTI_SZ REG_EXPAND_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR",
+      "@REM */d [value] 指定新注册表项的值",
+      "@REM */f 不用询问信息而直接添加子项或项",
       ""
     ],
     "description": "REG帮助"

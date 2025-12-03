@@ -1,7 +1,7 @@
 {
   "引入 pandas 模块": {
     "prefix": ["import pandas", "im pandas as pd"],
-    "body": ["import pandas as pd  # * pandas 数据处理模块"],
+    "body": ["import pandas as pd  # *pandas 数据处理模块"],
     "description": ["引入 pandas 数据处理模块"]
   },
   "pandas.DataFrame 创建二维表格": {
@@ -29,22 +29,12 @@
     "description": ["pandas.index 行索引"]
   },
   "pandas.index.intersection 行索引交集": {
-    "prefix": [
-      "pd index intersection",
-      "index intersection -pd",
-      "pandas index intersection",
-      "index intersection -pandas"
-    ],
+    "prefix": ["pd index intersection", "index intersection -pd", "pandas index intersection", "index intersection -pandas"],
     "body": ["index.intersection(${1:DataFrame}.index)"],
     "description": ["pandas.index.intersection 行索引交集"]
   },
   "pandas.columns 列索引": {
-    "prefix": [
-      "pd columns",
-      "pandas columns",
-      "columns -pd",
-      "columns -pandas"
-    ],
+    "prefix": ["pd columns", "pandas columns", "columns -pd", "columns -pandas"],
     "body": ["columns"],
     "description": ["pandas.columns 列索引"]
   },
@@ -52,10 +42,10 @@
     "prefix": ["pd update", "pandas update", "update -pd", "update -pandas"],
     "body": [
       "update(",
-      "    other=${1:pd.DataFrame()},  # * 更新当前对象的另一个DataFrame或Series对象",
-      "    join='left',  # * 更新方式: 'left':(默认)更新左表",
-      "    overwrite=True,  # * 覆盖, True:(默认)完全覆盖; False:只覆盖NaN空值",
-      "    errors='ignore',  # * 错误处理, 默认值: 'ignore':(默认)忽略错误; 'raise':抛出错误",
+      "    other=${1:pd.DataFrame()},  # *更新当前对象的另一个DataFrame或Series对象",
+      "    join='left',  # *更新方式: 'left':(默认)更新左表",
+      "    overwrite=True,  # *覆盖, True:(默认)完全覆盖; False:只覆盖NaN空值",
+      "    errors='ignore',  # *错误处理, 默认值: 'ignore':(默认)忽略错误; 'raise':抛出错误",
       ")",
       ""
     ],
@@ -94,22 +84,12 @@
     "description": ["pandas.isnull NaN空值->True"]
   },
   "pandas.notnull NaN空值->False": {
-    "prefix": [
-      "pd notnull",
-      "pandas notnull",
-      "notnull -pd",
-      "notnull -pandas"
-    ],
+    "prefix": ["pd notnull", "pandas notnull", "notnull -pd", "notnull -pandas"],
     "body": ["notnull()"],
     "description": ["pandas.notnull NaN空值->False"]
   },
   "pandas.to_dict 将DataFrame转为字典": {
-    "prefix": [
-      "pd to_dict",
-      "pandas to_dict",
-      "to_dict -pd",
-      "to_dict -pandas"
-    ],
+    "prefix": ["pd to_dict", "pandas to_dict", "to_dict -pd", "to_dict -pandas"],
     "body": ["to_dict(orient='index')"],
     "description": ["pandas.to_dict 将DataFrame转为字典"]
   },

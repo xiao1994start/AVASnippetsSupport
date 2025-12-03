@@ -1,7 +1,7 @@
 {
   "引入 random 随机模块": {
     "prefix": ["import random", "im random"],
-    "body": ["import random  # * (伪)随机模块"],
+    "body": ["import random  # *(伪)随机模块"],
     "description": ["引入 random 随机模块，实现了各种分布的伪随机数生成器"]
   },
   "random.choice": {
@@ -17,9 +17,7 @@
   "random.uniform -> float": {
     "prefix": ["random uniform"],
     "body": "random.uniform(${1:a}, ${2:b})",
-    "description": [
-      "返回一个随机浮点数 N ，当 a <= b 时 a <= N <= b ，当 b < a 时 b <= N <= a 。"
-    ]
+    "description": ["返回一个随机浮点数 N ，当 a <= b 时 a <= N <= b ，当 b < a 时 b <= N <= a 。"]
   },
   "random.randint -> int": {
     "prefix": ["random randint"],

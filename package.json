@@ -648,6 +648,10 @@
         "path": "./snippets/python/darkdetect 智能主题模式检测库/darkdetect.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/dataclasses 高效定义数据类对象/dataclass.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/Django/Django.bat.json"
       },

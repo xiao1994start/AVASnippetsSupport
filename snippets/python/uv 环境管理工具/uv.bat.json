@@ -1,21 +1,13 @@
 {
   "uv 当前文件夹创建新项目": {
     "prefix": ["uv init"],
-    "body": [
-      "ECHO uv 当前文件夹创建新项目...(默认当前文件夹)",
-      "uv init ${1:项目名}",
-      ""
-    ],
+    "body": ["ECHO uv 当前文件夹创建新项目...(默认当前文件夹)", "uv init ${1:项目名}", ""],
     "description": ["uv 当前文件夹创建新项目"]
   },
 
   "设置 uv 镜像源": {
     "prefix": ["set UV DEFAULT INDEX", "set uv index"],
-    "body": [
-      "ECHO 设置 uv 镜像源",
-      "set UV_DEFAULT_INDEX=https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
+    "body": ["ECHO 设置 uv 镜像源", "set UV_DEFAULT_INDEX=https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["设置 uv 镜像源"]
   },
   "创建 uv 虚拟环境": {
@@ -35,9 +27,7 @@
   },
   "uv 安装依赖|允许包升级": {
     "prefix": ["uv add upgrade"],
-    "body": [
-      "uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"
-    ],
+    "body": ["uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["uv 安装依赖|允许包升级"]
   },
   "uv 卸载依赖": {
@@ -47,15 +37,8 @@
   },
   "uv 更新配置项目环境": {
     "prefix": ["uv sync"],
-    "body": [
-      "ECHO 将项目的依赖项与环境同步",
-      "@REM * 根据 pyproject.toml 和 uv.lock 锁文件创建或更新虚拟环境",
-      "uv sync"
-    ],
-    "description": [
-      "uv 更新配置项目环境",
-      "根据 pyproject.toml 和锁文件创建或更新虚拟环境"
-    ]
+    "body": ["ECHO 将项目的依赖项与环境同步", "@REM *根据 pyproject.toml 和 uv.lock 锁文件创建或更新虚拟环境", "uv sync"],
+    "description": ["uv 更新配置项目环境", "根据 pyproject.toml 和锁文件创建或更新虚拟环境"]
   },
   "uv 仅同步生产依赖": {
     "prefix": ["uv sync -p"],
