@@ -26,7 +26,7 @@
       "    build.archive(\"images\", \"all\")",
       "    # *定义 声音放入`sound`归档",
       "    build.archive(\"sound\", \"all\")",
-      "    # !定义 字体放入`fonts`归档(建议不要使用)",
+      "    # !定义 字体放入`fonts`归档(可能引发字体中文乱码问题)",
       "    # build.archive(\"fonts\", \"all\")",
       "    # TODO:视频归档`archive`",
       "    build.classify(\"game/**.webm\", \"archive\")",
@@ -44,6 +44,9 @@
       "    # TODO:声音归档`sound`",
       "    build.classify(\"game/**.ogg\", \"sound\")",
       "    build.classify(\"game/**.mp3\", \"sound\")",
+      "    # !字体归档`fonts`",
+      "    # build.classify(\"game/**.ttf\", \"fonts\")",
+      "    # build.classify(\"game/**.otf\", \"fonts\")",
       "    # !将文件分类为“无”以将其从构建的分发中排除",
       "    # build.classify('**~', None)",
       "    # build.classify('**.bak', None)",
@@ -52,7 +55,6 @@
       "    # build.classify('**/**.db', None)",
       ""
     ],
-
     "description": ["构建rpa归档文件"]
   }
 }
