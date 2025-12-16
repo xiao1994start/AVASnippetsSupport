@@ -1,12 +1,7 @@
 {
   "pip.requests 网络请求库": {
     "prefix": ["pip requests"],
-    "body": [
-      "ECHO.",
-      "ECHO * requests 网络请求库 *",
-      "pip install -U requests -i https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
+    "body": ["ECHO.", "ECHO * requests 网络请求库 *", "pip install -U requests -i https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["requests 网络请求库"]
   },
   "uv.requests 网络请求库": {
@@ -14,29 +9,19 @@
     "body": [
       "ECHO.",
       "ECHO * requests 网络请求库 *",
-      "uv add \"requests\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"requests\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["requests 网络请求库"]
   },
   "pip.lxml lxml解析库": {
     "prefix": ["pip lxml"],
-    "body": [
-      "ECHO.",
-      "ECHO * lxml lxml解析库 *",
-      "pip install -U lxml -i https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
+    "body": ["ECHO.", "ECHO * lxml lxml解析库 *", "pip install -U lxml -i https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["lxml解析库"]
   },
   "uv.lxml lxml解析库": {
     "prefix": ["uv lxml"],
-    "body": [
-      "ECHO.",
-      "ECHO * lxml lxml解析库 *",
-      "uv add \"lxml\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
+    "body": ["ECHO.", "ECHO * lxml lxml解析库 *", "uv add \"lxml\" --index https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["lxml解析库"]
   },
   "pip.html5lib HTML5解析库": {
@@ -54,7 +39,7 @@
     "body": [
       "ECHO.",
       "ECHO * html5lib HTML5解析库 *",
-      "uv add \"html5lib\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"html5lib\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["html5lib HTML5解析库"]
@@ -77,7 +62,7 @@
     "body": [
       "ECHO.",
       "ECHO * setuptools 包管理工具 *",
-      "uv add \"setuptools\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"setuptools\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": [

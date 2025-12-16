@@ -15,7 +15,7 @@
     "body": [
       "ECHO.",
       "ECHO * opencv-python 计算机视觉库 *",
-      "uv add \"numpy\" \"opencv-python\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"numpy\" \"opencv-python\" --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM opencv 库 (前置必备库:numpy; 使用opencv-python库时,项目路径不能使用中文)",
       ""
     ],

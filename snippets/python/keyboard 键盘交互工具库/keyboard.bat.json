@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * keyboard 键盘交互工具库 *",
-      "uv add \"keyboard\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"keyboard\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["opencv for python 键盘交互工具库"]

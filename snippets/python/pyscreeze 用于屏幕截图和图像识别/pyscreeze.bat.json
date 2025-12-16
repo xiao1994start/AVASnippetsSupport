@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * pyscreeze 用于屏幕截图和图像识别 *",
-      "uv add \"pyscreeze\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"pyscreeze\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["pyscreeze 用于屏幕截图和图像识别"]

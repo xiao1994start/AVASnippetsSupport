@@ -24,7 +24,7 @@
     "body": [
       "ECHO.",
       "ECHO * django 库 *",
-      "uv add \"${1|django|}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"${1|django|}\" --index https://mirrors.aliyun.com/pypi/simple/",
       "call django-admin startproject ${2:__DjangoServer_BE_ .}",
       "call python manage.py startapp ${3:apps}",
       "@REM __Django修改默认端口号与地址__",
@@ -64,7 +64,7 @@
     "body": [
       "ECHO.",
       "ECHO * django 库DRF组件 *",
-      "uv add \"${1|django|}\" \"djangorestframework\" \"django-cors-headers\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"${1|django|}\" \"djangorestframework\" \"django-cors-headers\" --index https://mirrors.aliyun.com/pypi/simple/",
       "call django-admin startproject ${2:__DjangoServer_BE_ .}",
       "call python manage.py startapp ${3:apps}",
       "@REM __Django修改默认端口号与地址__",

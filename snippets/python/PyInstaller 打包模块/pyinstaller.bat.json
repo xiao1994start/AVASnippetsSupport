@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * PyInstaller 打包库 *",
-      "uv add \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"pyinstaller\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["PyInstaller 打包库"]

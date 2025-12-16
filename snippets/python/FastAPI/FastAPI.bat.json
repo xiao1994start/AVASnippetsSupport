@@ -140,7 +140,7 @@
       "ECHO.",
       "ECHO * fastapi 网络API接口后端库 *",
       "@REM 安装 fastapi web框架",
-      "uv add \"fastapi\" \"uvicorn\" \"pydantic\" \"pywebview\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"fastapi\" \"uvicorn\" \"pydantic\" \"pywebview\" \"pyinstaller\" --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM 安装 uvicorn 异步服务器",
       "@REM 安装 pydantic 数据接口定义检查与设置管理",
       "@REM 安装 pywebview webGUI框架库",

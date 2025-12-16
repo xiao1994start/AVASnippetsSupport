@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * uiautomation Windows桌面程序自动化控制依赖 *",
-      "uv add \"uiautomation\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"uiautomation\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["uiautomation Windows桌面程序自动化控制依赖"]

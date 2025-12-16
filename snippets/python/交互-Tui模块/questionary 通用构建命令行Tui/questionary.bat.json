@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * questionary 构建命令行Tui界面 *",
-      "uv add \"questionary\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"questionary\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["questionary 构建命令行Tui界面"]

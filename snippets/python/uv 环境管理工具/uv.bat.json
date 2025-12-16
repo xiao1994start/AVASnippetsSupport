@@ -26,9 +26,19 @@
     "description": ["uv 运行 py 脚本"]
   },
   "uv 安装依赖|允许包升级": {
+    "prefix": ["uv add"],
+    "body": ["uv add \"${1:包名}\" --index https://mirrors.aliyun.com/pypi/simple/"],
+    "description": ["uv 安装依赖|允许包升级"]
+  },
+  "uv 安装依赖 并 允许包升级": {
     "prefix": ["uv add upgrade"],
     "body": ["uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"],
-    "description": ["uv 安装依赖|允许包升级"]
+    "description": ["uv 安装依赖 并 允许包升级"]
+  },
+  "uv 更新所有已安装的包": {
+    "prefix": ["uv upgrade --all"],
+    "body": ["uv upgrade --all"],
+    "description": ["uv 更新所有已安装的包"]
   },
   "uv 卸载依赖": {
     "prefix": ["uv remove"],
@@ -69,6 +79,16 @@
     "prefix": ["uv tree"],
     "body": ["ECHO uv 显示项目的完整依赖树", "uv tree"],
     "description": ["uv 显示项目的完整依赖树"]
+  },
+  "uv 导出以来清单": {
+    "prefix": ["uv export"],
+    "body": ["ECHO uv 导出以来清单", "uv export > requirements.txt"],
+    "description": ["uv 导出以来清单"]
+  },
+  "uv 从依赖清单安装": {
+    "prefix": ["uv install -r"],
+    "body": ["ECHO uv 从依赖清单安装", "uv install -r requirements.txt"],
+    "description": ["uv 从依赖清单安装"]
   },
   "UV 使用兼容PIP兼容的接口管理Python软件包": {
     "prefix": ["uv pip"],

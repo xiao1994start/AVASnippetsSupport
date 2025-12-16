@@ -17,9 +17,9 @@
     "body": [
       "ECHO.",
       "ECHO * flet 基于 Flutter(Google) 的WebUI框架 *",
-      "uv add \"flet[all]\" \"setuptools\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"flet[all]\" \"setuptools\" \"pyinstaller\" --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM Flet 基于 Flutter(Google) 的WebUI框架",
-      "uv add \"darkdetect\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"darkdetect\" --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM 智能主题模式检测库",
       ""
     ],

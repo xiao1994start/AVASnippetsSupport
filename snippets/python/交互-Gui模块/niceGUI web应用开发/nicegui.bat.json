@@ -17,7 +17,7 @@
     "body": [
       "ECHO.",
       "ECHO * nicegui Python开发web应用框架 *",
-      "uv add \"nicegui\" \"ex4nicegui\" \"setuptools\" \"pywebview\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"nicegui\" \"ex4nicegui\" \"setuptools\" \"pywebview\" \"pyinstaller\" --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM nicegui Web界面设计框架(基于 Quasar 框架) _ 打包独立应用必备框架",
       "@REM nicegui: https://nicegui.io/documentation",
       "@REM Quasar: https://quasar.dev/docs",

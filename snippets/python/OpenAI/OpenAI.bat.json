@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * OpenAI API 大语言模型依赖 *",
-      "uv add \"openai\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"openai\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["OpenAI API 大语言模型依赖"]

@@ -14,7 +14,7 @@
     "body": [
       "ECHO.",
       "ECHO * inquirer 交互式命令行终端 *",
-      "uv add \"inquirer\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"inquirer\" --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["inquirer 交互式命令行终端"]
