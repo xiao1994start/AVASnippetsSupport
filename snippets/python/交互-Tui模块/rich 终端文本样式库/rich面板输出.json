@@ -3,7 +3,7 @@
     "prefix": ["import rich panel", "im rich panel"],
     "body": [
       "from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
-      "from rich.panel import Panel  # *Panel构造可渲染对象周围绘制边框(需要使用)"
+      "from rich.panel import Panel  # *Panel构造可渲染对象周围绘制边框(需要使用rich.print渲染)"
     ],
     "description": ["要在文本或其他可渲染对象周围绘制边框, 请构造一个 Panel, 并将可渲染对象作为第一个位置参数"]
   },
