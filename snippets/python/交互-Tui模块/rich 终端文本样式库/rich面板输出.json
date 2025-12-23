@@ -9,12 +9,12 @@
   },
   "rich.panel 标准面板": {
     "prefix": ["Panel -rich-panel", "print Panel -rich-panel"],
-    "body": ["print(Panel('${1:Hello[red]World}', title='${2:标题}', subtitle='AVA'))"],
+    "body": ["print(Panel('${1:Hello[red]World}', title='${2:标题}', subtitle=''))"],
     "description": ["标准面板"]
   },
   "rich.panel.fit 自适应内容面板": {
     "prefix": ["Panel--fit -rich-panel", "print Panel fit -rich-panel"],
-    "body": ["print(Panel.fit('${1:Hello[red]World}', title='${2:标题}', subtitle='AVA'))"],
+    "body": ["print(Panel.fit('${1:Hello[red]World}', title='${2:标题}', subtitle=''))"],
     "description": ["自适应内容面板"]
   }
 }

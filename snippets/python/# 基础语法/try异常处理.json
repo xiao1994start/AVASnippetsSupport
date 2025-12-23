@@ -17,7 +17,7 @@
     "description": ["try:正常执行 except:异常处理"]
   },
   "except 抛出异常": {
-    "prefix": ["except error =-try", "e =-try", "exc =-try"],
+    "prefix": ["except error =-try", "e error =-try", "ept error =-try"],
     "body": [
       "except Exception as error:",
       "    # ! Exception: 所有异常的基类, 如需对指定类型的异常进行处理, 在上方添加 except [指定异常类型] 即可",
