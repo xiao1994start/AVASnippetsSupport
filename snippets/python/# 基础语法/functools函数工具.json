@@ -30,7 +30,7 @@
     ],
     "description": ["使用 functools.wraps 保留原函数元信息的函数装饰器"]
   },
-  "functools.wraps => timer 创建计算函数运行时间的装饰器": {
+  "functools.wraps -> timer 创建计算函数运行时间的装饰器": {
     "prefix": ["new functools wraps def --timer =-functools wraps"],
     "body": [
       "def timer(func):",
@@ -52,6 +52,6 @@
       "    return wrapper",
       ""
     ],
-    "description": ["functools.wraps => timer 创建计算函数运行时间的装饰器"]
+    "description": ["functools.wraps -> timer 创建计算函数运行时间的装饰器"]
   }
 }
