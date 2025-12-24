@@ -49,7 +49,7 @@
   },
   "questionary.confirm 确认(Y/n)": {
     "prefix": ["questionary confirm -questionary"],
-    "body": ["questionary.confirm(message='是否确定 ${1:xxx操作} ?').ask()  # *(Y/n)->bool:True | False"],
+    "body": ["questionary.confirm(message='是否确定 ${1:xxx操作}?').ask()  # *(Y/n)->bool:True | False"],
     "description": ["确认(Y/n)"]
   },
   "questionary.checkbox 复选框": {
