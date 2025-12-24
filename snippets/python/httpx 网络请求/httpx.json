@@ -55,7 +55,7 @@
   },
   "httpx.Response 响应参数": {
     "prefix": ["httpx Response", "Response -httpx"],
-    "body": [".Response"],
+    "body": ["Response"],
     "description": ["httpx.Response 响应参数"]
   },
   "httpx.encoding 编码格式": {

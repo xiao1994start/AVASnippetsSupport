@@ -149,7 +149,7 @@
     ]
   },
   "Path.iterdir 示例": {
-    "prefix": ["iterdir =Path", "Path iterdir=", "iterdir =-Path"],
+    "prefix": ["Path iterdir=", "iterdir =-Path"],
     "body": ["for child in Path(${1:path}).iterdir(): child", "    print(child)", "    pass"],
     "description": ["for.iterdir -Path 当路径指向一个目录时, 产生该路径下的对象的路径"]
   },
