@@ -1,15 +1,12 @@
 {
-  "zipfile.extractall 解压全部文件到": {
+  "zipfile.extractall 解压 zipfile.ZipFile 对象全部文件到": {
     "prefix": ["zipfile extractall", "extractall -zipfile"],
     "body": ["extractall(${1:out_path})  # 解压全部文件到"],
-    "description": ["zipfile.extractall 解压全部文件到"]
+    "description": ["zipfile.extractall 解压 zipfile.ZipFile 对象全部文件到"]
   },
   "with ZipFile -r 解压文件到": {
     "prefix": ["with zipfile ZipFile -r"],
-    "body": [
-      "with zipfile.ZipFile(zip_path, \"r\") as zipf:",
-      "    zipf.extractall(${1:out_path})  # 解压到目录"
-    ],
+    "body": ["with zipfile.ZipFile(zip_path, \"r\") as zipf:", "    zipf.extractall(${1:out_path})  # 解压到目录"],
     "description": ["with ZipFile -r 解压文件到"]
   },
   "with ZipFile -w 压缩文件到": {
