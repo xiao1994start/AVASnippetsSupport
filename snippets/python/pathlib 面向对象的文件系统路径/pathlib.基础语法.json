@@ -6,7 +6,7 @@
   },
   "Path() ->拼接路径/类型转换/类方法": {
     "prefix": ["Path ", "PAT -Path"],
-    "body": ["Path(${1:'root' , 'dir' / 'file'})"],
+    "body": ["Path(${1:'root' , 'dir' , os.sep , 'file'})"],
     "description": ["Path() ->拼接路径/类型转换"]
   },
   "str(Path(...)) ->Path类型转换为字符串": {
