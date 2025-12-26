@@ -1,5 +1,5 @@
 {
-  "Path.glob 遍历/搜索 -> object": {
+  "Path.glob 仅指定当前目录 遍历/搜索 -> object": {
     "prefix": ["Path glob"],
     "body": [
       "glob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
@@ -11,7 +11,7 @@
       "    case_sensitive 判断路径是否符合指定通配符模式(Python 3.12 增加), 在Windows系统默认为False"
     ]
   },
-  "Path.rglob (常用)递归遍历/搜索 -> object": {
+  "Path.rglob (常用)递归 遍历/搜索 -> object": {
     "prefix": ["Path rglob"],
     "body": [
       "rglob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
