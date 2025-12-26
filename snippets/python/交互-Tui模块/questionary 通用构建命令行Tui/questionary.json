@@ -10,7 +10,7 @@
     "description": ["按任意键继续"]
   },
   "questionary.rawselect 基础单选": {
-    "prefix": ["questionary rawselect -questionary", "questionary raw_one -questionary"],
+    "prefix": ["questionary rawselect", "questionary raw_one"],
     "body": [
       "questionary.rawselect(",
       "    message='基础单选',",
@@ -27,7 +27,7 @@
     "description": ["基础单选", "\n 使用快捷键让用户从选项列表中选择一项。", "\n 用户只能选择一个选项。"]
   },
   "questionary.select 通用单选": {
-    "prefix": ["questionary select -questionary", "questionary one -questionary"],
+    "prefix": ["questionary select", "questionary one"],
     "body": [
       "questionary.select(",
       "    message='通用单选',",
@@ -48,12 +48,12 @@
     "description": ["通用单选"]
   },
   "questionary.confirm 确认(Y/n)": {
-    "prefix": ["questionary confirm -questionary", "questionary Yn -questionary"],
+    "prefix": ["questionary confirm", "questionary Yn"],
     "body": ["questionary.confirm(message='是否确定 ${1:xxx操作}').ask()  # *(Y/n)->bool:True | False"],
     "description": ["确认(Y/n)"]
   },
   "questionary.checkbox 复选框": {
-    "prefix": ["questionary checkbox -questionary"],
+    "prefix": ["questionary checkbox"],
     "body": [
       "questionary.checkbox(",
       "    message='复选框',",
@@ -69,7 +69,7 @@
     "description": ["复选框"]
   },
   "questionary.path 路径选择器": {
-    "prefix": ["questionary path -questionary"],
+    "prefix": ["questionary path"],
     "body": [
       "questionary.path(",
       "    message='输入or拖入项目路径?',",

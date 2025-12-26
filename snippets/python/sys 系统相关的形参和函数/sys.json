@@ -18,9 +18,7 @@
   "sys.path 解释器搜索依赖的路径列表": {
     "prefix": ["sys path"],
     "body": ["sys.path"],
-    "description": [
-      "sys.path 一个列表, 其中包含了 Python 解释器搜索依赖的路径列表"
-    ]
+    "description": ["sys.path 一个列表, 其中包含了 Python 解释器搜索依赖的路径列表"]
   },
   "sys.path.append 添加python环境依赖路径": {
     "prefix": ["sys path append"],
@@ -30,9 +28,7 @@
   "sys.path.append_file 添加当前文件所在目录到python环境依赖路径": {
     "prefix": ["sys path append -file"],
     "body": ["sys.path.append(str(Path(__file__).parent.resolve()))", ""],
-    "description": [
-      "sys.path.append_file 添加当前文件所在目录到python环境依赖路径"
-    ]
+    "description": ["sys.path.append_file 添加当前文件所在目录到python环境依赖路径"]
   },
   "sys.path.append_list 添加当前文件所在目录到python环境依赖路径": {
     "prefix": ["sys path append -list"],
@@ -44,9 +40,7 @@
       "]",
       ""
     ],
-    "description": [
-      "sys.path.append_list 添加当前文件所在目录到python环境依赖路径"
-    ]
+    "description": ["sys.path.append_list 添加当前文件所在目录到python环境依赖路径"]
   },
   "sys.path.__init__.py添加当前文件所在目录到python环境依赖路径 init模版": {
     "prefix": ["sys path append -init="],
@@ -148,7 +142,7 @@
     ]
   },
   "sys.exit 退出": {
-    "prefix": ["sys exit", "sys0exit", "sys1exit"],
+    "prefix": ["sys exit", "sys ESC", "sys Quit", "sys0exit", "sys1exit"],
     "body": ["sys.exit(${1|0,1|})  # *0=无错误退出 | 1=有错误退出"],
     "description": ["sys.exit 退出"]
   }
