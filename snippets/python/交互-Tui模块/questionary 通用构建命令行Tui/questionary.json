@@ -9,11 +9,11 @@
     "body": ["questionary.press_any_key_to_continue(message='按任意键继续...').ask()  # *按任意键继续", ""],
     "description": ["按任意键继续"]
   },
-  "questionary.rawselect 原始选择": {
-    "prefix": ["questionary rawselect -questionary"],
+  "questionary.rawselect 基础单选": {
+    "prefix": ["questionary rawselect -questionary", "questionary raw_one -questionary"],
     "body": [
       "questionary.rawselect(",
-      "    message='原始选择',",
+      "    message='基础单选',",
       "    choices=[  # TODO:单选项",
       "        '选项一',",
       "        '选项二',",
@@ -24,10 +24,10 @@
       ").ask()",
       ""
     ],
-    "description": ["原始选择"]
+    "description": ["基础单选", "\n 使用快捷键让用户从选项列表中选择一项。", "\n 用户只能选择一个选项。"]
   },
   "questionary.select 通用单选": {
-    "prefix": ["questionary select -questionary"],
+    "prefix": ["questionary select -questionary", "questionary one -questionary"],
     "body": [
       "questionary.select(",
       "    message='通用单选',",
@@ -48,7 +48,7 @@
     "description": ["通用单选"]
   },
   "questionary.confirm 确认(Y/n)": {
-    "prefix": ["questionary confirm -questionary"],
+    "prefix": ["questionary confirm -questionary", "questionary Yn -questionary"],
     "body": ["questionary.confirm(message='是否确定 ${1:xxx操作}').ask()  # *(Y/n)->bool:True | False"],
     "description": ["确认(Y/n)"]
   },
