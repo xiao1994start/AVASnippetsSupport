@@ -36,8 +36,8 @@
     "description": ["uv 安装依赖 并 允许包升级"]
   },
   "uv 更新所有已安装的包": {
-    "prefix": ["uv upgrade --all"],
-    "body": ["uv upgrade --all"],
+    "prefix": ["uv upgrade all", "uv upgrade lock", "uv lock upgrade"],
+    "body": ["uv lock --upgrade"],
     "description": ["uv 更新所有已安装的包"]
   },
   "uv 卸载依赖": {
