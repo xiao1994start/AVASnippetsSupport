@@ -1,0 +1,57 @@
+{
+  "rich.print[红色]": {
+    "prefix": ["pc red -rich"],
+    "body": ["[red].$0[/]"],
+    "description": ["rich.print[红色]"]
+  },
+  "rich.print[绿色]": {
+    "prefix": ["pc green -rich"],
+    "body": ["[green].$0[/]"],
+    "description": ["rich.print[绿色]"]
+  },
+  "rich.print[黄色]": {
+    "prefix": ["pc yellow -rich"],
+    "body": ["[yellow].$0[/]"],
+    "description": ["rich.print[黄色]"]
+  },
+  "rich.print[蓝色]": {
+    "prefix": ["pc blue -rich"],
+    "body": ["[blue].$0[/]"],
+    "description": ["rich.print[蓝色]"]
+  },
+  "rich.print[品红/紫色]": {
+    "prefix": ["pc magenta -rich"],
+    "body": ["[magenta].$0[/]"],
+    "description": ["rich.print[品红/紫色]"]
+  },
+  "rich.print[青色]": {
+    "prefix": ["pc cyan -rich"],
+    "body": ["[cyan].$0[/]"],
+    "description": ["rich.print[青色]"]
+  },
+  "rich.print[亮红色]": {
+    "prefix": ["pc bright_red -rich"],
+    "body": ["[bright_red].$0[/]"],
+    "description": ["rich.print[亮红色]"]
+  },
+  "rich.print[亮绿色]": {
+    "prefix": ["pc bright_green -rich"],
+    "body": ["[bright_green].$0[/]"],
+    "description": ["rich.print[亮绿色]"]
+  },
+  "rich.print[亮黄色]": {
+    "prefix": ["pc bright_yellow -rich"],
+    "body": ["[bright_yellow].$0[/]"],
+    "description": ["rich.print[亮黄色]"]
+  },
+  "rich.print[亮品红/紫色]": {
+    "prefix": ["pc bright_magenta -rich"],
+    "body": ["[bright_magenta].$0[/]"],
+    "description": ["rich.print[亮品红/紫色]"]
+  },
+  "rich.print[亮青色]": {
+    "prefix": ["pc bright_cyan -rich"],
+    "body": ["[bright_cyan].$0[/]"],
+    "description": ["rich.print[亮青色]"]
+  }
+}
