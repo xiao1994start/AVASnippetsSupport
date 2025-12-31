@@ -5,7 +5,7 @@
     "description": "True."
   },
   "False": {
-    "prefix": ["F -False", "FSA -False"],
+    "prefix": ["F -False", "FAS -False"],
     "body": "False",
     "description": "False."
   }
