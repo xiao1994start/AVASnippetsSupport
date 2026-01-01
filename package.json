@@ -929,6 +929,10 @@
       },
       {
         "language": "renpy",
+        "path": "./snippets/renpy/attr对象属性.json"
+      },
+      {
+        "language": "renpy",
         "path": "./snippets/renpy/模板语句.json"
       },
       {

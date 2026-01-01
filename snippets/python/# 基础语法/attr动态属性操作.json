@@ -77,5 +77,10 @@
     "prefix": ["getattr ", "getattr object"],
     "body": ["getattr(${1:object}, ${2:'name'}, ${3|None,0,False|})"],
     "description": ["getattr.object 获取对象属性"]
+  },
+  "hasattr.object 检查对象属性": {
+    "prefix": ["hasattr ", "hasattr object"],
+    "body": ["hasattr(${1:object}, ${2:'name'})"],
+    "description": ["hasattr.object 检查对象属性"]
   }
 }

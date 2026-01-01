@@ -1,0 +1,22 @@
+{
+  "store": {
+    "prefix": ["store"],
+    "body": "store",
+    "description": "store"
+  },
+  "getattr(对象, 属性名)": {
+    "prefix": ["getattr"],
+    "body": "getattr(store, \"${1:属性名}\")",
+    "description": "getattr(对象, 属性名)"
+  },
+  "hasattr(对象, 属性名)": {
+    "prefix": ["hasattr"],
+    "body": "hasattr(store, \"${1:属性名}\")",
+    "description": "hasattr(对象, 属性名)"
+  },
+  "setattr(对象, 属性名, 属性值)": {
+    "prefix": ["setattr"],
+    "body": "\\$ setattr(store, \"${1:属性名}\", \"${2:属性值}\")",
+    "description": "setattr(对象, 属性名, 属性值)"
+  }
+}
