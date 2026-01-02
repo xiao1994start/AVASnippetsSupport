@@ -7,7 +7,7 @@
   "os.getenv 获取系统环境变量路径": {
     "prefix": ["os getenv"],
     "body": [
-      "os.getenv(${1|'%SystemDrive%','%HOMEDRIVE%','%ProgramFiles%','%CommonProgramFiles%','%ProgramFiles(x86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WinDir%','%SystemRoot%','%System32%','%USERPROFILE%','%HOME%','%APPDATA%','%LOCALAPPDATA%'|})"
+      "os.getenv(${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|})"
     ],
     "description": ["os.getenv 获取系统环境变量路径"]
   },
