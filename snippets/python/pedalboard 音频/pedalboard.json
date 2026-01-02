@@ -1,0 +1,12 @@
+{
+  "引入 pedalboard 音频处理框架": {
+    "prefix": ["import pedalboard", "im pedalboard"],
+    "body": ["import pedalboard"],
+    "description": ["音频处理框架"]
+  },
+  "引入 pedalboard.load_plugin 插件加载读取模块": {
+    "prefix": ["import pedalboard.load_plugin", "im pedalboard.load_plugin"],
+    "body": ["from pedalboard import load_plugin  # *pedalboard.load_plugin 插件加载读取模块"],
+    "description": ["插件加载读取模块"]
+  }
+}

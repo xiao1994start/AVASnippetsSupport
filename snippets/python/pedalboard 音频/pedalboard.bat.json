@@ -1,0 +1,22 @@
+{
+  "pip.pedalboard 音频处理框架": {
+    "prefix": ["pip pedalboard"],
+    "body": [
+      "ECHO.",
+      "ECHO * pedalboard 音频处理框架 *",
+      "pip install -U pedalboard -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pedalboard 音频处理框架"]
+  },
+  "uv.pedalboard 音频处理框架": {
+    "prefix": ["uv pedalboard"],
+    "body": [
+      "ECHO.",
+      "ECHO * pedalboard 音频处理框架 *",
+      "uv add \"pedalboard\" --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pedalboard 音频处理框架"]
+  }
+}
