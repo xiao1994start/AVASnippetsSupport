@@ -26,6 +26,11 @@
       "或是 os.popen('[cmdCommand]').readline() ->str 获取第一行结果"
     ]
   },
+  "os.popen.read 获取全部结果": {
+    "prefix": ["os popen read"],
+    "body": ["os.popen($0)read()"],
+    "description": ["获取全部结果"]
+  },
   "os.pathsep 操作系统通常用于分隔搜索路径": {
     "prefix": ["os pathsep"],
     "body": ["os.pathsep"],
