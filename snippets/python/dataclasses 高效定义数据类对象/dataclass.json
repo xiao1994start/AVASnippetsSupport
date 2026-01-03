@@ -7,9 +7,12 @@
   "创建 dataclass 装饰数据类对象": {
     "prefix": ["new dataclass", "class -dataclass"],
     "body": [
-      "@dataclass(slots=True, frozen=True, kw_only=True, order=True)  # *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
-      "class ${1:NewObject}(${2:}):",
+      "@dataclass(slots=True, frozen=True, kw_only=True, order=True)",
+      "# *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
+      "class ${1:NewDataObject}(${2:}):",
       "    # *class 数据类对象属性(变量)",
+      "    # *示例属性定义: name: str = '张三'(默认值可以省略)",
+      "    # *使用时: NewDataObject(name='张三') 或 return NewDataObject(name='张三') 创建对象",
       "    $0",
       ""
     ],
