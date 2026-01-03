@@ -44,6 +44,11 @@
     "body": ["bright_yellow"],
     "description": ["rich.print[亮黄色]"]
   },
+  "rich.print[亮蓝色]": {
+    "prefix": ["printColor bright_blue -rich", "pc bright_blue -rich"],
+    "body": ["bright_blue"],
+    "description": ["rich.print[亮蓝色]"]
+  },
   "rich.print[亮品红/紫色]": {
     "prefix": ["printColor bright_magenta -rich", "pc bright_magenta -rich"],
     "body": ["bright_magenta"],
