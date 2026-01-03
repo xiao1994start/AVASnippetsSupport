@@ -316,7 +316,7 @@
     "body": ["p = Path('spam')", "q = Path('eggs')", "p.samefile(q)", "# False", "p.samefile('spam')", "# True"],
     "description": ["使用Path.samefile的示例"]
   },
-  "Path.name 当前文件名": {
+  "Path.name 当前文件名(含后缀名)": {
     "prefix": ["Path name"],
     "body": ["name"],
     "description": [
