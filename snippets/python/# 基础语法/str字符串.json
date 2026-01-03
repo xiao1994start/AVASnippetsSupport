@@ -10,17 +10,13 @@
     "description": ["类型声明: str"]
   },
   "str.capitalize 首字母大写": {
-    "prefix": ["str capitalize -str"],
+    "prefix": ["str capitalize"],
     "body": ["capitalize()"],
     "description": ["str.capitalize 将str首字母转换为大写"]
   },
   "str.capitalize 示例1": {
     "prefix": ["str capitalize =1-str"],
-    "body": [
-      "txt = hello, and welcome to my world.",
-      "x = txt.capitalize()",
-      "print(x)"
-    ],
+    "body": ["txt = hello, and welcome to my world.", "x = txt.capitalize()", "print(x)"],
     "description": ["使用 str.capitalize 的示例1"]
   },
   "str.capitalize 示例2": {
@@ -29,21 +25,17 @@
     "description": ["使用 str.capitalize 的示例2"]
   },
   "str.casefold 所有字符小写": {
-    "prefix": ["str casefold -str"],
+    "prefix": ["str casefold"],
     "body": ["casefold()"],
     "description": ["str.casefold 将str所有字符均转换为小写"]
   },
   "str.casefold 示例": {
     "prefix": ["str casefold =-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.casefold()",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.casefold()", "print(x)"],
     "description": ["使用 str.casefold 的示例"]
   },
   "str.center 居中格式": {
-    "prefix": ["str center -str"],
+    "prefix": ["str center"],
     "body": ["center(${1:length}, ${2:character})"],
     "description": ["str.center 返回居中的str"]
   },
@@ -58,30 +50,22 @@
     "description": ["使用 str.center 的示例2"]
   },
   "str.count 指定值计数": {
-    "prefix": ["str count -str"],
+    "prefix": ["str count"],
     "body": ["count(${1:string})"],
     "description": ["str.count 返回指定值在str中出现的次数"]
   },
   "str.count 示例1": {
     "prefix": ["str count =1-str"],
-    "body": [
-      "txt = 'I love apples, apple are my favorite fruit'",
-      "x = txt.count('apple')",
-      "print(x)"
-    ],
+    "body": ["txt = 'I love apples, apple are my favorite fruit'", "x = txt.count('apple')", "print(x)"],
     "description": ["使用 str.count 的示例1"]
   },
   "str.count 示例2": {
     "prefix": ["str count =2-str"],
-    "body": [
-      "txt = 'I love apples, apple are my favorite fruit'",
-      "x = txt.count('apple', 10, 24)",
-      "print(x)"
-    ],
+    "body": ["txt = 'I love apples, apple are my favorite fruit'", "x = txt.count('apple', 10, 24)", "print(x)"],
     "description": ["使用 str.count 的示例2"]
   },
   "str.encode 编码": {
-    "prefix": ["str encode -str"],
+    "prefix": ["str encode"],
     "body": ["encode($0)"],
     "description": ["str.encode 返回str的编码版本"]
   },
@@ -104,30 +88,22 @@
     "description": ["使用 str.encode 的示例2"]
   },
   "str.endswith 判断指定值结尾": {
-    "prefix": ["str endswith -str"],
+    "prefix": ["str endswith"],
     "body": ["endswith(${1:string})"],
     "description": ["str.endswith 如果str以指定值结尾则返回 true"]
   },
   "str.endswith 示例1": {
     "prefix": ["str endswith =1-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.endswith('.')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.endswith('.')", "print(x)"],
     "description": ["使用 str.endswith 的示例1"]
   },
   "str.endswith 示例2": {
     "prefix": ["str endswith =2-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.endswith('my world.', 5, 11)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.endswith('my world.', 5, 11)", "print(x)"],
     "description": ["使用 str.endswith 的示例2"]
   },
   "str.expandtabs 制表符": {
-    "prefix": ["str expandtabs -str"],
+    "prefix": ["str expandtabs"],
     "body": ["expandtabs(${1:number})"],
     "description": ["str.expandtabs 设置str的制表符(tabsize=)大小"]
   },
@@ -149,44 +125,28 @@
     "description": ["使用 str.expandtabs 的示例2"]
   },
   "str.find 搜索指定值": {
-    "prefix": ["str find -str"],
+    "prefix": ["str find"],
     "body": ["find(${1:string})"],
     "description": ["str.find 在str中搜索指定值并返回找到它的位置"]
   },
   "str.find 示例1": {
     "prefix": ["str find =1-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.find('welcome')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.find('welcome')", "print(x)"],
     "description": ["使用 str.find 的示例1"]
   },
   "str.find 示例2": {
     "prefix": ["str find =2-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.find('e')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.find('e')", "print(x)"],
     "description": ["使用 str.find 的示例2"]
   },
   "str.find 示例3": {
     "prefix": ["str find =3-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.find('e', 5, 10)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.find('e', 5, 10)", "print(x)"],
     "description": ["使用 str.find 的示例3"]
   },
   "str.find 示例4": {
     "prefix": ["str find =4-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "print(txt.find('q'))",
-      "print(txt.index('q'))"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "print(txt.find('q'))", "print(txt.index('q'))"],
     "description": ["使用 str.find 的示例4"]
   },
   "str.format 指定值的格式": {
@@ -209,7 +169,7 @@
     "description": ["使用 str.format 的示例"]
   },
   "str.format_map 指定值的格式": {
-    "prefix": ["str format_map -str"],
+    "prefix": ["str format_map"],
     "body": ["format_map($0)"],
     "description": ["str.format_map: Formats 设置str中指定值的格式"]
   },
@@ -224,52 +184,34 @@
     "description": ["使用 str.format_map 的示例"]
   },
   "str.index 获取索引": {
-    "prefix": ["str index -str"],
+    "prefix": ["str index"],
     "body": ["index(${1:string})"],
     "description": ["str.index 在str中搜索指定值并返回找到它的位置"]
   },
   "str.index 示例1": {
     "prefix": ["str index =1-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.index('welcome')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.index('welcome')", "print(x)"],
     "description": ["使用 str.index 的示例1"]
   },
   "str.index 示例2": {
     "prefix": ["str index =2-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.index('e')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.index('e')", "print(x)"],
     "description": ["使用 str.index 的示例2"]
   },
   "str.index 示例3": {
     "prefix": ["str index =3-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.index('e', 5, 10)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.index('e', 5, 10)", "print(x)"],
     "description": ["使用 str.index 的示例3"]
   },
   "str.index 示例4": {
     "prefix": ["str index =4-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "print(txt.find('q'))",
-      "print(txt.index('q'))"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "print(txt.find('q'))", "print(txt.index('q'))"],
     "description": ["使用 str.index 的示例4"]
   },
   "str.isalnum 判断字母和数字": {
-    "prefix": ["str isalnum -str"],
+    "prefix": ["str isalnum"],
     "body": ["isalnum()"],
-    "description": [
-      "str.isalnum 如果str中的所有字符都是字母和数字, 则返回 True"
-    ]
+    "description": ["str.isalnum 如果str中的所有字符都是字母和数字, 则返回 True"]
   },
   "str.isalnum 示例1": {
     "prefix": ["str isalnum =1-str"],
@@ -282,11 +224,9 @@
     "description": ["使用 str.isalnum 的示例2"]
   },
   "str.isalpha 判断只由字母组成": {
-    "prefix": ["str isalpha -str"],
+    "prefix": ["str isalpha"],
     "body": ["isalpha()"],
-    "description": [
-      "str.isalpha 如果str中的所有字符都只由字母组成, 则返回 True"
-    ]
+    "description": ["str.isalpha 如果str中的所有字符都只由字母组成, 则返回 True"]
   },
   "str.isalpha 示例": {
     "prefix": ["str isalpha =-str"],
@@ -294,44 +234,29 @@
     "description": ["使用 str.isalpha 的示例"]
   },
   "str.isascii 判断ASCII编码": {
-    "prefix": ["str isascii -str"],
+    "prefix": ["str isascii"],
     "body": ["isascii()"],
-    "description": [
-      "str.isascii 如果为空或所有字符均为 ASCII, 则返回 True (python 3.7 中的新功能)"
-    ]
+    "description": ["str.isascii 如果为空或所有字符均为 ASCII, 则返回 True (python 3.7 中的新功能)"]
   },
   "str.isdecimal 判断数学运算类型": {
-    "prefix": ["str isdecimal -str"],
+    "prefix": ["str isdecimal"],
     "body": ["isdecimal()"],
-    "description": [
-      "str.isdecimal 如果str中的所有字符都是数学运算类型(十进制+可运算+小数), 则返回 True"
-    ]
+    "description": ["str.isdecimal 如果str中的所有字符都是数学运算类型(十进制+可运算+小数), 则返回 True"]
   },
   "str.isdecimal 示例1": {
     "prefix": ["str isdecimal =1-str"],
-    "body": [
-      "txt = '\u0033' #unicode for 3",
-      "x = txt.isdecimal()",
-      "print(x)"
-    ],
+    "body": ["txt = '\u0033' #unicode for 3", "x = txt.isdecimal()", "print(x)"],
     "description": ["使用 str.isdecimal 的示例1"]
   },
   "str.isdecimal 示例2": {
     "prefix": ["str isdecimal =2-str"],
-    "body": [
-      "a = '\u0030' #unicode for 0",
-      "b = '\u0047' #unicode for G",
-      "print(a.isdecimal())",
-      "print(b.isdecimal())"
-    ],
+    "body": ["a = '\u0030' #unicode for 0", "b = '\u0047' #unicode for G", "print(a.isdecimal())", "print(b.isdecimal())"],
     "description": ["使用 str.isdecimal 的示例2"]
   },
   "str.isdigit 判断只由数学数字组成": {
-    "prefix": ["str isdigit -str"],
+    "prefix": ["str isdigit"],
     "body": ["isdigit()"],
-    "description": [
-      "str.isdigit 如果str中的所有字符只由数字组成, 只对0和正数有效, 则返回 True"
-    ]
+    "description": ["str.isdigit 如果str中的所有字符只由数字组成, 只对0和正数有效, 则返回 True"]
   },
   "str.isdigit 示例1": {
     "prefix": ["str isdigit =1-str"],
@@ -340,16 +265,11 @@
   },
   "str.isdigit 示例2": {
     "prefix": ["str isdigit =2-str"],
-    "body": [
-      "a = '\u0030' #unicode for 0",
-      "b = '\u00B2' #unicode for ²",
-      "print(a.isdigit())",
-      "print(b.isdigit())"
-    ],
+    "body": ["a = '\u0030' #unicode for 0", "b = '\u00B2' #unicode for ²", "print(a.isdigit())", "print(b.isdigit())"],
     "description": ["使用 str.isdigit 的示例2"]
   },
   "str.isidentifier 判断有效标识符": {
-    "prefix": ["str isidentifier -str"],
+    "prefix": ["str isidentifier"],
     "body": ["isidentifier()"],
     "description": ["str.isidentifier 如果str是有效标识符, 则返回 True"]
   },
@@ -373,11 +293,9 @@
     "description": ["使用 str.isidentifier 的示例2"]
   },
   "str.islower 判断字符(字母)均为小写": {
-    "prefix": ["str islower -str"],
+    "prefix": ["str islower"],
     "body": ["islower()"],
-    "description": [
-      "str.islower 如果str中的所有字符(字母)均为小写, 则返回 True"
-    ]
+    "description": ["str.islower 如果str中的所有字符(字母)均为小写, 则返回 True"]
   },
   "str.islower 示例1": {
     "prefix": ["str islower =1-str"],
@@ -397,11 +315,9 @@
     "description": ["使用 str.islower 的示例2"]
   },
   "str.isnumeric 判断只由数字组成": {
-    "prefix": ["str isnumeric -str"],
+    "prefix": ["str isnumeric"],
     "body": ["isnumeric()"],
-    "description": [
-      "str.isnumeric 如果str中的所有字符只由数字组成(这种方法是只针对unicode对象), 则返回 True"
-    ]
+    "description": ["str.isnumeric 如果str中的所有字符只由数字组成(这种方法是只针对unicode对象), 则返回 True"]
   },
   "str.isnumeric 示例1": {
     "prefix": ["str isnumeric =1-str"],
@@ -421,11 +337,9 @@
     "description": ["使用 str.isnumeric 的示例2"]
   },
   "str.isprintable 判断所有字符可打印": {
-    "prefix": ["str isprintable -str"],
+    "prefix": ["str isprintable"],
     "body": ["isprintable()"],
-    "description": [
-      "str.isprintable 如果str中的所有字符都可打印或字符串为空, 则返回 True"
-    ]
+    "description": ["str.isprintable 如果str中的所有字符都可打印或字符串为空, 则返回 True"]
   },
   "str.isprintable 示例1": {
     "prefix": ["str isprintable =1-str"],
@@ -434,15 +348,11 @@
   },
   "str.isprintable 示例2": {
     "prefix": ["str isprintable =2-str"],
-    "body": [
-      "txt = 'Hello!\nAre you #1?'",
-      "x = txt.isprintable()",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello!\nAre you #1?'", "x = txt.isprintable()", "print(x)"],
     "description": ["使用 str.isprintable 的示例2"]
   },
   "str.isspace 判断只由空格组成": {
-    "prefix": ["str isspace -str"],
+    "prefix": ["str isspace"],
     "body": ["isspace()"],
     "description": ["str.isspace 如果str中的所有字符都是空格, 则返回 True"]
   },
@@ -457,19 +367,13 @@
     "description": ["使用 str.isspace 的示例2"]
   },
   "str.istitle 判断遵循标题规则(单词首字母大写)": {
-    "prefix": ["str istitle -str"],
+    "prefix": ["str istitle"],
     "body": ["istitle()"],
-    "description": [
-      "str.istitle 如果str遵循标题规则(所有的单词拼写首字母是否为大写, 且其他字母为小写), 则返回 True"
-    ]
+    "description": ["str.istitle 如果str遵循标题规则(所有的单词拼写首字母是否为大写, 且其他字母为小写), 则返回 True"]
   },
   "str.istitle 示例1": {
     "prefix": ["str istitle =1-str"],
-    "body": [
-      "txt = 'Hello, And Welcome To My World!'",
-      "x = txt.istitle()",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, And Welcome To My World!'", "x = txt.istitle()", "print(x)"],
     "description": ["使用 str.istitle 的示例1"]
   },
   "str.istitle 示例2": {
@@ -487,7 +391,7 @@
     "description": ["使用 str.istitle 的示例2"]
   },
   "str.isUpper 判断字符(字母)均为大写": {
-    "prefix": ["str isUpper -str"],
+    "prefix": ["str isUpper"],
     "body": ["isupper()"],
     "description": ["str.isUpper 如果str中的所有字符均为大写, 则返回 True"]
   },
@@ -509,17 +413,13 @@
     "description": ["使用 str.isupper 的示例2"]
   },
   "str.join 拼接": {
-    "prefix": ["str join -str"],
+    "prefix": ["str join"],
     "body": ["join(${1:iterable})"],
     "description": ["str.join 将可迭代的元素连接到str的末尾"]
   },
   "str.join 示例1": {
     "prefix": ["str join =1-str"],
-    "body": [
-      "myTuple = ('John', 'Peter', 'Vicky')",
-      "x = '#'.join(myTuple)",
-      "print(x)"
-    ],
+    "body": ["myTuple = ('John', 'Peter', 'Vicky')", "x = '#'.join(myTuple)", "print(x)"],
     "description": ["使用 str.join 的示例1"]
   },
   "str.join 示例2": {
@@ -533,17 +433,13 @@
     "description": ["使用 str.join 的示例2"]
   },
   "str.ljust left拼接": {
-    "prefix": ["str ljust -str"],
+    "prefix": ["str ljust"],
     "body": ["ljust(${1:number})"],
     "description": ["str.ljust 返回str的left(左侧)拼接可迭代的元素版本"]
   },
   "str.ljust 示例1": {
     "prefix": ["str ljust =1-str"],
-    "body": [
-      "txt = 'banana'",
-      "x = txt.ljust(20)",
-      "print(x, 'is my favorite fruit.')"
-    ],
+    "body": ["txt = 'banana'", "x = txt.ljust(20)", "print(x, 'is my favorite fruit.')"],
     "description": ["使用 str.ljust 的示例1"]
   },
   "str.ljust 示例2": {
@@ -552,7 +448,7 @@
     "description": ["使用 str.ljust 的示例2"]
   },
   "str.lower 转换为小写": {
-    "prefix": ["str lower -str"],
+    "prefix": ["str lower"],
     "body": ["lower()"],
     "description": ["str.lower 将str转换为小写"]
   },
@@ -562,38 +458,24 @@
     "description": ["使用 str.lower 的示例"]
   },
   "str.lstrip left去除空白": {
-    "prefix": ["str lstrip -str"],
+    "prefix": ["str lstrip"],
     "body": ["lstrip(${1:' '})"],
-    "description": [
-      "str.lstrip 返回str的left(起始/左侧)去除空白(包括\\n, \\r, \\t)版本"
-    ]
+    "description": ["str.lstrip 返回str的left(起始/左侧)去除空白(包括\\n, \\r, \\t)版本"]
   },
   "str.lstrip 示例1": {
     "prefix": ["str lstrip =1-str"],
-    "body": [
-      "txt = '     banana     '",
-      "x = txt.lstrip()",
-      "print('of all fruits', x, 'is my favorite')"
-    ],
+    "body": ["txt = '     banana     '", "x = txt.lstrip()", "print('of all fruits', x, 'is my favorite')"],
     "description": ["使用 str.lstrip 的示例1"]
   },
   "str.lstrip 示例2": {
     "prefix": ["str lstrip =2-str"],
-    "body": [
-      "txt = ',,,,,ssaaww.....banana'",
-      "x = txt.lstrip(',.asw')",
-      "print(x)"
-    ],
+    "body": ["txt = ',,,,,ssaaww.....banana'", "x = txt.lstrip(',.asw')", "print(x)"],
     "description": ["使用 str.lstrip 的示例2"]
   },
   "str.maketrans 字符映射的转换": {
-    "prefix": ["str maketrans -str"],
-    "body": [
-      ".maketrans(${1:字符串中要替代的字符组成的字符串}, ${2:相应的映射字符的字符串})"
-    ],
-    "description": [
-      "str.maketrans 返回要在翻译中使用的翻译表(注: 两个字符串的长度必须相同, 为一一对应的关系)"
-    ]
+    "prefix": ["str maketrans"],
+    "body": [".maketrans(${1:字符串中要替代的字符组成的字符串}, ${2:相应的映射字符的字符串})"],
+    "description": ["str.maketrans 返回要在翻译中使用的翻译表(注: 两个字符串的长度必须相同, 为一一对应的关系)"]
   },
   "str.maketrans 示例1": {
     "prefix": ["str maketrans =1-str"],
@@ -616,7 +498,7 @@
     "description": ["使用 str.maketrans 的示例2"]
   },
   "str.partition 拆分->tuple": {
-    "prefix": ["str partition -str"],
+    "prefix": ["str partition"],
     "body": ["partition(${1:string})"],
     "description": [
       "str.partition 返回一个分割后的str元组, 其中字符串分为三部分(包含分隔符之前的部分、分隔符本身、以及分隔符之后的部分)"
@@ -624,70 +506,50 @@
   },
   "str.partition 示例1": {
     "prefix": ["str partition =1-str"],
-    "body": [
-      "txt = 'I could eat bananas all day'",
-      "x = txt.partition('bananas')",
-      "print(x)"
-    ],
+    "body": ["txt = 'I could eat bananas all day'", "x = txt.partition('bananas')", "print(x)"],
     "description": ["使用 str.partition 的示例1"]
   },
   "str.partition 示例2": {
     "prefix": ["str partition =2-str"],
-    "body": [
-      "txt = 'I could eat bananas all day'",
-      "x = txt.partition('apples')",
-      "print(x)"
-    ],
+    "body": ["txt = 'I could eat bananas all day'", "x = txt.partition('apples')", "print(x)"],
     "description": ["使用 str.partition 的示例2"]
   },
   "str.removeprefix 去除除指定的前缀": {
-    "prefix": ["str removeprefix -str"],
+    "prefix": ["str removeprefix"],
     "body": ["removeprefix(${1:prefix})"],
     "description": [
       "str.removeprefix 去除开头指定的前缀, 并返回去除前缀后的新字符串. 例如: str(\"Hello, World!\").removeprefix(\"Hello, \") 返回值: \"World!\" (Python 3.9+)"
     ]
   },
   "str.removesuffix 去除指定的后缀": {
-    "prefix": ["str removesuffix -str"],
+    "prefix": ["str removesuffix"],
     "body": ["removesuffix(${1:suffix})"],
     "description": [
       "str.removesuffix 去除末尾指定的后缀, 并返回删除后的新str. (suffix: 要删除的后缀, 可以是一个字符串或是一个元组, 代表多个后缀) 例如: str(\"Hello World.txt\").removesuffix(\".txt\") 返回值: \"Hello World\""
     ]
   },
   "str.replace 替换": {
-    "prefix": ["str replace -str"],
+    "prefix": ["str replace"],
     "body": ["replace('${1:old}', '${2:new}')"],
     "description": ["str.replace 返回指定值替换为指定值的str"]
   },
   "str.replace 示例1": {
     "prefix": ["str replace =1-str"],
-    "body": [
-      "txt 'I like bananas'",
-      "x = txt.replace('bananas', 'apples')",
-      "print(x)"
-    ],
+    "body": ["txt 'I like bananas'", "x = txt.replace('bananas', 'apples')", "print(x)"],
     "description": ["使用 str.replace 的示例1"]
   },
   "str.replace 示例2": {
     "prefix": ["str replace =2-str"],
-    "body": [
-      "txt = 'one one was a race horse, two two was one too.'",
-      "x = txt.replace('one', 'three')",
-      "print(x)"
-    ],
+    "body": ["txt = 'one one was a race horse, two two was one too.'", "x = txt.replace('one', 'three')", "print(x)"],
     "description": ["使用 str.replace 的示例2"]
   },
   "str.replace 示例3": {
     "prefix": ["str replace =3-str"],
-    "body": [
-      "txt = 'one one was a race horse, two two was one too.'",
-      "x = txt.replace('one', 'three', 2)",
-      "print(x)"
-    ],
+    "body": ["txt = 'one one was a race horse, two two was one too.'", "x = txt.replace('one', 'three', 2)", "print(x)"],
     "description": ["使用 str.replace 的示例3"]
   },
   "str.rfind 指定值最后位置": {
-    "prefix": ["str rfind -str"],
+    "prefix": ["str rfind"],
     "body": ["rfind(${1:string})"],
     "description": ["str.rfind 在str中搜索指定值, 返回找到该值的最后位置"]
   },
@@ -698,37 +560,23 @@
   },
   "str.rfind 示例2": {
     "prefix": ["str rfind =2-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.rfind('e')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.rfind('e')", "print(x)"],
     "description": ["使用 str.rfind 的示例2"]
   },
   "str.rfind 示例3": {
     "prefix": ["str rfind =3-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.rfind('e', 5, 10)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.rfind('e', 5, 10)", "print(x)"],
     "description": ["使用 str.rfind 的示例3"]
   },
   "str.rfind 示例4": {
     "prefix": ["str rfind =4-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "print(txt.rfind('q'))",
-      "print(txt.rindex('q'))"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "print(txt.rfind('q'))", "print(txt.rindex('q'))"],
     "description": ["使用 str.rfind 的示例4"]
   },
   "str.rindex 指定值最后位置索引": {
     "prefix": ["str rindex"],
     "body": ["rindex(${1:string})"],
-    "description": [
-      "str.rindex 在str中搜索指定值, 返回找到该值的最后位置的索引"
-    ]
+    "description": ["str.rindex 在str中搜索指定值, 返回找到该值的最后位置的索引"]
   },
   "str.rindex 示例1": {
     "prefix": ["str rindex =1-str"],
@@ -737,40 +585,26 @@
   },
   "str.rindex 示例2": {
     "prefix": ["str rindex =2-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.rindex('e')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.rindex('e')", "print(x)"],
     "description": ["使用 str.rindex 的示例2"]
   },
   "str.rindex 示例3": {
     "prefix": ["str rindex =3-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.rindex('e', 5, 10)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.rindex('e', 5, 10)", "print(x)"],
     "description": ["使用 str.rindex 的示例3"]
   },
   "str.rindex 示例4": {
     "prefix": ["str rindex =4-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "print(txt.rfind('q'))",
-      "print(txt.rindex('q'))"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "print(txt.rfind('q'))", "print(txt.rindex('q'))"],
     "description": ["使用 str.rindex 的示例4"]
   },
   "str.rjust 右对齐": {
-    "prefix": ["str rjust -str"],
+    "prefix": ["str rjust"],
     "body": ["rjust(${1:width})"],
-    "description": [
-      "str.rjust 返回str的右对齐版本(最大width=int, 默认fillchar空格填充=\" \")"
-    ]
+    "description": ["str.rjust 返回str的右对齐版本(最大width=int, 默认fillchar空格填充=\" \")"]
   },
   "str.rpartition 末尾拆分": {
-    "prefix": ["str rpartition -str"],
+    "prefix": ["str rpartition"],
     "body": ["rpartition(${1:string})"],
     "description": [
       "str.rpartition 从目标str的末尾也就是右边开始搜索分割符, 返回一个元组, 其中字符串分为三部分: 第一个为分隔符左边的子串, 第二个为分隔符本身, 第三个为分隔符右边的子串"
@@ -778,36 +612,22 @@
   },
   "str.rpartition 示例1": {
     "prefix": ["str rpartition =1-str"],
-    "body": [
-      "txt = 'I could eat bananas all day, bananas are my favorite fruit'",
-      "x = txt.rpartition('bananas')",
-      "print(x)"
-    ],
+    "body": ["txt = 'I could eat bananas all day, bananas are my favorite fruit'", "x = txt.rpartition('bananas')", "print(x)"],
     "description": ["使用 str.rpartition 的示例1"]
   },
   "str.rpartition 示例2": {
     "prefix": ["str rpartition =2-str"],
-    "body": [
-      "txt = 'I could eat bananas all day, bananas are my favorite fruit'",
-      "x = txt.rpartition('apples')",
-      "print(x)"
-    ],
+    "body": ["txt = 'I could eat bananas all day, bananas are my favorite fruit'", "x = txt.rpartition('apples')", "print(x)"],
     "description": ["使用 str.rpartition 的示例2"]
   },
   "str.rsplit 反向分割->list": {
-    "prefix": ["str rsplit -str"],
+    "prefix": ["str rsplit"],
     "body": ["rsplit(${1:separator}, maxsplit=-1)"],
-    "description": [
-      "str.rsplit 返回str的right(右/末尾)分割版本, 返回一个list (maxsplit=分割次数)"
-    ]
+    "description": ["str.rsplit 返回str的right(右/末尾)分割版本, 返回一个list (maxsplit=分割次数)"]
   },
   "str.rsplit 示例1": {
     "prefix": ["str rsplit =1-str"],
-    "body": [
-      "txt = 'apple, banana, cherry'",
-      "x = txt.rsplit(', ')",
-      "print(x)"
-    ],
+    "body": ["txt = 'apple, banana, cherry'", "x = txt.rsplit(', ')", "print(x)"],
     "description": ["使用 str.rsplit 的示例1"]
   },
   "str.rsplit 示例2": {
@@ -821,27 +641,19 @@
     "description": ["使用 str.rsplit 的示例2"]
   },
   "str.rstrip right去除空白": {
-    "prefix": ["str rstrip -str"],
+    "prefix": ["str rstrip"],
     "body": ["rstrip(${1:' '})"],
-    "description": [
-      "str.rstrip 返回str的right(末尾/右侧)去除空白(包括\\n, \\r, \\t)版本"
-    ]
+    "description": ["str.rstrip 返回str的right(末尾/右侧)去除空白(包括\\n, \\r, \\t)版本"]
   },
   "str.rstrip 示例": {
     "prefix": ["str rstrip =-str"],
-    "body": [
-      "txt = 'banana,,,,,ssaaww.....'",
-      "x = txt.rstrip(',.asw')",
-      "print(x)"
-    ],
+    "body": ["txt = 'banana,,,,,ssaaww.....'", "x = txt.rstrip(',.asw')", "print(x)"],
     "description": ["使用 str.rstrip 的示例"]
   },
   "str.split 分割->list": {
-    "prefix": ["str split -str"],
+    "prefix": ["str split"],
     "body": ["split(${1:separator}, maxsplit=-1)"],
-    "description": [
-      "str.split 在指定分隔符处分割str, 并返回一个list (maxsplit=分割次数)"
-    ]
+    "description": ["str.split 在指定分隔符处分割str, 并返回一个list (maxsplit=分割次数)"]
   },
   "str.split 示例1": {
     "prefix": ["str split =1-str"],
@@ -850,20 +662,12 @@
   },
   "str.split 示例2": {
     "prefix": ["str split =2-str"],
-    "body": [
-      "txt = 'hello, my name is Peter, I am 26 years old'",
-      "x = txt.split(', ')",
-      "print(x)"
-    ],
+    "body": ["txt = 'hello, my name is Peter, I am 26 years old'", "x = txt.split(', ')", "print(x)"],
     "description": ["使用 str.split 的示例2"]
   },
   "str.split 示例3": {
     "prefix": ["str split =3-str"],
-    "body": [
-      "txt = 'apple#banana#cherry#orange'",
-      "x = txt.split('#')",
-      "print(x)"
-    ],
+    "body": ["txt = 'apple#banana#cherry#orange'", "x = txt.split('#')", "print(x)"],
     "description": ["使用 str.split 的示例3"]
   },
   "str.split 示例4": {
@@ -877,76 +681,52 @@
     "description": ["使用 str.split 的示例4"]
   },
   "str.splitlines 按行分割str->list": {
-    "prefix": ["str splitlines -str"],
+    "prefix": ["str splitlines"],
     "body": ["splitlines()"],
-    "description": [
-      "str.splitlines 在指定分隔符(\\n, \\r, \\r\\n)分割str, 并返回一个list"
-    ]
+    "description": ["str.splitlines 在指定分隔符(\\n, \\r, \\r\\n)分割str, 并返回一个list"]
   },
   "str.splitlines 示例1": {
     "prefix": ["str splitlines =1-str"],
-    "body": [
-      "txt = 'Thank you for the music\nWelcome to the jungle'",
-      "x = txt.splitlines()",
-      "print(x)"
-    ],
+    "body": ["txt = 'Thank you for the music\nWelcome to the jungle'", "x = txt.splitlines()", "print(x)"],
     "description": ["使用 str.splitlines 的示例1"]
   },
   "str.splitlines 示例2": {
     "prefix": ["str splitlines =2-str"],
-    "body": [
-      "txt = 'Thank you for the music\nWelcome to the jungle'",
-      "x = txt.splitlines(True)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Thank you for the music\nWelcome to the jungle'", "x = txt.splitlines(True)", "print(x)"],
     "description": ["使用 str.splitlines 的示例2"]
   },
   "str.startswith 判断指定值开头": {
-    "prefix": ["str startswith -str"],
+    "prefix": ["str startswith"],
     "body": ["startswith(${1:string})"],
     "description": ["str.startswith 如果str以指定值开头, 则返回 true"]
   },
   "str.startswith 示例1": {
     "prefix": ["str startswith =1-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.startswith('Hello')",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.startswith('Hello')", "print(x)"],
     "description": ["使用 str.startswith 的示例1"]
   },
   "str.startswith 示例2": {
     "prefix": ["str startswith =2-str"],
-    "body": [
-      "txt = 'Hello, welcome to my world.'",
-      "x = txt.startswith('wel', 7, 20)",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello, welcome to my world.'", "x = txt.startswith('wel', 7, 20)", "print(x)"],
     "description": ["使用 str.startswith 的示例2"]
   },
   "str.strip 去除空白": {
-    "prefix": ["str strip -str"],
+    "prefix": ["str strip"],
     "body": ["strip(${1:' '})"],
     "description": ["str.strip 返回str的开始位置和结束位置去除空白版本"]
   },
   "str.swapcase 大小写互换": {
-    "prefix": ["str swapcase -str"],
+    "prefix": ["str swapcase"],
     "body": ["swapcase()"],
-    "description": [
-      "str.swapcase 对str的大小写字母进行转换, 即将大写字母转换为小写字母, 小写字母会转换为大写字母"
-    ]
+    "description": ["str.swapcase 对str的大小写字母进行转换, 即将大写字母转换为小写字母, 小写字母会转换为大写字母"]
   },
   "str.swapcase 示例": {
     "prefix": ["str swapcase =-str"],
-    "body": [
-      "txt = 'Hello My Name Is PETER'",
-      "x = txt.swapcase()",
-      "print(x)"
-    ],
+    "body": ["txt = 'Hello My Name Is PETER'", "x = txt.swapcase()", "print(x)"],
     "description": ["使用 str.swapcase 的示例"]
   },
   "str.title 标题化": {
-    "prefix": ["str title -str"],
+    "prefix": ["str title"],
     "body": ["title()"],
     "description": ["返回\"标题化\"的str, 每个单词首字母大写, 其余字母小写"]
   },
@@ -966,7 +746,7 @@
     "description": ["使用 str.title 的示例3"]
   },
   "str.translate 翻译映射": {
-    "prefix": ["str translate -str"],
+    "prefix": ["str translate"],
     "body": ["translate(${1:translation})"],
     "description": [
       "str.translate 返回翻译后的str, 翻译表为字典, 或者 字符串映射(maketrans(intab, outtab)), deletechars(默认空)=忽略去除字符串中的字符"
@@ -985,7 +765,7 @@
     "description": ["使用 str.translate 的示例"]
   },
   "str.upper 转换大写": {
-    "prefix": ["str upper -str"],
+    "prefix": ["str upper"],
     "body": ["upper()"],
     "description": ["str.upper 将str转换为大写"]
   },
@@ -995,11 +775,9 @@
     "description": ["使用 str.upper 的示例"]
   },
   "str.zfill 返回指定长度的字符串": {
-    "prefix": ["str zfill -str"],
+    "prefix": ["str zfill"],
     "body": ["zfill(${1:width})"],
-    "description": [
-      "返回指定长度的字符串, 原字符串右对齐, 前面填充0(width: int=指定填充长度)"
-    ]
+    "description": ["返回指定长度的字符串, 原字符串右对齐, 前面填充0(width: int=指定填充长度)"]
   },
   "str.zfill 示例": {
     "prefix": ["str zfill =-str"],

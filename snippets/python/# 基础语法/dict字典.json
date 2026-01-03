@@ -10,67 +10,42 @@
     "description": ["类型声明: dict"]
   },
   "dict.clear 从dict中删除所有元素": {
-    "prefix": ["clear -dict", "dc clear -dict"],
+    "prefix": ["dict clear", "dc clear -dict"],
     "body": "clear()",
     "description": ["dict.clear 从dict中删除所有元素"]
   },
   "dict.clear 示例": {
     "prefix": ["dc clear =-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "car.clear()",
-      "print(car)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "car.clear()", "print(car)"],
     "description": ["使用 dict.clear 的示例"]
   },
   "dict.copy 返回dict的副本": {
-    "prefix": ["copy -dict"],
+    "prefix": ["dict copy"],
     "body": "copy()",
     "description": ["dict.copy 返回dict的副本"]
   },
   "dict.copy 示例": {
     "prefix": ["dc copy =-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "x = car.copy()",
-      "print(x)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "x = car.copy()", "print(x)"],
     "description": ["使用 dict.copy 的示例"]
   },
   "dict.fromkeys 返回具有指定键和值的dict": {
-    "prefix": ["fromkeys -dict", "dc fromkeys -dict"],
+    "prefix": ["dict fromkeys", "dc fromkeys -dict"],
     "body": "fromkeys(${1:key}, ${2:value})",
     "description": ["dict.fromkeys 返回具有指定键和值的 dict"]
   },
   "dict.fromkeys 示例1": {
     "prefix": ["dc fromkeys =1-dict"],
-    "body": [
-      "x = ('key1', 'key2', 'key3')",
-      "y = 0",
-      "thisdict = dict.fromkeys(x, y)",
-      "print(thisdict)"
-    ],
+    "body": ["x = ('key1', 'key2', 'key3')", "y = 0", "thisdict = dict.fromkeys(x, y)", "print(thisdict)"],
     "description": ["使用 dict.fromkeys 的示例1"]
   },
   "dict.fromkeys 示例2": {
     "prefix": ["dc fromkeys =2-dict"],
-    "body": [
-      "x = ('key1', 'key2', 'key3')",
-      "thisdict = dict.fromkeys(x)",
-      "print(thisdict)"
-    ],
+    "body": ["x = ('key1', 'key2', 'key3')", "thisdict = dict.fromkeys(x)", "print(thisdict)"],
     "description": ["使用 dict.fromkeys 的示例2"]
   },
   "dict.get 返回dict指定键的值": {
-    "prefix": ["get -dict", "dc get -dict"],
+    "prefix": ["dict get", "dc get -dict"],
     "body": "get(${1:key}, None)",
     "description": ["dict.get 返回dict指定键的值"]
   },
@@ -101,21 +76,13 @@
     "description": ["使用 dict.get 的示例2"]
   },
   "dict.items 返回dict包含每个键值对的元组的list": {
-    "prefix": ["items -dict", "dc items -dict"],
+    "prefix": ["dict items", "dc items -dict"],
     "body": "items()",
     "description": ["dict.items 返回dict包含每个键值对的元组的list"]
   },
   "dict.items 示例1": {
     "prefix": ["dc items =1-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "x = car.items()",
-      "print(x)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "x = car.items()", "print(x)"],
     "description": ["使用 dict.items 的示例1"]
   },
   "dict.items 示例2": {
@@ -133,21 +100,13 @@
     "description": ["使用 dict.items 的示例2"]
   },
   "dict.keys 返回包含dict键的list": {
-    "prefix": ["keys -dict", "dc keys -dict"],
+    "prefix": ["dict keys", "dc keys -dict"],
     "body": "keys()",
     "description": ["dict.keys 返回包含dict键的list"]
   },
   "dict.keys 示例1": {
     "prefix": ["dc keys =1-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "x = car.keys()",
-      "print(x)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "x = car.keys()", "print(x)"],
     "description": ["使用 dict.keys 的示例1"]
   },
   "dict.keys 示例2": {
@@ -165,47 +124,29 @@
     "description": ["使用 dict.keys 的示例2"]
   },
   "dict.pop 删除dict中具有指定key键的元素": {
-    "prefix": ["pop -dict", "dc pop -dict"],
+    "prefix": ["dict pop", "dc pop -dict"],
     "body": "pop(${1:key})",
     "description": ["dict.pop 删除dict中具有指定key键的元素"]
   },
   "dict.pop 示例": {
     "prefix": ["dc pop =-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "car.pop('model')",
-      "print(car)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "car.pop('model')", "print(car)"],
     "description": ["使用 dict.pop 的示例"]
   },
   "dict.popitem 删除dict中最后插入的键值对": {
-    "prefix": ["popitem -dict", "dc popitem -dict"],
+    "prefix": ["dict popitem", "dc popitem -dict"],
     "body": "popitem()",
     "description": ["dict.popitem 删除dict中最后插入的键值对"]
   },
   "dict.popitem 示例": {
     "prefix": ["dc popitem =-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "car.popitem()",
-      "print(car)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "car.popitem()", "print(car)"],
     "description": ["使用 dict.popitem 的示例"]
   },
   "dict.setdefault 返回dict中指定键的值": {
-    "prefix": ["setdefault -dict", "dc setdefault -dict"],
+    "prefix": ["dict setdefault", "dc setdefault -dict"],
     "body": "setdefault(${1:key}, ${2:value})",
-    "description": [
-      "dict.setdefault 返回dict中指定键的值. 如果key不存在: 插入key, 并指定value"
-    ]
+    "description": ["dict.setdefault 返回dict中指定键的值. 如果key不存在: 插入key, 并指定value"]
   },
   "dict.setdefault 示例1": {
     "prefix": ["dc setdefault =1-dict"],
@@ -234,7 +175,7 @@
     "description": ["使用 dict.setdefault 的示例2"]
   },
   "dict.update 使用指定的键值对更新dict": {
-    "prefix": ["update -dict", "dc update -dict"],
+    "prefix": ["dict update", "dc update -dict"],
     "body": "update(${1:dicts})",
     "description": ["dict.update 使用指定的键值对更新dict"]
   },
@@ -252,21 +193,13 @@
     "description": ["使用 dict.update 的示例"]
   },
   "dict.values 返回dict中所有值的列表": {
-    "prefix": ["values -dict", "dc values -dict"],
+    "prefix": ["dict values", "dc values -dict"],
     "body": "values()",
     "description": ["dict.values 返回dict中所有值的列表"]
   },
   "dict.values 示例1": {
     "prefix": ["dc values =1-dict"],
-    "body": [
-      "car = {",
-      "\t'brand': 'Ford',",
-      "\t'model': 'Mustang',",
-      "\t'year': 1964",
-      "}",
-      "x = car.values()",
-      "print(x)"
-    ],
+    "body": ["car = {", "\t'brand': 'Ford',", "\t'model': 'Mustang',", "\t'year': 1964", "}", "x = car.values()", "print(x)"],
     "description": ["使用 dict.values 的示例1"]
   },
   "dict.values 示例2": {
