@@ -10,7 +10,6 @@
       "@dataclass(slots=True, frozen=True, kw_only=True, order=True)  # *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
       "class ${1:NewObject}(${2:}):",
       "    # *class 数据类对象属性(变量)",
-      "    # *class 数据类对象属性(变量)",
       "    $0",
       ""
     ],
