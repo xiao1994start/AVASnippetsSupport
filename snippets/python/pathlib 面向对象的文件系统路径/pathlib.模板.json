@@ -1,0 +1,14 @@
+{
+  "获取系统环境变量路径并转换为Path类型": {
+    "prefix": ["getenv to Path", "getenv 2 Path", "path to Path", "path 2 Path"],
+    "body": [
+      "_path = os.getenv('${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|}')",
+      "if _path:",
+      "    _PATH = Path(_path, os.sep)",
+      "else:",
+      "    _PATH = Path(os.popen('ECHO %${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|}%').read().strip())",
+      ""
+    ],
+    "description": ["获取系统环境变量路径并转换为Path类型"]
+  }
+}

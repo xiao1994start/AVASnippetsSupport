@@ -769,6 +769,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/pathlib 面向对象的文件系统路径/pathlib.模板.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/pathlib 面向对象的文件系统路径/pathlib.glob.json"
       },
       {
