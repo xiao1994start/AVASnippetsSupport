@@ -12,5 +12,22 @@
       ")"
     ],
     "description": ["插件加载读取模块"]
+  },
+  "pedalboard.load_plugin 读取插件信息": {
+    "prefix": ["pedalboard load_plugin ="],
+    "body": [
+      "plugin = load_plugin(str(path))",
+      "plugin_reader = {",
+      "    '名称': plugin.name,  # type: ignore",
+      "    '描述性名称': plugin.descriptive_name,  # type: ignore",
+      "    '制造商': plugin.manufacturer_name,  # type: ignore",
+      "    '类别': plugin.category,  # type: ignore",
+      "    '效果器': plugin.is_effect,",
+      "    '乐器': plugin.is_instrument,",
+      "    '属性标识符': plugin.identifier,  # type: ignore",
+      "}",
+      ""
+    ],
+    "description": ["读取插件信息"]
   }
 }
