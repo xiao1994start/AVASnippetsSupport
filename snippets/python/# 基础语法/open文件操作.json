@@ -1,9 +1,7 @@
 {
   "open 文件操作对象": {
     "prefix": ["open file"],
-    "body": [
-      "open(${1:file_path}, '${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', ${3:encoding='utf-8'})"
-    ],
+    "body": ["open(${1:file_path}, '${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', ${3:encoding='utf-8'})"],
     "description": ["open -文件操作对象"]
   },
   "with open 文件操作": {
@@ -31,9 +29,7 @@
   "open.readlines 按行读取->list": {
     "prefix": ["open readlines -open"],
     "body": ["readlines(${1:size})"],
-    "description": [
-      "open.readlines 返回包含size行的列表, size 未指定则返回全部行"
-    ]
+    "description": ["open.readlines 返回包含size行的列表, size 未指定则返回全部行"]
   },
   "open.write 写入文件": {
     "prefix": ["open write "],
@@ -52,22 +48,13 @@
   },
   "open -r 只读模式": {
     "prefix": ["with open -r ", "wOpen -r "],
-    "body": [
-      "with open(${1:file_path}, 'r', encoding='utf-8') as f:",
-      "    content = f.read()",
-      "    $0"
-    ],
-    "description": [
-      "open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式",
-      "文件必须存在, 不存在抛出错误"
-    ]
+    "body": ["with open(${1:file_path}, 'r', encoding='utf-8') as f:", "    content = f.read()", "    $0"],
+    "description": ["open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式", "文件必须存在, 不存在抛出错误"]
   },
   "open -rb 二进制只读": {
     "prefix": ["with open -rb ", "wOpen -rb "],
     "body": ["with open(${1:file_path}, 'rb') as f:", "    f.read()", "    $0"],
-    "description": [
-      "open -rb 以二进制格式打开一个文件用于只读常用于读取图片、声音、视频等文件"
-    ]
+    "description": ["open -rb 以二进制格式打开一个文件用于只读常用于读取图片、声音、视频等文件"]
   },
   "open -r+ 读写 |->开头": {
     "prefix": ["with open -r+ ", "wOpen -r+ "],
@@ -77,9 +64,7 @@
       "    f.write(content)",
       "    f.flush()  # 写文件刷新缓存"
     ],
-    "description": [
-      "open -r+ 打开一个文件用于读写文件指针将会放在文件的开头读完就追加"
-    ]
+    "description": ["open -r+ 打开一个文件用于读写文件指针将会放在文件的开头读完就追加"]
   },
   "open -w 只写模式(创建/覆盖)": {
     "prefix": ["with open -w ", "wOpen -w "],
@@ -99,9 +84,7 @@
       "    f.write(content)",
       "    f.flush()  # 写文件刷新缓存"
     ],
-    "description": [
-      "open -wb 二进制只用于写入模式(覆盖原来内容), 常用于写入图片、声音、视频等非文本文件如图片等"
-    ]
+    "description": ["open -wb 二进制只用于写入模式(覆盖原来内容), 常用于写入图片、声音、视频等非文本文件如图片等"]
   },
   "open -w+ 读写模式 |->开头": {
     "prefix": ["with open -w+ ", "wOpen -w+ "],
@@ -178,5 +161,25 @@
       "open -ab+ 以二进制格式打开一个文件用于追加如果该文件已存在, 文件指针将会放在文件的结尾",
       "    如果该文件不存在, 创建新文件用于读写"
     ]
+  },
+  "open read .nfo 打开并读取nfo资讯档案文件": {
+    "prefix": ["with open read nfo"],
+    "body": [
+      "try:",
+      "    # ** 使用 cp437 编码可以完美还原字符画 **",
+      "    with open(nfo_path, 'r', encoding='cp437') as f:",
+      "        content = f.readline()",
+      "        while content:",
+      "            contents = content.strip().split('=')",
+      "            print(contents)",
+      "            content = f.readline()",
+      "    return nfo_info",
+      "except Exception as error:",
+      "    print(f'错误类型:{type(error)}')",
+      "    print(f'错误信息:{error}')",
+      "    raise error  # raise: 抛出异常, 程序终止 (如果注释掉, 则程序继续执行, 正常退出)",
+      ""
+    ],
+    "description": ["open read .nfo 打开并读取nfo资讯档案文件"]
   }
 }
