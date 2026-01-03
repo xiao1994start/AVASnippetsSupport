@@ -4,9 +4,10 @@
     "body": [
       "_path = os.getenv('${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|}')",
       "if _path:",
-      "    _PATH = Path(_path, os.sep)",
+      "    _PATH = Path(_path, os.sep) if _path.endswith(':') else Path(_path)",
       "else:",
-      "    _PATH = Path(os.popen('ECHO %${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|}%').read().strip())",
+      "    cmd_stdout = os.popen('ECHO %${1|'%SYSTEMDRIVE%','%HOMEDRIVE%','%PROGRAMFILES%','%COMMONPROGRAMFILES%','%PROGRAMFILES(X86)%','%ALLUSERSPROFILE%','%PROGRAMDATA%','%WINDIR%','%SYSTEMROOT%','%USERPROFILE%','%APPDATA%','%LOCALAPPDATA%'|}%').read().strip()",
+      "    _PATH = Path(cmd_stdout, os.sep) if cmd_stdout.endswith(':') else Path(cmd_stdout)",
       ""
     ],
     "description": ["获取系统环境变量路径并转换为Path类型"]
