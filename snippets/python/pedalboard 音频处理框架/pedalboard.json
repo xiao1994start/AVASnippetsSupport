@@ -6,7 +6,7 @@
   },
   "引入 pedalboard.load_plugin 插件加载读取模块": {
     "prefix": ["import pedalboard.load_plugin", "im pedalboard.load_plugin"],
-    "body": ["from pedalboard import (", "    load_plugin,  # *pedalboard.load_plugin 插件加载读取模块", ")"],
+    "body": ["from pedalboard import load_plugin  # *pedalboard.load_plugin 插件加载读取模块"],
     "description": ["插件加载读取模块"]
   },
   "pedalboard.load_plugin 读取插件信息": {

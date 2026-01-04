@@ -636,6 +636,10 @@
         "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich颜色控制.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich样式控制.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/beautifulsoup4 解析HTML/beautifulsoup4.bat.json"
       },

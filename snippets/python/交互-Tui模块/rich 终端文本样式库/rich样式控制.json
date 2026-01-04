@@ -1,0 +1,32 @@
+{
+  "rich.print[粗体]": {
+    "prefix": ["printStyle bold -rich", "ps bold -rich"],
+    "body": ["bold"],
+    "description": ["rich.print[粗体]"]
+  },
+  "rich.print[斜体]": {
+    "prefix": ["printStyle italic -rich", "ps italic -rich"],
+    "body": ["italic"],
+    "description": ["rich.print[斜体]"]
+  },
+  "rich.print[下划线]": {
+    "prefix": ["printStyle underline -rich", "ps underline -rich"],
+    "body": ["underline"],
+    "description": ["rich.print[下划线]"]
+  },
+  "rich.print[暗淡]": {
+    "prefix": ["printStyle dim -rich", "ps dim -rich"],
+    "body": ["dim"],
+    "description": ["rich.print[暗淡]"]
+  },
+  "rich.print[反转前景/背景色]": {
+    "prefix": ["printStyle reverse -rich", "ps reverse -rich"],
+    "body": ["reverse"],
+    "description": ["rich.print[反转前景/背景色]"]
+  },
+  "rich.print[删除线]": {
+    "prefix": ["printStyle strike -rich", "ps strike -rich"],
+    "body": ["strike"],
+    "description": ["rich.print[删除线]"]
+  }
+}
