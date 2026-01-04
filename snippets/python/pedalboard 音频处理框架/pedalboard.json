@@ -6,17 +6,14 @@
   },
   "引入 pedalboard.load_plugin 插件加载读取模块": {
     "prefix": ["import pedalboard.load_plugin", "im pedalboard.load_plugin"],
-    "body": [
-      "from pedalboard import (",
-      "    load_plugin,  # *pedalboard.load_plugin 插件加载读取模块[https://spotify.github.io/pedalboard/reference/pedalboard.html#pedalboard.VST3Plugin]",
-      ")"
-    ],
+    "body": ["from pedalboard import (", "    load_plugin,  # *pedalboard.load_plugin 插件加载读取模块", ")"],
     "description": ["插件加载读取模块"]
   },
   "pedalboard.load_plugin 读取插件信息": {
-    "prefix": ["pedalboard load_plugin ="],
+    "prefix": ["pedalboard load_plugin =-pedalboard"],
     "body": [
-      "plugin = load_plugin(str(path))",
+      "plugin = load_plugin(str(vst3_plugin_path))  # type: pedalboard.VST3Plugin",
+      "# *API:[https://spotify.github.io/pedalboard/reference/pedalboard.html#pedalboard.VST3Plugin]",
       "plugin_reader = {",
       "    '名称': plugin.name,  # type: ignore",
       "    '描述性名称': plugin.descriptive_name,  # type: ignore",

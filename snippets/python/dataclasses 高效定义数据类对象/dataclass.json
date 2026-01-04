@@ -12,7 +12,7 @@
       "class ${1:NewDataObject}(${2:}):",
       "    # *class 数据类对象属性(变量)",
       "    # *示例属性定义: name: str = '张三'(默认值可以省略)",
-      "    # *使用时: NewDataObject(name='张三') 或 return NewDataObject(name='张三') 创建对象",
+      "    # *使用时: ${1:NewDataObject}(name='张三') 或 return ${1:NewDataObject}(name='张三') 创建对象",
       "    $0",
       ""
     ],
