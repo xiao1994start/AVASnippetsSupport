@@ -26,5 +26,29 @@
       ""
     ],
     "description": ["读取插件信息"]
+  },
+  "定义nfo获取Plugin插件信息数据类(# 字段名)": {
+    "prefix": "nfoPluginInfo dataclass =",
+    "body": [
+      "from dataclasses import dataclass  # *引入 dataclass 高效定义数据类对象",
+      "@dataclass(slots=True, frozen=True, kw_only=True, order=True)",
+      "# *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
+      "class PluginNFO:",
+      "    \"\"\"",
+      "    插件信息数据类",
+      "    \"\"\"",
+      "    名称: str  # ps_name",
+      "    描述性名称: str  # ps_file_name_0",
+      "    # tip: str  # tip [ [VST | VST3] / [64 bit | 32 bit] ]",
+      "    厂商: str  # ps_file_vendorname_0",
+      "    效果: bool = False  # ps_file_category_0 = 'Effect' | 'Fx'",
+      "    乐器: bool = False  # ps_file_category_0 = 'Instrument' | 'Instruments'",
+      "    类型: list[str]  # ps_file_category_0 = '类型1|类型2|...'",
+      "    VSTx: Path  # ps_file_filename_0",
+      "    fstP: Path  # ps_presetfilename",
+      "    nfoP: Path  # .nfo 文件路径(用于归档)",
+      ""
+    ],
+    "description": "定义nfo获取Plugin插件信息数据类(# 字段名)"
   }
 }
