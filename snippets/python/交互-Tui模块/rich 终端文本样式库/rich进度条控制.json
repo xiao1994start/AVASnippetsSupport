@@ -26,7 +26,7 @@
     "description": ["创建基本的Rich进度条显示"]
   },
   "rich.progress.Progress 创建高级的Rich进度条显示": {
-    "prefix": [""],
+    "prefix": ["with rich Progress =-rich", "rich with Progress ="],
     "body": [
       "with Progress() as progress:",
       "    total=100",
