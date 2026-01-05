@@ -1,0 +1,7 @@
+{
+  "re.IGNORECASE 忽略大小写": {
+    "prefix": ["re IGNORECASE", "re flags IGNORECASE","re =="],
+    "body": ["re.IGNORECASE"],
+    "description": ["忽略大小写"]
+  }
+}

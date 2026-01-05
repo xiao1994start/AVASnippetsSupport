@@ -36,5 +36,10 @@
       "# flags=re.DOTALL .就能匹配包括换行符在内的所有字符"
     ],
     "description": ["re.sub 替换字符串中的匹配项"]
+  },
+  "re.escape 自动转义字符串中的特殊字符": {
+    "prefix": ["re escape"],
+    "body": ["re.escape('${1:需要转义字符串}')"],
+    "description": ["re.escape 自动转义字符串中的特殊字符"]
   }
 }

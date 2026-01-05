@@ -26,10 +26,10 @@
     "description": ["创建基本的Rich进度条显示"]
   },
   "rich.progress.Progress 创建高级的Rich进度条显示": {
-    "prefix": ["with rich Progress =-rich", "rich with Progress ="],
+    "prefix": ["with rich Progress =-rich"],
     "body": [
       "with Progress() as progress:",
-      "    total=100",
+      "    total = 100",
       "    # *创建进度条任务",
       "    task = progress.add_task('[red]Processing...', total=total)",
       "",

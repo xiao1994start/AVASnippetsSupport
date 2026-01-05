@@ -849,6 +849,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/re 正则表达式/re常用flags.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/re 正则表达式/re.常用输入类型正则表达式示例.json"
       },
       {
