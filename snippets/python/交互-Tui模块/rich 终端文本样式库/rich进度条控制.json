@@ -1,0 +1,12 @@
+{
+  "引入 rich.progress.track [基本]进度显示": {
+    "prefix": ["import rich progress track", "im rich progress track"],
+    "body": ["from rich.progress import track  # *用于显示进度条[for i in track(range(20), description='Processing...')]", ""],
+    "description": ["进度条管理器(用于显示进度条的基本用法)"]
+  },
+  "rich.progress.track 创建基本的Rich进度条显示": {
+    "prefix": ["for rich track =-rich", "rich for track ="],
+    "body": ["for i in track(range(20), description='Processing...'):", "    # *进度循环体", "    ..."],
+    "description": ["创建基本的Rich进度条显示"]
+  }
+}

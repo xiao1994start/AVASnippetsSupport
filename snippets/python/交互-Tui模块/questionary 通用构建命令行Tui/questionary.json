@@ -55,6 +55,9 @@
   "questionary.checkbox 复选框": {
     "prefix": ["questionary checkbox"],
     "body": [
+      "tab_1 = '插件自动归档'",
+      "tab_2 = 'FL清洁器'",
+      "tab_q = '__退出__'",
       "questionary.checkbox(",
       "    message='复选框',",
       "    choices=[  # TODO:复选项",
@@ -64,6 +67,12 @@
       "    ],",
       "    use_jk_keys=True,  # *允许用户使用`j`(向上) / `k`(向下)",
       ").ask()",
+      "",
+      "func_hub = {",
+      "    tab_1: func_1,",
+      "    tab_2: func_2,",
+      "    tab_q: sys.exit,",
+      "}",
       ""
     ],
     "description": ["复选框"]
