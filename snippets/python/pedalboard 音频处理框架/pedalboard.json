@@ -4,24 +4,24 @@
     "body": ["import pedalboard"],
     "description": ["音频处理框架"]
   },
-  "引入 pedalboard.load_plugin 插件加载读取模块": {
-    "prefix": ["import pedalboard.load_plugin", "im pedalboard.load_plugin"],
-    "body": ["from pedalboard import load_plugin  # *pedalboard.load_plugin 插件加载读取模块"],
-    "description": ["插件加载读取模块"]
+  "引入 pedalboard.VST3Plugin Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器": {
+    "prefix": ["import pedalboard.VST3Plugin", "im pedalboard.VST3Plugin"],
+    "body": ["from pedalboard import VST3Plugin  # *Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"],
+    "description": ["Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"]
   },
-  "pedalboard.load_plugin 读取插件信息": {
-    "prefix": ["pedalboard load_plugin =-pedalboard"],
+  "pedalboard.VST3Plugin 读取插件信息": {
+    "prefix": ["pedalboard VST3Plugin ="],
     "body": [
-      "plugin = load_plugin(str(vst3_plugin_path))  # type: pedalboard.VST3Plugin",
+      "plugin = VST3Plugin(path_to_plugin_file=str(vst3_path), plugin_name=VST3Plugin_name)",
       "# *API:[https://spotify.github.io/pedalboard/reference/pedalboard.html#pedalboard.VST3Plugin]",
-      "plugin_reader = {",
-      "    '名称': plugin.name,  # type: ignore",
-      "    '描述性名称': plugin.descriptive_name,  # type: ignore",
-      "    '制造商': plugin.manufacturer_name,  # type: ignore",
-      "    '类别': plugin.category,  # type: ignore",
+      "plugin_info = {",
+      "    '名称': plugin.name,",
+      "    '描述性名称': plugin.descriptive_name,",
+      "    '制造商': plugin.manufacturer_name,",
+      "    '类别': plugin.category,",
       "    '效果器': plugin.is_effect,",
       "    '乐器': plugin.is_instrument,",
-      "    '属性标识符': plugin.identifier,  # type: ignore",
+      "    '属性标识符': plugin.identifier,",
       "}",
       ""
     ],
