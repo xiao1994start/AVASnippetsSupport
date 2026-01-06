@@ -202,9 +202,9 @@
     "body": ["x = [double(x) for x in range(10) if x%2==0]", "print(x)"],
     "description": ["使用 list.comprehensions 的示例5"]
   },
-  "list(dict.fromkeys) 去重": {
+  "list(dict.fromkeys) 去重,且保持顺序": {
     "prefix": ["list dict fromkeys"],
     "body": ["list(dict.fromkeys(${1:list}))"],
-    "description": ["使用 dict.fromkeys 去重"]
+    "description": ["使用 dict.fromkeys 去重,且保持顺序"]
   }
 }
