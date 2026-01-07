@@ -28,7 +28,7 @@
     "description": ["re.search 匹配整个字符串, 返回第一个成功的匹配"]
   },
   "re.sub 替换": {
-    "prefix": ["re sub"],
+    "prefix": ["re sub", "re replace"],
     "body": ["re.sub(r'[${1:正则条件}]', r'${2:替换内容}', ${3:匹配对象}, flags=re.DOTALL)"],
     "description": ["re.sub 替换字符串中的匹配项"]
   },
