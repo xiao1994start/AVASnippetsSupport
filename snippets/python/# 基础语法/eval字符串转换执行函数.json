@@ -1,6 +1,6 @@
 {
   "eval 字符串表达式": {
-    "prefix": ["eval =-eval"],
+    "prefix": ["eval ="],
     "body": ["eval(${1:字符串表达式}, ${2:globals, locals})"],
     "description": [
       "eval() 函数用来执行一个字符串表达式, 并返回表达式的值",

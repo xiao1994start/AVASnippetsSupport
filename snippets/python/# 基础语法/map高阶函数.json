@@ -1,15 +1,15 @@
 {
   "map 根据提供的函数对指定序列做映射": {
     "prefix": ["map "],
-    "body": ["map(function, 可迭代对象)"],
+    "body": ["map(function, 可迭代对象iterable)"],
     "description": [
       "根据提供的函数对指定序列做映射",
       "\n 第一个参数 function 以参数序列中的每一个元素调用 function 函数, 返回包含每次 function 函数返回值的新列表"
     ]
   },
   "map 可迭代对象批量转换为字符串类型": {
-    "prefix": ["map str -map"],
-    "body": ["map(str, 可迭代对象)"],
+    "prefix": ["map str "],
+    "body": ["map(str, 可迭代对象iterable)"],
     "description": ["可迭代对象批量转换为字符串类型"]
   }
 }
