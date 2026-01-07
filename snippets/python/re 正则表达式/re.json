@@ -29,6 +29,11 @@
   },
   "re.sub 替换": {
     "prefix": ["re sub"],
+    "body": ["re.sub(r'[${1:正则条件}]', r'${2:替换内容}', ${3:匹配对象}, flags=re.DOTALL)"],
+    "description": ["re.sub 替换字符串中的匹配项"]
+  },
+  "re.sub 替换模板": {
+    "prefix": ["re sub ="],
     "body": [
       "re.sub(r'[${1:正则条件}]', r'${2:替换内容}', ${3:匹配对象}, flags=re.DOTALL)",
       "# pattern=r'([匹配内容{匹配次数}])' 可以指定匹配组",

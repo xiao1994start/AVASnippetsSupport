@@ -1,7 +1,12 @@
 {
   "re.IGNORECASE 忽略大小写": {
-    "prefix": ["re IGNORECASE", "re flags IGNORECASE","re =="],
+    "prefix": ["re IGNORECASE", "re flags IGNORECASE", "re =="],
     "body": ["re.IGNORECASE"],
     "description": ["忽略大小写"]
+  },
+  "re.DOTALL 匹配包括换行符在内的所有字符": {
+    "prefix": ["re DOTALL", "re flags DOTALL", "re ="],
+    "body": ["re.DOTALL"],
+    "description": ["re.DOTALL 匹配包括换行符在内的所有字符"]
   }
 }
