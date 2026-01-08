@@ -1,0 +1,17 @@
+{
+  "引入 xml XML处理模块": {
+    "prefix": ["import xml ", "im xml "],
+    "body": ["import xml  # *XML处理模块", ""],
+    "description": "引入 xml XML处理模块"
+  },
+  "引入 xml.etree.ElementTree XML处理模块": {
+    "prefix": ["import xml etree ElementTree ", "im xml etree ElementTree "],
+    "body": ["import xml.etree.ElementTree as ET  # *ElementTree API:一个简单而轻量级的XML处理器", ""],
+    "description": "引入 xml XML处理模块"
+  },
+  "ET.fromstring() 从字符串中解析 XML": {
+    "prefix": ["ET fromstring"],
+    "body": ["ET.fromstring(${1:xml_string})"],
+    "description": ["从字符串中解析 XML"]
+  }
+}

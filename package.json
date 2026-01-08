@@ -945,6 +945,18 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/xml XML处理模块/xml.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/xmltodict XML数据解析字典/xmltodict.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/xmltodict XML数据解析字典/xmltodict.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/zipfile 压缩归档ZIP库/zipfile.Import.json"
       },
       {

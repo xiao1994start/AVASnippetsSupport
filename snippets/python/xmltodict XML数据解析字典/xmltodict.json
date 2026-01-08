@@ -1,0 +1,17 @@
+{
+  "引入 xmltodict XML数据和Python字典相互转换模块": {
+    "prefix": ["import xmltodict ", "im xmltodict "],
+    "body": ["import xmltodict  # *XML数据和Python字典相互转换模块", ""],
+    "description": "引入 xmltodict XML数据和Python字典相互转换模块"
+  },
+  "xmltodict.parse XML数据解析转换字典": {
+    "prefix": ["xmltodict parse", "xmltodict xml 2 dict"],
+    "body": ["xmltodict.parse(${1:xml_text})"],
+    "description": ["XML数据解析转换字典"]
+  },
+  "xmltodict.unparse 字典转换XML数据": {
+    "prefix": ["xmltodict unparse", "xmltodict dict 2 xml"],
+    "body": ["xmltodict.unparse(${1:xml_text})"],
+    "description": ["字典转换XML数据"]
+  }
+}

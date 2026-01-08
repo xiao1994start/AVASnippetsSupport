@@ -1,6 +1,6 @@
 {
   "snippets.python.import => tmpl": {
-    "prefix": ["snippets python import =-snippets"],
+    "prefix": ["snippets python import ="],
     "body": [
       "\"引入 ${1:type} ${2:库描述}\": {",
       "  \"prefix\": [\"import ${1:type}\", \"im ${1:type}\"],",
@@ -11,10 +11,10 @@
     "description": ["snippets.python.import => tmpl"]
   },
   "snippets.python.object => tmpl": {
-    "prefix": ["snippets python object =-snippets"],
+    "prefix": ["snippets python object ="],
     "body": [
       "\"${1:type}.${2:object} ${3:描述}\": {",
-      "  \"prefix\": [\"${1:type} -${2:object}\", \"${2:object} -${1:type}\"],",
+      "  \"prefix\": [\"${1:type} ${2:object}\"],",
       "  \"body\": [],",
       "  \"description\": [\"${3:描述}\"]",
       "},"
