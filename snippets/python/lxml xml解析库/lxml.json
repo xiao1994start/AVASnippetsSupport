@@ -1,0 +1,12 @@
+{
+  "引入 lxml xml解析库": {
+    "prefix": ["import lxml ", "im lxml "],
+    "body": ["import lxml  # *xml解析库", ""],
+    "description": "引入 lxml xml解析库"
+  },
+  "引入 lxml.etree xml解析库": {
+    "prefix": ["import lxml ", "im lxml "],
+    "body": ["from lxml import etree  # *xml解析库.etree解析和操作XML/HTML文档API模块", ""],
+    "description": "引入 lxml xml解析库"
+  }
+}

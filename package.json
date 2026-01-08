@@ -741,6 +741,14 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/lxml xml解析库/lxml.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/lxml xml解析库/lxml.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/NumPy/numpy.bat.json"
       },
       {

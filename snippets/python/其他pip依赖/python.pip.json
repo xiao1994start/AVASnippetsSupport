@@ -14,16 +14,6 @@
     ],
     "description": ["requests 网络请求库"]
   },
-  "pip.lxml lxml解析库": {
-    "prefix": ["pip lxml"],
-    "body": ["ECHO.", "ECHO * lxml lxml解析库 *", "pip install -U lxml -i https://mirrors.aliyun.com/pypi/simple/", ""],
-    "description": ["lxml解析库"]
-  },
-  "uv.lxml lxml解析库": {
-    "prefix": ["uv lxml"],
-    "body": ["ECHO.", "ECHO * lxml lxml解析库 *", "uv add \"lxml\" --index https://mirrors.aliyun.com/pypi/simple/", ""],
-    "description": ["lxml解析库"]
-  },
   "pip.html5lib HTML5解析库": {
     "prefix": ["pip html5lib"],
     "body": [
