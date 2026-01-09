@@ -1,6 +1,6 @@
 {
   "激活 GitPortable 临时环境设置": {
-    "prefix": ["Git Portable -git"],
+    "prefix": ["set git path -env--Portable"],
     "body": [
       "if exist \"%~dp0\\*Git*\" (",
       "    for /D %%i in (*Git*) do (",
@@ -16,7 +16,7 @@
     "description": ["激活 GitPortable 临时环境设置"]
   },
   "GitPortable 环境变量": {
-    "prefix": ["Git Env Path -git"],
+    "prefix": ["set git path -env"],
     "body": [
       "set systemPath=%path%",
       "@REM set systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\",

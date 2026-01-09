@@ -1,6 +1,6 @@
 {
   "node.js 临时环境设置": {
-    "prefix": ["node Portable -node", "npm Portable -node"],
+    "prefix": ["set node path -env--Portable", "set npm path -env--Portable"],
     "body": [
       "@REM 定位 node 解释器位置",
       "",

@@ -1,6 +1,6 @@
 {
   "Flet Hot Reload CMD": {
-    "prefix": ["ft HotReload", "ft Debug", "flet HotReload", "flet Debug"],
+    "prefix": ["call ft HotReload", "call ft Debug", "call flet HotReload", "call flet Debug"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",

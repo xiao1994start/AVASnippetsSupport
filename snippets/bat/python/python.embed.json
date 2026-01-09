@@ -1,6 +1,6 @@
 {
   "python-embed 嵌入式环境启动": {
-    "prefix": ["call embed -python"],
+    "prefix": ["set call python path -env--embed"],
     "body": [
       "@ECHO OFF",
       "setlocal enabledelayedexpansion",
@@ -30,7 +30,7 @@
     "description": "python-embed 嵌入式环境启动"
   },
   "python embed 环境变量": {
-    "prefix": ["set embed -python"],
+    "prefix": ["set python path -env--embed"],
     "body": [
       "set sysPath=%path%",
       "@REM systemPath 设置为系统初始化环境变量",
