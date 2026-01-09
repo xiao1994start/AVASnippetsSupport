@@ -15,7 +15,7 @@
       "@REM set sysPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\",
       "set PYTHON_HOME=%~dp0python;%~dp0python\\Scripts",
       "set path=%PYTHON_HOME%;%sysPath%;",
-      "ECHO %path%",
+      "@REM ECHO %path%",
       "ECHO python 版本号",
       "call python --version",
       "ECHO pip 版本号",
@@ -40,7 +40,7 @@
       "for /D %%i in (python*embed*) do ( ECHO 修改 python*embed* 目录名为 python && ren \"%%i\" \"python\" )",
       "set PYTHON_HOME=%~dp0python;%~dp0python\\Scripts",
       "set path=%PYTHON_HOME%;%sysPath%;",
-      "ECHO %path%",
+      "@REM ECHO %path%",
       ""
     ],
     "description": ["python embed 环境变量"]

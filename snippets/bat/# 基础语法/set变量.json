@@ -30,14 +30,14 @@
     "description": ["获取并设置自身bet文件名及后缀"]
   },
   "设置当前批处理临时环境变量": {
-    "prefix": ["set cmd env -set path"],
+    "prefix": ["set cmd path -env"],
     "body": [
       "set \"systemEnv=%PATH%\"",
       "@REM set \"systemEnv=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",
       "@REM ECHO 添加临时系统环境变量",
       "$0",
       "set \"path=%newEnv%;%systemEnv%;\"",
-      "ECHO %path%",
+      "@REM ECHO %path%",
       ""
     ],
     "description": "设置当前批处理临时环境变量"
