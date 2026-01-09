@@ -18,7 +18,7 @@
       "@REM ECHO %path%",
       "ECHO python 版本号",
       "call python --version",
-      "ECHO pip 版本号",
+      "ECHO pip 版本号 - 注意 无法使用 call pip 命令时可以尝试使用 call python -m pip 命令",
       "call pip --version",
       "",
       "",
