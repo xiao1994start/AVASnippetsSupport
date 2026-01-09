@@ -53,7 +53,7 @@
     "prefix": ["pip -config-index-url"],
     "body": [
       "@ECHO 重置pip.ini...",
-      "@REM ECHO.> %USERPROFILE%/AppData/Roaming/pip/pip.ini",
+      "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
       "ECHO 清华",
       "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
       "pip config set install.trusted-host https://pypi.tuna.tsinghua.edu.cn",
@@ -70,7 +70,7 @@
     "prefix": ["pip -config-extra-index-url"],
     "body": [
       "@ECHO 重置pip.ini...",
-      "@REM ECHO.> %USERPROFILE%/AppData/Roaming/pip/pip.ini",
+      "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
       "pip config set global.extra-index-url \"https: //pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple http://pypi.douban.com/simple http://pypi.mirrors.ustc.edu.cn/simple\""
     ],
     "description": ["pipconfig.index批量镜像源"]
