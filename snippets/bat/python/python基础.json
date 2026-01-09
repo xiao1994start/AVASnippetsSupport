@@ -46,10 +46,7 @@
   },
   "pip.Jupyter内核ipykernel依赖库": {
     "prefix": ["pip Jupyter", "pip ipykernel"],
-    "body": [
-      "@ECHO 安装Jupyter内核ipykernel依赖库...",
-      "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"
-    ],
+    "body": ["@ECHO 安装Jupyter内核ipykernel依赖库...", "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip.Jupyter内核ipykernel依赖库"]
   },
   "pip.镜像源": {
@@ -57,13 +54,13 @@
     "body": [
       "@ECHO 重置pip.ini...",
       "@REM ECHO.> %USERPROFILE%/AppData/Roaming/pip/pip.ini",
-      "echo 清华",
+      "ECHO 清华",
       "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
       "pip config set install.trusted-host https://pypi.tuna.tsinghua.edu.cn",
-      "echo 阿里",
+      "ECHO 阿里",
       "@REM pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/",
       "@REM pip config set install.trusted-host https://mirrors.aliyun.com/pypi",
-      "echo 豆瓣",
+      "ECHO 豆瓣",
       "@REM pip config set global.index-url https://pypi.douban.com/simple/",
       "@REM pip config set install.trusted-host https://pypi.douban.com"
     ],
@@ -80,23 +77,17 @@
   },
   "pip.install 安装库": {
     "prefix": ["pip new -install", "pip new -I"],
-    "body": [
-      "pip install ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
-    ],
+    "body": ["pip install ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -i 安装库"]
   },
   "pip.-reinstall 强制重装库": {
     "prefix": ["pip -reinstall"],
-    "body": [
-      "pip install --force-reinstall ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
-    ],
+    "body": ["pip install --force-reinstall ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -reinstall 强制重装库"]
   },
   "pip.install-upgrade 安装最新发布库": {
     "prefix": ["pip new -install-U", "pip new -U"],
-    "body": [
-      "pip install -U ${1:pip} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
-    ],
+    "body": ["pip install -U ${1:pip} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip.install-upgrade 安装最新发布库"]
   },
   "pip.uninstall 卸载": {
@@ -111,9 +102,7 @@
   },
   "pip.requirements 列式安装库": {
     "prefix": ["pip -install-requirements", "pip txt -install"],
-    "body": [
-      "pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"
-    ],
+    "body": ["pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip -requirements 列式安装库"]
   }
 }

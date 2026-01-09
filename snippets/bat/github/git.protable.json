@@ -1,31 +1,31 @@
 {
-  "激活 GitPortable 临时环境设置": {
+  "激活 PortableGit 临时环境设置": {
     "prefix": ["set git path -env--Portable"],
     "body": [
       "if exist \"%~dp0\\*Git*\" (",
       "    for /D %%i in (*Git*) do (",
-      "        ren \"%~dp0\\%%i\" \"GitPortable\"",
+      "        ren \"%~dp0\\%%i\" \"PortableGit\"",
       "    )",
       ")",
-      "set \"git_HOME=%~dp0\\GitPortable\\;%~dp0\\GitPortable\\cmd;%~dp0\\GitPortable\\bin\\;%~dp0\\GitPortable\\usr\\bin\\;\"",
+      "set \"git_HOME=%~dp0\\PortableGit\\;%~dp0\\PortableGit\\cmd;%~dp0\\PortableGit\\bin\\;%~dp0\\PortableGit\\usr\\bin\\;\"",
       "set \"path=%path%;%git_HOME%;\"",
       "@ECHO Git 版本号:",
       "call git -v",
       ""
     ],
-    "description": ["激活 GitPortable 临时环境设置"]
+    "description": ["激活 PortableGit 临时环境设置"]
   },
-  "GitPortable 环境变量": {
+  "PortableGit 环境变量": {
     "prefix": ["set git path -env"],
     "body": [
       "set \"systemPath=%path%\"",
       "@REM set \"systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
       "@REM ECHO 添加临时系统环境变量",
-      "set \"git_HOME=%~dp0\\GitPortable;%~dp0\\GitPortable\\cmd;%~dp0\\GitPortable\\bin;%~dp0\\GitPortable\\usr\\bin;\"",
+      "set \"git_HOME=%~dp0\\PortableGit;%~dp0\\PortableGit\\cmd;%~dp0\\PortableGit\\bin;%~dp0\\PortableGit\\usr\\bin;\"",
       "set \"path=%git_HOME%;%systemPath%;\"",
       "ECHO %path%",
       ""
     ],
-    "description": ["GitPortable 环境变量"]
+    "description": ["PortableGit 环境变量"]
   }
 }
