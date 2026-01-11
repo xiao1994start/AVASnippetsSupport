@@ -2,10 +2,6 @@
   "Flet Hot Reload CMD": {
     "prefix": ["call ft HotReload", "call ft Debug", "call flet HotReload", "call flet Debug"],
     "body": [
-      "@ECHO OFF",
-      "setlocal EnableDelayedExpansion",
-      "CD /D \"%~dp0\"",
-      "",
       "",
       "set systemPath=%path%",
       "@REM systemPath 设置为系统初始化环境变量",
@@ -21,8 +17,6 @@
       "",
       "call \"%~dp0.venv/Scripts/flet.exe\" run main.py",
       "",
-      "",
-      "endlocal",
       ""
     ],
     "description": "Flet Hot Reload CMD"

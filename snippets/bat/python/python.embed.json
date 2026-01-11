@@ -2,9 +2,6 @@
   "python-embed 嵌入式环境启动": {
     "prefix": ["set call python path -env--embed"],
     "body": [
-      "@ECHO OFF",
-      "setlocal enabledelayedexpansion",
-      "CD /D \"%~dp0\"",
       "",
       "for /D %%i in (python*embed*) do ( ECHO 修改 python*embed* 目录名为 python && ren \"%%i\" \"python\" )",
       "if not exist \"%~dp0python\" ( ECHO 请先部署 python_embed 环境 && exit /B )",
@@ -24,7 +21,6 @@
       "",
       "CALL \"%~dp0python/python.exe\" ${1:py脚本路径} ${2:参数}",
       "",
-      "endlocal",
       ""
     ],
     "description": "python-embed 嵌入式环境启动"

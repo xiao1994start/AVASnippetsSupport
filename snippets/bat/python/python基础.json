@@ -2,10 +2,6 @@
   "python.创建_激活 虚拟环境": {
     "prefix": ["py venv activate -python"],
     "body": [
-      "@ECHO OFF",
-      "setlocal enabledelayedexpansion",
-      "CD /D \"%~dp0\\\"",
-      "",
       "",
       "@ECHO 创建虚拟环境...",
       "call python -m venv ./.venv",
