@@ -19,7 +19,7 @@
       "call pip --version",
       "",
       "",
-      "CALL \"%~dp0python/python.exe\" ${1:py脚本路径} ${2:参数}",
+      "CALL \"%~dp0python\\python.exe\" ${1:py脚本路径} ${2:参数}",
       "",
       ""
     ],
