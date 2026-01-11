@@ -9,7 +9,7 @@
       ")",
       "set \"git_HOME=%~dp0\\PortableGit\\;%~dp0\\PortableGit\\cmd;%~dp0\\PortableGit\\bin\\;%~dp0\\PortableGit\\usr\\bin\\;\"",
       "set \"path=%path%;%git_HOME%;\"",
-      "@ECHO Git 版本号:",
+      "ECHO Git 版本号:",
       "call git -v",
       ""
     ],
