@@ -41,9 +41,7 @@ call npm root -g
 @REM ECHO 正在安装 yo generate-code 库
 @REM call npm install --global yo generator-code --registry https://registry.npmmirror.com/
 
-
 ECHO 安装 - 更新 完成 & ECHO.
-
 
 CD /D "%~dp0"
 call vsce package
