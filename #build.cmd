@@ -19,11 +19,11 @@ if exist "%CD%\*node-*" (
     )
 )
 @REM 设置环境变量
-set "sysPath=%path%"
-@REM set "sysPath=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\"
+set "systemPath=%path%"
+@REM set "systemPath=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\"
 @REM ECHO 添加临时系统环境变量
 set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
-set path=%NODE_HOME%;%sysPath%;
+set path=%NODE_HOME%;%systemPath%;
 @REM ECHO %path%
 @REM 环境测试
 ECHO 升级 npm
