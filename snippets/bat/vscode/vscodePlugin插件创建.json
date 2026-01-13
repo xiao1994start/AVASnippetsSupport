@@ -12,7 +12,7 @@
       "    ren \"%%i\" \"node\"",
       ")",
       "@REM 设置环境变量",
-      "@REM set systemPath=%path%",
+      "@REM set \"systemPath=%path%\"",
       "set \"systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
       "@REM ECHO 添加临时系统环境变量",
       "set \"NODE_HOME=%~dp0node;%~dp0node\\node_modules;\"",
