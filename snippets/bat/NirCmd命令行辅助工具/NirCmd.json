@@ -1,7 +1,7 @@
 {
   "NirCmd 添加环境变量": {
     "prefix": ["set NirCmd"],
-    "body": ["set \"systemEnv=%PATH%\"", "set \"nc=%~dp0#NirCmd\\nircmd-x64\"", "set \"path=%nc%;%systemEnv%;\"", ""],
+    "body": ["set \"systemEnv=%PATH%\"", "set \"nc=%~dp0.NirCmd\\nircmd-x64\"", "set \"path=%nc%;%systemEnv%;\"", ""],
     "description": ["NirCmd 添加环境变量"]
   },
   "NirCmd 环境变量检查": {
@@ -14,7 +14,7 @@
       ") else (",
       "    @REM ECHO 添加环境变量 nircmd",
       "    set \"systemEnv=%PATH%\"",
-      "    set \"nc=%~dp0#NirCmd\\nircmd-x64\"",
+      "    set \"nc=%~dp0.NirCmd\\nircmd-x64\"",
       "    set \"path=%nc%;%systemEnv%;\"",
       "    goto :check_nircmd_env",
       ")",
