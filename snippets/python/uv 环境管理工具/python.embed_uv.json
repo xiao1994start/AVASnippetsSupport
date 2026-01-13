@@ -16,7 +16,7 @@
       "ECHO ==========================",
       "ECHO 请直接按键执行命令...",
       "@REM 使用 PowerShell 捕获按键",
-      "for /f \"delims=\" %%k in ('powershell -command \"$key = [System.Console]::ReadKey($true).KeyChar; Write-Host $key\"') do (",
+      "for /f \"delims=\" %%k in ('powershell -command \"\\$key = [System.Console]::ReadKey(\\$true).KeyChar; Write-Host \\$key\"') do (",
       "    set \"key=%%k\"",
       ")",
       "@REM 根据按键执行命令",
