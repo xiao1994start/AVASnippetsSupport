@@ -1,31 +1,20 @@
 {
-  "激活 PortableGit 临时环境设置": {
-    "prefix": ["set git path -env--Portable"],
+  "PortableGit 临时环境设置": {
+    "prefix": ["call git -env--Portable"],
     "body": [
-      "if exist \"%~dp0\\*Git*\" (",
-      "    for /D %%i in (*Git*) do (",
-      "        ren \"%~dp0\\%%i\" \"PortableGit\"",
-      "    )",
-      ")",
-      "set \"git_HOME=%~dp0\\PortableGit\\;%~dp0\\PortableGit\\cmd;%~dp0\\PortableGit\\bin\\;%~dp0\\PortableGit\\usr\\bin\\;\"",
-      "set \"path=%git_HOME%;%path%;\"",
+      "set \"SYSTEM_PATH=%path%\"",
+      "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "set \"GIT_ENV_PATH=.\\PortableGit\\;.\\PortableGit\\cmd;.\\PortableGit\\bin\\;.\\PortableGit\\usr\\bin\\;\"",
+      "set \"path=%GIT_ENV_PATH%;%path%;\"",
       "ECHO Git 版本号:",
       "call git -v",
       ""
     ],
-    "description": ["激活 PortableGit 临时环境设置"]
+    "description": ["PortableGit 临时环境设置"]
   },
-  "PortableGit 环境变量": {
-    "prefix": ["set git path -env"],
-    "body": [
-      "set \"systemPath=%path%\"",
-      "@REM set \"systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "@REM ECHO 添加临时系统环境变量",
-      "set \"git_HOME=%~dp0\\PortableGit;%~dp0\\PortableGit\\cmd;%~dp0\\PortableGit\\bin;%~dp0\\PortableGit\\usr\\bin;\"",
-      "set \"path=%git_HOME%;%systemPath%;\"",
-      "ECHO %path%",
-      ""
-    ],
-    "description": ["PortableGit 环境变量"]
+  "PortableGit 临时环境": {
+    "prefix": ["set git env path --Portable"],
+    "body": ["set \"GIT_ENV_PATH=.\\PortableGit\\;.\\PortableGit\\cmd;.\\PortableGit\\bin\\;.\\PortableGit\\usr\\bin\\;\"", ""],
+    "description": ["PortableGit 临时环境"]
   }
 }

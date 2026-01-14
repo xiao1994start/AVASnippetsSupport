@@ -66,36 +66,28 @@
   "使用记事本打开host文件": {
     "prefix": ["Host Edit"],
     "body": [
-      ":: 取消 hosts 只读",
+      "@REM *取消 hosts 只读",
       "attrib -R C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
-      ":: 用 记事本 打开 hosts ",
+      "@REM *用 记事本 打开 hosts  ",
       "call notepad C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
-      ":: 设定 hosts 只读",
+      "@REM *设定 hosts 只读",
       "attrib +R C:\\WINDOWS\\system32\\drivers\\etc\\hosts"
     ],
     "description": ["使用记事本打开host文件"]
   },
   "使用cmd静默安装innosetup安装包": {
     "prefix": ["inno -Install"],
-    "body": [
-      "${1:InnoSetup安装程序路径} /SILENT /COMPONENTS=\"${2:InnoExtractor提取的安装参数_使用英文逗号隔开}\""
-    ],
+    "body": ["${1:InnoSetup安装程序路径} /SILENT /COMPONENTS=\"${2:InnoExtractor提取的安装参数_使用英文逗号隔开}\""],
     "description": ["使用cmd静默安装innosetup安装包"]
   },
   "msi安装_静默": {
     "prefix": ["msi -Install"],
-    "body": [
-      "@REM msiexec /i [安装] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]",
-      "msiexec /i ${1:安装包路径} /qb"
-    ],
+    "body": ["@REM msiexec /i [安装] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]", "msiexec /i ${1:安装包路径} /qb"],
     "description": ["msi安装_静默"]
   },
   "msi卸载_静默": {
     "prefix": ["msi -X", "msi -Uninstall"],
-    "body": [
-      "@REM msiexec /x [卸载] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]",
-      "msiexec /x ${1:安装包路径} /qb"
-    ],
+    "body": ["@REM msiexec /x [卸载] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]", "msiexec /x ${1:安装包路径} /qb"],
     "description": ["msi卸载_静默"]
   },
   "分割线": {

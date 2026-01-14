@@ -1,48 +1,34 @@
 {
   "python-embed 嵌入式环境启动": {
-    "prefix": ["set call python path -env--embed"],
+    "prefix": ["set call python -env--embed"],
     "body": [
-      "",
-      "for /D %%i in (python*embed*) do ( ECHO 修改 python*embed* 目录名为 python && ren \"%%i\" \"python\" )",
-      "if not exist \"%~dp0python\" ( ECHO 请先部署 python_embed 环境 && exit /B )",
-      "",
-      "ECHO 设置python embed 环境变量",
-      "set \"systemPath=%path%\"",
-      "@REM systemPath 设置为系统初始化环境变量",
-      "@REM \"set systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "set \"PYTHON_HOME=%~dp0python\\;%~dp0python\\Scripts\\\"",
-      "set \"path=%PYTHON_HOME%;%systemPath%;\"",
+      "set \"SYSTEM_PATH=%path%\"",
+      "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "set \"PYTHON_ENV_PATH=.\\python\\;.\\python\\Scripts\\;\"",
+      "set \"path=%PYTHON_ENV_PATH%;%SYSTEM_PATH%;\"",
       "@REM ECHO %path%",
       "ECHO python 版本号",
       "call python --version",
-      "ECHO pip 版本号 - 注意 无法使用 call pip 命令时可以尝试使用 call python -m pip 命令",
+      "ECHO pip 版本号",
       "@REM *当提示无法使用 pip 命令时:",
-      "@REM *    1.尝试初始化 pip 配置 call python \"%~dp0python\\get-pip.py\"",
+      "@REM *    1.尝试初始化 pip 配置 call python \".\\python\\get-pip.py\"",
       "@REM *    2.尝试使用命令 call python -m pip",
-      "call pip install --upgrade pip",
-      "call pip --version",
+      "@REM *    python -m 运行模块 启动虚拟环境",
+      "@REM *    python -s 忽略用户 site-packages 避免不同版本的模块冲突",
+      "@REM *    python -c 运行指令 ",
+      "call python -m pip install --upgrade pip",
+      "call python -m pip --version",
       "",
       "",
-      "CALL \"%~dp0python\\python.exe\" ${1:py脚本路径} ${2:参数}",
+      "CALL \".\\python\\python.exe\" ${1:py脚本路径} ${2:参数}",
       "",
       ""
     ],
     "description": "python-embed 嵌入式环境启动"
   },
   "python embed 环境变量": {
-    "prefix": ["set python path -env--embed"],
-    "body": [
-      "set \"systemPath=%path%\"",
-      "@REM systemPath 设置为系统初始化环境变量",
-      "@REM \"set systemPath=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "@REM ECHO 添加临时系统环境变量",
-      "",
-      "for /D %%i in (python*embed*) do ( ECHO 修改 python*embed* 目录名为 python && ren \"%%i\" \"python\" )",
-      "set \"PYTHON_HOME=%~dp0python\\;%~dp0python\\Scripts\\\"",
-      "set \"path=%PYTHON_HOME%;%systemPath%;\"",
-      "@REM ECHO %path%",
-      ""
-    ],
+    "prefix": ["set python env path --embed"],
+    "body": ["set \"PYTHON_ENV_PATH=.\\python\\;.\\python\\Scripts\\;\"", ""],
     "description": ["python embed 环境变量"]
   }
 }
