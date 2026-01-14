@@ -1,19 +1,19 @@
 {
   "跳转到标签": {
     "prefix": ["goto "],
-    "body": ["goto :$0"],
+    "body": ["goto $0"],
     "description": ["跳转到标签"]
   },
   "脚本跳转到文件的结束处": {
-    "prefix": ["goto -end"],
-    "body": ["goto :end"],
+    "prefix": ["return", "goto eof"],
+    "body": ["goto :eof"],
     "description": ["脚本跳转到文件的结束处"]
   },
   "批量拖入文件处理": {
     "prefix": ["input files"],
     "body": [
       ":process_files",
-      "if \"%~1\"==\"\" goto :end_process_files",
+      "if \"%~1\"==\"\" goto end_process_files",
       "",
       "set \"fullpath=%~f1\"",
       "ECHO 完整路径: !fullpath!",
@@ -29,12 +29,12 @@
       "ECHO 文件扩展名: !fileext!",
       "",
       "",
-      "goto :end",
+      "goto :eof",
       "",
       "",
       ":output_files",
       "shift",
-      "goto :process_files",
+      "goto process_files",
       "",
       ":end_process_files",
       ""

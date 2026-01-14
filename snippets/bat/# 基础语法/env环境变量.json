@@ -122,7 +122,7 @@
   "windows系统路径环境变量常用": {
     "prefix": ["path-Info"],
     "body": [
-      "goto :aboutPathInfo",
+      "goto aboutPathInfo",
       "%SystemDrive%   ^|  %HOMEDRIVE%       = C:\\               当前系统盘符",
       "%SystemRoot%    ^|  %Windir%          = C:\\WINDOWS        当前系统目录",
       "%ALLUSERSPROFILE%                     = C:\\ProgramData",
@@ -144,7 +144,7 @@
   "%%~应用说明": {
     "prefix": ["var=info", "let=info", "set=info"],
     "body": [
-      "goto :参数扩展处理特殊语法",
+      "goto 参数扩展处理特殊语法",
       "@REM *%%~ 参数及其含义:",
       "%%~f        : 扩展到一个完全合格的路径名称 (包括驱动器盘符)",
       "%%~d        : 仅扩展到驱动器盘符",

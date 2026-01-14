@@ -5,7 +5,7 @@
       "@REM 创建vue项目",
       "call npm create ${1|vue,vite|}@latest ${2:vue-app} -- --template vue-ts --registry https://registry.npm.taobao.org",
       "cd ${2:vue-app}",
-      "goto :vueHelp",
+      "goto vueHelp",
       "@REM 说明",
       "临时代理 --registry https://registry.npm.taobao.org",
       "配置参数:{",
