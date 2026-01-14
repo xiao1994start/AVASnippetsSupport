@@ -1,12 +1,21 @@
 {
-  "退出": {
-    "prefix": ["exit -b"],
-    "body": ["exit /B"],
-    "description": "退出"
+  "退出整个cmd进程": {
+    "prefix": ["quit ", "exit "],
+    "body": ["EXIT"],
+    "description": ["退出整个cmd进程"]
   },
-  "提示退出": {
-    "prefix": ["exit "],
-    "body": ["ECHO. & ECHO 完成", "TIMEOUT /t 3 > NUL & EXIT", ""],
-    "description": "提示退出"
+  "退出当前批处理或子程序": {
+    "prefix": ["quit b", "exit b"],
+    "body": ["EXIT /B"],
+    "description": [
+      "退出当前批处理或子程序",
+      "\t 只退出批处理, 不关闭窗口",
+      "\t EXIT /B %ERRORLEVEL% 退出并返回错误码(%ERRORLEVEL% 为整数)"
+    ]
+  },
+  "提示退出cmd进程": {
+    "prefix": ["quit =", "exit ="],
+    "body": ["ECHO. & ECHO 退出", "TIMEOUT /t 2 > NUL & EXIT", ""],
+    "description": ["提示退出cmd进程"]
   }
 }

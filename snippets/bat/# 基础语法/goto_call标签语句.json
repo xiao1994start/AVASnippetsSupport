@@ -4,10 +4,24 @@
     "body": ["goto $0"],
     "description": ["跳转到标签"]
   },
-  "脚本跳转到文件的结束处": {
+  "临时运行标签": {
+    "prefix": ["call label"],
+    "body": ["call :$0"],
+    "description": [
+      "临时运行标签",
+      "\t call :label 临时跳转标签代码段需要使用 goto :eof 为结束语句",
+      "\t 使用 call :label 的代码上方需要使用 EXIT 或 EXIT /B 0 结束运行"
+    ]
+  },
+  "新建子标签": {
+    "prefix": ["new label"],
+    "body": [":label", "$0", "goto :eof"],
+    "description": ["新建子标签"]
+  },
+  "从子标签/子程序中返回": {
     "prefix": ["return", "goto eof"],
     "body": ["goto :eof"],
-    "description": ["脚本跳转到文件的结束处"]
+    "description": ["从子标签/子程序中返回"]
   },
   "批量拖入文件处理": {
     "prefix": ["input files"],

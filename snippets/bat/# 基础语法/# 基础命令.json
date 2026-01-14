@@ -7,13 +7,15 @@
       "CD /D \"%~dp0\"",
       "",
       "",
+      "",
       "$0",
       "",
       "",
-      ":end",
-      "ECHO. & ECHO 完成",
+      "",
       "endlocal",
-      "@REM TIMEOUT /t 2 > NUL & EXIT",
+      "goto :eof",
+      "ECHO. & ECHO 退出",
+      "@REM TIMEOUT /t 1 > NUL & EXIT /B",
       ""
     ],
     "description": ["BAT.tmpl"]
