@@ -100,5 +100,15 @@
     "prefix": ["pip -install-requirements", "pip txt -install"],
     "body": ["pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip -requirements 列式安装库"]
+  },
+  "pip.--index-url 主源": {
+    "prefix": ["pip index-url", "pip cuda"],
+    "body": ["--index-url https://download.pytorch.org/whl/cu128"],
+    "description": ["pip.--index-url 主源"]
+  },
+  "pip.--extra-index-url 额外的源": {
+    "prefix": ["pip extra-index-url"],
+    "body": ["--extra-index-url https://mirrors.aliyun.com/pypi/simple/"],
+    "description": ["pip.--extra-index-url 额外的源"]
   }
 }
