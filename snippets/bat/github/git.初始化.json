@@ -15,7 +15,10 @@
   },
   "强制 Git 走 HTTPS 通道": {
     "prefix": ["git config https insteadOf ssh -git-config"],
-    "body": ["ECHO 强制 Git 走 HTTPS 通道", "git config --global url.\"https://github.com/\".insteadOf ssh://git@github.com/"],
+    "body": [
+      "ECHO 强制 Git 走 HTTPS 通道",
+      "git config --global url.\"https://github.com/\".insteadOf \"ssh://git@github.com/\""
+    ],
     "description": ["强制 Git 走 HTTPS 通道"]
   }
 }
