@@ -12,5 +12,10 @@
     "prefix": ["git config Http SSL -git-config"],
     "body": ["ECHO 全局配置global ssl验证", "git config --global http.sslVerify '${1|false,true|}'"],
     "description": ["Git 验证ssl"]
+  },
+  "强制 Git 走 HTTPS 通道": {
+    "prefix": ["git config https insteadOf ssh -git-config"],
+    "body": ["ECHO 强制 Git 走 HTTPS 通道", "git config --global url.\"https://github.com/\".insteadOf ssh://git@github.com/"],
+    "description": ["强制 Git 走 HTTPS 通道"]
   }
 }
