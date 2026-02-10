@@ -2,7 +2,7 @@
   "python-embed 嵌入式环境激活": {
     "prefix": ["Python embed UV =-python"],
     "body": [
-      "ECHO OFF",
+      "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
       "CD /D \"%~dp0\"",
       "",

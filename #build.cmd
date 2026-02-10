@@ -1,4 +1,4 @@
-ECHO OFF
+@ECHO OFF
 setlocal enabledelayedexpansion
 CD /D "%~dp0"
 for %%v in ("AVASnippetsSupport*.vsix") do (

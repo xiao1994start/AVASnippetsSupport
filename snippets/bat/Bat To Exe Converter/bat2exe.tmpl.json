@@ -34,7 +34,7 @@
       "::",
       "::",
       "::978f952a14a936cc963da21a135fa983",
-      "ECHO OFF",
+      "@ECHO OFF",
       "@REM TODO Bat To Exe Converter 设置说明",
       "@REM 工作目录: 当前目录",
       "@REM EXE 格式: 64 位 控制台(可见)",
