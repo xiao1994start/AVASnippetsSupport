@@ -10,10 +10,7 @@
     "description": "npm 检查 软件仓库位置"
   },
   "npm 自定义仓库位置": {
-    "prefix": [
-      "call npm config prefix -node-js-npm",
-      "call npm config node global -node-js-npm"
-    ],
+    "prefix": ["call npm config prefix -node-js-npm", "call npm config node global -node-js-npm"],
     "body": ["call npm config set prefix ${1:仓库位置}", ""],
     "description": ["自定义npm仓库位置"]
   },
@@ -25,9 +22,9 @@
   "npm 切换国内镜像源": {
     "prefix": ["call npm config set registry -node-js-npm"],
     "body": [
-      "ECHO 设置为淘宝镜像源",
+      "ECHO npm 设置为淘宝镜像源",
       "call npm config set registry https://registry.npmmirror.com/",
-      "@REM ECHO 还原为官方源",
+      "@REM ECHO npm 还原为官方源",
       "@REM call npm config set registry https://registry.npmjs.org/",
       ""
     ],
