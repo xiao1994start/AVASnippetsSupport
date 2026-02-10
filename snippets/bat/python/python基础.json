@@ -3,25 +3,25 @@
     "prefix": ["py venv activate -python"],
     "body": [
       "",
-      "@ECHO 创建虚拟环境...",
+      "ECHO 创建虚拟环境...",
       "call python -m venv ./.venv",
-      "@ECHO 创建虚拟环境完成...",
-      "@ECHO 激活虚拟环境...",
+      "ECHO 创建虚拟环境完成...",
+      "ECHO 激活虚拟环境...",
       "call ./.venv/Scripts/activate.bat",
-      "@ECHO 安装Jupyter内核ipykernel依赖库...",
+      "ECHO 安装Jupyter内核ipykernel依赖库...",
       "@REM pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/",
       "",
       "",
-      "@ECHO 安装依赖库...",
+      "ECHO 安装依赖库...",
       "$0",
       "",
       "",
       "",
       "",
-      "@ECHO 导出依赖库",
+      "ECHO 导出依赖库",
       "pip freeze  > requirements.txt",
       "",
-      "@ECHO 完成!"
+      "ECHO 完成!"
     ],
     "description": ["创建_激活 虚拟环境"]
   },
@@ -32,23 +32,23 @@
   },
   "python 版本号": {
     "prefix": ["py version -python"],
-    "body": ["@ECHO python 版本号", "call python --version", ""],
+    "body": ["ECHO python 版本号", "call python --version", ""],
     "description": "python 版本号"
   },
   "pip 版本号": {
     "prefix": ["pip version -python"],
-    "body": ["@ECHO pip 版本号", "call pip --version", ""],
+    "body": ["ECHO pip 版本号", "call pip --version", ""],
     "description": "pip 版本号"
   },
   "pip.Jupyter内核ipykernel依赖库": {
     "prefix": ["pip Jupyter", "pip ipykernel"],
-    "body": ["@ECHO 安装Jupyter内核ipykernel依赖库...", "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"],
+    "body": ["ECHO 安装Jupyter内核ipykernel依赖库...", "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip.Jupyter内核ipykernel依赖库"]
   },
   "pip.镜像源": {
     "prefix": ["pip -config-index-url"],
     "body": [
-      "@ECHO 重置pip.ini...",
+      "ECHO 重置pip.ini...",
       "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
       "ECHO 清华",
       "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
@@ -65,7 +65,7 @@
   "pip.批量镜像源": {
     "prefix": ["pip -config-extra-index-url"],
     "body": [
-      "@ECHO 重置pip.ini...",
+      "ECHO 重置pip.ini...",
       "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
       "pip config set global.extra-index-url \"https: //pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple http://pypi.douban.com/simple http://pypi.mirrors.ustc.edu.cn/simple\""
     ],

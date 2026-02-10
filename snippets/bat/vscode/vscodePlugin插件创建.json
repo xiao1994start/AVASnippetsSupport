@@ -2,7 +2,7 @@
   "-yo HELP": {
     "prefix": ["yo =yo-help"],
     "body": [
-      "@ECHO OFF",
+      "ECHO OFF",
       "setlocal EnableDelayedExpansion",
       "CD /D \"%~dp0\"",
       "",

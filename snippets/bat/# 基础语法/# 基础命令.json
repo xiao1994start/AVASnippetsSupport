@@ -2,7 +2,7 @@
   "BAT.tmpl": {
     "prefix": ["xxx"],
     "body": [
-      "@ECHO OFF",
+      "ECHO OFF",
       "setlocal EnableDelayedExpansion",
       "CD /D \"%~dp0\"",
       "",

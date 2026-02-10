@@ -1,4 +1,4 @@
-@ECHO OFF
+ECHO OFF
 setlocal enabledelayedexpansion
 CD /D "%~dp0"
 for %%v in ("AVASnippetsSupport*.vsix") do (
@@ -28,11 +28,11 @@ set path=%NODE_HOME%;%systemPath%;
 @REM 环境测试
 ECHO 升级 npm
 call npm i --global npm --registry https://registry.npmmirror.com/
-@ECHO Node.js 版本号:
+ECHO Node.js 版本号:
 call node -v
-@ECHO NPM 版本号:
+ECHO NPM 版本号:
 call npm -v
-@ECHO 检查 软件仓库位置:
+ECHO 检查 软件仓库位置:
 call npm root -g
 
 @REM ECHO 安装 - 更新 自定义插件必备库
