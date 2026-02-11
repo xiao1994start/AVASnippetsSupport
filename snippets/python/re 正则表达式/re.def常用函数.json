@@ -1,8 +1,8 @@
 {
   "[def]正则中文路径检查": {
-    "prefix": ["re def noChinese -re"],
+    "prefix": ["def has_chinese_path -re"],
     "body": [
-      "def has_chinese(path = str(Path.cwd().resolve())):",
+      "def has_chinese_path(path = str(Path.cwd().resolve())):",
       "    \"\"\"",
       "    检查脚本运行目录是否存在中文",
       "",
