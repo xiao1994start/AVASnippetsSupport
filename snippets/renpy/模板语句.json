@@ -6,7 +6,7 @@
   },
   "默认语言入口": {
     "prefix": ["config languages"],
-    "body": ["define config.language = \"${1:schinese}\"", ""],
+    "body": ["# *-默认语言-*", "define config.language = \"${1:schinese}\"", ""],
     "description": ["默认语言入口"]
   },
   "构建rpa归档文件": {
@@ -60,7 +60,7 @@
   "自定义光标": {
     "prefix": ["config mouse_displayable"],
     "body": [
-      "# *-自定义光标",
+      "# *-自定义光标-*",
       "image mouseCursor:",
       "    zoom 0.2",
       "    \"gui/cursors/Cursor.png\"",
