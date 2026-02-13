@@ -5,7 +5,7 @@
     "description": ["自动添加语言按钮入口"]
   },
   "默认语言入口": {
-    "prefix": ["config languages"],
+    "prefix": ["define config language", "config language"],
     "body": ["# *-默认语言-*", "define config.language = \"${1:schinese}\"", ""],
     "description": ["默认语言入口"]
   },
@@ -58,7 +58,7 @@
     "description": ["构建rpa归档文件"]
   },
   "自定义光标": {
-    "prefix": ["config mouse_displayable"],
+    "prefix": ["define config mouse_displayable", "config mouse_displayable"],
     "body": [
       "# *-自定义光标-*",
       "image mouseCursor:",
