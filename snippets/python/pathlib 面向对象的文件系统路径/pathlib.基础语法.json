@@ -354,7 +354,6 @@
     "body": ["with_suffix('.${1:suffix}')"],
     "description": ["Path.with_suffix 有扩展名则替换, 无则补充扩展名"]
   },
-
   "Path.stem 除去后缀": {
     "prefix": ["Path stem"],
     "body": ["stem"],
@@ -390,5 +389,10 @@
       "\n\t-other: 路径对象或字符串",
       "\n\t-walk_up: 默认为 False, 如果为 True 则向上(other的父级目录)寻找"
     ]
+  },
+  "Path.parts 返回路径组件的元组": {
+    "prefix": ["Path parts"],
+    "body": ["parts"],
+    "description": ["Path.parts 分割路径,返回路径组件的元组"]
   }
 }

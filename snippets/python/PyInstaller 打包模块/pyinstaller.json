@@ -23,7 +23,7 @@
       "    f'--name={app_name}',  # *打包后的文件名",
       "    # f'--icon={app_icon}',  # *打包后的图标",
       "    '--onefile',  # *打包成一个文件",
-      "    '--runtime-tmpdir=./_MEI',  # *指定解压临时文件目录(退出清理)[当前文件夹下_MEI:./_MEI]",
+      "    '--runtime-tmpdir=./',  # *指定解压临时文件目录(退出清理)[当前文件夹下_MEI:./_MEI/_EMIxxxxxx临时文件]",
       "    f'--workpath={Path(Path(__file__).parent, \"_pyinstaller\", \"build\")}',  # 打包时临时文件存放路径",
       "    f'--distpath={Path(Path(__file__).parent, \"_pyinstaller\", \"dist\")}',  # 打包后文件存放路径",
       "    f'--specpath={Path(Path(__file__).parent, \"_pyinstaller\")}',  # 存储生成的 .spec 文件的文件夹(默认:SPECPATH当前路径; --add-data时会影响索引路径)",
