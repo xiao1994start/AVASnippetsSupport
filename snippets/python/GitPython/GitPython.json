@@ -1,8 +1,25 @@
 {
   "引入 GitPython Git操作库": {
     "prefix": ["import GitPython", "im GitPython"],
-    "body": ["import git  # *引入 GitPython Git操作库"],
+    "body": ["import git  # *引入Git操作库[需要预安装git或便携版添加路径到环境变量]"],
     "description": ["引入 GitPython Git操作库"]
+  },
+  "引入 GitPython Git操作库(便携版Git)": {
+    "prefix": ["import GitPython ProtableGit", "im GitPython ProtableGit"],
+    "body": [
+      "# !git配置",
+      "import os",
+      "git_path = Path(BASE_PATH, 'git')",
+      "if not git_path.exists():",
+      "    with zipfile.ZipFile(Path(FILE_PATH, 'utils', 'git.zip'), 'r') as zip_f:",
+      "        zip_f.extractall(git_path)  # 解压到目录",
+      "# *配置git环境变量",
+      "git_path_str = list(map(str, [Path(git_path), Path(git_path, 'cmd'), Path(git_path, 'bin'), Path(git_path, 'usr', 'bin')]))",
+      "os.environ['PATH'] = f'{\";\".join(git_path_str)};{os.getenv(\"%PATH%\")}'",
+      "import git  # *引入Git操作库[需要预安装git或便携版添加路径到环境变量]",
+      ""
+    ],
+    "description": "引入 GitPython Git操作库(便携版Git)"
   },
   "GitPython.theme 克隆仓库": {
     "prefix": ["git clone -GitPython", "git Repo clone_from -GitPython"],

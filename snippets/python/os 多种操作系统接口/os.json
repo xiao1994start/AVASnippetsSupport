@@ -7,9 +7,21 @@
   "os.getenv 获取系统环境变量路径": {
     "prefix": ["os getenv"],
     "body": [
-      "os.getenv('${1|%SYSTEMDRIVE%,%HOMEDRIVE%,%PROGRAMFILES%,%COMMONPROGRAMFILES%,%PROGRAMFILES(X86)%,%ALLUSERSPROFILE%,%PROGRAMDATA%,%WINDIR%,%SYSTEMROOT%,%USERPROFILE%,%APPDATA%,%LOCALAPPDATA%,%PUBLIC%|}')"
+      "os.getenv('${1|%PATH%,%SYSTEMDRIVE%,%HOMEDRIVE%,%PROGRAMFILES%,%COMMONPROGRAMFILES%,%PROGRAMFILES(X86)%,%ALLUSERSPROFILE%,%PROGRAMDATA%,%WINDIR%,%SYSTEMROOT%,%USERPROFILE%,%APPDATA%,%LOCALAPPDATA%,%PUBLIC%|}')"
     ],
     "description": ["os.getenv 获取系统环境变量路径"]
+  },
+  "os.environ 设置临时环境变量": {
+    "prefix": ["os environ set", "os environ ="],
+    "body": ["os.environ['PATH'] = f'{\";\".join([$0])};{os.getenv(\"%PATH%\")}'"],
+    "description": ["os.environ 设置临时环境变量"]
+  },
+  "os.environ.get 获取环境变量值": {
+    "prefix": ["os environ get"],
+    "body": [
+      "os.environ.get('${1|PATH,SYSTEMDRIVE,HOMEDRIVE,PROGRAMFILES,COMMONPROGRAMFILES,PROGRAMFILES(X86),ALLUSERSPROFILE,PROGRAMDATA,WINDIR,SYSTEMROOT,USERPROFILE,APPDATA,LOCALAPPDATA,PUBLIC|}')"
+    ],
+    "description": ["os.environ.get 获取环境变量值"]
   },
   "os.startfile 打开文件 或 文件夹": {
     "prefix": ["os startfile"],
