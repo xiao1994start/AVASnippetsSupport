@@ -4,8 +4,13 @@
     "body": ["import subprocess  # *执行系统命令模块"],
     "description": ["导入subprocess执行系统命令模块"]
   },
-  "subprocess.run 运行命令": {
+  "subprocess.run 简单运行命令": {
     "prefix": ["subprocess run"],
+    "body": ["subprocess.run('$0')"],
+    "description": ["subprocess.run 简单运行命令"]
+  },
+  "subprocess.run 运行命令": {
+    "prefix": ["subprocess run ="],
     "body": [
       "subprocess.run(",
       "    '$0',",
