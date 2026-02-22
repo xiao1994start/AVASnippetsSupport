@@ -1,0 +1,22 @@
+{
+  "pip.GitPython Git操作库": {
+    "prefix": ["pip GitPython"],
+    "body": [
+      "ECHO.",
+      "ECHO * GitPython Git操作库 *",
+      "pip install -U GitPython -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["GitPython Git操作库"]
+  },
+  "uv.GitPython Git操作库": {
+    "prefix": ["uv GitPython"],
+    "body": [
+      "ECHO.",
+      "ECHO * GitPython Git操作库 *",
+      "uv add \"GitPython\" --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["GitPython Git操作库"]
+  }
+}

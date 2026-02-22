@@ -1,0 +1,12 @@
+{
+  "引入 GitPython Git操作库": {
+    "prefix": ["import GitPython", "im GitPython"],
+    "body": ["import git  # *引入 GitPython Git操作库"],
+    "description": ["引入 GitPython Git操作库"]
+  },
+  "GitPython.theme 克隆仓库": {
+    "prefix": ["git clone -GitPython", "git Repo clone_from -GitPython"],
+    "body": ["git.Repo.clone_from('${1:https://github.com/username/repo.git}', '${2:.}')"],
+    "description": ["GitPython.theme 克隆仓库"]
+  }
+}

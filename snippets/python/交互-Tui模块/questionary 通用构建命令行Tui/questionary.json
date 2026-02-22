@@ -79,13 +79,7 @@
   },
   "questionary.path 路径选择器": {
     "prefix": ["questionary path"],
-    "body": [
-      "questionary.path(",
-      "    message='输入or拖入项目路径?',",
-      "    # only_files=True,  # !仅允许选择文件",
-      ").ask()",
-      ""
-    ],
+    "body": ["questionary.path(message='输入or拖入项目路径?').ask()", ""],
     "description": ["路径选择器"]
   }
 }
