@@ -52,17 +52,17 @@
     "description": ["示例"]
   },
   "snippets.插入": {
-    "prefix": ["insert -snippets", " i -snippets"],
+    "prefix": ["insert -snippets"],
     "body": ["${${1:1}:$2}"],
     "description": ["插入"]
   },
   "snippets.选择": {
-    "prefix": ["choose -snippets", " c -snippets"],
+    "prefix": ["choose -snippets"],
     "body": ["${${1:1}|${2:a},${3:b}|}"],
     "description": ["选择"]
   },
   "snippets.结束位置": {
-    "prefix": ["end -snippets", " e -snippets"],
+    "prefix": ["end -snippets"],
     "body": ["\\$0"],
     "description": ["结束位置"]
   },

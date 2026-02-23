@@ -9,6 +9,11 @@
     "body": ["subprocess.run('$0')"],
     "description": ["subprocess.run 简单运行命令"]
   },
+  "subprocess.run 清空终端": {
+    "prefix": ["subprocess run cls"],
+    "body": ["subprocess.run('cls') if os.name == 'nt' else subprocess.run('clear')", "$0"],
+    "description": ["subprocess.run 清空终端"]
+  },
   "subprocess.run 运行命令": {
     "prefix": ["subprocess run ="],
     "body": [

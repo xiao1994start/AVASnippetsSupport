@@ -13,5 +13,18 @@
       "$0"
     ],
     "description": ["Python 注释_描述"]
+  },
+  "Python 常用导入": {
+    "prefix": ["import==", "im=="],
+    "body": [
+      "import os",
+      "import subprocess  # *执行系统命令模块",
+      "import sys",
+      "import zipfile",
+      "from pathlib import Path",
+      "",
+      "$0"
+    ],
+    "description": ["Python 常用导入"]
   }
 }
