@@ -4,17 +4,26 @@
     "body": ["import subprocess  # *执行系统命令模块"],
     "description": ["导入subprocess执行系统命令模块"]
   },
-  "subprocess.run 简单运行命令": {
+  "subprocess.run 运行命令": {
     "prefix": ["subprocess run"],
     "body": ["subprocess.run('$0')"],
-    "description": ["subprocess.run 简单运行命令"]
+    "description": ["subprocess.run 运行命令", "用于可执行程序命令调用(如:git,python,ffmpeg.exe或其他可执行命令程序)"]
+  },
+  "subprocess.run shell运行命令": {
+    "prefix": ["subprocess run shell"],
+    "body": ["subprocess.run('$0', shell=True)"],
+    "description": [
+      "subprocess.run shell运行命令",
+      "使用系统的shell(命令解释器)去解析和执行",
+      "即:让 Python 把命令交给 cmd.exe / bash / powershell / sh 去处理"
+    ]
   },
   "subprocess.run 清空终端": {
     "prefix": ["subprocess run cls", "subprocess run clear"],
-    "body": ["subprocess.run('clear')", "$0"],
+    "body": ["subprocess.run('cls', shell=True) if os.name == 'nt' else subprocess.run('clear')", "$0"],
     "description": ["subprocess.run 清空终端"]
   },
-  "subprocess.run 运行命令": {
+  "subprocess.run 详细运行命令": {
     "prefix": ["subprocess run ="],
     "body": [
       "subprocess.run(",
@@ -41,7 +50,7 @@
     ]
   },
   "try:subprocess.run 捕获异常": {
-    "prefix": ["try subprocess run"],
+    "prefix": ["try subprocess run ="],
     "body": [
       "try:",
       "    subprocess.run($0, shell=True, capture_output=True, check=True, text=True)",
@@ -54,7 +63,7 @@
     "description": "try:subprocess.run 捕获异常"
   },
   "subprocess.Popen 构造函数": {
-    "prefix": ["subprocess Popen="],
+    "prefix": ["subprocess Popen ="],
     "body": [
       "subprocess.Popen(",
       "    $0,  # *传递给Popen的命令列表",
