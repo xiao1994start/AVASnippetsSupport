@@ -110,5 +110,15 @@
     "prefix": ["pip extra-index-url"],
     "body": ["--extra-index-url https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip.--extra-index-url 额外的源"]
+  },
+  "安装 get-pip.py": {
+    "prefix": ["call python get_pip"],
+    "body": ["call python \"%~dp0python/get-pip.py\"  -i https://mirrors.aliyun.com/pypi/simple/", ""],
+    "description": ["安装 get-pip.py"]
+  },
+  "获取 get-pip.py": {
+    "prefix": ["download get_pip", "curl get_pip"],
+    "body": ["curl -SL https://bootstrap.pypa.io/get-pip.py -o \"%~dp0python\\get-pip.py\"", ""],
+    "description": ["获取 get-pip.py"]
   }
 }
