@@ -303,11 +303,12 @@
     "prefix": ["btn -button"],
     "body": [
       "button:",
-      "    # xsize 700 ysize 60",
-      "    # xpadding 28",
-      "    # style \"frame_paper_white\"",
+      "    # xsize 100 ysize 36  # 按钮尺寸[宽, 高] # *(注释后为自适应尺寸)",
+      "    yalign 0.5 xalign 0.5  # 按钮位置[水平对齐, 垂直对齐]",
+      "    xpadding 28  # 按钮内边距[左, 上, 右, 下]",
+      "    # style \"style_name\"  # 按钮样式(如果有)",
       "    action Call(\"function_name\")  # 触发事件[或使用 NullAction() 忽略事件]",
-      "    text _(\"文字说明\") size 32 color \"#000000\" yalign 0.5"
+      "    text _(\"内容\") size 32 color \"#000000\" yalign 0.5 xalign 0.5  # 按钮文字['内容', 字体大小, 字体颜色, 文字水平对齐(居中), 文字垂直对齐(居中)]"
     ],
     "description": "button 按钮"
   }
