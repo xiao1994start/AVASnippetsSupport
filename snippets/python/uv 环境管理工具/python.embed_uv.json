@@ -1,6 +1,6 @@
 {
   "python-embed 嵌入式环境激活": {
-    "prefix": ["init py env =-python", "Python embed UV =-python"],
+    "prefix": ["init py env =-python", "Python UV =-python"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
@@ -280,6 +280,7 @@
       "if \"!is_lower!\"==\"1\" (",
       "    @REM *python*",
       "    ECHO 初始化 python 嵌入式版本 和 依赖库版本",
+      "    @REM @REM !提示! 更新项目路径后取消注释，重构项目依赖库",
       "    @REM if exist \"%~dp0.venv\" ( rd /S /Q \"%~dp0.venv\" && rd /S /Q \"%~dp0.vscode\" && del /F /Q \"%~dp0.python-version\" && del /F /Q \"%~dp0pyproject.toml\" && del /F /Q \"%~dp0uv.lock\" )",
       "    if not exist \"%~dp0.venv\" (",
       "        ECHO 初始化 uv 项目... [默认当前文件夹]",
@@ -306,6 +307,8 @@
       "",
       "",
       "$0",
+      "",
+      "",
       "",
       "",
       "ECHO.",

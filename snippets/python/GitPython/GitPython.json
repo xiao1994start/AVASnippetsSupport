@@ -29,7 +29,9 @@
   },
   "GitPython.theme 克隆仓库": {
     "prefix": ["git clone -GitPython", "git Repo clone_from -GitPython"],
-    "body": ["git.Repo.clone_from('${1:https://github.com/username/repo.git}', '${2:./repo}')  # *克隆仓库"],
+    "body": [
+      "git.Repo.clone_from('${1:https://github.com/username/repo.git}', '${2:./repo}')  # *克隆仓库[指定克隆分支参数: branch='master';只克隆指定分支，相当于 git clone --single-branch 参数: single_branch=True]"
+    ],
     "description": ["GitPython.theme 克隆仓库"]
   }
 }
