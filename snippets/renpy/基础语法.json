@@ -288,5 +288,27 @@
     "prefix": ["__ "],
     "body": "__${1:init}__",
     "description": "__magic__ 初始化"
+  },
+  "hbox 水平容器": {
+    "prefix": ["hbox "],
+    "body": ["hbox:", "    $0"],
+    "description": "hbox 水平容器"
+  },
+  "vbox 垂直容器": {
+    "prefix": ["vbox "],
+    "body": ["vbox:", "    $0"],
+    "description": "vbox 垂直容器"
+  },
+  "button 按钮": {
+    "prefix": ["btn -button"],
+    "body": [
+      "button:",
+      "    # xsize 700 ysize 60",
+      "    # xpadding 28",
+      "    # style \"frame_paper_white\"",
+      "    action Call(\"function_name\")  # 触发事件[或使用 NullAction() 忽略事件]",
+      "    text _(\"文字说明\") size 32 color \"#000000\" yalign 0.5"
+    ],
+    "description": "button 按钮"
   }
 }
