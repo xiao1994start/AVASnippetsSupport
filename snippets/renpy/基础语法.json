@@ -303,10 +303,14 @@
     "prefix": ["btn -button"],
     "body": [
       "button:",
-      "    # xsize 100 ysize 36  # 按钮尺寸[宽, 高] # *(注释后为自适应尺寸)",
-      "    yalign 0.5 xalign 0.5  # 按钮位置[水平对齐, 垂直对齐]",
-      "    xpadding 28  # 按钮内边距[左-右]",
-      "    ymargin 12  # 按钮外边距[上-下]",
+      "    # *按钮尺寸[宽, 高] (注释后为自适应尺寸)",
+      "    # xsize 100 ysize 36",
+      "    # *按钮对齐[水平, 垂直]",
+      "    xalign 0.5 yalign 0.5",
+      "    # *按钮内边距[水平, 垂直]",
+      "    xpadding 28  ypadding 4",
+      "    # *按钮外边距[水平, 垂直]",
+      "    xmargin 0 ymargin 12",
       "    # style \"style_name\"  # 按钮样式(如果有)",
       "    background \"#000000\"  # 按钮背景颜色",
       "    hover_background \"#ffffff\"  # 按钮悬停背景颜色",
@@ -314,5 +318,25 @@
       "    text _(\"内容\") size 32 color \"#000000\" yalign 0.5 xalign 0.5  # 按钮文字['内容', 字体大小, 字体颜色, 文字水平对齐(居中), 文字垂直对齐(居中)]"
     ],
     "description": "button 按钮"
+  },
+  "size 尺寸": {
+    "prefix": ["size "],
+    "body": ["xsize 100 ysize 36"],
+    "description": "size 尺寸"
+  },
+  "align 对齐": {
+    "prefix": ["align "],
+    "body": ["xalign 0.5 yalign 0.5"],
+    "description": "align 对齐"
+  },
+  "padding 内边距": {
+    "prefix": ["padding "],
+    "body": ["xpadding 28 ypadding 8"],
+    "description": "padding 内边距"
+  },
+  "margin 外边距": {
+    "prefix": ["margin "],
+    "body": ["xmargin 12 ymargin 12"],
+    "description": "margin 外边距"
   }
 }
