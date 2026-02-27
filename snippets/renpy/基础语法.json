@@ -300,7 +300,7 @@
     "description": "vbox 垂直容器"
   },
   "button 按钮": {
-    "prefix": ["btn -button"],
+    "prefix": ["btn_=button"],
     "body": [
       "button:",
       "    # *按钮尺寸[宽, 高] (注释后为自适应尺寸)",
@@ -314,8 +314,10 @@
       "    # style \"style_name\"  # 按钮样式(如果有)",
       "    background \"#000000\"  # 按钮背景颜色",
       "    hover_background \"#ffffff\"  # 按钮悬停背景颜色",
-      "    action Call(\"function_name\")  # 触发事件:Call(\"function_name\")[或 忽略事件:NullAction()]",
-      "    text _(\"内容\") size 32 color \"#000000\" yalign 0.5 xalign 0.5  # 按钮文字['内容', 字体大小, 字体颜色, 文字水平对齐(居中), 文字垂直对齐(居中)]"
+      "    action Call(\"function_name\")  # 触发事件:Call(\"function_name\") | 忽略事件:NullAction()",
+      "    # *文字['内容'   字体大小    字体颜色      文字水平对齐 垂直对齐(0.5:居中)]",
+      "    text _(\"内容\") size 32 color \"#000000\" yalign 0.5 xalign 0.5",
+      ""
     ],
     "description": "button 按钮"
   },
