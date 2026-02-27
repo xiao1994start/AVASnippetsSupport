@@ -304,7 +304,7 @@
     "body": [
       "button:",
       "    # *按钮尺寸[宽, 高] (注释后为自适应尺寸)",
-      "    # xsize 100 ysize 36",
+      "    # xsize 300 ysize 64",
       "    # *按钮对齐[水平, 垂直]",
       "    xalign 0.5 yalign 0.5",
       "    # *按钮内边距[水平, 垂直]",
@@ -313,17 +313,17 @@
       "    xmargin 0 ymargin 12",
       "    # style \"style_name\"  # 按钮样式(如果有)",
       "    background \"#000000\"  # 按钮背景颜色",
-      "    hover_background \"#ffffff\"  # 按钮悬停背景颜色",
+      "    hover_background \"#FFFFFF\"  # 按钮悬停背景颜色",
       "    action Call(\"function_name\")  # 触发事件:Call(\"function_name\") | 忽略事件:NullAction()",
-      "    # *文字['内容'   字体大小    字体颜色      文字水平对齐 垂直对齐(0.5:居中)]",
-      "    text _(\"内容\") size 32 color \"#000000\" yalign 0.5 xalign 0.5",
+      "    # *文字['内容' 字体大小 字体颜色 文字水平对齐(0.5:居中) 垂直对齐(0.5:居中)]",
+      "    text _(\"内容\") size 32 color \"#FF00FF\" yalign 0.5 xalign 0.5",
       ""
     ],
     "description": "button 按钮"
   },
   "size 尺寸": {
     "prefix": ["size "],
-    "body": ["xsize 100 ysize 36"],
+    "body": ["xsize 300 ysize 64"],
     "description": "size 尺寸"
   },
   "align 对齐": {
