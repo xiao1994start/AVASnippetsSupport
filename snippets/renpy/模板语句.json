@@ -10,7 +10,7 @@
     "description": ["默认语言入口"]
   },
   "构建rpa归档文件": {
-    "prefix": ["build archive", "build rpa"],
+    "prefix": ["init python archive", "init python rpa"],
     "body": [
       "init python:",
       "    # *python语句块*",
@@ -56,6 +56,47 @@
       ""
     ],
     "description": ["构建rpa归档文件"]
+  },
+  "快速构建archive.rpa单文件打包": {
+    "prefix": ["init python build classify rpa", "init python build classify all"],
+    "body": [
+      "init python:",
+      "    build.classify('**~', None)",
+      "    build.classify('**.bak', None)",
+      "    build.classify('**/.**', None)",
+      "    build.classify('**/#**', None)",
+      "    build.classify('**/thumbs.db', None)",
+      "    build.classify('**.psd', None)",
+      "    build.classify('**.zip', None)",
+      "    build.classify('**.xls', None)",
+      "    build.classify('**.xlsm', None)",
+      "    build.classify('**.rpy', None)",
+      "    build.classify('**.rpym', None)",
+      "    build.classify('**.py', None)",
+      "    build.classify('**.bat', None)",
+      "    build.classify('**.csv', None)",
+      "    build.classify('game/script/dev.rpyc', None)",
+      "    build.classify('game/**.py', 'archive')",
+      "    build.classify('game/**.pyo', 'archive')",
+      "    build.classify('game/**.pyx', 'archive')",
+      "    build.classify('game/**.rpymc', 'archive') ",
+      "    build.classify('game/**.rpyb', 'archive')",
+      "    build.classify('game/**.rpyc', 'archive')",
+      "    build.classify('game/**.png', 'archive')",
+      "    build.classify('game/**.jpg', 'archive')",
+      "    build.classify('game/**.wav', 'archive')",
+      "    build.classify('game/**.mp3', 'archive')",
+      "    build.classify('game/**.opus', 'archive')",
+      "    build.classify('game/**.ttf', 'archive')",
+      "    build.classify('game/**.webm', 'archive')",
+      "    build.classify('game/**.webp', 'archive')",
+      "    build.classify('game/**.avi', 'archive')",
+      "",
+      "    build.documentation('*.html')",
+      "    build.documentation('*.txt')",
+      ""
+    ],
+    "description": ["快速构建archive.rpa单文件打包"]
   },
   "自定义光标": {
     "prefix": ["define config mouse_displayable", "config mouse_displayable"],
