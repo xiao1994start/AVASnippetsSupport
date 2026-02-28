@@ -314,7 +314,7 @@
       "    # style \"style_name\"  # 按钮样式(如果有)",
       "    background \"#000000\"  # 按钮背景颜色",
       "    hover_background \"#FFFFFF\"  # 按钮悬停背景颜色",
-      "    action Call(\"function_name\")  # 触发事件:Call(\"function_name\") | 忽略事件:NullAction()",
+      "    action Call(\"function_name\")  # 触发事件:Call(\"function_name\") | 忽略事件:NullAction() | 函数:Function(function_name, arg1, arg2, kwarg=xxx)",
       "    # *文字['内容' 字体大小 字体颜色 文字水平对齐(0.5:居中) 垂直对齐(0.5:居中)]",
       "    text _(\"内容\") size 32 color \"#FF00FF\" yalign 0.5 xalign 0.5",
       ""
