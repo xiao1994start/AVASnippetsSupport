@@ -61,7 +61,6 @@
     "prefix": ["init python build classify rpa", "init python build classify one"],
     "body": [
       "init python:",
-      "init python:",
       "    # *python语句块*",
       "    # !构建文件路径(建议不要使用):build.destination",
       "    # TODO:定义归档文件",
