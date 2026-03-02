@@ -10,7 +10,7 @@
     "description": ["默认语言入口"]
   },
   "构建rpa归档文件": {
-    "prefix": ["init python archive", "init python rpa"],
+    "prefix": ["init python build"],
     "body": [
       "init python:",
       "    # *python语句块*",
@@ -58,7 +58,7 @@
     "description": ["构建rpa归档文件"]
   },
   "快速构建archive.rpa单文件打包": {
-    "prefix": ["init python build classify rpa", "init python build classify one"],
+    "prefix": ["init python build rpa", "init python build one"],
     "body": [
       "init python:",
       "    # *python语句块*",
