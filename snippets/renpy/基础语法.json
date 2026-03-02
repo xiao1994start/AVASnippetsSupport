@@ -4,20 +4,35 @@
     "body": "#region ${1:Region name}\n$0\n#endregion ${1:Region name}",
     "description": "创建新的折叠区域."
   },
-  "Label 创建新标签": {
+  "label 创建新标签": {
     "prefix": ["label ", "lb "],
     "body": "label ${1:label_name}:\n\t${2:...}",
     "description": "创建新标签."
   },
-  "Jump 跳转到标签": {
+  "jump 跳转到标签": {
     "prefix": ["jump ", "jp "],
     "body": "jump ${1:label_name}",
     "description": "跳转到标签."
   },
-  "Call 调用标签": {
+  "call 调用标签": {
     "prefix": ["call "],
     "body": "call ${1:label_name}",
     "description": "调用标签."
+  },
+  "Call 调用标签": {
+    "prefix": ["Call "],
+    "body": "Call(${1:label_name})",
+    "description": "调用标签."
+  },
+  "Function 调用函数": {
+    "prefix": ["Function "],
+    "body": "Function(${1:function_name, arg1, arg2})",
+    "description": "调用函数."
+  },
+  "NullAction 空操作": {
+    "prefix": ["NullAction "],
+    "body": "NullAction()",
+    "description": "空操作."
   },
   "Pause 等待几秒钟, 然后显示下一个屏幕": {
     "prefix": ["pause ", "pass "],
@@ -41,12 +56,12 @@
   },
   "Init Block 在初始化时运行代码": {
     "prefix": ["init "],
-    "body": "init ${1:#priority number}:\n\t${2:}",
+    "body": "init ${1|-1000,-1,0,1,1000|}:\n\t${2:}",
     "description": "在初始化时运行代码."
   },
   "Init with Python Block 带有Python块的init块": {
-    "prefix": ["inipy "],
-    "body": "init ${1:#priority number} python:\n\t${2:}",
+    "prefix": ["init py "],
+    "body": "init ${1|-1000,-1,0,1,1000|} python:\n\t${2:}",
     "description": "带有Python块的init块."
   },
   "创建一个角色": {

@@ -124,5 +124,10 @@
       ""
     ],
     "description": ["自定义光标"]
+  },
+  "刷新当前界面": {
+    "prefix": ["flush", "renpy restart_interaction"],
+    "body": ["renpy.restart_interaction() # 刷新当前界面", ""],
+    "description": ["刷新当前界面"]
   }
 }

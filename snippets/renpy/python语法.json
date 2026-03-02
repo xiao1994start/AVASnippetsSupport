@@ -3,5 +3,10 @@
     "prefix": ["sf -self"],
     "body": "self",
     "description": "self"
+  },
+  "return 语句": {
+    "prefix": ["return "],
+    "body": "return ${1:# value}",
+    "description": "return 语句"
   }
 }
