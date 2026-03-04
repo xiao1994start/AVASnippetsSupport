@@ -1,4 +1,9 @@
 {
+  "print(...)": {
+    "prefix": ["pr -print"],
+    "body": "print($0)",
+    "description": ["print 语句的代码片段"]
+  },
   "self": {
     "prefix": ["sf -self"],
     "body": "self",

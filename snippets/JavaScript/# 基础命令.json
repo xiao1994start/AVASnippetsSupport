@@ -5,7 +5,7 @@
     "description": "创建 function 方法函数"
   },
   "弹窗": {
-    "prefix": ["prt -alert", "alert"],
+    "prefix": ["pr -alert", "alert"],
     "body": ["alert(${1:content})", ""],
     "description": ["弹窗"]
   },

@@ -21,12 +21,12 @@
     "description": ["BAT.tmpl"]
   },
   "ECHO 控制台输出": {
-    "prefix": ["prt -ECHO", "ECHO"],
+    "prefix": ["pr -ECHO", "ECHO"],
     "body": ["ECHO $0"],
     "description": ["ECHO 控制台输出"]
   },
   "ECHO 控制台空行": {
-    "prefix": ["prt.-ECHO", "nn"],
+    "prefix": ["pr.-ECHO", "nn"],
     "body": ["ECHO.", "$0"],
     "description": ["ECHO 控制台空行"]
   },
