@@ -1,15 +1,15 @@
 {
-  "print(...)": {
+  "print(...) for renpy": {
     "prefix": ["pr -print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },
-  "self": {
+  "self for renpy": {
     "prefix": ["sf -self"],
     "body": "self",
     "description": "self"
   },
-  "return 语句": {
+  "return 语句 for renpy": {
     "prefix": ["return "],
     "body": "return ${1:# value}",
     "description": "return 语句"

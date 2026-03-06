@@ -2,7 +2,7 @@
   "name": "avasnippetssupport",
   "displayName": "AVASnippetsSupport",
   "description": "Python, BAT, Json, MarkDown, Scss, JavaScript, TypeScript Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "AVA",
   "icon": "icon.png",
   "engines": {
