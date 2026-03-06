@@ -996,7 +996,7 @@
         "path": "./snippets/renpy/模板语句.json"
       },
       {
-        "language": "python",
+        "language": "renpy",
         "path": "./snippets/renpy/python语法.json"
       },
       {
