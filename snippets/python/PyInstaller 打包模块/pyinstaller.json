@@ -52,7 +52,7 @@
       "]",
       "",
       "",
-      "if bin_path.exists.exists(follow_symlinks=False):",
+      "if bin_path.exists(follow_symlinks=False):",
       "    try:",
       "        shutil.rmtree(bin_path)",
       "    except PermissionError:",

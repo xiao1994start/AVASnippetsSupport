@@ -7,7 +7,7 @@
       "from rich.logging import RichHandler  # *引入 rich 模块 logging 日志记录处理程序",
       "",
       "logging.basicConfig(",
-      "    # level=logging.${1|NOTSET,DEBUG,INFO,WARNING,ERROR,CRITICAL|},  # *日志级别[默认:WARNING]",
+      "    level=logging.${1|NOTSET,DEBUG,INFO,WARNING,ERROR,CRITICAL|},  # *日志级别[默认:WARNING]",
       "    format='%(message)s',",
       "    datefmt='[%X]',",
       "    handlers=[RichHandler(rich_tracebacks=True)],",

@@ -48,7 +48,11 @@ call vsce package
 ECHO 封装完成
 for %%i in (*.vsix) do (
     ECHO 更新: %%i
-    call code --install-extension %%i
+    if exist "%~dp0VSIX_Installer.exe" (
+        call "%~dp0VSIX_Installer.exe"
+    ) else (
+        call code --install-extension %%i
+    )
     del /F /Q "..\%%i"
     copy /V /Y "%%i" "..\%%i"
 )
