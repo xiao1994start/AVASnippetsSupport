@@ -1,6 +1,8 @@
 @ECHO OFF
 setlocal enabledelayedexpansion
 CD /D "%~dp0"
+
+
 for %%v in ("AVASnippetsSupport*.vsix") do (
     ECHO 清理旧版插件 %%v
     del /F /Q "%%v"
@@ -18,10 +20,10 @@ if exist "%CD%\*node-*" (
         )
     )
 )
-@REM 设置环境变量
+ECHO 设置环境变量
+set "path=%path:;C:\Program Files\Microsoft VS Code;=;%"
 set "systemPath=%path%"
-@REM set "systemPath=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\bin;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\"
-@REM ECHO 添加临时系统环境变量
+ECHO 添加临时系统环境变量
 set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
 set path=%NODE_HOME%;%systemPath%;
 @REM ECHO %path%
