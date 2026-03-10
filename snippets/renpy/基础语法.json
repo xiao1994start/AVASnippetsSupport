@@ -34,6 +34,16 @@
     "body": "NullAction()",
     "description": "空操作."
   },
+  "screen 创建新屏幕": {
+    "prefix": ["New Screen "],
+    "body": "screen ${1:screen_name}():\n\t${2:text _(\"\")}",
+    "description": "创建新屏幕."
+  },
+  "screen 新屏幕": {
+    "prefix": ["call Screen "],
+    "body": "call screen ${1:screen_name}",
+    "description": "新屏幕."
+  },
   "Pause 等待几秒钟, 然后显示下一个屏幕": {
     "prefix": ["pause ", "pass "],
     "body": "with Pause($1)\n$2",
