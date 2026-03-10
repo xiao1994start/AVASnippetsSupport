@@ -355,5 +355,10 @@
     "prefix": ["margin "],
     "body": ["xmargin 12 ymargin 12"],
     "description": "margin 外边距"
+  },
+  "text 文本": {
+    "prefix": ["text ", "txt -text"],
+    "body": ["text _(\"$0\")"],
+    "description": "text 文本"
   }
 }
