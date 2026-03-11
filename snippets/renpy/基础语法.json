@@ -6,7 +6,7 @@
   },
   "label 创建新标签": {
     "prefix": ["label ", "lb "],
-    "body": "label ${1:label_name}:\n\t${2:...}",
+    "body": "label ${1:label_name}:\n\t${2:\"...\"}",
     "description": "创建新标签."
   },
   "jump 跳转到标签": {
@@ -333,7 +333,7 @@
       "    # *按钮对齐[水平, 垂直]",
       "    xalign 0.5 yalign 0.5",
       "    # *按钮内边距[水平, 垂直]",
-      "    xpadding 28  ypadding 4",
+      "    xpadding 12  ypadding 4",
       "    # *按钮外边距[水平, 垂直]",
       "    xmargin 0 ymargin 12",
       "    # style \"style_name\"  # 按钮样式(如果有)",
