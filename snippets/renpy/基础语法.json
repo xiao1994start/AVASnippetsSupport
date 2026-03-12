@@ -6,7 +6,7 @@
   },
   "label 创建新标签": {
     "prefix": ["label ", "lb "],
-    "body": "label ${1:label_name}:\n\t${2:\"...\"}",
+    "body": "label ${1:label_name(arg1, arg2)}:\n\t${2:\"...\"}",
     "description": "创建新标签."
   },
   "jump 跳转到标签": {
