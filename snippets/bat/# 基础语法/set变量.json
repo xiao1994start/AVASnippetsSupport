@@ -36,8 +36,8 @@
       "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",
       "@REM *添加临时系统环境变量",
       "$0",
-      "set \"path=;%SYSTEM_PATH%;\"",
-      "@REM ECHO %path%",
+      "set \"PATH=;%SYSTEM_PATH%;\"",
+      "@REM ECHO %PATH%",
       ""
     ],
     "description": "设置当前批处理临时环境变量"
