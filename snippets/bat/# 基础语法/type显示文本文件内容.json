@@ -1,6 +1,6 @@
 {
   "写入空文本文件 (0kb)": {
-    "prefix": ["type nul"],
+    "prefix": ["touch nul", "type nul"],
     "body": ["type nul >${1:空文本文件}"],
     "description": ["写入空文本文件 (0kb)"]
   }

@@ -849,6 +849,14 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/pyperclip 剪贴板操作库/pyperclip.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/pyperclip 剪贴板操作库/pyperclip.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/pywin32 系统API接口/win32.bat.json"
       },
       {

@@ -13,7 +13,7 @@
   },
   "os.environ 设置临时环境变量": {
     "prefix": ["os environ set", "os environ ="],
-    "body": ["os.environ['PATH'] = f'{\";\".join([$0])};{os.getenv(\"%PATH%\")}'"],
+    "body": ["os.environ['PATH'] = f'{\";\".join([$0])};{os.getenv(\"PATH\")}'"],
     "description": ["os.environ 设置临时环境变量"]
   },
   "os.environ.get 获取环境变量值": {

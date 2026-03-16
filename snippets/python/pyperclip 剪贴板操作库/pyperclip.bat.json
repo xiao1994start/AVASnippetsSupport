@@ -1,0 +1,22 @@
+{
+  "pip.pyperclip 剪贴板操作库": {
+    "prefix": ["pip pyperclip"],
+    "body": [
+      "ECHO.",
+      "ECHO * pyperclip 剪贴板操作库 *",
+      "pip install -U pyperclip -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pyperclip 剪贴板操作库"]
+  },
+  "uv.pyperclip 剪贴板操作库": {
+    "prefix": ["uv pyperclip"],
+    "body": [
+      "ECHO.",
+      "ECHO * pyperclip 剪贴板操作库 *",
+      "uv add \"pyperclip\" --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["pyperclip 剪贴板操作库"]
+  }
+}

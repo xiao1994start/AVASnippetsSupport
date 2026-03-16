@@ -1,0 +1,17 @@
+{
+  "引入 pyperclip 剪贴板模块": {
+    "prefix": ["import pyperclip", "im pyperclip"],
+    "body": ["import pyperclip  # *剪贴板模块", ""],
+    "description": ["引入 pyperclip 剪贴板模块"]
+  },
+  "pyperclip.paste() 获取剪贴板内容": {
+    "prefix": ["pyperclip paste "],
+    "body": ["pyperclip.paste()"],
+    "description": ["pyperclip.paste() 获取剪贴板内容"]
+  },
+  "pyperclip.copy(...) 设置剪贴板内容": {
+    "prefix": ["pyperclip copy "],
+    "body": ["pyperclip.copy(${1:text})"],
+    "description": ["pyperclip.copy(...) 设置剪贴板内容"]
+  }
+}
