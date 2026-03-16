@@ -44,5 +44,10 @@
       ""
     ],
     "description": ["NirCmd 获取桌面路径"]
+  },
+  "NirCmd 设置剪贴板内容为桌面文件夹路径": {
+    "prefix": ["NirCmd clipboard desktop"],
+    "body": ["call nircmd.exe clipboard set ~$folder.desktop$", ""],
+    "description": ["NirCmd 设置剪贴板内容为桌面文件夹路径"]
   }
 }
