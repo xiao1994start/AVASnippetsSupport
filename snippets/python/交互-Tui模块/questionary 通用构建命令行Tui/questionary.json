@@ -4,10 +4,10 @@
     "body": ["import questionary  # *构建命令行Tui界面", ""],
     "description": ["引入 questionary 构建命令行Tui界面"]
   },
-  "questionary.press_any_key_to_continue 按任意键继续": {
+  "questionary.press_any_key_to_continue 按任意键": {
     "prefix": ["questionary press_any_key_to_continue =-questionary"],
-    "body": ["questionary.press_any_key_to_continue(message='按任意键继续...').ask()  # *按任意键继续", ""],
-    "description": ["按任意键继续"]
+    "body": ["questionary.press_any_key_to_continue(message='按任意键...').ask()  # *按任意键...", ""],
+    "description": ["按任意键"]
   },
   "questionary.rawselect 基础单选": {
     "prefix": ["questionary rawselect", "questionary raw_one"],

@@ -17,7 +17,7 @@
     "description": ["try:正常执行 except:异常处理"]
   },
   "except 抛出异常": {
-    "prefix": ["except error =-try", "try as error ="],
+    "prefix": ["except error =-try", "as error =-try"],
     "body": [
       "except Exception as error:",
       "    return",
@@ -30,7 +30,7 @@
     "description": ["except 抛出异常"]
   },
   "except 异常处理": {
-    "prefix": ["except as e -try"],
+    "prefix": ["except as error -try"],
     "body": [
       "except ${1:Exception} as error:",
       "    # ! Exception: 所有异常的基类, 如需对指定类型的异常进行处理, 在上方添加 except [指定异常类型] 即可",
@@ -80,5 +80,35 @@
       ""
     ],
     "description": ["try:正常执行 except:异常处理 else:try之后执行 finally:强制执行 "]
+  },
+  "try KeyboardInterrupt 按键终止": {
+    "prefix": ["try KeyboardInterrupt ="],
+    "body": [
+      "try:",
+      "    ${1:...}",
+      "except KeyboardInterrupt:",
+      "    subprocess.run('@ECHO OFF && ECHO 按键终止程序... && PAUSE', shell=True)",
+      "    sys.exit(0)",
+      "except Exception as error:",
+      "    print(f'错误类型:{type(error)}')",
+      "    print(f'错误信息:{error}')",
+      "    raise error"
+    ],
+    "description": ["try KeyboardInterrupt 按键终止"]
+  },
+  "try PermissionError 文件操作": {
+    "prefix": ["try PermissionError ="],
+    "body": [
+      "try:",
+      "    ${1:...}",
+      "except PermissionError:",
+      "    subprocess.run('@ECHO OFF && ECHO 文件操作权限不足... && PAUSE', shell=True)",
+      "    sys.exit(0)",
+      "except Exception as error:",
+      "    print(f'错误类型:{type(error)}')",
+      "    print(f'错误信息:{error}')",
+      "    raise error"
+    ],
+    "description": ["try PermissionError 文件操作"]
   }
 }
