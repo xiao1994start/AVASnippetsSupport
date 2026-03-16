@@ -67,5 +67,10 @@
     "prefix": ["os system --xcopy"],
     "body": ["os.system(f'xcopy /S /E /I /Y \"{${1:src源路径}}\" \"{${2:dst目标路径}}\"')"],
     "description": ["os.system 执行操作系统命令 - xcopy📂文件夹复制"]
+  },
+  "os.sep 替换字符串路径中分隔符为 -> 标准化分隔符": {
+    "prefix": ["replace os sep ", "strip os sep "],
+    "body": ["strip('./').replace('/',os.sep).replace('\\\\\\\\',os.sep)"],
+    "description": ["os.sep 替换字符串路径中分隔符为 -> 标准化分隔符"]
   }
 }
