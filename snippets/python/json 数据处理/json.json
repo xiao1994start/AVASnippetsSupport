@@ -11,9 +11,7 @@
   },
   "json.dump 编码JSON->文件": {
     "prefix": ["json dump -file "],
-    "body": [
-      "json.dump(${1:文件对象}, ${2:as_file}, indent = 2, ensure_ascii=False)"
-    ],
+    "body": ["json.dump(${1:文件对象}, ${2:as_file}, indent = 2, ensure_ascii=False)"],
     "description": ["json.dump 用于将 Python 对象编码成 JSON -> 文件"]
   },
   "json.loads 解码JSON数据->dict": {
@@ -38,13 +36,16 @@
       "with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
       "    # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
       "    json_data = json.load(f_JSON)",
-      "    $0",
+      "    try:",
+      "        # *读取文件内容并解析为 JSON 数据",
+      "        json_data = json.load(f_JSON)",
+      "        $0",
+      "    except json.decoder.JSONDecodeError:",
+      "        # !json 解析错误, 可能是文件内容为空或格式错误",
+      "        json_data = {}",
       ""
     ],
-    "description": [
-      "open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式",
-      "文件必须存在, 不存在抛出错误"
-    ]
+    "description": ["open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式", "文件必须存在, 不存在抛出错误"]
   },
   "with.open.json -w 只写json": {
     "prefix": ["with open json -w ", "wJson -w "],
@@ -63,11 +64,22 @@
   "with.open.json -rw 更新读写json": {
     "prefix": ["with open json -rw--updata ", "wJson -rw--updata "],
     "body": [
-      "with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
-      "    # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
-      "    json_data = json.load(f_JSON)",
+      "if ${1:file_path}.exists(follow_symlinks=False):",
+      "    with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
+      "        # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
+      "        try:",
+      "            # *读取文件内容并解析为 JSON 数据",
+      "            json_data = json.load(f_JSON)",
+      "        except json.decoder.JSONDecodeError:",
+      "            # !json 解析错误, 可能是文件内容为空或格式错误",
+      "            json_data = {}",
+      "else:",
+      "    json_data = {}",
       "",
-      "# 数据更新操作$0",
+      "# TODO:配置文件数据更新操作",
+      "# json_data = {}",
+      "# json_data[key] = value",
+      "$0",
       "",
       "with open(${1:json_path}, 'w', encoding='utf-8') as f_JSON:",
       "    # w 只写(清空文件), 不可读, 文件不存在创建新文件, 文件存在清空文件, 文件指针在开头",
@@ -76,9 +88,44 @@
       "    f_JSON.flush()  # 写文件刷新缓存",
       ""
     ],
-    "description": [
-      "open -r 只读(不清空文件)打开原始json文件 ->",
-      "open -w 只写(清空文件)将更新后的json数据写入文件"
-    ]
+    "description": ["open -r 只读(不清空文件)打开原始json文件 ->", "open -w 只写(清空文件)将更新后的json数据写入文件"]
+  },
+  "配置文件数据更新操作": {
+    "prefix": ["def setting_json =-json"],
+    "body": [
+      "def setting_json(key: str, value: str):",
+      "    # TODO:配置文件数据更新操作",
+      "    \"\"\"",
+      "    配置文件数据更新操作",
+      "",
+      "    Args:",
+      "        key (str): 配置项的键",
+      "        value (str): 配置项的值",
+      "    \"\"\"",
+      "    setting_file = Path(${1:BASE_PATH}, 'setting.json')",
+      "    if setting_file.exists(follow_symlinks=False):",
+      "        with open(setting_file, 'r', encoding='utf-8') as f_JSON:",
+      "            # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
+      "            try:",
+      "                # *读取文件内容并解析为 JSON 数据",
+      "                json_data = json.load(f_JSON)",
+      "            except json.decoder.JSONDecodeError:",
+      "                # !json 解析错误, 可能是文件内容为空或格式错误",
+      "                json_data = {}",
+      "    else:",
+      "        json_data = {}",
+      "",
+      "    # TODO:配置文件数据更新操作",
+      "    json_data[key] = value",
+      "",
+      "    with open(setting_file, 'w', encoding='utf-8') as f_JSON:",
+      "        # w 只写(清空文件), 不可读, 文件不存在创建新文件, 文件存在清空文件, 文件指针在开头",
+      "        json_updata = json_data",
+      "        f_JSON.write(json.dumps(json_updata, indent=2, ensure_ascii=False))",
+      "        f_JSON.flush()  # 写文件刷新缓存",
+      "    return",
+      ""
+    ],
+    "description": ["配置文件数据更新操作"]
   }
 }

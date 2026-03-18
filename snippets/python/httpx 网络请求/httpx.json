@@ -12,12 +12,14 @@
   "httpx.Client with构造函数": {
     "prefix": ["with httpx Client"],
     "body": [
+      "user_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',}",
       "with httpx.Client(",
-      "    base_url=URL,",
-      "    headers=header_dict,",
+      "    base_url=BASE_URL,  # 配置请求的 base_url, 注意: 请求URL将会被自动拼接到base_url后面",
+      "    headers=user_headers,",
       "    timeout=None,  # 超时时间(None | 0: 无限等待; 默认值: 10 -> 10秒等待)",
       "    # verify=False,  # 关闭SSL验证",
       ") as client:",
+      "    content = client.get(URL).text",
       "    pass"
     ],
     "description": ["with httpx.Client 使用with进行Client构造函数"]
@@ -32,7 +34,7 @@
       "    \"http://\": httpx.HTTPTransport(proxy=prixy_url),",
       "    \"https://\": httpx.HTTPTransport(proxy=prixy_url),",
       "}  # 代理配置(socks>http): {'all://': httpx.HTTPTransport(proxy='socks5://user:pass@host:port')}",
-      "user_headers = {\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0\",}",
+      "user_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',}",
       "with httpx.Client(",
       "    base_url=base_url,",
       "    # proxy='socks5://user:pass@host:port',  # 代理(单个)配置,同 proxies",
