@@ -35,11 +35,9 @@
     "body": [
       "with open(${1:file_path}, 'r', encoding='utf-8') as f_JSON:",
       "    # r 只读(不清空文件), 文件必须存在, 不存在抛出错误, 文件指针在开头",
-      "    json_data = json.load(f_JSON)",
       "    try:",
       "        # *读取文件内容并解析为 JSON 数据",
       "        json_data = json.load(f_JSON)",
-      "        $0",
       "    except json.decoder.JSONDecodeError:",
       "        # !json 解析错误, 可能是文件内容为空或格式错误",
       "        json_data = {}",
@@ -93,7 +91,7 @@
   "配置文件数据更新操作": {
     "prefix": ["def setting_json =-json"],
     "body": [
-      "def setting_json(key: str, value: str):",
+      "def setting_json(key: str, value: str | list | dict):",
       "    # TODO:配置文件数据更新操作",
       "    \"\"\"",
       "    配置文件数据更新操作",
