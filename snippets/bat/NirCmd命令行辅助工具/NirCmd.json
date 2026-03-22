@@ -1,11 +1,6 @@
 {
-  "NirCmd 添加环境变量": {
-    "prefix": ["set NirCmd"],
-    "body": ["set \"systemEnv=%PATH%\"", "set \"nc=%~dp0#NirCmd\\nircmd-x64\"", "set \"path=%nc%;%systemEnv%;\"", ""],
-    "description": ["NirCmd 添加环境变量"]
-  },
-  "NirCmd 环境变量检查": {
-    "prefix": ["nircmd if env"],
+  "NirCmd 环境变量检查并添加": {
+    "prefix": ["set NirCmd env"],
     "body": [
       ":check_nircmd_env",
       "if not \"!path:nircmd=!\"==\"!path!\" (",
@@ -21,33 +16,35 @@
       ":out_nircmd_env",
       ""
     ],
-    "description": ["NirCmd 环境变量检查"]
+    "description": ["NirCmd 环境变量检查并添加"]
   },
-  "NirCmd 创建快捷方式": {
-    "prefix": ["NirCmd shortcut"],
+  "NirCmd 获取桌面路径": {
+    "prefix": ["NirCmd get desktop path"],
     "body": [
-      "call nircmd shortcut \"exe程序路径\" \"快捷方式创建目录\" \"快捷方式名称\" \"程序运行参数\" \"ico图标文件\" 0",
+      "for /f \"delims=\" %%i in (' call nircmd_exe_path consolewrite \"~\\$folder.desktop\\$\" ') do set d=%%i",
+      "ECHO 桌面路径是：%d%",
       ""
     ],
-    "description": ["NirCmd 创建快捷方式", "\n 需要先添加环境变量"]
+    "description": ["NirCmd 获取桌面路径"]
   },
   "NirCmd 桌面路径": {
     "prefix": ["NirCmd folder desktop"],
     "body": ["\"~\\$folder.desktop\\$\""],
     "description": ["NirCmd 桌面路径"]
   },
-  "NirCmd 获取桌面路径": {
-    "prefix": ["NirCmd desktop"],
-    "body": [
-      "for /f \"delims=\" %%i in ('nircmd consolewrite \"~\\$folder.desktop\\$\"') do set d=%%i",
-      "ECHO 桌面路径是：%d%",
-      ""
-    ],
-    "description": ["NirCmd 获取桌面路径"]
-  },
   "NirCmd 设置剪贴板内容为桌面文件夹路径": {
     "prefix": ["NirCmd clipboard desktop"],
-    "body": ["call nircmd.exe clipboard set ~$folder.desktop$", ""],
+    "body": ["call nircmd_exe_path clipboard set \"~\\$folder.desktop\\$\"", ""],
     "description": ["NirCmd 设置剪贴板内容为桌面文件夹路径"]
+  },
+  "NirCmd 创建快捷方式": {
+    "prefix": ["NirCmd shortcut"],
+    "body": ["call nircmd_exe_path shortcut exe程序路径 快捷方式创建目录 快捷方式名称 程序运行参数 ico图标文件 0", ""],
+    "description": ["NirCmd 创建快捷方式", "\n 需要先添加环境变量"]
+  },
+  "NirCmd 创建桌面快捷方式": {
+    "prefix": ["NirCmd shortcut desktop"],
+    "body": ["call nircmd_exe_path shortcut exe程序路径 \"~\\$folder.desktop\\$\" 快捷方式名称 程序运行参数 ico图标文件 0", ""],
+    "description": ["NirCmd 创建桌面快捷方式"]
   }
 }
