@@ -1,6 +1,6 @@
 {
   "python-embed 嵌入式环境激活": {
-    "prefix": ["init py env =-python", "Python UV =-python"],
+    "prefix": ["init py venv =-python", "Python VE =-python"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
@@ -8,7 +8,7 @@
       "",
       "",
       "",
-      ":create_python_env",
+      ":create_python_venv",
       "@REM ! 使用Tkinter库的工程直接提取安装版Python",
       "",
       "ECHO 环境判断",

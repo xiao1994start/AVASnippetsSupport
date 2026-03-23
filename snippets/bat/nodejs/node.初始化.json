@@ -1,11 +1,11 @@
 {
   "node.js 临时环境设置": {
-    "prefix": ["call node -env--Portable", "call npm -env--Portable"],
+    "prefix": ["call node -venv--Portable", "call npm -venv--Portable", "call node -VE--Portable", "call npm -VE--Portable"],
     "body": [
       "set \"SYSTEM_PATH=%path%\"",
       "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "set \"NODE_ENV_PATH=.\\node\\;.\\node\\node_modules\\;\"",
-      "set \"path=%NODE_ENV_PATH%;%SYSTEM_PATH%;\"",
+      "set \"NODE_VENV_PATH=.\\node\\;.\\node\\node_modules\\;\"",
+      "set \"path=%NODE_VENV_PATH%;%SYSTEM_PATH%;\"",
       "@REM ECHO %path%",
       "ECHO 清理 npm 缓存",
       "call npm cache clean --force",
@@ -24,8 +24,13 @@
     "description": ["node.js 临时环境设置"]
   },
   "node.js 环境变量": {
-    "prefix": ["set node env path --Portable", "set npm env path --Portable"],
-    "body": ["set \"NODE_ENV_PATH=.\\node\\;.\\node\\node_modules\\;\"", ""],
+    "prefix": [
+      "set node venv path --Portable",
+      "set npm venv path --Portable",
+      "set node VE path --Portable",
+      "set npm VE path --Portable"
+    ],
+    "body": ["set \"NODE_VENV_PATH=.\\node\\;.\\node\\node_modules\\;\"", ""],
     "description": ["node.js 临时环境"]
   }
 }

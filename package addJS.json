@@ -12,20 +12,8 @@
     "type": "git",
     "url": "https://github.com/xiao1994start/AVASnippetsSupport"
   },
-  "keywords": [
-    "python",
-    "renpy",
-    "bat",
-    "json",
-    "markdown",
-    "scss",
-    "python",
-    "typescript"
-  ],
-  "categories": [
-    "Programming Languages",
-    "Snippets"
-  ],
+  "keywords": ["python", "renpy", "bat", "json", "markdown", "scss", "python", "typescript"],
+  "categories": ["Programming Languages", "Snippets"],
   "main": "./extension.js",
   "capabilities": {
     "untrustedWorkspaces": {
@@ -59,17 +47,8 @@
     "languages": [
       {
         "id": "renpy",
-        "aliases": [
-          "Ren'Py",
-          "renpy",
-          "rpy"
-        ],
-        "extensions": [
-          ".rpy",
-          ".rpym",
-          ".rpymc",
-          ".rpyc"
-        ],
+        "aliases": ["Ren'Py", "renpy", "rpy"],
+        "extensions": [".rpy", ".rpym", ".rpymc", ".rpyc"],
         "configuration": "./language-configuration.json",
         "icon": {
           "light": "./img/renpy.svg",
@@ -102,9 +81,7 @@
       {
         "scopeName": "renpy.comment.injection",
         "path": "./syntaxes/injection.json",
-        "injectTo": [
-          "source.python"
-        ],
+        "injectTo": ["source.python"],
         "embeddedLanguages": {
           "meta.embedded.renpy": "renpy"
         }
@@ -169,7 +146,7 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/bat/# 基础语法/env环境变量.json"
+        "path": "./snippets/bat/# 基础语法/环境变量.json"
       },
       {
         "language": "bat",

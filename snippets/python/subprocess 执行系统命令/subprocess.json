@@ -69,7 +69,7 @@
       "    $0,  # *传递给Popen的命令列表",
       "    shell=True,  # *是否在shell中运行命令, 如果不需要在shell中运行, 可以设置为False",
       "    cwd=None,  # *工作目录, 可以通过cwd='/path/to/dir'来设置工作目录",
-      "    env={},  # *环境变量, 可以通过env={'PATH': '/usr/local/bin'}来设置环境变量",
+      "    venv={},  # *环境变量, 可以通过venv={'PATH': '/usr/local/bin'}来设置环境变量",
       "    startupinfo=None,  # *启动信息, 可以通过startupinfo={'title': 'My Program'}来设置启动信息",
       "    stdin=subprocess.PIPE,  # *标准输入, 可以通过stdin=subprocess.PIPE来设置标准输入",
       "    stdout=subprocess.PIPE,  # *标准输出, 可以通过stdout=subprocess.PIPE来设置标准输出",

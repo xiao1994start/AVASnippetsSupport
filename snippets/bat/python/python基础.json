@@ -1,6 +1,6 @@
 {
   "python.创建_激活 虚拟环境": {
-    "prefix": ["py venv activate -python"],
+    "prefix": ["py venv activate -python", "py VE activate -python"],
     "body": [
       "",
       "ECHO 创建虚拟环境...",

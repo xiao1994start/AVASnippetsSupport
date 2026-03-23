@@ -10,7 +10,7 @@
     "description": "提示输入信息"
   },
   "添加当前批处理环境变量": {
-    "prefix": ["set addenv path -set path"],
+    "prefix": ["set add path -set path"],
     "body": ["set \"path=${1:临时环境变量};%path%;\""],
     "description": "添加设置适用于当前批处理的环境变量"
   },
@@ -30,7 +30,7 @@
     "description": ["获取并设置自身bet文件名及后缀"]
   },
   "设置当前批处理临时环境变量": {
-    "prefix": ["set cmd path -env"],
+    "prefix": ["set cmd path -venv"],
     "body": [
       "set \"SYSTEM_PATH=%PATH%\"",
       "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32\";\"C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin\";\"C:\\WINDOWS\";\"C:\\WINDOWS\\system32\";\"C:\\WINDOWS\\System32\\Wbem\";\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\\";\"C:\\WINDOWS\\System32\\OpenSSH\\\"",

@@ -1,11 +1,11 @@
 {
   "python-embed 嵌入式环境启动": {
-    "prefix": ["set call python -env--embed"],
+    "prefix": ["set call python -venv--embed", "set call python -VE--embed"],
     "body": [
       "set \"SYSTEM_PATH=%path%\"",
       "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "set \"PYTHON_ENV_PATH=.\\python\\;.\\python\\Scripts\\;\"",
-      "set \"path=%PYTHON_ENV_PATH%;%SYSTEM_PATH%;\"",
+      "set \"PYTHON_VENV_PATH=.\\python\\;.\\python\\Scripts\\;\"",
+      "set \"path=%PYTHON_VENV_PATH%;%SYSTEM_PATH%;\"",
       "@REM ECHO %path%",
       "ECHO python 版本号",
       "call python --version",
@@ -27,8 +27,8 @@
     "description": "python-embed 嵌入式环境启动"
   },
   "python embed 环境变量": {
-    "prefix": ["set python env path --embed"],
-    "body": ["set \"PYTHON_ENV_PATH=.\\python\\;.\\python\\Scripts\\;\"", ""],
+    "prefix": ["set python venv path --embed", "set python VE path --embed"],
+    "body": ["set \"PYTHON_VENV_PATH=.\\python\\;.\\python\\Scripts\\;\"", ""],
     "description": ["python embed 环境变量"]
   }
 }

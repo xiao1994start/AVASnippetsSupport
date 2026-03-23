@@ -1,19 +1,19 @@
 {
   "NirCmd 环境变量检查并添加": {
-    "prefix": ["set NirCmd env"],
+    "prefix": ["set NirCmd venv", "set NirCmd VE"],
     "body": [
-      ":check_nircmd_env",
+      ":check_nircmd_venv",
       "if not \"!path:nircmd=!\"==\"!path!\" (",
       "    @REM ECHO 存在环境变量 nircmd",
-      "    goto out_nircmd_env",
+      "    goto out_nircmd_venv",
       ") else (",
       "    @REM ECHO 添加环境变量 nircmd",
-      "    set \"systemEnv=%PATH%\"",
+      "    set \"systemPATH=%PATH%\"",
       "    set \"nc=%~dp0#NirCmd\\nircmd-x64\"",
-      "    set \"path=%nc%;%systemEnv%;\"",
-      "    goto check_nircmd_env",
+      "    set \"path=%nc%;%systemPATH%;\"",
+      "    goto check_nircmd_venv",
       ")",
-      ":out_nircmd_env",
+      ":out_nircmd_venv",
       ""
     ],
     "description": ["NirCmd 环境变量检查并添加"]
