@@ -25,7 +25,7 @@ set "path=%path:;C:\Program Files\Microsoft VS Code;=;%"
 set "systemPath=%path%"
 ECHO 添加临时系统环境变量
 set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
-set path=%NODE_HOME%;%systemPath%;
+set "path=%NODE_HOME%;%systemPath%;"
 @REM ECHO %path%
 @REM 环境测试
 ECHO 升级 npm
