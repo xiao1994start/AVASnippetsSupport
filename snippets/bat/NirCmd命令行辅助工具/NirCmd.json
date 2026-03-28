@@ -33,17 +33,17 @@
     "description": ["NirCmd 桌面路径"]
   },
   "NirCmd 设置剪贴板内容为桌面文件夹路径": {
-    "prefix": ["NirCmd clipboard desktop"],
+    "prefix": ["call NirCmd clipboard desktop"],
     "body": ["call nircmd_exe_path clipboard set \"~\\$folder.desktop\\$\"", ""],
     "description": ["NirCmd 设置剪贴板内容为桌面文件夹路径"]
   },
   "NirCmd 创建快捷方式": {
-    "prefix": ["NirCmd shortcut"],
+    "prefix": ["call NirCmd shortcut"],
     "body": ["call nircmd_exe_path shortcut exe程序路径 快捷方式创建目录 快捷方式名称 程序运行参数 ico图标文件 0", ""],
     "description": ["NirCmd 创建快捷方式", "\n 需要先添加环境变量"]
   },
   "NirCmd 创建桌面快捷方式": {
-    "prefix": ["NirCmd shortcut desktop"],
+    "prefix": ["call NirCmd shortcut desktop"],
     "body": ["call nircmd_exe_path shortcut exe程序路径 \"~\\$folder.desktop\\$\" 快捷方式名称 程序运行参数 ico图标文件 0", ""],
     "description": ["NirCmd 创建桌面快捷方式"]
   }

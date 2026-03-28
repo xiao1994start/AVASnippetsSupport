@@ -1,26 +1,24 @@
 {
   "循环目录下文件": {
     "prefix": ["for do"],
-    "body": ["for %%${1:i} in (\"${2:*}\") do (", "    ECHO %%${1:i}", ")$0"],
+    "body": ["for %%${1:i} in (\"${2:*}\") do ( ECHO %%${1:i} )", ""],
     "description": ["循环目录下文件"]
   },
   "循环目录下文件夹": {
     "prefix": ["for -D do"],
-    "body": ["for /D %%${1:i} in (\"${2:*}\") do (", "    ECHO %%${1:i}", ")"],
+    "body": ["for /D %%${1:i} in (\"${2:*}\") do ( ECHO %%${1:i} )", ""],
     "description": ["循环目录下文件夹"]
   },
   "循环提取 文本|列表|对象 信息": {
     "prefix": ["for -F do"],
-    "body": ["for /F \"tokens=* delims= \" %%${1:i} in ('tasklist') do (", "    ECHO %%${1:i}", "    $0", ")", ""],
+    "body": ["for /F \"tokens=* delims= \" %%${1:i} in ('tasklist') do ( ECHO %%${1:i} && $0 )", ""],
     "description": "循环提取 文本|列表|对象 信息"
   },
   "搜索获取进程路径": {
     "prefix": ["for -F do wmic process"],
     "body": [
       "set \"pro=wmic process where \"name='${1:cmd.exe}'\" get ExecutablePath\"",
-      "for /F \"skip=1 delims=\" %%${1:i} in ('!pro!') do (",
-      "    ECHO %%${1:i}",
-      ")",
+      "for /F \"skip=1 delims=\" %%${1:i} in ('!pro!') do ( ECHO %%${1:i} )",
       ""
     ],
     "description": ["搜索获取进程路径"]
@@ -68,12 +66,12 @@
   },
   "循环目录及子目录文件": {
     "prefix": ["for -R do"],
-    "body": ["for /R %%${1:i} in (\"*$0\") do (", "    ECHO %%${1:i}", ")", ""],
+    "body": ["for /R %%${1:i} in (\"*$0\") do ( ECHO %%${1:i} )", ""],
     "description": ["forR循环目录及子目录文件"]
   },
   "循环目录及子目录文件夹": {
     "prefix": ["for -R -D do"],
-    "body": ["for /R \"%~dp0\" /D %%i in (\"*\") do (", "    ECHO 文件夹:%%i", ")", ""],
+    "body": ["for /R \"%~dp0\" /D %%i in (\"*\") do ( ECHO 文件夹:%%i )", ""],
     "description": ["循环目录及子目录文件夹"]
   },
   "循环文件计数": {
