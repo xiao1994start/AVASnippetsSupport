@@ -50,5 +50,17 @@
     "prefix": ["if defined "],
     "body": ["if defined var(", "    ECHO 内存中存在变量 var: %var%", ") else (", "    ECHO 变量 var 不存在内存", ")", ""],
     "description": ["判断内存中是否存在变量"]
+  },
+  "判断系统架构": {
+    "prefix": ["IF AMD64"],
+    "body": [
+      "IF \"%PROCESSOR_ARCHITECTURE%\"==\"AMD64\" (",
+      "    ECHO 系统架构: 64位",
+      ") ELSE (",
+      "    ECHO 系统架构: 32位",
+      ")",
+      ""
+    ],
+    "description": ["判断系统架构"]
   }
 }
