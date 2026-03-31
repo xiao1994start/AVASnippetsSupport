@@ -68,11 +68,11 @@
   "使用记事本打开host文件": {
     "prefix": ["Host Edit"],
     "body": [
-      "@REM *取消 hosts 只读",
+      "@REM * 取消 hosts 只读",
       "attrib -R C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
-      "@REM *用 记事本 打开 hosts  ",
+      "@REM * 用 记事本 打开 hosts  ",
       "call notepad C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
-      "@REM *设定 hosts 只读",
+      "@REM * 设定 hosts 只读",
       "attrib +R C:\\WINDOWS\\system32\\drivers\\etc\\hosts"
     ],
     "description": ["使用记事本打开host文件"]
