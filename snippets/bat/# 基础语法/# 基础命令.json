@@ -62,7 +62,7 @@
   },
   "ECHO | clip 设置剪切板内容": {
     "prefix": ["clip -ECHO"],
-    "body": ["ECHO 设置剪切板内容| clip"],
+    "body": ["( ${1:ECHO 设置剪切板内容_第一行 & ECHO 设置剪切板内容_第二行} )| clip"],
     "description": ["ECHO | clip 设置剪切板内容"]
   },
   "使用记事本打开host文件": {
