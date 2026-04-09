@@ -1012,8 +1012,8 @@
         "path": "./snippets/scss/button按钮.json"
       },
       {
-        "language": "sh",
-        "path": "./snippets/sh/# 基础命令.json"
+        "language": "shellscript",
+        "path": "./snippets/shellscript/# 基础命令.json"
       },
       {
         "language": "typescript",
