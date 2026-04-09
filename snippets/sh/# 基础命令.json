@@ -1,0 +1,7 @@
+{
+  "#!/bin/bash": {
+    "prefix": ["bash ", "sh"],
+    "body": ["#!/bin/bash", "", "", "$0"],
+    "description": ["#!/bin/bash"]
+  }
+}

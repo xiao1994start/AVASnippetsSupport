@@ -1012,6 +1012,10 @@
         "path": "./snippets/scss/button按钮.json"
       },
       {
+        "language": "sh",
+        "path": "./snippets/sh/# 基础命令.json"
+      },
+      {
         "language": "typescript",
         "path": "./snippets/typescript/axios网络请求库.json"
       },
