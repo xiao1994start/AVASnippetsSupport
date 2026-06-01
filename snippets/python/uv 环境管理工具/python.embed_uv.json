@@ -1,6 +1,6 @@
 {
   "python-embed 嵌入式环境激活": {
-    "prefix": ["init py venv =-python", "Python VE =-python"],
+    "prefix": ["init py venv =-python", "pyVENV =-python"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
