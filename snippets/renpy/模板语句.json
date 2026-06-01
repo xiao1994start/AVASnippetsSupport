@@ -9,6 +9,11 @@
     "body": ["# *-默认语言-*", "define config.language = \"${1:schinese}\"", ""],
     "description": ["默认语言入口"]
   },
+  "游戏窗口的图标": {
+    "prefix": ["define config window_icon", "config window_icon"],
+    "body": ["define config.window_icon = \"gui/window_icon.png\""],
+    "description": "游戏窗口的图标"
+  },
   "构建rpa归档文件": {
     "prefix": ["init python build"],
     "body": [
