@@ -1,12 +1,22 @@
 {
-  "from 包/模块/依赖 import 对象": {
-    "prefix": ["from import", "from im"],
-    "body": ["from ${1:package/module} import ${2:name}"],
-    "description": ["from 包/模块 import name"]
+  "from module import name": {
+    "prefix": ["fim ", "imf "],
+    "body": ["from ${1:module} import ${2:name}"],
+    "description": ["from module import name"]
   },
-  "import 包/模块/依赖": {
-    "prefix": ["import ", "im "],
-    "body": ["import ${1:name}"],
-    "description": ["import 包/模块/依赖"]
+  "import module": {
+    "prefix": ["im ", "imp "],
+    "body": ["import ${1:module}"],
+    "description": ["import module"]
+  },
+  "import module as alias": {
+    "prefix": ["ima ", "impa "],
+    "body": ["import ${1:module} as ${2:alias}"],
+    "description": ["import module as alias"]
+  },
+  "from module import name as alias": {
+    "prefix": ["imfa ", "fima "],
+    "body": ["from ${1:module} import ${2:name} as ${3:alias}"],
+    "description": ["from module import name as alias"]
   }
 }
