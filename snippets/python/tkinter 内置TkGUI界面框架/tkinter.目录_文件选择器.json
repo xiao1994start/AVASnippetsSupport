@@ -1,9 +1,4 @@
 {
-  "引入 tkinter 内置TkGUI界面框架": {
-    "prefix": ["import tkinter", "im tkinter as tk"],
-    "body": ["import tkinter as tk", "from tkinter import Tk, filedialog"],
-    "description": ["引入 tkinter 内置TkGUI界面框架"]
-  },
   "tkinter 目录选择器": {
     "prefix": ["tk-select folder =tkinter"],
     "body": [
@@ -13,7 +8,7 @@
       "    \"\"\"",
       "    # import tkinter as tk",
       "    # from pathlib import Path",
-      "    # from tkinter import Tk, filedialog",
+      "    # from tkinter import filedialog, ttk",
       "    root = Tk()  # 创建窗口对象",
       "    root.withdraw()  # 隐藏主窗口",
       "    # root.iconbitmap(ico_文件类型)  # 更改窗口图标",
@@ -40,7 +35,7 @@
       "    \"\"\"",
       "    # import tkinter as tk",
       "    # from pathlib import Path",
-      "    # from tkinter import Tk, filedialog",
+      "    # from tkinter import filedialog, ttk",
       "    root = Tk()",
       "    root.withdraw()  # 隐藏主窗口",
       "    # root.iconbitmap(ico_文件类型)  # 更改窗口图标",
