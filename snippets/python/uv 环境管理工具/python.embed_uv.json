@@ -485,7 +485,6 @@
       "if not exist \"%~dp0Tk_test.py\" (",
       "    ECHO 创建 Tk_test.py tkinter 测试文件",
       "    ECHO import tkinter as tk> \"%~dp0Tk_test.py\"",
-      "    ECHO from pathlib import Path>> \"%~dp0Tk_test.py\"",
       "    ECHO # * tk_test>> \"%~dp0Tk_test.py\"",
       "    ECHO tk._test(^)>> \"%~dp0Tk_test.py\"",
       ")",
