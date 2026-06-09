@@ -1,0 +1,24 @@
+{
+  "pip.CustomTkinter 基于TkinterUI库": {
+    "prefix": ["pip customtkinter"],
+    "body": [
+      "ECHO.",
+      "ECHO * CustomTkinter 基于TkinterUI库 *",
+      "pip install -U customtkinter -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["CustomTkinter 基于TkinterUI库"]
+  },
+  "uv.CustomTkinter 基于TkinterUI库": {
+    "prefix": ["uv customtkinter"],
+    "body": [
+      "ECHO.",
+      "ECHO * CustomTkinter 基于TkinterUI库 *",
+      "@REM uv add \"customtkinter\" -i https://mirrors.aliyun.com/pypi/simple/",
+      "@REM ! 嵌入式环境使用 Tk GUI - 不要使用虚拟环境 !",
+      "pip install -U customtkinter -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["CustomTkinter 基于TkinterUI库"]
+  }
+}

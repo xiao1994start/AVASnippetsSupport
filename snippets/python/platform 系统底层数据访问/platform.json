@@ -1,0 +1,12 @@
+{
+  "引入 platform 模块": {
+    "prefix": ["import platform", "im platform"],
+    "body": ["import platform  # 引入 platform 访问系统底层平台标识数据模块"],
+    "description": ["引入 platform 模块"]
+  },
+  "platform.system 获取系统平台名称": {
+    "prefix": ["platform system"],
+    "body": ["platform.system()"],
+    "description": ["获取系统平台名称"]
+  }
+}

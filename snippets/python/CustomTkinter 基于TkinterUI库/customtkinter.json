@@ -1,0 +1,7 @@
+{
+  "引入 CustomTkinter 模块": {
+    "prefix": ["import customtkinter", "im customtkinter"],
+    "body": ["import customtkinter as ctk  # 引入 CustomTkinter 模块"],
+    "description": ["引入 CustomTkinter 模块"]
+  }
+}
