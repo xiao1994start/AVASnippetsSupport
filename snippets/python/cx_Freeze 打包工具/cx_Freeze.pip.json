@@ -1,0 +1,23 @@
+{
+  "pip cx_Freeze 自动检测并安装": {
+    "prefix": ["pip cx_Freeze"],
+    "body": [
+      "# * 尝试导入 cx_Freeze 模块 用于打包程序",
+      "try:",
+      "    import cx_Freeze",
+      "    from cx_Freeze import Executable, setup",
+      "except ImportError:",
+      "    print('Installing cx_Freeze...')",
+      "    import pip",
+      "",
+      "    pip.main(['install', '-U', 'cx_Freeze', '-q', '-i', 'https://mirrors.aliyun.com/pypi/simple/'])",
+      "",
+      "    import cx_Freeze",
+      "    from cx_Freeze import Executable, setup",
+      "",
+      "print(cx_Freeze.__version__)",
+      ""
+    ],
+    "description": ["自动检测并安装"]
+  }
+}

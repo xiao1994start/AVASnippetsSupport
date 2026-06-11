@@ -661,6 +661,18 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/cx_Freeze 打包工具/cx_Freeze.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/cx_Freeze 打包工具/cx_Freeze.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/cx_Freeze 打包工具/cx_Freeze.pip.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/darkdetect 智能主题模式检测库/darkdetect.bat.json"
       },
       {
