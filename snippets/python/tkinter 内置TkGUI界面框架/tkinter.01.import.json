@@ -1,7 +1,7 @@
 {
   "引入 tkinter 内置TkGUI界面框架": {
     "prefix": ["import tkinter", "im tkinter as tk"],
-    "body": ["import tkinter as tk", "from tkinter import filedialog, ttk"],
+    "body": ["import tkinter as tk  # 引入 tkinter 基础模块", "from tkinter import filedialog, messagebox, ttk"],
     "description": ["引入 tkinter 内置TkGUI界面框架"]
   }
 }
