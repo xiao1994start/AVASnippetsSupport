@@ -1,0 +1,19 @@
+{
+  "pip 尝试导入依赖检测": {
+    "prefix": ["try pip"],
+    "body": [
+      "try:",
+      "    # * 尝试导入 ... 模块",
+      "    import ${1:pip_modle_name}",
+      "except ImportError:",
+      "    print('Installing...')",
+      "    import pip",
+      "",
+      "    pip.main(['install', '-U', '${1:pip_modle_name}', '-q', '-i', 'https://mirrors.aliyun.com/pypi/simple/'])  # -q:仅显示 WARNING/ERROR/CRITICAL",
+      "",
+      "    import ${1:pip_modle_name}",
+      ""
+    ],
+    "description": ["pip 尝试导入依赖检测"]
+  }
+}

@@ -23,10 +23,16 @@
     "body": ["def __init__(self) -> None:", "    # TODO:${2:_summary_}", "    ..."],
     "description": ["class初始化"]
   },
+
   "class类self": {
-    "prefix": ["sf -class", "self -class", "class sf", "class self"],
-    "body": ["self.$0"],
+    "prefix": ["slf -class"],
+    "body": ["self$0"],
     "description": ["class类self"]
+  },
+  "class类self.": {
+    "prefix": ["sf -class"],
+    "body": ["self.$0"],
+    "description": ["class类self."]
   },
   "创建class - def函数": {
     "prefix": ["new class def -class", "class def s -class"],
