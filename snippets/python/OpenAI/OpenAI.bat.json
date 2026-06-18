@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * OpenAI API 大语言模型依赖 *",
-      "pip install -U openai -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install openai --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["OpenAI API 大语言模型依赖"]

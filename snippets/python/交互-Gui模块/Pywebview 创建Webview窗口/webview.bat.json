@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pywebview webGUI框架库 *",
-      "pip install -U pywebview setuptools -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install pywebview setuptools --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM 需要注意 pythonnet 版本(https://pypi.org/project/pythonnet/) 和 pywebview 版本需要对应",
       ""
     ],

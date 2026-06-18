@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pyside6 GUI界面库 *",
-      "pip install -U pyside6 -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install pyside6 --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "@REM 目前测试 pyside6==6.8.0 版本较为稳定",
       ""
     ],

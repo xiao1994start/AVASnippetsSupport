@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * xmltodict XML数据解析字典 *",
-      "pip install -U xmltodict -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install xmltodict --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["XML数据解析字典"]

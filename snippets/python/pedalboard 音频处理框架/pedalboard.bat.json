@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pedalboard 音频处理框架 *",
-      "pip install -U pedalboard -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install pedalboard --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["pedalboard 音频处理框架"]

@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pyperclip 剪贴板操作库 *",
-      "pip install -U pyperclip -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install pyperclip --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["pyperclip 剪贴板操作库"]

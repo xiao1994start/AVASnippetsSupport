@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * django 库 *",
-      "pip install -U ${1|django|} -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install ${1|django|} --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "call django-admin startproject ${2:__DjangoServer_BE_ .}",
       "call python manage.py startapp ${3:apps}",
       "@REM __Django修改默认端口号与地址__",
@@ -44,7 +44,7 @@
     "body": [
       "ECHO.",
       "ECHO * django 库DRF组件 *",
-      "pip install -U ${1|django|} djangorestframework django-cors-headers -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install ${1|django|} djangorestframework django-cors-headers --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "call django-admin startproject ${2:__DjangoServer_BE_ .}",
       "call python manage.py startapp ${3:apps}",
       "@REM __Django修改默认端口号与地址__",

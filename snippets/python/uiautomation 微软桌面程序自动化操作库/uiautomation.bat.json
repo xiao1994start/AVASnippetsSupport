@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * uiautomation Windows桌面程序自动化控制依赖 *",
-      "pip install -U uiautomation -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install uiautomation --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["uiautomation Windows桌面程序自动化控制依赖"]

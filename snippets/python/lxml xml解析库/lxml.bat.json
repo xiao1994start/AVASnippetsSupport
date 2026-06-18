@@ -1,7 +1,7 @@
 {
   "pip.lxml xml解析库": {
     "prefix": ["pip lxml"],
-    "body": ["ECHO.", "ECHO * lxml xml解析库 *", "pip install -U lxml -i https://mirrors.aliyun.com/pypi/simple/", ""],
+    "body": ["ECHO.", "ECHO * lxml xml解析库 *", "pip install lxml --upgrade -i https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["xml解析库"]
   },
   "uv.lxml xml解析库": {

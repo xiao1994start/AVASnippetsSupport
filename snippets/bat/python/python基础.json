@@ -9,7 +9,7 @@
       "ECHO 激活虚拟环境...",
       "call ./.venv/Scripts/activate.bat",
       "ECHO 安装Jupyter内核ipykernel依赖库...",
-      "@REM pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/",
+      "@REM pip install ipykernel --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "",
       "",
       "ECHO 安装依赖库...",
@@ -42,7 +42,10 @@
   },
   "pip.Jupyter内核ipykernel依赖库": {
     "prefix": ["pip Jupyter", "pip ipykernel"],
-    "body": ["ECHO 安装Jupyter内核ipykernel依赖库...", "pip install -U ipykernel -i https://mirrors.aliyun.com/pypi/simple/"],
+    "body": [
+      "ECHO 安装Jupyter内核ipykernel依赖库...",
+      "pip install ipykernel --upgrade -i https://mirrors.aliyun.com/pypi/simple/"
+    ],
     "description": ["pip.Jupyter内核ipykernel依赖库"]
   },
   "pip.镜像源": {
@@ -83,7 +86,7 @@
   },
   "pip.install-upgrade 安装最新发布库": {
     "prefix": ["pip new -install-U", "pip new -U"],
-    "body": ["pip install -U ${1:pip} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
+    "body": ["pip install ${1:pip} --upgrade ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip.install-upgrade 安装最新发布库"]
   },
   "pip.uninstall 卸载": {

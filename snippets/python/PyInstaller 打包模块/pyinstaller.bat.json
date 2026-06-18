@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * PyInstaller 打包库 *",
-      "pip install -U pyinstaller -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install pyinstaller --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["PyInstaller 打包库"]
