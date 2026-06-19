@@ -14,12 +14,12 @@
     "description": ["创建 class 对象"]
   },
   "class 父类初始化方法初始化继承属性": {
-    "prefix": ["super init -class", "class super init"],
+    "prefix": ["super init -class"],
     "body": ["super().__init__()", ""],
     "description": ["class 父类初始化方法初始化继承属性"]
   },
   "class初始化": {
-    "prefix": ["new class init -class", "class init -class"],
+    "prefix": ["def init slf -class"],
     "body": ["def __init__(self) -> None:", "    # TODO:${2:_summary_}", "    ..."],
     "description": ["class初始化"]
   },
@@ -29,23 +29,18 @@
     "body": ["self$0"],
     "description": ["class类self"]
   },
-  "class类self.": {
-    "prefix": ["sf -class"],
-    "body": ["self.$0"],
-    "description": ["class类self."]
-  },
   "创建class - def函数": {
-    "prefix": ["new class def -class", "class def s -class"],
+    "prefix": ["new def slf -class", "def slf -class"],
     "body": ["def ${1:name}(self):", "    # TODO:${2:_summary_}", "    ..."],
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
-    "prefix": ["new def -def", "def -def"],
+    "prefix": ["new def -def", "def new -def"],
     "body": ["def ${1:name}():", "    # TODO:${2:_summary_}", "    ..."],
     "description": ["创建def函数"]
   },
   "lambda:匿名函数": {
-    "prefix": ["new lambda", "lambda -lambda"],
+    "prefix": ["new lambda", "lmda -lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },

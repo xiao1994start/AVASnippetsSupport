@@ -1,0 +1,7 @@
+{
+  "引入 flet WebUI框架": {
+    "prefix": ["import flet", "im flet as ft"],
+    "body": ["import darkdetect  # * 引入 darkdetect 智能主题模式检测库", "import flet as ft  # * 引入 flet WebUI框架", ""],
+    "description": ["引入 flet WebUI框架"]
+  }
+}

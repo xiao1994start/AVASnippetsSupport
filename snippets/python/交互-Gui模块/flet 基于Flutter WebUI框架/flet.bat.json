@@ -1,0 +1,36 @@
+{
+  "pip.flet 基于 Flutter 的WebUI框架": {
+    "prefix": ["pip flet"],
+    "body": [
+      "ECHO.",
+      "ECHO * flet 基于 Flutter 的WebUI框架 *",
+      "pip install flet[all] setuptools pyinstaller --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "@REM * 必备 - https://github.com/flet-dev/flet/releases [最新版] 或 https://sourceforge.net/projects/flet.mirror/files/ [最新版]",
+      "@REM * 手动下载 flet-windows.zip 解压后放在 %USERPROFILE%\\.flet\\client\\flet-desktop-full-[版本号]\\flet\\flet.exe [注意目录结构]",
+      "@REM - Creating a new Flet app",
+      "@REM flet create",
+      "",
+      "ECHO 智能主题模式检测库",
+      "pip install darkdetect --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["flet 基于 Flutter 的WebUI框架"]
+  },
+  "uv.flet 基于 Flutter 的WebUI框架": {
+    "prefix": ["uv flet"],
+    "body": [
+      "ECHO.",
+      "ECHO * flet 基于 Flutter 的WebUI框架 *",
+      "uv add \"flet[all]\" \"setuptools\" \"pyinstaller\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      "@REM * 必备 - https://github.com/flet-dev/flet/releases [最新版] 或 https://sourceforge.net/projects/flet.mirror/files/ [最新版]",
+      "@REM * 手动下载 flet-windows.zip 解压后放在 %USERPROFILE%\\.flet\\client\\flet-desktop-full-[版本号]\\flet\\flet.exe [注意目录结构]",
+      "@REM - Creating a new Flet app",
+      "@REM uv run flet create",
+      "",
+      "ECHO 智能主题模式检测库",
+      "uv add \"darkdetect\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": ["flet 基于 Flutter 的WebUI框架"]
+  }
+}
