@@ -17,6 +17,8 @@
       "    # ! 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
       "    # *asyncio.run(async_func) 运行事件循环的异步协程函数",
       "    ...",
+      "    pass",
+      "    return",
       ""
     ],
     "description": [
