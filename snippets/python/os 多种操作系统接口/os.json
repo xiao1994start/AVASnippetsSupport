@@ -70,7 +70,7 @@
   },
   "os.sep 替换字符串路径中分隔符为 -> 标准化分隔符": {
     "prefix": ["replace os sep "],
-    "body": ["replace('/',os.sep).replace('\\\\\\\\',os.sep)"],
+    "body": ["replace('\\\\\\\\', '/').replace('/', os.sep)"],
     "description": ["os.sep 替换字符串路径中分隔符为 -> 标准化分隔符"]
   }
 }
