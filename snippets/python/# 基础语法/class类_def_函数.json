@@ -6,10 +6,12 @@
       "    # * class default args(类变量) | signal(信号)",
       "    # 调用方法: [className].[argsName] = [value] | self.[argsName] = [value]",
       "    def __init__(self) -> None:",
-      "        # *:${3:_summary_}",
+      "        # * ${3:_summary_}",
       "        ...",
+      "        pass",
       "",
-      "    ..."
+      "    ...",
+      "    pass"
     ],
     "description": ["创建 class 对象"]
   },
@@ -20,7 +22,7 @@
   },
   "class初始化": {
     "prefix": ["def init slf -class"],
-    "body": ["def __init__(self) -> None:", "    # *:${2:_summary_}", "    ..."],
+    "body": ["def __init__(self) -> None:", "    # * ${2:_summary_}", "    ...", "    pass"],
     "description": ["class初始化"]
   },
 
@@ -31,12 +33,12 @@
   },
   "创建class - def函数": {
     "prefix": ["new def slf -class", "def slf -class"],
-    "body": ["def ${1:name}(self):", "    # *:${2:_summary_}", "    ..."],
+    "body": ["def ${1:name}(self):", "    # * ${2:_summary_}", "    ...", "    pass"],
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
     "prefix": ["new def -def", "def new -def"],
-    "body": ["def ${1:name}():", "    # *:${2:_summary_}", "    ..."],
+    "body": ["def ${1:name}():", "    # * ${2:_summary_}", "    ...", "    pass"],
     "description": ["创建def函数"]
   },
   "lambda:匿名函数": {
@@ -46,7 +48,7 @@
   },
   "if_main:运行入口 | 调试运行": {
     "prefix": ["if main", "if main ==", "if name == main"],
-    "body": ["if __name__ == '__main__':", "    \"\"\"运行入口 | 调试运行\"\"\"", "    $0", "    ..."],
+    "body": ["if __name__ == '__main__':", "    \"\"\"运行入口 | 调试运行\"\"\"", "    $0", "    ...", "    pass"],
     "description": ["if_main:运行入口 | 调试运行"]
   },
   "if_in_main:运行入口 | 调试运行": {
@@ -55,7 +57,8 @@
       "if __name__ in {'__main__', '__mp_main__'}:",
       "    \"\"\"运行入口 | 调试运行 | 多进程[multiprocessing]运行\"\"\"",
       "    $0",
-      "    ..."
+      "    ...",
+      "    pass"
     ],
     "description": ["if_in_main:运行入口 | 调试运行"]
   }

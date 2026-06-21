@@ -4,7 +4,7 @@
     "body": [
       "set \"SYSTEM_PATH=%path%\"",
       "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
-      "set \"GIT_VENV_PATH=%~dp0PortableGit\\;%~dp0PortableGit\\cmd;%~dp0PortableGit\\bin\\;%~dp0PortableGit\\usr\\bin\\;\"",
+      "set \"GIT_VENV_PATH=.\\PortableGit\\;.\\PortableGit\\cmd;.\\PortableGit\\bin\\;.\\PortableGit\\usr\\bin\\;\"",
       "set \"path=%GIT_VENV_PATH%;%path%;\"",
       "ECHO Git 版本号:",
       "call git -v",
@@ -15,7 +15,7 @@
   "PortableGit 临时环境": {
     "prefix": ["set git venv path --Portable", "set git VE path --Portable"],
     "body": [
-      "set \"GIT_VENV_PATH=%~dp0PortableGit\\;%~dp0PortableGit\\cmd;%~dp0PortableGit\\bin\\;%~dp0PortableGit\\usr\\bin\\;\"",
+      "set \"GIT_VENV_PATH=.\\PortableGit\\;.\\PortableGit\\cmd;.\\PortableGit\\bin\\;.\\PortableGit\\usr\\bin\\;\"",
       ""
     ],
     "description": ["PortableGit 临时环境"]
