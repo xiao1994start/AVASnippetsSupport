@@ -24,7 +24,7 @@
   },
   "class初始化": {
     "prefix": ["def init slf -class"],
-    "body": ["def __init__(self) -> None:", "    # * ${2:_summary_}", "    ...", "    pass", "    return"],
+    "body": ["def __init__(self, *args, **kwds) -> None:", "    super().__init__(*args, **kwds)"],
     "description": ["class初始化"]
   },
 
@@ -35,12 +35,12 @@
   },
   "创建class - def函数": {
     "prefix": ["new def slf -class", "def slf -class"],
-    "body": ["def ${1:name}(self):", "    # * ${2:_summary_}", "    ...", "    pass", "    return"],
+    "body": ["def ${1:name}(self):", "    return"],
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
     "prefix": ["new def -def", "def new -def"],
-    "body": ["def ${1:name}():", "    # * ${2:_summary_}", "    ...", "    pass", "    return"],
+    "body": ["def ${1:name}():", "    return"],
     "description": ["创建def函数"]
   },
   "lambda:匿名函数": {
@@ -50,14 +50,7 @@
   },
   "if_main:运行入口 | 调试运行": {
     "prefix": ["if main", "if main ==", "if name == main"],
-    "body": [
-      "if __name__ == '__main__':",
-      "    \"\"\"运行入口 | 调试运行\"\"\"",
-      "    $0",
-      "    ...",
-      "    pass",
-      "    return"
-    ],
+    "body": ["if __name__ == '__main__':", "    \"\"\"运行入口 | 调试运行\"\"\"", "    $0", "    ..."],
     "description": ["if_main:运行入口 | 调试运行"]
   },
   "if_in_main:运行入口 | 调试运行": {
@@ -66,8 +59,7 @@
       "if __name__ in {'__main__', '__mp_main__'}:",
       "    \"\"\"运行入口 | 调试运行 | 多进程[multiprocessing]运行\"\"\"",
       "    $0",
-      "    ...",
-      "    pass"
+      "    ..."
     ],
     "description": ["if_in_main:运行入口 | 调试运行"]
   }
