@@ -1,17 +1,13 @@
 {
-  "pip.Pillow 图像处理库": {
-    "prefix": ["pip Pillow"],
+  "pip|uv Pillow 图像处理库": {
+    "prefix": ["pip Pillow", "uv Pillow"],
     "body": [
       "ECHO.",
       "ECHO * Pillow 图像处理库 *",
       "pip install Pillow --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"Pillow\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
-    "description": ["Pillow 图像处理库"]
-  },
-  "uv.Pillow 图像处理库": {
-    "prefix": ["uv Pillow"],
-    "body": ["ECHO.", "ECHO * Pillow 图像处理库 *", "uv add \"Pillow\" --index https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["Pillow 图像处理库"]
   }
 }

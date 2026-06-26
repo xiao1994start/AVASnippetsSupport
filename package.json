@@ -912,6 +912,14 @@
         "path": "./snippets/python/uiautomation 微软桌面程序自动化操作库/uiautomation.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/urllib URL处理模块/urllib.01.import.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/urllib URL处理模块/urllib.02.request.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/uv 环境管理工具/python.embed_uv.json"
       },

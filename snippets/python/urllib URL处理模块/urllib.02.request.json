@@ -1,0 +1,7 @@
+{
+  "将 URL 形式的网络对象复制为本地文件": {
+    "prefix": ["urllib request urlretrieve -saveLocal", "urllib request urlretrieve -download"],
+    "body": ["urllib.request.urlretrieve(${1:download_url}, ${2:save_path})", ""],
+    "description": ["将 URL 形式的网络对象复制为本地文件"]
+  }
+}

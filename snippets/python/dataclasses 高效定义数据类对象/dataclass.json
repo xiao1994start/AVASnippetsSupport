@@ -1,7 +1,7 @@
 {
   "引入 dataclass 高效定义数据类对象": {
     "prefix": ["import dataclass", "im dataclass"],
-    "body": ["from dataclasses import dataclass  # *引入 dataclass 高效定义数据类对象"],
+    "body": ["from dataclasses import dataclass, field  # *引入 dataclass(高效定义数据类对象) | field(属性)"],
     "description": ["引入 dataclass 高效定义数据类对象"]
   },
   "创建 dataclass 装饰数据类对象": {

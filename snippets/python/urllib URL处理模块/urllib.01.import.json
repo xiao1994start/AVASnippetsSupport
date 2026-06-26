@@ -1,0 +1,12 @@
+{
+  "引入 urllib URL处理模块": {
+    "prefix": [
+      "import urllib.request -saveLocal",
+      "im urllib.request -saveLocal",
+      "import urllib.request -download",
+      "im urllib.request -download"
+    ],
+    "body": ["import urllib.request  # 引入 urllib URL处理模块", ""],
+    "description": ["引入 urllib URL处理模块"]
+  }
+}

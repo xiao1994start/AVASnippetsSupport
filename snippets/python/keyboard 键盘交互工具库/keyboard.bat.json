@@ -1,20 +1,11 @@
 {
-  "pip.keyboard 键盘交互工具库": {
-    "prefix": ["pip keyboard"],
+  "pip|uv keyboard 键盘交互工具库": {
+    "prefix": ["pip keyboard", "uv keyboard"],
     "body": [
       "ECHO.",
       "ECHO * keyboard 键盘交互工具库 *",
       "pip install keyboard --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
-    "description": ["opencv for python 键盘交互工具库"]
-  },
-  "uv.keyboard 键盘交互工具库": {
-    "prefix": ["uv keyboard"],
-    "body": [
-      "ECHO.",
-      "ECHO * keyboard 键盘交互工具库 *",
-      "uv add \"keyboard\" --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"keyboard\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["opencv for python 键盘交互工具库"]

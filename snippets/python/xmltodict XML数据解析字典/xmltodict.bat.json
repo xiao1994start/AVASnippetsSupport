@@ -1,20 +1,11 @@
 {
-  "pip.xmltodict XML数据解析字典": {
-    "prefix": ["pip xmltodict"],
+  "pip|uv xmltodict XML数据解析字典": {
+    "prefix": ["pip xmltodict", "uv xmltodict"],
     "body": [
       "ECHO.",
       "ECHO * xmltodict XML数据解析字典 *",
       "pip install xmltodict --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
-    "description": ["XML数据解析字典"]
-  },
-  "uv.xmltodict XML数据解析字典": {
-    "prefix": ["uv xmltodict"],
-    "body": [
-      "ECHO.",
-      "ECHO * xmltodict XML数据解析字典 *",
-      "uv add \"xmltodict\" --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"xmltodict\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["XML数据解析字典"]

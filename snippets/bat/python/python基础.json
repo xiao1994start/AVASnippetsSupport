@@ -44,7 +44,8 @@
     "prefix": ["pip Jupyter", "pip ipykernel"],
     "body": [
       "ECHO 安装Jupyter内核ipykernel依赖库...",
-      "pip install ipykernel --upgrade -i https://mirrors.aliyun.com/pypi/simple/"
+      "pip install ipykernel --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "uv add  ipykernel --upgrade --index https://mirrors.aliyun.com/pypi/simple/"
     ],
     "description": ["pip.Jupyter内核ipykernel依赖库"]
   },

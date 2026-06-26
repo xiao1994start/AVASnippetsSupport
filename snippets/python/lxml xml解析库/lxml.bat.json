@@ -1,12 +1,13 @@
 {
-  "pip.lxml xml解析库": {
-    "prefix": ["pip lxml"],
-    "body": ["ECHO.", "ECHO * lxml xml解析库 *", "pip install lxml --upgrade -i https://mirrors.aliyun.com/pypi/simple/", ""],
-    "description": ["xml解析库"]
-  },
-  "uv.lxml xml解析库": {
-    "prefix": ["uv lxml"],
-    "body": ["ECHO.", "ECHO * lxml xml解析库 *", "uv add \"lxml\" --index https://mirrors.aliyun.com/pypi/simple/", ""],
+  "pip|uv lxml xml解析库": {
+    "prefix": ["pip lxml", "uv lxml"],
+    "body": [
+      "ECHO.",
+      "ECHO * lxml xml解析库 *",
+      "pip install lxml --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"lxml\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
     "description": ["xml解析库"]
   }
 }

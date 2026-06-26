@@ -301,7 +301,7 @@
       "@REM TODO: 安装环境只能使用 python -m pip",
       "ECHO.",
       "ECHO * rich 终端输出文本样式库 *",
-      "uv add \"rich\" --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"rich\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "",
       "",
       "",

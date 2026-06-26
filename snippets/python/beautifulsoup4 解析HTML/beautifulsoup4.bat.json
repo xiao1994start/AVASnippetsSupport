@@ -1,20 +1,11 @@
 {
-  "pip.beautifulsoup4 HTML解析库": {
-    "prefix": ["pip beautifulsoup4"],
+  "pip|uv beautifulsoup4 HTML解析库": {
+    "prefix": ["pip beautifulsoup4", "uv beautifulsoup4"],
     "body": [
       "ECHO.",
       "ECHO * beautifulsoup4 HTML解析库 *",
       "pip install beautifulsoup4 lxml html5lib --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
-      ""
-    ],
-    "description": ["beautifulsoup4 HTML解析库"]
-  },
-  "uv.beautifulsoup4 HTML解析库": {
-    "prefix": ["uv beautifulsoup4"],
-    "body": [
-      "ECHO.",
-      "ECHO * beautifulsoup4 HTML解析库 *",
-      "uv add \"beautifulsoup4\" lxml html5lib --index https://mirrors.aliyun.com/pypi/simple/",
+      "uv add \"beautifulsoup4\" lxml html5lib --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
     "description": ["beautifulsoup4 HTML解析库"]

@@ -27,7 +27,7 @@
   },
   "uv 安装依赖|允许包升级": {
     "prefix": ["uv add"],
-    "body": ["uv add \"${1:包名}\" --index https://mirrors.aliyun.com/pypi/simple/"],
+    "body": ["uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["uv 安装依赖|允许包升级"]
   },
   "uv 安装依赖 并 允许包升级": {
