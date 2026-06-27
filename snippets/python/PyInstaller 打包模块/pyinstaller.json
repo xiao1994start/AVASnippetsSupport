@@ -1,6 +1,6 @@
 {
   "pyinstaller 打包 python -> exe 命令": {
-    "prefix": ["import pyinstaller main run =commmand", "im pyinstaller main run =commmand"],
+    "prefix": ["import pyinstaller main run =", "im pyinstaller main run ="],
     "body": [
       "try:",
       "    # * 尝试导入 ... 模块",
