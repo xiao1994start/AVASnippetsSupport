@@ -28,7 +28,7 @@
     "description": ["Python 常用导入"]
   },
   "分隔符": {
-    "prefix": ["sep =-comment", "delim =-comment"],
+    "prefix": ["sep =-comment", "delim =-comment", "divider =-comment"],
     "body": ["# ====================== ${1:comment} ======================"],
     "description": ["分隔符"]
   }
