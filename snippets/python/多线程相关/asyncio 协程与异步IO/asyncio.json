@@ -4,32 +4,6 @@
     "body": ["import asyncio  # *异步IO实现更高的并发性"],
     "description": ["引入 asyncio 异步IO实现更高的并发性"]
   },
-  "async def 创建异步IO协程函数": {
-    "prefix": ["new async def", "asc def"],
-    "body": [
-      "async def ${1:name}():",
-      "    \"\"\"",
-      "    ${2:_summary_}",
-      "    \"\"\"",
-      "    # * await [异步函数] 包装协程任务, 可以获取结果",
-      "    # * asyncio.to_thread(func) 将同步函数转换为异步函数运行",
-      "    # * asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
-      "    # ! 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
-      "    # * asyncio.run(async_func) 运行事件循环的异步协程函数",
-      "    ...",
-      "    pass",
-      "    return",
-      ""
-    ],
-    "description": [
-      "async def 创建异步IO协程函数",
-      "\n\t-await [异步函数] 包装协程任务, 可以获取结果",
-      "\n\t-asyncio.to_thread(func) 将同步函数转换为异步函数运行",
-      "\n\t-asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
-      "\n\t-注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
-      "\n\t-asyncio.run(async_func) 运行事件循环的异步协程函数"
-    ]
-  },
   "asyncio 协程异步IO函数": {
     "prefix": ["asyncio "],
     "body": ["asyncio.$0"],
