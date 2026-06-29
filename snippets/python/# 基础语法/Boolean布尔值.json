@@ -1,11 +1,11 @@
 {
   "True": {
-    "prefix": ["tru -True"],
+    "prefix": ["ttru -True"],
     "body": "True",
     "description": "True."
   },
   "False": {
-    "prefix": ["fls -False"],
+    "prefix": ["ffals -False"],
     "body": "False",
     "description": "False."
   }
