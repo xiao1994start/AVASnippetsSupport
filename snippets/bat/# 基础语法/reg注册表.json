@@ -16,7 +16,7 @@
   },
   "REG删除键值": {
     "prefix": ["REG -delete"],
-    "body": ["CALL REG delete \"${1:reg路径\" /v \"key_名称}\" /F"],
+    "body": ["CALL REG delete \"${1:reg路径}\" /v \"key_名称\" /F"],
     "description": ["REG删除键值"]
   },
   "REG批量注入": {
