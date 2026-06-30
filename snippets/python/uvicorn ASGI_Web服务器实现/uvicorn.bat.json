@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * uvicorn ASGI Web 服务器实现 *",
-      "pip install uvicorn --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"uvicorn\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"uvicorn\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

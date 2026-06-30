@@ -16,7 +16,7 @@
       "@REM *    python -m 运行模块 启动虚拟环境",
       "@REM *    python -s 忽略用户 site-packages 避免不同版本的模块冲突",
       "@REM *    python -c 运行指令 ",
-      "call python -m pip install --upgrade pip",
+      "call python -m pip install \"pip\" --upgrade",
       "call python -m pip --version",
       "",
       "",

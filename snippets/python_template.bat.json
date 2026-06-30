@@ -1,7 +1,7 @@
 {
   "pip.依赖名 依赖描述(允许检测升级)": {
     "prefix": ["pip new", "pip new -install-U"],
-    "body": ["pip install 依赖名 --upgrade -i https://mirrors.aliyun.com/pypi/simple/", ""],
+    "body": ["pip install \"依赖名\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["依赖名 依赖描述(允许检测升级)"]
   },
   "uv.依赖名 依赖描述(允许检测升级)": {

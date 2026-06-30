@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * numpy NumPy维度数组与矩阵运算科学计算的基础库 *",
-      "pip install numpy --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"numpy\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"numpy\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * inquirer 交互式命令行终端 *",
-      "pip install inquirer --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"inquirer\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"inquirer\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

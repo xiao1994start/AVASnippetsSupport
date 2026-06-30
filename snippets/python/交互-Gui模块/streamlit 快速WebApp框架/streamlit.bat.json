@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * streamlit 快速WebApp框架 *",
-      "pip install streamlit --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"streamlit\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"streamlit\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * beautifulsoup4 HTML解析库 *",
-      "pip install beautifulsoup4 lxml html5lib --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"beautifulsoup4\" lxml html5lib --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"beautifulsoup4\" lxml html5lib --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

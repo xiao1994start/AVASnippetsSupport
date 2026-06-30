@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * keyboard 键盘交互工具库 *",
-      "pip install keyboard --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"keyboard\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"keyboard\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

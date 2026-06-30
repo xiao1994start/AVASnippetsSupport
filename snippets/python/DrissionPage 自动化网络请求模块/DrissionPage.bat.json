@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * DrissionPage 自动化网络请求库 *",
-      "pip install DrissionPage --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"DrissionPage\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"DrissionPage\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM DownloadTheDriver -> https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#download-the-driver",
       "@REM chromedriver -> https://getwebdriver.com/chromedriver",

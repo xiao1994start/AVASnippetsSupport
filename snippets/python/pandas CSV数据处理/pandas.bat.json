@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pandas CSV数据库 *",
-      "pip install pandas --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"pandas\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"pandas\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

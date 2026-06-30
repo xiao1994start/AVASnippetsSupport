@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * loguru 日志库 *",
-      "pip install loguru --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"loguru\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"loguru\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

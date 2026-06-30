@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * GitPython Git操作库 *",
-      "pip install GitPython --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"GitPython\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"GitPython\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

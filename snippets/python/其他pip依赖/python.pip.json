@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * requests 网络请求库 *",
-      "pip install requests --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"requests\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"requests\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -15,7 +15,7 @@
     "body": [
       "ECHO.",
       "ECHO * html5lib HTML5解析库 *",
-      "pip install html5lib --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"html5lib\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"html5lib\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],
@@ -26,7 +26,7 @@
     "body": [
       "ECHO.",
       "ECHO * setuptools 包管理工具 *",
-      "pip install setuptools --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"setuptools\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"setuptools\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

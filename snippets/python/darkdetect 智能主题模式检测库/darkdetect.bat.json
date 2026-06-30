@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * darkdetect 智能主题模式检测库 *",
-      "pip install darkdetect --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"darkdetect\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"darkdetect\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

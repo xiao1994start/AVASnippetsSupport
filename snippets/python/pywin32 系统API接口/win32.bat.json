@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * pywin32 win系统库 *",
-      "pip install pywin32 --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"pywin32\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"pywin32\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

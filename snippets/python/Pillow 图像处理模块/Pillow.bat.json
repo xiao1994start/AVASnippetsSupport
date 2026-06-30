@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * Pillow 图像处理库 *",
-      "pip install Pillow --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"Pillow\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"Pillow\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       ""
     ],

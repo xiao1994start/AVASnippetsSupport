@@ -4,7 +4,7 @@
     "body": [
       "ECHO.",
       "ECHO * opencv-python 计算机视觉库 *",
-      "pip install numpy opencv-python --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
+      "pip install \"numpy\" \"opencv-python\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "uv add \"numpy\" \"opencv-python\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/",
       "@REM opencv 库 (使用opencv-python库时,项目路径不能使用中文)",
       ""
