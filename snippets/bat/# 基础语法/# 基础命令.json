@@ -1,27 +1,16 @@
 {
-  "BAT.tmpl": {
+  "BAT|CMD.脚本模板": {
     "prefix": ["xxx"],
-    "body": [
-      "@ECHO OFF",
-      "setlocal EnableDelayedExpansion",
-      "CD /D \"%~dp0\"",
-      "",
-      "",
-      "",
-      "$0",
-      "",
-      "",
-      "",
-      "endlocal",
-      "goto :eof",
-      "ECHO. & ECHO 退出",
-      "@REM TIMEOUT /t 1 > NUL & EXIT /B",
-      ""
-    ],
-    "description": ["BAT.tmpl"]
+    "body": ["@ECHO OFF", "setlocal EnableDelayedExpansion", "CD /D \"%~dp0\"", "", "", "", "$0", "", "", "", "EndLocal", ""],
+    "description": ["BAT|CMD.脚本模板"]
+  },
+  "开启延迟变量扩展": {
+    "prefix": ["setlocal EnableDelayedExpansion"],
+    "body": ["setlocal EnableDelayedExpansion", "", "", "", "$0", "", "", "", "EndLocal", ""],
+    "description": ["开启延迟变量扩展"]
   },
   "ECHO 控制台输出": {
-    "prefix": ["pr -ECHO", "ECHO"],
+    "prefix": ["pr -ECHO"],
     "body": ["ECHO $0"],
     "description": ["ECHO 控制台输出"]
   },
