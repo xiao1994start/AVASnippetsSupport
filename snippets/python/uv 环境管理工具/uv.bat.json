@@ -15,6 +15,16 @@
     "body": ["ECHO 创建 uv 虚拟环境...", "uv venv", ""],
     "description": ["创建 uv 虚拟环境"]
   },
+  "清理并重新创建虚拟环境": {
+    "prefix": ["uv clean all"],
+    "body": ["ECHO 清理并重新创建虚拟环境", "uv cache clean && del /F /Q \"%~dp0pyproject.toml\""],
+    "description": ["清理并重新创建虚拟环境"]
+  },
+  "清空全部 uv 缓存（彻底清理）": {
+    "prefix": ["uv cache clean"],
+    "body": ["ECHO 清空全部 uv 缓存（彻底清理）", "uv cache clean"],
+    "description": ["清空全部 uv 缓存（彻底清理）"]
+  },
   "激活 python 虚拟环境": {
     "prefix": ["uv activate"],
     "body": ["ECHO 激活 python 虚拟环境", ".venv\\Scripts\\activate", ""],
@@ -97,12 +107,12 @@
   },
   "显示UV的版本": {
     "prefix": ["uv version"],
-    "body": ["ECHO UV版本:", "uv version"],
+    "body": ["ECHO UV版本", "uv version"],
     "description": ["显示UV的版本"]
   },
   "显示UV命令的文档": {
     "prefix": ["uv help"],
-    "body": ["ECHO UV命令文档:", "uv help"],
+    "body": ["ECHO UV命令文档", "uv help"],
     "description": ["显示UV命令的文档"]
   }
 }
