@@ -9,6 +9,11 @@
     "body": ["CALL REG import ${1:reg文件路径}"],
     "description": ["REG导入"]
   },
+  "REG导出": {
+    "prefix": ["REG -export"],
+    "body": ["CALL REG export ${1:reg指定子项的完整路径} ${1:reg导出保存路径} /y"],
+    "description": ["REG导出"]
+  },
   "REG添加键值": {
     "prefix": ["REG -add"],
     "body": ["CALL REG add \"${1:reg路径}\" /v \"key_名称\" /t REG_SZ /d \"value_数据\" /F"],
