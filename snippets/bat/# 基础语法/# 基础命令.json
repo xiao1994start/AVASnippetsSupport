@@ -1,12 +1,12 @@
 {
   "BAT|CMD.脚本模板": {
     "prefix": ["xxx"],
-    "body": ["@ECHO OFF", "setlocal EnableDelayedExpansion", "CD /D \"%~dp0\"", "", "", "", "$0", "", "", "", "EndLocal", ""],
+    "body": ["@ECHO OFF", "setlocal EnableDelayedExpansion", "CD /D \"%~dp0\"", "", "", "", "$0", "", "", "", "endlocal", ""],
     "description": ["BAT|CMD.脚本模板"]
   },
   "开启延迟变量扩展": {
     "prefix": ["setlocal EnableDelayedExpansion"],
-    "body": ["setlocal EnableDelayedExpansion", "", "", "", "$0", "", "", "", "EndLocal", ""],
+    "body": ["setlocal EnableDelayedExpansion", "", "", "", "$0", "", "", "", "endlocal", ""],
     "description": ["开启延迟变量扩展"]
   },
   "ECHO 控制台输出": {

@@ -3,7 +3,7 @@
     "prefix": ["call git -venv--Portable", "call git -VE--Portable"],
     "body": [
       "set \"SYSTEM_PATH=%path%\"",
-      "@REM set \"SYSTEM_PATH=C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin32;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\bin;C:\\WINDOWS;C:\\WINDOWS\\system32;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\\"",
+      "@REM set \"SYSTEM_PATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
       "set \"GIT_PATH=.\\PortableGit\\;.\\PortableGit\\cmd;.\\PortableGit\\bin\\;.\\PortableGit\\usr\\bin\\;\"",
       "set \"path=%GIT_PATH%;%path%;\"",
       "ECHO Git 版本号:",
