@@ -10,12 +10,12 @@
     "description": ["开启延迟变量扩展"]
   },
   "ECHO 控制台输出": {
-    "prefix": ["pr -ECHO"],
+    "prefix": ["ppt -ECHO"],
     "body": ["ECHO $0"],
     "description": ["ECHO 控制台输出"]
   },
   "ECHO 控制台空行": {
-    "prefix": ["pr.-ECHO", "nn"],
+    "prefix": ["ppt.-ECHO", "nn"],
     "body": ["ECHO.", "$0"],
     "description": ["ECHO 控制台空行"]
   },

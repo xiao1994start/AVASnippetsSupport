@@ -1,11 +1,11 @@
 {
   "print(...) for renpy": {
-    "prefix": ["pr -print"],
+    "prefix": ["ppr -print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },
   "self for renpy": {
-    "prefix": ["sf -self"],
+    "prefix": ["slf -self"],
     "body": "self",
     "description": "self"
   },
