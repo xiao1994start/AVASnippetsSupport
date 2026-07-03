@@ -921,7 +921,7 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/python/uv 环境管理工具/python.embed_uv.json"
+        "path": "./snippets/python/uv 环境管理工具/python.env_uv.json"
       },
       {
         "language": "bat",
