@@ -3,30 +3,19 @@ setlocal enabledelayedexpansion
 CD /D "%~dp0"
 
 
-for %%v in ("AVASnippetsSupport*.vsix") do (
-    ECHO 清理旧版插件 %%v
-    del /F /Q "%%v"
-)
+
+for %%v in ("AVASnippetsSupport*.vsix") do ( ECHO 清理旧版插件 %%v && del /F /Q "%%v" )
 
 CD /D "%~dp0..\"
-@REM ECHO %CD%
 
 @REM 标准化文件名
-if exist "%CD%\*node-*" (
-    for /D %%i in ("*node-*") do (
-        ECHO %%~fi
-        if not "%%i"=="node" (
-            ren "%%~fi" "node"
-        )
-    )
-)
+if exist "%CD%\*node-*" ( for /D %%i in ("*node-*") do ( ECHO %%~fi && if not "%%i"=="node" ( ren "%%~fi" "node" ) ) )
 ECHO 设置环境变量
-set "path=%path:;C:\Program Files\Microsoft VS Code;=;%"
-set "systemPath=%path%"
+set "PATH=%PATH:;C:\Program Files\Microsoft VS Code;=;%"
+set "systemPATH=%PATH%"
 ECHO 添加临时系统环境变量
 set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
-set "path=%NODE_HOME%;%systemPath%;"
-@REM ECHO %path%
+set "PATH=%NODE_HOME%;%systemPATH%;"
 
 ECHO 环境测试
 ECHO 升级 npm
@@ -51,13 +40,12 @@ call vsce package
 ECHO 封装完成
 for %%i in (*.vsix) do (
     ECHO 更新: %%i
-    if exist "%~dp0VSIX_Installer.exe" (
-        call "%~dp0VSIX_Installer.exe"
-    ) else (
-        call code --install-extension %%i
-    )
+    if exist "%~dp0VSIX_Installer.exe" ( call "%~dp0VSIX_Installer.exe" ) else ( call code --install-extension %%i )
     del /F /Q "..\%%i"
     copy /V /Y "%%i" "..\%%i"
 )
 ECHO 插件封装脚本执行完毕
+
+
+
 endlocal
