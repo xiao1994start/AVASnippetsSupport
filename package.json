@@ -492,6 +492,14 @@
         "path": "./snippets/python/交互-Gui模块/flet 基于Flutter WebUI框架/flet.01.import.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter WebUI框架/flet.02.class.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter WebUI框架/flet.模板.SideBar.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/交互-Gui模块/niceGUI web应用开发/nicegui.bat.json"
       },
