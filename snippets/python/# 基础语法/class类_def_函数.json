@@ -7,9 +7,11 @@
       "    # 调用方法: [className].[argsName] = [value] | self.[argsName] = [value]",
       "    def __init__(self) -> None:",
       "        # * ${3:_summary_}",
+      "        $0",
       "        ...",
       "        return",
-      "",
+      "    ",
+      "    ",
       "    ...",
       "    return"
     ],
@@ -22,7 +24,7 @@
   },
   "class初始化": {
     "prefix": ["def init slf -class"],
-    "body": ["def __init__(self, *args, **kwds) -> None:", "    super().__init__(*args, **kwds)"],
+    "body": ["def __init__(self, *args, **kwds) -> None:", "    $0", "    super().__init__(*args, **kwds)", ""],
     "description": ["class初始化"]
   },
 
@@ -33,12 +35,12 @@
   },
   "创建class - def函数": {
     "prefix": ["new def slf -class", "def slf -class"],
-    "body": ["def ${1:name}(self):", "    return"],
+    "body": ["def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - def函数"]
   },
   "创建def函数": {
     "prefix": ["new def -def", "def new -def"],
-    "body": ["def ${1:name}():", "    return"],
+    "body": ["def ${1:name}():", "    $0", "    return"],
     "description": ["创建def函数"]
   },
   "async def 创建异步IO协程函数": {
@@ -51,6 +53,7 @@
       "    # asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
       "    # ! 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
       "    # asyncio.run(async_func) 运行事件循环的异步协程函数",
+      "    $0",
       "    ...",
       "    return",
       ""
@@ -81,7 +84,8 @@
       "if __name__ in {'__main__', '__mp_main__'}:",
       "    \"\"\"# 运行入口 | 调试运行 | 多进程[multiprocessing]运行\"\"\"",
       "    $0",
-      "    ..."
+      "    ...",
+      ""
     ],
     "description": ["if_in_main:运行入口 | 调试运行"]
   }

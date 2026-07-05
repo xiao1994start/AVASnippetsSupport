@@ -944,6 +944,7 @@
       "    }",
       "",
       "    # ! 重要：设置默认字体 'Microsoflet YaHei' 或其他，防止中文显示异常",
+      "    \"\"\"page.theme|page.dark_theme 作用域：只能通过page参数传递，不能传递到其他类\"\"\"",
       "    font_family = 'MiSans'",
       "    # = 明亮模式 主体修复",
       "    page.theme = flet.Theme(",
