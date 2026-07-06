@@ -5,7 +5,7 @@
     "description": ["导入pathlib模块Path类方法"]
   },
   "Path() ->拼接路径/类型转换/类方法": {
-    "prefix": ["Path ", "PPH -Path"],
+    "prefix": ["Path ", "pah -Path", "PPH -Path"],
     "body": ["Path(${1:'root' , 'dir' , os.sep , 'file'})"],
     "description": ["Path() ->拼接路径/类型转换"]
   },
