@@ -5,8 +5,8 @@
     "description": ["dir.object 查看对象属性", "返回当前作用域中的所有变量, 方法和定义的类型"]
   },
   "@property.装饰器 将class对象中的方法转换为属性": {
-    "prefix": ["@property ", "at property"],
-    "body": ["@property  # *${1:属性方法}"],
+    "prefix": ["at property -class"],
+    "body": ["@property", "def ${1:attr}(self, value):", "", "    $0", "    return", ""],
     "description": [
       "@property.装饰器 设置class中方法对象的属性",
       "class Student:",
@@ -32,17 +32,9 @@
       "# s.score = 'abc' # 会抛出 ValueError"
     ]
   },
-  "@setter.装饰器 设置class中方法对象的属性": {
-    "prefix": ["@setter ", "at setter"],
-    "body": [
-      "@${1:defName}.setter  # *${2:设置方法对象属性}",
-      "def ${1:defName}(self, value):",
-      "    \"\"\"",
-      "    设置属性",
-      "    \"\"\"",
-      "    $0",
-      ""
-    ],
+  "@setter.装饰器 设置 class 中方法对象的属性": {
+    "prefix": ["at setter -class"],
+    "body": ["@${1:attr}.setter", "def ${1:attr}(self, value):", "", "    $0", "", ""],
     "description": [
       "@property.装饰器 设置class中方法对象的属性",
       "class Student:",
