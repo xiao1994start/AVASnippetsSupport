@@ -32,7 +32,7 @@
     "prefix": ["with ProcessPoolExecutor as -concurrent.futures"],
     "body": [
       "with ProcessPoolExecutor(max_workers=6) as executor:",
-      "    \"\"\"# ProcessPoolExecutor - 多进程：CPU密集型任务（计算、循环、解析、音视频图像处理）",
+      "    \"\"\"# ProcessPoolExecutor - 多进程：CPU密集型任务（计算、循环、解析、音频、视频、图像、压缩、解压、处理）",
       "    **创建 ProcessPoolExecutor 进程池 实例对象 executor**",
       "    futures = [executor.submit(fn, *args, **kwargs)] : fn 参数是要执行的函数, *args 和 **kwargs 是 fn 的参数",
       "    results = [] : 使用空列表接收线程运行结果 -> [results.append(future.result()) for future in as_completed(futures)]",
