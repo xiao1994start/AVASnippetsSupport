@@ -469,15 +469,11 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/多线程相关/multiprocessing 多进程/multiprocessing.json"
+        "path": "./snippets/python/多线程相关/asyncio 协程与异步IO/asyncio.Ex.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/多线程相关/threading 多线程/threading.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/多线程相关/ThreadPoolExecutor 线程池和进程池/ThreadPoolExecutor.json"
+        "path": "./snippets/python/多线程相关/concurrent.futures 启动并行任务/futures.json"
       },
       {
         "language": "bat",

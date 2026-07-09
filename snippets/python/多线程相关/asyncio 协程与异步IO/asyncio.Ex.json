@@ -1,0 +1,35 @@
+{
+  "创建 asyncio.gather 程序入口": {
+    "prefix": ["async def run_gather -asyncio"],
+    "body": [
+      "async def run_gather():",
+      "    # * tasks: list([asyncio.to_thread(func, *args, **kwds)])",
+      "    tasks = []",
+      "    # * await asyncio.gather -> results: 按传入顺序返回",
+      "    results = await asyncio.gather(*tasks)",
+      "    # * 运行: asyncio.run(run_gather())",
+      "    print(results)",
+      "",
+      ""
+    ],
+    "description": ["创建 asyncio.gather 程序入口"]
+  },
+  "创建 asyncio.as_completed 程序入口": {
+    "prefix": ["async def run_as_completed -asyncio"],
+    "body": [
+      "async def run_as_completed():",
+      "    results = []  # 记录返回结果",
+      "    # * tasks: list([asyncio.to_thread(func, *args, **kwds)])",
+      "    tasks = [asyncio.to_thread(do_work, i) for i in range(5)]",
+      "    # * asyncio.as_completed -> results: 按完成顺序返回",
+      "    result = asyncio.as_completed(tasks)",
+      "    for res in result:",
+      "        results.append(await res)",
+      "    # * 运行: asyncio.run(run_as_completed())",
+      "    print(results)",
+      "",
+      ""
+    ],
+    "description": ["创建 asyncio.as_completed 程序入口"]
+  }
+}
