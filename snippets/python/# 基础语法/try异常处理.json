@@ -42,7 +42,7 @@
     "prefix": ["try finally =-try"],
     "body": [
       "try:",
-      "    # *正常执行",
+      "    # * 正常执行",
       "    $0",
       "    ...",
       "finally:",
@@ -58,7 +58,7 @@
     "prefix": ["try except else finally =-try", "try e else finally =-try", "try exc else finally =-try"],
     "body": [
       "try:",
-      "    # *正常执行",
+      "    # * 正常执行",
       "    $0",
       "    ...",
       "except Exception as error:",
@@ -70,7 +70,7 @@
       "    ...",
       "    raise error   # raise: 抛出异常, 程序终止 (如果注释掉, 则程序继续执行, 正常退出)",
       "else:",
-      "    # *运行正常时执行",
+      "    # * 运行正常时执行",
       "    ...",
       "finally:",
       "    # TODO 仅支持: raise 语句",

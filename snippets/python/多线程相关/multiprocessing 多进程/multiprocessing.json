@@ -2,7 +2,7 @@
   "引入 multiprocessing 多进程依赖": {
     "prefix": ["import multiprocessing", "im multiprocessing as mp"],
     "body": [
-      "import multiprocessing as mp  # *多进程依赖",
+      "import multiprocessing as mp  # * 多进程依赖",
       "from multiprocessing import Pool, Process, Queue  # 进程池, 进程, 队列"
     ],
     "description": ["引入 multiprocessing 多进程依赖"]

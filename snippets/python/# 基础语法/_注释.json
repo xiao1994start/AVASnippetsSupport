@@ -18,7 +18,7 @@
     "prefix": ["import==", "im==", "import xxx==", "im xxx=="],
     "body": [
       "import os",
-      "import subprocess  # *执行系统命令模块",
+      "import subprocess  # * 执行系统命令模块",
       "import sys",
       "import zipfile",
       "from pathlib import Path",

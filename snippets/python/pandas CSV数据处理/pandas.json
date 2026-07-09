@@ -42,10 +42,10 @@
     "prefix": ["pd update", "pandas update", "update -pd", "update -pandas"],
     "body": [
       "update(",
-      "    other=${1:pd.DataFrame()},  # *更新当前对象的另一个DataFrame或Series对象",
-      "    join='left',  # *更新方式: 'left':(默认)更新左表",
-      "    overwrite=True,  # *覆盖, True:(默认)完全覆盖; False:只覆盖NaN空值",
-      "    errors='ignore',  # *错误处理, 默认值: 'ignore':(默认)忽略错误; 'raise':抛出错误",
+      "    other=${1:pd.DataFrame()},  # * 更新当前对象的另一个DataFrame或Series对象",
+      "    join='left',  # * 更新方式: 'left':(默认)更新左表",
+      "    overwrite=True,  # * 覆盖, True:(默认)完全覆盖; False:只覆盖NaN空值",
+      "    errors='ignore',  # * 错误处理, 默认值: 'ignore':(默认)忽略错误; 'raise':抛出错误",
       ")",
       ""
     ],

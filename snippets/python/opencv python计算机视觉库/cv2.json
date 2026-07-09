@@ -6,30 +6,30 @@
   },
   "cv2.imread 读取图像信息(默认)": {
     "prefix": ["cv2 imread -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png})  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png})  # * 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(默认)"]
   },
   "cv2.imread 读取图像信息(GRAY灰度)": {
     "prefix": ["cv2 imread gray -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, 0)  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, 0)  # * 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(GRAY灰度)"]
   },
   "cv2.imread 读取图像信息(RGB)": {
     "prefix": ["cv2 imread RGB -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, 1)  # *读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, 1)  # * 读取图片:1彩色模式;0灰度模式;-1含alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(RGB)"]
   },
   "cv2.imread 读取图像信息(Alpha)": {
     "prefix": ["cv2 imread Alpha -cv2"],
-    "body": ["cv2.imread(${1:imgPath_png}, -1)  # *读取图片:1彩色模式;0灰度模式;-1含Alpha通道原图模式"],
+    "body": ["cv2.imread(${1:imgPath_png}, -1)  # * 读取图片:1彩色模式;0灰度模式;-1含Alpha通道原图模式"],
     "description": ["cv2.imread 读取图像信息(Alpha)"]
   },
   "cv2.imshow 显示图像": {
     "prefix": ["cv2 imshow -cv2"],
     "body": [
-      "cv2.imshow(${1:img_window_title}, ${2:imread_cvtColorIMG})  # *显示 cv2.imread() 读取对象图片",
-      "cv2.waitKey(0)  # *图像显示时间函数(0 为无限时间的显示函数)",
-      "cv2.destroyAllWindows()  # *按下任意键便可关闭窗口"
+      "cv2.imshow(${1:img_window_title}, ${2:imread_cvtColorIMG})  # * 显示 cv2.imread() 读取对象图片",
+      "cv2.waitKey(0)  # * 图像显示时间函数(0 为无限时间的显示函数)",
+      "cv2.destroyAllWindows()  # * 按下任意键便可关闭窗口"
     ],
     "description": ["cv2.imshow 显示图像"]
   },
@@ -45,12 +45,12 @@
   },
   "cv2.shape 获取图像 (宽, 高, 通道数)": {
     "prefix": ["cv2 shape -cv2"],
-    "body": ["shape  # *获取图像信息 -> tuple: (height, width, channel)"],
+    "body": ["shape  # * 获取图像信息 -> tuple: (height, width, channel)"],
     "description": ["cv2.shape 获取图像 (宽, 高, 通道数)"]
   },
   "cv2.cvtColor 图像转换色彩模式": {
     "prefix": ["cv2 cvtColor -cv2"],
-    "body": ["cv2.cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # *颜色空间转换[cv2.COLOR_BGR2GRAY:灰度模式]"],
+    "body": ["cv2.cvtColor(${1:imread_读取对象}, cv2.COLOR_BGR2GRAY)  # * 颜色空间转换[cv2.COLOR_BGR2GRAY:灰度模式]"],
     "description": ["cv2.cvtColor 图像转换色彩模式"]
   },
   "cv2.matchTemplate 模板匹配": {
@@ -63,12 +63,12 @@
   "cv2.minMaxLoc 查找匹配结果": {
     "prefix": ["cv2 minMaxLoc -cv2"],
     "body": [
-      "# *结果解析 -> tuple[index]: (min_val最小值, max_val最大值, min_loc左上角坐标, max_loc右下角坐标)",
+      "# * 结果解析 -> tuple[index]: (min_val最小值, max_val最大值, min_loc左上角坐标, max_loc右下角坐标)",
       "min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(${1:matchTemplate_对象结果})",
-      "# top_left = max_loc  # *左上角坐标",
-      "# bottom_right = (top_left[0] + templ.shape[1], top_left[1] + templ.shape[0])  # *右下角坐标",
-      "# width = bottom_right[0] - top_left[0]  # *宽度",
-      "# height = bottom_right[1] - top_left[1]  # *高度",
+      "# top_left = max_loc  # * 左上角坐标",
+      "# bottom_right = (top_left[0] + templ.shape[1], top_left[1] + templ.shape[0])  # * 右下角坐标",
+      "# width = bottom_right[0] - top_left[0]  # * 宽度",
+      "# height = bottom_right[1] - top_left[1]  # * 高度",
       ""
     ],
     "description": ["cv2.minMaxLoc 查找匹配结果"]
@@ -76,14 +76,14 @@
   "cv2.rectangle 绘制矩形": {
     "prefix": ["cv2 rectangle -cv2"],
     "body": [
-      "cv2.rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # *绘制矩形:RGB(0, 0, 255)-红色;线宽1|填充-1"
+      "cv2.rectangle(${1:image_绘制对象}, ${2:upper_left_左上角坐标}, ${3:bottom_right_右下角坐标}, (0, 0, 255), 2)  # * 绘制矩形:RGB(0, 0, 255)-红色;线宽1|填充-1"
     ],
     "description": ["cv2.rectangle 绘制矩形"]
   },
   "cv2.resize 改变图像的尺寸": {
     "prefix": ["cv2 resize -cv2"],
     "body": [
-      "cv2.resize(${1:image_尺寸调整原始图像}, (0, 0), fx=1, fy=1)  # *缩放图片:cv2.imread()读取的图像对象; (0, 0)不直接指定尺寸; fx/fy缩放比例因子"
+      "cv2.resize(${1:image_尺寸调整原始图像}, (0, 0), fx=1, fy=1)  # * 缩放图片:cv2.imread()读取的图像对象; (0, 0)不直接指定尺寸; fx/fy缩放比例因子"
     ],
     "description": ["cv2.resize 改变图像的尺寸"]
   }

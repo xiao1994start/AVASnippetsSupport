@@ -13,9 +13,9 @@
       "        kwargs (dict, optional): 目标函数参数字典[{'参数名':值}]. Defaults to {}.",
       "    \"\"\"",
       "    t = threading.Thread(target=func, kwargs=kwargs, daemon=True)",
-      "    # *创建线程[target=目标函数, kwargs={'参数名':值}, daemon=守护线程(主线程结束,守护线程自动结束)]",
-      "    t.start()  # *启动线程",
-      "    keyboard.wait('esc')  # *监听键盘按键事件,直到按下 'esc' 键结束程序",
+      "    # * 创建线程[target=目标函数, kwargs={'参数名':值}, daemon=守护线程(主线程结束,守护线程自动结束)]",
+      "    t.start()  # * 启动线程",
+      "    keyboard.wait('esc')  # * 监听键盘按键事件,直到按下 'esc' 键结束程序",
       "    return",
       ""
     ],

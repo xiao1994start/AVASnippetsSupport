@@ -2,9 +2,9 @@
   "引入 pyautogui 自动化计算机行为": {
     "prefix": ["import pyautogui", "im pyautogui as pg"],
     "body": [
-      "import pyautogui as pg  # *计算机自动化操作库(setuptools自动管理pyscreeze,Pillow)",
+      "import pyautogui as pg  # * 计算机自动化操作库(setuptools自动管理pyscreeze,Pillow)",
       "",
-      "pg.PAUSE = 1  # *开启延迟(故障保护), 当pyAutoGUI遇到错误时, 程序会暂停1s(秒); 可根据需要调整PAUSE的值",
+      "pg.PAUSE = 1  # * 开启延迟(故障保护), 当pyAutoGUI遇到错误时, 程序会暂停1s(秒); 可根据需要调整PAUSE的值",
       ""
     ],
     "description": ["引入 pyautogui 自动化计算机行为"]

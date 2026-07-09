@@ -1,7 +1,7 @@
 {
   "引入 keyboard 监听和模拟键盘事件": {
     "prefix": ["import keyboard", "im keyboard"],
-    "body": ["import keyboard  # *监听和模拟键盘事件"],
+    "body": ["import keyboard  # * 监听和模拟键盘事件"],
     "description": ["监听和模拟键盘事件"]
   },
   "keyboard.is_pressed 检查按键是否被按下": {
@@ -16,7 +16,7 @@
   },
   "keyboard.wait 监听键盘按键事件": {
     "prefix": ["keyboard wait -keyboard"],
-    "body": ["keyboard.wait('${1:esc}')  # *监听键盘按键事件"],
+    "body": ["keyboard.wait('${1:esc}')  # * 监听键盘按键事件"],
     "description": ["阻塞当前线程,直到满足某个按键条件为止"]
   }
 }

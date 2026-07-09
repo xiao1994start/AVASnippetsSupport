@@ -6,12 +6,12 @@
   },
   "引入 lxml.etree xml解析库": {
     "prefix": ["import lxml etree ", "im lxml etree "],
-    "body": ["from lxml import html  # *替代 from lxml import etree [etree = html.etree]", ""],
+    "body": ["from lxml import html  # * 替代 from lxml import etree [etree = html.etree]", ""],
     "description": "引入 lxml xml解析库"
   },
   "引入 lxml.html xml解析库": {
     "prefix": ["import lxml html ", "im lxml html "],
-    "body": ["from lxml import html  # *替代 from lxml import etree [etree = html.etree]", ""],
+    "body": ["from lxml import html  # * 替代 from lxml import etree [etree = html.etree]", ""],
     "description": "引入 html xml解析库"
   }
 }

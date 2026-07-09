@@ -14,7 +14,7 @@
     "body": [
       "user_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',}",
       "with httpx.Client(headers=user_headers, timeout=None) as client:",
-      "    # *参数说明:",
+      "    # * 参数说明:",
       "    # base_url= 配置请求的 base_url, 注意: client.get|psot(url) 参数 url 会自动拼接在 base_url 后面, 形成完整的请求URL",
       "    # headers= 配置请求的 headers [{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0'}]",
       "    # timeout=None 超时时间(None | 0: 无限等待; 默认值: 10 -> 10秒等待)",

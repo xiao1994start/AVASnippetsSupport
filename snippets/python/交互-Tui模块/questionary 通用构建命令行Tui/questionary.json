@@ -1,12 +1,12 @@
 {
   "引入 questionary 构建命令行Tui界面": {
     "prefix": ["import questionary", "im questionary"],
-    "body": ["import questionary  # *构建命令行Tui界面", ""],
+    "body": ["import questionary  # * 构建命令行Tui界面", ""],
     "description": ["引入 questionary 构建命令行Tui界面"]
   },
   "questionary.press_any_key_to_continue 按任意键": {
     "prefix": ["questionary press_any_key_to_continue =-questionary"],
-    "body": ["questionary.press_any_key_to_continue(message='按任意键...').ask()  # *按任意键...", ""],
+    "body": ["questionary.press_any_key_to_continue(message='按任意键...').ask()  # * 按任意键...", ""],
     "description": ["按任意键"]
   },
   "questionary.rawselect 基础单选": {
@@ -20,7 +20,7 @@
       "        '选项三',",
       "    ],",
       "    qmark='🤔🧟⚠☢☣🔞❓',  # *message前缀(显示在问题前面)",
-      "    pointer='👉',  # *当前突出显示的元素前面的指针符号(默认`»`)",
+      "    pointer='👉',  # * 当前突出显示的元素前面的指针符号(默认`»`)",
       ").ask()",
       ""
     ],
@@ -37,11 +37,11 @@
       "        '选项三',",
       "    ],",
       "    qmark='🤔🧟⚠☢☣🔞❓',  # *message前缀(显示在问题前面)",
-      "    pointer='👉',  # *当前突出显示的元素前面的指针符号(默认`»`)",
-      "    use_indicator=True,  # *用于启用列表前的小指示器(高亮显示当前选择光标的位置)",
-      "    use_jk_keys=True,  # *允许用户使用`j`(向上) / `k`(向下)",
-      "    use_shortcuts=True,  # *允许用户使用快捷键从列表中选择项目(快捷键将显示在列表项的前面)",
-      "    show_selected=True,  # *在列表底部显示当前选择项",
+      "    pointer='👉',  # * 当前突出显示的元素前面的指针符号(默认`»`)",
+      "    use_indicator=True,  # * 用于启用列表前的小指示器(高亮显示当前选择光标的位置)",
+      "    use_jk_keys=True,  # * 允许用户使用`j`(向上) / `k`(向下)",
+      "    use_shortcuts=True,  # * 允许用户使用快捷键从列表中选择项目(快捷键将显示在列表项的前面)",
+      "    show_selected=True,  # * 在列表底部显示当前选择项",
       ").ask()",
       ""
     ],
@@ -65,7 +65,7 @@
       "        '选项二',",
       "        '选项三',",
       "    ],",
-      "    use_jk_keys=True,  # *允许用户使用`j`(向上) / `k`(向下)",
+      "    use_jk_keys=True,  # * 允许用户使用`j`(向上) / `k`(向下)",
       ").ask()",
       "",
       "func_hub = {",

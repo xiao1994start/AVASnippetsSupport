@@ -819,7 +819,7 @@
       "    async def git_env(self, e: flet.Event[flet.Button]):",
       "        # * git 环境处理事件",
       "",
-      "        import asyncio  # *异步IO实现更高的并发性",
+      "        import asyncio  # * 异步IO实现更高的并发性",
       "",
       "        print(e, e.control.key, e.control.data)",
       "",

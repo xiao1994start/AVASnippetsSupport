@@ -30,7 +30,7 @@
   "定义nfo获取Plugin插件信息数据类(# 字段名)": {
     "prefix": "nfoPluginInfo dataclass =",
     "body": [
-      "from dataclasses import dataclass  # *引入 dataclass 高效定义数据类对象",
+      "from dataclasses import dataclass  # * 引入 dataclass 高效定义数据类对象",
       "@dataclass(slots=True, frozen=True, kw_only=True, order=True)",
       "# *slots=True省内存;kw_only=True防参数错乱;frozen=True不可变对象;order=True可比较大小",
       "class PluginNFO:",
