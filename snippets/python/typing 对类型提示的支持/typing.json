@@ -1,7 +1,7 @@
 {
   "引入 typing 对类型提示的支持": {
     "prefix": ["import typing", "im typing"],
-    "body": ["from typing import Any, Callable, List, Literal, Tuple, Union  # * 引入 typing 对类型提示的支持", ""],
+    "body": ["from typing import Any, Callable, Literal  # * 引入 typing 对类型提示的支持", ""],
     "description": ["引入 typing 对类型提示的支持"]
   },
   "引入 typing 对类型提示的支持_常用模块": {
@@ -21,10 +21,5 @@
       ""
     ],
     "description": ["引入 typing 对类型提示的支持_常用模块"]
-  },
-  "引入 typing.Literal 枚举类型": {
-    "prefix": ["import typing Literal", "im typing Literal"],
-    "body": ["from typing import Literal  # * 枚举类型", ""],
-    "description": ["引入 typing.Literal 枚举类型"]
   }
 }
