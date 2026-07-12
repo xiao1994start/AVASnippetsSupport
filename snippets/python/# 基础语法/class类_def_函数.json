@@ -132,12 +132,12 @@
   },
   "class 初始化(继承父类)": {
     "prefix": ["def init super init -class"],
-    "body": ["def __init__(self${1:, *args, **kwds}) -> None:", "    $0", "    super().__init__(${1:*args, **kwds})", ""],
+    "body": ["def __init__(self) -> None:", "    $0", "    super().__init__()", ""],
     "description": ["class 初始化(继承父类)"]
   },
   "class super().__init__() 继承父类": {
     "prefix": ["super init -class"],
-    "body": ["super().__init__(${1:*args, **kwds})", ""],
+    "body": ["super().__init__()", ""],
     "description": ["class 继承父类"]
   },
   "class类self": {

@@ -1,6 +1,6 @@
 {
   "print(...)": {
-    "prefix": ["ppt -print"],
+    "prefix": ["prit -print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },

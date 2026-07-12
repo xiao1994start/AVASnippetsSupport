@@ -10,7 +10,7 @@
     "description": ["开启延迟变量扩展"]
   },
   "ECHO 控制台输出": {
-    "prefix": ["ppt -ECHO"],
+    "prefix": ["prit -ECHO"],
     "body": ["ECHO $0"],
     "description": ["ECHO 控制台输出"]
   },

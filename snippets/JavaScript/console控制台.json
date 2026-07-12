@@ -1,6 +1,6 @@
 {
   "控制台输出日志": {
-    "prefix": ["ppt -log"],
+    "prefix": ["prit -log"],
     "body": ["console.log($0)"],
     "description": ["控制台输出日志"]
   }
