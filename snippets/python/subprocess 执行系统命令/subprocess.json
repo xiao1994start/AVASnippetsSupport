@@ -23,20 +23,9 @@
     "body": ["subprocess.run('cls', shell=True) if os.name == 'nt' else subprocess.run('clear')", "$0"],
     "description": ["subprocess.run 清空终端"]
   },
-  "subprocess.run 详细运行命令": {
-    "prefix": ["subprocess run ="],
-    "body": [
-      "subprocess.run(",
-      "    '$0',",
-      "    shell=True,",
-      "    capture_output=True,  # * 捕获输出",
-      "    text=True  # * 将输出作为字符串返回",
-      "    # 下面的参数可以省略",
-      "    # check=True,  # * 检查命令是否执行成功(注释:直接获取终端输出全部信息，且不报错)",
-      "    # * 使用方法:result.[args=传入参数, returncode=状态码, stdout=正常输出, stderr=错误输出]",
-      ")",
-      ""
-    ],
+  "subprocess.run 捕获输出": {
+    "prefix": ["subprocess run capture_output"],
+    "body": ["subprocess.run('$0', capture_output=True, text=True).stdout.strip()", ""],
     "description": [
       "subprocess.run 运行外部命令并等待其完成",
       "    args: 一个列表或字符串, 表示要执行的命令. 使用列表形式更安全, 因为它可以避免 shell 注入风险. 例如 ['ls', '-l'] 而不是 'ls -l'. ",
@@ -49,32 +38,41 @@
       "    返回值是一个CompletedProcess对象, 包含命令执行的结果. "
     ]
   },
-  "try:subprocess.run 捕获异常": {
-    "prefix": ["try subprocess run ="],
-    "body": [
-      "try:",
-      "    subprocess.run($0, shell=True, capture_output=True, check=True, text=True)",
-      "except subprocess.CalledProcessError as e:",
-      "    print('命令执行失败-信息:', e)",
-      "    print('命令执行失败-错误码:', e.returncode)",
-      "    print('错误输出:', e.stderr)",
-      ""
-    ],
-    "description": "try:subprocess.run 捕获异常"
+  "subprocess.run shell 捕获输出": {
+    "prefix": ["subprocess run shell capture_output"],
+    "body": ["subprocess.run('$0', shell=True, capture_output=True, text=True).stdout.strip()", ""],
+    "description": [
+      "subprocess.run 运行外部命令并等待其完成",
+      "    args: 一个列表或字符串, 表示要执行的命令. 使用列表形式更安全, 因为它可以避免 shell 注入风险. 例如 ['ls', '-l'] 而不是 'ls -l'. ",
+      "    stdin=subprocess.PIPE 表示允许从标准输入读取数据. ",
+      "    stdout: 定义如何处理命令的标准输出, 例如设置为 subprocess.PIPE 可以捕获输出. ",
+      "    stderr=subprocess.PIPE 表示将标准错误保存到变量中. ",
+      "    check: 布尔值, 默认是 False. 如果设为 True, 命令返回非零退出状态码时会引发 CalledProcessError 异常. 这个参数非常有用, 尤其是在处理必须执行成功的命令时, 可以避免继续执行错误逻辑. ",
+      "    shell=True 表示在shell中运行命令, 如果不需要在shell中运行, 可以设置为False. ",
+      "    text: 如果设为 True, 会将输出解码为字符串, 否则返回字节类型. ",
+      "    返回值是一个CompletedProcess对象, 包含命令执行的结果. "
+    ]
   },
   "subprocess.Popen 构造函数": {
     "prefix": ["subprocess Popen ="],
     "body": [
-      "subprocess.Popen(",
-      "    $0,  # * 传递给Popen的命令列表",
-      "    shell=True,  # * 是否在shell中运行命令, 如果不需要在shell中运行, 可以设置为False",
-      "    cwd=None,  # * 工作目录, 可以通过cwd='/path/to/dir'来设置工作目录",
-      "    venv={},  # * 环境变量, 可以通过venv={'PATH': '/usr/local/bin'}来设置环境变量",
-      "    startupinfo=None,  # * 启动信息, 可以通过startupinfo={'title': 'My Program'}来设置启动信息",
-      "    stdin=subprocess.PIPE,  # * 标准输入, 可以通过stdin=subprocess.PIPE来设置标准输入",
-      "    stdout=subprocess.PIPE,  # * 标准输出, 可以通过stdout=subprocess.PIPE来设置标准输出",
-      "    stderr=subprocess.PIPE,  # * 标准错误输出, 可以通过stderr=subprocess.PIPE来设置标准错误输出",
-      ")"
+      "with subprocess.Popen(",
+      "    args='${1:cmd command}'.split(' '),",
+      "    bufsize=1,",
+      "    # * 全缓冲(默认:-1)[进程结束一次性返回数据];",
+      "    # * 无缓冲(0)[每输出一个字节Python就能立刻读到,不能设置text=True];",
+      "    # * 行缓冲(1)[每输出完整的一行`\\n`,就把这一行打包发给 Python]",
+      "    stdout=subprocess.PIPE,",
+      "    stderr=subprocess.STDOUT,",
+      "    shell=True,",
+      "    text=True,",
+      ") as process:",
+      "    if process.stdout:",
+      "        for line in process.stdout:",
+      "            print(f'实时输出:{line.strip()}')",
+      "    returncode = process.wait()",
+      "    print(f'进程结束:[状态码:{returncode}]')",
+      ""
     ],
     "description": [
       "subprocess.Popen 构造函数",

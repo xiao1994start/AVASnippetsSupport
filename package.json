@@ -865,10 +865,6 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/subprocess 执行系统命令/subprocess.cmdScript.json"
-      },
-      {
-        "language": "python",
         "path": "./snippets/python/subprocess 执行系统命令/subprocess.json"
       },
       {
