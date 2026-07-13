@@ -17,11 +17,14 @@
   "Python 常用导入": {
     "prefix": ["import==", "im==", "import xxx==", "im xxx=="],
     "body": [
-      "import os",
+      "import asyncio  # * 异步IO实现更高的并发性",
+      "import logging",
       "import subprocess  # * 执行系统命令模块",
       "import sys",
       "import zipfile",
       "from pathlib import Path",
+      "",
+      "from rich import print  # * rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
       "",
       "$0"
     ],

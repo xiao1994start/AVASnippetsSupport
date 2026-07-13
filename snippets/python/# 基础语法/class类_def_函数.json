@@ -192,14 +192,14 @@
   },
   "if_main:运行入口 | 调试运行": {
     "prefix": ["if main", "if main ==", "if name == main"],
-    "body": ["if __name__ == '__main__':", "    \"\"\"# 运行入口 | 调试运行\"\"\"", "    $0", "    ..."],
+    "body": ["if __name__ == '__main__':", "    \"\"\" === 运行入口 | 调试运行 === \"\"\"", "    $0", "    ..."],
     "description": ["if_main:运行入口 | 调试运行"]
   },
   "if_in_main:运行入口 | 调试运行": {
     "prefix": ["if main in", "if name in mp_main"],
     "body": [
       "if __name__ in {'__main__', '__mp_main__'}:",
-      "    \"\"\"# 运行入口 | 调试运行 | 多进程[multiprocessing]运行\"\"\"",
+      "    \"\"\" === 运行入口 | 调试运行 | 多进程[multiprocessing]运行 === \"\"\"",
       "    $0",
       "    ...",
       ""

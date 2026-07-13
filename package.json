@@ -708,6 +708,10 @@
         "path": "./snippets/python/lxml xml解析库/lxml.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/Nuitka/nuitka.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/NumPy/numpy.bat.json"
       },
