@@ -12,11 +12,11 @@
   "httpx.Client with构造函数": {
     "prefix": ["with httpx Client"],
     "body": [
-      "user_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',}",
+      "user_headers = {'User-Agent': 'Mozilla/5.0',}",
       "with httpx.Client(headers=user_headers, timeout=None) as client:",
       "    # * 参数说明:",
       "    # base_url= 配置请求的 base_url, 注意: client.get|psot(url) 参数 url 会自动拼接在 base_url 后面, 形成完整的请求URL",
-      "    # headers= 配置请求的 headers [{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0'}]",
+      "    # headers= 配置请求的 headers [{'User-Agent': 'Mozilla/5.0'}]",
       "    # timeout=None 超时时间(None | 0: 无限等待; 默认值: 10 -> 10秒等待)",
       "    # verify= 配置请求的 SSL 验证, 默认值: True(启用 SSL 验证), 无法访问设置: False(禁用 SSL 验证) [str(指定 CA 证书路径), Callable(自定义验证函数)]",
       "    # event_hooks= 配置请求的事件钩子, 默认值: None(不使用事件钩子) 示例: {'request': [func1, func2], 'response': [func3, func4]}",
@@ -44,7 +44,7 @@
       "    'http://': httpx.HTTPTransport(proxy=prixy_url),",
       "    'https://': httpx.HTTPTransport(proxy=prixy_url),",
       "}  # 代理配置(socks>http): {'all://': httpx.HTTPTransport(proxy='socks5://user:pass@host:port')}",
-      "user_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',}",
+      "user_headers = {'User-Agent': 'Mozilla/5.0',}",
       "with httpx.Client(",
       "    base_url=base_url,",
       "    # proxy='socks5://user:pass@host:port',  # 代理(单个)配置,同 proxies",

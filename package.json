@@ -848,6 +848,10 @@
         "path": "./snippets/python/re 正则表达式/re.常用输入类型正则表达式示例.json"
       },
       {
+        "language": "python",
+        "path": "./snippets/python/requests/requests.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/selenium 自动化web测试/selenium.bat.json"
       },

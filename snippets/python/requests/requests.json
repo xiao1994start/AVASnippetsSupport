@@ -1,0 +1,17 @@
+{
+  "引入 requests HTTP 请求库": {
+    "prefix": ["import requests", "im requests"],
+    "body": ["import requests  # * HTTP 请求库"],
+    "description": ["引入 requests HTTP 请求库"]
+  },
+  "requests.get 发送请求": {
+    "prefix": ["requests get"],
+    "body": ["requests.get(url=url, headers=headers)"],
+    "description": ["requests.get 发送请求"]
+  },
+  "常用 headers 请求头": {
+    "prefix": ["headers -requests"],
+    "body": ["headers = {'User-Agent': 'Mozilla/5.0'}", ""],
+    "description": ["常用 headers 请求头"]
+  }
+}
