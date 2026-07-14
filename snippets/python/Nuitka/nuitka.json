@@ -384,7 +384,7 @@
       "    # ; Nuitka 编译命令行",
       "    command = ' '.join(commands)",
       "    print(f'>>{command}')",
-      "    # # ; 执行 Nuitka 编译命令行",
+      "    # ; 执行 Nuitka 编译命令行",
       "    subprocess.run(command, shell=True)",
       "    if Path(output_path).exists(follow_symlinks=False):",
       "        os.startfile(Path(output_path))  # 打开输出文件夹",
