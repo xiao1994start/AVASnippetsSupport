@@ -493,6 +493,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/交互-Gui模块/flet 基于Flutter WebUI框架/flet.03.FilePicker.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/交互-Gui模块/flet 基于Flutter WebUI框架/flet.模板.SideBar.json"
       },
       {
@@ -849,7 +853,7 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/requests/requests.json"
+        "path": "./snippets/python/requests HTTP 请求库/requests.json"
       },
       {
         "language": "bat",

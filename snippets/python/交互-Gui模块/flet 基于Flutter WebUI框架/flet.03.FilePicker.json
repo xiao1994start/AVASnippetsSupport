@@ -1,0 +1,27 @@
+{
+  "flet.FilePicker.pick_files 文件上传": {
+    "prefix": ["flet FilePicker pick_files"],
+    "body": [
+      "flet.FilePicker().pick_files(",
+      "    dialog_title='请选择文件',  # 对话框标题（仅适用独立运行）",
+      "    # initial_directory=f'{Path(__file__).parent.resolve()}',  # 初始目录，默认是当前目录",
+      "    file_type=flet.FilePickerFileType.CUSTOM,  # 限制文件类型",
+      "    allowed_extensions=['png'],  # 允许上传的文件类型扩展名",
+      "    allow_multiple=False,  # 是否允许选择多个文件上传",
+      ")",
+      ""
+    ],
+    "description": ["flet.FilePicker.pick_files 文件上传"]
+  },
+  "flet.FilePicker.get_directory_path 文件夹上传": {
+    "prefix": ["flet FilePicker get_directory_path"],
+    "body": [
+      "flet.FilePicker().get_directory_path(",
+      "    dialog_title='请选择目录',  # 对话框标题（仅适用独立运行）",
+      "    # initial_directory=f'{Path(__file__).parent.resolve()}',  # 初始目录，默认是当前目录",
+      ")",
+      ""
+    ],
+    "description": ["flet.FilePicker.get_directory_path 文件夹上传"]
+  }
+}

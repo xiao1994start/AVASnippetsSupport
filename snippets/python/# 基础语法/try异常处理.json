@@ -45,5 +45,15 @@
       ""
     ],
     "description": ["except PermissionError 文件操作"]
+  },
+  "except FileNotFoundError 系统找不到指定的文件": {
+    "prefix": ["except FileNotFoundError"],
+    "body": [
+      "except FileNotFoundError:",
+      "    subprocess.run('@ECHO OFF && ECHO 系统找不到指定的文件... && PAUSE', shell=True)",
+      "    ...",
+      ""
+    ],
+    "description": ["except FileNotFoundError 系统找不到指定的文件"]
   }
 }

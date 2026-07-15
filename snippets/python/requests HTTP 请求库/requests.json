@@ -6,7 +6,7 @@
   },
   "requests.get 发送请求": {
     "prefix": ["requests get"],
-    "body": ["requests.get(url=url, headers=headers)"],
+    "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'})"],
     "description": ["requests.get 发送请求"]
   },
   "常用 headers 请求头": {
