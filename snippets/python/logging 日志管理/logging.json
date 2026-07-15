@@ -53,27 +53,27 @@
     "description": ["logging.basicConfig 日志模块基础配置"]
   },
   "logging.debug(...)": {
-    "prefix": ["lg debug -logging"],
+    "prefix": ["log debug -logging"],
     "body": ["logging.debug($0)"],
     "description": ["logging.debug(...)"]
   },
   "logging.info(...)": {
-    "prefix": ["lg info -logging"],
+    "prefix": ["log info -logging"],
     "body": ["logging.info($0)"],
     "description": ["logging.info(...)"]
   },
   "logging.warning(...)": {
-    "prefix": ["lg warning -logging"],
+    "prefix": ["log warning -logging"],
     "body": ["logging.warning($0)"],
     "description": ["logging.warning(...)"]
   },
   "logging.error(...)": {
-    "prefix": ["lg error -logging"],
+    "prefix": ["log error -logging"],
     "body": ["logging.error($0)"],
     "description": ["logging.error(...)"]
   },
   "logging.critical(...)": {
-    "prefix": ["lg critical -logging"],
+    "prefix": ["log debug -logging"],
     "body": ["logging.critical($0)"],
     "description": ["logging.critical(...)"]
   }
