@@ -8,8 +8,6 @@
       "ECHO 创建虚拟环境完成...",
       "ECHO 激活虚拟环境...",
       "call ./.venv/Scripts/activate.bat",
-      "ECHO 安装Jupyter内核ipykernel依赖库...",
-      "@REM pip install \"ipykernel\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
       "",
       "",
       "ECHO 安装依赖库...",
@@ -40,15 +38,6 @@
     "body": ["ECHO pip 版本号", "call pip --version", ""],
     "description": "pip 版本号"
   },
-  "pip.Jupyter内核ipykernel依赖库": {
-    "prefix": ["pip Jupyter", "pip ipykernel"],
-    "body": [
-      "ECHO 安装Jupyter内核ipykernel依赖库...",
-      "pip install \"ipykernel\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
-      "uv add  \"ipykernel\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"
-    ],
-    "description": ["pip.Jupyter内核ipykernel依赖库"]
-  },
   "pip.镜像源": {
     "prefix": ["pip -config-index-url"],
     "body": [
@@ -77,12 +66,12 @@
   },
   "pip.install 安装库": {
     "prefix": ["pip new -install", "pip new -I"],
-    "body": ["pip install ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
+    "body": ["pip install \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -i 安装库"]
   },
   "pip.-reinstall 强制重装库": {
     "prefix": ["pip -reinstall"],
-    "body": ["pip install --force-reinstall ${1:库名_whl文件路径} ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
+    "body": ["pip install --force-reinstall \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -reinstall 强制重装库"]
   },
   "pip.install-upgrade 安装最新发布库": {
@@ -92,7 +81,7 @@
   },
   "pip.uninstall 卸载": {
     "prefix": ["pip -uninstall", "pip -UN"],
-    "body": ["pip uninstall ${1:库名} -y"],
+    "body": ["pip uninstall \"${1:库名}\" -y"],
     "description": ["pip -uninstall 卸载"]
   },
   "pip.freeze 获取安装库列表": {

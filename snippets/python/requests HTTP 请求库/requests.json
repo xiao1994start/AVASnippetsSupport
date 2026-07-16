@@ -4,6 +4,22 @@
     "body": ["import requests  # * HTTP 请求库"],
     "description": ["引入 requests HTTP 请求库"]
   },
+  "HTTP 状态码": {
+    "prefix": ["about HTTP Status Code -H"],
+    "body": [
+      "'''",
+      "200 OK -客户端请求成功",
+      "301 Moved Permanently -资源被永久移动到新地址",
+      "400 Bad Request -客户端不能被服务器所理解",
+      "401 Unauthorized -请求未经授权",
+      "403 Forbidden -服务器拒绝提供服务",
+      "404 Not Found -请求资源不存在",
+      "500 Internal Server Error -服务器发生不可预期的错误",
+      "503 Server Unavailable -服务器当前不能处理客户端的请求",
+      "'''"
+    ],
+    "description": ["HTTP 状态码"]
+  },
   "requests.get 发送请求": {
     "prefix": ["requests get"],
     "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'})"],
