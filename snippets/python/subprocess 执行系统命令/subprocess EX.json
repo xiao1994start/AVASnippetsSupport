@@ -1,0 +1,7 @@
+{
+  "subprocess.run 调用 cURL 下载文件": {
+    "prefix": ["subprocess run curl"],
+    "body": ["subprocess.run(f'curl -SL {url} -o \"{save_file}\"')"],
+    "description": ["subprocess.run 调用 cURL 下载文件"]
+  }
+}

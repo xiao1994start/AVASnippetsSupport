@@ -15,7 +15,7 @@
     "description": "游戏窗口的图标"
   },
   "构建rpa归档文件": {
-    "prefix": ["init python build"],
+    "prefix": ["init python build class"],
     "body": [
       "init python:",
       "    # * python语句块*",

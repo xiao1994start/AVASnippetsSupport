@@ -837,6 +837,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/subprocess 执行系统命令/subprocess EX.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/sys 系统相关的形参和函数/sys.json"
       },
       {
