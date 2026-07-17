@@ -4,17 +4,17 @@
     "body": ["extractall(${1:out_path})  # 解压全部文件到"],
     "description": ["zipfile.extractall 解压 zipfile.ZipFile 对象全部文件到"]
   },
-  "with ZipFile -r 解压文件到": {
+  "with ZipFile -r 解压": {
     "prefix": ["with zipfile ZipFile -r"],
     "body": ["with zipfile.ZipFile(zip_path, \"r\") as zf:", "    zf.extractall(${1:out_path})  # 解压到目录"],
-    "description": ["with ZipFile -r 解压文件到"]
+    "description": ["with ZipFile -r 解压"]
   },
-  "with ZipFile -w 压缩文件到": {
+  "with ZipFile -w 压缩 文件到": {
     "prefix": ["with zipfile ZipFile -w"],
     "body": [
       "with zipfile.ZipFile(out_zip, \"w\", zipfile.ZIP_DEFLATED) as zf:",
       "    zf.write(${1:file_path})  # 压缩文件到目录"
     ],
-    "description": ["with ZipFile -w 压缩文件到"]
+    "description": ["with ZipFile -w 压缩"]
   }
 }

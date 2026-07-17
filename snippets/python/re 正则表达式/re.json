@@ -4,6 +4,11 @@
     "body": ["import re"],
     "description": ["引入re正则表达式模块"]
   },
+  "re.compile 编译正则表达式": {
+    "prefix": ["re compile"],
+    "body": ["re.compile(r'正则匹配条件(正则捕获组)')"],
+    "description": ["re.compile 编译正则表达式"]
+  },
   "re.findall 查找匹配字符串->list": {
     "prefix": ["re findall"],
     "body": ["re.findall(r'${1:正则条件}', ${2:匹配对象})"],

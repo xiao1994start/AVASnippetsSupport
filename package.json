@@ -477,71 +477,71 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/argparse 命令行参数模块/argparse.json"
+        "path": "./snippets/python/终端交互-Tui模块/argparse 命令行参数模块/argparse.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-Tui模块/inquirer 交互式命令行终端/inquirer.bat.json"
+        "path": "./snippets/python/终端交互-Tui模块/inquirer 交互式命令行终端/inquirer.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/inquirer 交互式命令行终端/inquirer.json"
+        "path": "./snippets/python/终端交互-Tui模块/inquirer 交互式命令行终端/inquirer.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.import.json"
+        "path": "./snippets/python/终端交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.import.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.tmpl.json"
+        "path": "./snippets/python/终端交互-Tui模块/msvcrt 终端交互库Windows/msvcrt.tmpl.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/msvcrt 终端交互库Windows/msvcrt控制台IO.json"
+        "path": "./snippets/python/终端交互-Tui模块/msvcrt 终端交互库Windows/msvcrt控制台IO.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-Tui模块/questionary 通用构建命令行Tui/questionary.bat.json"
+        "path": "./snippets/python/终端交互-Tui模块/questionary 通用构建命令行Tui/questionary.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/questionary 通用构建命令行Tui/questionary.json"
+        "path": "./snippets/python/终端交互-Tui模块/questionary 通用构建命令行Tui/questionary.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich.bat.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich.bat.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich表格管理器Table.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich表格管理器Table.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich进度条控制.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich进度条控制.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich控制台输出Console.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich控制台输出Console.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich面板输出.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich面板输出.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich日志输出管理器logging.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich日志输出管理器logging.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich替代print.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich替代print.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich颜色控制.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich颜色控制.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/交互-Tui模块/rich 终端文本样式库/rich样式控制.json"
+        "path": "./snippets/python/终端交互-Tui模块/rich 终端文本样式库/rich样式控制.json"
       },
       {
         "language": "bat",
@@ -738,6 +738,14 @@
       {
         "language": "python",
         "path": "./snippets/python/platform 系统底层数据访问/platform.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/py7zr 7z解压工具/py7zr.bat.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/py7zr 7z解压工具/py7zr.json"
       },
       {
         "language": "bat",

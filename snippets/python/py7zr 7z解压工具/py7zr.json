@@ -1,0 +1,12 @@
+{
+  "引入 py7zr 引入py7zr归档7z依赖": {
+    "prefix": ["import py7zr", "im py7zr"],
+    "body": ["import py7zr  # * 归档7z依赖", ""],
+    "description": ["引入 py7zr 引入py7zr归档7z依赖"]
+  },
+  "with py7zr.SevenZipFile -r 解压7z文件到": {
+    "prefix": ["with py7zr SevenZipFile -r"],
+    "body": ["with py7zr.SevenZipFile(7z_path, 'r') as zf:", "    zf.extractall(out_path)  # 7z 解压到目录", ""],
+    "description": ["with py7zr.SevenZipFile -r 解压7z文件到"]
+  }
+}
