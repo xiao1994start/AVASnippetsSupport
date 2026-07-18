@@ -1,7 +1,17 @@
 {
   "subprocess.run 调用 cURL 下载文件": {
-    "prefix": ["subprocess run curl"],
+    "prefix": ["subprocess run curl -cmd"],
     "body": ["subprocess.run(f'curl -SL {url} -o \"{save_file}\"')"],
     "description": ["subprocess.run 调用 cURL 下载文件"]
+  },
+  "subprocess.run 删除📂文件夹": {
+    "prefix": ["subprocess run rd -cmd"],
+    "body": ["subprocess.run(f'rd /S /Q \"{文件夹_路径}\"', shell=True)"],
+    "description": ["subprocess.run 删除📂文件夹"]
+  },
+  "subprocess.run 删除📃文件": {
+    "prefix": ["subprocess run del -cmd"],
+    "body": ["subprocess.run(f'del /F /Q \"{文件_路径}\"', shell=True)"],
+    "description": ["subprocess.run 删除📃文件"]
   }
 }
