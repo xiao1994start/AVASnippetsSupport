@@ -544,7 +544,7 @@
       "        )",
       "",
       "        # * 实例 Root 路径信息容器",
-      "        self.cwd_text = flet.Text(value=f'CWD: {get_cwd()}', no_wrap=True)",
+      "        self.cwd_text = flet.Text(value=f'[CWD💿]: {get_cwd()}', no_wrap=True)",
       "        self.cwd_cont = flet.Container(",
       "            content=flet.Row(",
       "                controls=[",
