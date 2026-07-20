@@ -1,0 +1,26 @@
+{
+  "[def]正则中文路径检查": {
+    "prefix": ["def has_chinese -re"],
+    "body": [
+      "def has_chinese(args):",
+      "    \"\"\"# 判断传入的值中是否有中文的元素",
+      "",
+      "    Args:",
+      "        args (Any): 需要检查的值",
+      "",
+      "    Returns:",
+      "        bool: True | False",
+      "    \"\"\"",
+      "    import re",
+      "",
+      "    _args = str(args)",
+      "    chinese_pattern = re.compile(r'[\\u4e00-\\u9fa5]')  # 定义中文字符的正则表达式范围",
+      "    _has_chinese = chinese_pattern.search(_args)  # search 会扫描整个字符串，只要找到一个匹配项就会返回 Match 对象",
+      "    if _has_chinese:",
+      "        return True",
+      "    return False",
+      ""
+    ],
+    "description": ["[def]正则中文路径检查"]
+  }
+}

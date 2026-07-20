@@ -809,6 +809,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/re 正则表达式/re.常用函数.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/requests HTTP 请求库/requests.json"
       },
       {
