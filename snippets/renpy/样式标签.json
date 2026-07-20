@@ -35,8 +35,8 @@
     "description": "Color Tag 深粉红-标签"
   },
   "Bold & Color Tag 深粉红&加粗-标签": {
-    "prefix": ["cColor#FF149 bBold -Tag", "cColor--DeepPink bBold -Tag"],
-    "body": "{color=#FF1493}#深粉红{/color} {b}$0{/b}",
+    "prefix": ["bBold cColor#FF149 -Tag", "bBold cColor--DeepPink -Tag"],
+    "body": "{b}{color=#FF1493}${1:#加粗深粉红}{/color}{/b}",
     "description": "Bold & Color Tag 深粉红&加粗-标签"
   },
   "Font Tag 字体-标签": {
