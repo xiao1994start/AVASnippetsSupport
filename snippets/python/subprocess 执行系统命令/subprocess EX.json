@@ -13,5 +13,10 @@
     "prefix": ["subprocess run del -cmd"],
     "body": ["subprocess.run(f'del /F /Q \"{文件_路径}\"', shell=True)"],
     "description": ["subprocess.run 删除📃文件"]
+  },
+  "subprocess.run 复制📃文件": {
+    "prefix": ["subprocess run copy -cmd"],
+    "body": ["subprocess.run(f'copy /V /Y \"{copy_from}\" \"{copy_to}\"', shell=True)"],
+    "description": ["subprocess.run 复制📃文件"]
   }
 }
