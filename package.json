@@ -333,6 +333,10 @@
       },
       {
         "language": "python",
+        "path": "./snippets/python/7z解压工具/7zr.json"
+      },
+      {
+        "language": "python",
         "path": "./snippets/python/# 基础语法/_注释.json"
       },
       {
@@ -738,14 +742,6 @@
       {
         "language": "python",
         "path": "./snippets/python/platform 系统底层数据访问/platform.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/py7zr 7z解压工具/py7zr.bat.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/py7zr 7z解压工具/py7zr.json"
       },
       {
         "language": "bat",

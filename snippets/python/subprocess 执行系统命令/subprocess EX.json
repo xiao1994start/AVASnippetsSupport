@@ -18,5 +18,15 @@
     "prefix": ["subprocess run copy -cmd"],
     "body": ["subprocess.run(f'copy /V /Y \"{copy_from}\" \"{copy_to}\"', shell=True)"],
     "description": ["subprocess.run 复制📃文件"]
+  },
+  "subprocess.run 解压📃文件": {
+    "prefix": ["subprocess run zr7 x -cmd"],
+    "body": ["subprocess.run(f'\"{zr7_file}\" x \"{z_file}\" -o\"{out_file}\" -y')"],
+    "description": ["subprocess.run 解压📃文件"]
+  },
+  "subprocess.run 压缩📃文件": {
+    "prefix": ["subprocess run zr7 a -cmd"],
+    "body": ["subprocess.run(f'\"{zr7_file}\" a -t7z -o\"{out_path}\" \"{z_file_name}\" \"{压缩的文件或目录}\" -r')"],
+    "description": ["subprocess.run 压缩📃文件"]
   }
 }
