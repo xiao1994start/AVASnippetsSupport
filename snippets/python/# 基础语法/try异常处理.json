@@ -6,10 +6,11 @@
       "    $0",
       "    ...",
       "except Exception as e:",
-      "    print(f'错误类型:{type(e)}')",
-      "    print(f'错误信息:{e}')",
+      "    print(f'🔴 错误类型:{type(e)}')",
+      "    print(f'🔴 错误信息:{e}')",
       "    ...",
-      "    raise e  # raise: 抛出异常, 程序终止 (如果注释掉, 则程序继续执行, 正常退出)"
+      "    raise e  # raise: 抛出异常, 程序终止 (如果注释掉, 则程序继续执行, 正常退出)",
+      ""
     ],
     "description": ["try:正常执行 except:异常处理"]
   },
@@ -17,8 +18,8 @@
     "prefix": ["except as e =-try"],
     "body": [
       "except Exception as e:",
-      "    print(f'错误类型:{type(e)}')",
-      "    print(f'错误信息:{e}')",
+      "    print(f'🔴 错误类型:{type(e)}')",
+      "    print(f'🔴 错误信息:{e}')",
       "    ...",
       "    raise e  # raise: 抛出异常, 程序终止 (如果注释掉, 则程序继续执行, 正常退出)",
       "    return",
@@ -30,7 +31,7 @@
     "prefix": ["except KeyboardInterrupt ="],
     "body": [
       "except KeyboardInterrupt:",
-      "    subprocess.run('@ECHO OFF && ECHO 按键终止程序... && PAUSE', shell=True)",
+      "    subprocess.run('@ECHO OFF && ECHO 🔴 按键终止程序... && PAUSE', shell=True)",
       "    ...",
       ""
     ],
@@ -40,7 +41,7 @@
     "prefix": ["except PermissionError"],
     "body": [
       "except PermissionError:",
-      "    subprocess.run('@ECHO OFF && ECHO 文件操作权限不足... && PAUSE', shell=True)",
+      "    subprocess.run('@ECHO OFF && ECHO 🔴 文件操作权限不足... && PAUSE', shell=True)",
       "    ...",
       ""
     ],
@@ -50,7 +51,7 @@
     "prefix": ["except FileNotFoundError"],
     "body": [
       "except FileNotFoundError:",
-      "    subprocess.run('@ECHO OFF && ECHO 系统找不到指定的文件... && PAUSE', shell=True)",
+      "    subprocess.run('@ECHO OFF && ECHO 🔴 系统找不到指定的文件... && PAUSE', shell=True)",
       "    ...",
       ""
     ],

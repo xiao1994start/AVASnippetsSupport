@@ -25,6 +25,11 @@
     "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'})"],
     "description": ["requests.get 发送请求"]
   },
+  "requests.get.text 发送请求并获取返回内容": {
+    "prefix": ["requests get text"],
+    "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'}).text"],
+    "description": ["requests.get.text 发送请求并获取返回内容"]
+  },
   "常用 headers 请求头": {
     "prefix": ["headers -requests"],
     "body": ["headers = {'User-Agent': 'Mozilla/5.0'}", ""],
