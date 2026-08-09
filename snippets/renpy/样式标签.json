@@ -24,21 +24,6 @@
     "body": "{color=${1:color code}}$2{/color}",
     "description": "Color Tag 颜色-标签"
   },
-  "Color Tag 暗灰色-标签": {
-    "prefix": ["cColor#696969 -Tag", "cColor--Gray -Tag"],
-    "body": "{color=#696969}${1:#暗灰色}$0{/color}",
-    "description": "Color Tag 暗灰色-标签"
-  },
-  "Color Tag 深粉红-标签": {
-    "prefix": ["cColor#FF1493 -Tag", "cColor--DeepPink -Tag"],
-    "body": "{color=#FF1493}${1:#深粉红}$0{/color}",
-    "description": "Color Tag 深粉红-标签"
-  },
-  "Bold & Color Tag 深粉红&加粗-标签": {
-    "prefix": ["bBold cColor#FF149 -Tag", "bBold cColor--DeepPink -Tag"],
-    "body": "{b}{color=#FF1493}${1:#加粗深粉红}{/color}{/b}",
-    "description": "Bold & Color Tag 深粉红&加粗-标签"
-  },
   "Font Tag 字体-标签": {
     "prefix": ["fFont -Tag"],
     "body": "{font=${1:font file}}$2{/font}",

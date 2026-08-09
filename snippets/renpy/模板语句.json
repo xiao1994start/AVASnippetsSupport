@@ -14,6 +14,22 @@
     "body": ["define config.window_icon = \"gui/window_icon.png\""],
     "description": "游戏窗口的图标"
   },
+  "定义固定样式": {
+    "prefix": ["init python style color"],
+    "body": [
+      "init python:",
+      "    # * 样式模板语句块",
+      "    # ; 调用方法: \"[样式名称]会话内容\"",
+      "",
+      "    gre = \"{color=#0f0}\"  # 绿色",
+      "    red = \"{color=#ff0f00}\"  # 红色",
+      "    dp = \"{color=#FF1493}\"  # 深粉红",
+      "",
+      "    gre_info = \"{color=#00c000}(补充说明)\"",
+      ""
+    ],
+    "description": ["定义固定样式"]
+  },
   "构建rpa归档文件": {
     "prefix": ["init python build class"],
     "body": [
