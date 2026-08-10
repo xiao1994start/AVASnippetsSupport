@@ -26,36 +26,7 @@
     "Programming Languages",
     "Snippets"
   ],
-  "main": "./extension.js",
-  "capabilities": {
-    "untrustedWorkspaces": {
-      "supported": true
-    }
-  },
   "contributes": {
-    "commands": [
-      {
-        "command": "avasnippetssupport.botTab",
-        "title": "Activate AVA Snippet Support & Tab Handler"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "avasnippetssupport.botTab",
-        "key": "tab",
-        "when": "editorTextFocus"
-      }
-    ],
-    "configuration": {
-      "title": "AVA Snippets Support Settings",
-      "properties": {
-        "avasnippetssupport.enableSmartTab": {
-          "type": "boolean",
-          "default": true,
-          "description": "启用智能 TAB 键行为，以跳出成对分隔符（如引号和括号）。如果禁用，将使用 VS Code 默认的 TAB 操作。"
-        }
-      }
-    },
     "languages": [
       {
         "id": "renpy",
