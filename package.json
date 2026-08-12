@@ -208,10 +208,6 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/bat/DeskEdit/commands.json"
-      },
-      {
-        "language": "bat",
         "path": "./snippets/bat/github/git.初始化.json"
       },
       {
