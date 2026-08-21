@@ -28,5 +28,10 @@
     "prefix": ["subprocess run 7z a -cmd"],
     "body": ["subprocess.run(f'\"{7za_7zr}\" a \"{out_7z_file}\" \"{压缩的文件或目录}\" -r')"],
     "description": ["subprocess.run 压缩📃文件"]
+  },
+  "subprocess.run robocopy复制文件或文件夹": {
+    "prefix": ["subprocess robocopy -cmd"],
+    "body": ["subprocess.run(f'robocopy \"{copy_from}\" \"{copy_to}\" /E /MIR /MT:16', shell=True)"],
+    "description": ["subprocess.run robocopy复制文件或文件夹"]
   }
 }
