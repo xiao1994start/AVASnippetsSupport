@@ -390,7 +390,7 @@
       "    print(f'>>{command}')",
       "    # ; 执行 Nuitka 编译命令行",
       "    subprocess.run(command, shell=True)",
-      "    # , 编译完成后 单独拷贝数据文件 避免二进制文件遗漏（如：exe、dll等）",
+      "    # , 编译完成后 单独拷贝补充文件 避免二进制文件遗漏（如：exe、dll等）",
       "    if include_data:",
       "        output_root = Path(Path(__file__).parent, output_path, f'{Path(main_file).stem}.dist')",
       "        for data_dir in include_data:",
