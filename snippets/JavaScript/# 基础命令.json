@@ -4,10 +4,10 @@
     "body": ["function ${1:name}(${2:params}) {", "  $0", "}", ""],
     "description": "创建 function 方法函数"
   },
-  "弹窗": {
-    "prefix": ["prit -alert"],
+  "alert(...) 弹窗": {
+    "prefix": ["alert"],
     "body": ["alert(${1:content})", ""],
-    "description": ["弹窗"]
+    "description": ["alert(...) 弹窗"]
   },
   "导出语法": {
     "prefix": ["export default", "expt default -export"],
