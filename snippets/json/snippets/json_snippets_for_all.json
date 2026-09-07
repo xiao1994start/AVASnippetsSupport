@@ -22,19 +22,6 @@
     ],
     "description": ["新建代码片段"]
   },
-  "snippets.newObject 新建对象代码片段": {
-    "prefix": ["newObject -snippets"],
-    "body": [
-      "\"type.object 描述\": {",
-      "  \"prefix\": [\".object -type\"],",
-      "  \"body\": [",
-      "    \".object()\"",
-      "  ],",
-      "  \"description\": [\"type.object 描述\"]",
-      "},"
-    ],
-    "description": ["新建代码片段"]
-  },
   "snippets-new=>示例": {
     "prefix": ["snippets-new =-snippets"],
     "body": [
@@ -49,7 +36,7 @@
       "\t]",
       "},"
     ],
-    "description": ["示例"]
+    "description": ["snippets-new=>示例"]
   },
   "snippets.插入": {
     "prefix": ["insert -snippets"],

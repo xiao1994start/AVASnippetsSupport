@@ -1,6 +1,6 @@
 {
   "npm 帮助说明": {
-    "prefix": ["help npm =npm-help"],
+    "prefix": ["npm -help"],
     "body": [
       "@REM npm 说明",
       "@REM 临时代理 --registry https://registry.npmmirror.com/",

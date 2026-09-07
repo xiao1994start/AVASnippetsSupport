@@ -99,10 +99,6 @@
         "path": "./snippets/全局-注释标志.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/全局-注释标志.json"
-      },
-      {
         "language": "xml",
         "path": "./snippets/全局-注释标志.json"
       },
@@ -276,7 +272,7 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/JavaScript/for循环.json"
+        "path": "./snippets/JavaScript/for_while_循环.json"
       },
       {
         "language": "javascript",
@@ -285,6 +281,10 @@
       {
         "language": "javascript",
         "path": "./snippets/JavaScript/try.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/JavaScript/vue/# vue_初始化.bat.json"
       },
       {
         "language": "json",
@@ -925,18 +925,6 @@
       {
         "language": "shellscript",
         "path": "./snippets/shellscript/# 基础命令.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript/axios网络请求库.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript/element-plus样式组件.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript/vue基础设置.json"
       },
       {
         "language": "xml",

@@ -1,7 +1,7 @@
 {
-  "TODO": {
-    "prefix": ["TODO ", "TD -TODO"],
-    "body": "TODO:",
-    "description": ["TODO"]
+  "注释 分隔符": {
+    "prefix": ["comment sep", "comment delim", "comment divider"],
+    "body": ["====================== ${1:comment} ======================"],
+    "description": ["注释 分隔符"]
   }
 }

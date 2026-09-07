@@ -1,6 +1,6 @@
 {
   "Git 配置user.name&user.email": {
-    "prefix": ["git config User -git-config"],
+    "prefix": ["git config User"],
     "body": [
       "ECHO 全局配置global 用户名称 邮箱",
       "call git config --global user.name '${1:name}'",
@@ -9,15 +9,15 @@
     "description": ["配置user.name&user.email"]
   },
   "Git 验证ssl": {
-    "prefix": ["git config Http SSL -git-config"],
-    "body": ["ECHO 全局配置global ssl验证", "git config --global http.sslVerify ${1|false,true|}"],
+    "prefix": ["git config Http SSL"],
+    "body": ["ECHO 全局配置global ssl验证", "call git config --global http.sslVerify ${1|false,true|}"],
     "description": ["Git 验证ssl"]
   },
   "强制 Git 走 HTTPS 通道": {
-    "prefix": ["git config https insteadOf ssh -git-config"],
+    "prefix": ["git config https insteadOf ssh"],
     "body": [
       "ECHO 强制 Git 走 HTTPS 通道",
-      "git config --global url.\"https://github.com/\".insteadOf \"ssh://git@github.com/\""
+      "call git config --global url.\"https://github.com/\".insteadOf \"ssh://git@github.com/\""
     ],
     "description": ["强制 Git 走 HTTPS 通道"]
   }

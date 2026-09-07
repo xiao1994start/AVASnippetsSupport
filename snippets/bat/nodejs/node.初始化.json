@@ -1,36 +1,29 @@
 {
   "node.js 临时环境设置": {
-    "prefix": ["call node -venv--Portable", "call npm -venv--Portable", "call node -VE--Portable", "call npm -VE--Portable"],
+    "prefix": ["init node --Portable"],
     "body": [
-      "set \"SYSTEM_PATH=%path%\"",
+      "@REM * 定义 node 环境变量",
+      "set \"local_node=%~dp0_node\"",
+      "",
+      "@REM * 添加临时系统环境变量",
+      "set \"SYSTEM_PATH=%PATH%\"",
       "@REM set \"SYSTEM_PATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
-      "set \"NODE_PATH=.\\node\\;.\\node\\node_modules\\;\"",
-      "set \"path=%NODE_PATH%;%SYSTEM_PATH%;\"",
-      "@REM ECHO %path%",
-      "ECHO 清理 npm 缓存",
-      "call npm cache clean --force",
-      "@REM 环境测试",
-      "ECHO 升级 npm",
-      "call npm i --global npm --registry https://registry.npmmirror.com/",
-      "ECHO Node.js 版本号:",
+      "set \"NODE_PATH=!local_node!\\;!local_node!\\node_modules\\;\"",
+      "set \"PATH=%NODE_PATH%;%SYSTEM_PATH%;\"",
+      "ECHO 环境测试",
+      "ECHO = node 版本号:",
       "call node -v",
-      "ECHO NPM 版本号:",
+      "ECHO = npm 版本号:",
       "call npm -v",
-      "ECHO 检查 软件仓库位置:",
+      "ECHO - 清理 npm 缓存",
+      "call npm cache clean --force",
+      "ECHO + 升级 npm",
+      "call npm i --global npm --registry https://registry.npmmirror.com/",
+      "ECHO = 检查 软件仓库位置:",
       "call npm root -g",
       "",
       ""
     ],
     "description": ["node.js 临时环境设置"]
-  },
-  "node.js 环境变量": {
-    "prefix": [
-      "set node venv path --Portable",
-      "set npm venv path --Portable",
-      "set node VE path --Portable",
-      "set npm VE path --Portable"
-    ],
-    "body": ["set \"NODE_PATH=.\\node\\;.\\node\\node_modules\\;\"", ""],
-    "description": ["node.js 临时环境"]
   }
 }

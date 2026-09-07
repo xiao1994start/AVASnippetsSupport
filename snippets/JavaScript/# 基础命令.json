@@ -1,6 +1,6 @@
 {
   "创建 function 方法函数": {
-    "prefix": ["new func -function", "func -function"],
+    "prefix": ["new func -function"],
     "body": ["function ${1:name}(${2:params}) {", "  $0", "}", ""],
     "description": "创建 function 方法函数"
   },
