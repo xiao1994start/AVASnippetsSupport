@@ -55,7 +55,7 @@
       "    # * 配置：按键映射 *",
       "    # [https://doc.renpy.cn/zh-CN/keymap.html]",
       "    config.keymap['toggle_afm'].append('K_c')  # 自动播放 绑定 C",
-      "    config.keymap['rollback'].append('K_z')  # 回滚到上一个场景 绑定 Z",
+      "    config.keymap['rollback'].append('K_z')  # 滚轮上 绑定 Z",
       ""
     ],
     "description": ["配置 按键映射"]
