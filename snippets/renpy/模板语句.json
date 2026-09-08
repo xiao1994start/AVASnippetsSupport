@@ -147,7 +147,7 @@
     "prefix": ["init python options"],
     "body": [
       "# *-默认语言-*",
-      "define config.language = \"simplified_chinese\"",
+      "define config.language = \"schinese\"",
       "",
       "init python:",
       "    # * 配置：按键映射 *",
