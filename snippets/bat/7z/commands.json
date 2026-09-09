@@ -23,8 +23,9 @@
     "prefix": ["7z -a", "7za -a"],
     "body": [
       "@REM 7za.exe或7z.exe a -t[压缩格式:7z/zip] -o[输出目录] -mmt=on:启用多线程,默认开启 -mx=[0-9]:最高压缩级别 -r:递归子目录 -p[密码] -x!*.*:排除指定文件",
-      "@REM -xr!*.log:递归排除指定文件(不要开启 setlocal EnableDelayedExpansion)",
-      "@REM -xr!*:递归排除指定文件夹(不要开启 setlocal EnableDelayedExpansion)",
+      "@REM    -xr!*.log:递归排除指定文件(不要开启 setlocal EnableDelayedExpansion)",
+      "@REM    -xr!*:递归排除指定文件夹(不要开启 setlocal EnableDelayedExpansion)",
+      "@REM    -xr!\"*\\文件夹\":递归排除指定文件夹，注意：路径中有特殊符号的需要使用双引号括起来，同时使用 * 通配符替代上级目录 (不要开启 setlocal EnableDelayedExpansion)",
       "call ${1:7z} a ${2:压缩包} ${3:压缩的文件或目录}",
       "$0"
     ],
