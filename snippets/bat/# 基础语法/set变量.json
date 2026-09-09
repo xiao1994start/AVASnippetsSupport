@@ -1,36 +1,36 @@
 {
   "设置变量": {
-    "prefix": ["set -set"],
+    "prefix": ["set "],
     "body": ["set $0"],
     "description": "设置变量"
   },
   "提示输入信息": {
-    "prefix": ["set p -set", "input -set"],
+    "prefix": ["set p -input"],
     "body": ["set /p \"name=$0\""],
     "description": "提示输入信息"
   },
   "添加当前批处理环境变量": {
-    "prefix": ["set add path -set path"],
+    "prefix": ["set path "],
     "body": ["set \"path=${1:临时环境变量};%path%;\""],
     "description": "添加设置适用于当前批处理的环境变量"
   },
   "修饰符传入单个参数": {
-    "prefix": ["setInput="],
+    "prefix": ["set input="],
     "body": ["set \"command=%~${1:1}\""],
     "description": ["修饰符传入单个参数", "*注意: 仅能传入单个参数, 对多个参数无效"]
   },
   "修饰符传入多个参数": {
-    "prefix": ["setInputs="],
+    "prefix": ["set inputs="],
     "body": ["set \"commands=%*\""],
     "description": ["修饰符传入多个参数"]
   },
   "获取并设置自身bet文件名及后缀": {
     "prefix": ["set self"],
-    "body": ["set \"bat=%~n0%~x0\""],
+    "body": ["set \"self=%~n0%~x0\""],
     "description": ["获取并设置自身bet文件名及后缀"]
   },
   "设置当前批处理临时环境变量": {
-    "prefix": ["set cmd path -venv"],
+    "prefix": ["set cmd path "],
     "body": [
       "@REM * 添加临时系统环境变量",
       "set \"SYSTEM_PATH=%PATH%\"",
@@ -53,10 +53,10 @@
     ],
     "description": ["当前用户桌面路径"]
   },
-  "获取当前文件夹名称": {
-    "prefix": ["current folder name"],
-    "body": ["pushd %1 & for %%i in (.) do set curr=%%~ni", "ECHO %curr%", "$0"],
-    "description": ["获取当前文件夹名称"]
+  "获取当前工作目录变量": {
+    "prefix": "set cwd",
+    "body": ["set \"cwd=%~dp0\"", "if \"!cwd:~-1!\"==\"\\\" set \"cwd=!cwd:~0,-1!\"", ""],
+    "description": "获取当前工作目录变量"
   },
   "%%For循环中的元变量": {
     "prefix": ["let"],
@@ -64,7 +64,7 @@
     "description": ["%%For循环中的元变量", ""]
   },
   "%环境变量%": {
-    "prefix": ["const", "new"],
+    "prefix": ["const"],
     "body": ["%${1:i}%"],
     "description": ["%环境变量%"]
   },
