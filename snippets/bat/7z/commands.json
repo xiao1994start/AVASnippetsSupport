@@ -4,7 +4,7 @@
     "body": [
       "@REM * 添加7-Zip到临时系统环境变量",
       "set \"zip=%PROGRAMFILES%\\7-Zip\\\"",
-      "set \"PATH=!zip!;%PATH%;\"",
+      "set \"PATH=%zip%;%PATH%;\"",
       "call 7z -version",
       ""
     ],
