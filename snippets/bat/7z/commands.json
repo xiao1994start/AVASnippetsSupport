@@ -10,16 +10,16 @@
     ],
     "description": ["设置 7z 系统环境变量"]
   },
-  "7za.exe 解压": {
+  "7z 解压": {
     "prefix": ["7z -x", "7za -x"],
     "body": [
       "@REM 7za.exe或7z.exe x [压缩包] -o[到指定目录] -y{自动覆盖同名文件} -p[密码]",
       "call ${1:7z} x ${2:压缩包} -o${3:解压路径} -y",
       "$0"
     ],
-    "description": ["7za.exe 解压"]
+    "description": ["7z 解压"]
   },
-  "7za.exe 压缩": {
+  "7z 压缩": {
     "prefix": ["7z -a", "7za -a"],
     "body": [
       "@REM 7za.exe或7z.exe a -t[压缩格式:7z/zip] -o[输出目录] -mmt=on:启用多线程,默认开启 -mx=[0-9]:最高压缩级别 -r:递归子目录 -p[密码] -x!*.*:排除指定文件",
@@ -28,6 +28,6 @@
       "call ${1:7z} a ${2:压缩包} ${3:压缩的文件或目录}",
       "$0"
     ],
-    "description": ["7za.exe 压缩"]
+    "description": ["7z 压缩"]
   }
 }
