@@ -1,0 +1,219 @@
+{
+  "python-embed 嵌入式环境启动": {
+    "prefix": [
+      "call python -embed"
+    ],
+    "body": [
+      "@REM * 定义 Python 环境变量",
+      "set \"local_python=%~dp0_python\"",
+      "",
+      "set \"SYSTEM_PATH=%PATH%\"",
+      "@REM set \"SYSTEM_PATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
+      "set \"PYTHON_PATH=!local_python!\\;!local_python!\\Scripts\\;\"",
+      "set \"PATH=%PYTHON_PATH%;%SYSTEM_PATH%;\"",
+      "ECHO python 版本号",
+      "call python --version",
+      "ECHO pip 版本号",
+      "@REM *当提示无法使用 pip 命令时:",
+      "@REM *    1.尝试初始化 pip 配置 call python \"!local_python!\\get-pip.py\"",
+      "@REM *    2.尝试使用命令 call python -m pip",
+      "@REM *    python -m 运行模块 启动虚拟环境",
+      "@REM *    python -s 忽略用户 site-packages 避免不同版本的模块冲突",
+      "@REM *    python -c 运行指令 ",
+      "call python -m pip install \"pip\" --upgrade",
+      "call python -m pip --version",
+      "",
+      "",
+      "CALL \"!local_python!\\python.exe\" ${1:py脚本路径} ${2:参数}",
+      "",
+      ""
+    ],
+    "description": "python-embed 嵌入式环境启动"
+  },
+  "python -m": {
+    "prefix": [
+      "call python -m",
+      "call pm"
+    ],
+    "body": [
+      "call python -m ${1:pip}"
+    ],
+    "description": [
+      "python -m"
+    ]
+  },
+  "python 版本号": {
+    "prefix": [
+      "py version -python"
+    ],
+    "body": [
+      "ECHO python 版本号",
+      "call python --version",
+      ""
+    ],
+    "description": "python 版本号"
+  },
+  "pip 版本号": {
+    "prefix": [
+      "pip version -python"
+    ],
+    "body": [
+      "ECHO pip 版本号",
+      "call pip --version",
+      ""
+    ],
+    "description": "pip 版本号"
+  },
+  "pip.镜像源": {
+    "prefix": [
+      "pip -config-index-url"
+    ],
+    "body": [
+      "ECHO 重置pip.ini...",
+      "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
+      "ECHO 清华",
+      "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple",
+      "pip config set install.trusted-host https://pypi.tuna.tsinghua.edu.cn",
+      "ECHO 阿里",
+      "@REM pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/",
+      "@REM pip config set install.trusted-host https://mirrors.aliyun.com/pypi",
+      "ECHO 豆瓣",
+      "@REM pip config set global.index-url https://pypi.douban.com/simple/",
+      "@REM pip config set install.trusted-host https://pypi.douban.com"
+    ],
+    "description": [
+      "pipconfig.index镜像源"
+    ]
+  },
+  "pip.批量镜像源": {
+    "prefix": [
+      "pip -config-extra-index-url"
+    ],
+    "body": [
+      "ECHO 重置pip.ini...",
+      "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
+      "pip config set global.extra-index-url \"https: //pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple http://pypi.douban.com/simple http://pypi.mirrors.ustc.edu.cn/simple\""
+    ],
+    "description": [
+      "pipconfig.index批量镜像源"
+    ]
+  },
+  "pip.install 安装库": {
+    "prefix": [
+      "pip new -install",
+      "pip new -I"
+    ],
+    "body": [
+      "pip install \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": [
+      "pip -i 安装库"
+    ]
+  },
+  "pip.-reinstall 强制重装库": {
+    "prefix": [
+      "pip -reinstall"
+    ],
+    "body": [
+      "pip install --force-reinstall \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": [
+      "pip -reinstall 强制重装库"
+    ]
+  },
+  "pip.install-upgrade 安装最新发布库": {
+    "prefix": [
+      "pip new -install-U",
+      "pip new -U"
+    ],
+    "body": [
+      "pip install ${1:pip} --upgrade ${2:-i https://mirrors.aliyun.com/pypi/simple/}"
+    ],
+    "description": [
+      "pip.install-upgrade 安装最新发布库"
+    ]
+  },
+  "pip.uninstall 卸载": {
+    "prefix": [
+      "pip -uninstall",
+      "pip -UN"
+    ],
+    "body": [
+      "pip uninstall \"${1:库名}\" -y"
+    ],
+    "description": [
+      "pip -uninstall 卸载"
+    ]
+  },
+  "pip.freeze 获取安装库列表": {
+    "prefix": [
+      "pip -freeze"
+    ],
+    "body": [
+      "pip freeze  > ${1:requirements.txt}"
+    ],
+    "description": [
+      "pip -freeze 获取安装库列表"
+    ]
+  },
+  "pip.requirements 列式安装库": {
+    "prefix": [
+      "pip -install-requirements",
+      "pip txt -install"
+    ],
+    "body": [
+      "pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "description": [
+      "pip -requirements 列式安装库"
+    ]
+  },
+  "pip.--index-url 主源": {
+    "prefix": [
+      "pip index-url",
+      "pip cuda"
+    ],
+    "body": [
+      "--index-url https://download.pytorch.org/whl/cu128"
+    ],
+    "description": [
+      "pip.--index-url 主源"
+    ]
+  },
+  "pip.--extra-index-url 额外的源": {
+    "prefix": [
+      "pip extra-index-url"
+    ],
+    "body": [
+      "--extra-index-url https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "description": [
+      "pip.--extra-index-url 额外的源"
+    ]
+  },
+  "安装 get-pip.py": {
+    "prefix": [
+      "call python get_pip"
+    ],
+    "body": [
+      "call python \"%~dp0python/get-pip.py\"  -i https://mirrors.aliyun.com/pypi/simple/",
+      ""
+    ],
+    "description": [
+      "安装 get-pip.py"
+    ]
+  },
+  "获取 get-pip.py": {
+    "prefix": [
+      "download get_pip",
+      "curl get_pip"
+    ],
+    "body": [
+      "curl -SL https://bootstrap.pypa.io/get-pip.py -o \"%~dp0python\\get-pip.py\"",
+      ""
+    ],
+    "description": [
+      "获取 get-pip.py"
+    ]
+  }
+}
