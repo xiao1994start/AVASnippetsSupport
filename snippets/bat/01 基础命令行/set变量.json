@@ -9,6 +9,11 @@
     "body": ["set /p \"name=$0\""],
     "description": "提示输入信息"
   },
+  "执行算术运算": {
+    "prefix": ["set a -math"],
+    "body": ["set /a \"${1:变量名}=${2:表达式}\""],
+    "description": "执行算术运算"
+  },
   "添加当前批处理环境变量": {
     "prefix": ["set path "],
     "body": ["set \"path=${1:临时环境变量};%path%;\""],

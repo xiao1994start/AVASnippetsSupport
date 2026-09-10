@@ -1,7 +1,7 @@
 {
   "name": "avasnippetssupport",
   "displayName": "AVASnippetsSupport",
-  "description": "Python, BAT, Json, MarkDown, Scss, JavaScript, TypeScript Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
+  "description": "Python, BAT, Json, MarkDown, Node.js, JavaScript, XML Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
   "version": "0.0.3",
   "publisher": "AVA",
   "icon": "icon.png",
@@ -119,10 +119,6 @@
         "path": "./snippets/bat/01 基础命令行/attrib文件属性.json"
       },
       {
-        "language": "python",
-        "path": "./snippets/python/01 基础语法/Boolean布尔值.json"
-      },
-      {
         "language": "bat",
         "path": "./snippets/bat/01 基础命令行/certutil系统证书.json"
       },
@@ -201,10 +197,6 @@
       {
         "language": "bat",
         "path": "./snippets/bat/05 NirCmd命令行辅助工具/snippets.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/vscode/vscodePlugin插件创建.json"
       },
       {
         "language": "bat",
@@ -293,6 +285,10 @@
       {
         "language": "python",
         "path": "./snippets/python/01 基础语法/attr动态属性操作.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/01 基础语法/Boolean布尔值.json"
       },
       {
         "language": "python",
@@ -895,16 +891,8 @@
         "path": "./snippets/renpy/python语法.json"
       },
       {
-        "language": "scss",
-        "path": "./snippets/scss/button按钮.json"
-      },
-      {
-        "language": "shellscript",
-        "path": "./snippets/shellscript/# 基础命令.json"
-      },
-      {
         "language": "xml",
-        "path": "./snippets/xml/wps/wps_xml.json"
+        "path": "./snippets/xml/wps/snippets.json"
       },
       {
         "language": "xml",

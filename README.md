@@ -26,18 +26,9 @@
 - **数百个高质量代码片段**  
   Python：requests、pandas、selenium、tkinter、flet、nicegui、reflex、asyncio、PyInstaller、FastAPI、Django 等  
   BAT：7z、curl、git、npm、uiautomation、uv、注册表、进程管理等  
-  JS/TS：axios、element-plus、Vue 基础  
-  SCSS：按钮样式  
+  JS：axios、element-plus、Vue 基础  
   JSON / Markdown / XML：实用模板  
   Ren'Py：变量、label、menu、screen、style、attr 等
-
-- **智能 Tab 行为（可开关）**
-  - 括号/引号内跳出
-  - 括号对内跳入
-  - 跳过 : ; ( { [ 等符号
-  - 多光标 / 多行缩进 / 减少缩进智能处理
-  - 行尾 / 空行 / 跨行分隔符特殊逻辑
-  - 搜索范围限制 50 行，避免卡顿
 
 ## 快速安装
 
