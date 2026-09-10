@@ -10,7 +10,7 @@
       "",
       "@REM ====================== 基础环境配置 ======================",
       "@REM * 标化 node 环境目录",
-      "for /D %%i in (\"*node*\") do ( ren \"%%i\" \"_node\" )",
+      "for /D %%i in (\"node*\") do ( ren \"%%i\" \"_node\" )",
       "@REM * 定义 node 环境变量",
       "set \"local_node=%~dp0_node\"",
       "",

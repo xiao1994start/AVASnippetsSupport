@@ -224,30 +224,6 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/bat/nodejs/node.初始化.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/nodejs/node.基础命令.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/nodejs/npm.包管理.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/nodejs/npm.包管理.vscode.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/nodejs/npm.包管理.wps.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/nodejs/npm.基础命令.json"
-      },
-      {
-        "language": "bat",
         "path": "./snippets/bat/python/python.embed.json"
       },
       {
@@ -259,44 +235,64 @@
         "path": "./snippets/bat/vscode/vscodePlugin插件创建.json"
       },
       {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/# 基础命令.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/console控制台.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/filter过滤.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/for_while_循环.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/if 和 swith 条件判断.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/JavaScript/try.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/JavaScript/vue/# vue_初始化.bat.json"
+        "language": "json",
+        "path": "./snippets/json/snippets_vsc/json_snippets_for_all.json"
       },
       {
         "language": "json",
-        "path": "./snippets/json/snippets/json_snippets_for_all.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json/snippets/json_snippets_for_python.json"
+        "path": "./snippets/json/snippets_vsc/json_snippets_for_python.json"
       },
       {
         "language": "json",
         "path": "./snippets/json/基础语句.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/01 初始化.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/02 基础命令行.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/03 npm命令行.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/04 pnpm命令行.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/环境构建 vscode.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/01 bat命令行/环境构建 wps.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/01 变量.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/02 输出.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/03 函数方法.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/04 for_while_循环.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/05 filter过滤.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/nodeJS/vue/01 vue_初始化.bat.json"
       },
       {
         "language": "python",
@@ -533,14 +529,6 @@
       {
         "language": "python",
         "path": "./snippets/python/dataclasses 高效定义数据类对象/dataclass.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/Django/Django.bat.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/Django/Django.json"
       },
       {
         "language": "bat",

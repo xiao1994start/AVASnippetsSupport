@@ -1,0 +1,77 @@
+{
+  "npm 安装 pnpm": {
+    "prefix": ["npm i pnpm"],
+    "body": ["ECHO = 安装 pnpm", "call npm install -g pnpm --registry https://registry.npmmirror.com/", ""],
+    "description": ["npm 安装 pnpm"]
+  },
+  "pnpm 版本号": {
+    "prefix": ["pnpm version"],
+    "body": ["ECHO = 检查 pnpm 版本号:", "call pnpm --version", ""],
+    "description": ["pnpm 版本号"]
+  },
+  "pnpm 配置国内源": {
+    "prefix": ["pnpm config set registry"],
+    "body": ["ECHO * 配置 pnpm 国内源", "call pnpm config set registry https://registry.npmmirror.com", ""],
+    "description": ["pnpm 配置国内源"]
+  },
+  "pnpm 初始化新项目": {
+    "prefix": ["pnpm init"],
+    "body": ["pnpm init", ""],
+    "description": ["pnpm 初始化新项目"]
+  },
+  "pnpm 初始化新项目(默认配置)": {
+    "prefix": ["pnpm init y"],
+    "body": ["pnpm init -y", ""],
+    "description": ["pnpm 初始化新项目(默认配置)"]
+  },
+  "pnpm 根据package.json安装所有依赖": {
+    "prefix": "pnpm install",
+    "body": ["pnpm install", ""],
+    "description": "pnpm 根据package.json安装所有依赖"
+  },
+  "pnpm 添加依赖包": {
+    "prefix": ["pnpm add"],
+    "body": ["pnpm add ${1:package_name}", ""],
+    "description": ["pnpm 添加依赖包"]
+  },
+  "pnpm 添加开发依赖": {
+    "prefix": ["pnpm add D"],
+    "body": ["pnpm add -D ${1:package_name}", ""],
+    "description": ["pnpm 添加开发依赖"]
+  },
+  "pnpm 添加全局包": {
+    "prefix": ["pnpm add g"],
+    "body": ["pnpm add -g ${1:package_name}", ""],
+    "description": ["pnpm 添加全局包"]
+  },
+  "pnpm 更新所有依赖": {
+    "prefix": ["pnpm update"],
+    "body": ["pnpm update", ""],
+    "description": ["pnpm 更新所有依赖"]
+  },
+  "pnpm 更新指定包": {
+    "prefix": ["pnpm update package_name"],
+    "body": ["pnpm update ${1:package_name}"],
+    "description": ["pnpm 更新指定包"]
+  },
+  "pnpm 删除依赖": {
+    "prefix": ["pnpm remove"],
+    "body": ["pnpm remove ${1:package_name}"],
+    "description": ["pnpm 删除依赖"]
+  },
+  "pnpm 清理未使用的包": {
+    "prefix": ["pnpm store prune"],
+    "body": ["pnpm store prune", ""],
+    "description": ["pnpm 清理未使用的包"]
+  },
+  "pnpm 查看存储位置": {
+    "prefix": ["pnpm store path"],
+    "body": ["pnpm store path", ""],
+    "description": ["pnpm 查看存储位置"]
+  },
+  "pnpm 查看存储状态": {
+    "prefix": ["pnpm store status"],
+    "body": ["pnpm store status", ""],
+    "description": ["pnpm 查看存储状态"]
+  }
+}

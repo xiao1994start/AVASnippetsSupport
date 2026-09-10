@@ -1,6 +1,6 @@
 {
   "print(...)": {
-    "prefix": ["pprt -print"],
+    "prefix": ["clg -print", "pprt -print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },

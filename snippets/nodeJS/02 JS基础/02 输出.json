@@ -1,0 +1,12 @@
+{
+  "console.log(...) 控制台输出日志": {
+    "prefix": ["clg", "pprt -console.log"],
+    "body": ["console.log($0)"],
+    "description": ["console.log(...) 控制台输出日志"]
+  },
+  "alert(...) 弹窗输出": {
+    "prefix": ["alert"],
+    "body": ["alert(${1:content})", ""],
+    "description": ["alert(...) 弹窗输出"]
+  }
+}

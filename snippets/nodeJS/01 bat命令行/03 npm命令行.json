@@ -1,0 +1,78 @@
+{
+  "npm 帮助说明": {
+    "prefix": ["npm -help"],
+    "body": [
+      "@REM npm 说明",
+      "@REM 临时代理 --registry https://registry.npmmirror.com/",
+      "@REM 配置参数:{",
+      "@REM   -G 全局安装",
+      "@REM   -S 局部安装的插件写入package.json文件中的dependencie(默认)",
+      "@REM   -D 局部安装的插件写入package.json文件中的devDependencie",
+      "@REM   -O 局部安装的插件写入package.json文件中的optionalDependencie",
+      "@REM }",
+      ""
+    ],
+    "description": ["npm帮助说明"]
+  },
+  "npm 版本号": {
+    "prefix": ["npm version"],
+    "body": ["ECHO = npm 版本号:", "call npm -v", ""],
+    "description": ["npm 版本号"]
+  },
+  "npm 缓存清理": {
+    "prefix": ["npm cache clean"],
+    "body": ["ECHO - 清理 npm 缓存", "call npm cache clean --force", ""],
+    "description": ["npm 缓存清理"]
+  },
+  "npm 升级": {
+    "prefix": ["npm i npm"],
+    "body": ["ECHO + 升级 npm", "call npm install npm -g --registry https://registry.npmmirror.com/", ""],
+    "description": ["npm 升级"]
+  },
+  "npm 检查 软件仓库位置": {
+    "prefix": ["npm root -g"],
+    "body": ["ECHO 检查 软件仓库位置:", "call npm root -g", ""],
+    "description": "npm 检查 软件仓库位置"
+  },
+  "npm 自定义仓库位置": {
+    "prefix": ["npm config prefix"],
+    "body": ["call npm config set prefix ${1:仓库位置}", ""],
+    "description": ["自定义npm仓库位置"]
+  },
+  "npm 自定义缓存位置": {
+    "prefix": ["npm config cache"],
+    "body": ["call npm config set cache ${1:缓存位置}", ""],
+    "description": ["自定义npm缓存位置"]
+  },
+  "npm 切换国内镜像源": {
+    "prefix": ["npm config set registry"],
+    "body": [
+      "ECHO npm 设置为淘宝镜像源",
+      "call npm config set registry https://registry.npmmirror.com/",
+      "@REM ECHO npm 还原为官方源",
+      "@REM call npm config set registry https://registry.npmjs.org/",
+      ""
+    ],
+    "description": ["切换npm国内镜像源"]
+  },
+  "npm 安装模块": {
+    "prefix": ["npm install"],
+    "body": ["npm install ${1:express}", ""],
+    "description": ["npm 安装模块"]
+  },
+  "npm 全局安装模块": {
+    "prefix": ["npm install g"],
+    "body": ["npm install ${1:express} -g", ""],
+    "description": ["npm 全局安装模块"]
+  },
+  "npm 卸载模块": {
+    "prefix": ["npm uninstall"],
+    "body": ["npm uninstall ${1:express}", ""],
+    "description": ["npm 卸载模块"]
+  },
+  "npm 更新模块": {
+    "prefix": ["npm update"],
+    "body": ["npm update ${1:express}", ""],
+    "description": ["npm 更新模块"]
+  }
+}
