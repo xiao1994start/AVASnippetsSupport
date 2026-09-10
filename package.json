@@ -247,27 +247,27 @@
         "path": "./snippets/json/基础语句.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/01 初始化.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/02 基础命令行.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/03 npm命令行.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/04 pnpm命令行.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/环境构建 vscode.json"
       },
       {
-        "language": "javascript",
+        "language": "bat",
         "path": "./snippets/nodeJS/01 bat命令行/环境构建 wps.json"
       },
       {
