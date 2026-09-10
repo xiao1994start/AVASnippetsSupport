@@ -3,7 +3,6 @@ setlocal enabledelayedexpansion
 CD /D "%~dp0"
 
 
-
 for %%v in ("AVASnippetsSupport*.vsix") do ( ECHO 清理旧版插件 %%v && del /F /Q "%%v" )
 
 CD /D "%~dp0..\"
@@ -38,14 +37,13 @@ ECHO 安装 - 更新 完成 & ECHO.
 CD /D "%~dp0"
 call vsce package
 ECHO 封装完成
-for %%i in (*.vsix) do (
+for %%i in ("*.vsix") do (
     ECHO 更新: %%i
     if exist "%~dp0VSIX_Installer.exe" ( call "%~dp0VSIX_Installer.exe" ) else ( call code --install-extension %%i )
-    del /F /Q "..\%%i"
-    copy /V /Y "%%i" "..\%%i"
+    @REM  del /F /Q "..\%%i"
+    @REM  copy /V /Y "%%i" "..\%%i"
 )
 ECHO 插件封装脚本执行完毕
-
 
 
 endlocal
