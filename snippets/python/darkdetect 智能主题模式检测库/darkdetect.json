@@ -1,6 +1,6 @@
 {
   "引入 darkdetect 智能主题模式检测库": {
-    "prefix": ["import darkdetect", "im darkdetect"],
+    "prefix": ["import darkdetect", "imp darkdetect"],
     "body": ["import darkdetect  # * 引入 darkdetect 智能主题模式检测库"],
     "description": ["引入 darkdetect 智能主题模式检测库"]
   },

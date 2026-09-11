@@ -1,6 +1,6 @@
 {
   "导入 shutil 高级文件管理模块": {
-    "prefix": ["import shutil", "im shutil"],
+    "prefix": ["import shutil", "imp shutil"],
     "body": ["import shutil"],
     "description": ["导入shutil高级文件管理模块"]
   },
@@ -56,9 +56,7 @@
   },
   "shutil.copytree 递归目录树拷贝": {
     "prefix": ["shutil copytree"],
-    "body": [
-      "shutil.copytree(str(${1:srcPath}), str(${2:dstPath}), dirs_exist_ok=${3|True,False|})"
-    ],
+    "body": ["shutil.copytree(str(${1:srcPath}), str(${2:dstPath}), dirs_exist_ok=${3|True,False|})"],
     "description": [
       "shutil.copytree 递归地将以 src 为根起点的整个目录树拷贝到名为 dst 的目录并返回目标目录.  所需的包含 dst 的中间目录在默认情况下也将被创建",
       "    目录的权限和时间会通过 copystat() 来拷贝, 单个文件则会使用 copy2() 来拷贝",
@@ -96,9 +94,7 @@
   },
   "shutil.make_archive 压缩和归档": {
     "prefix": ["shutil make_archive"],
-    "body": [
-      "shutil.make_archive(base_name=${1:base_name}, format=${2:'zip'}, root_dir=${3:root_dir})"
-    ],
+    "body": ["shutil.make_archive(base_name=${1:base_name}, format=${2:'zip'}, root_dir=${3:root_dir})"],
     "description": [
       "shutil.make_archive 创建一个归档文件(例如 zip 或 tar)并返回其名称",
       "    base_name 是要创建的文件的名称, 包括路径, 去除任何格式专属的扩展名",
@@ -114,9 +110,7 @@
   },
   "shutil.unpack_archive 解包归档文件": {
     "prefix": ["shutil unpack_archive"],
-    "body": [
-      "shutil.unpack_archive(filename=${1:filename.zip}, extract_dir=${2:'解包的目标目录名称'}, format=${3:'zip'})"
-    ],
+    "body": ["shutil.unpack_archive(filename=${1:filename.zip}, extract_dir=${2:'解包的目标目录名称'}, format=${3:'zip'})"],
     "description": [
       "shutil.unpack_archive 解包一个归档文件.  filename 是归档文件的完整路径",
       "    extract_dir 是归档文件解包的目标目录名称.  如果未提供, 则将使用当前工作目录",

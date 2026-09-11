@@ -1,6 +1,6 @@
 {
   "引入 win32print 打印机API模块": {
-    "prefix": ["import win32print", "im win32print"],
+    "prefix": ["import win32print", "imp win32print"],
     "body": ["import win32print  # * 专门用于与 Windows 打印系统进行交互"],
     "description": ["引入 win32print 打印机API模块"]
   },

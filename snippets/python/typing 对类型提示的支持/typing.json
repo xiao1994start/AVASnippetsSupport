@@ -1,11 +1,11 @@
 {
   "引入 typing 对类型提示的支持": {
-    "prefix": ["import typing", "im typing"],
+    "prefix": ["import typing", "imp typing"],
     "body": ["from typing import Any, Callable, Literal  # * 引入 typing 对类型提示的支持", ""],
     "description": ["引入 typing 对类型提示的支持"]
   },
   "引入 typing 对类型提示的支持_常用模块": {
-    "prefix": ["import typing All =-typing", "im typing All =-typing"],
+    "prefix": ["import typing All =-typing", "imp typing All =-typing"],
     "body": [
       "from typing import (  # * 引入 typing 对类型提示的支持_常用模块",
       "    TYPE_CHECKING,  # * 避免定义类时循环引用[if TYPE_CHECKING:...](仅为类型提示,不实例化/参与实际运行)[args: 'ClassObject']",

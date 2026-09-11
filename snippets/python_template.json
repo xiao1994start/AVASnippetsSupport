@@ -1,6 +1,6 @@
 {
   "引入 type 库描述": {
-    "prefix": ["import type", "im type"],
+    "prefix": ["import type", "imp type"],
     "body": ["import type"],
     "description": ["库描述"]
   },

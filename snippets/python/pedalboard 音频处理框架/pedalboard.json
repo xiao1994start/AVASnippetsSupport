@@ -1,11 +1,11 @@
 {
   "引入 pedalboard 音频处理框架": {
-    "prefix": ["import pedalboard", "im pedalboard"],
+    "prefix": ["import pedalboard", "imp pedalboard"],
     "body": ["import pedalboard"],
     "description": ["音频处理框架"]
   },
   "引入 pedalboard.VST3Plugin Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器": {
-    "prefix": ["import pedalboard.VST3Plugin", "im pedalboard.VST3Plugin"],
+    "prefix": ["import pedalboard.VST3Plugin", "imp pedalboard.VST3Plugin"],
     "body": ["from pedalboard import VST3Plugin  # *Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"],
     "description": ["Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"]
   },

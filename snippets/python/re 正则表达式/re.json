@@ -1,6 +1,6 @@
 {
   "引入 re 正则模块": {
-    "prefix": ["import re", "im re"],
+    "prefix": ["import re", "imp re"],
     "body": ["import re"],
     "description": ["引入re正则表达式模块"]
   },

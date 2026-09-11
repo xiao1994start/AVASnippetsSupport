@@ -1,6 +1,6 @@
 {
   "引入 selenium 模块": {
-    "prefix": ["import selenium webdriver", "im selenium webdriver"],
+    "prefix": ["import selenium webdriver", "imp selenium webdriver"],
     "body": [
       "from pathlib import Path  # 路径设置",
       "from selenium import webdriver  # 实例化网络请求模块",
@@ -36,27 +36,17 @@
     "description": ["selenium.add_argument 浏览器无界面模式"]
   },
   "selenium.add_argument 忽略SSL证书验证": {
-    "prefix": [
-      "selenium_options_add_argument_ignoreSSL __ignore_certificate_errors"
-    ],
-    "body": [
-      "options.add_argument('--ignore-certificate-errors')  # 忽略SSL证书验证"
-    ],
+    "prefix": ["selenium_options_add_argument_ignoreSSL __ignore_certificate_errors"],
+    "body": ["options.add_argument('--ignore-certificate-errors')  # 忽略SSL证书验证"],
     "description": ["selenium.add_argument 忽略SSL证书验证"]
   },
   "selenium.add_experimental_option 浏览器debug模式(浏览器运行完成不会自动关闭)": {
     "prefix": ["selenium options add_experimental_option --detach"],
-    "body": [
-      "options.add_experimental_option('detach', True)  # 浏览器debug模式(浏览器运行完成不会自动关闭)"
-    ],
-    "description": [
-      "selenium.add_experimental_option 浏览器debug模式(浏览器运行完成不会自动关闭)"
-    ]
+    "body": ["options.add_experimental_option('detach', True)  # 浏览器debug模式(浏览器运行完成不会自动关闭)"],
+    "description": ["selenium.add_experimental_option 浏览器debug模式(浏览器运行完成不会自动关闭)"]
   },
   "selenium.add_experimental_option 禁用浏览器弹窗": {
-    "prefix": [
-      "selenium options add_experimental_option -prefs--notifications"
-    ],
+    "prefix": ["selenium options add_experimental_option -prefs--notifications"],
     "body": [
       "options.add_experimental_option('prefs', {'profile.default_content_setting_values': {'notifications': 2}})  # 禁用浏览器弹窗"
     ],
@@ -80,20 +70,12 @@
     "description": ["selenium.execute_script 发送JavaScript命令"]
   },
   "selenium.execute_script 获取浏览器user-agent": {
-    "prefix": [
-      "selenium execute_script --userAgent",
-      "execute_script --userAgent -selenium"
-    ],
-    "body": [
-      ".execute_script('return navigator.userAgent')  # 获取浏览器user-agent"
-    ],
+    "prefix": ["selenium execute_script --userAgent", "execute_script --userAgent -selenium"],
+    "body": [".execute_script('return navigator.userAgent')  # 获取浏览器user-agent"],
     "description": ["selenium.execute_script 获取浏览器user-agent"]
   },
   "selenium.execute_script 打印页面内容": {
-    "prefix": [
-      "selenium execute_script windowPrint",
-      "execute_script windowPrint -selenium"
-    ],
+    "prefix": ["selenium execute_script windowPrint", "execute_script windowPrint -selenium"],
     "body": [".execute_script('window.print()')  # 打印页面内容"],
     "description": ["selenium.execute_script 打印页面内容"]
   },
@@ -104,9 +86,7 @@
   },
   "selenium..set_window_size 设置浏览器窗口大小": {
     "prefix": ["selenium set_window_size", "set_window_size -selenium"],
-    "body": [
-      ".set_window_size(width=1920, height=1080)  # 设置浏览器窗口大小(可以作用于无界面模式)"
-    ],
+    "body": [".set_window_size(width=1920, height=1080)  # 设置浏览器窗口大小(可以作用于无界面模式)"],
     "description": ["selenium..set_window_size 设置浏览器窗口大小"]
   },
   "selenium..screenshot 截图保存png": {

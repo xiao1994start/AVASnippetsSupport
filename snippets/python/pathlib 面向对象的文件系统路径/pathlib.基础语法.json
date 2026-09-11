@@ -1,6 +1,6 @@
 {
   "导入 pathlib 模块 Path 类方法": {
-    "prefix": ["import Path", "im Path"],
+    "prefix": ["import Path", "imp Path"],
     "body": ["from pathlib import Path"],
     "description": ["导入pathlib模块Path类方法"]
   },

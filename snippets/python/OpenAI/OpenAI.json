@@ -1,6 +1,6 @@
 {
   "引入 OpenAI Python API 库": {
-    "prefix": ["import openai ", "im openai "],
+    "prefix": ["import openai ", "imp openai "],
     "body": [
       "from openai import AsyncOpenAI, AsyncStream, OpenAI, Stream  # *OpenAI Python API 库 | Stream 流式返回类",
       "from openai.types.chat.chat_completion import ChatCompletion  # *ChatCompletion 聊天模型类型",
@@ -10,7 +10,7 @@
     "description": ["引入 OpenAI Python API 库"]
   },
   "OpenAI Python 同步|异步 类封装": {
-    "prefix": ["import openai =ai", "im openai =ai"],
+    "prefix": ["import openai =ai", "imp openai =ai"],
     "body": [
       "import asyncio  # * 异步IO实现更高的并发性",
       "import threading  # * 多线程实现高的并发性",

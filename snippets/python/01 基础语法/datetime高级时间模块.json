@@ -1,16 +1,16 @@
 {
   "引入 datetime 时间模块": {
-    "prefix": ["import datetime", "im datetime"],
+    "prefix": ["import datetime", "imp datetime"],
     "body": ["import datetime"],
     "description": ["datetime的模块, 用于处理日期和时间"]
   },
   "引入 datetime 日期时间类": {
-    "prefix": ["from datetime import datetime", "im datetime datetime"],
+    "prefix": ["from datetime import datetime", "imp datetime datetime"],
     "body": ["from datetime import datetime"],
     "description": ["datetime模块datetime日期时间类, 用于处理日期和时间"]
   },
   "引入 date 日期时间类": {
-    "prefix": ["import datetime date", "im datetime date"],
+    "prefix": ["import datetime date", "imp datetime date"],
     "body": ["from datetime import date"],
     "description": ["datetime模块date日期时间类, 用于处理日期和时间"]
   },

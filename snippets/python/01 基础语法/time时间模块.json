@@ -1,6 +1,6 @@
 {
   "引入 time 日期时间模块": {
-    "prefix": ["import time", "im time"],
+    "prefix": ["import time", "imp time"],
     "body": ["import time"],
     "description": ["time的模块, 输出常规格式时间"]
   },

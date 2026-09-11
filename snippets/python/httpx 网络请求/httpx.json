@@ -1,6 +1,6 @@
 {
   "引入 httpx 模块": {
-    "prefix": ["import httpx", "im httpx"],
+    "prefix": ["import httpx", "imp httpx"],
     "body": ["import httpx  # *httpx 新一代全能网络请求库"],
     "description": ["引入 httpx 模块"]
   },

@@ -1,11 +1,11 @@
 {
   "引入 logging 内置日志库": {
-    "prefix": ["import logging", "im logging"],
+    "prefix": ["import logging", "imp logging"],
     "body": ["import logging", ""],
     "description": ["引入 logging 内置日志库"]
   },
   "引入 logging 内置日志库.tmpl": {
-    "prefix": ["import logging =basicConfig", "im logging =basicConfig"],
+    "prefix": ["import logging =basicConfig", "imp logging =basicConfig"],
     "body": [
       "import logging",
       "",

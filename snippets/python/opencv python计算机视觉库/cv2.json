@@ -1,6 +1,6 @@
 {
   "引入 opencv-python 计算机视觉库": {
-    "prefix": ["import opencv", "im opencv", "import cv2", "im cv2"],
+    "prefix": ["import opencv", "imp opencv", "import cv2", "imp cv2"],
     "body": ["import cv2  # !opencv-python 计算机视觉库(图像路径不能有中文)"],
     "description": ["引入 opencv-python 计算机视觉库"]
   },

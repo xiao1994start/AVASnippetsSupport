@@ -1,6 +1,6 @@
 {
   "引入 concurrent.futures 启动并行任务": {
-    "prefix": ["import futures", "im futures"],
+    "prefix": ["import futures", "imp futures"],
     "body": [
       "from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed  # * 启动并行任务[ThreadPoolExecutor:线程池; ProcessPoolExecutor:进程池]",
       ""

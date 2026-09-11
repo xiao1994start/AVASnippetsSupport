@@ -1,6 +1,6 @@
 {
   "引入 json 格式模块": {
-    "prefix": ["import json", "im json"],
+    "prefix": ["import json", "imp json"],
     "body": ["import json"],
     "description": ["引入JSON格式模块"]
   },

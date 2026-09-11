@@ -1,6 +1,6 @@
 {
   "引入 questionary 构建命令行Tui界面": {
-    "prefix": ["import questionary", "im questionary"],
+    "prefix": ["import questionary", "imp questionary"],
     "body": ["import questionary  # * 构建命令行Tui界面", ""],
     "description": ["引入 questionary 构建命令行Tui界面"]
   },

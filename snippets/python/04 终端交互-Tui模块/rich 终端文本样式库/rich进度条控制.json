@@ -1,6 +1,6 @@
 {
   "引入 rich.progress.* 进度显示": {
-    "prefix": ["import rich progress", "im rich progress"],
+    "prefix": ["import rich progress", "imp rich progress"],
     "body": [
       "from rich.progress import (",
       "    Progress,  # * 用于显示高级进度条, 支持多线程显示",
@@ -11,12 +11,12 @@
     "description": ["进度显示"]
   },
   "引入 rich.progress.track [基本]进度显示": {
-    "prefix": ["import rich progress track", "im rich progress track"],
+    "prefix": ["import rich progress track", "imp rich progress track"],
     "body": ["from rich.progress import track  # * 用于显示进度条[for i in track(range(20), description='Processing...')]", ""],
     "description": ["进度条管理器(用于显示进度条的基本用法)"]
   },
   "引入 rich.progress.Progress [高级]进度显示": {
-    "prefix": ["import rich progress Progress", "im rich progress Progress"],
+    "prefix": ["import rich progress Progress", "imp rich progress Progress"],
     "body": ["from rich.progress import Progress  # * 用于显示高级进度条, 支持多线程显示", ""],
     "description": ["进度条管理器(用于显示进度条的高级用法), 支持多线程显示"]
   },

@@ -1,6 +1,6 @@
 {
   "flet SideBar 侧边栏界面导航 模板": {
-    "prefix": ["im flet main SideBar", "import flet main SideBar"],
+    "prefix": ["imp flet main SideBar", "import flet main SideBar"],
     "body": [
       "import asyncio  # * 异步IO实现更高的并发性",
       "import logging",

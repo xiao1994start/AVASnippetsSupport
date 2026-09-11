@@ -1,6 +1,6 @@
 {
   "引入 socket 网络通讯模块": {
-    "prefix": ["import socket", "im socket"],
+    "prefix": ["import socket", "imp socket"],
     "body": ["import socket  # *socket网络通信模块"],
     "description": ["引入 socket 网络通讯模块"]
   },

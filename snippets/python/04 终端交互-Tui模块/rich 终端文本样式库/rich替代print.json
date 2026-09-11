@@ -1,6 +1,6 @@
 {
   "引入 rich.print 替代 print 函数": {
-    "prefix": ["import rich print", "im rich print"],
+    "prefix": ["import rich print", "imp rich print"],
     "body": ["from rich import print  # * rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]", ""],
     "description": [
       "使用Rich启动和运行的最快方法是导入替代方案 print 函数",
@@ -8,7 +8,7 @@
     ]
   },
   "引入 rich.pprint 漂亮打印结构化数据": {
-    "prefix": ["import rich pprint", "im rich pprint"],
+    "prefix": ["import rich pprint", "imp rich pprint"],
     "body": [
       "from rich.pretty import pprint  # * pprint漂亮打印结构化数据[https://rich.pythonlang.cn/en/stable/pretty.html]",
       ""
@@ -16,7 +16,7 @@
     "description": ["引入 rich.pprint 漂亮打印结构化数据"]
   },
   "引入 rich 常用模块": {
-    "prefix": ["import rich All", "im rich All"],
+    "prefix": ["import rich All", "imp rich All"],
     "body": [
       "from rich import print  # *rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
       "from rich.console import Console  # * 用于捕获结果打印到控制台[使用 c = Console(color_system='256', style=None)实例化, c.print(...)调用]",

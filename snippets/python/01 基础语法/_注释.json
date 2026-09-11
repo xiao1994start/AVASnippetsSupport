@@ -15,7 +15,7 @@
     "description": ["Python 注释_描述"]
   },
   "Python 常用导入": {
-    "prefix": ["import==", "im==", "import xxx==", "im xxx=="],
+    "prefix": ["import==", "imp=="],
     "body": [
       "import asyncio  # * 异步IO实现更高的并发性",
       "import logging",

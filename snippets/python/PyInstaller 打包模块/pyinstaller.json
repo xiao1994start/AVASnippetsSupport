@@ -1,6 +1,6 @@
 {
   "pyinstaller 打包 python -> exe 命令": {
-    "prefix": ["import pyinstaller main run =", "im pyinstaller main run ="],
+    "prefix": ["import pyinstaller main run =", "imp pyinstaller main run ="],
     "body": [
       "import os",
       "import shutil",

@@ -1,6 +1,6 @@
 {
   "引入 os 多种操作系统接口库": {
-    "prefix": ["import os", "im os"],
+    "prefix": ["import os", "imp os"],
     "body": ["import os"],
     "description": ["引入 os 多种操作系统接口库"]
   },

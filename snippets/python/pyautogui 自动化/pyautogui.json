@@ -1,6 +1,6 @@
 {
   "引入 pyautogui 自动化计算机行为": {
-    "prefix": ["import pyautogui", "im pyautogui as pg"],
+    "prefix": ["import pyautogui", "imp pyautogui as pg"],
     "body": [
       "import pyautogui as pg  # * 计算机自动化操作库(setuptools自动管理pyscreeze,Pillow)",
       "",

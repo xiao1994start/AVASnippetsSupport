@@ -1,6 +1,6 @@
 {
   "引入 DrissionPage 网页自动化工具": {
-    "prefix": ["import DrissionPage", "im DrissionPage"],
+    "prefix": ["import DrissionPage", "imp DrissionPage"],
     "body": [
       "from pathlib import Path",
       "from DrissionPage import ChromiumOptions, ChromiumPage",

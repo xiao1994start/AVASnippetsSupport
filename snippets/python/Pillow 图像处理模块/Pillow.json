@@ -1,6 +1,6 @@
 {
   "引入 PIL.Image 图像处理模块": {
-    "prefix": ["import PIL Image", "im PIL Image"],
+    "prefix": ["import PIL Image", "imp PIL Image"],
     "body": ["from PIL import Image"],
     "description": ["引入 PIL.Image 图像处理模块"]
   },
@@ -46,9 +46,7 @@
   },
   "PIL.Image.save 对象保存": {
     "prefix": ["save -PIL-Image", "PIL-Image save"],
-    "body": [
-      "save(${1:strImgPath}, format='${2:ICO}', size=(${3:512}, ${3:512}))"
-    ],
+    "body": ["save(${1:strImgPath}, format='${2:ICO}', size=(${3:512}, ${3:512}))"],
     "description": ["对象保存"]
   }
 }

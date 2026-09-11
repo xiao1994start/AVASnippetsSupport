@@ -1,6 +1,6 @@
 {
   "引入 winreg 注册表管理库": {
-    "prefix": ["import winreg", "im winreg"],
+    "prefix": ["import winreg", "imp winreg"],
     "body": ["import winreg"],
     "description": ["引入 winreg 注册表管理库"]
   },
@@ -116,9 +116,7 @@
       "    ${2:value_name},  # value_name 为标识所要读取值项的字符串",
       ")"
     ],
-    "description": [
-      "winreg.QueryValueEx 读取已打开注册表键指定值名称的类型和数据"
-    ]
+    "description": ["winreg.QueryValueEx 读取已打开注册表键指定值名称的类型和数据"]
   },
   "winreg.SetValueEx 写入注册表键值": {
     "prefix": ["winreg SetValueEx"],

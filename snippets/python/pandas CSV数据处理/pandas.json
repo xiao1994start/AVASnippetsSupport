@@ -1,6 +1,6 @@
 {
   "引入 pandas 模块": {
-    "prefix": ["import pandas", "im pandas as pd"],
+    "prefix": ["import pandas", "imp pandas as pd"],
     "body": ["import pandas as pd  # *pandas 数据处理模块"],
     "description": ["引入 pandas 数据处理模块"]
   },

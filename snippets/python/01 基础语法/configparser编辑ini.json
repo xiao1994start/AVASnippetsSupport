@@ -1,6 +1,6 @@
 {
   "引入 configparser 模块": {
-    "prefix": ["import onfigparser", "im onfigparser"],
+    "prefix": ["import onfigparser", "imp onfigparser"],
     "body": ["import configparser"],
     "description": ["引入configparser->ini控制模块"]
   },
@@ -70,20 +70,12 @@
   },
   "configparser.set 修改指定节点键 -值": {
     "prefix": ["configparser set -configparser"],
-    "body": [
-      "set(section=${1:'section'}, option=${2:'option'}, value=${3:'value'})"
-    ],
+    "body": ["set(section=${1:'section'}, option=${2:'option'}, value=${3:'value'})"],
     "description": ["configparser.set 修改指定节点键 -值"]
   },
   "configparser.write 写入节点数据": {
-    "prefix": [
-      "configparser with configwrite -configparser",
-      "with configparser configwrite -configparser"
-    ],
-    "body": [
-      "with open(config_file, 'w', encoding='utf-8') as configfile:",
-      "    config.write(configfile)"
-    ],
+    "prefix": ["configparser with configwrite -configparser", "with configparser configwrite -configparser"],
+    "body": ["with open(config_file, 'w', encoding='utf-8') as configfile:", "    config.write(configfile)"],
     "description": ["configparser.set 写入节点数据"]
   },
   "configparser.ini_to_dict ini配置转换字典": {
