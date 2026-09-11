@@ -1,12 +1,19 @@
 {
   "自动添加语言按钮入口": {
     "prefix": ["textbutton _schinese =-action Language"],
-    "body": ["textbutton _(\"中文\") text_font \"tl/schinese/fonts/${1:MiSans-Bold.ttf}\" action Language(\"schinese\")", ""],
+    "body": ["textbutton '简体中文' action Language('chinese')", ""],
     "description": ["自动添加语言按钮入口"]
   },
   "默认语言入口": {
     "prefix": ["define config language", "config language"],
-    "body": ["# *-默认语言-*", "define config.language = \"${1:schinese}\"", ""],
+    "body": [
+      "# * -默认语言- *",
+      "define config.language = \"${1:schinese}\"",
+      "# = 添加简体中文语言入口按钮",
+      "#   VSCode 正则全局搜索 `action[\\s\\W_]*Language`",
+      "#   添加入口文字按钮    `textbutton '简体中文' action Language('chinese')`",
+      ""
+    ],
     "description": ["默认语言入口"]
   },
   "游戏窗口的图标": {
@@ -150,6 +157,9 @@
     "body": [
       "# *-默认语言-*",
       "define config.language = \"schinese\"",
+      "# = 添加简体中文语言入口按钮",
+      "#   VSCode 正则全局搜索 `action[\\s\\W_]*Language`",
+      "#   添加入口文字按钮    `textbutton '简体中文' action Language('chinese')`",
       "",
       "init python:",
       "    # * 配置：按键映射 *",

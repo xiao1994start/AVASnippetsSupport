@@ -11,13 +11,8 @@
   },
   "ECHO 控制台输出": {
     "prefix": ["clg -ECHO", "pprt -ECHO"],
-    "body": ["ECHO $0"],
-    "description": ["ECHO 控制台输出"]
-  },
-  "ECHO 控制台空行": {
-    "prefix": ["ppt.-ECHO", "nn"],
-    "body": ["ECHO.", "$0"],
-    "description": ["ECHO 控制台空行"]
+    "body": ["ECHO.$0"],
+    "description": ["ECHO 控制台输出", "不添加内容默认输出`空行`"]
   },
   "暂停": {
     "prefix": ["pause", "pass"],
