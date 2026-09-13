@@ -212,11 +212,11 @@
       },
       {
         "language": "json",
-        "path": "./snippets/json/snippets_vsc/json_snippets_for_all.json"
+        "path": "./snippets/json/snippets/json_snippets_for_all.json"
       },
       {
         "language": "json",
-        "path": "./snippets/json/snippets_vsc/json_snippets_for_python.json"
+        "path": "./snippets/json/snippets/json_snippets_for_python.json"
       },
       {
         "language": "json",
@@ -265,6 +265,10 @@
       {
         "language": "javascript",
         "path": "./snippets/nodeJS/02 JS基础/05 filter过滤.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/06 path路径模块.json"
       },
       {
         "language": "bat",
