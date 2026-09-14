@@ -10,7 +10,7 @@
     "description": "创建 匿名函数"
   },
   "const ... = require('...') 加载模块 [CommonJS]": {
-    "prefix": ["new req"],
+    "prefix": ["new require"],
     "body": ["const ${1:...} = require('${1:...}');"],
     "description": ["const ... = require('...') 加载模块 [CommonJS]"]
   },
