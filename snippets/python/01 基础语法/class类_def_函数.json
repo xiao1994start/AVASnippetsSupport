@@ -1,6 +1,6 @@
 {
   "创建 class Config 单实例对象": {
-    "prefix": ["class Config -class"],
+    "prefix": ["class Config def new cls -class"],
     "body": [
       "class Config:",
       "    \"\"\"# 配置管理器（单例模式）",
@@ -83,7 +83,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "创建 class 单实例对象": {
-    "prefix": ["class new cls -class"],
+    "prefix": ["class def new cls -class"],
     "body": [
       "class ${1:NewClass}:",
       "    # ==================== 单例相关 ====================",
@@ -156,12 +156,12 @@
     "description": ["创建class - async def 函数"]
   },
   "创建def函数": {
-    "prefix": ["def newFunction -def"],
+    "prefix": ["def newFunction -def", "new def"],
     "body": ["def ${1:name}():", "    $0", "    return"],
     "description": ["创建def函数"]
   },
   "async def 创建异步IO协程函数": {
-    "prefix": ["async def newFunction"],
+    "prefix": ["async def newFunction", "new async def"],
     "body": [
       "async def ${1:name}():",
       "    # * ${2:_summary_}",
@@ -186,7 +186,7 @@
   },
 
   "lambda:匿名函数": {
-    "prefix": ["lbd -lambda"],
+    "prefix": ["lbd -lambda", "new lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },

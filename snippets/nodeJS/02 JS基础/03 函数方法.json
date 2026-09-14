@@ -1,8 +1,13 @@
 {
   "创建 function 方法函数": {
-    "prefix": ["new func -function"],
+    "prefix": ["new def function"],
     "body": ["function ${1:name}(${2:params}) {", "  $0", "}", ""],
     "description": "创建 function 方法函数"
+  },
+  "创建 匿名函数": {
+    "prefix": ["new lambda"],
+    "body": ["(${1:params}) => {", "  $0", "}", ""],
+    "description": "创建 匿名函数"
   },
   "导出语法": {
     "prefix": ["export default", "expt default -export"],
