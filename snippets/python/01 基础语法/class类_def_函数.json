@@ -186,7 +186,7 @@
   },
 
   "lambda:匿名函数": {
-    "prefix": ["lmbda -lambda"],
+    "prefix": ["lbd -lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },
