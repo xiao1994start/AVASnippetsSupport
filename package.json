@@ -279,10 +279,6 @@
         "path": "./snippets/nodeJS/02 JS基础/path路径模块.json"
       },
       {
-        "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/url解析模块.json"
-      },
-      {
         "language": "bat",
         "path": "./snippets/nodeJS/vue/01 vue_初始化.bat.json"
       },

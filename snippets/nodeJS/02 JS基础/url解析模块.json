@@ -1,7 +1,0 @@
-{
-  "引入url解析模块": {
-    "prefix": ["req url "],
-    "body": ["const url = require(\"url\"); // * 引入url解析模块", ""],
-    "description": ["引入url解析模块"]
-  }
-}
