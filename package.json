@@ -268,7 +268,11 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/06 path路径模块.json"
+        "path": "./snippets/nodeJS/02 JS基础/fs文件系统模块.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/path路径模块.json"
       },
       {
         "language": "bat",
