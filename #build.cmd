@@ -44,6 +44,8 @@ for %%i in ("*.vsix") do (
     @REM  copy /V /Y "%%i" "..\%%i"
 )
 ECHO 插件封装脚本执行完毕
+call "%~dp0#count_snippets_json.cmd"
+
 
 
 endlocal

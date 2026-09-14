@@ -1,6 +1,6 @@
 {
   "创建 class Config 单实例对象": {
-    "prefix": ["class Config def new cls -class"],
+    "prefix": ["new class Config -class_new_function"],
     "body": [
       "class Config:",
       "    \"\"\"# 配置管理器（单例模式）",
@@ -83,7 +83,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "创建 class 单实例对象": {
-    "prefix": ["class def new cls -class"],
+    "prefix": ["new class def cls -class_new_function"],
     "body": [
       "class ${1:NewClass}:",
       "    # ==================== 单例相关 ====================",
@@ -102,7 +102,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "def __new__(cls) 单例模式": {
-    "prefix": ["def new cls -class"],
+    "prefix": ["new def cls -class_new_function"],
     "body": [
       "_instance = None",
       "def __new__(cls):",
@@ -114,7 +114,7 @@
     "description": ["def __new__(cls) 单例模式"]
   },
   "创建 class 对象": {
-    "prefix": ["class init -class"],
+    "prefix": ["new class init -class"],
     "body": [
       "class ${1:NewObject}:",
       "    # ==================== 全局状态存储 ====================",
@@ -131,7 +131,7 @@
     "description": ["创建 class 对象"]
   },
   "class 初始化(继承父类)": {
-    "prefix": ["def init super init -class"],
+    "prefix": ["new def init super init -class_function"],
     "body": ["def __init__(self) -> None:", "    $0", "    super().__init__()", ""],
     "description": ["class 初始化(继承父类)"]
   },
@@ -146,22 +146,22 @@
     "description": ["class类self"]
   },
   "创建class - def 函数": {
-    "prefix": ["def self -class"],
+    "prefix": ["new def self -class_function"],
     "body": ["def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - def 函数"]
   },
   "创建class - async def 函数": {
-    "prefix": ["async def self -class"],
+    "prefix": ["new async def self -class_function"],
     "body": ["async def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - async def 函数"]
   },
   "创建def函数": {
-    "prefix": ["def newFunction -def", "new def"],
+    "prefix": ["new def function"],
     "body": ["def ${1:name}():", "    $0", "    return"],
     "description": ["创建def函数"]
   },
   "async def 创建异步IO协程函数": {
-    "prefix": ["async def newFunction", "new async def"],
+    "prefix": ["new async def function"],
     "body": [
       "async def ${1:name}():",
       "    # * ${2:_summary_}",
@@ -186,7 +186,7 @@
   },
 
   "lambda:匿名函数": {
-    "prefix": ["lbd -lambda", "new lambda"],
+    "prefix": ["new lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },

@@ -8,7 +8,6 @@ set /a "count=0"
 
 for /R "%~dp0snippets" %%i in ("*.json") do ( set /a "count+=1" )
 
-ECHO 统计到的 json 文件数量: !count!
 
 @REM  每个 json 文件占用的行数倍数
 set /a "mult=4"
@@ -25,13 +24,15 @@ set /a "end_line=4"
 @REM  计算结束行号
 set /a "end_line=start_line+end_line+(count+dup-ign)*mult"
 
-ECHO 统计到的 json 文件数量: !start_line! 到 !end_line!
 
 for /f %%a in ('find /c /v "" ^< "%~dp0package.json"') do set "raw=%%a"
 set /a "total_lines=%raw:*: =%"
 set /a "total_lines+=1"
 
-ECHO ====================== 结果 ======================
+
+ECHO ====================== 统计 ======================
+@REM  ECHO 统计到的 json 文件数量: !count!
+@REM  ECHO 统计到的 json 文件数量: !start_line! 到 !end_line!
 ECHO.统计数: !end_line!
 ECHO.总行数: !total_lines!
 
