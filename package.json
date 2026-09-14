@@ -272,6 +272,10 @@
       },
       {
         "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/http服务模块.json"
+      },
+      {
+        "language": "javascript",
         "path": "./snippets/nodeJS/02 JS基础/path路径模块.json"
       },
       {

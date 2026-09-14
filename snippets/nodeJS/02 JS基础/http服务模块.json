@@ -1,0 +1,7 @@
+{
+  "引入http服务模块": {
+    "prefix": ["req http "],
+    "body": ["const http = require(\"http\"); // * 引入http服务模块", ""],
+    "description": ["引入http服务模块"]
+  }
+}
