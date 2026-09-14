@@ -9,9 +9,14 @@
     "body": ["(${1:params}) => {", "  $0", "}", ""],
     "description": "创建 匿名函数"
   },
-  "导出语法": {
+  "const ... = require('...') 加载模块 [CommonJS]": {
+    "prefix": ["req ..."],
+    "body": ["const ${1:...} = require('${1:...}');"],
+    "description": ["const ... = require('...') 加载模块 [CommonJS]"]
+  },
+  "导出": {
     "prefix": ["export default", "expt default -export"],
     "body": ["export default { $0 }", ""],
-    "description": ["导出语法", "将一个对象、函数、类或值作为模块的默认导出(暴露)，供其他文件引入使用"]
+    "description": ["导出", "将一个对象、函数、类或值作为模块的默认导出(暴露)，供其他文件引入使用"]
   }
 }
