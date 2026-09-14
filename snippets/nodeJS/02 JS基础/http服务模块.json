@@ -1,7 +1,7 @@
 {
   "引入http服务模块": {
     "prefix": ["req http "],
-    "body": ["const http = require(\"http\"); // * 引入http服务模块", ""],
+    "body": ["const http = require(\"http\")$0; // * 引入http服务模块", ""],
     "description": ["引入http服务模块"]
   },
   "设置响应头为html格式": {
