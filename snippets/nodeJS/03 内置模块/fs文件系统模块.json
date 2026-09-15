@@ -3,5 +3,35 @@
     "prefix": ["req fs "],
     "body": ["const fs = require(\"fs\")$0; // * 引入文件系统模块", ""],
     "description": ["引入文件系统模块"]
+  },
+  "获取绝对路径": {
+    "prefix": ["path resolve"],
+    "body": ["path.resolve(${1:获取绝对路径})"],
+    "description": ["获取绝对路径"]
+  },
+  "路径分隔符": {
+    "prefix": ["path sep"],
+    "body": ["path.sep"],
+    "description": ["路径分隔符"]
+  },
+  "路径解析": {
+    "prefix": ["path parse"],
+    "body": ["path.parse(${1:路径解析})"],
+    "description": ["路径解析"]
+  },
+  "获取文件名": {
+    "prefix": ["path basename"],
+    "body": ["path.basename(${1:获取文件名})"],
+    "description": ["获取文件名"]
+  },
+  "获取目录名": {
+    "prefix": ["path dirname"],
+    "body": ["path.dirname(${1:获取目录名})"],
+    "description": ["获取目录名"]
+  },
+  "获取扩展名": {
+    "prefix": ["path extname"],
+    "body": ["path.extname(${1:获取扩展名})"],
+    "description": ["获取扩展名"]
   }
 }
