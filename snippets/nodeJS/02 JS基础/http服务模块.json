@@ -3,10 +3,5 @@
     "prefix": ["req http "],
     "body": ["const http = require(\"http\")$0; // * 引入http服务模块", ""],
     "description": ["引入http服务模块"]
-  },
-  "设置响应头为html格式": {
-    "prefix": ["setHeader html"],
-    "body": ["setHeader(\"Content-Type\", \"text/html;charset=utf-8\")"],
-    "description": ["设置响应头为html格式"]
   }
 }
