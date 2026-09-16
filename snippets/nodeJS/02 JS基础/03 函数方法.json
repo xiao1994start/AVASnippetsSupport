@@ -1,12 +1,12 @@
 {
   "创建 function 函数": {
     "prefix": ["new def function"],
-    "body": ["function ${1:name}(${2:params}) {", "  ${3:body}", "}", ""],
+    "body": ["function ${1:name}(${2:params}) { $0 }", ""],
     "description": ["创建 function 函数"]
   },
   "创建 匿名函数": {
     "prefix": ["new lambda"],
-    "body": ["(${1:params}) => {", "  ${2:body}", "}", ""],
+    "body": ["(${1:params}) => { $0 }", ""],
     "description": ["创建 匿名函数"]
   },
   "导出/暴露 模块 [CommonJS]": {
