@@ -1,0 +1,7 @@
+{
+  "环境位置判断": {
+    "prefix": "where code",
+    "body": ["where code >nul 2>&1 && if %errorlevel%==0 ( ECHO.[Yes]环境存在 ) else ( ECHO.[No]环境不存在 )", ""],
+    "description": "环境位置判断"
+  }
+}
