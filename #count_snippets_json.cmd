@@ -17,7 +17,7 @@ set /a "dup=4"
 set /a "ign=3"
 
 @REM  开始行号
-set /a "start_line=84"
+set /a "start_line=83"
 @REM  结束补充行数
 set /a "end_line=4"
 
