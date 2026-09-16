@@ -1,6 +1,6 @@
 {
   "引入路径模块": {
-    "prefix": ["req path "],
+    "prefix": ["req path"],
     "body": ["const path = require(\"path\")$0; // * 引入路径模块", ""],
     "description": ["引入路径模块"]
   },

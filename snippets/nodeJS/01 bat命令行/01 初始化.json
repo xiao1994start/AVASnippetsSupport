@@ -20,7 +20,7 @@
       "ECHO - 清理 npm 缓存",
       "call npm cache clean --force",
       "ECHO + 升级 npm",
-      "call npm i --global npm --registry https://registry.npmmirror.com/",
+      "call npm install -g npm --registry https://registry.npmmirror.com/",
       "",
       "ECHO = 检查 软件仓库位置:",
       "call npm root -g",

@@ -1,0 +1,7 @@
+{
+  "引入express模块": {
+    "prefix": ["req express"],
+    "body": ["const express = require(\"express\"); // * 引入express模块", ""],
+    "description": ["引入express模块"]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "npm 安装 pnpm": {
-    "prefix": ["npm i pnpm"],
-    "body": ["ECHO = 安装 pnpm", "call npm install -g pnpm --registry https://registry.npmmirror.com/", ""],
+    "prefix": ["npm install pnpm"],
+    "body": ["ECHO = 安装 pnpm", "call npm install pnpm -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 安装 pnpm"]
   },
   "pnpm 版本号": {

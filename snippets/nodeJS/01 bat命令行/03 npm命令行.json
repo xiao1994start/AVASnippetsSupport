@@ -25,7 +25,7 @@
     "description": ["npm 缓存清理"]
   },
   "npm 升级": {
-    "prefix": ["npm i npm"],
+    "prefix": ["npm install npm"],
     "body": ["ECHO + 升级 npm", "call npm install npm -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 升级"]
   },

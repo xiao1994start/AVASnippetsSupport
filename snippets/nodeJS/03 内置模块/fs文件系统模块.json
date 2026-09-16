@@ -1,6 +1,6 @@
 {
   "引入文件系统模块": {
-    "prefix": ["req fs "],
+    "prefix": ["req fs"],
     "body": ["const fs = require(\"fs\")$0; // * 引入文件系统模块", ""],
     "description": ["引入文件系统模块"]
   },
