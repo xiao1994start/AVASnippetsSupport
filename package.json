@@ -325,6 +325,14 @@
       },
       {
         "language": "bat",
+        "path": "./snippets/python/00 bat命令行/uv 环境管理工具/uv初始python环境.bat.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/python/00 bat命令行/uv 环境管理工具/uv命令行.bat.json"
+      },
+      {
+        "language": "bat",
         "path": "./snippets/python/00 bat命令行/snippets.json"
       },
       {
@@ -874,18 +882,6 @@
       {
         "language": "python",
         "path": "./snippets/python/urllib URL处理模块/urllib.02.request.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/uv 环境管理工具/python.env_uv.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/uv 环境管理工具/uv.base.bat.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/python/uv 环境管理工具/uv.bat.json"
       },
       {
         "language": "python",

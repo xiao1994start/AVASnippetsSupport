@@ -1,6 +1,6 @@
 {
   "python 环境初始化 (嵌入式环境不能使用 Tk/Nuitka)": {
-    "prefix": "init py_uv =-python",
+    "prefix": ["init uv =-python"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
