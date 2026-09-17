@@ -1,17 +1,17 @@
 {
   "npm 安装 pnpm": {
     "prefix": ["npm install pnpm"],
-    "body": ["ECHO = 安装 pnpm", "call npm i pnpm -g --registry https://registry.npmmirror.com/", ""],
+    "body": ["ECHO.= 安装 pnpm", "call npm i pnpm -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 安装 pnpm"]
   },
   "pnpm 版本号": {
     "prefix": ["pnpm version"],
-    "body": ["ECHO = 检查 pnpm 版本号:", "call pnpm --version", ""],
+    "body": ["ECHO.= 检查 pnpm 版本号:", "call pnpm --version", ""],
     "description": ["pnpm 版本号"]
   },
   "pnpm 配置国内源": {
     "prefix": ["pnpm config set registry"],
-    "body": ["ECHO * 配置 pnpm 国内源", "call pnpm config set registry https://registry.npmmirror.com", ""],
+    "body": ["ECHO.* 配置 pnpm 国内源", "call pnpm config set registry https://registry.npmmirror.com", ""],
     "description": ["pnpm 配置国内源"]
   },
   "pnpm 初始化新项目": {
