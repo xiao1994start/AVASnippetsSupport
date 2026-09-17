@@ -23,7 +23,7 @@
       "ECHO.= npm 版本号:",
       "call npm -v",
       "",
-      "ECHO.- 清理 npm 缓存",
+      "ECHO.- 清理 npm 缓存（禁用：推荐的保护功能）",
       "call npm cache clean --force",
       "ECHO.+ 升级 npm",
       "call npm i -g npm --registry https://registry.npmmirror.com/",
