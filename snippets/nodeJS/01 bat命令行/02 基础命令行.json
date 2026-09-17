@@ -3,5 +3,38 @@
     "prefix": ["node version"],
     "body": ["ECHO = node 版本号:", "call node -v", ""],
     "description": ["node.js 版本号"]
+  },
+  "node.js 临时环境设置": {
+    "prefix": ["set node --Portable"],
+    "body": [
+      "@REM  * 初始化 node 环境变量",
+      "if not exist \".\\node\" ( for /D %%i in (\"*node*\") do ( if /I \"%%~nxi\" NEQ \"node_modules\" ( ren \"%%i\" \"node\" ) ) )",
+      "",
+      "@REM  * 定义 node 环境变量",
+      "set \"local_node=.\\node\"",
+      "",
+      "@REM  * 添加临时系统环境变量",
+      "set \"NODE_PATH=!local_node!;!local_node!\\node_modules;\"",
+      "set \"PATH=%NODE_PATH%;%PATH%;\"",
+      "",
+      "ECHO.= node 版本号:",
+      "call node -v",
+      "ECHO.= npm 版本号:",
+      "call npm -v",
+      "ECHO.",
+      "",
+      "",
+      "$0",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "endlocal",
+      ""
+    ],
+    "description": ["node.js 临时环境设置"]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "node.js 临时环境设置": {
+  "node.js 临时环境初始化": {
     "prefix": ["init node --Portable"],
     "body": [
       "@ECHO OFF",
@@ -9,7 +9,7 @@
       "",
       "",
       "@REM  * 初始化 node 环境变量",
-      "if not exist \".\\node\" ( for /D %%i in (\"*node*\") do ( ren \"%%i\" \"node\" ) )",
+      "if not exist \".\\node\" ( for /D %%i in (\"*node*\") do ( if /I \"%%~nxi\" NEQ \"node_modules\" ( ren \"%%i\" \"node\" ) ) )",
       "",
       "@REM  * 定义 node 环境变量",
       "set \"local_node=.\\node\"",
@@ -22,6 +22,7 @@
       "call node -v",
       "ECHO.= npm 版本号:",
       "call npm -v",
+      "ECHO.",
       "",
       "ECHO.- 清理 npm 缓存（禁用：推荐的保护功能）",
       "call npm cache clean --force",
@@ -69,6 +70,6 @@
       "endlocal",
       ""
     ],
-    "description": ["node.js 临时环境设置"]
+    "description": ["node.js 临时环境初始化"]
   }
 }
