@@ -3,7 +3,7 @@
     "prefix": ["init git --Portable"],
     "body": [
       "@REM * 定义 git 环境变量",
-      "set \"local_git=%~dp0PortableGit\"",
+      "set \"local_git=.\\PortableGit\"",
       "",
       "@REM * 添加临时系统环境变量",
       "set \"SYSTEM_PATH=%PATH%\"",
