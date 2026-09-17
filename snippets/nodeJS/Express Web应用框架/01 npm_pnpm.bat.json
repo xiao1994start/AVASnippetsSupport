@@ -2,12 +2,9 @@
   "安装 express Web应用框架": {
     "prefix": ["pnpm express"],
     "body": [
-      "ECHO.+ 安装 express Web应用框架",
-      "@REM  call npm install express --registry https://registry.npmmirror.com/",
-      "call pnpm add express",
-      "ECHO.+ 安装 express 框架类型定义提示",
-      "@REM  call npm install @types/express --registry https://registry.npmmirror.com/",
-      "call pnpm add @types/express",
+      "ECHO.+ 安装 express Web应用框架 类型提示",
+      "@REM  call npm install express @types/express --registry https://registry.npmmirror.com/",
+      "call pnpm add express @types/express",
       ""
     ],
     "description": ["安装 express Web应用框架"]
