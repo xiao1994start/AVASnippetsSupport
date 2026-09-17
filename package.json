@@ -305,7 +305,15 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/nodeJS/Express Web应用框架/01 npm_pnpm.bat.json"
+        "path": "./snippets/nodeJS/body-parser 解析请求体/01 npm.bat.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/body-parser 解析请求体/02 snippets.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/nodeJS/Express Web应用框架/01 npm.bat.json"
       },
       {
         "language": "javascript",
