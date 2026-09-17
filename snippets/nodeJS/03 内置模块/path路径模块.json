@@ -5,7 +5,7 @@
     "description": ["引入路径模块"]
   },
   "获取当前脚本所在目录的Path对象": {
-    "prefix": ["file path dir -path"],
+    "prefix": ["path file dir -path"],
     "body": ["path.join(__dirname, '$0')"],
     "description": ["获取当前脚本所在目录的Path对象"]
   }

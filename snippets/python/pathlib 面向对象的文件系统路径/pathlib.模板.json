@@ -18,7 +18,7 @@
     "description": ["获取当前用户目录的Path对象"]
   },
   "获取当前脚本所在目录的Path对象": {
-    "prefix": ["file path dir -Path"],
+    "prefix": ["path file dir -Path"],
     "body": ["Path(Path(__file__).parent, '$0')"],
     "description": ["获取当前脚本所在目录的Path对象"]
   }
