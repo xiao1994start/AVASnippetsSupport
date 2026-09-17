@@ -32,7 +32,7 @@
   },
   "清理并重新创建虚拟环境": {
     "prefix": ["uv clean all"],
-    "body": ["ECHO 清理并重新创建虚拟环境", "uv cache clean && del /F /Q \"%~dp0pyproject.toml\""],
+    "body": ["ECHO 清理并重新创建虚拟环境", "uv cache clean && del /F /Q \".\\pyproject.toml\""],
     "description": ["清理并重新创建虚拟环境"]
   },
   "清空全部 uv 缓存（彻底清理）": {

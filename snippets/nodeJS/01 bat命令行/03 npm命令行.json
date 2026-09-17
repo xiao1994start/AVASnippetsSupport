@@ -2,7 +2,7 @@
   "npm 帮助说明": {
     "prefix": ["npm -help"],
     "body": [
-      "@REM npm 说明",
+      "@REM npm 说明：",
       "@REM 临时代理 --registry https://registry.npmmirror.com/",
       "@REM 配置参数:{",
       "@REM   -G 全局安装",
@@ -21,18 +21,23 @@
   },
   "npm 初始化新项目": {
     "prefix": ["npm init"],
-    "body": ["npm init", ""],
+    "body": ["ECHO.* 初始化 npm 项目", "call npm init", ""],
     "description": ["npm 初始化新项目"]
   },
-  "npm 初始化新项目(默认配置)": {
+  "npm 自动初始化新项目(默认配置)": {
     "prefix": ["npm init y"],
-    "body": ["npm init -y", ""],
-    "description": ["npm 初始化新项目(默认配置)"]
+    "body": ["ECHO.* 自动初始化 npm 项目", "call npm init -y", ""],
+    "description": ["npm 自动初始化新项目(默认配置)"]
   },
   "npm 缓存清理": {
     "prefix": ["npm cache clean"],
-    "body": ["ECHO - 清理 npm 缓存", "call npm cache clean --force", ""],
+    "body": ["ECHO - 清理 npm 缓存", "call npm cache clean", ""],
     "description": ["npm 缓存清理"]
+  },
+  "npm 缓存清理（禁用：推荐的保护功能）": {
+    "prefix": ["npm cache clean force"],
+    "body": ["ECHO - 清理 npm 缓存（禁用：推荐的保护功能）", "call npm cache clean --force", ""],
+    "description": ["npm 缓存清理（禁用：推荐的保护功能）"]
   },
   "npm 升级": {
     "prefix": ["npm install npm"],
@@ -40,7 +45,7 @@
     "description": ["npm 升级"]
   },
   "npm 检查 软件仓库位置": {
-    "prefix": ["npm root -g"],
+    "prefix": ["npm root g"],
     "body": ["ECHO 检查 软件仓库位置:", "call npm root -g", ""],
     "description": "npm 检查 软件仓库位置"
   },
@@ -67,12 +72,12 @@
   },
   "npm 安装模块": {
     "prefix": ["npm install"],
-    "body": ["npm i ${1:express}", ""],
+    "body": ["npm i ${1:express} --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 安装模块"]
   },
   "npm 全局安装模块": {
     "prefix": ["npm install g"],
-    "body": ["npm i ${1:express} -g", ""],
+    "body": ["npm i ${1:express} -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 全局安装模块"]
   },
   "npm 卸载模块": {

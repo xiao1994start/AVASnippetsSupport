@@ -18,7 +18,7 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 
 ECHO 环境测试
 ECHO 升级 npm
-call npm install --global npm --registry https://registry.npmmirror.com/
+call npm i -g npm --registry https://registry.npmmirror.com/
 ECHO Node.js 版本号:
 call node -v
 ECHO NPM 版本号:
@@ -26,11 +26,11 @@ call npm -v
 ECHO 检查 软件仓库位置:
 call npm root -g
 
-@REM  ECHO 安装 - 更新 自定义插件必备库
-@REM  ECHO 正在安装 @vscode/vsce 打包库 (使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension)
-@REM  call npm install --global @vscode/vsce --registry https://registry.npmmirror.com/
-@REM  ECHO 正在安装 yo generate-code 库
-@REM  call npm install --global yo generator-code --registry https://registry.npmmirror.com/
+ECHO 安装 - 更新 自定义插件必备库
+ECHO 正在安装 @vscode/vsce 打包库 (使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension)
+call npm i -g @vscode/vsce --registry https://registry.npmmirror.com/
+ECHO 正在安装 yo generate-code 库
+call npm i -g yo generator-code --registry https://registry.npmmirror.com/
 
 ECHO 安装 - 更新 完成 & ECHO.
 
