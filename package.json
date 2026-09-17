@@ -112,10 +112,6 @@
         "path": "./snippets/全局-注释标志.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/全局-注释标志.json"
-      },
-      {
         "language": "python",
         "path": "./snippets/全局-注释标志.json"
       },
@@ -280,15 +276,7 @@
         "path": "./snippets/nodeJS/02 JS基础/01 变量.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/nodeJS/02 JS基础/01 变量.json"
-      },
-      {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/02 输出.json"
-      },
-      {
-        "language": "typescript",
         "path": "./snippets/nodeJS/02 JS基础/02 输出.json"
       },
       {
@@ -296,15 +284,7 @@
         "path": "./snippets/nodeJS/02 JS基础/03 函数方法.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/nodeJS/02 JS基础/03 函数方法.json"
-      },
-      {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/04 for_while_循环.json"
-      },
-      {
-        "language": "typescript",
         "path": "./snippets/nodeJS/02 JS基础/04 for_while_循环.json"
       },
       {
@@ -312,15 +292,7 @@
         "path": "./snippets/nodeJS/02 JS基础/05 filter过滤.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/nodeJS/02 JS基础/05 filter过滤.json"
-      },
-      {
         "language": "javascript",
-        "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
-      },
-      {
-        "language": "typescript",
         "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
       },
       {
@@ -328,15 +300,7 @@
         "path": "./snippets/nodeJS/03 内置模块/http服务模块.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/nodeJS/03 内置模块/http服务模块.json"
-      },
-      {
         "language": "javascript",
-        "path": "./snippets/nodeJS/03 内置模块/path路径模块.json"
-      },
-      {
-        "language": "typescript",
         "path": "./snippets/nodeJS/03 内置模块/path路径模块.json"
       },
       {
@@ -345,10 +309,6 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/nodeJS/Express Web应用框架/02 snippets.json"
-      },
-      {
-        "language": "typescript",
         "path": "./snippets/nodeJS/Express Web应用框架/02 snippets.json"
       },
       {

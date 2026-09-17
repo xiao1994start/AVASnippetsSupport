@@ -8,7 +8,7 @@ set /a "count=0"
 @REM  全局类JSON 文件数量
 set /a "total_json=0"
 @REM  nodeJS/TS类JSON 文件数量
-set /a "js_ts_json=0"
+set /a "js_json=0"
 
 for /R "%~dp0snippets" %%i in ("*.json") do (
     set "file_name=%%~fi"
@@ -20,15 +20,17 @@ for /R "%~dp0snippets" %%i in ("*.json") do (
             set /a "count+=1"
         ) else (
             @REM  不包含 bat 字符串的 JSON 文件
-            set /a "js_ts_json+=1"
+            set /a "js_json+=1"
         )
     ) else (
         set /a "count+=1"
     )
 )
 
+ECHO ====================== 统计 ======================
+
 ECHO.全局json文件数量: !total_json!
-ECHO.nodeJS/TS json文件数量: !js_ts_json!
+ECHO.nodeJS/TS json文件数量: !js_json!
 
 
 @REM  每个 json 文件占用的行数倍数
@@ -36,8 +38,10 @@ set /a "base_mult=4"
 
 
 @REM  需要重复计数的 json 文件数量
-@REM  = 全局类JSON * 6 + nodeJS/TS类JSON * 2
-set /a "dup=total_json*6+js_ts_json*2"
+@REM  = 全局类JSON * total_mult + nodeJS/TS类JSON * ts_mult
+set /a "total_mult=5"
+set /a "ts_mult=1"
+set /a "dup=total_json*total_mult+js_json*ts_mult"
 
 
 @REM  忽略的 json 文件数量
@@ -59,9 +63,8 @@ set /a "total_lines=%raw:*: =%"
 set /a "total_lines+=1"
 
 
-ECHO ====================== 统计 ======================
-ECHO 统计到的 json 文件数量: !count!
-ECHO 统计到的 json 文件数量: !start_line! 到 !end_line!
+ECHO.统计到的 json 文件数量: !count!
+ECHO.统计到的 json 文件数量: !start_line! 到 !end_line!
 ECHO.
 ECHO.统计数: !end_line!
 ECHO.总行数: !total_lines!
