@@ -19,6 +19,16 @@
     "body": ["ECHO = npm 版本号:", "call npm -v", ""],
     "description": ["npm 版本号"]
   },
+  "npm 初始化新项目": {
+    "prefix": ["npm init"],
+    "body": ["npm init", ""],
+    "description": ["npm 初始化新项目"]
+  },
+  "npm 初始化新项目(默认配置)": {
+    "prefix": ["npm init y"],
+    "body": ["npm init -y", ""],
+    "description": ["npm 初始化新项目(默认配置)"]
+  },
   "npm 缓存清理": {
     "prefix": ["npm cache clean"],
     "body": ["ECHO - 清理 npm 缓存", "call npm cache clean --force", ""],
@@ -26,7 +36,7 @@
   },
   "npm 升级": {
     "prefix": ["npm install npm"],
-    "body": ["ECHO + 升级 npm", "call npm install npm -g --registry https://registry.npmmirror.com/", ""],
+    "body": ["ECHO + 升级 npm", "call npm i npm -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 升级"]
   },
   "npm 检查 软件仓库位置": {
@@ -57,22 +67,22 @@
   },
   "npm 安装模块": {
     "prefix": ["npm install"],
-    "body": ["npm install ${1:express}", ""],
+    "body": ["npm i ${1:express}", ""],
     "description": ["npm 安装模块"]
   },
   "npm 全局安装模块": {
     "prefix": ["npm install g"],
-    "body": ["npm install ${1:express} -g", ""],
+    "body": ["npm i ${1:express} -g", ""],
     "description": ["npm 全局安装模块"]
   },
   "npm 卸载模块": {
     "prefix": ["npm uninstall"],
-    "body": ["npm uninstall ${1:express}", ""],
+    "body": ["npm un ${1:express}", ""],
     "description": ["npm 卸载模块"]
   },
   "npm 全局卸载模块": {
     "prefix": ["npm uninstall"],
-    "body": ["npm uninstall ${1:express} -g", ""],
+    "body": ["npm un ${1:express} -g", ""],
     "description": ["npm 全局卸载模块"]
   },
   "npm 更新模块": {
