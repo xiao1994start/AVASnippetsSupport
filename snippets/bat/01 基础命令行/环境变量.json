@@ -4,15 +4,20 @@
     "body": ["CD /D \"%~dp0\""],
     "description": ["进入指定当前目录"]
   },
-  "CD /D 更改当前directory": {
+  "CD 切换 当前盘符下 路径": {
+    "prefix": ["cd "],
+    "body": ["CD $0"],
+    "description": ["CD 切换 当前盘符下 路径"]
+  },
+  "CD /D 切换到 盘符 + 路径": {
     "prefix": ["cd -d"],
     "body": ["CD /D $0"],
-    "description": ["CD /D 更改当前directory"]
+    "description": ["CD /D 切换到 盘符 + 路径"]
   },
-  "当前目录": {
-    "prefix": ["CD"],
+  "获取当前 CD 值": {
+    "prefix": ["get cd"],
     "body": ["\"%CD%\""],
-    "description": ["当前目录"]
+    "description": ["获取当前 CD 值"]
   },
   "脚本当前目录": {
     "prefix": ["cwd"],
