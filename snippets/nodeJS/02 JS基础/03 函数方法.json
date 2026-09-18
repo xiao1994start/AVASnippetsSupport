@@ -1,22 +1,22 @@
 {
   "创建 function 函数": {
     "prefix": ["new def function"],
-    "body": ["function ${1:name}(${2:params}) { $0 }", ""],
+    "body": ["function ${1:name}(${2:params}) {$0}", ""],
     "description": ["创建 function 函数"]
   },
   "创建 匿名函数": {
     "prefix": ["new lambda"],
-    "body": ["(${1:params}) => { $0 }", ""],
+    "body": ["(${1:params}) => {$0}", ""],
     "description": ["创建 匿名函数"]
   },
   "导出/暴露 模块 [CommonJS]": {
     "prefix": ["module exports -CommonJS"],
-    "body": ["module.exports = { $0 }", ""],
+    "body": ["module.exports = {$0}", ""],
     "description": ["导出/暴露 模块 [CommonJS]"]
   },
   "导出/暴露 模块 [ESM]": {
     "prefix": ["export default -ESM"],
-    "body": ["export default { $0 }", ""],
+    "body": ["export default {$0}", ""],
     "description": ["导出/暴露 模块 [ESM]"]
   },
   "引入模块 const ... = require('...') [CommonJS]": {
