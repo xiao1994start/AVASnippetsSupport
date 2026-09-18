@@ -74,7 +74,7 @@
       "    ECHO set \"local_node=.\\..\\node\"",
       "    ECHO.",
       "    ECHO @REM * 添加临时系统环境变量",
-      "    ECHO set \"NODE_PATH=^!local_node^!\\;^!local_node^!\\node_modules\\;\"",
+      "    ECHO set \"NODE_PATH=^!local_node^!\\;^!local_node^!\\node_modules\\;.\\node_modules;\"",
       "    ECHO set \"PATH=^!NODE_PATH^!;%%PATH%%;\"",
       "    ECHO.",
       "    ECHO @REM * dev 运行项目",
