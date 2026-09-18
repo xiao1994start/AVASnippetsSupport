@@ -1,0 +1,7 @@
+{
+  "引入formidable模块": {
+    "prefix": ["req formidable"],
+    "body": ["const formidable = require('formidable'); // * 引入 formidable 表单数据解析", ""],
+    "description": ["引入formidable模块"]
+  }
+}

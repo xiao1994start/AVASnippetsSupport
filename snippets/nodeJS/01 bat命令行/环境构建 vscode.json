@@ -3,7 +3,7 @@
     "prefix": ["npm install -vscode"],
     "body": [
       "ECHO 正在安装 @vscode/vsce",
-      "call npm install -g @vscode/vsce --registry https://registry.npmmirror.com/",
+      "call npm i -g @vscode/vsce --registry https://registry.npmmirror.com/",
       "ECHO 已安装 @vscode/vsce",
       ""
     ],
