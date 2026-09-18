@@ -1,7 +1,23 @@
 {
-  "引入formidable模块": {
+  "引入 formidable 模块": {
     "prefix": ["req formidable"],
-    "body": ["const formidable = require('formidable'); // * 引入 formidable 表单数据解析", ""],
-    "description": ["引入formidable模块"]
+    "body": ["const formidable = require('formidable'); // * 引入 formidable 表单数据解析模块", ""],
+    "description": ["引入 formidable 模块"]
+  },
+  "实例化 formidable.IncomingForm 表单解析器": {
+    "prefix": ["new formidable IncomingForm"],
+    "body": [
+      "const formData = new formidable.IncomingForm({",
+      "  encoding: 'utf-8', // 编码 (默认 utf-8)",
+      "  uploadDir: ${1:__dirname}, // 上传文件目录 (默认 os.tmpdir())",
+      "  keepExtensions: true, // 保持文件扩展名 (默认 false)",
+      "  maxFiles: 5, // 限制上传文件数量 (默认 Infinity)",
+      "  maxFileSize: Infinity, // 限制每次上传文件的大小 (默认 200 * 1024 * 1024 => 200MB)",
+      "  maxFields: Infinity, // 限制字段的数量 (默认 1000)",
+      "  maxFieldsSize: 20 * 1024 * 1024, // 限制所有字段总共可以分配的内存大小 (默认 20MB)",
+      "});",
+      ""
+    ],
+    "description": ["实例化 formidable.IncomingForm 表单解析器"]
   }
 }
