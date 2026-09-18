@@ -21,7 +21,7 @@ ECHO 升级 npm
 call npm i -g npm --registry https://registry.npmmirror.com/
 ECHO Node.js 版本号:
 call node -v
-ECHO NPM 版本号:
+ECHO npm 版本号:
 call npm -v
 ECHO 检查 软件仓库位置:
 call npm root -g
