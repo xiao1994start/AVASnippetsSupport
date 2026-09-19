@@ -1,6 +1,6 @@
 {
   "node.js 临时环境初始化": {
-    "prefix": ["init node --Portable"],
+    "prefix": ["init nodeJS --Portable"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
