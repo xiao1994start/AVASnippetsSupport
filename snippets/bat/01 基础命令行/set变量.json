@@ -16,7 +16,7 @@
   },
   "添加当前批处理环境变量": {
     "prefix": ["set path "],
-    "body": ["set \"PATH=${1:临时环境变量};%PATH%;\""],
+    "body": ["set \"XPATH=%PATH%\"", "set \"PATH=${1:临时环境变量};%XPATH%;\""],
     "description": "添加设置适用于当前批处理的环境变量"
   },
   "修饰符传入单个参数": {
@@ -38,10 +38,10 @@
     "prefix": ["set cmd path "],
     "body": [
       "@REM * 添加临时系统环境变量",
-      "set \"SYSTEM_PATH=%PATH%\"",
-      "@REM set \"SYSTEM_PATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
+      "@REM set \"XPATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
+      "set \"XPATH=%PATH%\"",
       "$0",
-      "set \"PATH=;%SYSTEM_PATH%;\"",
+      "set \"PATH=;%XPATH%;\"",
       ""
     ],
     "description": "设置当前批处理临时环境变量"
