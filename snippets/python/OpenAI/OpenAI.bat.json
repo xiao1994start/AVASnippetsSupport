@@ -1,6 +1,6 @@
 {
   "pip|uv OpenAI API 大语言模型依赖": {
-    "prefix": ["pip openai", "uv openai"],
+    "prefix": ["pip_openai", "uv_openai"],
     "body": [
       "ECHO.",
       "ECHO * OpenAI API 大语言模型依赖 *",

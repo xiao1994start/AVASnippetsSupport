@@ -1,11 +1,11 @@
 {
   "print(...)": {
-    "prefix": ["clg -print", "pprt -print"],
+    "prefix": ["clg", "pprt_-print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },
   "input(...)": {
-    "prefix": ["ipt -input"],
+    "prefix": ["ipt_-input"],
     "body": "input($0)",
     "description": ["input 语句的代码片段"]
   }

@@ -1,6 +1,6 @@
 {
   "pip|uv inquirer 交互式命令行终端": {
-    "prefix": ["pip inquirer", "uv inquirer"],
+    "prefix": ["pip_inquirer", "uv_inquirer"],
     "body": [
       "ECHO.",
       "ECHO * inquirer 交互式命令行终端 *",

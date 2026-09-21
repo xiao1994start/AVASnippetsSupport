@@ -1,6 +1,6 @@
 {
   "pip|uv requests 网络请求库": {
-    "prefix": ["pip requests", "uv requests"],
+    "prefix": ["pip_requests", "uv_requests"],
     "body": [
       "ECHO.",
       "ECHO * requests 网络请求库 *",
@@ -11,7 +11,7 @@
     "description": ["requests 网络请求库"]
   },
   "pip|uv html5lib HTML5解析库": {
-    "prefix": ["pip html5lib", "uv html5lib"],
+    "prefix": ["pip_html5lib", "uv_html5lib"],
     "body": [
       "ECHO.",
       "ECHO * html5lib HTML5解析库 *",
@@ -22,7 +22,7 @@
     "description": ["html5lib HTML5解析库"]
   },
   "pip|uv setuptools 包管理工具": {
-    "prefix": ["pip setuptools", "uv setuptools"],
+    "prefix": ["pip_setuptools", "uv_setuptools"],
     "body": [
       "ECHO.",
       "ECHO * setuptools 包管理工具 *",

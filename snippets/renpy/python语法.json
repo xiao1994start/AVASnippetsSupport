@@ -1,16 +1,16 @@
 {
   "print(...) for renpy": {
-    "prefix": ["ppr -print"],
+    "prefix": ["clg", "ppr_-print"],
     "body": "print($0)",
     "description": ["print 语句的代码片段"]
   },
   "self for renpy": {
-    "prefix": ["slf -self"],
+    "prefix": ["slf_-self"],
     "body": "self",
     "description": "self"
   },
   "return 语句 for renpy": {
-    "prefix": ["return "],
+    "prefix": ["return_"],
     "body": "return ${1:# value}",
     "description": "return 语句"
   }

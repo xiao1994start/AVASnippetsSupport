@@ -1,6 +1,6 @@
 {
   "pip|uv pedalboard 音频处理框架": {
-    "prefix": ["pip pedalboard", "uv pedalboard"],
+    "prefix": ["pip_pedalboard", "uv_pedalboard"],
     "body": [
       "ECHO.",
       "ECHO * pedalboard 音频处理框架 *",

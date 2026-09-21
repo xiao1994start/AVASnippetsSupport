@@ -10,7 +10,7 @@
     "description": ["开启延迟变量扩展"]
   },
   "ECHO 控制台输出": {
-    "prefix": ["clg -ECHO", "pprt -ECHO"],
+    "prefix": ["clg", "pprt"],
     "body": ["ECHO.$0"],
     "description": ["ECHO 控制台输出", "不添加内容默认输出`空行`"]
   },
@@ -20,7 +20,7 @@
     "description": ["暂停"]
   },
   "暂停(无提示)": {
-    "prefix": ["pause NUL", "pass NUL"],
+    "prefix": ["pause_NUL", "pass_NUL"],
     "body": ["PAUSE > NUL"],
     "description": ["暂停(无提示)"]
   },
@@ -35,22 +35,22 @@
     "description": ["等待n秒后继续"]
   },
   "CMD /C": {
-    "prefix": ["cmd -C"],
+    "prefix": ["cmd_C"],
     "body": ["CMD /C ${1:命令}"],
     "description": ["CMD /C"]
   },
   "start CMD /K": {
-    "prefix": ["cmd -K"],
+    "prefix": ["cmd_K"],
     "body": ["start CMD /K ${1:命令}"],
     "description": ["在新的终端窗口执行"]
   },
   "ECHO | clip 设置剪切板内容": {
-    "prefix": ["clip -ECHO"],
+    "prefix": ["clip_ECHO"],
     "body": ["( ${1:ECHO 设置剪切板内容_第一行 & ECHO 设置剪切板内容_第二行} )| clip"],
     "description": ["ECHO | clip 设置剪切板内容"]
   },
   "使用记事本打开host文件": {
-    "prefix": ["Host Edit"],
+    "prefix": ["Host_Edit"],
     "body": [
       "@REM * 取消 hosts 只读",
       "attrib -R C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
@@ -62,28 +62,18 @@
     "description": ["使用记事本打开host文件"]
   },
   "使用cmd静默安装innosetup安装包": {
-    "prefix": ["inno -Install"],
+    "prefix": ["inno_Install"],
     "body": ["${1:InnoSetup安装程序路径} /SILENT /COMPONENTS=\"${2:InnoExtractor提取的安装参数_使用英文逗号隔开}\""],
     "description": ["使用cmd静默安装innosetup安装包"]
   },
   "msi安装_静默": {
-    "prefix": ["msi -Install"],
+    "prefix": ["msi_Install"],
     "body": ["@REM msiexec /i [安装] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]", "msiexec /i ${1:安装包路径} /qb"],
     "description": ["msi安装_静默"]
   },
   "msi卸载_静默": {
-    "prefix": ["msi -X", "msi -Uninstall"],
+    "prefix": ["msi_X", "msi_Uninstall"],
     "body": ["@REM msiexec /x [卸载] \"安装包路径\" /qb [指定在安装过程中有一个基本 UI]", "msiexec /x ${1:安装包路径} /qb"],
     "description": ["msi卸载_静默"]
-  },
-  "分割线": {
-    "prefix": ["line"],
-    "body": [
-      "ECHO.",
-      "ECHO ---------------------------------------------------------------------------------------------------------------------------------------------",
-      "ECHO.",
-      ""
-    ],
-    "description": ["分割线"]
   }
 }

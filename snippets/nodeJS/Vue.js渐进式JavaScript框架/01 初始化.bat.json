@@ -1,6 +1,6 @@
 {
   "创建 Vue 项目(建议使用 Vite)": {
-    "prefix": ["init vue"],
+    "prefix": ["init_vue"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
@@ -98,7 +98,7 @@
     "description": ["创建 Vue 项目(建议使用 Vite)"]
   },
   "Vite 创建 Vue 项目": {
-    "prefix": ["init vite"],
+    "prefix": ["init_vite"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",

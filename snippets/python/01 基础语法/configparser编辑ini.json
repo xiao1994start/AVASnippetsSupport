@@ -1,11 +1,11 @@
 {
   "引入 configparser 模块": {
-    "prefix": ["import onfigparser", "imp onfigparser"],
+    "prefix": ["import_onfigparser", "imp_onfigparser"],
     "body": ["import configparser"],
     "description": ["引入configparser->ini控制模块"]
   },
   "configparser.tmpl": {
-    "prefix": ["configparser config =-configparser"],
+    "prefix": ["configparser_config_=-configparser"],
     "body": [
       "config = configparser.ConfigParser()",
       "config.read(${1:'db_ini'}, encoding='utf-8')",
@@ -24,32 +24,32 @@
     "description": ["configparser.tmpl"]
   },
   "configparser.sections 读取节点": {
-    "prefix": ["configparser sections -configparser"],
+    "prefix": ["configparser_sections_-configparser"],
     "body": ["sections($0)"],
     "description": ["configparser.sections 读取节点"]
   },
   "configparser.item 读取节点下键-值": {
-    "prefix": ["configparser item -configparser"],
+    "prefix": ["configparser_item_-configparser"],
     "body": ["item(section${1:section})"],
     "description": ["configparser.item 读取节点下键-值"]
   },
   "configparser.get 读取节点-键->值": {
-    "prefix": ["configparser get -configparser"],
+    "prefix": ["configparser_get_-configparser"],
     "body": ["get(section=${1:section}, option=${2:option})"],
     "description": ["configparser.get 读取节点-键->值"]
   },
   "configparser.has_section 判断存在节点": {
-    "prefix": ["configparser has_section -configparser"],
+    "prefix": ["configparser_has_section_-configparser"],
     "body": ["has_section($0)"],
     "description": ["configparser.has_section 判断存在节点, 返回bool"]
   },
   "configparser.has_option 判断存在节点": {
-    "prefix": ["configparser has_option -configparser"],
+    "prefix": ["configparser_has_option_-configparser"],
     "body": ["has_option(section=${1:section}, option=${2:option})"],
     "description": ["configparser.has_option 判断存在节点, 返回bool"]
   },
   "configparser.add_section 写入节点数据": {
-    "prefix": ["configparser add_section -configparser"],
+    "prefix": ["configparser_add_section_-configparser"],
     "body": [
       "add_section(section=${1:section})",
       "# 写入节点数据",
@@ -59,27 +59,27 @@
     "description": ["configparser.sections 写入节点数据"]
   },
   "configparser.remove_section 删除节点": {
-    "prefix": ["configparser remove_section -configparser"],
+    "prefix": ["configparser_remove_section_-configparser"],
     "body": ["remove_section(section=${1:'section'})"],
     "description": ["configparser.sections 删除指定节点"]
   },
   "configparser.remove_option 删除指定节点 -键": {
-    "prefix": ["configparser remove_option -configparser"],
+    "prefix": ["configparser_remove_option_-configparser"],
     "body": ["remove_option(section=${1:'section'}, option=${2:'option'})"],
     "description": ["configparser.remove_option 删除指定节点 -键"]
   },
   "configparser.set 修改指定节点键 -值": {
-    "prefix": ["configparser set -configparser"],
+    "prefix": ["configparser_set_-configparser"],
     "body": ["set(section=${1:'section'}, option=${2:'option'}, value=${3:'value'})"],
     "description": ["configparser.set 修改指定节点键 -值"]
   },
   "configparser.write 写入节点数据": {
-    "prefix": ["configparser with configwrite -configparser", "with configparser configwrite -configparser"],
+    "prefix": ["with_open_configparser_configwrite_-configparser"],
     "body": ["with open(config_file, 'w', encoding='utf-8') as configfile:", "    config.write(configfile)"],
     "description": ["configparser.set 写入节点数据"]
   },
   "configparser.ini_to_dict ini配置转换字典": {
-    "prefix": ["configparser ini_to_dict -configparser"],
+    "prefix": ["configparser_ini_to_dict_-configparser"],
     "body": [
       "def ini_to_dict(arg):",
       "\t\"\"\"ini配置转换字典",

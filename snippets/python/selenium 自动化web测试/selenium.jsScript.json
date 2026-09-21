@@ -1,11 +1,11 @@
 {
   "selenium.execute_script_JavaScript 打印页面内容": {
-    "prefix": ["js-print windows=selenium execute_script_JavaScript"],
+    "prefix": ["js-print_windows_print_=selenium_execute_script_JavaScript"],
     "body": ["'window.print()'"],
     "description": ["selenium.execute_script_JavaScript 打印页面内容"]
   },
   "selenium.execute_script_JavaScript 获取浏览器user-agent": {
-    "prefix": ["js-userAgent=selenium execute_script_JavaScript"],
+    "prefix": ["js-userAgent=selenium_execute_script_JavaScript"],
     "body": ["'return navigator.userAgent'"],
     "description": ["selenium.execute_script_JavaScript 获取浏览器user-agent"]
   }

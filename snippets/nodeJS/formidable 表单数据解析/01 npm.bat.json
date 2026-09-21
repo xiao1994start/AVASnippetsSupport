@@ -1,6 +1,6 @@
 {
   "安装 formidable 表单数据解析模块": {
-    "prefix": ["npm formidable"],
+    "prefix": ["npm_formidable"],
     "body": [
       "ECHO.+ 安装 formidable 表单数据解析模块 类型提示",
       "call npm i formidable @types/formidable --registry https://registry.npmmirror.com/",

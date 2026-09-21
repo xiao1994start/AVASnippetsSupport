@@ -1,6 +1,6 @@
 {
   "pip|uv uiautomation Windows桌面程序自动化控制依赖": {
-    "prefix": ["pip uiautomation", "uv uiautomation"],
+    "prefix": ["pip_uiautomation", "uv_uiautomation"],
     "body": [
       "ECHO.",
       "ECHO * uiautomation Windows桌面程序自动化控制依赖 *",

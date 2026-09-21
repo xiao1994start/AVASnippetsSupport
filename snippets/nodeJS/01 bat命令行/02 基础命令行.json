@@ -1,6 +1,6 @@
 {
   "node.js 版本号": {
-    "prefix": ["node version"],
+    "prefix": ["node_version"],
     "body": ["ECHO = node 版本号:", "call node -v", ""],
     "description": ["node.js 版本号"]
   },

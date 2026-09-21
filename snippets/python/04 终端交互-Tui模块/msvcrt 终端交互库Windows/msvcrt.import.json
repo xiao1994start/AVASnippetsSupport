@@ -1,6 +1,6 @@
 {
   "引入 msvcrt 终端GUI界面库": {
-    "prefix": ["import msvcrt", "imp msvcrt"],
+    "prefix": ["import_msvcrt", "imp_msvcrt"],
     "body": ["import msvcrt  # 仅 Windows 控制台交互库"],
     "description": ["引入 msvcrt 终端GUI界面库"]
   }

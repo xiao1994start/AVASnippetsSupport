@@ -1,6 +1,6 @@
 {
   "class Container自定义": {
-    "prefix": ["class flet_Container"],
+    "prefix": ["class_flet_Container"],
     "body": [
       "class Container(flet.Container):",
       "    def __init__(",
@@ -75,7 +75,7 @@
     "description": ["class Container自定义"]
   },
   "class Text自定义": {
-    "prefix": ["class flet_Text"],
+    "prefix": ["class_flet_Text"],
     "body": [
       "class Text(flet.Text):",
       "    def __init__(",
@@ -126,7 +126,7 @@
     "description": ["class Text自定义"]
   },
   "class Button自定义": {
-    "prefix": ["class flet_Button"],
+    "prefix": ["class_flet_Button"],
     "body": [
       "class Button(flet.Button):",
       "    def __init__(",
@@ -175,7 +175,7 @@
     "description": ["class Button自定义"]
   },
   "class Checkbox自定义": {
-    "prefix": ["class flet_Checkbox"],
+    "prefix": ["class_flet_Checkbox"],
     "body": [
       "class Checkbox(flet.Checkbox):",
       "    def __init__(",
@@ -240,7 +240,7 @@
     "description": ["class Checkbox自定义"]
   },
   "class WaitDialog自定义": {
-    "prefix": ["class flet_AlertDialog"],
+    "prefix": ["class_flet_AlertDialog"],
     "body": [
       "class WaitDialog(flet.AlertDialog):",
       "    def __init__(",

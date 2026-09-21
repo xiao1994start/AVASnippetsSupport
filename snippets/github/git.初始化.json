@@ -1,6 +1,6 @@
 {
   "Git 配置user.name&user.email": {
-    "prefix": ["git config User"],
+    "prefix": ["git_config_user"],
     "body": [
       "ECHO 全局配置global 用户名称 邮箱",
       "call git config --global user.name '${1:name}'",
@@ -9,16 +9,33 @@
     "description": ["配置user.name&user.email"]
   },
   "Git 验证ssl": {
-    "prefix": ["git config Http SSL"],
+    "prefix": ["git_config_http_ssl"],
     "body": ["ECHO 全局配置global ssl验证", "call git config --global http.sslVerify ${1|false,true|}"],
     "description": ["Git 验证ssl"]
   },
   "强制 Git 走 HTTPS 通道": {
-    "prefix": ["git config https insteadOf ssh"],
+    "prefix": ["git_config_https_insteadOf_ssh"],
     "body": [
       "ECHO 强制 Git 走 HTTPS 通道",
       "call git config --global url.\"https://github.com/\".insteadOf \"ssh://git@github.com/\""
     ],
     "description": ["强制 Git 走 HTTPS 通道"]
+  },
+  "PortableGit 临时环境设置": {
+    "prefix": ["init_git_Portable"],
+    "body": [
+      "@REM * 定义 git 环境变量",
+      "set \"local_git=%~dp0PortableGit\"",
+      "",
+      "@REM * 添加临时系统环境变量",
+      "set \"GIT_PATH=!local_git!;!local_git!\\cmd;!local_git!\\bin;!local_git!\\usr\\bin;\"",
+      "@REM set \"XPATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
+      "set \"XPATH=%PATH%\"",
+      "set \"PATH=%GIT_PATH%;%XPATH%;\"",
+      "ECHO Git 版本号:",
+      "call git -v",
+      ""
+    ],
+    "description": ["PortableGit 临时环境设置"]
   }
 }

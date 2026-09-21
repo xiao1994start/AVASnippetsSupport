@@ -1,6 +1,6 @@
 {
   "map 根据提供的函数对指定序列做映射": {
-    "prefix": ["map "],
+    "prefix": ["map"],
     "body": ["map(function, 可迭代对象iterable)"],
     "description": [
       "根据提供的函数对指定序列做映射",
@@ -8,7 +8,7 @@
     ]
   },
   "map 可迭代对象批量转换为字符串类型": {
-    "prefix": ["map str "],
+    "prefix": ["map_str"],
     "body": ["map(str, 可迭代对象iterable)"],
     "description": ["可迭代对象批量转换为字符串类型"]
   }

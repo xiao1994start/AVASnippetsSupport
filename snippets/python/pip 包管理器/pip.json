@@ -1,6 +1,6 @@
 {
   "pip 尝试导入依赖检测": {
-    "prefix": ["try pip"],
+    "prefix": ["try_pip"],
     "body": [
       "try:",
       "    # * 尝试导入 ... 模块",

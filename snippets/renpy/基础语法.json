@@ -1,291 +1,291 @@
 {
   "Region 创建新的折叠区域": {
-    "prefix": ["#region ", "region "],
+    "prefix": ["#region_", "region_"],
     "body": "#region ${1:Region name}\n$0\n#endregion ${1:Region name}",
     "description": "创建新的折叠区域."
   },
   "label 创建新标签": {
-    "prefix": ["label ", "lb "],
+    "prefix": ["label_", "lb_"],
     "body": "label ${1:label_name(arg1, arg2)}:\n\t${2:\"...\"}",
     "description": "创建新标签."
   },
   "jump 跳转到标签": {
-    "prefix": ["jump ", "jp "],
+    "prefix": ["jump_", "jp_"],
     "body": "jump ${1:label_name}",
     "description": "跳转到标签."
   },
   "call 调用标签": {
-    "prefix": ["call "],
+    "prefix": ["call_"],
     "body": "call ${1:label_name}",
     "description": "调用标签."
   },
   "Call 调用标签": {
-    "prefix": ["Call "],
+    "prefix": ["Call_"],
     "body": "Call(${1:label_name})",
     "description": "调用标签."
   },
   "Function 调用函数": {
-    "prefix": ["Function "],
+    "prefix": ["def_Function_"],
     "body": "Function(${1:function_name, arg1, arg2})",
     "description": "调用函数."
   },
   "NullAction 空操作": {
-    "prefix": ["NullAction "],
+    "prefix": ["NullAction_"],
     "body": "NullAction()",
     "description": "空操作."
   },
   "screen 创建新屏幕": {
-    "prefix": ["New Screen "],
+    "prefix": ["New_Screen_"],
     "body": "screen ${1:screen_name}():\n\t${2:text _(\"\")}",
     "description": "创建新屏幕."
   },
   "screen 新屏幕": {
-    "prefix": ["call Screen "],
+    "prefix": ["call_Screen_"],
     "body": "call screen ${1:screen_name}",
     "description": "新屏幕."
   },
   "Pause 等待几秒钟, 然后显示下一个屏幕": {
-    "prefix": ["pause ", "pass "],
+    "prefix": ["pause_", "pass_"],
     "body": "with Pause($1)\n$2",
     "description": "等待几秒钟, 然后显示下一个屏幕."
   },
   "执行一行Python": {
-    "prefix": ["p1 "],
+    "prefix": ["p1_"],
     "body": "$ ${1:#python statements}",
     "description": "执行一行Python."
   },
   "Python语句采用python代码块": {
-    "prefix": ["py "],
+    "prefix": ["py_", "python_"],
     "body": "python:\n\t${1:}",
     "description": "Python语句采用python代码块."
   },
   "python语句块": {
-    "prefix": ["initpy"],
+    "prefix": ["init_py_", "init_python_"],
     "body": ["init python:", "    # *python语句块*", "    $0"],
     "description": ["python语句块"]
   },
   "Init Block 在初始化时运行代码": {
-    "prefix": ["init "],
+    "prefix": ["init_"],
     "body": "init ${1|-1000,-1,0,1,1000|}:\n\t${2:}",
     "description": "在初始化时运行代码."
   },
   "Init with Python Block 带有Python块的init块": {
-    "prefix": ["init py "],
+    "prefix": ["init_py_-num"],
     "body": "init ${1|-1000,-1,0,1,1000|} python:\n\t${2:}",
     "description": "带有Python块的init块."
   },
   "创建一个角色": {
-    "prefix": ["char "],
+    "prefix": ["char_"],
     "body": "define ${1:character_name} = Character(\"${2:displayable name}\")",
     "description": "创建一个角色"
   },
   "创建一个角色 (NVL)": {
-    "prefix": ["charnvl "],
+    "prefix": ["charnvl_"],
     "body": "define ${1:character_name} = Character(None, kind=nvl)\n${2:}",
     "description": "创建一个角色 (NVL)"
   },
   "预定义转换": {
-    "prefix": ["transitions "],
+    "prefix": ["transitions_"],
     "body": "${1:fade, dissolve, pixellate, move,\nmoveinright (Also: moveinleft, moveintop, moveinbottom),\nmoveoutright (Also: moveoutleft, moveouttop, moveoutbottom),\nease (Also: easeinright, easeinleft, easeintop, easeinbottom, easeoutright, easeoutleft, easeouttop, easeoutbottom),\nzoomin, zoomout, zoominout, vpunch, hpunch, blinds, squares,\nwipeleft (Also: wiperight, wipeup, wipedown),\nslideleft (Also:  slideright, slideup, slidedown),\nslideawayleft (Also: slideawayright, slideawayup, slideawaydown),\nirisin, irisout.}",
     "description": "预定义转换"
   },
   "创建 MultiPersistent": {
-    "prefix": ["multipersist "],
+    "prefix": ["multipersist_"],
     "body": "${1:persistent_name} = MultiPersistent(\"${2:persistent_filename}\")",
     "description": "创建 MultiPersistent"
   },
   "Renpy 暂停": {
-    "prefix": ["rpause "],
+    "prefix": ["rpause_"],
     "body": "$ renpy.pause($1)\n$2",
     "description": "Ren'Py 暂停."
   },
   "电影过场动画": {
-    "prefix": ["cutscene "],
+    "prefix": ["cutscene_"],
     "body": "$ renpy.movie_cutscene('${1:file_name.extension}')",
     "description": "电影过场动画"
   },
   "持久化数据": {
-    "prefix": ["persist "],
+    "prefix": ["persist_"],
     "body": "$ persistent.${1:attribute_name} = ${2:# variable value}",
     "description": "持久化数据."
   },
   "多个游戏数据的持久化": {
-    "prefix": ["multisave "],
+    "prefix": ["multisave_"],
     "body": "$ ${1:persistent_name}.save()",
     "description": "多个游戏数据的持久化"
   },
   "转场 - Fade": {
-    "prefix": ["wFade "],
+    "prefix": ["with_fade_"],
     "body": "with fade",
     "description": "转场 - Fade\n 0.5秒时间画面逐渐暗淡至全黑,然后0.5秒时间画面从全黑逐渐变亮成新界面"
   },
   "转场 - dissolve": {
-    "prefix": ["wDissolve "],
+    "prefix": ["with_dissolve_"],
     "body": "with dissolve",
     "description": "转场 - dissolve\n 0.5秒时间,使用溶解效果从旧界面切到新界面"
   },
   "转场 - pixellate": {
-    "prefix": ["wPixel "],
+    "prefix": ["with_pixellate_"],
     "body": "with pixellate",
     "description": "转场 - pixellate\n 0.5秒像素化旧场景,并0.5秒反向像素化至新场景"
   },
   "转场 - Move": {
-    "prefix": ["wMove "],
+    "prefix": ["with_move_"],
     "body": "with move",
     "description": "转场 - Move\n 0.5秒时间,将图像移动到新的位置"
   },
   "转场 - moveinright": {
-    "prefix": ["wMoveInRight "],
+    "prefix": ["with_moveinright_"],
     "body": "with moveinright",
     "description": "转场 - moveinright\n 从界面上对应的边界移入图像,用时0.5秒"
   },
   "转场 - moveoutright": {
-    "prefix": ["wMoveInLeft "],
+    "prefix": ["with_moveinleft_"],
     "body": "with moveinleft",
     "description": "转场 - moveoutright\n 从界面上对应的边界移出图像,用时0.5秒"
   },
   "转场 - moveintop": {
-    "prefix": ["wMoveInTop "],
+    "prefix": ["with_moveintop_"],
     "body": "with moveintop",
     "description": "转场 - moveintop"
   },
   "转场 - moveinbottom": {
-    "prefix": ["wMoveInBottom "],
+    "prefix": ["with_moveinbottom_"],
     "body": "with moveinbottom",
     "description": "转场 - moveinbottom"
   },
   "If (条件语句)": {
-    "prefix": ["if "],
+    "prefix": ["if_"],
     "body": "if ${1:condition}:\n\t${2:#block of code to run}",
     "description": "If (条件语句)"
   },
   "Else If (条件语句)": {
-    "prefix": ["elif "],
+    "prefix": ["elif_"],
     "body": "elif ${1:condition}:\n\t${2:#block of code to run}",
     "description": "Else If (条件语句)"
   },
   "Else (条件语句)": {
-    "prefix": ["else "],
+    "prefix": ["else_"],
     "body": "else:\n\t${1:#block of code to run}",
     "description": "Else (条件语句)"
   },
   "While (循环)": {
-    "prefix": ["while "],
+    "prefix": ["while_"],
     "body": "while ${1:condition}:\n\t${2:#block of code to run}",
     "description": "While (循环)"
   },
   "选择菜单": {
-    "prefix": ["menu ", "mn -menu"],
+    "prefix": ["menu_"],
     "body": "menu${1: optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\t#block of code to run\n\t\"${4:Choice 2}\":\n\t\t#block of code to run\n\t${5:}",
     "description": "选择菜单"
   },
   "菜单选择": {
-    "prefix": ["choice "],
+    "prefix": ["choice_"],
     "body": "\"${1:Choice N}\":\n\t${2:#block of code to run}\n\t$3",
     "description": "菜单选择"
   },
   "Ren'Py Docs 文档": {
-    "prefix": ["dochelp "],
+    "prefix": ["dochelp_"],
     "body": "## Visit the site for documentation or help of Ren'Py engine. ##\n## Documentation:\n\t\"${1:http://www.renpy.org/doc/html/}\"\n## Wiki-Old Documentation:\n\t\"${2:http://www.renpy.org/wiki/renpy/Wiki_Home_Page}\"\n## Forum:\n\t\"${3:http://lemmasoft.renai.us/forums/viewforum.php?f=42}\"\n## Extension Documentation:\n\t\"${4:https://github.com/LuqueDaniel/vscode-language-renpy}\"",
     "description": "显示 docs/useful urls"
   },
   "Assert Equal 断言相等": {
-    "prefix": [",ase "],
+    "prefix": [",ase_"],
     "body": "self.assertEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Equal 断言相等"
   },
   "Assert Not Equal 断言不等": {
-    "prefix": [",asne "],
+    "prefix": [",asne_"],
     "body": "self.assertNotEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Not Equal 断言不等"
   },
   "Assert Raises 断言异常": {
-    "prefix": [",asr "],
+    "prefix": [",asr_"],
     "body": "self.assertRaises(${1:exception}, ${2:callable})$0",
     "description": "Assert Raises 断言异常"
   },
   "Assert True 断言真": {
-    "prefix": [",ast "],
+    "prefix": [",ast_"],
     "body": "self.assertTrue(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert True 断言真"
   },
   "Assert False 断言假": {
-    "prefix": [",asf "],
+    "prefix": [",asf_"],
     "body": "self.assertFalse(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert False 断言假"
   },
   "Assert Is 断言是...": {
-    "prefix": [",asi "],
+    "prefix": [",asi_"],
     "body": "self.assertIs(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Is 断言是..."
   },
   "Assert Is Not 断言非...": {
-    "prefix": [",asint "],
+    "prefix": [",asint_"],
     "body": "self.assertIsNot(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
     "description": "Assert Is Not 断言非..."
   },
   "Assert Is None 断言为空...": {
-    "prefix": [",asino "],
+    "prefix": [",asino_"],
     "body": "self.assertIsNone(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert Is None 断言为空..."
   },
   "Assert Is Not None 断言不为空...": {
-    "prefix": [",asinno "],
+    "prefix": [",asinno_"],
     "body": "self.assertIsNotNone(${1:actual}${2:, '${3:message}'})$0",
     "description": "Assert Is Not None 断言不为空..."
   },
   "Assert In 断言包含...": {
-    "prefix": [",asin "],
+    "prefix": [",asin_"],
     "body": "self.assertIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
     "description": "Assert In 断言包含..."
   },
   "Assert Not In 断言不包含...": {
-    "prefix": [",asni "],
+    "prefix": [",asni_"],
     "body": "self.assertNotIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
     "description": "Assert Not In 断言不包含..."
   },
   "Assert 断言...": {
-    "prefix": [",as "],
+    "prefix": [",as_"],
     "body": "self.assert_(${1:boolean expression}${2:, '${3:message}'})$0",
     "description": "Assert 断言..."
   },
   "Fail (a test) 失败(测试)": {
-    "prefix": ["fail "],
+    "prefix": ["fail_"],
     "body": "self.fail('${1:message}')$0",
     "description": "Fail (a test) 失败(测试)"
   },
   "New Class 新类": {
-    "prefix": ["new class", "class "],
+    "prefix": ["new_class"],
     "body": "class ${1:ClassName}(${2:object}):\n\t\"\"\"${3:docstring for $1}\"\"\"\n\tdef __init__(self, ${4:arg}):\n\t\t${5:super($1, self).__init__()}\n\t\tself.arg = arg\n\t\t$0",
     "description": "New Class 新类"
   },
   "New Method 新方法": {
-    "prefix": ["new defs", "defs "],
+    "prefix": ["new_defs_functions"],
     "body": "def ${1:mname}(self, ${2:arg}):\n\t${3:pass}",
     "description": "New Method 新方法"
   },
   "New Function 新函数": {
-    "prefix": ["new def", "def "],
+    "prefix": ["new_def_function"],
     "body": "def ${1:fname}(${2:arg}):\n\t${3:pass}",
     "description": "New Function 新函数"
   },
   "New Property 新样式特性": {
-    "prefix": ["new property", "property "],
+    "prefix": ["new_property"],
     "body": "def ${1:foo}():\n    doc = \"${2:The $1 property.}\"\n    def fget(self):\n        ${3:return self._$1}\n    def fset(self, value):\n        ${4:self._$1 = value}\n    def fdel(self):\n        ${5:del self._$1}\n    return locals()\n$1 = property(**$1())$0",
     "description": "New Property 新样式特性"
   },
   "For (Loop) 循环": {
-    "prefix": ["for "],
+    "prefix": ["for_"],
     "body": "for ${1:value} in ${2:variable}:\n\t${3:pass}",
     "description": "For (Loop) 循环"
   },
   "Try/Except 尝试-报错": {
-    "prefix": ["try "],
+    "prefix": ["try_"],
     "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}",
     "description": "Try/Except 尝试-报错"
   },
   "列表推导式": {
-    "prefix": ["lc "],
+    "prefix": ["lc_"],
     "body": "[${1:value} for ${2:value} in ${3:variable}]",
     "description": "列表推导式"
   },
@@ -295,32 +295,32 @@
     "description": "列表推导式 (If Else 判断)"
   },
   "字典推导式": {
-    "prefix": ["dc "],
+    "prefix": ["dc_"],
     "body": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:variable}}",
     "description": "字典推导式"
   },
   "PDB set trace PDB集跟踪": {
-    "prefix": ["pdb "],
+    "prefix": ["pdb_"],
     "body": "import pdb; pdb.set_trace()\n",
     "description": "PDB set trace PDB集跟踪"
   },
   "iPDB set trace iPDB集跟踪": {
-    "prefix": ["ipdb "],
+    "prefix": ["ipdb_"],
     "body": "import ipdb; ipdb.set_trace()\n",
     "description": "iPDB set trace iPDB集跟踪"
   },
   "__magic__ 初始化": {
-    "prefix": ["__ "],
+    "prefix": ["__magic__"],
     "body": "__${1:init}__",
     "description": "__magic__ 初始化"
   },
   "hbox 水平容器": {
-    "prefix": ["hbox "],
+    "prefix": ["hbox_"],
     "body": ["hbox:", "    $0"],
     "description": "hbox 水平容器"
   },
   "vbox 垂直容器": {
-    "prefix": ["vbox "],
+    "prefix": ["vbox_"],
     "body": ["vbox:", "    $0"],
     "description": "vbox 垂直容器"
   },
@@ -347,27 +347,27 @@
     "description": "button 按钮"
   },
   "size 尺寸": {
-    "prefix": ["size "],
+    "prefix": ["size_"],
     "body": ["xsize 300 ysize 64"],
     "description": "size 尺寸"
   },
   "align 对齐": {
-    "prefix": ["align "],
+    "prefix": ["align_"],
     "body": ["xalign 0.5 yalign 0.5"],
     "description": "align 对齐"
   },
   "padding 内边距": {
-    "prefix": ["padding "],
+    "prefix": ["padding_"],
     "body": ["xpadding 28 ypadding 8"],
     "description": "padding 内边距"
   },
   "margin 外边距": {
-    "prefix": ["margin "],
+    "prefix": ["margin_"],
     "body": ["xmargin 12 ymargin 12"],
     "description": "margin 外边距"
   },
   "text 文本": {
-    "prefix": ["text ", "txt -text"],
+    "prefix": ["text_"],
     "body": ["text _(\"$0\")"],
     "description": "text 文本"
   }

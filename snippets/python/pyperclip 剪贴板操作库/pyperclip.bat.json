@@ -1,6 +1,6 @@
 {
   "pip|uv pyperclip 剪贴板操作库": {
-    "prefix": ["pip pyperclip", "uv pyperclip"],
+    "prefix": ["pip_pyperclip", "uv_pyperclip"],
     "body": [
       "ECHO.",
       "ECHO * pyperclip 剪贴板操作库 *",

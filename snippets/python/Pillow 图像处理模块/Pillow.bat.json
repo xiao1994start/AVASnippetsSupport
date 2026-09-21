@@ -1,6 +1,6 @@
 {
   "pip|uv Pillow 图像处理库": {
-    "prefix": ["pip Pillow", "uv Pillow"],
+    "prefix": ["pip_Pillow", "uv_Pillow"],
     "body": [
       "ECHO.",
       "ECHO * Pillow 图像处理库 *",

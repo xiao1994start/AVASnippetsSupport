@@ -1,6 +1,6 @@
 {
   "引入 express 模块": {
-    "prefix": ["req express"],
+    "prefix": ["req_express"],
     "body": ["const express = require('express'); // * 引入 express Web应用框架", ""],
     "description": ["引入 express 模块"]
   }

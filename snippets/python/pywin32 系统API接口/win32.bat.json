@@ -1,6 +1,6 @@
 {
   "pip|uv pywin32 win系统库": {
-    "prefix": ["pip pywin32", "uv pywin32"],
+    "prefix": ["pip_pywin32", "uv_pywin32"],
     "body": [
       "ECHO.",
       "ECHO * pywin32 win系统库 *",

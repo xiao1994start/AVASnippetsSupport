@@ -1,6 +1,6 @@
 {
   "keyboard 键盘事件监听函数": {
-    "prefix": ["keyboard def listener_keyboard"],
+    "prefix": ["keyboard_def_listener_keyboard"],
     "body": [
       "# TODO:键盘事件监听",
       "def listener_keyboard(func, kwargs: dict = {}):",

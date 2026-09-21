@@ -1,16 +1,16 @@
 {
   "引入 questionary 构建命令行Tui界面": {
-    "prefix": ["import questionary", "imp questionary"],
+    "prefix": ["import_questionary", "imp_questionary"],
     "body": ["import questionary  # * 构建命令行Tui界面", ""],
     "description": ["引入 questionary 构建命令行Tui界面"]
   },
   "questionary.press_any_key_to_continue 按任意键": {
-    "prefix": ["questionary press_any_key_to_continue =-questionary"],
+    "prefix": ["questionary_press_any_key_to_continue_=-questionary"],
     "body": ["questionary.press_any_key_to_continue(message='按任意键...').ask()  # * 按任意键...", ""],
     "description": ["按任意键"]
   },
   "questionary.rawselect 基础单选": {
-    "prefix": ["questionary rawselect", "questionary raw_one"],
+    "prefix": ["questionary_rawselect"],
     "body": [
       "questionary.rawselect(",
       "    message='基础单选',",
@@ -24,10 +24,10 @@
       ").ask()",
       ""
     ],
-    "description": ["基础单选", "\n 使用快捷键让用户从选项列表中选择一项。", "\n 用户只能选择一个选项。"]
+    "description": ["基础单选", "    使用快捷键让用户从选项列表中选择一项。", "    用户只能选择一个选项。"]
   },
   "questionary.select 通用单选": {
-    "prefix": ["questionary select", "questionary one"],
+    "prefix": ["questionary_select"],
     "body": [
       "questionary.select(",
       "    message='通用单选',",
@@ -48,12 +48,12 @@
     "description": ["通用单选"]
   },
   "questionary.confirm 确认(Y/n)": {
-    "prefix": ["questionary confirm", "questionary Yn"],
+    "prefix": ["questionary_confirm"],
     "body": ["questionary.confirm(message='是否确定 ${1:xxx操作}').ask()  # *(Y/n)->bool:True | False"],
     "description": ["确认(Y/n)"]
   },
   "questionary.checkbox 复选框": {
-    "prefix": ["questionary checkbox"],
+    "prefix": ["questionary_checkbox"],
     "body": [
       "tab_1 = '插件自动归档'",
       "tab_2 = 'FL清洁器'",
@@ -78,7 +78,7 @@
     "description": ["复选框"]
   },
   "questionary.path 路径选择器": {
-    "prefix": ["questionary path"],
+    "prefix": ["questionary_path"],
     "body": ["questionary.path(message='输入or拖入项目路径?').ask()", ""],
     "description": ["路径选择器"]
   }

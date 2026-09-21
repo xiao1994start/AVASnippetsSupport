@@ -1,6 +1,6 @@
 {
   "pip|uv numpy NumPy维度数组与矩阵运算科学计算的基础库": {
-    "prefix": ["pip numpy", "uv numpy"],
+    "prefix": ["pip_numpy", "uv_numpy"],
     "body": [
       "ECHO.",
       "ECHO * numpy NumPy维度数组与矩阵运算科学计算的基础库 *",

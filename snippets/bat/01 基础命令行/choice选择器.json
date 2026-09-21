@@ -1,6 +1,6 @@
 {
   "choice.tmpl": {
-    "prefix": ["loop menu=choice"],
+    "prefix": ["loop_menu_=choice"],
     "body": [
       ":loop_menu",
       "ECHO ==========================",

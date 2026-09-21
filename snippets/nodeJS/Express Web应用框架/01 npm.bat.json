@@ -1,6 +1,6 @@
 {
   "安装 express Web应用框架": {
-    "prefix": ["npm express"],
+    "prefix": ["npm_express"],
     "body": [
       "ECHO.+ 安装 express Web应用框架 类型提示",
       "call npm i express @types/express --registry https://registry.npmmirror.com/",

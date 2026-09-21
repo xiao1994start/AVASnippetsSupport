@@ -1,16 +1,16 @@
 {
   "引入 httpx 模块": {
-    "prefix": ["import httpx", "imp httpx"],
+    "prefix": ["import_httpx", "imp_httpx"],
     "body": ["import httpx  # *httpx 新一代全能网络请求库"],
     "description": ["引入 httpx 模块"]
   },
   "httpx.Client 跨请求共享配置": {
-    "prefix": ["httpx Client -httpx"],
+    "prefix": ["httpx_Client_-httpx"],
     "body": ["httpx.Client(base_url=${1:base_url})"],
     "description": ["httpx.Client 设置请求的 base_url"]
   },
   "httpx.Client with构造函数": {
-    "prefix": ["with httpx Client"],
+    "prefix": ["with_httpx_Client"],
     "body": [
       "user_headers = {'User-Agent': 'Mozilla/5.0',}",
       "with httpx.Client(headers=user_headers, timeout=None) as client:",
@@ -35,7 +35,7 @@
     "description": ["with httpx.Client 使用with进行Client构造函数"]
   },
   "httpx.Client with构造函数.tmpl": {
-    "prefix": ["with httpx Client =-httpx"],
+    "prefix": ["with_httpx_Client_=-httpx"],
     "body": [
       "base_url = '${1:base_url}'",
       "prixy_url = '${2:代理地址}'",
@@ -61,52 +61,52 @@
     "description": ["with httpx.Client 使用with进行Client构造函数.tmpl"]
   },
   "httpx.Request 请求参数": {
-    "prefix": ["httpx Request", "Request -httpx"],
+    "prefix": ["httpx_Request", "Request_-httpx"],
     "body": ["Request"],
     "description": ["httpx.Request 请求参数"]
   },
   "httpx.Response 响应参数": {
-    "prefix": ["httpx Response", "Response -httpx"],
+    "prefix": ["httpx_Response", "Response_-httpx"],
     "body": ["Response"],
     "description": ["httpx.Response 响应参数"]
   },
   "httpx.encoding 编码格式": {
-    "prefix": ["httpx encoding", "encoding -httpx"],
+    "prefix": ["httpx_encoding", "encoding_-httpx"],
     "body": ["encoding${1|  # 自动确定编码格式, = 'utf-8'|}"],
     "description": ["httpx.encoding 在某些情况下, 响应可能不包含显式编码, 在这种情况下 HTTPX 将尝试自动确定要使用的编码"]
   },
   "httpx.charset_encoding 识别响应编码格式": {
-    "prefix": ["httpx charset_encoding", "charset_encoding -httpx"],
+    "prefix": ["httpx_charset_encoding", "charset_encoding_-httpx"],
     "body": ["charset_encoding"],
     "description": ["httpx.charset_encoding 识别响应编码格式, 需要进行格式转化->str()"]
   },
   "httpx.headers 响应头": {
-    "prefix": ["httpx headers", "headers -httpx"],
+    "prefix": ["httpx_headers", "headers_-httpx"],
     "body": ["headers"],
     "description": ["httpx.headers 获取响应头"]
   },
   "httpx.text 格式化响应内容": {
-    "prefix": ["httpx text", "text -httpx"],
+    "prefix": ["httpx_text", "text_-httpx"],
     "body": ["text"],
     "description": ["httpx.text 格式化响应内容"]
   },
   "httpx.content b.响应体": {
-    "prefix": ["httpx content", "content -httpx"],
+    "prefix": ["httpx_content", "content_-httpx"],
     "body": ["content"],
     "description": ["httpx.content b.二进制响应内容", "# 对于非文本响应, 响应内容也可以作为字节访问"]
   },
   "httpx.json JSON解码器": {
-    "prefix": ["httpx json", "json -httpx"],
+    "prefix": ["httpx_json", "json_-httpx"],
     "body": ["json()"],
     "description": ["httpx.json JSON 响应内容", "    Web API 响应通常会被编码为 JSON"]
   },
   "httpx.status_cod 响应状态代码": {
-    "prefix": ["httpx status_code", "status_code -httpx"],
+    "prefix": ["httpx_status_code", "status_code_-httpx"],
     "body": ["status_code"],
     "description": ["httpx.status_cod 检查响应的 HTTP 状态代码"]
   },
   "httpx.get 发送 GET 请求": {
-    "prefix": ["httpx get =-httpx"],
+    "prefix": ["httpx_get_=-httpx"],
     "body": [
       "httpx.get(",
       "    url=${1:'url'},",
@@ -117,7 +117,7 @@
     "description": ["httpx.get 发送 GET 请求"]
   },
   "httpx.post 发送 POST 请求": {
-    "prefix": ["httpx post =-httpx"],
+    "prefix": ["httpx_post_=-httpx"],
     "body": [
       "httpx.post(",
       "    url=${1:'url'},",

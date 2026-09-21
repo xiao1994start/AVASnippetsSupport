@@ -1,6 +1,6 @@
 {
   "Nuitka 编译": {
-    "prefix": ["nuitka main_setup"],
+    "prefix": ["nuitka_main_setup"],
     "body": [
       "import logging",
       "import os",

@@ -1,6 +1,6 @@
 {
   "pip|uv keyboard 键盘交互工具库": {
-    "prefix": ["pip keyboard", "uv keyboard"],
+    "prefix": ["pip_keyboard", "uv_keyboard"],
     "body": [
       "ECHO.",
       "ECHO * keyboard 键盘交互工具库 *",

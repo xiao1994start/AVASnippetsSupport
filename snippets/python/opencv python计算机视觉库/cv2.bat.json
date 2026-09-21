@@ -1,6 +1,6 @@
 {
   "pip|uv opencv-python 计算机视觉库": {
-    "prefix": ["pip cv2", "pip opencv", "uv cv2", "uv opencv"],
+    "prefix": ["pip_cv2", "pip_opencv", "uv_cv2", "uv_opencv"],
     "body": [
       "ECHO.",
       "ECHO * opencv-python 计算机视觉库 *",

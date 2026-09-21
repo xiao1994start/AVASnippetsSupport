@@ -1,16 +1,16 @@
 {
   "var 变量-函数作用域": {
-    "prefix": ["new var"],
+    "prefix": ["new_var"],
     "body": ["var $0"],
     "description": ["var 变量-函数作用域"]
   },
   "let 变量-块级作用域": {
-    "prefix": ["new let"],
+    "prefix": ["new_let"],
     "body": ["let $0"],
     "description": ["let 变量-块级作用域"]
   },
   "const 常量-块级作用域": {
-    "prefix": ["new const"],
+    "prefix": ["new_const"],
     "body": ["const $0"],
     "description": ["const 常量-块级作用域"]
   },

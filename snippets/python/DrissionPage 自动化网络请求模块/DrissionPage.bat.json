@@ -1,6 +1,6 @@
 {
   "pip|uv DrissionPage 自动化网络请求库": {
-    "prefix": ["pip DrissionPage", "uv DrissionPage"],
+    "prefix": ["pip_DrissionPage", "uv_DrissionPage"],
     "body": [
       "ECHO.",
       "ECHO * DrissionPage 自动化网络请求库 *",

@@ -1,6 +1,6 @@
 {
   "pip|uv lxml xml解析库": {
-    "prefix": ["pip lxml", "uv lxml"],
+    "prefix": ["pip_lxml", "uv_lxml"],
     "body": [
       "ECHO.",
       "ECHO * lxml xml解析库 *",

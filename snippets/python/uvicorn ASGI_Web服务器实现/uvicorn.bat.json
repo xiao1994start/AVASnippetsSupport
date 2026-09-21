@@ -1,6 +1,6 @@
 {
   "pip|uv uvicorn ASGI Web 服务器实现": {
-    "prefix": ["pip uvicorn", "uv uvicorn"],
+    "prefix": ["pip_uvicorn", "uv_uvicorn"],
     "body": [
       "ECHO.",
       "ECHO * uvicorn ASGI Web 服务器实现 *",

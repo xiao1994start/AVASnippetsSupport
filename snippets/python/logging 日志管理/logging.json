@@ -1,11 +1,11 @@
 {
   "引入 logging 内置日志库": {
-    "prefix": ["import logging", "imp logging"],
+    "prefix": ["import_logging", "imp_logging"],
     "body": ["import logging", ""],
     "description": ["引入 logging 内置日志库"]
   },
   "引入 logging 内置日志库.tmpl": {
-    "prefix": ["import logging =basicConfig", "imp logging =basicConfig"],
+    "prefix": ["import_logging_=basicConfig", "imp_logging_=basicConfig"],
     "body": [
       "import logging",
       "",
@@ -42,7 +42,7 @@
     "description": "引入 logging 内置日志库.tmpl"
   },
   "logging.basicConfig 日志模块基础配置": {
-    "prefix": ["logging basicConfig"],
+    "prefix": ["logging_basicConfig"],
     "body": [
       "logging.basicConfig(",
       "    level=logging.DEBUG,",
@@ -53,27 +53,27 @@
     "description": ["logging.basicConfig 日志模块基础配置"]
   },
   "logging.debug(...)": {
-    "prefix": ["log debug -logging"],
+    "prefix": ["log_debug_-logging"],
     "body": ["logging.debug($0)"],
     "description": ["logging.debug(...)"]
   },
   "logging.info(...)": {
-    "prefix": ["log info -logging"],
+    "prefix": ["log_info_-logging"],
     "body": ["logging.info($0)"],
     "description": ["logging.info(...)"]
   },
   "logging.warning(...)": {
-    "prefix": ["log warning -logging"],
+    "prefix": ["log_warning_-logging"],
     "body": ["logging.warning($0)"],
     "description": ["logging.warning(...)"]
   },
   "logging.error(...)": {
-    "prefix": ["log error -logging"],
+    "prefix": ["log_error_-logging"],
     "body": ["logging.error($0)"],
     "description": ["logging.error(...)"]
   },
   "logging.critical(...)": {
-    "prefix": ["log debug -logging"],
+    "prefix": ["log_debug_-logging"],
     "body": ["logging.critical($0)"],
     "description": ["logging.critical(...)"]
   }

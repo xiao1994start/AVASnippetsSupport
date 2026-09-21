@@ -1,6 +1,6 @@
 {
   "Path.glob 仅指定当前目录 遍历/搜索 -> object": {
-    "prefix": ["Path glob ="],
+    "prefix": ["Path_glob_="],
     "body": [
       "glob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
     ],
@@ -12,7 +12,7 @@
     ]
   },
   "Path.glob 仅指定当前目录 遍历/搜索": {
-    "prefix": ["Path glob"],
+    "prefix": ["Path_glob", "glob=-Path"],
     "body": ["glob(\"${1|*,**,**/*.*,*.py|}\")"],
     "description": [
       "Path.glob 匹配所有的符合条件的所有 文件夹",
@@ -22,7 +22,7 @@
     ]
   },
   "Path.rglob (常用)递归 遍历/搜索 -> object": {
-    "prefix": ["Path rglob ="],
+    "prefix": ["Path_rglob_="],
     "body": [
       "rglob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
     ],
@@ -35,7 +35,7 @@
     ]
   },
   "Path.rglob (常用)递归 遍历/搜索": {
-    "prefix": ["Path rglob"],
+    "prefix": ["Path_rglob", "rglob=-Path"],
     "body": ["rglob(\"${1|*,**,**/*.*,*.py|}\")"],
     "description": [
       "Path.rglob 返回当前目录, 及所有子目录中的 所有 文件和文件夹",

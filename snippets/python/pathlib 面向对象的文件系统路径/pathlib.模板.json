@@ -1,6 +1,6 @@
 {
   "获取系统环境变量路径并转换为Path类型": {
-    "prefix": ["getenv to Path", "getenv 2 Path", "path to Path", "path 2 Path"],
+    "prefix": ["getenv_to_Path", "path_to_Path"],
     "body": [
       "_path = os.getenv('${1|SYSTEMDRIVE,HOMEDRIVE,PROGRAMFILES,COMMONPROGRAMFILES,PROGRAMFILES(X86),ALLUSERSPROFILE,PROGRAMDATA,WINDIR,SYSTEMROOT,USERPROFILE,APPDATA,LOCALAPPDATA,PUBLIC|}')",
       "if _path:",
@@ -13,12 +13,12 @@
     "description": ["获取系统环境变量路径并转换为Path类型"]
   },
   "获取当前用户目录的Path对象": {
-    "prefix": ["Path os getenv USERPROFILE", "Path Users"],
+    "prefix": ["Path_os_getenv_USERPROFILE"],
     "body": ["Path(str(os.getenv('USERPROFILE'))) if os.getenv('USERPROFILE') else Path(f'C:/Users/{os.getlogin()}')"],
     "description": ["获取当前用户目录的Path对象"]
   },
   "获取当前脚本所在目录的Path对象": {
-    "prefix": ["path file dir -Path"],
+    "prefix": ["path_file_dir_-Path"],
     "body": ["Path(Path(__file__).parent, '$0')"],
     "description": ["获取当前脚本所在目录的Path对象"]
   }

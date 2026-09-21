@@ -1,11 +1,11 @@
 {
   "引入路径模块": {
-    "prefix": ["req path"],
+    "prefix": ["req_path"],
     "body": ["const path = require('path')$0; // * 引入 path 路径模块", ""],
     "description": ["引入路径模块"]
   },
   "获取当前脚本所在目录的Path对象": {
-    "prefix": ["path file dir -path"],
+    "prefix": ["path_file_dir_-path"],
     "body": ["path.join(__dirname, '$0')"],
     "description": ["获取当前脚本所在目录的Path对象"]
   }

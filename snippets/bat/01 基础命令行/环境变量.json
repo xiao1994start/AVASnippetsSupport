@@ -1,21 +1,21 @@
 {
   "进入指定当前目录": {
-    "prefix": ["cd -d cwd"],
+    "prefix": ["cd_d_cwd"],
     "body": ["CD /D \"%~dp0\""],
     "description": ["进入指定当前目录"]
   },
   "CD 切换 当前盘符下 路径": {
-    "prefix": ["cd "],
+    "prefix": ["cd_"],
     "body": ["CD $0"],
     "description": ["CD 切换 当前盘符下 路径"]
   },
   "CD /D 切换到 盘符 + 路径": {
-    "prefix": ["cd -d"],
+    "prefix": ["cd_d"],
     "body": ["CD /D $0"],
     "description": ["CD /D 切换到 盘符 + 路径"]
   },
   "获取当前 CD 值": {
-    "prefix": ["var cd"],
+    "prefix": ["var_cd"],
     "body": ["%CD%"],
     "description": ["获取当前 CD 值"]
   },
@@ -24,20 +24,10 @@
     "body": ["\"%~dp0${1:}\""],
     "description": ["脚本当前目录"]
   },
-  "脚本当前目录下R2R文件夹": {
-    "prefix": ["dr2r"],
-    "body": ["\"%~dp0R2R\\\\${1:example}\""],
-    "description": ["脚本当前目录下R2R文件夹"]
-  },
   "当前系统盘": {
     "prefix": ["SystemDrive", "HomeDrive"],
     "body": ["\"%SystemDrive%\\\\$0\""],
     "description": ["当前系统盘"]
-  },
-  "ProTools系统默认文件夹": {
-    "prefix": ["AXX -ProTools"],
-    "body": ["\"%COMMONPROGRAMFILES%\\Avid\\Audio\\Plug-Ins\\\\${1:example}\""],
-    "description": ["ProTools系统默认文件夹"]
   },
   "CommonFiles": {
     "prefix": ["CommonFiles"],
@@ -45,7 +35,7 @@
     "description": ["CommonFiles"]
   },
   "CommonFiles(x86)": {
-    "prefix": ["CommonFiles-86"],
+    "prefix": ["CommonFiles_x86"],
     "body": ["\"%COMMONPROGRAMFILES(x86)%\\\\${1:example}\""],
     "description": ["CommonFiles(x86)"]
   },
@@ -60,7 +50,7 @@
     "description": ["ProgramFiles"]
   },
   "ProgramFiles(x86)": {
-    "prefix": ["ProgramFiles-86"],
+    "prefix": ["ProgramFiles_x86"],
     "body": ["\"%PROGRAMFILES(X86)%\\\\${1:example}\""],
     "description": ["ProgramFiles(x86)"]
   },
@@ -90,19 +80,9 @@
     "description": ["Roaming可以轻松与服务器同步的文件夹"]
   },
   "当前用户文件夹": {
-    "prefix": ["Users"],
+    "prefix": ["UserProfile"],
     "body": ["\"%USERPROFILE%\\\\${1:example}\""],
     "description": ["当前用户文件夹"]
-  },
-  "VSTPlugins系统默认文件夹": {
-    "prefix": ["VSTPlugins"],
-    "body": ["\"%PROGRAMFILES%\\VSTPlugins\\\\${1:example}\""],
-    "description": ["VSTPlugins系统默认文件夹"]
-  },
-  "VST3系统默认文件夹": {
-    "prefix": ["VST3"],
-    "body": ["\"%COMMONPROGRAMFILES%\\VST3\\\\${1:example}\""],
-    "description": ["VST3系统默认文件夹"]
   },
   "Windows系统目录": {
     "prefix": ["Windir"],
@@ -125,7 +105,7 @@
     "description": ["当前用户Documents文档"]
   },
   "windows系统路径环境变量常用": {
-    "prefix": ["path-Info"],
+    "prefix": ["path_Info"],
     "body": [
       "goto aboutPathInfo",
       "%SystemDrive%   ^|  %HOMEDRIVE%       = C:\\               当前系统盘符",
@@ -147,7 +127,7 @@
     "description": "windows系统路径环境变量常用"
   },
   "%%~应用说明": {
-    "prefix": ["var=info", "let=info", "set=info"],
+    "prefix": ["var_Info", "let_Info", "set_Info"],
     "body": [
       "goto 参数扩展处理特殊语法",
       "@REM *%%~ 参数及其含义:",

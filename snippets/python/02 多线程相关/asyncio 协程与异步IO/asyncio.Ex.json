@@ -1,6 +1,6 @@
 {
   "创建 asyncio.gather 程序入口": {
-    "prefix": ["async def run_gather -asyncio"],
+    "prefix": ["async_def_run_gather_function-asyncio"],
     "body": [
       "async def run_gather():",
       "    # * tasks: list([asyncio.to_thread(func, *args, **kwds)])",
@@ -15,7 +15,7 @@
     "description": ["创建 asyncio.gather 程序入口"]
   },
   "创建 asyncio.as_completed 程序入口": {
-    "prefix": ["async def run_as_completed -asyncio"],
+    "prefix": ["async_def_run_as_completed_function-asyncio"],
     "body": [
       "async def run_as_completed():",
       "    results = []  # 记录返回结果",

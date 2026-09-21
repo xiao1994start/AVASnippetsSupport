@@ -1,6 +1,6 @@
 {
   "引入 rich.progress.* 进度显示": {
-    "prefix": ["import rich progress", "imp rich progress"],
+    "prefix": ["import_rich_progress", "imp_rich_progress"],
     "body": [
       "from rich.progress import (",
       "    Progress,  # * 用于显示高级进度条, 支持多线程显示",
@@ -11,22 +11,22 @@
     "description": ["进度显示"]
   },
   "引入 rich.progress.track [基本]进度显示": {
-    "prefix": ["import rich progress track", "imp rich progress track"],
+    "prefix": ["import_rich_progress_track", "imp_rich_progress_track"],
     "body": ["from rich.progress import track  # * 用于显示进度条[for i in track(range(20), description='Processing...')]", ""],
     "description": ["进度条管理器(用于显示进度条的基本用法)"]
   },
   "引入 rich.progress.Progress [高级]进度显示": {
-    "prefix": ["import rich progress Progress", "imp rich progress Progress"],
+    "prefix": ["import_rich_progress_Progress", "imp_rich_progress_Progress"],
     "body": ["from rich.progress import Progress  # * 用于显示高级进度条, 支持多线程显示", ""],
     "description": ["进度条管理器(用于显示进度条的高级用法), 支持多线程显示"]
   },
   "rich.progress.track 创建基本的Rich进度条显示": {
-    "prefix": ["for rich track =-rich", "rich for track ="],
+    "prefix": ["for_rich_track_=-rich", "rich_for_track_="],
     "body": ["for i in track(range(20), description='Processing...'):", "    # * 进度循环体", "    ..."],
     "description": ["创建基本的Rich进度条显示"]
   },
   "rich.progress.Progress 创建高级的Rich进度条显示": {
-    "prefix": ["with rich Progress =-rich"],
+    "prefix": ["with_rich_Progress_=-rich"],
     "body": [
       "with Progress() as progress:",
       "    total = 100",

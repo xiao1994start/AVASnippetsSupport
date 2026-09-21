@@ -1,6 +1,6 @@
 {
   "pip|uv beautifulsoup4 HTML解析库": {
-    "prefix": ["pip beautifulsoup4", "uv beautifulsoup4"],
+    "prefix": ["pip_beautifulsoup4", "uv_beautifulsoup4"],
     "body": [
       "ECHO.",
       "ECHO * beautifulsoup4 HTML解析库 *",

@@ -1,6 +1,6 @@
 {
   "pip|uv loguru 日志库": {
-    "prefix": ["pip loguru", "uv loguru"],
+    "prefix": ["pip_loguru", "uv_loguru"],
     "body": [
       "ECHO.",
       "ECHO * loguru 日志库 *",

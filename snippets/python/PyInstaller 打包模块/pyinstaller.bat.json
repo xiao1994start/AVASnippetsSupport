@@ -1,6 +1,6 @@
 {
   "pip|uv PyInstaller 打包库": {
-    "prefix": ["pip PyInstaller", "uv PyInstaller"],
+    "prefix": ["pip_PyInstaller", "uv_PyInstaller"],
     "body": [
       "ECHO.",
       "ECHO * PyInstaller 打包库 *",

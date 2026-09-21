@@ -1,26 +1,26 @@
 {
   "if判断的代码片段": {
-    "prefix": ["if =-if"],
+    "prefix": ["if_"],
     "body": ["if ${1:condition}:", "    ..."],
     "description": ["if判断的代码片段"]
   },
   "elif判断的代码片段": {
-    "prefix": ["elif =-elif"],
+    "prefix": ["elif_"],
     "body": ["elif ${1:}:", "    ..."],
     "description": ["elif判断的代码片段"]
   },
   "else判断的代码片段": {
-    "prefix": ["else =-else"],
+    "prefix": ["else_"],
     "body": ["else:", "    ..."],
     "description": ["else判断的代码片段"]
   },
   "if else 判断的代码片段": {
-    "prefix": ["if else =-if"],
+    "prefix": ["if_else_"],
     "body": ["if ${1:}:", "    ...", "else:", "    ..."],
     "description": ["if else 判断的代码片段"]
   },
   "if_elif_else判断的代码片段": {
-    "prefix": ["if elif else =-if"],
+    "prefix": ["if_elif_else_"],
     "body": ["if ${1:}:", "    ...", "elif ${3:}:", "    ...", "else:", "    ..."],
     "description": ["if_elif_else判断的代码片段"]
   }

@@ -1,26 +1,26 @@
 {
   "创建 function 函数": {
-    "prefix": ["new def function"],
+    "prefix": ["new_def_function"],
     "body": ["function ${1:name}(${2:params}) {$0}", ""],
     "description": ["创建 function 函数"]
   },
   "创建 匿名函数": {
-    "prefix": ["new lambda"],
+    "prefix": ["new_lambda"],
     "body": ["(${1:params}) => {$0}", ""],
     "description": ["创建 匿名函数"]
   },
   "导出 模块 [CommonJS]": {
-    "prefix": ["module exports -CommonJS"],
+    "prefix": ["module_exports"],
     "body": ["module.exports = {$0}", ""],
     "description": ["导出 模块 [CommonJS]"]
   },
   "导出 模块 [ESM]": {
-    "prefix": ["export default -ESM"],
+    "prefix": ["export_default"],
     "body": ["export default {$0}", ""],
     "description": ["导出 模块 [ESM]"]
   },
   "引入模块 const ... = require('...') [CommonJS]": {
-    "prefix": ["new require -CommonJS"],
+    "prefix": ["new_require"],
     "body": ["const ${2:name} = require('${1:JS_path}');"],
     "description": ["引入模块 const ... = require('...') [CommonJS]"]
   },

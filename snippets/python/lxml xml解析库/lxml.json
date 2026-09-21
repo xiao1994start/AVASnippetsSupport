@@ -1,16 +1,16 @@
 {
   "引入 lxml xml解析库": {
-    "prefix": ["import lxml ", "imp lxml "],
+    "prefix": ["import_lxml", "imp_lxml"],
     "body": ["import lxml  # *xml解析库", ""],
     "description": "引入 lxml xml解析库"
   },
   "引入 lxml.etree xml解析库": {
-    "prefix": ["import lxml etree ", "imp lxml etree "],
+    "prefix": ["import_lxml_etree", "imp_lxml_etree"],
     "body": ["from lxml import html  # * 替代 from lxml import etree [etree = html.etree]", ""],
     "description": "引入 lxml xml解析库"
   },
   "引入 lxml.html xml解析库": {
-    "prefix": ["import lxml html ", "imp lxml html "],
+    "prefix": ["import_lxml_html", "imp_lxml_html"],
     "body": ["from lxml import html  # * 替代 from lxml import etree [etree = html.etree]", ""],
     "description": "引入 html xml解析库"
   }

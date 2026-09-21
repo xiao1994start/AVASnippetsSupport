@@ -1,35 +1,35 @@
 {
   "引入 os 多种操作系统接口库": {
-    "prefix": ["import os", "imp os"],
+    "prefix": ["import_os", "imp_os"],
     "body": ["import os"],
     "description": ["引入 os 多种操作系统接口库"]
   },
   "os.getenv 获取系统环境变量路径": {
-    "prefix": ["os getenv"],
+    "prefix": ["os_getenv"],
     "body": [
       "os.getenv('${1|PATH,SYSTEMDRIVE,HOMEDRIVE,PROGRAMFILES,COMMONPROGRAMFILES,PROGRAMFILES(X86),ALLUSERSPROFILE,PROGRAMDATA,WINDIR,SYSTEMROOT,USERPROFILE,APPDATA,LOCALAPPDATA,PUBLIC|}')"
     ],
     "description": ["os.getenv 获取系统环境变量路径"]
   },
   "os.environ 设置临时环境变量": {
-    "prefix": ["os environ set", "os environ ="],
+    "prefix": ["os_environ_set"],
     "body": ["os.environ['PATH'] = f'{\";\".join([$0])};{os.getenv(\"PATH\")}'"],
     "description": ["os.environ 设置临时环境变量"]
   },
   "os.environ.get 获取环境变量值": {
-    "prefix": ["os environ get"],
+    "prefix": ["os_environ_get"],
     "body": [
       "os.environ.get('${1|PATH,SYSTEMDRIVE,HOMEDRIVE,PROGRAMFILES,COMMONPROGRAMFILES,PROGRAMFILES(X86),ALLUSERSPROFILE,PROGRAMDATA,WINDIR,SYSTEMROOT,USERPROFILE,APPDATA,LOCALAPPDATA,PUBLIC|}')"
     ],
     "description": ["os.environ.get 获取环境变量值"]
   },
   "os.startfile 打开文件 或 文件夹": {
-    "prefix": ["os startfile"],
+    "prefix": ["os_startfile"],
     "body": ["os.startfile($0)"],
     "description": ["os.startfile 打开文件 或 文件夹"]
   },
   "os.popen 从一个命令打开一个管道": {
-    "prefix": ["os popen"],
+    "prefix": ["os_popen"],
     "body": ["os.popen()"],
     "description": [
       "os.popen 从一个命令打开一个管道",
@@ -39,37 +39,37 @@
     ]
   },
   "os.popen.read 获取全部结果": {
-    "prefix": ["os popen read"],
+    "prefix": ["os_popen_read"],
     "body": ["os.popen($0)read()"],
     "description": ["获取全部结果"]
   },
   "os.pathsep 操作系统通常用于分隔搜索路径": {
-    "prefix": ["os pathsep"],
+    "prefix": ["os_pathsep"],
     "body": ["os.pathsep"],
     "description": ["os.pathsep 操作系统通常用于分隔搜索路径", "Windows 上是 ';'"]
   },
   "os.sep 操作系统用来分隔路径符": {
-    "prefix": ["os sep", "sep -os"],
+    "prefix": ["os_sep", "sep_-os"],
     "body": ["os.sep"],
     "description": ["os.sep 操作系统用来分隔路径符", "在 Windows 上是是 '\\'"]
   },
   "os.system 执行操作系统命令": {
-    "prefix": ["os system"],
+    "prefix": ["os_system"],
     "body": ["os.system('$0')"],
     "description": ["os.system 执行操作系统命令"]
   },
   "os.system 执行操作系统命令 - cls♻️清屏": {
-    "prefix": ["os system --cls"],
+    "prefix": ["os_system_cls"],
     "body": ["os.system('cls' if os.name == 'nt' else 'clear')"],
     "description": ["os.system 执行操作系统命令 - 清屏"]
   },
   "os.system 执行操作系统命令 - xcopy📂文件夹复制": {
-    "prefix": ["os system --xcopy"],
+    "prefix": ["os_system_xcopy"],
     "body": ["os.system(f'xcopy /S /E /I /Y \"{${1:src源路径}}\" \"{${2:dst目标路径}}\"')"],
     "description": ["os.system 执行操作系统命令 - xcopy📂文件夹复制"]
   },
   "os.sep 替换字符串路径中分隔符为 -> 标准化分隔符": {
-    "prefix": ["replace os sep "],
+    "prefix": ["replace_os_sep"],
     "body": ["replace('\\\\\\\\', '/').replace('/', os.sep)"],
     "description": ["os.sep 替换字符串路径中分隔符为 -> 标准化分隔符"]
   }

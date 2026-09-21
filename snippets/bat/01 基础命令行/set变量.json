@@ -1,41 +1,41 @@
 {
   "设置变量": {
-    "prefix": ["set "],
+    "prefix": ["set_var"],
     "body": ["set $0"],
     "description": "设置变量"
   },
   "提示输入信息": {
-    "prefix": ["set p -input"],
+    "prefix": ["set_p_-input"],
     "body": ["set /p \"name=$0\""],
     "description": "提示输入信息"
   },
   "执行算术运算": {
-    "prefix": ["set a -math"],
+    "prefix": ["set_a_-math"],
     "body": ["set /a \"${1:变量名}=${2:表达式}\""],
     "description": "执行算术运算"
   },
   "添加当前批处理环境变量": {
-    "prefix": ["set path "],
+    "prefix": ["set_path_add"],
     "body": ["set \"XPATH=%PATH%\"", "set \"PATH=${1:临时环境变量};%XPATH%;\""],
     "description": "添加设置适用于当前批处理的环境变量"
   },
   "修饰符传入单个参数": {
-    "prefix": ["set input="],
+    "prefix": ["set_input"],
     "body": ["set \"command=%~${1:1}\""],
     "description": ["修饰符传入单个参数", "*注意: 仅能传入单个参数, 对多个参数无效"]
   },
   "修饰符传入多个参数": {
-    "prefix": ["set inputs="],
+    "prefix": ["set_inputs"],
     "body": ["set \"commands=%*\""],
     "description": ["修饰符传入多个参数"]
   },
   "获取并设置自身bet文件名及后缀": {
-    "prefix": ["set self"],
+    "prefix": ["set_self"],
     "body": ["set \"self=%~n0%~x0\""],
     "description": ["获取并设置自身bet文件名及后缀"]
   },
   "设置当前批处理临时环境变量": {
-    "prefix": ["set cmd path "],
+    "prefix": ["set_cmd_path"],
     "body": [
       "@REM * 添加临时系统环境变量",
       "@REM set \"XPATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
@@ -47,7 +47,7 @@
     "description": "设置当前批处理临时环境变量"
   },
   "当前用户桌面路径": {
-    "prefix": ["user desktop dir", "desktop dir"],
+    "prefix": ["user_desktop_dir", "desktop_dir"],
     "body": [
       "for /F \"tokens=2*\" %%a in ('reg query \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\" /v Desktop') do (",
       "    set \"desktop_dir=%%b\"",
@@ -59,7 +59,7 @@
     "description": ["当前用户桌面路径"]
   },
   "获取当前工作目录变量": {
-    "prefix": "set cwd",
+    "prefix": ["set_cwd"],
     "body": ["set \"cwd=%~dp0\"", "if \"!cwd:~-1!\"==\"\\\" set \"cwd=!cwd:~0,-1!\"", ""],
     "description": "获取当前工作目录变量"
   },
@@ -69,7 +69,7 @@
     "description": ["%%For循环中的元变量", ""]
   },
   "%环境变量%": {
-    "prefix": ["const"],
+    "prefix": ["new_const"],
     "body": ["%${1:i}%"],
     "description": ["%环境变量%"]
   },

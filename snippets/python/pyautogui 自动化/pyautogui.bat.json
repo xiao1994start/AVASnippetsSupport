@@ -1,6 +1,6 @@
 {
   "pip|uv pyautogui 自动化计算机行为库": {
-    "prefix": ["pip pyautogui", "uv pyautogui"],
+    "prefix": ["pip_pyautogui", "uv_pyautogui"],
     "body": [
       "ECHO.",
       "ECHO * pyautogui 自动化计算机行为库 *",

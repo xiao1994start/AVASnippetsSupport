@@ -1,11 +1,11 @@
 {
   "引入 fastapi FastAPI": {
-    "prefix": ["import FastAPI", "imp FastAPI"],
+    "prefix": ["import_FastAPI", "imp_FastAPI"],
     "body": ["import uvicorn  # * 引入 uvicorn->ASGI服务启动器", "from fastapi import FastAPI  # * 引入 fastapi->FastAPI服务"],
     "description": ["引入fastapi->FastAPI服务"]
   },
   "引入 fastapi FastAPI_all服务": {
-    "prefix": ["import FastAPI --tmp", "imp FastAPI --tmp"],
+    "prefix": ["import_FastAPI_all=-FastAPI", "imp_FastAPI_all=-FastAPI"],
     "body": [
       "from pathlib import Path",
       "",

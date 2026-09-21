@@ -1,6 +1,6 @@
 {
   "pip.uv 环境管理工具": {
-    "prefix": ["pip uv"],
+    "prefix": ["pip_uv"],
     "body": [
       "ECHO UV 环境管理器...",
       "pip install \"uv\" --upgrade -i https://mirrors.aliyun.com/pypi/simple/",
@@ -15,118 +15,118 @@
     "description": ["uv 环境管理工具"]
   },
   "uv 当前文件夹创建新项目": {
-    "prefix": ["uv init"],
+    "prefix": ["uv_init"],
     "body": ["ECHO uv 当前文件夹创建新项目...(默认当前文件夹)", "uv init ${1:项目名}", ""],
     "description": ["uv 当前文件夹创建新项目"]
   },
 
   "设置 uv 镜像源": {
-    "prefix": ["set UV DEFAULT INDEX", "set uv index"],
+    "prefix": ["set_UV_DEFAULT_INDEX", "set_uv_index"],
     "body": ["ECHO 设置 uv 镜像源", "set UV_DEFAULT_INDEX=https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["设置 uv 镜像源"]
   },
   "创建 uv 虚拟环境": {
-    "prefix": ["uv venv"],
+    "prefix": ["uv_venv"],
     "body": ["ECHO 创建 uv 虚拟环境...", "uv venv", ""],
     "description": ["创建 uv 虚拟环境"]
   },
   "清理并重新创建虚拟环境": {
-    "prefix": ["uv clean all"],
+    "prefix": ["uv_clean_all"],
     "body": ["ECHO 清理并重新创建虚拟环境", "uv cache clean && del /F /Q \".\\pyproject.toml\""],
     "description": ["清理并重新创建虚拟环境"]
   },
   "清空全部 uv 缓存（彻底清理）": {
-    "prefix": ["uv cache clean"],
+    "prefix": ["uv_cache_clean"],
     "body": ["ECHO 清空全部 uv 缓存（彻底清理）", "uv cache clean"],
     "description": ["清空全部 uv 缓存（彻底清理）"]
   },
   "激活 python 虚拟环境": {
-    "prefix": ["uv activate"],
+    "prefix": ["uv_activate"],
     "body": ["ECHO 激活 python 虚拟环境", ".venv\\Scripts\\activate", ""],
     "description": ["激活 python 虚拟环境"]
   },
   "uv 运行 py 脚本": {
-    "prefix": ["uv run"],
+    "prefix": ["uv_run"],
     "body": ["uv run ${1:main.py}", ""],
     "description": ["uv 运行 py 脚本"]
   },
   "uv 安装依赖|允许包升级": {
-    "prefix": ["uv add"],
+    "prefix": ["uv_add"],
     "body": ["uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["uv 安装依赖|允许包升级"]
   },
   "uv 安装依赖 并 允许包升级": {
-    "prefix": ["uv add upgrade"],
+    "prefix": ["uv_add_upgrade"],
     "body": ["uv add \"${1:包名}\" --upgrade --index https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["uv 安装依赖 并 允许包升级"]
   },
   "uv 更新所有已安装的包": {
-    "prefix": ["uv upgrade all", "uv upgrade lock", "uv lock upgrade"],
+    "prefix": ["uv_lock_upgrade"],
     "body": ["uv lock --upgrade"],
     "description": ["uv 更新所有已安装的包"]
   },
   "uv 卸载依赖": {
-    "prefix": ["uv remove"],
+    "prefix": ["uv_remove"],
     "body": ["uv remove \"${1:包名}\""],
     "description": ["uv 卸载依赖"]
   },
   "uv 更新配置项目环境": {
-    "prefix": ["uv sync"],
+    "prefix": ["uv_sync"],
     "body": ["ECHO 将项目的依赖项与环境同步", "@REM *根据 pyproject.toml 和 uv.lock 锁文件创建或更新虚拟环境", "uv sync"],
     "description": ["uv 更新配置项目环境", "根据 pyproject.toml 和锁文件创建或更新虚拟环境"]
   },
   "uv 仅同步生产依赖": {
-    "prefix": ["uv sync -p"],
+    "prefix": ["uv_sync_production"],
     "body": ["ECHO uv 仅同步生产依赖", "uv sync --production"],
     "description": ["uv 仅同步生产依赖"]
   },
   "uv 同步并清理多余包": {
-    "prefix": ["uv sync -c"],
+    "prefix": ["uv_sync_clean"],
     "body": ["ECHO uv 同步并清理多余包", "uv sync --clean"],
     "description": ["uv 同步并清理多余包"]
   },
   "uv 更新项目的锁定文件": {
-    "prefix": ["uv lock"],
+    "prefix": ["uv_lock"],
     "body": ["ECHO 生成 uv 新锁定文件", "uv lock"],
     "description": ["uv 更新项目的锁定文件"]
   },
   "uv 检查更新但不写入 (dry-run)": {
-    "prefix": ["uv lock -c"],
+    "prefix": ["uv_lock_check"],
     "body": ["ECHO uv 检查更新但不写入 (dry-run)", "uv lock --check"],
     "description": ["uv 检查更新但不写入 (dry-run)"]
   },
   "uv 强制重新解析": {
-    "prefix": ["uv lock -u"],
+    "prefix": ["uv_lock_update"],
     "body": ["ECHO uv 强制重新解析", "uv lock --update"],
     "description": ["uv 强制重新解析"]
   },
   "uv 显示项目的完整依赖树": {
-    "prefix": ["uv tree"],
+    "prefix": ["uv_tree"],
     "body": ["ECHO uv 显示项目的完整依赖树", "uv tree"],
     "description": ["uv 显示项目的完整依赖树"]
   },
   "uv 导出以来清单": {
-    "prefix": ["uv export"],
+    "prefix": ["uv_export"],
     "body": ["ECHO uv 导出以来清单", "uv export > requirements.txt"],
     "description": ["uv 导出以来清单"]
   },
   "uv 从依赖清单安装": {
-    "prefix": ["uv install -r"],
+    "prefix": ["uv_install_r_requirements"],
     "body": ["ECHO uv 从依赖清单安装", "uv install -r requirements.txt"],
     "description": ["uv 从依赖清单安装"]
   },
   "UV 使用兼容PIP兼容的接口管理Python软件包": {
-    "prefix": ["uv pip"],
+    "prefix": ["uv_pip"],
     "body": ["uv pip ${1:pip命令}"],
     "description": ["UV 使用兼容PIP兼容的接口管理Python软件包"]
   },
   "显示UV的版本": {
-    "prefix": ["uv version"],
+    "prefix": ["uv_version"],
     "body": ["ECHO UV版本", "uv version"],
     "description": ["显示UV的版本"]
   },
   "显示UV命令的文档": {
-    "prefix": ["uv help"],
+    "prefix": ["uv_help"],
     "body": ["ECHO UV命令文档", "uv help"],
     "description": ["显示UV命令的文档"]
   }

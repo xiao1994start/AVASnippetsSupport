@@ -1,6 +1,6 @@
 {
   "pip|uv pandas CSV数据库": {
-    "prefix": ["pip pandas", "uv pandas"],
+    "prefix": ["pip_pandas", "uv_pandas"],
     "body": [
       "ECHO.",
       "ECHO * pandas CSV数据库 *",

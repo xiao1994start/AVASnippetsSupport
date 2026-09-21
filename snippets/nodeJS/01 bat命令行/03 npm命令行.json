@@ -1,6 +1,6 @@
 {
   "npm 帮助说明": {
-    "prefix": ["npm -help"],
+    "prefix": ["npm_help"],
     "body": [
       "@REM npm 说明：",
       "@REM 临时代理 --registry https://registry.npmmirror.com/",
@@ -15,52 +15,52 @@
     "description": ["npm帮助说明"]
   },
   "npm 版本号": {
-    "prefix": ["npm version"],
+    "prefix": ["npm_version"],
     "body": ["ECHO = npm 版本号:", "call npm -v", ""],
     "description": ["npm 版本号"]
   },
   "npm 初始化新项目": {
-    "prefix": ["npm init"],
+    "prefix": ["npm_init"],
     "body": ["ECHO.* 初始化 npm 项目", "call npm init", ""],
     "description": ["npm 初始化新项目"]
   },
   "npm 自动初始化新项目(默认配置)": {
-    "prefix": ["npm init y"],
+    "prefix": ["npm_init_y"],
     "body": ["ECHO.* 自动初始化 npm 项目", "call npm init -y", ""],
     "description": ["npm 自动初始化新项目(默认配置)"]
   },
   "npm 缓存清理": {
-    "prefix": ["npm cache clean"],
+    "prefix": ["npm_cache_clean"],
     "body": ["ECHO - 清理 npm 缓存", "call npm cache clean", ""],
     "description": ["npm 缓存清理"]
   },
   "npm 缓存清理（禁用：推荐的保护功能）": {
-    "prefix": ["npm cache clean force"],
+    "prefix": ["npm_cache_clean_force"],
     "body": ["ECHO - 清理 npm 缓存（禁用：推荐的保护功能）", "call npm cache clean --force", ""],
     "description": ["npm 缓存清理（禁用：推荐的保护功能）"]
   },
   "npm 升级": {
-    "prefix": ["npm install npm"],
+    "prefix": ["npm_install_npm_g"],
     "body": ["ECHO + 升级 npm", "call npm i npm -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 升级"]
   },
   "npm 检查 软件仓库位置": {
-    "prefix": ["npm root g"],
+    "prefix": ["npm_root_g"],
     "body": ["ECHO 检查 软件仓库位置:", "call npm root -g", ""],
     "description": "npm 检查 软件仓库位置"
   },
   "npm 自定义仓库位置": {
-    "prefix": ["npm config prefix"],
+    "prefix": ["npm_config_set_prefix"],
     "body": ["call npm config set prefix ${1:仓库位置}", ""],
     "description": ["自定义npm仓库位置"]
   },
   "npm 自定义缓存位置": {
-    "prefix": ["npm config cache"],
+    "prefix": ["npm_config_set_cache"],
     "body": ["call npm config set cache ${1:缓存位置}", ""],
     "description": ["自定义npm缓存位置"]
   },
   "npm 切换国内镜像源": {
-    "prefix": ["npm config set registry"],
+    "prefix": ["npm_config_set_registry"],
     "body": [
       "ECHO npm 设置为淘宝镜像源",
       "call npm config set registry https://registry.npmmirror.com/",
@@ -71,27 +71,27 @@
     "description": ["切换npm国内镜像源"]
   },
   "npm 安装模块": {
-    "prefix": ["npm install"],
+    "prefix": ["npm_install"],
     "body": ["npm i ${1:express} --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 安装模块"]
   },
   "npm 全局安装模块": {
-    "prefix": ["npm install g"],
+    "prefix": ["npm_install_g"],
     "body": ["npm i ${1:express} -g --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 全局安装模块"]
   },
   "npm 卸载模块": {
-    "prefix": ["npm uninstall"],
+    "prefix": ["npm_uninstall"],
     "body": ["npm un ${1:express}", ""],
     "description": ["npm 卸载模块"]
   },
   "npm 全局卸载模块": {
-    "prefix": ["npm uninstall"],
+    "prefix": ["npm_uninstall_g"],
     "body": ["npm un ${1:express} -g", ""],
     "description": ["npm 全局卸载模块"]
   },
   "npm 更新模块": {
-    "prefix": ["npm update"],
+    "prefix": ["npm_update"],
     "body": ["npm update ${1:express}", ""],
     "description": ["npm 更新模块"]
   }

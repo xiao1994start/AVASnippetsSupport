@@ -1,6 +1,6 @@
 {
   "引入 body-parser 模块": {
-    "prefix": ["req body-parser"],
+    "prefix": ["req_body-parser"],
     "body": [
       "const bodyParser = require('body-parser'); // * 引入 body-parser 解析请求体模块",
       "",

@@ -1,61 +1,61 @@
 {
   "rich.print[红色]": {
-    "prefix": ["printColor red -rich", "pc red -rich"],
+    "prefix": ["printColor_red_-rich"],
     "body": ["red"],
     "description": ["rich.print[红色]"]
   },
   "rich.print[绿色]": {
-    "prefix": ["printColor green -rich", "pc green -rich"],
+    "prefix": ["printColor_green_-rich"],
     "body": ["green"],
     "description": ["rich.print[绿色]"]
   },
   "rich.print[黄色]": {
-    "prefix": ["printColor yellow -rich", "pc yellow -rich"],
+    "prefix": ["printColor_yellow_-rich"],
     "body": ["yellow"],
     "description": ["rich.print[黄色]"]
   },
   "rich.print[蓝色]": {
-    "prefix": ["printColor blue -rich", "pc blue -rich"],
+    "prefix": ["printColor_blue_-rich"],
     "body": ["blue"],
     "description": ["rich.print[蓝色]"]
   },
   "rich.print[品红/紫色]": {
-    "prefix": ["printColor magenta -rich", "pc magenta -rich"],
+    "prefix": ["printColor_magenta_-rich"],
     "body": ["magenta"],
     "description": ["rich.print[品红/紫色]"]
   },
   "rich.print[青色]": {
-    "prefix": ["printColor cyan -rich", "pc cyan -rich"],
+    "prefix": ["printColor_cyan_-rich"],
     "body": ["cyan"],
     "description": ["rich.print[青色]"]
   },
   "rich.print[亮红色]": {
-    "prefix": ["printColor bright_red -rich", "pc bright_red -rich"],
+    "prefix": ["printColor_bright_red_-rich"],
     "body": ["bright_red"],
     "description": ["rich.print[亮红色]"]
   },
   "rich.print[亮绿色]": {
-    "prefix": ["printColor bright_green -rich", "pc bright_green -rich"],
+    "prefix": ["printColor_bright_green_-rich"],
     "body": ["bright_green"],
     "description": ["rich.print[亮绿色]"]
   },
   "rich.print[亮黄色]": {
-    "prefix": ["printColor bright_yellow -rich", "pc bright_yellow -rich"],
+    "prefix": ["printColor_bright_yellow_-rich"],
     "body": ["bright_yellow"],
     "description": ["rich.print[亮黄色]"]
   },
   "rich.print[亮蓝色]": {
-    "prefix": ["printColor bright_blue -rich", "pc bright_blue -rich"],
+    "prefix": ["printColor_bright_blue_-rich"],
     "body": ["bright_blue"],
     "description": ["rich.print[亮蓝色]"]
   },
   "rich.print[亮品红/紫色]": {
-    "prefix": ["printColor bright_magenta -rich", "pc bright_magenta -rich"],
+    "prefix": ["printColor_bright_magenta_-rich"],
     "body": ["bright_magenta"],
     "description": ["rich.print[亮品红/紫色]"]
   },
   "rich.print[亮青色]": {
-    "prefix": ["printColor bright_cyan -rich", "pc bright_cyan -rich"],
+    "prefix": ["printColor_bright_cyan_-rich"],
     "body": ["bright_cyan"],
     "description": ["rich.print[亮青色]"]
   }

@@ -1,6 +1,6 @@
 {
   "Bandizip 命令行参数": {
-    "prefix": ["Bandizip", "bz"],
+    "prefix": ["BandiZip"],
     "body": [
       "@REM 命令行帮助文档:https://www.bandisoft.com/bandizip/help/parameter/",
       "@REM TODO 格式:",

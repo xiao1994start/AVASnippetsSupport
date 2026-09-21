@@ -1,11 +1,11 @@
 {
   "dir.object 查看对象属性": {
-    "prefix": ["dir ", "dir object"],
+    "prefix": ["dir_"],
     "body": ["dir($0)"],
     "description": ["dir.object 查看对象属性", "返回当前作用域中的所有变量, 方法和定义的类型"]
   },
   "@property.装饰器 将class对象中的方法转换为属性": {
-    "prefix": ["at property -class"],
+    "prefix": ["at_property_-class"],
     "body": ["@property", "def ${1:attr}(self, value):", "", "    $0", "    return", ""],
     "description": [
       "@property.装饰器 设置class中方法对象的属性",
@@ -33,7 +33,7 @@
     ]
   },
   "@setter.装饰器 设置 class 中方法对象的属性": {
-    "prefix": ["at setter -class"],
+    "prefix": ["at_setter_-class"],
     "body": ["@${1:attr}.setter", "def ${1:attr}(self, value):", "", "    $0", "", ""],
     "description": [
       "@property.装饰器 设置class中方法对象的属性",
@@ -61,17 +61,17 @@
     ]
   },
   "setattr.object 设置对象属性": {
-    "prefix": ["setattr ", "setattr object"],
+    "prefix": ["setattr_"],
     "body": ["setattr(${1:object}, ${2:'name'}, ${3:value})"],
     "description": ["setattr.object 设置对象属性"]
   },
   "getattr.object 获取对象属性": {
-    "prefix": ["getattr ", "getattr object"],
+    "prefix": ["getattr_"],
     "body": ["getattr(${1:object}, ${2:'name'}, ${3|None,0,False|})"],
     "description": ["getattr.object 获取对象属性"]
   },
   "hasattr.object 检查对象属性": {
-    "prefix": ["hasattr ", "hasattr object"],
+    "prefix": ["hasattr_"],
     "body": ["hasattr(${1:object}, ${2:'name'})"],
     "description": ["hasattr.object 检查对象属性"]
   }

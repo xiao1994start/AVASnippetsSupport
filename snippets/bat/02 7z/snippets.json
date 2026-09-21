@@ -1,6 +1,6 @@
 {
   "设置 7z 系统环境变量": {
-    "prefix": ["set 7z"],
+    "prefix": ["set_7z"],
     "body": [
       "@REM * 添加7-Zip到临时系统环境变量",
       "set \"zip=%PROGRAMFILES%\\7-Zip\\\"",
@@ -12,7 +12,7 @@
     "description": ["设置 7z 系统环境变量"]
   },
   "7z 解压": {
-    "prefix": ["7z -x", "7za -x"],
+    "prefix": ["7z_X", "7za_X"],
     "body": [
       "@REM 7za.exe或7z.exe x [压缩包] -o[到指定目录] -y{自动覆盖同名文件} -p[密码]",
       "call ${1:7z} x ${2:压缩包} -o${3:解压路径} -y",
@@ -21,7 +21,7 @@
     "description": ["7z 解压"]
   },
   "7z 压缩": {
-    "prefix": ["7z -a", "7za -a"],
+    "prefix": ["7z_A", "7za_A"],
     "body": [
       "@REM 7za.exe或7z.exe a -t[压缩格式:7z/zip] -o[输出目录] -mmt=on:启用多线程,默认开启 -mx=[0-9]:最高压缩级别 -r:递归子目录 -p[密码] -x!*.*:排除指定文件",
       "@REM    -xr!*.log:递归排除指定文件(不要开启 setlocal EnableDelayedExpansion)",

@@ -1,16 +1,16 @@
 {
   "引入 socket 网络通讯模块": {
-    "prefix": ["import socket", "imp socket"],
+    "prefix": ["import_socket", "imp_socket"],
     "body": ["import socket  # *socket网络通信模块"],
     "description": ["引入 socket 网络通讯模块"]
   },
   "socket.GetLocalHostName 获取本地计算机名(IP)": {
-    "prefix": ["socket gethostbyname gethostname", "socket GetLocalHostName"],
+    "prefix": ["socket_gethostbyname_gethostname", "socket_GetLocalHostName"],
     "body": ["socket.gethostbyname(socket.gethostname())"],
     "description": ["socket.GetLocalHostName 获取本地计算机名(IP)"]
   },
   "socket.socketPort 端口号相关处理": {
-    "prefix": ["socket SocketPort="],
+    "prefix": ["socket_SocketPort="],
     "body": [
       "import random",
       "import socket",

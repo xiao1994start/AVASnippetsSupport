@@ -1,11 +1,11 @@
 {
   "跳转到标签": {
-    "prefix": ["goto "],
+    "prefix": ["goto_label"],
     "body": ["goto :$0"],
     "description": ["跳转到标签"]
   },
   "临时运行标签": {
-    "prefix": ["call label"],
+    "prefix": ["call_label"],
     "body": ["call :$0"],
     "description": [
       "临时运行标签",
@@ -14,17 +14,17 @@
     ]
   },
   "新建子标签": {
-    "prefix": ["new label"],
+    "prefix": ["new_label"],
     "body": [":label", "$0", "goto :eof"],
     "description": ["新建子标签"]
   },
   "从子标签/子程序中返回": {
-    "prefix": ["return", "goto eof"],
+    "prefix": ["return", "goto_eof"],
     "body": ["goto :eof"],
     "description": ["从子标签/子程序中返回"]
   },
   "批量拖入文件处理": {
-    "prefix": ["input files"],
+    "prefix": ["input_files"],
     "body": [
       "@REM * 初始化文件标记变量（0 表示尚未处理任何文件）",
       "set \"has_input=0\"",

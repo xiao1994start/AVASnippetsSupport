@@ -1,7 +1,7 @@
 {
   "name": "avasnippetssupport",
   "displayName": "AVASnippetsSupport",
-  "description": "Python, BAT, Json, MarkDown, Node.js, JavaScript, XML Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
+  "description": "Python, BAT, Json, MarkDown, Node.js, JavaScript Code Snippets.\nAdd Ren'Py Language Support and Code Snippets.",
   "version": "0.0.3",
   "publisher": "AVA",
   "icon": "icon.png",
@@ -120,8 +120,20 @@
         "path": "./snippets/全局-注释标志.json"
       },
       {
-        "language": "xml",
-        "path": "./snippets/全局-注释标志.json"
+        "language": "bat",
+        "path": "./snippets/全局-编码格式.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/全局-编码格式.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/全局-编码格式.json"
+      },
+      {
+        "language": "renpy",
+        "path": "./snippets/全局-编码格式.json"
       },
       {
         "language": "bat",
@@ -130,6 +142,10 @@
       {
         "language": "bat",
         "path": "./snippets/bat/01 基础命令行/管理员权限获取.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/bat/01 基础命令行/环境变量.json"
       },
       {
         "language": "bat",
@@ -146,14 +162,6 @@
       {
         "language": "bat",
         "path": "./snippets/bat/01 基础命令行/choice选择器.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/01 基础命令行/encoding编码语言页.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/bat/01 基础命令行/环境变量.json"
       },
       {
         "language": "bat",
@@ -232,20 +240,12 @@
         "path": "./snippets/github/git.基础命令.json"
       },
       {
-        "language": "bat",
-        "path": "./snippets/github/git.protable.json"
+        "language": "json",
+        "path": "./snippets/json/json_snippets_for_all.json"
       },
       {
         "language": "json",
-        "path": "./snippets/json/snippets/json_snippets_for_all.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json/snippets/json_snippets_for_python.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json/基础语句.json"
+        "path": "./snippets/json/json_snippets_for_python.json"
       },
       {
         "language": "bat",
@@ -353,10 +353,6 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/01 基础语法/编码格式.json"
-      },
-      {
-        "language": "python",
         "path": "./snippets/python/01 基础语法/attr动态属性操作.json"
       },
       {
@@ -381,19 +377,11 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/01 基础语法/dict字典多态性应用.json"
-      },
-      {
-        "language": "python",
         "path": "./snippets/python/01 基础语法/enumerate枚举函数.json"
       },
       {
         "language": "python",
         "path": "./snippets/python/01 基础语法/eval字符串运算.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/01 基础语法/eval字符串转换执行函数.json"
       },
       {
         "language": "python",
@@ -434,10 +422,6 @@
       {
         "language": "python",
         "path": "./snippets/python/01 基础语法/pass结构语句.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/01 基础语法/pprint高级打印.json"
       },
       {
         "language": "python",
@@ -653,7 +637,7 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/keyboard 键盘交互工具库/keyboard.Template.json"
+        "path": "./snippets/python/keyboard 键盘交互工具库/keyboard.tmpl.json"
       },
       {
         "language": "python",
@@ -705,7 +689,7 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/opencv python计算机视觉库/cv2.Template.json"
+        "path": "./snippets/python/opencv python计算机视觉库/cv2.tmpl.json"
       },
       {
         "language": "python",
@@ -950,14 +934,6 @@
       {
         "language": "renpy",
         "path": "./snippets/renpy/python语法.json"
-      },
-      {
-        "language": "xml",
-        "path": "./snippets/xml/wps/snippets.json"
-      },
-      {
-        "language": "xml",
-        "path": "./snippets/xml/常用属性.json"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "msvcrt.创建控制台交互入口函数模板": {
-    "prefix": ["msvcrt run command ="],
+    "prefix": ["msvcrt_run_command_function="],
     "body": [
       "import msvcrt",
       "import sys",

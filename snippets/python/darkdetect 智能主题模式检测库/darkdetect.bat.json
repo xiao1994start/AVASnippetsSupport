@@ -1,6 +1,6 @@
 {
   "pip|uv darkdetect 智能主题模式检测库": {
-    "prefix": ["pip darkdetect", "uv darkdetect"],
+    "prefix": ["pip_darkdetect", "uv_darkdetect"],
     "body": [
       "ECHO.",
       "ECHO * darkdetect 智能主题模式检测库 *",

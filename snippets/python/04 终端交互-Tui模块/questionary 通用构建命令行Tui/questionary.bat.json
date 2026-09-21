@@ -1,6 +1,6 @@
 {
   "pip|uv questionary 构建命令行Tui界面": {
-    "prefix": ["pip questionary", "uv questionary"],
+    "prefix": ["pip_questionary", "uv_questionary"],
     "body": [
       "ECHO.",
       "ECHO * questionary 构建命令行Tui界面 *",

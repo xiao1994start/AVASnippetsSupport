@@ -1,6 +1,6 @@
 {
   "pip|uv xmltodict XML数据解析字典": {
-    "prefix": ["pip xmltodict", "uv xmltodict"],
+    "prefix": ["pip_xmltodict", "uv_xmltodict"],
     "body": [
       "ECHO.",
       "ECHO * xmltodict XML数据解析字典 *",

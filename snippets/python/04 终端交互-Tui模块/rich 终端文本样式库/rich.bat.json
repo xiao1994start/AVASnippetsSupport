@@ -1,6 +1,6 @@
 {
   "pip|uv rich 终端输出文本样式库": {
-    "prefix": ["pip rich", "uv rich"],
+    "prefix": ["pip_rich", "uv_rich"],
     "body": [
       "ECHO.",
       "ECHO * rich 终端输出文本样式库 *",

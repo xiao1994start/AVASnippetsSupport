@@ -1,6 +1,6 @@
 {
   "python-embed 嵌入式环境启动": {
-    "prefix": ["call python -embed"],
+    "prefix": ["call_python_embed"],
     "body": [
       "@REM * 定义 Python 环境变量",
       "set \"local_python=.\\python\"",
@@ -29,22 +29,22 @@
     "description": ["python-embed 嵌入式环境启动"]
   },
   "python -m": {
-    "prefix": ["call python -m"],
+    "prefix": ["call_python_m"],
     "body": ["call python -m ${1:pip}"],
     "description": ["python -m"]
   },
   "python 版本号": {
-    "prefix": ["py version -python"],
+    "prefix": ["python_version"],
     "body": ["ECHO python 版本号", "call python --version", ""],
     "description": "python 版本号"
   },
   "pip 版本号": {
-    "prefix": ["pip version -python"],
+    "prefix": ["pip_version"],
     "body": ["ECHO pip 版本号", "call pip --version", ""],
     "description": "pip 版本号"
   },
   "pip.镜像源": {
-    "prefix": ["pip -config-index-url"],
+    "prefix": ["pip_config_index_url"],
     "body": [
       "ECHO 重置pip.ini...",
       "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
@@ -61,7 +61,7 @@
     "description": ["pipconfig.index镜像源"]
   },
   "pip.批量镜像源": {
-    "prefix": ["pip -config-extra-index-url"],
+    "prefix": ["pip_config_extra_index_url"],
     "body": [
       "ECHO 重置pip.ini...",
       "@REM type nul >\"%USERPROFILE%\\AppData\\Roaming\\pip\\pip.ini\"",
@@ -70,52 +70,52 @@
     "description": ["pipconfig.index批量镜像源"]
   },
   "pip.install 安装库": {
-    "prefix": ["pip new -install", "pip new -I"],
+    "prefix": ["pip_install"],
     "body": ["pip install \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -i 安装库"]
   },
   "pip.-reinstall 强制重装库": {
-    "prefix": ["pip -reinstall"],
+    "prefix": ["pip_install_force_reinstall"],
     "body": ["pip install --force-reinstall \"${1:库名_whl文件路径}\" ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip -reinstall 强制重装库"]
   },
   "pip.install-upgrade 安装最新发布库": {
-    "prefix": ["pip new -install-U", "pip new -U"],
+    "prefix": ["pip_install_upgrade"],
     "body": ["pip install ${1:pip} --upgrade ${2:-i https://mirrors.aliyun.com/pypi/simple/}"],
     "description": ["pip.install-upgrade 安装最新发布库"]
   },
   "pip.uninstall 卸载": {
-    "prefix": ["pip -uninstall"],
+    "prefix": ["pip_uninstall_y"],
     "body": ["pip uninstall \"${1:库名}\" -y"],
     "description": ["pip -uninstall 卸载"]
   },
   "pip.freeze 获取安装库列表": {
-    "prefix": ["pip -freeze"],
+    "prefix": ["pip_freeze"],
     "body": ["pip freeze  > ${1:requirements.txt}"],
     "description": ["pip -freeze 获取安装库列表"]
   },
   "pip.requirements 列式安装库": {
-    "prefix": ["pip -install-requirements"],
+    "prefix": ["pip_install_r_requirements"],
     "body": ["pip install -r ${1:requirements.txt} -i https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip -requirements 列式安装库"]
   },
   "pip.--index-url 主源": {
-    "prefix": ["pip index-url"],
+    "prefix": ["pip_index_url_main"],
     "body": ["--index-url https://download.pytorch.org/whl/cu128"],
     "description": ["pip.--index-url 主源"]
   },
   "pip.--extra-index-url 额外的源": {
-    "prefix": ["pip extra-index-url"],
+    "prefix": ["pip_extra_index_url"],
     "body": ["--extra-index-url https://mirrors.aliyun.com/pypi/simple/"],
     "description": ["pip.--extra-index-url 额外的源"]
   },
   "安装 get-pip.py": {
-    "prefix": ["call python get_pip"],
+    "prefix": ["call_python_get_pip"],
     "body": ["call python \".\\python\\get-pip.py\"  -i https://mirrors.aliyun.com/pypi/simple/", ""],
     "description": ["安装 get-pip.py"]
   },
   "获取 get-pip.py": {
-    "prefix": ["curl get_pip"],
+    "prefix": ["curl_get_pip"],
     "body": ["curl -SL https://bootstrap.pypa.io/get-pip.py -o \".\\python\\get-pip.py\"", ""],
     "description": ["获取 get-pip.py"]
   }

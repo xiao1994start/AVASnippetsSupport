@@ -1,6 +1,6 @@
 {
   "引入 rich.logging.RichHandler 日志记录处理程序": {
-    "prefix": ["import rich logging =-rich--basicConfig", "imp rich logging =-rich--basicConfig"],
+    "prefix": ["import_rich_logging_=-rich--basicConfig", "imp_rich_logging_=-rich--basicConfig"],
     "body": [
       "import logging",
       "",
@@ -14,6 +14,6 @@
       ")",
       ""
     ],
-    "description": ["引入 rich.logging.RichHandler 日志记录处理程序", "\n替换默认的 logging.basicConfig.handlers"]
+    "description": ["引入 rich.logging.RichHandler 日志记录处理程序", "    替换默认的 logging.basicConfig.handlers"]
   }
 }

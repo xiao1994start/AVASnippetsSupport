@@ -1,6 +1,6 @@
 {
   "cv2 模板匹配方法测试函数": {
-    "prefix": ["cv2 def test_cv2_TM"],
+    "prefix": ["cv2_def_test_cv2_TM_function"],
     "body": [
       "def test_cv2_TM_gray(img, templ):",
       "    \"\"\"",

@@ -1,6 +1,6 @@
 {
   "引入 concurrent.futures 启动并行任务": {
-    "prefix": ["import futures", "imp futures"],
+    "prefix": ["import_futures", "imp_futures"],
     "body": [
       "from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed  # * 启动并行任务[ThreadPoolExecutor:线程池; ProcessPoolExecutor:进程池]",
       ""
@@ -8,7 +8,7 @@
     "description": ["引入 concurrent.futures 启动并行任务"]
   },
   "创建 ThreadPoolExecutor 线程池": {
-    "prefix": ["with ThreadPoolExecutor as -concurrent.futures"],
+    "prefix": ["with_ThreadPoolExecutor_as_-concurrent.futures"],
     "body": [
       "with ThreadPoolExecutor(max_workers=6) as executor:",
       "    \"\"\"# ThreadPoolExecutor - 多线程：IO密集型任务（网络、文件、等待外部程序）",
@@ -29,7 +29,7 @@
     "description": ["创建 ThreadPoolExecutor 线程池"]
   },
   "创建 ProcessPoolExecutor 进程池": {
-    "prefix": ["with ProcessPoolExecutor as -concurrent.futures"],
+    "prefix": ["with_ProcessPoolExecutor_as_-concurrent.futures"],
     "body": [
       "with ProcessPoolExecutor(max_workers=6) as executor:",
       "    \"\"\"# ProcessPoolExecutor - 多进程：CPU密集型任务（计算、循环、解析、音频、视频、图像、压缩、解压、处理）",
@@ -50,7 +50,7 @@
     "description": ["创建 ProcessPoolExecutor 进程池"]
   },
   "ThreadPoolExecutor 通用的多线程函数运行器": {
-    "prefix": ["def with ThreadPoolExecutor -concurrent.futures"],
+    "prefix": ["def_with_ThreadPoolExecutor_-concurrent.futures"],
     "body": [
       "def run_threading(*tasks, max_workers: int = 6):",
       "    \"\"\"# ThreadPoolExecutor 通用的多线程函数运行器",
@@ -99,7 +99,7 @@
     "description": ["ThreadPoolExecutor 通用的多线程函数运行器"]
   },
   "ProcessPoolExecutor 通用的多进程函数运行器": {
-    "prefix": ["def with ProcessPoolExecutor -concurrent.futures"],
+    "prefix": ["def_with_ProcessPoolExecutor_-concurrent.futures"],
     "body": [
       "def run_mutilprocess(*tasks, max_workers: int = 6):",
       "    \"\"\"# ProcessPoolExecutor 通用的多进程函数运行器",

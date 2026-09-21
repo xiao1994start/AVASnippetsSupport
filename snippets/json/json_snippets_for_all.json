@@ -1,6 +1,6 @@
 {
   "snippets.language 代码片段语言": {
-    "prefix": ["language -snippets"],
+    "prefix": ["language"],
     "body": [
       "{",
       "  \"language\": \"${1|python,bat,renpy,vue,scss,typescript,html,vue-html,javascript,json,snippets|}\",",
@@ -10,7 +10,7 @@
     "description": ["代码片段语言"]
   },
   "snippets.new 新建代码片段": {
-    "prefix": ["new snippets -snippets"],
+    "prefix": ["new_snippets"],
     "body": [
       "\"描述\": {",
       "  \"prefix\": [\"${2:钩子}\"],",
@@ -23,44 +23,34 @@
     "description": ["新建代码片段"]
   },
   "snippets-new=>示例": {
-    "prefix": ["snippets-new =-snippets"],
+    "prefix": ["snippets_new_="],
     "body": [
       "\"${1:fname} -object\": {",
-      "\t\"prefix\": [\"${3:prefix}\"],",
-      "\t\"body\": [",
-      "\t\t\"${4:\\${1|1,2,3,4,5,6,7,8,9|\\}:\\${2:example\\}\\$0}\",",
-      "\t\t\"\",",
-      "\t],",
-      "\t\"description\": [",
-      "\t\t\"${5:}\"",
-      "\t]",
+      "  \"prefix\": [\"${3:prefix}\"],",
+      "  \"body\": [",
+      "    \"${4:\\${1|1,2,3,4,5,6,7,8,9|\\}:\\${2:example\\}\\$0}\",",
+      "    \"\",",
+      "  ],",
+      "  \"description\": [",
+      "    \"${5:}\"",
+      "  ]",
       "},"
     ],
     "description": ["snippets-new=>示例"]
   },
   "snippets.插入": {
-    "prefix": ["insert -snippets"],
+    "prefix": ["insert"],
     "body": ["${${1:1}:$2}"],
     "description": ["插入"]
   },
   "snippets.选择": {
-    "prefix": ["choose -snippets"],
+    "prefix": ["choose"],
     "body": ["${${1:1}|${2:a},${3:b}|}"],
     "description": ["选择"]
   },
   "snippets.结束位置": {
-    "prefix": ["end -snippets"],
+    "prefix": ["end"],
     "body": ["\\$0"],
     "description": ["结束位置"]
-  },
-  "snippets.换行": {
-    "prefix": [" nn -snippets"],
-    "body": ["\\n"],
-    "description": ["换行"]
-  },
-  "snippets.缩进": {
-    "prefix": [" tt -snippets"],
-    "body": ["\\t"],
-    "description": ["缩进"]
   }
 }

@@ -1,6 +1,6 @@
 {
   "pip|uv flet 基于 Flutter 的WebUI框架": {
-    "prefix": ["pip flet", "uv flet"],
+    "prefix": ["pip_flet", "uv_flet"],
     "body": [
       "ECHO.",
       "ECHO * flet 基于 Flutter 的WebUI框架 *",

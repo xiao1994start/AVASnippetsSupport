@@ -1,16 +1,16 @@
 {
   "引入 pedalboard 音频处理框架": {
-    "prefix": ["import pedalboard", "imp pedalboard"],
+    "prefix": ["import_pedalboard", "imp_pedalboard"],
     "body": ["import pedalboard"],
     "description": ["音频处理框架"]
   },
   "引入 pedalboard.VST3Plugin Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器": {
-    "prefix": ["import pedalboard.VST3Plugin", "imp pedalboard.VST3Plugin"],
+    "prefix": ["import_pedalboard_VST3Plugin", "imp_pedalboard_VST3Plugin"],
     "body": ["from pedalboard import VST3Plugin  # *Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"],
     "description": ["Steinberg GmbH VST3®格式第三方音频效果或乐器插件的包装器"]
   },
   "pedalboard.VST3Plugin 读取插件信息": {
-    "prefix": ["pedalboard VST3Plugin ="],
+    "prefix": ["pedalboard_VST3Plugin_="],
     "body": [
       "plugin = VST3Plugin(path_to_plugin_file=str(vst3_path), plugin_name=VST3Plugin_name)",
       "# *API:[https://spotify.github.io/pedalboard/reference/pedalboard.html#pedalboard.VST3Plugin]",
@@ -28,7 +28,7 @@
     "description": ["读取插件信息"]
   },
   "定义nfo获取Plugin插件信息数据类(# 字段名)": {
-    "prefix": "nfoPluginInfo dataclass =",
+    "prefix": "nfoPluginInfo_dataclass_=",
     "body": [
       "from dataclasses import dataclass  # * 引入 dataclass 高效定义数据类对象",
       "@dataclass(slots=True, frozen=True, kw_only=True, order=True)",

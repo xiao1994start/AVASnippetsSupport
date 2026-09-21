@@ -1,6 +1,6 @@
 {
   "pip|uv pyscreeze 用于屏幕截图和图像识别": {
-    "prefix": ["pip pyscreeze", "uv pyscreeze"],
+    "prefix": ["pip_pyscreeze", "uv_pyscreeze"],
     "body": [
       "ECHO.",
       "ECHO * pyscreeze 用于屏幕截图和图像识别 *",

@@ -1,6 +1,6 @@
 {
   "机器人复制": {
-    "prefix": ["robocopy "],
+    "prefix": ["robocopy_smart"],
     "body": [
       "@REM * 帮助文档：[https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/robocopy]",
       "@REM robocopy 源目录 目标目录:[当前目录使用 %~dp0 时不要加 \"双引号\" 或 使用 . 代替]",

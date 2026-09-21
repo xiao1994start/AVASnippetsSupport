@@ -1,6 +1,6 @@
 {
   "enumerate 枚举函数": {
-    "prefix": ["type object", "object -type"],
+    "prefix": ["enumerate_"],
     "body": ["enumerate(iterable=${1:iterable可遍历的数据对象}, start=0)"],
     "description": [
       "enumerate 枚举函数",
@@ -8,12 +8,8 @@
     ]
   },
   "for in enumerate 循环枚举": {
-    "prefix": ["for in enumerate =-enumerate"],
-    "body": [
-      "for ${1:i}, ${2:itemIter} in enumerate(${3:iterable}):  # 循环遍历行",
-      "    # comment: 注释",
-      "    ..."
-    ],
+    "prefix": ["for_in_enumerate_=-enumerate"],
+    "body": ["for ${1:i}, ${2:itemIter} in enumerate(${3:iterable}):  # 循环遍历行", "    # comment: 注释", "    ..."],
     "description": ["for in enumerate 循环枚举"]
   }
 }

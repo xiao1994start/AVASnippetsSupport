@@ -1,11 +1,11 @@
 {
   "导入 shutil 高级文件管理模块": {
-    "prefix": ["import shutil", "imp shutil"],
+    "prefix": ["import_shutil", "imp_shutil"],
     "body": ["import shutil"],
     "description": ["导入shutil高级文件管理模块"]
   },
   "shutil.copyfile 文件拷贝": {
-    "prefix": ["shutil copyfile"],
+    "prefix": ["shutil_copyfile"],
     "body": ["shutil.copyfile(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
       "shutil.copyfile 文件拷贝, 拷贝源文件内容, 当目标不存在时会创建文件",
@@ -17,7 +17,7 @@
     ]
   },
   "shutil.copymode 权限拷贝": {
-    "prefix": ["shutil copymode"],
+    "prefix": ["shutil_copymode"],
     "body": ["shutil.copymode(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
       "shutil.copymode 将权限位从 src 拷贝到 dst.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名.  如果 follow_symlinks 为假值, 并且 src 和 dst 均为符号链接, 则 copymode() 将尝试修改 dst 本身的模式(而不是它所指向的文件).  此功能并不是在所有平台上均可用; 请参阅 copystat() 了解详情.  如果 copymode() 无法修改本机平台上的符号链接, 而它被要求这样做, 它将不做任何操作即返回",
@@ -25,7 +25,7 @@
     ]
   },
   "shutil.copystat 属性|统计信息 拷贝": {
-    "prefix": ["shutil copystat"],
+    "prefix": ["shutil_copystat"],
     "body": ["shutil.copystat(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
       "shutil.copystat 将权限位、最近访问时间、最近修改时间和旗标从 src 拷贝到 dst.  在 Linux 上, copystat() 还会在可能的情况下拷贝“扩展属性”.  文件的内容、所有者和分组将不受影响.  src 和 dst 均为 路径型对象 或字符串形式的路径名",
@@ -33,7 +33,7 @@
     ]
   },
   "shutil.copy 文件或目录拷贝": {
-    "prefix": ["shutil copy"],
+    "prefix": ["shutil_copy"],
     "body": ["shutil.copy(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
       "shutil.copy 将文件 src 拷贝到文件或目录 dst.  src 和 dst 应为 路径类对象 或字符串.  如果 dst 指定了一个目录, 文件将使用 src 中的基准文件名拷贝到 dst 中.  如果 dst 指定了一个已存在的文件, 它将被替换.  返回新创建文件所对应的路径",
@@ -44,7 +44,7 @@
     ]
   },
   "shutil.copy2 文件或目录拷贝(尝试保留文件的元数据)": {
-    "prefix": ["shutil copy2"],
+    "prefix": ["shutil_copy2"],
     "body": ["shutil.copy2(str(${1:srcPath}), str(${2:dstPath}))"],
     "description": [
       "shutil.copy2 类似于 copy(), 区别在于 copy2() 还会尝试保留文件的元数据",
@@ -55,7 +55,7 @@
     ]
   },
   "shutil.copytree 递归目录树拷贝": {
-    "prefix": ["shutil copytree"],
+    "prefix": ["shutil_copytree"],
     "body": ["shutil.copytree(str(${1:srcPath}), str(${2:dstPath}), dirs_exist_ok=${3|True,False|})"],
     "description": [
       "shutil.copytree 递归地将以 src 为根起点的整个目录树拷贝到名为 dst 的目录并返回目标目录.  所需的包含 dst 的中间目录在默认情况下也将被创建",
@@ -71,7 +71,7 @@
     ]
   },
   "shutil.rmtree 删除一个完整的目录树": {
-    "prefix": ["shutil rmtree"],
+    "prefix": ["shutil_rmtree"],
     "body": ["shutil.rmtree(${1:str(Path)})"],
     "description": [
       "shutil.rmtree 删除一个完整的目录树; path 必须指向一个目录(但不能是一个目录的符号链接).  如果 ignore_errors 为真值, 则删除失败导致的错误将被忽略; 如果为假值或被省略, 则此类错误将通过调用由 onexc 或 onerror 所指定的处理句柄来处理, 或者如果此参数被省略, 异常将被传播给调用方",
@@ -81,7 +81,7 @@
     ]
   },
   "shutil.move 文件或目录 (src) 移到另一位置": {
-    "prefix": ["shutil move"],
+    "prefix": ["shutil_move"],
     "body": ["shutil.move(${1:src}, ${2:dst})"],
     "description": [
       "shutil.move 递归地将一个文件或目录 (src) 移到另一位置并返回目标位置",
@@ -93,7 +93,7 @@
     ]
   },
   "shutil.make_archive 压缩和归档": {
-    "prefix": ["shutil make_archive"],
+    "prefix": ["shutil_make_archive"],
     "body": ["shutil.make_archive(base_name=${1:base_name}, format=${2:'zip'}, root_dir=${3:root_dir})"],
     "description": [
       "shutil.make_archive 创建一个归档文件(例如 zip 或 tar)并返回其名称",
@@ -109,7 +109,7 @@
     ]
   },
   "shutil.unpack_archive 解包归档文件": {
-    "prefix": ["shutil unpack_archive"],
+    "prefix": ["shutil_unpack_archive"],
     "body": ["shutil.unpack_archive(filename=${1:filename.zip}, extract_dir=${2:'解包的目标目录名称'}, format=${3:'zip'})"],
     "description": [
       "shutil.unpack_archive 解包一个归档文件.  filename 是归档文件的完整路径",

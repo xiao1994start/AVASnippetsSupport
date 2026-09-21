@@ -1,6 +1,6 @@
 {
   "pip|uv selenium 自动化web测试": {
-    "prefix": ["pip selenium", "uv selenium"],
+    "prefix": ["pip_selenium", "uv_selenium"],
     "body": [
       "ECHO.",
       "ECHO * selenium 自动化web测试 *",

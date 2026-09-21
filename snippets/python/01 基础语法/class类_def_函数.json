@@ -1,6 +1,6 @@
 {
   "创建 class Config 单实例对象": {
-    "prefix": ["new class Config -class_new_function"],
+    "prefix": ["new_class_Config"],
     "body": [
       "class Config:",
       "    \"\"\"# 配置管理器（单例模式）",
@@ -83,7 +83,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "创建 class 单实例对象": {
-    "prefix": ["new class def cls -class_new_function"],
+    "prefix": ["new_class_def_cls"],
     "body": [
       "class ${1:NewClass}:",
       "    # ==================== 单例相关 ====================",
@@ -102,7 +102,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "def __new__(cls) 单例模式": {
-    "prefix": ["new def cls -class_new_function"],
+    "prefix": ["new_def_cls"],
     "body": [
       "_instance = None",
       "def __new__(cls):",
@@ -114,7 +114,7 @@
     "description": ["def __new__(cls) 单例模式"]
   },
   "创建 class 对象": {
-    "prefix": ["new class init -class"],
+    "prefix": ["new_class_init"],
     "body": [
       "class ${1:NewObject}:",
       "    # ==================== 全局状态存储 ====================",
@@ -131,37 +131,37 @@
     "description": ["创建 class 对象"]
   },
   "class 初始化(继承父类)": {
-    "prefix": ["new def init super init -class_function"],
+    "prefix": ["new_def_init_super_init"],
     "body": ["def __init__(self) -> None:", "    $0", "    super().__init__()", ""],
     "description": ["class 初始化(继承父类)"]
   },
   "class super().__init__() 继承父类": {
-    "prefix": ["super init -class"],
+    "prefix": ["super_init"],
     "body": ["super().__init__()", ""],
     "description": ["class 继承父类"]
   },
   "class类self": {
-    "prefix": ["slf -class"],
+    "prefix": ["slf"],
     "body": ["self$0"],
     "description": ["class类self"]
   },
   "创建class - def 函数": {
-    "prefix": ["new def self -class_function"],
+    "prefix": ["new_def_self"],
     "body": ["def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - def 函数"]
   },
   "创建class - async def 函数": {
-    "prefix": ["new async def self -class_function"],
+    "prefix": ["new_async_def_self"],
     "body": ["async def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - async def 函数"]
   },
   "创建def函数": {
-    "prefix": ["new def function"],
+    "prefix": ["new_def_function"],
     "body": ["def ${1:name}():", "    $0", "    return"],
     "description": ["创建def函数"]
   },
   "async def 创建异步IO协程函数": {
-    "prefix": ["new async def function"],
+    "prefix": ["new_async_def_function"],
     "body": [
       "async def ${1:name}():",
       "    # * ${2:_summary_}",
@@ -177,26 +177,26 @@
     ],
     "description": [
       "async def 创建异步IO协程函数",
-      "\n\t- await async_func[异步函数] 包装协程任务, 可以获取结果",
-      "\n\t- asyncio.to_thread(func) 将同步函数转换为异步函数运行",
-      "\n\t- asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
-      "\n\t- 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
-      "\n\t- asyncio.run(async_func) 运行事件循环的异步协程函数"
+      "  - await async_func[异步函数] 包装协程任务, 可以获取结果",
+      "  - asyncio.to_thread(func) 将同步函数转换为异步函数运行",
+      "  - asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
+      "  - 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
+      "  - asyncio.run(async_func) 运行事件循环的异步协程函数"
     ]
   },
 
   "lambda:匿名函数": {
-    "prefix": ["new lambda"],
+    "prefix": ["new_lambda"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },
   "if_main:运行入口 | 调试运行": {
-    "prefix": ["if main", "if main ==", "if name == main"],
+    "prefix": ["if_name==main"],
     "body": ["if __name__ == '__main__':", "    \"\"\" === * 运行入口 | 调试运行 * === \"\"\"", "    $0", "    ..."],
     "description": ["if_main:运行入口 | 调试运行"]
   },
   "if_in_main:运行入口 | 调试运行": {
-    "prefix": ["if main in", "if name in mp_main"],
+    "prefix": ["if_name_in_mp_main"],
     "body": [
       "if __name__ in {'__main__', '__mp_main__'}:",
       "    \"\"\" === * 运行入口 | 调试运行 | 多进程[multiprocessing]运行 * === \"\"\"",

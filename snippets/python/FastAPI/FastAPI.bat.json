@@ -1,6 +1,6 @@
 {
   "pip|uv FastAPI 网络API接口后端库": {
-    "prefix": ["pip fastapi", "uv fastapi"],
+    "prefix": ["pip_fastapi", "uv_fastapi"],
     "body": [
       "ECHO.",
       "ECHO * FastAPI 构建 API 接口后端 Web 框架 *",

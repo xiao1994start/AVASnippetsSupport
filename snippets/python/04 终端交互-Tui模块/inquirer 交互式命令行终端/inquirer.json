@@ -1,6 +1,6 @@
 {
   "引入 inquirer 交互式命令行终端": {
-    "prefix": ["import inquirer", "imp inquirer"],
+    "prefix": ["import_inquirer", "imp_inquirer"],
     "body": [
       "import inquirer  # * 交互式命令行终端",
       "from inquirer.themes import BlueComposure, GreenPassion, RedSolace  # * 交互式命令行终端主题",
@@ -9,7 +9,7 @@
     "description": ["交互式命令行终端"]
   },
   "inquirer.List 列表式选项控制台交互": {
-    "prefix": ["inquirer List -inquirer"],
+    "prefix": ["inquirer_List_-inquirer"],
     "body": [
       "\"\"\"",
       "*import inquirer",

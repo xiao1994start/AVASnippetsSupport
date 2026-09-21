@@ -1,11 +1,11 @@
 {
   "引入 requests HTTP 请求库": {
-    "prefix": ["import requests", "imp requests"],
+    "prefix": ["import_requests", "imp_requests"],
     "body": ["import requests  # * HTTP 请求库"],
     "description": ["引入 requests HTTP 请求库"]
   },
   "HTTP 状态码": {
-    "prefix": ["about HTTP Status Code -H"],
+    "prefix": ["about_HTTP_Status_Code_-Help"],
     "body": [
       "'''",
       "200 OK -客户端请求成功",
@@ -21,17 +21,17 @@
     "description": ["HTTP 状态码"]
   },
   "requests.get 发送请求": {
-    "prefix": ["requests get"],
+    "prefix": ["requests_get"],
     "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'})"],
     "description": ["requests.get 发送请求"]
   },
   "requests.get.text 发送请求并获取返回内容": {
-    "prefix": ["requests get text"],
+    "prefix": ["requests_get_text"],
     "body": ["requests.get(url=url, headers = {'User-Agent': 'Mozilla/5.0'}).text"],
     "description": ["requests.get.text 发送请求并获取返回内容"]
   },
   "常用 headers 请求头": {
-    "prefix": ["headers -requests"],
+    "prefix": ["headers_-requests"],
     "body": ["headers = {'User-Agent': 'Mozilla/5.0'}", ""],
     "description": ["常用 headers 请求头"]
   }

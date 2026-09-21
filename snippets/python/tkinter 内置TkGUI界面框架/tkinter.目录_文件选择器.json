@@ -1,6 +1,6 @@
 {
   "tkinter 目录选择器": {
-    "prefix": ["tk-select folder =tkinter"],
+    "prefix": ["tk_select_folder_=tkinter"],
     "body": [
       "def select_folder():",
       "    \"\"\"",
@@ -27,7 +27,7 @@
     "description": ["tkinter 目录选择器"]
   },
   "tkinter 文件选择器": {
-    "prefix": ["tk-select file=", "tkinter-select file="],
+    "prefix": ["tk_select_file_=tkinter"],
     "body": [
       "def select_file():",
       "    \"\"\"",

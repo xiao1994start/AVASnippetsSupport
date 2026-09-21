@@ -1,16 +1,16 @@
 {
   "导入 subprocess 执行系统命令模块": {
-    "prefix": ["import subprocess", "imp subprocess"],
+    "prefix": ["import_subprocess", "imp_subprocess"],
     "body": ["import subprocess  # * 执行系统命令模块"],
     "description": ["导入subprocess执行系统命令模块"]
   },
   "subprocess.run 运行命令": {
-    "prefix": ["subprocess run"],
+    "prefix": ["subprocess_run"],
     "body": ["subprocess.run('$0')"],
     "description": ["subprocess.run 运行命令", "用于可执行程序命令调用(如:git,python,ffmpeg.exe或其他可执行命令程序)"]
   },
   "subprocess.run shell运行命令": {
-    "prefix": ["subprocess run shell"],
+    "prefix": ["subprocess_run_shell"],
     "body": ["subprocess.run('$0', shell=True)"],
     "description": [
       "subprocess.run shell运行命令",
@@ -19,12 +19,12 @@
     ]
   },
   "subprocess.run 清空终端": {
-    "prefix": ["subprocess run cls", "subprocess run clear"],
+    "prefix": ["subprocess_run_cls", "subprocess_run_clear"],
     "body": ["subprocess.run('cls', shell=True) if os.name == 'nt' else subprocess.run('clear')", "$0"],
     "description": ["subprocess.run 清空终端"]
   },
   "subprocess.run 捕获输出": {
-    "prefix": ["subprocess run capture_output"],
+    "prefix": ["subprocess_run_capture_output"],
     "body": ["subprocess.run('$0', capture_output=True, text=True).stdout.strip()", ""],
     "description": [
       "subprocess.run 运行外部命令并等待其完成",
@@ -39,7 +39,7 @@
     ]
   },
   "subprocess.run shell 捕获输出": {
-    "prefix": ["subprocess run shell capture_output"],
+    "prefix": ["subprocess_run_shell_capture_output"],
     "body": ["subprocess.run('$0', shell=True, capture_output=True, text=True).stdout.strip()", ""],
     "description": [
       "subprocess.run 运行外部命令并等待其完成",
@@ -54,7 +54,7 @@
     ]
   },
   "subprocess.Popen 构造函数": {
-    "prefix": ["subprocess Popen ="],
+    "prefix": ["subprocess_Popen_="],
     "body": [
       "with subprocess.Popen(",
       "    args='${1:cmd command}'.split(' '),",
@@ -84,7 +84,7 @@
     ]
   },
   "subprocess.getoutput 接收字符串格式的命令": {
-    "prefix": ["subprocess getoutput"],
+    "prefix": ["subprocess_getoutput"],
     "body": ["subprocess.getoutput()"],
     "description": [
       "subprocess.getoutput 接收字符串格式的命令",

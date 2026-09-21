@@ -1,6 +1,6 @@
 {
   "!vue": {
-    "prefix": ["tmpl"],
+    "prefix": ["tmpl_vue"],
     "body": [
       "<template>",
       "  <!-- * 组件模板/视图结构 -->",
