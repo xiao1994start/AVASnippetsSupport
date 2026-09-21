@@ -24,9 +24,9 @@
     "body": ["const ${2:name} = require('${1:JS_path}');"],
     "description": ["引入模块 const ... = require('...') [CommonJS]"]
   },
-  "导入依赖": {
-    "prefix": ["imp -ESM"],
+  "import 导入依赖 [ESM]": {
+    "prefix": ["imp"],
     "body": ["import ${2:module_name} from '${1:module}';", ""],
-    "description": ["导入依赖"]
+    "description": ["import 导入依赖 [ESM]"]
   }
 }
