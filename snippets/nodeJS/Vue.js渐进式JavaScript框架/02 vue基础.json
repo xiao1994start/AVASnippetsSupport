@@ -1,0 +1,21 @@
+{
+  "!vue": {
+    "prefix": ["tmpl"],
+    "body": [
+      "<template>",
+      "  <!-- * 组件模板/视图结构 -->",
+      "  ${1:example}",
+      "</template>",
+      "",
+      "<script setup>",
+      "// * 组件逻辑/业务逻辑",
+      "</script>",
+      "",
+      "<style scoped>",
+      "/* * 组件的样式 */",
+      "</style>",
+      ""
+    ],
+    "description": ["!vue"]
+  }
+}

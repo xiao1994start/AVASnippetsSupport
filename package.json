@@ -332,6 +332,10 @@
         "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/01 初始化.bat.json"
       },
       {
+        "language": "vue",
+        "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/02 vue基础.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/python/00 bat命令行/uv 环境管理工具/uv初始python环境.bat.json"
       },
