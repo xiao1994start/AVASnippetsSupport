@@ -1,5 +1,5 @@
 {
-  "创建 Vue 项目": {
+  "创建 Vue 项目(建议使用 Vite)": {
     "prefix": ["init vue"],
     "body": [
       "@ECHO OFF",
@@ -95,7 +95,7 @@
       "endlocal",
       ""
     ],
-    "description": ["创建 Vue 项目"]
+    "description": ["创建 Vue 项目(建议使用 Vite)"]
   },
   "Vite 创建 Vue 项目": {
     "prefix": ["init vite"],
