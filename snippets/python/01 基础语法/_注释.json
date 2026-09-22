@@ -1,6 +1,6 @@
 {
   "Python 注释_描述": {
-    "prefix": ["xxx"],
+    "prefix": ["aaa_tmpl_python"],
     "body": [
       "#!/usr/bin/python",
       "# -*- coding: utf-8 -*-",
