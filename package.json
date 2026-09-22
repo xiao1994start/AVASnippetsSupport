@@ -345,7 +345,7 @@
       },
       {
         "language": "python",
-        "path": "./snippets/python/01 基础语法/_注释.json"
+        "path": "./snippets/python/01 基础语法/变量_模板.json"
       },
       {
         "language": "python",
@@ -909,10 +909,6 @@
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/Boolean布尔值.json"
-      },
-      {
-        "language": "renpy",
         "path": "./snippets/renpy/基础语法.json"
       },
       {
@@ -921,11 +917,11 @@
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/attr对象属性.json"
+        "path": "./snippets/renpy/模板语句.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/模板语句.json"
+        "path": "./snippets/renpy/attr对象属性.json"
       },
       {
         "language": "renpy",

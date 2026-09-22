@@ -23,5 +23,15 @@
     "prefix": ["dirpath"],
     "body": ["__dirname"],
     "description": ["获取当前脚本文件的目录路径"]
+  },
+  "true": {
+    "prefix": ["tttrue"],
+    "body": "true",
+    "description": ["true"]
+  },
+  "false": {
+    "prefix": ["fffalse"],
+    "body": "false",
+    "description": ["false"]
   }
 }

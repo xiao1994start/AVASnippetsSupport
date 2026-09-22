@@ -1,4 +1,14 @@
 {
+  "True": {
+    "prefix": ["ttTrue"],
+    "body": "True",
+    "description": "True."
+  },
+  "False": {
+    "prefix": ["ffFalse"],
+    "body": "False",
+    "description": "False."
+  },
   "define 常量 定义语句": {
     "prefix": ["new_define_", "new_const"],
     "body": "define ${1:const} = ${2:value}",
