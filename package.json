@@ -241,11 +241,7 @@
       },
       {
         "language": "json",
-        "path": "./snippets/json/json_snippets_for_all.json"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json/json_snippets_for_python.json"
+        "path": "./snippets/json/for_snippets.json"
       },
       {
         "language": "bat",

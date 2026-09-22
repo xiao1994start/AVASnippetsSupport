@@ -1,5 +1,5 @@
 {
-  "!vue": {
+  "Vue快速创建模板": {
     "prefix": ["aaa_tmpl_vue"],
     "body": [
       "<template>",
@@ -16,6 +16,11 @@
       "</style>",
       ""
     ],
-    "description": ["!vue"]
+    "description": ["Vue快速创建模板"]
+  },
+  "引入 Vue ref 响应式": {
+    "prefix": ["imp_ref_-Vue"],
+    "body": ["import { ref } from 'vue';", "$0"],
+    "description": ["引入 Vue ref 响应式"]
   }
 }
