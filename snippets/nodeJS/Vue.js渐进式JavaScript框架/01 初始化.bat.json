@@ -138,7 +138,7 @@
       "    ECHO * 项目创建建议：",
       "    ECHO *   - Ok to proceed? （y） :               Yes",
       "    ECHO *   - Select a framework:                  Vue",
-      "    ECHO *   - Select a variant:                    JavaScript",
+      "    ECHO *   - Select a variant:                    JavaScript (TypeScript 实现静态检查)",
       "    ECHO *   - Install with npm and start now?      Yes（嵌入式环境选择 No）",
       "    call npm create vite@latest !project_name!",
       "    @REM * 进入项目目录安装必备依赖",
