@@ -1,23 +1,4 @@
 {
-  "Vue快速创建模板": {
-    "prefix": ["aaa_tmpl_vue"],
-    "body": [
-      "<template>",
-      "  <!-- * 组件模板/视图结构 -->",
-      "  ",
-      "</template>",
-      "",
-      "<script setup ${1:lang='ts'}>",
-      "// * 组件逻辑/业务逻辑",
-      "</script>",
-      "",
-      "<style scoped>",
-      "/* * 组件的样式 */",
-      "</style>",
-      ""
-    ],
-    "description": ["Vue快速创建模板"]
-  },
   "引入 Vue ref,reactive 响应式 数据/对象": {
     "prefix": ["imp_ref_reactive_-Vue"],
     "body": [

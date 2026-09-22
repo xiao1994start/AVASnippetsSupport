@@ -29,8 +29,8 @@ for /R "%~dp0snippets" %%i in ("*.json") do (
 
 ECHO ====================== 统计 ======================
 
-ECHO.全局json文件数量: !total_json!
-ECHO.nodeJS/TS json文件数量: !js_json!
+ECHO.全局 json 文件数量: !total_json!
+ECHO.nodeJS/TS json 文件数量: !js_json!
 
 
 @REM  每个 json 文件占用的行数倍数

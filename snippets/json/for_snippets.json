@@ -3,7 +3,7 @@
     "prefix": ["language"],
     "body": [
       "{",
-      "  \"language\": \"${1|python,bat,renpy,vue,scss,typescript,html,vue-html,javascript,json,snippets|}\",",
+      "  \"language\": \"${1|bat,python,renpy,typescript,javascript,vue,json,snippets|}\",",
       "  \"path\": \"./$0\"",
       "},"
     ],

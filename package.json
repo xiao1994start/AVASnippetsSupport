@@ -369,7 +369,15 @@
       },
       {
         "language": "vue",
-        "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/02 vue基础.json"
+        "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/02 vue.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/03 vue.JS.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/Vue.js渐进式JavaScript框架/03 vue.JS.json"
       },
       {
         "language": "bat",
