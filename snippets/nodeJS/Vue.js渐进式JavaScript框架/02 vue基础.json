@@ -20,7 +20,7 @@
   },
   "引入 Vue ref 响应式": {
     "prefix": ["imp_ref_-Vue"],
-    "body": ["import { ref } from 'vue';", "$0"],
+    "body": ["import { ref } from 'vue'; // * 引入 ref 函数 创建响应式数据 [var = ref(初始值); var.value = 新值]", "$0"],
     "description": ["引入 Vue ref 响应式"]
   }
 }
