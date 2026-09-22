@@ -112,6 +112,10 @@
         "path": "./snippets/全局-编码_格式.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/全局-编码_格式.json"
+      },
+      {
         "language": "python",
         "path": "./snippets/全局-编码_格式.json"
       },
@@ -256,7 +260,15 @@
         "path": "./snippets/nodeJS/02 JS基础/01 变量.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/02 JS基础/01 变量.json"
+      },
+      {
         "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/02 输出.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/nodeJS/02 JS基础/02 输出.json"
       },
       {
@@ -264,7 +276,15 @@
         "path": "./snippets/nodeJS/02 JS基础/03 函数方法.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/02 JS基础/03 函数方法.json"
+      },
+      {
         "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/04 if_条件判断.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/nodeJS/02 JS基础/04 if_条件判断.json"
       },
       {
@@ -272,7 +292,15 @@
         "path": "./snippets/nodeJS/02 JS基础/05 for_while_循环.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/02 JS基础/05 for_while_循环.json"
+      },
+      {
         "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/06 数组方法.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/nodeJS/02 JS基础/06 数组方法.json"
       },
       {
@@ -280,11 +308,23 @@
         "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
+      },
+      {
         "language": "javascript",
         "path": "./snippets/nodeJS/03 内置模块/http服务模块.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/03 内置模块/http服务模块.json"
+      },
+      {
         "language": "javascript",
+        "path": "./snippets/nodeJS/03 内置模块/path路径模块.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/nodeJS/03 内置模块/path路径模块.json"
       },
       {
@@ -296,6 +336,10 @@
         "path": "./snippets/nodeJS/body-parser 解析请求体/02 snippets.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/body-parser 解析请求体/02 snippets.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/nodeJS/Express Web应用框架/01 npm.bat.json"
       },
@@ -304,11 +348,19 @@
         "path": "./snippets/nodeJS/Express Web应用框架/02 snippets.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/Express Web应用框架/02 snippets.json"
+      },
+      {
         "language": "bat",
         "path": "./snippets/nodeJS/formidable 表单数据解析/01 npm.bat.json"
       },
       {
         "language": "javascript",
+        "path": "./snippets/nodeJS/formidable 表单数据解析/02 snippets.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/nodeJS/formidable 表单数据解析/02 snippets.json"
       },
       {

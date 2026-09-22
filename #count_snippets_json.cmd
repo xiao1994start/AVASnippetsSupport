@@ -40,7 +40,7 @@ set /a "base_mult=4"
 @REM  需要重复计数的 json 文件数量
 @REM  = 全局类JSON * total_mult + nodeJS/TS类JSON * ts_mult
 set /a "total_mult=4"
-set /a "ts_mult=1"
+set /a "ts_mult=2"
 set /a "dup=total_json*total_mult+js_json*ts_mult"
 
 
