@@ -105,35 +105,19 @@
     "snippets": [
       {
         "language": "bat",
-        "path": "./snippets/全局-注释标志.json"
+        "path": "./snippets/全局-编码_格式.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/全局-注释标志.json"
+        "path": "./snippets/全局-编码_格式.json"
       },
       {
         "language": "python",
-        "path": "./snippets/全局-注释标志.json"
+        "path": "./snippets/全局-编码_格式.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/全局-注释标志.json"
-      },
-      {
-        "language": "bat",
-        "path": "./snippets/全局-编码格式.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/全局-编码格式.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/全局-编码格式.json"
-      },
-      {
-        "language": "renpy",
-        "path": "./snippets/全局-编码格式.json"
+        "path": "./snippets/全局-编码_格式.json"
       },
       {
         "language": "bat",
@@ -233,11 +217,11 @@
       },
       {
         "language": "bat",
-        "path": "./snippets/github/git.初始化.json"
+        "path": "./snippets/github/01 初始化.json"
       },
       {
         "language": "bat",
-        "path": "./snippets/github/git.基础命令.json"
+        "path": "./snippets/github/02 基础命令.json"
       },
       {
         "language": "json",
@@ -350,10 +334,6 @@
       {
         "language": "python",
         "path": "./snippets/python/01 基础语法/attr动态属性操作.json"
-      },
-      {
-        "language": "python",
-        "path": "./snippets/python/01 基础语法/Boolean布尔值.json"
       },
       {
         "language": "python",
@@ -905,27 +885,27 @@
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/变量.json"
+        "path": "./snippets/renpy/01 变量.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/基础语法.json"
+        "path": "./snippets/renpy/02 基础语法.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/样式标签.json"
+        "path": "./snippets/renpy/03 样式标签.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/模板语句.json"
+        "path": "./snippets/renpy/04 attr对象属性.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/attr对象属性.json"
+        "path": "./snippets/renpy/05 python语法.json"
       },
       {
         "language": "renpy",
-        "path": "./snippets/renpy/python语法.json"
+        "path": "./snippets/renpy/06 模板语句.json"
       }
     ]
   }

@@ -1,4 +1,9 @@
 {
+  "注释 分隔符": {
+    "prefix": ["comment_sep", "comment_delim", "comment_divider"],
+    "body": ["====================== ${1:comment} ======================"],
+    "description": ["注释 分隔符"]
+  },
   "编码: UTF-8": {
     "prefix": ["utf8"],
     "body": ["${1|utf-8,chcp 65001|}"],

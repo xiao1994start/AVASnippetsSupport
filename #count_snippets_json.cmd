@@ -66,8 +66,8 @@ set /a "total_lines+=1"
 ECHO.统计到的 json 文件数量: !count!
 ECHO.统计到的 json 文件数量: !start_line! 到 !end_line!
 ECHO.
-ECHO.统计数: !end_line!
-ECHO.总行数: !total_lines!
+ECHO.计算行数: !end_line!
+ECHO.实际行数: !total_lines!
 
 
 

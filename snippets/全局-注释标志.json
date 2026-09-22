@@ -1,7 +1,0 @@
-{
-  "注释 分隔符": {
-    "prefix": ["comment_sep", "comment_delim", "comment_divider"],
-    "body": ["====================== ${1:comment} ======================"],
-    "description": ["注释 分隔符"]
-  }
-}
