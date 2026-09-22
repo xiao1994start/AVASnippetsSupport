@@ -25,12 +25,12 @@
     "description": ["获取当前脚本文件的目录路径"]
   },
   "true": {
-    "prefix": ["tttrue"],
+    "prefix": ["tt_true"],
     "body": "true",
     "description": ["true"]
   },
   "false": {
-    "prefix": ["fffalse"],
+    "prefix": ["ff_false"],
     "body": "false",
     "description": ["false"]
   }
