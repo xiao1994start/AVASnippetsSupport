@@ -1,11 +1,11 @@
 {
   "True": {
-    "prefix": ["TTT_-True"],
+    "prefix": ["ttTrue"],
     "body": "True",
     "description": "True."
   },
   "False": {
-    "prefix": ["FFF_-False"],
+    "prefix": ["ffFalse"],
     "body": "False",
     "description": "False."
   }
