@@ -18,14 +18,14 @@
     ],
     "description": ["Vue快速创建模板"]
   },
-  "引入 Vue ref 响应式": {
-    "prefix": [",imp_ref_reactive_-Vue"],
+  "引入 Vue ref,reactive 响应式 数据/对象": {
+    "prefix": ["imp_ref_reactive_-Vue"],
     "body": [
       "import { ref, reactive } from 'vue'; // * 引入 ref 函数 创建响应式数据",
       "// ref 原始类型数据 : [var = ref(初始值); var.value = 新值]",
       "// reactive 对象类型数据 : [obj = reactive(obj{初始值}); obj.属性名 = 新值]",
       "$0"
     ],
-    "description": ["引入 Vue ref 响应式"]
+    "description": ["引入 Vue ref 响应式 数据/对象"]
   }
 }
