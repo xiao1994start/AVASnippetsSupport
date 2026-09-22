@@ -265,11 +265,15 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/04 for_while_循环.json"
+        "path": "./snippets/nodeJS/02 JS基础/04 if_条件判断.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/05 filter过滤.json"
+        "path": "./snippets/nodeJS/02 JS基础/05 for_while_循环.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/06 for_while_循环.json"
       },
       {
         "language": "javascript",

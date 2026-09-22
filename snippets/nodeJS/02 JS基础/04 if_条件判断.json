@@ -1,0 +1,7 @@
+{
+  "else if": {
+    "prefix": ["elif"],
+    "body": ["else if (${1:}) {${2:}}"],
+    "description": ["else if"]
+  }
+}
