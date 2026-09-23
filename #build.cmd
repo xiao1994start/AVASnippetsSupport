@@ -18,7 +18,7 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 
 ECHO 环境测试
 ECHO 升级 npm
-call npm i -g npm --registry https://registry.npmmirror.com/
+call npm i npm -g --registry https://registry.npmmirror.com/
 ECHO Node.js 版本号:
 call node -v
 ECHO npm 版本号:

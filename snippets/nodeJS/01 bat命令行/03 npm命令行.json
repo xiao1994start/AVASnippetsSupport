@@ -75,6 +75,11 @@
     "body": ["npm i ${1:express} --registry https://registry.npmmirror.com/", ""],
     "description": ["npm 安装模块"]
   },
+  "npm 安装模块 D(开发环境)": {
+    "prefix": ["npm_install_D"],
+    "body": ["npm i -D ${1:express} --registry https://registry.npmmirror.com/", ""],
+    "description": ["npm 安装模块 D(开发环境)"]
+  },
   "npm 全局安装模块": {
     "prefix": ["npm_install_g"],
     "body": ["npm i ${1:express} -g --registry https://registry.npmmirror.com/", ""],
