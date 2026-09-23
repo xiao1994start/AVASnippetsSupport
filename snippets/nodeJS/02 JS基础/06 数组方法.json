@@ -1,7 +1,32 @@
 {
-  "数组过滤空值": {
-    "prefix": ["filter_item_empty"],
+  "数组 从指定位置删除或添加元素": {
+    "prefix": ["splice_-arr"],
+    "body": ["splice(${1:start}, ${2:deleteCount}${3:, items})"],
+    "description": ["数组 从指定位置删除或添加元素"]
+  },
+  "数组 在末尾添加元素": {
+    "prefix": ["push_-arr"],
+    "body": ["push(${1:items})"],
+    "description": ["数组 在末尾添加元素"]
+  },
+  "数组 删除最后一个元素": {
+    "prefix": ["pop_-arr"],
+    "body": ["pop()"],
+    "description": ["数组 删除最后一个元素"]
+  },
+  "数组 删除第一个元素": {
+    "prefix": ["shift_-arr"],
+    "body": ["shift()"],
+    "description": ["数组 删除第一个元素"]
+  },
+  "数组 在开头添加元素": {
+    "prefix": ["unshift_-arr"],
+    "body": ["unshift(${1:items})"],
+    "description": ["数组 在开头添加元素"]
+  },
+  "数组 过滤空值": {
+    "prefix": ["filter_item_empty-arr"],
     "body": ["filter((item) => item !== '')"],
-    "description": ["数组过滤空值"]
+    "description": ["数组 过滤空值"]
   }
 }
