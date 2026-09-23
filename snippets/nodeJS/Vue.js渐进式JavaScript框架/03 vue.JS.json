@@ -5,6 +5,8 @@
       "import { ref, reactive } from 'vue'; // * 引入 ref 函数 创建响应式数据",
       "// ref 原始类型数据 : [var = ref(初始值); var.value = 新值]",
       "// reactive 对象类型数据 : [obj = reactive(obj{初始值}); obj.属性名 = 新值]",
+      "// toRefs 将reactive响应式对象转换为ref属性响应式数据 : [var {解构变量} = toRefs(reactive对象)]",
+      "// toRef 将reactive响应式对象中的一个属性转换为ref属性响应式数据 : [var 变量 = toRef(reactive对象, 属性名)]",
       "$0"
     ],
     "description": ["引入 Vue ref 响应式 数据/对象"]

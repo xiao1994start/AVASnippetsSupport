@@ -1,22 +1,22 @@
 {
   "创建 function 函数": {
     "prefix": ["new_def_function"],
-    "body": ["function ${1:name}(${2:params}) {$0}", ""],
+    "body": ["function ${1:name}(${2:params}) {$0}"],
     "description": ["创建 function 函数"]
   },
   "创建 匿名函数": {
     "prefix": ["new_lambda"],
-    "body": ["(${1:params}) => {$0}", ""],
+    "body": ["(${1:params}) => {$0}"],
     "description": ["创建 匿名函数"]
   },
   "导出 模块 [CommonJS]": {
     "prefix": ["module_exports"],
-    "body": ["module.exports = {$0}", ""],
+    "body": ["module.exports = {$0}"],
     "description": ["导出 模块 [CommonJS]"]
   },
   "导出 模块 [ESM]": {
     "prefix": ["export_default"],
-    "body": ["export default {$0}", ""],
+    "body": ["export default {$0}"],
     "description": ["导出 模块 [ESM]"]
   },
   "引入模块 const ... = require('...') [CommonJS]": {
@@ -26,7 +26,7 @@
   },
   "import 导入依赖 [ESM]": {
     "prefix": ["imp"],
-    "body": ["import ${2:module_name} from '${1:module}';", ""],
+    "body": ["import ${2:module_name} from '${1:module}';"],
     "description": ["import 导入依赖 [ESM]"]
   }
 }
