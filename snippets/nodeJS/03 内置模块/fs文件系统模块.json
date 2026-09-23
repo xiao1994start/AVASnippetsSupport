@@ -1,8 +1,13 @@
 {
-  "引入文件系统模块": {
+  "引入文件系统模块 [CommonJS]": {
     "prefix": ["req_fs"],
-    "body": ["const fs = require('fs')$0; // * 引入 fs 文件系统模块", ""],
-    "description": ["引入文件系统模块"]
+    "body": ["const fs = require('fs'); // * 引入 fs 文件系统模块", "$0"],
+    "description": ["引入文件系统模块 [CommonJS]"]
+  },
+  "引入文件系统模块 [ESM]": {
+    "prefix": ["imp_fs"],
+    "body": ["import fs from 'fs'; // * 引入 fs 文件系统模块", "$0"],
+    "description": ["引入文件系统模块 [ESM]"]
   },
   "获取绝对路径": {
     "prefix": ["path_resolve"],
