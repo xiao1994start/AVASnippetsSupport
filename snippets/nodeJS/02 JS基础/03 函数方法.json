@@ -11,7 +11,7 @@
   },
   "声明 箭头函数": {
     "prefix": ["new_const_lambda"],
-    "body": ["const $1:name} = (${2:}) => {$0}"],
+    "body": ["const ${1:name} = (${2:}) => {$0}"],
     "description": ["声明 箭头函数"]
   },
   "导出 模块 [CommonJS]": {
