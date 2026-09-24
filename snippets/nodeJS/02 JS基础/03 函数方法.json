@@ -10,8 +10,8 @@
     "description": ["创建 箭头函数"]
   },
   "声明 箭头函数": {
-    "prefix": ["new_const_lambda"],
-    "body": ["const ${1:name} = (${2:}) => {$0}"],
+    "prefix": ["new_arrow_lambda"],
+    "body": ["const ${1:name} = (${2:params}) => {$0}"],
     "description": ["声明 箭头函数"]
   },
   "导出 模块 [CommonJS]": {
