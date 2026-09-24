@@ -12,5 +12,16 @@
       "$0"
     ],
     "description": ["引入 Vue ref 响应式 数据/对象"]
+  },
+  "引入 Vue computed 关联计算属性": {
+    "prefix": ["imp_computed_-Vue"],
+    "body": [
+      "import { computed } from 'vue'; // * 引入 ref 函数 创建响应式数据",
+      "/**",
+      " * ? computed 计算属性-当关联的任意值发生变化时，会自动调用计算属性函数，返回新的值 : [var 变量 = computed(() => {计算逻辑; return 新值;})]",
+      " */",
+      "$0"
+    ],
+    "description": ["引入 Vue computed 关联计算属性"]
   }
 }
