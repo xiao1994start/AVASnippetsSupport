@@ -1,7 +1,7 @@
 {
   "引入 formidable 模块": {
     "prefix": ["req_formidable"],
-    "body": ["const formidable = require('formidable'); // * 引入 formidable 表单数据解析模块", ""],
+    "body": ["const formidable = require('formidable') // * 引入 formidable 表单数据解析模块", ""],
     "description": ["引入 formidable 模块"]
   },
   "实例化 formidable.IncomingForm 表单解析器": {
@@ -15,17 +15,17 @@
       "  maxFileSize: Infinity, // 限制每次上传文件的大小 (默认 200 * 1024 * 1024 => 200MB)",
       "  maxFields: Infinity, // 限制字段的数量 (默认 1000)",
       "  maxFieldsSize: 20 * 1024 * 1024, // 限制所有字段总共可以分配的内存大小 (默认 20MB)",
-      "});",
+      "})",
       "form.parse(req, (err, fields, files) => {",
       "  if (err) {",
-      "    return res.status(500).send(err.message);",
+      "    return res.status(500).send(err.message)",
       "  }",
-      "  console.log('fields:', fields);",
-      "  console.log(' files:', files);",
-      "  let new_file_name = files.file[0].newFilename;",
-      "  console.log(new_file_name);",
-      "  res.send(new_file_name);",
-      "});",
+      "  console.log('fields:', fields)",
+      "  console.log(' files:', files)",
+      "  let new_file_name = files.file[0].newFilename",
+      "  console.log(new_file_name)",
+      "  res.send(new_file_name)",
+      "})",
       ""
     ],
     "description": ["实例化 formidable.IncomingForm 表单解析器"]

@@ -1,12 +1,12 @@
 {
   "引入 http 服务模块 [CommonJS]": {
     "prefix": ["req_http"],
-    "body": ["const http = require('http'); // * 引入 http 服务模块", "$0"],
+    "body": ["const http = require('http') // * 引入 http 服务模块", "$0"],
     "description": ["引入 http 服务模块 [CommonJS]"]
   },
   "引入 http 服务模块 [ESM]": {
     "prefix": ["imp_http"],
-    "body": ["import http from 'http'; // * 引入 http 服务模块", "$0"],
+    "body": ["import http from 'http' // * 引入 http 服务模块", "$0"],
     "description": ["引入 http 服务模块 [ESM]"]
   }
 }

@@ -2,12 +2,12 @@
   "引入 body-parser 模块": {
     "prefix": ["req_body-parser"],
     "body": [
-      "const bodyParser = require('body-parser'); // * 引入 body-parser 解析请求体模块",
+      "const bodyParser = require('body-parser') // * 引入 body-parser 解析请求体模块",
       "",
       "// - [中间件] 解析 JSON 请求体",
-      "const jsonParser = bodyParser.json();",
+      "const jsonParser = bodyParser.json()",
       "// - [中间件] 解析表单上传编码格式 URL 请求体",
-      "const urlencodedParser  = bodyParser.urlencoded({ extended: false });",
+      "const urlencodedParser  = bodyParser.urlencoded({ extended: false })",
       ""
     ],
     "description": ["引入 body-parser 模块"]

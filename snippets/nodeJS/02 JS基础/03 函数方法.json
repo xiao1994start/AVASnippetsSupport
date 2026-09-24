@@ -26,12 +26,12 @@
   },
   "引入模块 const ... = require('...') [CommonJS]": {
     "prefix": ["new_require"],
-    "body": ["const ${2:name} = require('${1:JS_path}');"],
+    "body": ["const ${2:name} = require('${1:JS_path}')"],
     "description": ["引入模块 const ... = require('...') [CommonJS]"]
   },
   "import 导入依赖 [ESM]": {
     "prefix": ["imp"],
-    "body": ["import ${2:module_name} from '${1:module}';"],
+    "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   }
 }
