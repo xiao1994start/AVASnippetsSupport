@@ -19,6 +19,8 @@
       "import { computed } from 'vue'; // * 引入 computed 计算属性 函数方法",
       "/**",
       " * ? computed 计算属性-当关联的任意值发生变化时，会自动调用计算属性函数，返回新的值 : [var 变量 = computed(() => {计算逻辑; return 新值;})]",
+      " * - 计算属性 默认：只读",
+      " * - 配置：可读可写=>[var 变量 = computed({get(){...; return 新值}, set(val){...; 计算属性的值 = val}})]",
       " */",
       "$0"
     ],
