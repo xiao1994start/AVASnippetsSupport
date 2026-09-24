@@ -4,10 +4,10 @@
     "body": [
       "import { ref, reactive, toRefs, toRef } from 'vue'; // * 引入 响应式 函数方法",
       "/**",
-      " * ? ref 原始类型数据 : [var = ref(初始值); var.value = 新值]",
-      " * ? reactive 对象类型数据 : [obj = reactive(obj{初始值}); obj.属性名 = 新值]",
-      " * ? toRefs 将reactive响应式对象转换为ref属性响应式数据 : [var {解构变量} = toRefs(reactive对象)]",
-      " * ? toRef 将reactive响应式对象中的一个属性转换为ref属性响应式数据 : [var 变量 = toRef(reactive对象, 属性名)]",
+      " * ? ref 原始类型数据=> var = ref(初始值); var.value = 新值",
+      " * ? reactive 对象类型数据=> obj = reactive(obj{初始值}); obj.属性名 = 新值",
+      " * ? toRefs 将reactive响应式对象转换为ref属性响应式数据=> var {解构变量} = toRefs(reactive对象)",
+      " * ? toRef 将reactive响应式对象中的一个属性转换为ref属性响应式数据=> var 变量 = toRef(reactive对象, 属性名)",
       " */",
       "$0"
     ],
@@ -18,12 +18,28 @@
     "body": [
       "import { computed } from 'vue'; // * 引入 computed 计算属性 函数方法",
       "/**",
-      " * ? computed 计算属性-当关联的任意值发生变化时，会自动调用计算属性函数，返回新的值 : [var 变量 = computed(() => {计算逻辑; return 新值;})]",
+      " * ? computed 计算属性-当关联的任意值发生变化时，会自动调用计算属性函数，返回新的值=> var 变量 = computed(() => {计算逻辑; return 新值;})",
       " * - 计算属性 默认：只读，可以通过声明 get 方法和 set 方法实现可读可写",
-      " * - 配置：可读可写=>[var 变量 = computed({get(){...; return 新值}, set(val){...; 计算属性的值 = val}})]",
+      " * - 配置：可读可写=> var 变量 = computed({get(){...; return 新值}, set(val){...; 计算属性的值 = val}})",
       " */",
       "$0"
     ],
     "description": ["引入 Vue computed 关联计算属性 函数方法"]
+  },
+  "引入 Vue watch 监听响应式数据 函数方法": {
+    "prefix": ["imp_watch_-Vue"],
+    "body": [
+      "import { watch } from 'vue' // * 引入 watch 函数 监听响应式数据变化",
+      "/**",
+      " * ? watch 函数 监听响应式数据变化=> watch(响应式数据, 回调函数(newValue, oldValue, onCleanupCallback清除的回调函数), {配置项})",
+      " *   常用 newValue 监视响应式数据变化",
+      " *   不常用 oldValue, onCleanupCallback清除的回调函数（组件卸载时挂载，基本不用）",
+      " *   {配置项}",
+      " *     immediate: true 初始化（组件挂载）时立即执行一次监视",
+      " *     deep: true 深度监听对象属性变化（性能损耗）",
+      " */",
+      "$0"
+    ],
+    "description": ["引入 Vue watch 监听响应式数据 函数方法"]
   }
 }
