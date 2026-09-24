@@ -1,8 +1,8 @@
 {
-  "引入 Vue ref,reactive 响应式 数据/对象": {
-    "prefix": ["imp_ref_reactive_-Vue"],
+  "引入 Vue ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法": {
+    "prefix": ["imp_ref_reactive_toRefs_toRef-Vue"],
     "body": [
-      "import { ref, reactive, toRefs, toRef } from 'vue'; // * 引入 ref 函数 创建响应式数据",
+      "import { ref, reactive, toRefs, toRef } from 'vue'; // * 引入 响应式 函数方法",
       "/**",
       " * ? ref 原始类型数据 : [var = ref(初始值); var.value = 新值]",
       " * ? reactive 对象类型数据 : [obj = reactive(obj{初始值}); obj.属性名 = 新值]",
@@ -11,7 +11,7 @@
       " */",
       "$0"
     ],
-    "description": ["引入 Vue ref 响应式 数据/对象"]
+    "description": ["引入 Vue ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法"]
   },
   "引入 Vue computed 关联计算属性": {
     "prefix": ["imp_computed_-Vue"],
