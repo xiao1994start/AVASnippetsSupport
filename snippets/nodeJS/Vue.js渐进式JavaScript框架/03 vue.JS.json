@@ -36,7 +36,7 @@
       " *   不常用 oldValue, onCleanupCallback清除的回调函数（组件卸载时挂载，基本不用）",
       " *   {配置项}",
       " *     immediate: true 初始化（组件挂载）时立即执行一次监视",
-      " *     deep: true 深度监听对象属性变化（性能损耗）",
+      " *     deep: true 深度监听对象属性变化（性能损耗，ref数据默认false，reactive对象默认true）",
       " */",
       "$0"
     ],
