@@ -305,6 +305,14 @@
       },
       {
         "language": "javascript",
+        "path": "./snippets/nodeJS/03 内置模块/child_process子进程模块.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/03 内置模块/child_process子进程模块.json"
+      },
+      {
+        "language": "javascript",
         "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
       },
       {
@@ -326,6 +334,14 @@
       {
         "language": "typescript",
         "path": "./snippets/nodeJS/03 内置模块/path路径模块.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/03 内置模块/process进程事件.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/03 内置模块/process进程事件.json"
       },
       {
         "language": "bat",

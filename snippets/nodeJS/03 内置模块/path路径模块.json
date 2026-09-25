@@ -19,5 +19,35 @@
     "prefix": ["path_file_dir_-path"],
     "body": ["path.join(__dirname, '$0')"],
     "description": ["获取当前脚本所在目录的Path对象"]
+  },
+  "获取绝对路径": {
+    "prefix": ["path_resolve"],
+    "body": ["path.resolve(${1:获取绝对路径})"],
+    "description": ["获取绝对路径"]
+  },
+  "路径分隔符": {
+    "prefix": ["path_sep"],
+    "body": ["path.sep"],
+    "description": ["路径分隔符"]
+  },
+  "路径解析": {
+    "prefix": ["path_parse"],
+    "body": ["path.parse(${1:路径解析})"],
+    "description": ["路径解析"]
+  },
+  "获取文件名": {
+    "prefix": ["path_basename"],
+    "body": ["path.basename(${1:获取文件名})"],
+    "description": ["获取文件名"]
+  },
+  "获取目录名": {
+    "prefix": ["path_dirname"],
+    "body": ["path.dirname(${1:获取目录名})"],
+    "description": ["获取目录名"]
+  },
+  "获取扩展名": {
+    "prefix": ["path_extname"],
+    "body": ["path.extname(${1:获取扩展名})"],
+    "description": ["获取扩展名"]
   }
 }

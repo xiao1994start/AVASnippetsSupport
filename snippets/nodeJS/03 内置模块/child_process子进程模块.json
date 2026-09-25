@@ -1,0 +1,37 @@
+{
+  "引入 child_process 子进程模块 [CommonJS]": {
+    "prefix": ["req_child_process"],
+    "body": ["const child_process = require('child_process') // * 引入 child_process 子进程模块", "$0"],
+    "description": ["引入 child_process 子进程模块 [CommonJS]"]
+  },
+  "引入 child_process 子进程模块 [ESM]": {
+    "prefix": ["imp_child_process"],
+    "body": [
+      "import { exec, execFile, fork, spawn } from 'node:child_process' // * 引入 child_process 子进程模块",
+      "/** child_process 子进程模块 => 提供了在 Node.js 中创建子进程的方法，用于执行外部命令或脚本",
+      " * = 注意：当进程执行失败时，检查是否需要手动配置 env 环境变量",
+      " * - exec(command[, options][, callback]) 方法 => 执行简单命令，并返回标准输出和标准错误输出",
+      " * ? command 参数 => 命令行（如: 'node --version'）",
+      " * - execFile(file[, args][, options][, callback]) 方法 => 执行可执行文件，并返回标准输出和标准错误输出",
+      " * ? file 参数 => 可执行文件的名称或路径（如: 'node'），配置 { shell: true } 可以直接执行 shell 命令（如: 'node --version'）",
+      " * ? args 参数 => 可执行文件的参数数组（如: ['--version']）",
+      " * - fork(modulePath[, args][, options]) 方法 => 创建一个子进程，用于执行 Node.js 模块",
+      " * ? modulePath 参数 => 在子进程中运行的模块",
+      " * - spawn(command[, args][, options]) 方法 => 流式处理子进程：创建一个子进程，用于执行外部命令或脚本",
+      " * ? command 参数 => 命令行（如: 'node'），配置 { shell: true } 可以直接执行 shell 命令（如: 'node --version'）",
+      " * ? args 参数 => 可执行文件的参数数组（如: ['--version']）",
+      " *     声明 spawn 子进程对象   => const cp = spawn(command[, args][, options])",
+      " *     监听 子进程 输出 / 异常 => cp.stdout.on('data', (data) => {...}) / cp.stderr.on('data', (data) => {...})",
+      " *     监听 子进程 错误事件    => cp.on('error', (err) => {...})",
+      " *     监听 子进程 关闭事件    => cp.on('close', (code) => {...})",
+      " * ! options 参数 => 配置子进程的行为，如：环境变量、工作目录、超时时间等",
+      " *     shell: true => 在 shell 中执行命令  [DEP0190]警告：在保证安全无风险的情况下可以忽略",
+      " *     env: { PATH: process.env.PATH } => 配置子进程的 PATH 环境变量，确保可以找到可执行文件",
+      " * *   process.env.PATH = '...' 可以替代 env: { PATH: '...' } 配置子进程的 PATH 环境变量",
+      " */",
+      "",
+      "$0"
+    ],
+    "description": ["引入 child_process 子进程模块 [ESM]"]
+  }
+}

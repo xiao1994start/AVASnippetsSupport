@@ -1,4 +1,14 @@
 {
+  "true": {
+    "prefix": ["tt_true"],
+    "body": "true",
+    "description": ["true"]
+  },
+  "false": {
+    "prefix": ["ff_false"],
+    "body": "false",
+    "description": ["false"]
+  },
   "var 变量-函数作用域": {
     "prefix": ["new_var"],
     "body": ["var $0"],
@@ -24,14 +34,9 @@
     "body": ["__dirname"],
     "description": ["获取当前脚本文件的目录路径"]
   },
-  "true": {
-    "prefix": ["tt_true"],
-    "body": "true",
-    "description": ["true"]
-  },
-  "false": {
-    "prefix": ["ff_false"],
-    "body": "false",
-    "description": ["false"]
+  "Buffer => String": {
+    "prefix": ["toString", "T_Str"],
+    "body": ["toString()"],
+    "description": ["Buffer => String"]
   }
 }
