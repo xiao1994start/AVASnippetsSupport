@@ -5,12 +5,12 @@
     "description": ["引入 PIL.Image 图像处理模块"]
   },
   "PIL.Image.open 打开图形文件": {
-    "prefix": ["Image_open-PIL"],
+    "prefix": ["Image_open_-PIL"],
     "body": ["Image.open(${1:strImgPath})"],
     "description": ["PIL.Image.open 打开图形文件"]
   },
   "PIL.Image.save 打开图形文件": {
-    "prefix": ["Image_save-PIL"],
+    "prefix": ["Image_save_-PIL"],
     "body": ["Image.save($0)"],
     "description": ["PIL.Image.open 打开图形文件"]
   },

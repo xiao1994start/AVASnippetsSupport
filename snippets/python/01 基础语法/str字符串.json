@@ -150,12 +150,12 @@
     "description": ["使用 str.find 的示例4"]
   },
   "str.format 指定值的格式": {
-    "prefix": ["str_format-str"],
+    "prefix": ["str_format_-str"],
     "body": ["format($0)"],
     "description": ["str.format: Formats 设置str中指定值的格式"]
   },
   "str.format 示例": {
-    "prefix": ["str_format_=-str"],
+    "prefix": ["str_format_-str"],
     "body": [
       "# default arguments",
       "print('Hello {}, your balance is {}.'.format('Adam', 230.2346))",

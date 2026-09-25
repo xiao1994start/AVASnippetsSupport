@@ -1,6 +1,6 @@
 {
   "引入 Vue ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法": {
-    "prefix": ["imp_ref_reactive_toRefs_toRef-Vue"],
+    "prefix": ["imp_ref_reactive_toRefs_toRef_-Vue"],
     "body": [
       "import { ref, reactive, toRefs, toRef } from 'vue' // * 引入 响应式 函数方法",
       "/** ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法",

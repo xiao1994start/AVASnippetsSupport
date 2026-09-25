@@ -1,12 +1,26 @@
 {
   "环境变量": {
-    "prefix": ["process_env_PATH"],
+    "prefix": ["process_env"],
     "body": ["process.env${1:.PATH}"],
     "description": ["环境变量"]
   },
   "声明 环境变量": {
-    "prefix": ["let_process_env_PATH"],
+    "prefix": ["let_process_env"],
     "body": ["let env = process.env${1:.PATH}"],
     "description": ["声明 环境变量"]
+  },
+  "配置子进程的 PATH 环境变量": {
+    "prefix": ["set_env_PATH"],
+    "body": [
+      "/** 配置子进程的 PATH 环境变量 */",
+      "let new_env = [path.join(__dirname, 'python')].join(';')",
+      "let system_env = String(process.env.PATH)",
+      "  .split(';')",
+      "  .filter((item) => item !== '')",
+      "  .join(';')",
+      "process.env.PATH = [new_env, system_env].join(';')",
+      ""
+    ],
+    "description": ["配置子进程的 PATH 环境变量"]
   }
 }

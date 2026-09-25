@@ -317,7 +317,7 @@
     "description": ["使用Path.samefile的示例"]
   },
   "Path.name 当前文件名(含后缀名)": {
-    "prefix": ["Path_name", "Path_name=-Path"],
+    "prefix": ["Path_name", "name_=-Path"],
     "body": ["name"],
     "description": [
       "Path.name 一个表示最后路径组件的字符串, 排除了驱动器与根目录, 如果存在的话",
@@ -326,22 +326,22 @@
     ]
   },
   "Path.parent 父级路径": {
-    "prefix": ["Path_parent", "parent=-Path"],
+    "prefix": ["Path_parent", "parent_=-Path"],
     "body": ["parent"],
     "description": ["Path.parent 此路径的逻辑父路径", "    你不能超过一个 anchor 或空路径"]
   },
   "Path.parents 父级层级各级路径": {
-    "prefix": ["Path_parents", "parents=-Path"],
+    "prefix": ["Path_parents", "parents_=-Path"],
     "body": ["parents"],
     "description": ["Path.parents 返回父目录的各级路径", "    对PurePath对象, 提供访问此路径的逻辑祖先的不可变序列"]
   },
   "Path.suffix 文件扩展名": {
-    "prefix": ["Path_suffix", "suffix=-Path"],
+    "prefix": ["Path_suffix", "suffix_=-Path"],
     "body": ["suffix"],
     "description": ["Path.suffix 最后一个组件的文件扩展名, 如果存在"]
   },
   "Path.suffixes 文件扩展名->list": {
-    "prefix": ["Path_suffixes", "suffixes=-Path"],
+    "prefix": ["Path_suffixes", "suffixes_=-Path"],
     "body": ["suffixes"],
     "description": [
       "Path.suffixes 路径的文件扩展名列表",
@@ -355,7 +355,7 @@
     "description": ["Path.with_suffix 有扩展名则替换, 无则补充扩展名"]
   },
   "Path.stem 除去后缀": {
-    "prefix": ["Path_stem", "stem=-Path"],
+    "prefix": ["Path_stem", "stem_=-Path"],
     "body": ["stem"],
     "description": ["Path.stem 最后一个路径组件, 除去后缀后的文件名"]
   },
@@ -391,7 +391,7 @@
     ]
   },
   "Path.parts 返回路径组件的元组": {
-    "prefix": ["Path_parts", "parts=-Path"],
+    "prefix": ["Path_parts", "parts_=-Path"],
     "body": ["parts"],
     "description": ["Path.parts 分割路径,返回路径组件的元组"]
   }

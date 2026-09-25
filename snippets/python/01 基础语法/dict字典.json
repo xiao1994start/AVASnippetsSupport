@@ -15,7 +15,7 @@
     "description": ["dict.clear 从dict中删除所有元素"]
   },
   "dict.clear 示例": {
-    "prefix": ["dict_clear_=-dict"],
+    "prefix": ["dict_clear_-dict"],
     "body": [
       "car = {",
       "    'brand': 'Ford',",
@@ -33,7 +33,7 @@
     "description": ["dict.copy 返回dict的副本"]
   },
   "dict.copy 示例": {
-    "prefix": ["dict_copy_=-dict"],
+    "prefix": ["dict_copy_-dict"],
     "body": [
       "car = {",
       "    'brand': 'Ford',",
@@ -161,7 +161,7 @@
     "description": ["dict.pop 删除dict中具有指定key键的元素"]
   },
   "dict.pop 示例": {
-    "prefix": ["dict_pop_=-dict"],
+    "prefix": ["dict_pop_-dict"],
     "body": [
       "car = {",
       "    'brand': 'Ford',",
@@ -179,7 +179,7 @@
     "description": ["dict.popitem 删除dict中最后插入的键值对"]
   },
   "dict.popitem 示例": {
-    "prefix": ["dict_popitem_=-dict"],
+    "prefix": ["dict_popitem_-dict"],
     "body": [
       "car = {",
       "    'brand': 'Ford',",
@@ -228,7 +228,7 @@
     "description": ["dict.update 使用指定的键值对更新dict"]
   },
   "dict.update 示例": {
-    "prefix": ["dict_update_=-dict"],
+    "prefix": ["dict_update_-dict"],
     "body": [
       "car = {",
       "    'brand': 'Ford',",

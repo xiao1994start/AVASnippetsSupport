@@ -1,6 +1,6 @@
 {
   "[def]正则中文路径检查": {
-    "prefix": ["def_has_chinese_function-re"],
+    "prefix": ["def_has_chinese_function_-re"],
     "body": [
       "def has_chinese(args):",
       "    \"\"\"# 判断传入的值中是否有中文的元素",

@@ -1,6 +1,6 @@
 {
   "BAT|CMD.脚本模板": {
-    "prefix": ["aaa_tmpl_BAT-CMD"],
+    "prefix": ["aaa_tmpl_BAT_=-CMD"],
     "body": ["@ECHO OFF", "setlocal EnableDelayedExpansion", "CD /D \"%~dp0\"", "", "", "", "$0", "", "", "", "endlocal", ""],
     "description": ["BAT|CMD.脚本模板"]
   },

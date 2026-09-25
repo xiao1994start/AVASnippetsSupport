@@ -12,7 +12,7 @@
     ]
   },
   "Path.glob 仅指定当前目录 遍历/搜索": {
-    "prefix": ["Path_glob", "glob=-Path"],
+    "prefix": ["Path_glob", "glob_=-Path"],
     "body": ["glob(\"${1|*,**,**/*.*,*.py|}\")"],
     "description": [
       "Path.glob 匹配所有的符合条件的所有 文件夹",
@@ -35,7 +35,7 @@
     ]
   },
   "Path.rglob (常用)递归 遍历/搜索": {
-    "prefix": ["Path_rglob", "rglob=-Path"],
+    "prefix": ["Path_rglob", "rglob_=-Path"],
     "body": ["rglob(\"${1|*,**,**/*.*,*.py|}\")"],
     "description": [
       "Path.rglob 返回当前目录, 及所有子目录中的 所有 文件和文件夹",

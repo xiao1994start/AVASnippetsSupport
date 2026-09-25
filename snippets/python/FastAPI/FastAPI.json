@@ -5,7 +5,7 @@
     "description": ["引入fastapi->FastAPI服务"]
   },
   "引入 fastapi FastAPI_all服务": {
-    "prefix": ["import_FastAPI_all=-FastAPI", "imp_FastAPI_all=-FastAPI"],
+    "prefix": ["import_FastAPI_all_=-FastAPI", "imp_FastAPI_all_=-FastAPI"],
     "body": [
       "from pathlib import Path",
       "",

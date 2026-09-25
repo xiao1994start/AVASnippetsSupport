@@ -25,8 +25,13 @@
     "description": ["数组 在开头添加元素"]
   },
   "数组 过滤空值": {
-    "prefix": ["filter_item_empty-arr"],
+    "prefix": ["filter_empty_=-arr"],
     "body": ["filter((item) => item !== '')"],
     "description": ["数组 过滤空值"]
+  },
+  "数组 循环元素": {
+    "prefix": ["foreach_-arr"],
+    "body": ["forEach((item) => {console.log(item)})"],
+    "description": ["数组 循环元素"]
   }
 }
