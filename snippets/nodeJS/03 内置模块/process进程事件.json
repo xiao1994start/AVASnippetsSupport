@@ -1,4 +1,9 @@
 {
+  "接收传入的命令行参数 => arr": {
+    "prefix": ["process_argv"],
+    "body": ["process.argv"],
+    "description": ["接收传入的命令行参数 => arr"]
+  },
   "环境变量": {
     "prefix": ["process_env"],
     "body": ["process.env${1:.PATH}"],
