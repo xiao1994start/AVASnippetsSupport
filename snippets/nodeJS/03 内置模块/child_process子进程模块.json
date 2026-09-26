@@ -1,7 +1,7 @@
 {
   "引入 child_process 子进程模块 [CommonJS]": {
     "prefix": ["req_child_process"],
-    "body": ["const child_process = require('child_process') // * 引入 child_process 子进程模块", "$0"],
+    "body": ["const { exec, execFile, fork, spawn } = require('child_process') // * 引入 child_process 子进程模块", "$0"],
     "description": ["引入 child_process 子进程模块 [CommonJS]"]
   },
   "引入 child_process 子进程模块 [ESM]": {
