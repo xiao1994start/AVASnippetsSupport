@@ -297,11 +297,19 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/nodeJS/02 JS基础/06 数组方法.json"
+        "path": "./snippets/nodeJS/02 JS基础/06 字符串方法.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/nodeJS/02 JS基础/06 数组方法.json"
+        "path": "./snippets/nodeJS/02 JS基础/06 字符串方法.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nodeJS/02 JS基础/07 数组方法.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/02 JS基础/07 数组方法.json"
       },
       {
         "language": "javascript",

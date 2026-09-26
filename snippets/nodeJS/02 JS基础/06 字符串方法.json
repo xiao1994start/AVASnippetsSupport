@@ -1,0 +1,7 @@
+{
+  "Buffer... => String": {
+    "prefix": ["tostring_"],
+    "body": ["toString()"],
+    "description": ["Buffer... => String"]
+  }
+}

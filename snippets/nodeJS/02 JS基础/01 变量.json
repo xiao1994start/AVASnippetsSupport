@@ -33,10 +33,5 @@
     "prefix": ["dirpath"],
     "body": ["__dirname"],
     "description": ["获取当前脚本文件的目录路径"]
-  },
-  "Buffer => String": {
-    "prefix": ["tostring_buf"],
-    "body": ["toString()"],
-    "description": ["Buffer => String"]
   }
 }
