@@ -1,7 +1,7 @@
 {
   "引入 path 路径模块 [CommonJS]": {
     "prefix": ["req_path"],
-    "body": ["const path = require('path')$0 // * 引入 path 路径模块", ""],
+    "body": ["const path = require('path') // * 引入 path 路径模块", "", "$0"],
     "description": ["引入 path 路径模块 [CommonJS]"]
   },
   "引入 path 路径模块 [ESM]": {
@@ -11,6 +11,7 @@
       "import { fileURLToPath } from 'node:url' // * 引入 url.fileURLToPath 方法将文件URL地址转换为本地文件系统路径",
       "const __filename = fileURLToPath(import.meta.url) // * import.meta.url返回当前模块（文件）的绝对URL地址",
       "const __dirname = path.dirname(__filename)",
+      "",
       "$0"
     ],
     "description": ["引入 path 路径模块 [ESM]"]
