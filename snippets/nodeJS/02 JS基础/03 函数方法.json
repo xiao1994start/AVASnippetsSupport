@@ -14,6 +14,16 @@
     "body": ["const ${1:name} = (${2:params}) => {$0}"],
     "description": ["声明 箭头函数"]
   },
+  "导出 声明": {
+    "prefix": ["export_"],
+    "body": ["export {$0}"],
+    "description": ["导出 声明"]
+  },
+  "导出 函数方法 声明": {
+    "prefix": ["export_def_function"],
+    "body": ["export function ${1:name}(${2:params}) {$0}"],
+    "description": ["导出 函数方法 声明"]
+  },
   "导出 模块 [CommonJS]": {
     "prefix": ["module_exports"],
     "body": ["module.exports = {$0}"],
