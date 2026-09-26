@@ -15,12 +15,12 @@
     "description": ["声明 箭头函数"]
   },
   "导出 声明": {
-    "prefix": ["export_"],
+    "prefix": ["exp_", "export_"],
     "body": ["export {$0}"],
     "description": ["导出 声明"]
   },
   "导出 函数方法 声明": {
-    "prefix": ["export_def_function"],
+    "prefix": ["exp_def_function", "export_def_function"],
     "body": ["export function ${1:name}(${2:params}) {$0}"],
     "description": ["导出 函数方法 声明"]
   },
@@ -40,7 +40,7 @@
     "description": ["引入模块 const ... = require('...') [CommonJS]"]
   },
   "import 导入依赖 [ESM]": {
-    "prefix": ["imp"],
+    "prefix": ["imp_", "import_"],
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   }
