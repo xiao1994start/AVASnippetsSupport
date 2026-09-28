@@ -50,8 +50,13 @@
     "description": ["import 导入依赖 [ESM]"]
   },
   "throw 抛出异常": {
-    "prefix": ["throw_"],
-    "body": ["throw new Error(`${1:example_Err}`)"],
+    "prefix": ["throw_err"],
+    "body": ["throw ${1:err}"],
     "description": ["throw 抛出异常"]
+  },
+  "throw 抛出自定义异常": {
+    "prefix": ["throw_new_Error"],
+    "body": ["throw new Error(`${1:example_Err}`)"],
+    "description": ["throw 抛出自定义异常"]
   }
 }
