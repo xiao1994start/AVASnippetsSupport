@@ -1,13 +1,18 @@
 {
-  "创建 function 函数": {
+  "创建 function 标准函数": {
     "prefix": ["new_def_function"],
     "body": ["function ${1:name}(${2:params}) {$0}"],
-    "description": ["创建 function 函数"]
+    "description": ["创建 function 标准函数"]
   },
-  "创建 箭头函数": {
+  "() =>": {
+    "prefix": ["new_lambda_return"],
+    "body": ["(${1:params}) => $0"],
+    "description": ["() =>"]
+  },
+  "() => {}": {
     "prefix": ["new_lambda"],
     "body": ["(${1:params}) => {$0}"],
-    "description": ["创建 箭头函数"]
+    "description": ["() => {}"]
   },
   "声明 箭头函数": {
     "prefix": ["new_arrow_lambda"],
