@@ -12,7 +12,7 @@ if exist "%CD%\*node-*" ( for /D %%i in ("*node-*") do ( ECHO %%~fi && if not "%
 ECHO 设置环境变量
 set "PATH=%PATH:;C:\Program Files\Microsoft VS Code;=;%"
 set "systemPATH=%PATH%"
-ECHO 添加临时系统环境变量
+ECHO 设置临时系统环境变量
 set "NODE_HOME=%CD%\node;%CD%\node\node_modules;"
 set "PATH=%NODE_HOME%;%systemPATH%;"
 

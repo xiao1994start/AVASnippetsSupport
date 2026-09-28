@@ -37,7 +37,7 @@
   "设置当前批处理临时环境变量": {
     "prefix": ["set_cmd_path"],
     "body": [
-      "@REM * 添加临时系统环境变量",
+      "@REM * 设置临时系统环境变量",
       "@REM set \"XPATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
       "set \"XPATH=%PATH%\"",
       "$0",
