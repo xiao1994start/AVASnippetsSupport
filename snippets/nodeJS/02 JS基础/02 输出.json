@@ -1,6 +1,6 @@
 {
   "console.log(...) 控制台输出日志": {
-    "prefix": ["clg_", "pprt_-console.log"],
+    "prefix": ["cs_lg_", "pprt_-console_log"],
     "body": ["console.log($0)"],
     "description": ["console.log(...) 控制台输出日志"]
   },

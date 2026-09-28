@@ -1,0 +1,24 @@
+{
+  "fetch 获取HTML数据": {
+    "prefix": ["fetch_GET_HTML_"],
+    "body": [
+      "fetch(url, {",
+      "  method: 'GET',",
+      "  headers: {",
+      "    'User-Agent':",
+      "      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',",
+      "  },",
+      "})",
+      "  .then((resp) => {",
+      "    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)",
+      "    return resp.text()",
+      "  })",
+      "  .then((html) => {",
+      "    console.log(html)",
+      "  })",
+      "  .catch(console.error)",
+      ""
+    ],
+    "description": ["fetch 获取HTML数据"]
+  }
+}

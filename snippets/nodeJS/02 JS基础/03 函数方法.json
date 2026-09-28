@@ -43,5 +43,10 @@
     "prefix": ["imp_"],
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
+  },
+  "throw 抛出异常": {
+    "prefix": ["throw_"],
+    "body": ["throw new Error(`${1:example_Err}`)"],
+    "description": ["throw 抛出异常"]
   }
 }

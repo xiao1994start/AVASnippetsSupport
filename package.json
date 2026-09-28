@@ -321,6 +321,14 @@
       },
       {
         "language": "javascript",
+        "path": "./snippets/nodeJS/03 内置模块/Fetch API请求-响应.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nodeJS/03 内置模块/Fetch API请求-响应.json"
+      },
+      {
+        "language": "javascript",
         "path": "./snippets/nodeJS/03 内置模块/fs文件系统模块.json"
       },
       {
