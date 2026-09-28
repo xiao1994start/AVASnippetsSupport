@@ -18,7 +18,7 @@
     "prefix": ["set_env_PATH"],
     "body": [
       "/** 配置子进程的 PATH 环境变量 */",
-      "let new_env = [path.join(__dirname, '${1:python}')].join(';')",
+      "let new_env = [path.join(__dirname, ${1:PATH环境变量})].join(';')",
       "let system_env = String(process.env.PATH)",
       "  .split(';')",
       "  .filter((item) => item !== '')",
