@@ -21,7 +21,7 @@
   },
   "导出 声明": {
     "prefix": ["ept_", "export_"],
-    "body": ["export {$0}"],
+    "body": ["export $0"],
     "description": ["导出 声明"]
   },
   "导出 函数声明": {
