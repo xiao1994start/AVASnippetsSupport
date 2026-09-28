@@ -1,33 +1,33 @@
 {
-  "创建 function 标准函数": {
+  "function () {}": {
     "prefix": ["new_def_function"],
     "body": ["function ${1:name}(${2:params}) {$0}"],
-    "description": ["创建 function 标准函数"]
+    "description": ["function () {}"]
   },
-  "() =>": {
+  "() => return": {
     "prefix": ["new_lambda_return"],
     "body": ["(${1:params}) => $0"],
-    "description": ["() =>"]
+    "description": ["() => return"]
   },
   "() => {}": {
     "prefix": ["new_lambda"],
     "body": ["(${1:params}) => {$0}"],
     "description": ["() => {}"]
   },
-  "声明 箭头函数": {
+  "const () => {}": {
     "prefix": ["new_arrow_lambda"],
     "body": ["const ${1:name} = (${2:params}) => {$0}"],
-    "description": ["声明 箭头函数"]
+    "description": ["const () => {}"]
   },
   "导出 声明": {
     "prefix": ["ept_", "export_"],
     "body": ["export {$0}"],
     "description": ["导出 声明"]
   },
-  "导出 函数方法 声明": {
+  "导出 函数声明": {
     "prefix": ["ept_def_function", "export_def_function"],
     "body": ["export function ${1:name}(${2:params}) {$0}"],
-    "description": ["导出 函数方法 声明"]
+    "description": ["导出 函数声明"]
   },
   "导出 模块 [CommonJS]": {
     "prefix": ["module_exports"],
@@ -39,10 +39,10 @@
     "body": ["export default {$0}"],
     "description": ["导出 模块 [ESM]"]
   },
-  "引入模块 const ... = require('...') [CommonJS]": {
+  "导入依赖 const ... = require('...') [CommonJS]": {
     "prefix": ["new_require"],
     "body": ["const ${2:name} = require('${1:JS_path}')"],
-    "description": ["引入模块 const ... = require('...') [CommonJS]"]
+    "description": ["导入依赖 const ... = require('...') [CommonJS]"]
   },
   "import 导入依赖 [ESM]": {
     "prefix": ["imp_"],
