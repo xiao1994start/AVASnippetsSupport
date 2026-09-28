@@ -3,7 +3,7 @@
     "prefix": ["imp_ref_reactive_toRefs_toRef_-Vue"],
     "body": [
       "import { ref, reactive, toRefs, toRef } from 'vue' // * 引入 响应式 函数方法",
-      "/** # ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法",
+      "/** # ref, reactive, toRefs, toRef 响应式 数据/对象 函数方法",
       " * ? ref 原始类型数据=> var = ref(初始值) var.value = 新值",
       " * ? reactive 对象类型数据=> obj = reactive(obj{初始值}) obj.属性名 = 新值",
       " * ? toRefs 将reactive响应式对象转换为ref属性响应式数据=> var {解构变量} = toRefs(reactive对象)",
@@ -29,9 +29,9 @@
   "引入 Vue watch 监听响应式数据 函数方法": {
     "prefix": ["imp_watch_-Vue"],
     "body": [
-      "import { watch } from 'vue' // * 引入 watch 监听响应式数据变化 函数方法",
-      "/** # watch 监听响应式数据变化 函数方法",
-      " * ? watch(响应式数据, 回调函数(newValue, oldValue, onCleanupCallback清除的回调函数), {配置项})",
+      "import { watch, watchEffect } from 'vue' // * 引入 监听响应式数据变化 函数方法",
+      "/** # watch, watchEffect 监听响应式数据变化 函数方法",
+      " * ? watch(响应式数据, 回调函数(newValue[, oldValue][, onCleanupCallback清除的回调函数])[, {配置项}])",
       " *   响应式数据=> 直接指定监视数据或对象",
       " *     监视对象内指定的属性变化使用 getter 函数方法=> () => obj.属性名",
       " *   常用 newValue 监视响应式数据变化",
@@ -39,6 +39,9 @@
       " *   {配置项}",
       " *     immediate: true 初始化（组件挂载）时立即执行一次监视",
       " *     deep: true 深度监听对象属性变化（性能损耗，ref数据默认false，reactive对象默认true）",
+      " * ? watchEffect(回调函数(直接使用响应式数据)[, {配置项}])",
+      " *   不需要指明监视的数据",
+      " *   回调函数中使用的响应式数据，watchEffect 会自动监视变化",
       " */",
       "$0"
     ],
