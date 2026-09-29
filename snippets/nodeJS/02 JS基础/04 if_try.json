@@ -1,0 +1,12 @@
+{
+  "else if": {
+    "prefix": ["elif"],
+    "body": ["else if (${1:}) {${2:}}"],
+    "description": ["else if"]
+  },
+  "try...catch...": {
+    "prefix": ["try_catch_"],
+    "body": ["try {", "  ${1:}", "} catch (error) {", "  ", "}"],
+    "description": ["try...catch..."]
+  }
+}
