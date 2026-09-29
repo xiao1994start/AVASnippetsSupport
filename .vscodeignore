@@ -1,4 +1,15 @@
+# 忽略 vscode 目录
 .vscode/**
 .vscode-test/**
 .gitignore
+
+# 忽略插件文件
+*.vsix
+
+# 忽略脚本文件
+*.cmd
+*.bat
+
+# 忽略其他文件
 vsc-extension-quickstart.md
+package.exe
