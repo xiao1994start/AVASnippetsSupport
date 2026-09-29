@@ -1,4 +1,14 @@
 {
+  "async 异步声明": {
+    "prefix": ["asc_", "async_"],
+    "body": ["async ${1:}"],
+    "description": ["async 异步声明"]
+  },
+  "await 等待Promise完成": {
+    "prefix": ["awt_", "await_"],
+    "body": ["await ${1:}"],
+    "description": ["await 等待Promise完成"]
+  },
   "function () {}": {
     "prefix": ["new_def_function"],
     "body": ["function ${1:name}(${2:params}) {$0}"],
@@ -19,30 +29,30 @@
     "body": ["const ${1:name} = (${2:params}) => {$0}"],
     "description": ["const () => {}"]
   },
-  "导出 声明": {
+  "export 导出声明": {
     "prefix": ["ept_", "export_"],
     "body": ["export $0"],
-    "description": ["导出 声明"]
+    "description": ["export 导出 声明"]
   },
-  "导出 函数声明": {
+  "export 导出函数声明": {
     "prefix": ["ept_def_function", "export_def_function"],
     "body": ["export function ${1:name}(${2:params}) {$0}"],
-    "description": ["导出 函数声明"]
+    "description": ["export 导出 函数声明"]
   },
-  "导出 模块 [CommonJS]": {
+  "export 导出模块 [CommonJS]": {
     "prefix": ["module_exports"],
     "body": ["module.exports = {$0}"],
-    "description": ["导出 模块 [CommonJS]"]
+    "description": ["export 导出 模块 [CommonJS]"]
   },
-  "导出 模块 [ESM]": {
+  "export 导出模块 [ESM]": {
     "prefix": ["export_default"],
     "body": ["export default {$0}"],
-    "description": ["导出 模块 [ESM]"]
+    "description": ["export 导出 模块 [ESM]"]
   },
-  "导入依赖 const ... = require('...') [CommonJS]": {
+  "const ... = require('...') 导入依赖 [CommonJS]": {
     "prefix": ["new_require"],
     "body": ["const ${2:name} = require('${1:JS_path}')"],
-    "description": ["导入依赖 const ... = require('...') [CommonJS]"]
+    "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
   "import 导入依赖 [ESM]": {
     "prefix": ["imp_"],
