@@ -46,5 +46,10 @@
       "$0"
     ],
     "description": ["引入 Vue watch 监听响应式数据 函数方法"]
+  },
+  "defineExpose 暴露属性/方法": {
+    "prefix": ["defineExpose_"],
+    "body": ["defineExpose({", "    ${1:example}", "  })"],
+    "description": ["defineExpose 暴露属性/方法"]
   }
 }
