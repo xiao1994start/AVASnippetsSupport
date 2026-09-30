@@ -49,7 +49,12 @@
   },
   "defineExpose 暴露属性/方法": {
     "prefix": ["defineExpose_"],
-    "body": ["defineExpose({", "    ${1:example}", "  })"],
+    "body": ["defineExpose({ ${1:变量名} })"],
     "description": ["defineExpose 暴露属性/方法"]
+  },
+  "defineProps 接收属性/方法": {
+    "prefix": ["defineProps_"],
+    "body": ["defineProps([ ${1:变量名} ])"],
+    "description": ["defineProps 接收属性/方法"]
   }
 }
