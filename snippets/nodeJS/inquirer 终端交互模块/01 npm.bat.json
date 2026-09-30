@@ -1,0 +1,12 @@
+{
+  "安装 inquirer 终端交互模块 (全局)": {
+    "prefix": ["npm_inquirer_g"],
+    "body": ["ECHO.+ 安装 inquirer 终端交互模块", "call npm i inquirer -g --registry https://registry.npmmirror.com/", ""],
+    "description": ["安装 inquirer 终端交互模块 (全局)"]
+  },
+  "安装 inquirer 终端交互模块": {
+    "prefix": ["npm_inquirer"],
+    "body": ["ECHO.+ 安装 inquirer 终端交互模块", "call npm i inquirer --registry https://registry.npmmirror.com/", ""],
+    "description": ["安装 inquirer 终端交互模块"]
+  }
+}

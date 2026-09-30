@@ -9,13 +9,14 @@
     "body": [
       "import fs from 'node:fs' // * 引入 fs 文件系统模块",
       "import fs_promises from 'node:fs/promises' // * 引入 fs/promises 文件系统模块",
-      "/** # fs 文件系统模块常用 options 参数",
+      "/** # fs && fs/promises 文件系统模块常用 options 参数",
       " * encoding: 'utf8' => 编码方式，默认utf-8",
       " * recursive: true => 递归创建、复制、删除目录，默认false",
       " * withFileTypes: true => 返回信息中包含文件类型，默认false",
       " * force: true => 是否强制删除目录，当文件/目录不存在时也不抛 ENOENT 错误，默认false",
       " */",
-      "$0"
+      "",
+      ""
     ],
     "description": ["引入 fs 文件系统模块 [ESM]"]
   }

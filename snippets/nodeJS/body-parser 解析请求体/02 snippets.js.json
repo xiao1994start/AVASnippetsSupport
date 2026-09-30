@@ -1,6 +1,6 @@
 {
-  "引入 body-parser 模块": {
-    "prefix": ["req_body_-parser"],
+  "引入 body-parser 模块 [CommonJS]": {
+    "prefix": ["req_body_parser"],
     "body": [
       "const bodyParser = require('body-parser') // * 引入 body-parser 解析请求体模块",
       "",
@@ -8,8 +8,23 @@
       "const jsonParser = bodyParser.json()",
       "// - [中间件] 解析表单上传编码格式 URL 请求体",
       "const urlencodedParser  = bodyParser.urlencoded({ extended: false })",
+      "",
       ""
     ],
-    "description": ["引入 body-parser 模块"]
+    "description": ["引入 body-parser 模块 [CommonJS]"]
+  },
+  "引入 body-parser 模块 [ESM]": {
+    "prefix": ["imp_body_parser"],
+    "body": [
+      "import bodyParser from 'body-parser' // * 引入 body-parser 解析请求体模块",
+      "",
+      "// - [中间件] 解析 JSON 请求体",
+      "const jsonParser = bodyParser.json()",
+      "// - [中间件] 解析表单上传编码格式 URL 请求体",
+      "const urlencodedParser  = bodyParser.urlencoded({ extended: false })",
+      "",
+      ""
+    ],
+    "description": ["引入 body-parser 模块 [ESM]"]
   }
 }

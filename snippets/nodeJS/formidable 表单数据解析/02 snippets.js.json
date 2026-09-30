@@ -1,8 +1,13 @@
 {
-  "引入 formidable 模块": {
+  "引入 formidable 模块 [CommonJS]": {
     "prefix": ["req_formidable"],
-    "body": ["const formidable = require('formidable') // * 引入 formidable 表单数据解析模块", ""],
-    "description": ["引入 formidable 模块"]
+    "body": ["const formidable = require('formidable') // * 引入 formidable 表单数据解析模块", "", ""],
+    "description": ["引入 formidable 模块 [CommonJS]"]
+  },
+  "引入 formidable 模块 [ESM]": {
+    "prefix": ["imp_formidable"],
+    "body": ["import formidable from 'formidable' // * 引入 formidable 表单数据解析模块", "", ""],
+    "description": ["引入 formidable 模块 [ESM]"]
   },
   "实例化 formidable.IncomingForm 表单解析器": {
     "prefix": ["new_formidable_IncomingForm"],
