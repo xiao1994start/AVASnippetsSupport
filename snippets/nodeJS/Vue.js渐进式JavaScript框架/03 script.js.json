@@ -56,5 +56,10 @@
     "prefix": ["defineProps_"],
     "body": ["defineProps([ ${1:变量名} ])"],
     "description": ["defineProps 接收属性/方法"]
+  },
+  "断言 $event.target as HTMLInputElement": {
+    "prefix": ["as_HTMLInputElement"],
+    "body": ["as HTMLInputElement"],
+    "description": ["断言 $event.target as HTMLInputElement"]
   }
 }
