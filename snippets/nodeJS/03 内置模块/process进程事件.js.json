@@ -28,5 +28,10 @@
       "$0"
     ],
     "description": ["配置子进程的 PATH 环境变量"]
+  },
+  "立即终止当前 Node 进程": {
+    "prefix": ["process_exit"],
+    "body": ["process.exit(${1|0,1|})"],
+    "description": ["立即终止当前 Node 进程"]
   }
 }
