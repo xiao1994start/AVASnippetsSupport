@@ -37,7 +37,7 @@ CD /D "%~dp0"
 ECHO.生成 package.json 文件
 call "%~dp0package.exe"
 
-ECHO 封装插件文件
+ECHO 封装插件
 call vsce package
 for %%i in ("*.vsix") do (
     ECHO 更新: %%i

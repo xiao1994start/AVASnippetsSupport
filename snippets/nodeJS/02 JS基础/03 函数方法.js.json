@@ -14,20 +14,20 @@
     "body": ["function ${1:name}(${2:params}) {$0}"],
     "description": ["function () {}"]
   },
-  "() => return": {
+  "() => ...": {
     "prefix": ["new_lambda_return"],
     "body": ["(${1:params}) => $0"],
-    "description": ["() => return"]
+    "description": ["() => ..."]
   },
-  "() => {}": {
+  "() => {...}": {
     "prefix": ["new_lambda"],
     "body": ["(${1:params}) => {$0}"],
-    "description": ["() => {}"]
+    "description": ["() => {...}"]
   },
-  "const () => {}": {
+  "const () => {...}": {
     "prefix": ["new_arrow_lambda"],
     "body": ["const ${1:name} = (${2:params}) => {$0}"],
-    "description": ["const () => {}"]
+    "description": ["const () => {...}"]
   },
   "export 导出声明": {
     "prefix": ["ept_", "export_"],
