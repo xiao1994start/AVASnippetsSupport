@@ -1,0 +1,67 @@
+{
+  "splice 从数组指定位置删除或添加元素": {
+    "prefix": ["splice_-array"],
+    "body": ["splice(${1:startIndex}, ${2:deleteCount可选_规定删除多少元素}, ${3:items可选_添加到数组的新元素})"],
+    "description": ["splice 从数组指定位置删除或添加元素"]
+  },
+  "slice 提取数组中指定位置的元素": {
+    "prefix": ["slice_-array"],
+    "body": ["slice(${1:start}, ${2:end})"],
+    "description": ["slice 提取数组中指定位置的元素"]
+  },
+  "filter 过滤数组，返回新数组": {
+    "prefix": ["filter_-array"],
+    "body": ["filter(${1:callback})"],
+    "description": ["filter 过滤数组，返回新数组"]
+  },
+  "filter((i)=>i!=='') 过滤数组中的空值": {
+    "prefix": ["filter_empty_=-array"],
+    "body": ["filter((item) => item !== '')"],
+    "description": ["filter((i)=>i!=='') 过滤数组中的空值"]
+  },
+  "every 判断数组中每个元素，返回Boolean值": {
+    "prefix": ["every_-array"],
+    "body": ["every(${1:callback})"],
+    "description": ["every 判断数组中每个元素，返回Boolean值"]
+  },
+  "sort 对数组中的元素排序": {
+    "prefix": ["sort_-array"],
+    "body": ["sort(${1:callback})"],
+    "description": ["sort 对数组中的元素排序"]
+  },
+  "sort((x,y)=>x-y) 对数组中的数字小->大排序": {
+    "prefix": ["sort_number_-array"],
+    "body": ["sort((x,y) => x - y)"],
+    "description": ["sort((x,y)=>x-y) 对数组中的数字小->大排序"]
+  },
+  "reverse 数组中的元素倒序": {
+    "prefix": ["reverse_-array"],
+    "body": ["reverse()"],
+    "description": ["reverse 数组中的元素倒序"]
+  },
+  "push 在数组末尾添加元素": {
+    "prefix": ["push_-array"],
+    "body": ["push(${1:items})"],
+    "description": ["push 在数组末尾添加元素"]
+  },
+  "pop 删除数组最后一个元素": {
+    "prefix": ["pop_-array"],
+    "body": ["pop()"],
+    "description": ["pop 删除数组最后一个元素"]
+  },
+  "shift 删除数组第一个元素": {
+    "prefix": ["shift_-array"],
+    "body": ["shift()"],
+    "description": ["数组 删除第一个元素"]
+  },
+  "unshift 在数组开头添加元素": {
+    "prefix": ["unshift_-array"],
+    "body": ["unshift(${1:items})"],
+    "description": ["unshift 在数组开头添加元素"]
+  },
+  "forEach(callback) 循环数组中的元素": {
+    "prefix": ["foreach_-array"],
+    "body": ["forEach((item) => {console.log(item)})"],
+    "description": ["forEach(callback) 循环数组中的元素"]
+  }
+}

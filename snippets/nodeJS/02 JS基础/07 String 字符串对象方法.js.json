@@ -1,0 +1,32 @@
+{
+  "Buffer... => String": {
+    "prefix": ["tostr_", "tostring_"],
+    "body": ["toString()"],
+    "description": ["Buffer... => String"]
+  },
+  "toLowerCase 字符串转换为小写": {
+    "prefix": ["toLowerCase_-string"],
+    "body": ["toLowerCase()"],
+    "description": ["toLowerCase 字符串转换为小写"]
+  },
+  "toUpperCase 字符串转换为大写": {
+    "prefix": ["toUpperCase_-string"],
+    "body": ["toUpperCase()"],
+    "description": ["toUpperCase 字符串转换为大写"]
+  },
+  "trim 去除字符串头尾空格": {
+    "prefix": ["trim_-string"],
+    "body": ["trim()"],
+    "description": ["trim 去除字符串头尾空格"]
+  },
+  "slice 提取字符串": {
+    "prefix": ["slice_-string"],
+    "body": ["slice(${1:start}, ${2:end可选})"],
+    "description": ["slice 提取字符串"]
+  },
+  "split 切割字符串": {
+    "prefix": ["split_-string"],
+    "body": ["split(${1:separator可选})"],
+    "description": ["split 切割字符串"]
+  }
+}
