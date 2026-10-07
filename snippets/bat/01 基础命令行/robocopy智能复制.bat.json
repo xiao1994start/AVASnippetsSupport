@@ -22,7 +22,7 @@
       "@REM    /MOVE：移动文件和目录",
       "@REM    /E：递归复制所有子目录",
       "@REM    /XO：排除较旧的文件",
-      "robocopy \"${1:move_from}\" \"${1:move_to}\" /MOVE /E /XO"
+      "robocopy \"${1:move_from}\" \"${2:move_to}\" /MOVE /E /XO"
     ],
     "description": ["robocopy 智能移动(排除较旧)"]
   }
