@@ -1,0 +1,11 @@
+{
+  "安装 vue-router 渐进式路由库": {
+    "prefix": ["npm_vue_router"],
+    "body": [
+      "ECHO.* 安装 vue-router 渐进式路由库 :: https://router.vuejs.org/zh/",
+      "call npm i vue-router --registry https://registry.npmmirror.com/",
+      ""
+    ],
+    "description": ["安装 vue-router 渐进式路由库"]
+  }
+}

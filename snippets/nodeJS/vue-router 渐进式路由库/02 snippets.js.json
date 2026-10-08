@@ -1,0 +1,49 @@
+{
+  "引入 vue-router.createRouter 模块 [ESM]": {
+    "prefix": ["impt_createRouter"],
+    "body": [
+      "import { createRouter, createWebHistory } from 'vue-router'",
+      "/** # 路由规则配置",
+      " * ? createRouter: 创建路由实例",
+      " * ? createWebHistory: 创建路由历史模式实例",
+      " * - src/main.ts 中使用路由实例 >>",
+      " *   ...import router from './router/index.ts'...",
+      " *   ...const app = createApp(App)...",
+      " *   ...app.use(router)...",
+      " *   app.mount('#app')",
+      " */",
+      "",
+      "const router = createRouter({",
+      "  // * 指定路由模式: history - 历史模式 || hash - 哈希模式",
+      "  history: createWebHistory(),",
+      "  routes: [",
+      "    {",
+      "      path: '/',",
+      "      component: () => import('${1:vue组件路径}'),,",
+      "    },",
+      "  ],",
+      "})",
+      "",
+      "// $ 默认导出路由实例",
+      "export default router",
+      ""
+    ],
+    "description": ["引入 vue-router.createRouter 模块 [ESM]"]
+  },
+  "导入 vue-router.RouterLink, RouterView 类 路由组件类型 [ESM]": {
+    "prefix": ["impt_RouterLink_RouterView"],
+    "body": [
+      "  import type { RouterLink, RouterView } from 'vue-router'",
+      "  /** # 导入 vue-router.RouterLink, RouterView 类 路由组件类型",
+      "   * <template>",
+      "   *   <!-- * 路由链接组件 -->",
+      "   *   <RouterLink to=\"/路由\"> 标签 </RouterLink>",
+      "   *   <!-- * 路由视图组件 -->",
+      "   *   <RouterView></RouterView>",
+      "   * </template>",
+      "   */",
+      ""
+    ],
+    "description": ["导入 vue-router.RouterLink, RouterView 类 路由组件类型 [ESM]"]
+  }
+}

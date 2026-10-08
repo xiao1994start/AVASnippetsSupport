@@ -1,0 +1,12 @@
+{
+  "引入 axios 模块 [CommonJS]": {
+    "prefix": ["req_axios"],
+    "body": ["const axios = require('axios') // * 引入 axios 请求库", "", ""],
+    "description": ["引入 axios 模块 [CommonJS]"]
+  },
+  "引入 axios 模块 [ESM]": {
+    "prefix": ["impt_axios"],
+    "body": ["import axios from 'axios' // * 引入 axios 请求库", "", ""],
+    "description": ["引入 axios 模块 [ESM]"]
+  }
+}

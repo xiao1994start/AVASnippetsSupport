@@ -10,7 +10,7 @@
     "description": ["await 等待Promise完成"]
   },
   "function () {}": {
-    "prefix": ["new_def_function"],
+    "prefix": ["new_def_function_"],
     "body": ["function ${1:name}(${2:params}) {$0}"],
     "description": ["function () {}"]
   },
@@ -20,7 +20,7 @@
     "description": ["() => ..."]
   },
   "() => {...}": {
-    "prefix": ["new_lambda"],
+    "prefix": ["new_lambda_"],
     "body": ["(${1:params}) => {$0}"],
     "description": ["() => {...}"]
   },
@@ -35,22 +35,22 @@
     "description": ["export 导出 声明"]
   },
   "export 导出函数声明": {
-    "prefix": ["ept_def_function", "export_def_function"],
+    "prefix": ["ept_def_function_", "export_def_function_"],
     "body": ["export function ${1:name}(${2:params}) {$0}"],
     "description": ["export 导出 函数声明"]
   },
   "export 导出模块 [CommonJS]": {
-    "prefix": ["module_exports"],
+    "prefix": ["module_exports_"],
     "body": ["module.exports = {$0}"],
     "description": ["export 导出 模块 [CommonJS]"]
   },
   "export 导出模块 [ESM]": {
-    "prefix": ["export_default"],
+    "prefix": ["ept_dft_", "export_default_"],
     "body": ["export default {$0}"],
     "description": ["export 导出 模块 [ESM]"]
   },
   "const ... = require('...') 导入依赖 [CommonJS]": {
-    "prefix": ["new_require"],
+    "prefix": ["new_require_"],
     "body": ["const ${2:name} = require('${1:JS_path}')"],
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
