@@ -45,7 +45,7 @@
     "description": ["export 导出 模块 [CommonJS]"]
   },
   "export 导出模块 [ESM]": {
-    "prefix": ["ept_dft_", "export_default_"],
+    "prefix": ["export_default_"],
     "body": ["export default {$0}"],
     "description": ["export 导出 模块 [ESM]"]
   },

@@ -1,5 +1,5 @@
 {
-  "Vue快速创建模板": {
+  "vue 快速创建模板": {
     "prefix": ["aaa_tmpl_vue"],
     "body": [
       "<template>",
@@ -16,6 +16,21 @@
       "</style>",
       ""
     ],
-    "description": ["Vue快速创建模板"]
+    "description": ["vue 快速创建模板"]
+  },
+  "App.vue 设置html_body全局样式": {
+    "prefix": ["style_html_body_-App_vue"],
+    "body": [
+      "<style>",
+      "  /* * 全局样式 */",
+      "  html,",
+      "  body {",
+      "    display: block;",
+      "    margin: 0;",
+      "  }",
+      "</style>",
+      ""
+    ],
+    "description": ["App.vue 设置html_body全局样式"]
   }
 }

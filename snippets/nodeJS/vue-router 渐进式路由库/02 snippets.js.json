@@ -31,11 +31,12 @@
     ],
     "description": ["引入 vue-router.createRouter 模块 [ESM]"]
   },
-  "导入 vue-router.RouterLink, RouterView 类 路由组件类型 [ESM]": {
-    "prefix": ["impt_RouterLink_RouterView"],
+  "导入 vue-router.RouterLink 路由组件类型 [ESM]": {
+    "prefix": ["impt_RouterLink"],
     "body": [
-      "  import type { RouterLink, RouterView } from 'vue-router'",
+      "  import type { RouterLink } from 'vue-router'",
       "  /** # 导入 vue-router 路由组件类型",
+      "   * = ./src/router/index.ts => 创建路由实例时，需要指定路由规则配置",
       "   * <template>",
       "   *   <!-- * 路由链接组件 -->",
       "   *   <RouterLink class=\"router-link\" to=\"/路由\">标签</RouterLink>",
@@ -50,6 +51,6 @@
       "   */",
       ""
     ],
-    "description": ["导入 vue-router.RouterLink, RouterView 类 路由组件类型 [ESM]"]
+    "description": ["导入 vue-router.RouterLink 路由组件类型 [ESM]"]
   }
 }
