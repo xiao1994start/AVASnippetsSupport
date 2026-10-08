@@ -164,7 +164,7 @@
       "goto :init_tsdown",
       ":call_npm",
       "if not exist \"%~dp0!tsdown_project!\\#npm_package.cmd\" (",
-      "    ECHO.写入 tsdown 项目依赖管理文件",
+      "    ECHO.写入 tsdown 项目依赖管理脚本",
       "    (",
       "        ECHO.@ECHO OFF",
       "        ECHO.setlocal EnableDelayedExpansion",
