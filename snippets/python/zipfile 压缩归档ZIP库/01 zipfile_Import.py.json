@@ -1,11 +1,11 @@
 {
   "引入 zipfile 引入zipfile归档ZIP库": {
-    "prefix": ["import_zipfile", "imp_zipfile"],
+    "prefix": ["import_zipfile", "impt_zipfile"],
     "body": ["import zipfile", ""],
     "description": ["引入 zipfile 引入zipfile归档ZIP库"]
   },
   "引入 ZipFile 引入zipfile归档ZIP库子类": {
-    "prefix": ["import_zipfile_ZipFile", "imp_zipfile_ZipFile"],
+    "prefix": ["import_zipfile_ZipFile", "impt_zipfile_ZipFile"],
     "body": ["import zipfile", "from zipfile import ZipFile", ""],
     "description": ["引入 ZipFile 引入zipfile归档ZIP库子类"]
   }

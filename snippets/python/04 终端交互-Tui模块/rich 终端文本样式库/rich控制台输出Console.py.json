@@ -1,6 +1,6 @@
 {
   "引入 rich.console.Console 控制台输出管理器": {
-    "prefix": ["import_rich_console", "imp_rich_console"],
+    "prefix": ["import_rich_console", "impt_rich_console"],
     "body": [
       "from rich.console import Console  # * 用于捕获结果打印到控制台[使用 c = Console(color_system='256', style=None)实例化, c.print(...)调用]",
       ""

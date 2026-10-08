@@ -1,6 +1,6 @@
 {
   "引入 random 随机模块": {
-    "prefix": ["import_random", "imp_random"],
+    "prefix": ["import_random", "impt_random"],
     "body": ["import random  # *(伪)随机模块"],
     "description": ["引入 random 随机模块，实现了各种分布的伪随机数生成器"]
   },

@@ -5,7 +5,7 @@
     "description": ["引入 formidable 模块 [CommonJS]"]
   },
   "引入 formidable 模块 [ESM]": {
-    "prefix": ["imp_formidable"],
+    "prefix": ["impt_formidable"],
     "body": ["import formidable from 'formidable' // * 引入 formidable 表单数据解析模块", "", ""],
     "description": ["引入 formidable 模块 [ESM]"]
   },

@@ -1,11 +1,11 @@
 {
   "引入 xml XML处理模块": {
-    "prefix": ["import_xml", "imp_xml"],
+    "prefix": ["import_xml", "impt_xml"],
     "body": ["import xml  # *XML处理模块", ""],
     "description": "引入 xml XML处理模块"
   },
   "引入 xml.etree.ElementTree XML处理模块": {
-    "prefix": ["import_xml_etree_ElementTree", "imp_xml_etree_ElementTree"],
+    "prefix": ["import_xml_etree_ElementTree", "impt_xml_etree_ElementTree"],
     "body": ["import xml.etree.ElementTree as ET  # *ElementTree API:一个简单而轻量级的XML处理器", ""],
     "description": "引入 xml XML处理模块"
   },

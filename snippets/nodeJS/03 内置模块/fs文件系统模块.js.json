@@ -5,7 +5,7 @@
     "description": ["引入 fs 文件系统模块 [CommonJS]"]
   },
   "引入 fs 文件系统模块 [ESM]": {
-    "prefix": ["imp_fs"],
+    "prefix": ["impt_fs"],
     "body": [
       "import fs from 'node:fs' // * 引入 fs 文件系统模块",
       "import fs_promises from 'node:fs/promises' // * 引入 fs/promises 文件系统模块",

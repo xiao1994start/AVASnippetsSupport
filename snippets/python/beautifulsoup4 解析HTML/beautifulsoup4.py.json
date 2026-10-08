@@ -1,6 +1,6 @@
 {
   "引入 beautifulsoup4 模块": {
-    "prefix": ["import_bs4_beautifulsoup4", "imp_bs4_beautifulsoup4"],
+    "prefix": ["import_bs4_beautifulsoup4", "impt_bs4_beautifulsoup4"],
     "body": ["from bs4 import BeautifulSoup"],
     "description": ["引入 beautifulsoup4 模块"]
   },

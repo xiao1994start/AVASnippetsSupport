@@ -1,6 +1,6 @@
 {
   "引入 asyncio 异步IO实现更高的并发性": {
-    "prefix": ["import_asyncio", "imp_asyncio"],
+    "prefix": ["import_asyncio", "impt_asyncio"],
     "body": ["import asyncio  # * 异步IO实现更高的并发性"],
     "description": ["引入 asyncio 异步IO实现更高的并发性"]
   },

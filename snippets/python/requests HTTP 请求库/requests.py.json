@@ -1,6 +1,6 @@
 {
   "引入 requests HTTP 请求库": {
-    "prefix": ["import_requests", "imp_requests"],
+    "prefix": ["import_requests", "impt_requests"],
     "body": ["import requests  # * HTTP 请求库"],
     "description": ["引入 requests HTTP 请求库"]
   },

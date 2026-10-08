@@ -5,7 +5,7 @@
     "description": ["引入 path 路径模块 [CommonJS]"]
   },
   "引入 path 路径模块 [ESM]": {
-    "prefix": ["imp_path"],
+    "prefix": ["impt_path"],
     "body": [
       "import path from 'node:path' // * 引入 path 路径模块",
       "import { fileURLToPath } from 'node:url' // * 引入 url.fileURLToPath 方法将文件URL地址转换为本地文件系统路径",

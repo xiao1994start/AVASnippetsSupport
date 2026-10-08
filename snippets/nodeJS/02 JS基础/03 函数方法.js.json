@@ -55,7 +55,7 @@
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
   "import 导入依赖 [ESM]": {
-    "prefix": ["imp_"],
+    "prefix": ["impt_"],
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   },

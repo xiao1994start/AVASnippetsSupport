@@ -1,6 +1,6 @@
 {
   "引入 pyscreeze 用于屏幕截图和图像识别": {
-    "prefix": ["import_pyscreeze", "imp_pyscreeze"],
+    "prefix": ["import_pyscreeze", "impt_pyscreeze"],
     "body": ["import pyscreeze  # * 用于屏幕截图和图像识别"],
     "description": ["用于屏幕截图和图像识别"]
   },

@@ -5,7 +5,7 @@
     "description": ["引入 child_process 子进程模块 [CommonJS]"]
   },
   "引入 child_process 子进程模块 [ESM]": {
-    "prefix": ["imp_child_process"],
+    "prefix": ["impt_child_process"],
     "body": [
       "import { exec, execFile, fork, spawn } from 'node:child_process' // * 引入 child_process 子进程模块",
       "/** child_process 子进程模块 => 提供了在 Node.js 中创建子进程的方法，用于执行外部命令或脚本",

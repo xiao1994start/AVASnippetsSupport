@@ -1,6 +1,6 @@
 {
   "引入 xmltodict XML数据和Python字典相互转换模块": {
-    "prefix": ["import_xmltodict ", "imp_xmltodict "],
+    "prefix": ["import_xmltodict ", "impt_xmltodict "],
     "body": ["import xmltodict  # *XML数据和Python字典相互转换模块", ""],
     "description": "引入 xmltodict XML数据和Python字典相互转换模块"
   },

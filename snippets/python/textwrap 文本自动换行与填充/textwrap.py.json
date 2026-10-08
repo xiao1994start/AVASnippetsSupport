@@ -1,11 +1,11 @@
 {
   "引入 textwrap 文本自动换行与填充": {
-    "prefix": ["import_textwrap", "imp_textwrap"],
+    "prefix": ["import_textwrap", "impt_textwrap"],
     "body": ["import textwrap  # * 文本自动换行与填充", ""],
     "description": ["文本自动换行与填充"]
   },
   "引入 textwrap.dedent 移除 text 中每一行的任何相同前缀空白符": {
-    "prefix": ["import_textwrap_dedent", "imp_textwrap_dedent"],
+    "prefix": ["import_textwrap_dedent", "impt_textwrap_dedent"],
     "body": ["from textwrap import dedent  # * 文本自动换行与填充 - 移除 text 中每一行的任何相同前缀空白符", ""],
     "description": ["移除 text 中每一行的任何相同前缀空白符"]
   },

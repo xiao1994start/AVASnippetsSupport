@@ -5,7 +5,7 @@
     "description": ["引入 http 服务模块 [CommonJS]"]
   },
   "引入 http 服务模块 [ESM]": {
-    "prefix": ["imp_http"],
+    "prefix": ["impt_http"],
     "body": ["import http from 'http' // * 引入 http 服务模块", "", ""],
     "description": ["引入 http 服务模块 [ESM]"]
   }

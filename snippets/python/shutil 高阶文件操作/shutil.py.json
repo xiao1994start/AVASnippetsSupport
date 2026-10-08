@@ -1,6 +1,6 @@
 {
   "导入 shutil 高级文件管理模块": {
-    "prefix": ["import_shutil", "imp_shutil"],
+    "prefix": ["import_shutil", "impt_shutil"],
     "body": ["import shutil"],
     "description": ["导入shutil高级文件管理模块"]
   },
