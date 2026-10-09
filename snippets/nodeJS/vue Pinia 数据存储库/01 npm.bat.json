@@ -1,0 +1,19 @@
+{
+  "安装 pinia 全局数据存储集中管理库": {
+    "prefix": ["npm_pinia"],
+    "body": [
+      "ECHO.* 安装 pinia 全局数据存储集中管理库 :: https://pinia.vuejs.ac.cn/",
+      "call npm i pinia --registry https://registry.npmmirror.com/",
+      "@REM  # 配置方法",
+      "@REM  - src/main.ts 配置 pinia 数据存储库 >>",
+      "@REM    ...import...",
+      "@REM    import { createPinia } from 'pinia' // * 引入 pinia 状态管理库",
+      "@REM    ...const app = createApp(App)...",
+      "@REM    const pinia = createPinia() // * 创建 pinia 实例",
+      "@REM    app.use(pinia) // = 插入 .use(pinia) 配置 pinia 数据存储库",
+      "@REM    ...app.mount('#app')",
+      ""
+    ],
+    "description": ["安装 pinia 全局数据存储集中管理库"]
+  }
+}
