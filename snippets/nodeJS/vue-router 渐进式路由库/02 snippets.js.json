@@ -67,14 +67,15 @@
     "description": ["导入 vue-router.RouterLink 路由组件类型 [ESM]"]
   },
   "导入 vue-router.useRoute 路由参数查询组件 [ESM]": {
-    "prefix": "",
+    "prefix": ["impt_useRoute"],
     "body": [
       "import { useRoute } from 'vue-router' // * 获取路由参数",
+      "// ? <RouterLink||router-link :to=\"/url?查询参数=\\${查询参数值}&...\">",
       "const route = useRoute()",
-      "const query = route.query",
-      "// - query: 查询参数：使用解构赋值获取查询参数",
+      "const querys = route.query",
+      "// - querys = route.query => 查询参数：使用解构赋值获取查询参数",
       ""
     ],
-    "description": "导入 vue-router.useRoute 路由参数查询组件 [ESM]"
+    "description": ["导入 vue-router.useRoute 路由参数查询组件 [ESM]"]
   }
 }
