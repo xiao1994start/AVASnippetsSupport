@@ -7,7 +7,7 @@ for %%v in ("AVASnippetsSupport*.vsix") do ( ECHO 清理旧版插件 %%v && del /F /Q 
 
 CD /D "%~dp0..\"
 
-@REM 标准化文件名
+@REM * 标准化文件名
 if exist "%CD%\*node-*" ( for /D %%i in ("*node-*") do ( ECHO %%~fi && if not "%%i"=="node" ( ren "%%~fi" "node" ) ) )
 ECHO 设置环境变量
 set "PATH=%PATH:;C:\Program Files\Microsoft VS Code;=;%"
