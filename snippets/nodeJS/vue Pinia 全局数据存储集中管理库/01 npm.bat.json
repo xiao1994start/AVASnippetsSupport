@@ -1,0 +1,11 @@
+{
+  "安装 pinia 全局数据存储集中管理库": {
+    "prefix": ["npm_vue_router"],
+    "body": [
+      "ECHO.* 安装 pinia 全局数据存储集中管理库 :: https://pinia.vuejs.ac.cn/",
+      "call npm i pinia --registry https://registry.npmmirror.com/",
+      ""
+    ],
+    "description": ["安装 pinia 全局数据存储集中管理库"]
+  }
+}
