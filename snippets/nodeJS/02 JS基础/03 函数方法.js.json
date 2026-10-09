@@ -15,18 +15,18 @@
     "description": ["function () {}"]
   },
   "() => ...": {
-    "prefix": ["new_lambda_return"],
-    "body": ["(${1:params}) => $0"],
+    "prefix": ["new_return_"],
+    "body": ["() => $0"],
     "description": ["() => ..."]
   },
   "() => {...}": {
     "prefix": ["new_lambda_"],
-    "body": ["(${1:params}) => {$0}"],
+    "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
   "const () => {...}": {
-    "prefix": ["new_arrow_lambda"],
-    "body": ["const ${1:name} = (${2:params}) => {$0}"],
+    "prefix": ["new_const_lambda_", "new_const_callback_"],
+    "body": ["const ${1:name} = (${2:}) => {$0}"],
     "description": ["const () => {...}"]
   },
   "export 导出声明": {

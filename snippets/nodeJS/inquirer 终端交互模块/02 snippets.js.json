@@ -8,7 +8,8 @@
     "prefix": ["impt_inquirer"],
     "body": [
       "import inquirer from 'inquirer' // * 引入 inquirer 终端交互模块",
-      "/** # inquirer 终端交互模块常用方法",
+      "/**",
+      " * # inquirer 终端交互模块常用方法",
       " * ! 异步提示用户输入 => await inquirer.prompt() || inquirer.prompt().then((answers) => console.log(answers))",
       " * # prompt 方法，实现 单项或多项顺序提示交互，返回交互结果：",
       " *   prompt([{type: \"select/input/confirm/checkbox/number\", name: \"返回结果的key\", message: \"提示信息\", ...参数}, {...}])",
