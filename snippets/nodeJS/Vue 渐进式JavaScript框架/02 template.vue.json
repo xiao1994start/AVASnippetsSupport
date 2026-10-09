@@ -1,4 +1,14 @@
 {
+  "true": {
+    "prefix": ["tt_true"],
+    "body": "true",
+    "description": ["true"]
+  },
+  "false": {
+    "prefix": ["ff_false"],
+    "body": "false",
+    "description": ["false"]
+  },
   "vue 快速创建模板": {
     "prefix": ["aaa_tmpl_vue"],
     "body": [
