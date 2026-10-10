@@ -35,7 +35,7 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 
 CD /D "%~dp0"
 ECHO.生成 package.json 文件
-call "%~dp0package.exe"
+call ECHO.|"%~dp0package.exe"
 
 ECHO 封装插件
 call vsce package

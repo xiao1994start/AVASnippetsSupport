@@ -1,0 +1,17 @@
+{
+  "ECHO 控制台输出": {
+    "prefix": ["cslg_", "pprt_"],
+    "body": ["ECHO.$0"],
+    "description": ["ECHO 控制台输出", "不添加内容默认输出`空行`"]
+  },
+  "ECHO | clip 设置剪切板内容": {
+    "prefix": ["clip_ECHO"],
+    "body": ["( ${1:ECHO 设置剪切板内容_第一行 & ECHO 设置剪切板内容_第二行} )| clip"],
+    "description": ["ECHO | clip 设置剪切板内容"]
+  },
+  "ECHO 管道键入": {
+    "prefix": ["call_echo_keyboard", "keyboard_input_ECHO"],
+    "body": ["call ECHO${1|.,y,点：回车_y：键盘Y|}|${2:外部可执行程序_脚本}"],
+    "description": ["ECHO 管道键入"]
+  }
+}

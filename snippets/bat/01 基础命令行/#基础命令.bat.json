@@ -9,11 +9,6 @@
     "body": ["setlocal EnableDelayedExpansion", "", "", "", "$0", "", "", "", "endlocal", ""],
     "description": ["开启延迟变量扩展"]
   },
-  "ECHO 控制台输出": {
-    "prefix": ["cslg_", "pprt_"],
-    "body": ["ECHO.$0"],
-    "description": ["ECHO 控制台输出", "不添加内容默认输出`空行`"]
-  },
   "暂停": {
     "prefix": ["pause", "pass"],
     "body": ["PAUSE"],
@@ -43,11 +38,6 @@
     "prefix": ["cmd_K"],
     "body": ["start CMD /K ${1:命令}"],
     "description": ["在新的终端窗口执行"]
-  },
-  "ECHO | clip 设置剪切板内容": {
-    "prefix": ["clip_ECHO"],
-    "body": ["( ${1:ECHO 设置剪切板内容_第一行 & ECHO 设置剪切板内容_第二行} )| clip"],
-    "description": ["ECHO | clip 设置剪切板内容"]
   },
   "使用记事本打开host文件": {
     "prefix": ["Host_Edit"],
