@@ -5,7 +5,7 @@
       "ECHO.* 安装 ElementPlus 组件库 :: https://element-plus.org/zh-CN/guide/installation",
       "call npm i element-plus --registry https://registry.npmmirror.com/",
       "@REM  # 【TypeScript】配置集成 ElementPlus 组件库 :: https://element-plus.org/zh-CN/guide/quickstart",
-      "@REM  - src/main.ts 引入 ElementPlus 组件库 >>",
+      "@REM  - src/main.ts 引入 ElementPlus 组件库：",
       "@REM    ...import...",
       "@REM    // import './style.css' // ! 注释其他样式文件",
       "@REM    import ElementPlus from 'element-plus' // * 引入 ElementPlus 组件库",

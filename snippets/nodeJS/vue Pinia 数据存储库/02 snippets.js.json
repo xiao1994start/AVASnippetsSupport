@@ -1,1 +1,52 @@
-{}
+{
+  "引入 pinia.defineStore 定义状态管理库 [ESM]": {
+    "prefix": ["impt_defineStore_-pinia"],
+    "body": [
+      "import { defineStore } from 'pinia' // * 引入 pinia 状态管理库",
+      "import { ref, reactive, computed } from 'vue'",
+      "// * 定义 pinia 状态管理库",
+      "const use_Imgapi_Store = defineStore('imgapi_URL', () => {",
+      "  // - 定义状态、数据、方法、计算属性（默认自带响应式）",
+      "  // * state 状态数据/状态管理数据",
+      "  // let 属性名 = ref||reactive(初始值)",
+      "  // ! 调用: 直接使用 pinia仓库名().属性名 即可，无需解构赋值，否则会丢失响应式",
+      "",
+      "  // * getters 计算属性（this.属性名 => 计算属性值）：返回计算属性值",
+      "  // let 计算属性名 = computed((参数) => {...计算体...;...this.仓库内部属性名...;return 计算属性值})",
+      "  // ! 调用: pinia仓库名().计算属性名",
+      "",
+      "  // * actions 方法/函数（this.属性名 => 获取仓库中的属性值）",
+      "  // function 函数名(params) {...函数体...;...this.仓库内部属性名...}",
+      "  // ! 调用: pinia仓库名().函数名()",
+      "",
+      "  return {  } // - 返回仓库属性、计算属性、方法",
+      "})",
+      "// = 导出 pinia 状态管理库",
+      "export default use_Imgapi_Store",
+      "/**",
+      " * # import { storeToRefs } from 'pinia' // * 引入 pinia.storeToRefs 方法将仓库属性转换为ref响应式数据",
+      " * = storeToRefs(仓库名()) => 将仓库属性转换为ref响应式数据",
+      " *   let { 属性名, 计算属性名, 函数名 } = storeToRefs(仓库名())",
+      " * # 订阅仓库 => 监听仓库属性变化，当仓库中任何一个数据发生变化时，回调函数执行",
+      " *   仓库名.$subscribe((mutate, state) => {",
+      " *     console.log(mutate) // 变化信息（不常用）",
+      " *     console.log(state) // 变化之后的属性值",
+      " *   })",
+      " */",
+      ""
+    ],
+    "description": ["引入 pinia.defineStore 定义状态管理库 [ESM]"]
+  },
+  "引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]": {
+    "prefix": ["impt_storeToRefs_-pinia"],
+    "body": [
+      "import { storeToRefs } from 'pinia' // * 引入 pinia.storeToRefs 方法将仓库属性转换为ref响应式数据",
+      "/** ",
+      " * # storeToRefs 方法将仓库属性转换为ref响应式数据",
+      " * let { 属性名, 计算属性名, 函数名 } = storeToRefs(仓库名())",
+      " */",
+      ""
+    ],
+    "description": ["引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]"]
+  }
+}

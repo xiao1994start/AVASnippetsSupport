@@ -1,6 +1,6 @@
 {
   "引入 Vue ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法": {
-    "prefix": ["impt_ref_reactive_-Vue"],
+    "prefix": ["impt_ref_reactive_-vue"],
     "body": [
       "import { ref, reactive, toRefs, toRef, type Ref, type Reactive } from 'vue' // * 引入 响应式 函数方法",
       "/**",
@@ -17,7 +17,7 @@
     "description": ["引入 Vue ref,reactive,toRefs,toRef 响应式 数据/对象 函数方法"]
   },
   "引入 Vue computed 关联计算属性 函数方法": {
-    "prefix": ["impt_computed_-Vue"],
+    "prefix": ["impt_computed_-vue"],
     "body": [
       "import { computed } from 'vue' // * 引入 computed 计算属性 函数方法",
       "/**",
@@ -31,7 +31,7 @@
     "description": ["引入 Vue computed 关联计算属性 函数方法"]
   },
   "引入 Vue watch 监听响应式数据 函数方法": {
-    "prefix": ["impt_watch_-Vue"],
+    "prefix": ["impt_watch_-vue"],
     "body": [
       "import { watch, watchEffect } from 'vue' // * 引入 监听响应式数据变化 函数方法",
       "/**",
