@@ -11,22 +11,22 @@
   },
   "function () {}": {
     "prefix": ["new_def_function_"],
-    "body": ["function ${1:name}(${2:params}) {$0}"],
+    "body": ["function ${1:fn_name}(${2:params}) {$0}"],
     "description": ["function () {}"]
   },
   "() => ...": {
-    "prefix": ["new_return_"],
-    "body": ["() => $0"],
+    "prefix": ["new_return_", "arrow_simple_callback_"],
+    "body": ["(${1:}) => $0"],
     "description": ["() => ..."]
   },
   "() => {...}": {
-    "prefix": ["new_lambda_"],
+    "prefix": ["new_lambda_", "arrow_callback_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
   "const () => {...}": {
-    "prefix": ["new_const_lambda_", "new_const_callback_"],
-    "body": ["const ${1:name} = (${2:}) => {$0}"],
+    "prefix": ["new_const_lambda_", "const_arrow_callback_"],
+    "body": ["const ${1:fn_name} = (${2:}) => {$0}"],
     "description": ["const () => {...}"]
   },
   "export 导出声明": {
@@ -36,7 +36,7 @@
   },
   "export 导出函数声明": {
     "prefix": ["ept_def_function_", "export_def_function_"],
-    "body": ["export function ${1:name}(${2:params}) {$0}"],
+    "body": ["export function ${1:fn_name}(${2:params}) {$0}"],
     "description": ["export 导出 函数声明"]
   },
   "export 导出模块 [CommonJS]": {

@@ -184,9 +184,8 @@
       "  - asyncio.run(async_func) 运行事件循环的异步协程函数"
     ]
   },
-
   "lambda:匿名函数": {
-    "prefix": ["new_lambda"],
+    "prefix": ["new_lambda_", "arrow_callback_"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },
