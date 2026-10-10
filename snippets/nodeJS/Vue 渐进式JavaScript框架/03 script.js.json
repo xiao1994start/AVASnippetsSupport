@@ -72,9 +72,14 @@
     "body": ["withDefaults( ${1:props_defineProps}, ${2:defaults_默认值} )"],
     "description": ["withDefaults 指定默认值"]
   },
-  "断言 $event.target as HTMLInputElement": {
+  "HTMLInputElement": {
     "prefix": ["as_HTMLInputElement"],
     "body": ["as HTMLInputElement"],
     "description": ["断言 $event.target as HTMLInputElement"]
+  },
+  "ref(localStorage.getItem)": {
+    "prefix": ["let_ref_localStorage_getItem_"],
+    "body": ["let ${1:属性名} = ref(localStorage.getItem('${1:属性名}') ?? JSON.stringify(${2:value_数据_对象}))", ""],
+    "description": ["获取并定义响应式浏览器本地数据"]
   }
 }
