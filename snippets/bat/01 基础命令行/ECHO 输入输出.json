@@ -13,5 +13,21 @@
     "prefix": ["call_echo_keyboard", "keyboard_input_ECHO"],
     "body": ["call ECHO${1|.,y,点：回车_y：键盘Y|}|${2:外部可执行程序_脚本}"],
     "description": ["ECHO 管道键入"]
+  },
+  "ECHO 写入文件": {
+    "prefix": "ECHO_write_file_tmpl_",
+    "body": [
+      "set \"file=${1:output.txt}\"",
+      "@REM ! 特殊字符：^<、^>、^&、^|、^>、%%",
+      "(",
+      "    ECHO.第一行：Hello",
+      "    ECHO.第二行：World",
+      "    ECHO.",
+      "    ECHO.第四行：特殊字符 ^<tag^> ^& ^| ^>",
+      "    ECHO.第五行：当前用户 %USERNAME%",
+      "    ECHO.第六行：百分号 100%%",
+      ") > \"%file%\""
+    ],
+    "description": "ECHO 写入文件"
   }
 }
