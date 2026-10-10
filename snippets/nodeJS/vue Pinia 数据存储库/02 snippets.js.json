@@ -9,6 +9,12 @@
       "  // - 定义状态、数据、方法、计算属性（默认自带响应式）",
       "  // * state 状态数据/状态管理数据",
       "  // let 属性名 = ref||reactive(初始值)",
+      "  // * localStorage 本地化数据 =>",
+      "  //   localStorage.getItem('属性名') 获取本地化数据",
+      "  //     返回字符串类型|null，非字符串类型数据需要使用 JSON.parse() 方法解析为对象类型",
+      "  //     JSON.parse(...getItem() ?? 'true|false|对象字符串') 使用 ?? 运算符处理 null 值",
+      "  //   localStorage.setItem('属性名', 属性值) 设置属性值到本地化数据，配合 JSON.stringify() 方法将对象类型转换为字符串类型",
+      "  //     配合 仓库名.$subscribe 方法监听仓库属性变化，实现数据同步更新",
       "  // ! 调用: 直接使用 pinia仓库名().属性名 即可，无需解构赋值，否则会丢失响应式",
       "",
       "  // * getters 计算属性（this.属性名 => 计算属性值）：返回计算属性值",
@@ -30,9 +36,11 @@
       " *   let { 属性名, 计算属性名 } = storeToRefs(仓库名())",
       " *   let { 函数名 } = 仓库名()",
       " * # 订阅仓库 => 监听仓库属性变化，当仓库中任何一个数据发生变化时，回调函数执行",
-      " *   仓库名.$subscribe((mutate, state) => {",
-      " *     console.log(mutate) // 变化信息（不常用）",
-      " *     console.log(state) // 变化之后的属性值",
+      " *   仓库名.$subscribe((mutation, state) => {",
+      " *     console.log('仓库更新:', mutation, '状态:', state)",
+      " *     * 本地存储状态同步更新",
+      " *     localStorage.setItem('属性名', JSON.stringify(state.属性名)) // = 同步对象数据",
+      " *     localStorage.setItem('属性名', state.属性名) // = 同步字符串数据",
       " *   })",
       " */",
       ""
@@ -51,5 +59,14 @@
       ""
     ],
     "description": ["引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]"]
+  },
+  "pinia 订阅仓库监听": {
+    "prefix": ["pinia_store_subscribe_="],
+    "body": [
+      "Store_pinia仓库对象.$subscribe((mutation, state) => {",
+      "  console.log('有关状态变更的信息:', mutation, '当前状态对象:', state)",
+      "})"
+    ],
+    "description": ["pinia 订阅仓库监听"]
   }
 }
