@@ -68,6 +68,7 @@
     "body": [
       "Store_pinia仓库对象.$subscribe((mutation, state) => {",
       "  console.log('有关状态变更的信息:', mutation, '当前状态对象:', state)",
+      "  // - localStorage.setItem('pinia仓库对象', JSON.stringify(state.pinia仓库对象)) // 本地存储状态同步更新",
       "})"
     ],
     "description": ["pinia 订阅仓库监听"]
