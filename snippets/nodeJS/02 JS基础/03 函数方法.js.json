@@ -70,7 +70,7 @@
     "description": ["throw 抛出自定义异常"]
   },
   "setTimeout": {
-    "prefix": ["settimeout_"],
+    "prefix": ["settimeout_", "time_sleep_"],
     "body": ["setTimeout(() => {", "  $0", "}, ${1:timeout});"],
     "description": ["setTimeout"]
   }
