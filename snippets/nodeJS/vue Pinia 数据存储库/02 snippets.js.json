@@ -63,14 +63,17 @@
     ],
     "description": ["引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]"]
   },
-  "pinia 订阅仓库监听": {
+  "pinia 仓库订阅/监听": {
     "prefix": ["$subscribe_=-pinia"],
     "body": [
-      "Store_pinia仓库对象.$subscribe((mutation, state) => {",
+      "${1:Store_pinia仓库对象.}\\$subscribe((mutation, state) => {",
       "  console.log('有关状态变更的信息:', mutation, '当前状态对象:', state)",
-      "  // - localStorage.setItem('pinia仓库对象', JSON.stringify(state.pinia仓库对象)) // 本地存储状态同步更新",
-      "})"
+      "  // - 本地存储状态同步更新：",
+      "  // localStorage.setItem('pinia仓库对象', JSON.stringify(state.pinia仓库对象))",
+      "  $0",
+      "})",
+      ""
     ],
-    "description": ["pinia 订阅仓库监听"]
+    "description": ["pinia 仓库订阅/监听"]
   }
 }
