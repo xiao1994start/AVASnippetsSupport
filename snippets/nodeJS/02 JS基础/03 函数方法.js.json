@@ -15,17 +15,17 @@
     "description": ["function () {}"]
   },
   "() => ...": {
-    "prefix": ["new_return_", "arrow_simple_callback_"],
+    "prefix": ["new_return_", "arrow_callback_return_"],
     "body": ["(${1:}) => $0"],
     "description": ["() => ..."]
   },
   "() => {...}": {
-    "prefix": ["new_lambda_", "arrow_callback_"],
+    "prefix": ["new_lambda_", "arrow_lambda_", "arrow_callback_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
   "const () => {...}": {
-    "prefix": ["new_const_lambda_", "const_arrow_callback_"],
+    "prefix": ["new_const_lambda_", "const_arrow_lambda_", "const_arrow_callback_"],
     "body": ["const ${1:name} = (${2:}) => {$0}"],
     "description": ["const () => {...}"]
   },
