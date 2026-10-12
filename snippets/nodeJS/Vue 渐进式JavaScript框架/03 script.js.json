@@ -64,7 +64,7 @@
   },
   "defineProps 接收属性/方法_类型限定": {
     "prefix": ["defineProps_type"],
-    "body": ["defineProps<{${1:属性名: 类型}}>()"],
+    "body": ["defineProps<{ ${1:属性名: 类型} }>()"],
     "description": ["defineProps 接收属性/方法_类型限定"]
   },
   "withDefaults 指定默认值": {
