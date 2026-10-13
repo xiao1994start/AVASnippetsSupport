@@ -39,10 +39,10 @@
     "body": ["module.exports = {$0}"],
     "description": ["export 导出 模块 [CommonJS]"]
   },
-  "export 导出模块 [ESM]": {
+  "export 默认导出 [ESM]": {
     "prefix": ["export_default_", "edf_"],
     "body": ["export default {$0}"],
-    "description": ["export 导出 模块 [ESM]"]
+    "description": ["export 默认导出 [ESM]"]
   },
   "const ... = require('...') 导入依赖 [CommonJS]": {
     "prefix": ["new_require_"],
