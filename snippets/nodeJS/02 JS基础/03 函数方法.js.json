@@ -54,6 +54,21 @@
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   },
+  "type 原始类型声明": {
+    "prefix": ["type_", "tp_"],
+    "body": ["type ${1:Type_Name} = ${2:Type}"],
+    "description": ["type 原始类型声明（不能重复声明合并）"]
+  },
+  "interface 对象类型声明": {
+    "prefix": ["interface_", "inf_"],
+    "body": ["interface ${1:Interface_Name} { ${2:Interface_Properties}: ${3:Type} }"],
+    "description": ["interface 对象类型声明（支持重复声明自动合并）"]
+  },
+  "typeof 类型查询": {
+    "prefix": ["typeof_", "tpof_"],
+    "body": ["typeof ${1:value_变量}"],
+    "description": ["typeof 类型查询"]
+  },
   "throw 抛出异常": {
     "prefix": ["throw_err"],
     "body": ["throw ${1:err}"],
