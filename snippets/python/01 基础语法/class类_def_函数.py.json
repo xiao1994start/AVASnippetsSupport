@@ -1,6 +1,6 @@
 {
   "创建 class Config 单实例对象": {
-    "prefix": ["new_class_Config"],
+    "prefix": ["new_class_Config_", "nc_Config"],
     "body": [
       "class Config:",
       "    \"\"\"# 配置管理器（单例模式）",
@@ -83,7 +83,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "创建 class 单实例对象": {
-    "prefix": ["new_class_def_cls"],
+    "prefix": ["new_class_cls_", "nc_cls"],
     "body": [
       "class ${1:NewClass}:",
       "    # ==================== 单例相关 ====================",
@@ -102,7 +102,7 @@
     "description": ["创建 class 单实例对象"]
   },
   "def __new__(cls) 单例模式": {
-    "prefix": ["new_def_cls"],
+    "prefix": ["class_def_new_cls_"],
     "body": [
       "_instance = None",
       "def __new__(cls):",
@@ -114,7 +114,7 @@
     "description": ["def __new__(cls) 单例模式"]
   },
   "创建 class 对象": {
-    "prefix": ["new_class_init"],
+    "prefix": ["new_class_init", "nc_init"],
     "body": [
       "class ${1:NewObject}:",
       "    # ==================== 全局状态存储 ====================",
@@ -131,22 +131,22 @@
     "description": ["创建 class 对象"]
   },
   "class 初始化(继承父类)": {
-    "prefix": ["new_def_init_super_init"],
+    "prefix": ["class_def_init_super_init_"],
     "body": ["def __init__(self) -> None:", "    $0", "    super().__init__()", ""],
     "description": ["class 初始化(继承父类)"]
   },
   "class super().__init__() 继承父类": {
-    "prefix": ["super_init"],
+    "prefix": ["super_init_"],
     "body": ["super().__init__()", ""],
     "description": ["class 继承父类"]
   },
   "class类self": {
-    "prefix": ["slf"],
+    "prefix": ["slf_"],
     "body": ["self$0"],
     "description": ["class类self"]
   },
   "创建class - def 函数": {
-    "prefix": ["new_def_self"],
+    "prefix": ["new_class_def_function_", "ncdf_"],
     "body": ["def ${1:name}(self):", "    $0", "    return"],
     "description": ["创建class - def 函数"]
   },
@@ -156,7 +156,7 @@
     "description": ["创建class - async def 函数"]
   },
   "创建def函数": {
-    "prefix": ["new_def_function"],
+    "prefix": ["new_def_function_", "ndf_"],
     "body": ["def ${1:name}():", "    $0", "    return"],
     "description": ["创建def函数"]
   },
@@ -185,7 +185,7 @@
     ]
   },
   "lambda:匿名函数": {
-    "prefix": ["new_lambda_", "arrow_lambda_", "arrow_callback_"],
+    "prefix": ["new_lambda_", "adf_"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
   },
