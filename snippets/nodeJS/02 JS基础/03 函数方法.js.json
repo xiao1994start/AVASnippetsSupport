@@ -15,12 +15,12 @@
     "description": ["function () {}"]
   },
   "() => ...": {
-    "prefix": ["new_return_", "adr_"],
+    "prefix": ["new_return_", "nadr_"],
     "body": ["(${1:}) => $0"],
     "description": ["() => ..."]
   },
   "() => {...}": {
-    "prefix": ["new_lambda_", "adf_"],
+    "prefix": ["new_lambda_", "nadf_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
