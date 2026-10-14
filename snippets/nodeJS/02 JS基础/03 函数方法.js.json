@@ -93,11 +93,6 @@
     ],
     "description": ["class implements 接口约束类"]
   },
-  "extends 继承关键字": {
-    "prefix": ["extends_", "extds_"],
-    "body": ["extends ${1:继承}"],
-    "description": ["extends 继承关键字"]
-  },
   "export 导出声明": {
     "prefix": ["export_", "ept_"],
     "body": ["export $0"],
@@ -182,5 +177,10 @@
     "prefix": ["settimeout_", "time_sleep_"],
     "body": ["setTimeout(() => {", "  $0", "}, ${1:timeout});"],
     "description": ["setTimeout"]
+  },
+  "extends 继承关键字": {
+    "prefix": ["extends_", "extds_"],
+    "body": ["extends ${1:继承}"],
+    "description": ["extends 继承关键字"]
   }
 }
