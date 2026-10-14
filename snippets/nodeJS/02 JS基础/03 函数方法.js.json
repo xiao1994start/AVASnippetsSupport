@@ -94,7 +94,7 @@
     "description": ["class implements 接口约束类"]
   },
   "extends 继承关键字": {
-    "prefix": ["extends_", "ext"],
+    "prefix": ["extends_", "extds_"],
     "body": ["extends ${1:继承}"],
     "description": ["extends 继承关键字"]
   },
