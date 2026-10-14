@@ -9,10 +9,10 @@
     "body": ["await ${1:}"],
     "description": ["await 等待Promise完成"]
   },
-  "function () {}": {
+  "function () {...}": {
     "prefix": ["new_def_function_", "ndf_"],
     "body": ["function ${1:name}(${2:params}) {$0}"],
-    "description": ["function () {}"]
+    "description": ["function () {...}"]
   },
   "() => ...": {
     "prefix": ["new_lambda_return_", "nadr_"],
@@ -28,6 +28,46 @@
     "prefix": ["new_lambda_", "nadf_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
+  },
+  "class 类定义": {
+    "prefix": ["new_class_"],
+    "body": [
+      "class name {",
+      "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // 使用 this.属性名 来访问属性",
+      "",
+      "  // # 构造函数 => constructor( 参数名: 参数类型 ) { 初始化属性 }",
+      "  constructor() {}",
+      "",
+      "  // # 类方法 => 方法名() {}",
+      "",
+      "  // = 创建实例对象 => const/let instance = new 类名()",
+      "}",
+      ""
+    ],
+    "description": ["class 类定义"]
+  },
+  "class extends 类继承": {
+    "prefix": ["new_class_extends_"],
+    "body": [
+      "class name extends ParentClassName {",
+      "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // 使用 this.属性名 来访问属性",
+      "",
+      "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
+      "  constructor() {",
+      "    super()",
+      "  }",
+      "",
+      "  // # 重写父类的方法 => override 方法名() { super.继承方法() }",
+      "",
+      "  // # 类方法 => 方法名() {  }",
+      "",
+      "  // = 创建实例对象 => const/let instance = new 类名()",
+      "}",
+      ""
+    ],
+    "description": ["class extends 类继承"]
   },
   "export 导出声明": {
     "prefix": ["export_", "ept_"],

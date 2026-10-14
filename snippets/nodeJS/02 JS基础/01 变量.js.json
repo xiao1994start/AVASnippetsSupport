@@ -10,17 +10,17 @@
     "description": ["false"]
   },
   "var 变量-函数作用域": {
-    "prefix": ["new_var"],
+    "prefix": ["new_var_", "nv_"],
     "body": ["var $0"],
     "description": ["var 变量-函数作用域"]
   },
   "let 变量-块级作用域": {
-    "prefix": ["new_let"],
+    "prefix": ["new_let_", "nl_"],
     "body": ["let $0"],
     "description": ["let 变量-块级作用域"]
   },
   "const 常量-块级作用域": {
-    "prefix": ["new_const"],
+    "prefix": ["new_const_", "nc_"],
     "body": ["const $0"],
     "description": ["const 常量-块级作用域"]
   },
