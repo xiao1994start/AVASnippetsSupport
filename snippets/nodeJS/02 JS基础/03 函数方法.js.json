@@ -15,9 +15,14 @@
     "description": ["function () {}"]
   },
   "() => ...": {
-    "prefix": ["new_return_", "nadr_"],
+    "prefix": ["new_lambda_return_", "nadr_"],
     "body": ["(${1:}) => $0"],
     "description": ["() => ..."]
+  },
+  "() => import(...)": {
+    "prefix": ["new_lambda_import_", "nadi_"],
+    "body": ["() => import($0)"],
+    "description": ["() => import(...)"]
   },
   "() => {...}": {
     "prefix": ["new_lambda_", "nadf_"],
