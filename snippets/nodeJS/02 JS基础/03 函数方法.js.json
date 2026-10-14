@@ -53,7 +53,7 @@
       "class name extends ParentClassName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
       "  // 使用 this.属性名 来访问属性",
-      "",
+      "  $0",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
       "  constructor() {",
       "    super()",
@@ -61,7 +61,7 @@
       "",
       "  // # 重写父类的方法 => override 方法名() { super.继承方法() }",
       "",
-      "  // # 类方法 => 方法名() {  }",
+      "  // # 类方法 => 方法名() { ... }",
       "",
       "  // = 创建实例对象 => const/let instance = new 类名()",
       "}",
@@ -75,20 +75,28 @@
       "class name implements interfaceName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
       "  // 使用 this.属性名 来访问属性",
+      "    $0",
       "",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
       "  constructor() {",
-      "    super()",
+      "",
       "  }",
       "",
-      "  // # 类方法 => 方法名() {  }",
+      "  // # 接口方法 => 方法名() { ... }",
       "  method(): void {}",
+      "",
+      "  // # 类方法（扩展接口规定以外的方法） => 方法名() { ... }",
       "",
       "  // = 创建实例对象 => const/let instance = new 类名()",
       "}",
       ""
     ],
     "description": ["class implements 接口约束类"]
+  },
+  "extends 继承关键字": {
+    "prefix": ["extends_", "ext"],
+    "body": ["extends ${1:继承}"],
+    "description": ["extends 继承关键字"]
   },
   "export 导出声明": {
     "prefix": ["export_", "ept_"],
@@ -116,18 +124,38 @@
     "description": ["import 导入依赖 [ESM]"]
   },
   "type 定义类型": {
-    "prefix": ["type_", "typ_"],
-    "body": ["type ${1:Type_Name} = ${2:Type}"],
+    "prefix": ["type_", "tp_"],
+    "body": [
+      "type Type_Name = {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Type_Properties: Type",
+      "}",
+      ""
+    ],
     "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
   },
   "typeof 类型查询": {
-    "prefix": ["typeof_", "typof_"],
+    "prefix": ["typeof_", "tpof_"],
     "body": ["typeof ${1:value_变量}"],
     "description": ["typeof 类型查询"]
   },
   "interface 接口定义结构": {
-    "prefix": ["interface_", "inf_"],
-    "body": ["interface ${1:Interface_Name} { ${2:Interface_Properties}: ${3:Type} }"],
+    "prefix": ["interface_", "intf_"],
+    "body": [
+      "interface Interface_Name {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Interface_Properties: Type",
+      "}",
+      ""
+    ],
     "description": ["interface 接口定义结构（支持重复声明自动合并）"]
   },
   "this 访问属性": {
