@@ -29,11 +29,6 @@
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
-  "const () => {...}": {
-    "prefix": ["new_const_lambda_", "ncadf_"],
-    "body": ["const ${1:name} = (${2:}) => {$0}"],
-    "description": ["const () => {...}"]
-  },
   "export 导出声明": {
     "prefix": ["export_", "ept_"],
     "body": ["export $0"],
