@@ -94,22 +94,22 @@
     "description": ["class implements 接口约束类"]
   },
   "export 导出声明": {
-    "prefix": ["export_", "ept_"],
+    "prefix": ["export_", "expt_"],
     "body": ["export $0"],
     "description": ["export 导出 声明"]
   },
   "export 导出模块 [CommonJS]": {
-    "prefix": ["module_exports_"],
+    "prefix": ["module_exports_", "mod_expt_"],
     "body": ["module.exports = {$0}"],
     "description": ["export 导出 模块 [CommonJS]"]
   },
   "export 默认导出 [ESM]": {
-    "prefix": ["export_default_", "edf_"],
+    "prefix": ["export_default_", "expt_def_"],
     "body": ["export default {$0}"],
     "description": ["export 默认导出 [ESM]"]
   },
   "const ... = require('...') 导入依赖 [CommonJS]": {
-    "prefix": ["new_require_"],
+    "prefix": ["new_require_", "nreq_"],
     "body": ["const ${2:name} = require('${1:JS_path}')"],
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
