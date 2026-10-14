@@ -97,25 +97,35 @@
   "type 定义类型": {
     "prefix": ["type_", "typ_"],
     "body": ["type ${1:Type_Name} = ${2:Type}"],
-    "description": ["type 定义类型（不能重复声明合并）"]
-  },
-  "interface 定义类型": {
-    "prefix": ["interface_", "inf_"],
-    "body": ["interface ${1:Interface_Name} { ${2:Interface_Properties}: ${3:Type} }"],
-    "description": ["interface 定义类型（支持重复声明自动合并）"]
+    "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
   },
   "typeof 类型查询": {
     "prefix": ["typeof_", "typof_"],
     "body": ["typeof ${1:value_变量}"],
     "description": ["typeof 类型查询"]
   },
+  "interface 接口定义结构": {
+    "prefix": ["interface_", "inf_"],
+    "body": ["interface ${1:Interface_Name} { ${2:Interface_Properties}: ${3:Type} }"],
+    "description": ["interface 接口定义结构（支持重复声明自动合并）"]
+  },
+  "this 访问属性": {
+    "prefix": ["this_", "tis_"],
+    "body": ["this.${1:属性名}"],
+    "description": ["this 访问属性"]
+  },
+  "then 处理成功回调": {
+    "prefix": ["then_", "tn_"],
+    "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
+    "description": ["then 处理成功回调"]
+  },
   "throw 抛出异常": {
-    "prefix": ["throw_err"],
+    "prefix": ["throw_err", "twer_"],
     "body": ["throw ${1:err}"],
     "description": ["throw 抛出异常"]
   },
   "throw 抛出自定义异常": {
-    "prefix": ["throw_new_Error"],
+    "prefix": ["throw_new_Error_", "twnEr_"],
     "body": ["throw new Error(`${1:example_Err}`)"],
     "description": ["throw 抛出自定义异常"]
   },
