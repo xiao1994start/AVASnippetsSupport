@@ -69,6 +69,27 @@
     ],
     "description": ["class extends 类继承"]
   },
+  "class implements 接口约束类": {
+    "prefix": ["new_class_implements_"],
+    "body": [
+      "class name implements interfaceName {",
+      "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // 使用 this.属性名 来访问属性",
+      "",
+      "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
+      "  constructor() {",
+      "    super()",
+      "  }",
+      "",
+      "  // # 类方法 => 方法名() {  }",
+      "  method(): void {}",
+      "",
+      "  // = 创建实例对象 => const/let instance = new 类名()",
+      "}",
+      ""
+    ],
+    "description": ["class implements 接口约束类"]
+  },
   "export 导出声明": {
     "prefix": ["export_", "ept_"],
     "body": ["export $0"],
