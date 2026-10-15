@@ -1,7 +1,7 @@
 {
   "引入 path 路径模块 [CommonJS]": {
     "prefix": ["req_path"],
-    "body": ["const path = require('path') // * 引入 path 路径模块", "", "$0"],
+    "body": ["const path = require('path') // * 引入 path 路径模块", "", ""],
     "description": ["引入 path 路径模块 [CommonJS]"]
   },
   "引入 path 路径模块 [ESM]": {

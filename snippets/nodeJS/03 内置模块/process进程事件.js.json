@@ -25,7 +25,7 @@
       "  .join(';')",
       "process.env.PATH = [new_env, system_env].join(';')",
       "",
-      "$0"
+      ""
     ],
     "description": ["配置子进程的 PATH 环境变量"]
   },

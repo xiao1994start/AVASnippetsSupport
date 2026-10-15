@@ -1,4 +1,29 @@
 {
+  "const ... = require('...') 导入依赖 [CommonJS]": {
+    "prefix": ["new_require_", "nreq_"],
+    "body": ["const ${2:name} = require('${1:JS_path}')"],
+    "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
+  },
+  "import 导入依赖 [ESM]": {
+    "prefix": ["impt_"],
+    "body": ["import ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入依赖 [ESM]"]
+  },
+  "export 导出声明": {
+    "prefix": ["export_", "expt_"],
+    "body": ["export $0"],
+    "description": ["export 导出 声明"]
+  },
+  "export 导出模块 [CommonJS]": {
+    "prefix": ["module_exports_", "mod_expt_"],
+    "body": ["module.exports = {$0}"],
+    "description": ["export 导出 模块 [CommonJS]"]
+  },
+  "export 默认导出 [ESM]": {
+    "prefix": ["export_default_", "expt_def_"],
+    "body": ["export default {$0}"],
+    "description": ["export 默认导出 [ESM]"]
+  },
   "async 异步声明": {
     "prefix": ["async_", "asc_"],
     "body": ["async ${1:}"],
@@ -8,6 +33,31 @@
     "prefix": ["await_", "awt_"],
     "body": ["await ${1:}"],
     "description": ["await 等待Promise完成"]
+  },
+  "this 访问属性": {
+    "prefix": ["this_", "tis_"],
+    "body": ["this.${1:属性名}"],
+    "description": ["this 访问属性"]
+  },
+  "then 处理成功回调": {
+    "prefix": ["then_", "tn_"],
+    "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
+    "description": ["then 处理成功回调"]
+  },
+  "throw 抛出异常": {
+    "prefix": ["throw_err", "twer_"],
+    "body": ["throw ${1:err}"],
+    "description": ["throw 抛出异常"]
+  },
+  "throw 抛出自定义异常": {
+    "prefix": ["throw_new_Error_", "twnEr_"],
+    "body": ["throw new Error(`${1:example_Err}`)"],
+    "description": ["throw 抛出自定义异常"]
+  },
+  "extends 继承关键字": {
+    "prefix": ["extends_", "extds_"],
+    "body": ["extends ${1:继承}"],
+    "description": ["extends 继承关键字"]
   },
   "function () {...}": {
     "prefix": ["new_def_function_", "ndf_"],
@@ -28,6 +78,11 @@
     "prefix": ["new_lambda_", "nadf_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
+  },
+  "const () => {...}": {
+    "prefix": ["new_const_lambda_", "ncadf_"],
+    "body": ["const ${1:name} = (${2:params}) => {", "  $0", "}"],
+    "description": ["const () => {...}"]
   },
   "class 类定义": {
     "prefix": ["new_class_"],
@@ -93,31 +148,6 @@
     ],
     "description": ["class implements 接口约束类"]
   },
-  "export 导出声明": {
-    "prefix": ["export_", "expt_"],
-    "body": ["export $0"],
-    "description": ["export 导出 声明"]
-  },
-  "export 导出模块 [CommonJS]": {
-    "prefix": ["module_exports_", "mod_expt_"],
-    "body": ["module.exports = {$0}"],
-    "description": ["export 导出 模块 [CommonJS]"]
-  },
-  "export 默认导出 [ESM]": {
-    "prefix": ["export_default_", "expt_def_"],
-    "body": ["export default {$0}"],
-    "description": ["export 默认导出 [ESM]"]
-  },
-  "const ... = require('...') 导入依赖 [CommonJS]": {
-    "prefix": ["new_require_", "nreq_"],
-    "body": ["const ${2:name} = require('${1:JS_path}')"],
-    "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
-  },
-  "import 导入依赖 [ESM]": {
-    "prefix": ["impt_"],
-    "body": ["import ${2:module_name} from '${1:module}'"],
-    "description": ["import 导入依赖 [ESM]"]
-  },
   "type 定义类型": {
     "prefix": ["type_", "tp_"],
     "body": [
@@ -153,34 +183,9 @@
     ],
     "description": ["interface 接口定义结构（支持重复声明自动合并）"]
   },
-  "this 访问属性": {
-    "prefix": ["this_", "tis_"],
-    "body": ["this.${1:属性名}"],
-    "description": ["this 访问属性"]
-  },
-  "then 处理成功回调": {
-    "prefix": ["then_", "tn_"],
-    "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
-    "description": ["then 处理成功回调"]
-  },
-  "throw 抛出异常": {
-    "prefix": ["throw_err", "twer_"],
-    "body": ["throw ${1:err}"],
-    "description": ["throw 抛出异常"]
-  },
-  "throw 抛出自定义异常": {
-    "prefix": ["throw_new_Error_", "twnEr_"],
-    "body": ["throw new Error(`${1:example_Err}`)"],
-    "description": ["throw 抛出自定义异常"]
-  },
   "setTimeout": {
     "prefix": ["settimeout_", "time_sleep_"],
     "body": ["setTimeout(() => {", "  $0", "}, ${1:timeout});"],
     "description": ["setTimeout"]
-  },
-  "extends 继承关键字": {
-    "prefix": ["extends_", "extds_"],
-    "body": ["extends ${1:继承}"],
-    "description": ["extends 继承关键字"]
   }
 }
