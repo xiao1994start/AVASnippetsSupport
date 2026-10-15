@@ -35,12 +35,12 @@
     "description": ["await 等待Promise完成"]
   },
   "this 访问属性": {
-    "prefix": ["this_", "tis_"],
+    "prefix": ["this_", "thi_"],
     "body": ["this.${1:属性名}"],
     "description": ["this 访问属性"]
   },
   "then 处理成功回调": {
-    "prefix": ["then_", "tn_"],
+    "prefix": ["then_", "thn_"],
     "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
     "description": ["then 处理成功回调"]
   },
