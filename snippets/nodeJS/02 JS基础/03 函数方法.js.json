@@ -34,7 +34,7 @@
     "body": [
       "class name {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
-      "  // 使用 this.属性名 来访问属性",
+      "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { 初始化属性 }",
       "  constructor() {}",
@@ -52,7 +52,7 @@
     "body": [
       "class name extends ParentClassName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
-      "  // 使用 this.属性名 来访问属性",
+      "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "  $0",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
       "  constructor() {",
@@ -74,7 +74,7 @@
     "body": [
       "class name implements interfaceName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
-      "  // 使用 this.属性名 来访问属性",
+      "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "    $0",
       "",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
