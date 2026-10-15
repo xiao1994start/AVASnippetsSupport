@@ -34,6 +34,41 @@
     "body": ["await ${1:}"],
     "description": ["await 等待Promise完成"]
   },
+  "type 定义类型": {
+    "prefix": ["type_", "tp_"],
+    "body": [
+      "type Type_Name = {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Type_Properties: Type",
+      "}",
+      ""
+    ],
+    "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
+  },
+  "typeof 类型查询": {
+    "prefix": ["typeof_", "tpof_"],
+    "body": ["typeof ${1:value_变量}"],
+    "description": ["typeof 类型查询"]
+  },
+  "interface 接口定义结构": {
+    "prefix": ["interface_", "intf_"],
+    "body": [
+      "interface Interface_Name {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Interface_Properties: Type",
+      "}",
+      ""
+    ],
+    "description": ["interface 接口定义结构（支持重复声明自动合并）"]
+  },
   "this 访问属性": {
     "prefix": ["this_", "thi_"],
     "body": ["this.${1:属性名}"],
@@ -45,12 +80,12 @@
     "description": ["then 处理成功回调"]
   },
   "throw 抛出异常": {
-    "prefix": ["throw_err", "twer_"],
+    "prefix": ["throw_err", "thw_"],
     "body": ["throw ${1:err}"],
     "description": ["throw 抛出异常"]
   },
   "throw 抛出自定义异常": {
-    "prefix": ["throw_new_Error_", "twnEr_"],
+    "prefix": ["throw_new_Error_", "thwne_"],
     "body": ["throw new Error(`${1:example_Err}`)"],
     "description": ["throw 抛出自定义异常"]
   },
@@ -148,40 +183,24 @@
     ],
     "description": ["class implements 接口约束类"]
   },
-  "type 定义类型": {
-    "prefix": ["type_", "tp_"],
+  "decorator 声明装饰器": {
+    "prefix": ["new_def_function_decorator_", "ndf_dec_"],
     "body": [
-      "type Type_Name = {",
-      "  // * 属性: 属性类型",
-      "  // * readonly 只读属性: 只读属性类型",
-      "  // * 可选属性?: 可选属性类型",
-      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
-      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
-      "  Type_Properties: Type",
+      "function class_Decorator(target: new (...args: any[]) => any) {",
+      "  /**",
+      "   * # 类装饰器: 修改类内部已有的行为或属性",
+      "   * @param {new (...args: any[]) => any} target{可构造类型} 被装饰的目标类对象（装饰器自动传递该参数）",
+      "   * @use target.prototype.方法名 = 方法体 => 作用域类的实例对象，用于添加类的实例方法或属性",
+      "   * @调用 在目标对象上一行添加 @装饰器 即可，不需要传递 target 参数",
+      "   * @报错 出现 @ 符号报错，使用 tsx 编译工具运行 ( npm i tsx -g )",
+      "   */",
+      "  target.prototype.toString = function () {",
+      "    return JSON.stringify(this)",
+      "  }",
       "}",
       ""
     ],
-    "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
-  },
-  "typeof 类型查询": {
-    "prefix": ["typeof_", "tpof_"],
-    "body": ["typeof ${1:value_变量}"],
-    "description": ["typeof 类型查询"]
-  },
-  "interface 接口定义结构": {
-    "prefix": ["interface_", "intf_"],
-    "body": [
-      "interface Interface_Name {",
-      "  // * 属性: 属性类型",
-      "  // * readonly 只读属性: 只读属性类型",
-      "  // * 可选属性?: 可选属性类型",
-      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
-      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
-      "  Interface_Properties: Type",
-      "}",
-      ""
-    ],
-    "description": ["interface 接口定义结构（支持重复声明自动合并）"]
+    "description": ["decorator 声明装饰器"]
   },
   "setTimeout": {
     "prefix": ["settimeout_", "time_sleep_"],
