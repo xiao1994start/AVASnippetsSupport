@@ -100,23 +100,23 @@
     "description": ["function () {...}"]
   },
   "() => ...": {
-    "prefix": ["new_lambda_return_", "nadr_"],
+    "prefix": ["new_lambda_", "nl_"],
     "body": ["(${1:}) => $0"],
     "description": ["() => ..."]
   },
   "() => import(...)": {
-    "prefix": ["new_lambda_import_", "nadi_"],
+    "prefix": ["new_lambda_import_", "nli_"],
     "body": ["() => import($0)"],
     "description": ["() => import(...)"]
   },
   "() => {...}": {
-    "prefix": ["new_lambda_", "nadf_"],
+    "prefix": ["new_arrow_def_function_", "nadf_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
   },
   "const () => {...}": {
     "prefix": ["new_const_lambda_", "ncadf_"],
-    "body": ["const ${1:name} = (${2:params}) => {", "  $0", "}"],
+    "body": ["const ${1:name} = (${2:params}) => {$0}"],
     "description": ["const () => {...}"]
   },
   "class 类定义": {
