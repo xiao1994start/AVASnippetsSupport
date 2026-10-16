@@ -115,7 +115,7 @@
     "description": ["() => {...}"]
   },
   "const () => {...}": {
-    "prefix": ["new_const_lambda_", "ncadf_"],
+    "prefix": ["new_const_arrow_def_function_", "ncadf_"],
     "body": ["const ${1:name} = (${2:params}) => {$0}"],
     "description": ["const () => {...}"]
   },
