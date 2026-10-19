@@ -4,7 +4,7 @@
     "body": ["const fs = require('fs') // * 引入 fs 文件系统模块", "", ""],
     "description": ["引入 fs 文件系统模块 [CommonJS]"]
   },
-  "引入 fs 文件系统模块 [ESM]": {
+  "引入 fs 文件系统模块": {
     "prefix": ["impt_fs"],
     "body": [
       "import fs from 'node:fs' // * 引入 fs 文件系统模块",
@@ -19,6 +19,6 @@
       "",
       ""
     ],
-    "description": ["引入 fs 文件系统模块 [ESM]"]
+    "description": ["引入 fs 文件系统模块"]
   }
 }

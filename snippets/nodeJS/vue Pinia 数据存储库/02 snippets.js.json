@@ -1,5 +1,5 @@
 {
-  "引入 pinia.defineStore 定义状态管理库 [ESM]": {
+  "引入 pinia.defineStore 定义状态管理库": {
     "prefix": ["impt_defineStore_-pinia"],
     "body": [
       "import { defineStore } from 'pinia' // * 引入 pinia 状态管理库",
@@ -48,9 +48,9 @@
       " */",
       ""
     ],
-    "description": ["引入 pinia.defineStore 定义状态管理库 [ESM]"]
+    "description": ["引入 pinia.defineStore 定义状态管理库"]
   },
-  "引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]": {
+  "引入 pinia.storeToRefs 仓库属性响应式解构方法": {
     "prefix": ["impt_storeToRefs_-pinia"],
     "body": [
       "import { storeToRefs } from 'pinia' // * 引入 pinia.storeToRefs 方法将仓库属性转换为ref响应式数据",
@@ -60,7 +60,7 @@
       " */",
       ""
     ],
-    "description": ["引入 pinia.storeToRefs 仓库属性响应式解构方法 [ESM]"]
+    "description": ["引入 pinia.storeToRefs 仓库属性响应式解构方法"]
   },
   "pinia 仓库订阅/监听": {
     "prefix": ["$subscribe_=-pinia"],

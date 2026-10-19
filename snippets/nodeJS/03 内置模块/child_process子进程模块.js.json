@@ -4,7 +4,7 @@
     "body": ["const { exec, execFile, fork, spawn } = require('child_process') // * 引入 child_process 子进程模块", "", ""],
     "description": ["引入 child_process 子进程模块 [CommonJS]"]
   },
-  "引入 child_process 子进程模块 [ESM]": {
+  "引入 child_process 子进程模块": {
     "prefix": ["impt_child_process"],
     "body": [
       "import { exec, execFile, fork, spawn } from 'node:child_process' // * 引入 child_process 子进程模块",
@@ -39,6 +39,6 @@
       "",
       ""
     ],
-    "description": ["引入 child_process 子进程模块 [ESM]"]
+    "description": ["引入 child_process 子进程模块"]
   }
 }

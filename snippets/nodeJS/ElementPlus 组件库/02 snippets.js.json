@@ -1,0 +1,43 @@
+{
+  "引入 ElementPlus 模块": {
+    "prefix": ["impt_ElementPlus"],
+    "body": [
+      "import ElementPlus from 'element-plus'",
+      "import 'element-plus/dist/index.css'",
+      "import zhCn from 'element-plus/es/locale/lang/zh-cn' // * 国际化: 中文语言包",
+      "import * as ElementPlusIconsVue from '@element-plus/icons-vue' // * 引入 ElementPlus 图标组件库",
+      "/**",
+      " * # ElementPlus 组件库配置 => ./src/main.ts",
+      " * const app = createApp(App)",
+      " * app.use(ElementPlus, { locale: zhCn })",
+      " * for (const [key, component] of Object.entries(ElementPlusIconsVue)) {",
+      " *   app.component(key, component) // - 注册全局组件",
+      " * } // * 循环注册 ElementPlus 图标组件库",
+      " */",
+      ""
+    ],
+    "description": ["引入 ElementPlus 模块"]
+  },
+  "引入 ElMessage,ElMessageBox 消息提示|消息弹框": {
+    "prefix": ["impt_ElMessage_ElMessageBox-element-plus"],
+    "body": [
+      "  import { ElMessage, ElMessageBox } from 'element-plus'",
+      "  /** ",
+      "   * # 引入 element-plus 组件 ElMessage-消息提示, ElMessageBox-消息弹框",
+      "   * * ElMessage.[提示框类型]({options}) 提示框配置:",
+      "   * * ElMessageBox[.alert-提示 | .confirm-确认 | .prompt-输入 | 无（VNode自定义弹框）]({options}) :",
+      "   *   type: string 提示框类型 'primary' | 'success' | 'info' | 'warning' | 'error'",
+      "   *   title: string 提示框标题",
+      "   *   message: string 提示框内容",
+      "   *   duration: number 提示框显示时间（毫秒）",
+      "   *   showClose: boolean 是否显示关闭按钮",
+      "   *   closeOnClickModal: boolean 是否点击遮罩层关闭提示框",
+      "   *   onClose: () => void 提示框关闭时回调函数",
+      "   * - .then(() => void) 确认后事件回调函数",
+      "   * - .catch(() => void) 取消后事件回调函数",
+      "   */",
+      ""
+    ],
+    "description": ["引入 ElMessage,ElMessageBox 提示|弹框"]
+  }
+}

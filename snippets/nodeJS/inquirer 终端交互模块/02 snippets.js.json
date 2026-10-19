@@ -4,7 +4,7 @@
     "body": ["const inquirer = require('inquirer') // * 引入 inquirer 终端交互模块", ""],
     "description": ["引入 inquirer 终端交互模块 [CommonJS]"]
   },
-  "引入 inquirer 终端交互模块 [ESM]": {
+  "引入 inquirer 终端交互模块": {
     "prefix": ["impt_inquirer"],
     "body": [
       "import inquirer from 'inquirer' // * 引入 inquirer 终端交互模块",
@@ -23,7 +23,7 @@
       "",
       ""
     ],
-    "description": ["引入 inquirer 终端交互模块 [ESM]"]
+    "description": ["引入 inquirer 终端交互模块"]
   },
   "inquirer.prompt-select 选项式交互": {
     "prefix": ["inquirer_prompt_select"],

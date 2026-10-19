@@ -4,9 +4,9 @@
     "body": ["const http = require('http') // * 引入 http 服务模块", "", ""],
     "description": ["引入 http 服务模块 [CommonJS]"]
   },
-  "引入 http 服务模块 [ESM]": {
+  "引入 http 服务模块": {
     "prefix": ["impt_http"],
     "body": ["import http from 'http' // * 引入 http 服务模块", "", ""],
-    "description": ["引入 http 服务模块 [ESM]"]
+    "description": ["引入 http 服务模块"]
   }
 }
