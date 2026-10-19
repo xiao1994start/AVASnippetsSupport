@@ -4,6 +4,7 @@
     "body": [
       "ECHO.* 安装 vite-plugin-vue-devtools 开发调试插件",
       "call npm i vite-plugin-vue-devtools -D --registry https://registry.npmmirror.com/",
+      "call npm i @vitejs/devtools -D --registry https://registry.npmmirror.com/",
       "@REM  # 配置方法",
       "@REM  - vite.config.ts 配置 vueDevTools 插件：",
       "@REM    ...import...",
