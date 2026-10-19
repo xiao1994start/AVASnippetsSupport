@@ -1,0 +1,86 @@
+{
+  "Path.glob 仅指定当前目录 遍历/搜索 -> object": {
+    "prefix": ["Path_glob_="],
+    "body": [
+      "glob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
+    ],
+    "description": [
+      "Path.glob 匹配所有的符合条件的所有 文件夹",
+      "    * 表示当前目录中的所有 文件",
+      "    ** 表示当前目录, 及其下所有子目录中的 所有 文件夹",
+      "    case_sensitive 判断路径是否符合指定通配符模式(Python 3.12 增加), 在Windows系统默认为False"
+    ]
+  },
+  "Path.glob 仅指定当前目录 遍历/搜索": {
+    "prefix": ["Path_glob", "glob_=-Path"],
+    "body": ["glob(\"${1|*,**,**/*.*,*.py|}\")"],
+    "description": [
+      "Path.glob 匹配所有的符合条件的所有 文件夹",
+      "    * 表示当前目录中的所有 文件",
+      "    ** 表示当前目录, 及其下所有子目录中的 所有 文件夹",
+      "    case_sensitive 判断路径是否符合指定通配符模式(Python 3.12 增加), 在Windows系统默认为False"
+    ]
+  },
+  "Path.rglob (常用)递归 遍历/搜索 -> object": {
+    "prefix": ["Path_rglob_="],
+    "body": [
+      "rglob(\"${1|*,**,**/*.*,*.py|}\")  # ->generator(生成器) '*':匹配当前目录下; '**':匹配当前目录及其子目录下; '**/*.*':匹配当前目录及其子目录下"
+    ],
+    "description": [
+      "Path.rglob 返回当前目录, 及所有子目录中的 所有 文件和文件夹",
+      "    * 表示当前目录, 及所有子目录中的 所有 文件和文件夹",
+      "    ** 当前目录, 及其下所有子目录中的 所有 文件和文件夹",
+      "    case_sensitive 判断路径是否符合指定通配符模式(Python 3.12 增加), 在Windows系统默认为False",
+      "    例如, Path('.').rglob('*.py') 返回当前目录下所有以 .py 结尾的文件"
+    ]
+  },
+  "Path.rglob (常用)递归 遍历/搜索": {
+    "prefix": ["Path_rglob", "rglob_=-Path"],
+    "body": ["rglob(\"${1|*,**,**/*.*,*.py|}\")"],
+    "description": [
+      "Path.rglob 返回当前目录, 及所有子目录中的 所有 文件和文件夹",
+      "    * 表示当前目录, 及所有子目录中的 所有 文件和文件夹",
+      "    ** 当前目录, 及其下所有子目录中的 所有 文件和文件夹",
+      "    case_sensitive 判断路径是否符合指定通配符模式(Python 3.12 增加), 在Windows系统默认为False",
+      "    例如, Path('.').rglob('*.py') 返回当前目录下所有以 .py 结尾的文件"
+    ]
+  },
+  "Path.iterdir 遍历读取目录下文件夹&文件->list": {
+    "prefix": ["Path_iterdir"],
+    "body": ["iterdir()"],
+    "description": [
+      "Path.iterdir 当路径指向一个目录时, 产生该路径下的对象的路径",
+      "    子条目会以任意顺序生成, 并且不包括特殊条目 '.' 和 '..'",
+      "    如果迭代器创建之后有文件在目录中被移除或添加, 是否要包括该文件所对应的路径对象并没有明确规定"
+    ]
+  },
+  "Path.iterdir 示例": {
+    "prefix": ["Path_iterdir_=-Path"],
+    "body": ["for child in Path(${1:path}).iterdir(): child", "    print(child)", "    pass"],
+    "description": ["for.iterdir 当路径指向一个目录时, 产生该路径下的对象的路径"]
+  },
+  "Path.walk 遍历目录->tuple(list)": {
+    "prefix": ["Path_walk"],
+    "body": ["walk()  # ->generator(生成器) =解包> root: str, dirs: list, files: list"],
+    "description": [
+      "Path.walk 通过对目录树自上而下或自下而上的遍历来生成其中的文件名",
+      "    对于根位置为 self 的目录树中的每个目录(包括 self 但不包括 '.' 和 '..'), 该方法会产生一个 3 元组 (dirpath, dirnames, filenames)",
+      "    dirpath 是指向当前正被遍历到的目录的 Path, dirnames 是由表示 dirpath 中子目录名称的字符串组成的列表 (不包括 '.' 和 '..'), filenames 是由表示 dirpath 中非目录文件名称的字符串组成的列表. 要获取 dirpath 中文件或目录的完整路径 (以 self 开头), 可使用 dirpath / name. 这些列表是否排序取决于具体的文件系统",
+      "    如果可选参数 top_down 为(默认的)真值, 则会在所有子目录的三元组生成之前生成父目录的三元组(目录是自上而下遍历的). 如果 top_down 为假值, 则会在所有子目录的三元组生成之后再生成父目录的三元组(目录是是自下而上遍历的). 无论 top_down 的值是什么, 都会在遍历目录及其子目录的三元组之前提取子目录列表",
+      "    当 top_down 为真值时, 调用者可以就地修改 dirnames 列表(例如, 使用 del 或切片赋值), 而 Path.walk() 将只向名称保留在 dirnames 中的子目录递归. 这可用于减少搜索量, 或加入特定的访问顺序, 甚至是在继续 Path.walk() 之前通知 Path.walk() 调用者创建或重命名的目录的相关信息. 当 top_down 为假值时修改 dirnames 不会影响 Path.walk() 的行为, 因为在 dirnames 被提供给调用者时 dirnames 中的目录已经生成了",
+      "    在默认情况下, 来自 os.scandir() 的错误将被忽略. 如果指定了可选参数 on_error, 则它应为一个可调用对象; 调用它需要传入一个参数, 即 OSError 的实例. 该可调用对象能处理错误以继续执行遍历或是重新引发错误以停止遍历. 请注意可以通过异常对象的 filename 属性来获取文件名",
+      "    在默认情况下, Path.walk() 不会跟踪符号链接, 而是将其添加到 filenames 列表中. 将 follow_symlinks*设为真值可解析符号链接并根据它们的目标将其放入*dirnames 和 filenames 中, 从而(在受支持的系统上)访问符号链接所指向的目录"
+    ]
+  },
+  "Path.walk 示例": {
+    "prefix": ["Path_walk_=-Path"],
+    "body": [
+      "for root, dirs, files in ${1:Path(path)}.walk():  # ->generator(生成器) =解包> root: str, dirs: list, files: list",
+      "    for dir in dirs:",
+      "        print(root / dir)",
+      "    for file in files:",
+      "        print(root / file)"
+    ],
+    "description": ["Path -for.walk 循环输出示例"]
+  }
+}
