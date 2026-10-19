@@ -79,6 +79,11 @@
     "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
     "description": ["then 处理成功回调"]
   },
+  "catch 异常状态处理": {
+    "prefix": ["catch_", "cach_"],
+    "body": ["catch((${1:error_可选}) => { ${2:callback_回调} })"],
+    "description": ["catch 异常状态处理"]
+  },
   "throw 抛出异常": {
     "prefix": ["throw_err", "thw_"],
     "body": ["throw ${1:err}"],
