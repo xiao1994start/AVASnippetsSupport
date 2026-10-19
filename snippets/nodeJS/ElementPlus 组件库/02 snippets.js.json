@@ -1,6 +1,6 @@
 {
   "引入 ElementPlus 模块": {
-    "prefix": ["impt_ElementPlus"],
+    "prefix": ["impt_ElementPlus-element-plus"],
     "body": [
       "import ElementPlus from 'element-plus'",
       "import 'element-plus/dist/index.css'",
@@ -31,6 +31,8 @@
       "   *   message: string 提示框内容",
       "   *   duration: number 提示框显示时间（毫秒）",
       "   *   showClose: boolean 是否显示关闭按钮",
+      "   *   confirmButtonText: string 确认按钮文本",
+      "   *   cancelButtonText: string 取消按钮文本",
       "   *   closeOnClickModal: boolean 是否点击遮罩层关闭提示框",
       "   *   onClose: () => void 提示框关闭时回调函数",
       "   * - .then(() => void) 确认后事件回调函数",
@@ -39,5 +41,28 @@
       ""
     ],
     "description": ["引入 ElMessage,ElMessageBox 提示|弹框"]
+  },
+  "ElMessage,ElMessageBox 消息提示|消息弹框 帮助": {
+    "prefix": ["##ElMessage_ElMessageBox=-element-plus"],
+    "body": [
+      "  /** ",
+      "   * # 引入 element-plus 组件 ElMessage-消息提示, ElMessageBox-消息弹框",
+      "   * * ElMessage.[提示框类型]({options}) 提示框配置:",
+      "   * * ElMessageBox[.alert-提示 | .confirm-确认 | .prompt-输入 | 无（VNode自定义弹框）]({options}) :",
+      "   *   type: string 提示框类型 'primary' | 'success' | 'info' | 'warning' | 'error'",
+      "   *   title: string 提示框标题",
+      "   *   message: string 提示框内容",
+      "   *   duration: number 提示框显示时间（毫秒）",
+      "   *   showClose: boolean 是否显示关闭按钮",
+      "   *   confirmButtonText: string 确认按钮文本",
+      "   *   cancelButtonText: string 取消按钮文本",
+      "   *   closeOnClickModal: boolean 是否点击遮罩层关闭提示框",
+      "   *   onClose: () => void 提示框关闭时回调函数",
+      "   * - .then(() => void) 确认后事件回调函数",
+      "   * - .catch(() => void) 取消后事件回调函数",
+      "   */",
+      ""
+    ],
+    "description": ["ElMessage,ElMessageBox 消息提示|消息弹框 帮助"]
   }
 }
