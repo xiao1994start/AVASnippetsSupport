@@ -46,7 +46,7 @@
   "默认语言入口": {
     "prefix": ["define_config_language"],
     "body": [
-      "# * -默认语言- *",
+      "## * -默认语言- *",
       "define config.language = '${1:schinese}'",
       "# = 添加简体中文语言入口按钮",
       "#   VSCode 正则全局搜索 `action[\\s\\W_]*Language`",
@@ -191,7 +191,7 @@
   "快速配置 options.rpy 模板": {
     "prefix": ["init_python_options"],
     "body": [
-      "# *-默认语言-*",
+      "## * -默认语言- *",
       "define config.language = 'schinese'",
       "# = 添加简体中文语言入口按钮",
       "#   VSCode 正则全局搜索 `action[\\s\\W_]*Language`",
