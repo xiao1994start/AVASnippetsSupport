@@ -10,7 +10,11 @@
       "@REM    import vueDevTools from 'vite-plugin-vue-devtools' // * 引入 vueDevTools 插件",
       "@REM    export default defineConfig({",
       "@REM      ...",
-      "@REM      plugins: [vue(), vueDevTools()], ...",
+      "@REM      plugins: [",
+      "@REM        vue(),",
+      "@REM        vueDevTools(), // * 挂载 vueDevTools 插件",
+      "@REM      ]",
+      "@REM      ...",
       "@REM    })",
       ""
     ],
