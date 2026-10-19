@@ -1,0 +1,7 @@
+{
+  "entries {A:a}->[[A,a]]": {
+    "prefix": ["entries_-Object"],
+    "body": ["Object.entries(${1:o})"],
+    "description": ["entries {A:a}->[[A,a]] \n 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。"]
+  }
+}
