@@ -1,0 +1,19 @@
+{
+  "element-plus 容器模板: 侧边栏导航": {
+    "prefix": ["div_el_aside_"],
+    "body": [
+      "<div class='el_container'>",
+      "  <el-container style=\"height: 100vh;\">",
+      "    <el-aside :width=\"true ? '64px' : '300px'\">Sider_侧边栏</el-aside>",
+      "    <el-container>",
+      "      <el-header>Header_顶部栏</el-header>",
+      "      <el-main>main_主体区域</el-main>",
+      "      <el-footer>footer_底部栏</el-footer>",
+      "    </el-container>",
+      "  </el-container>",
+      "</div>",
+      ""
+    ],
+    "description": ["element-plus 容器模板: 侧边栏导航"]
+  }
+}

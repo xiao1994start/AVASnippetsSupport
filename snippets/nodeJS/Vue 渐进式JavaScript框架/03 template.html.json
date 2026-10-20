@@ -1,0 +1,7 @@
+{
+  "div class=''": {
+    "prefix": ["div_class_"],
+    "body": ["<div class='${2:}'>", "  ${1:div}", "</div>", ""],
+    "description": ["div class=''"]
+  }
+}
