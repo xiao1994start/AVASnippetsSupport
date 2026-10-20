@@ -32,10 +32,5 @@
       ""
     ],
     "description": ["App.vue 设置html_body全局样式"]
-  },
-  "div class=''": {
-    "prefix": ["div_class_"],
-    "body": ["<div class='${1:example}'>", "  ${1:div}", "</div>", ""],
-    "description": ["div class=''"]
   }
 }
