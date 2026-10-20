@@ -1,19 +1,55 @@
 {
-  "element-plus 容器模板: 侧边栏导航": {
-    "prefix": ["div_el_aside_"],
+  "element-plus 侧边栏路由导航": {
+    "prefix": ["div_el_aside_menu_router_"],
     "body": [
-      "<div class='el_container'>",
+      "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
-      "    <el-aside :width=\"true ? '64px' : '300px'\">Sider_侧边栏</el-aside>",
+      "    <el-aside :width=\"false ? '64px' : '120px'\" style=\"min-width: 64px;\">",
+      "      <el-menu router style=\"display: flex;flex-direction: column;\" :default-active=\"\\$route.path\"",
+      "        background-color=\"#ffffff\" text-color=\"#303133\" active-text-color=\"#409eff\">",
+      "        <el-menu-item style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-all;padding: 8px;\"",
+      "          index=\"/${1:路由地址}\">",
+      "          ${2:路由标签}",
+      "        </el-menu-item>",
+      "",
+      "      </el-menu>",
+      "    </el-aside>",
       "    <el-container>",
-      "      <el-header>Header_顶部栏</el-header>",
-      "      <el-main>main_主体区域</el-main>",
-      "      <el-footer>footer_底部栏</el-footer>",
+      "      <el-header style=\"flex: 1;padding: 8px;text-align: center;\">Header_顶部栏</el-header>",
+      "",
+      "      <el-main style=\"padding: 8px;\"> <router-view></router-view> </el-main>",
+      "",
+      "      <el-footer style=\"flex: 1;padding: 8px;text-align: center;\">footer_底部栏</el-footer>",
       "    </el-container>",
       "  </el-container>",
-      "</div>",
+      "</div>"
+    ],
+    "description": ["element-plus 侧边栏路由导航"]
+  },
+  "el-menu 路由菜单": {
+    "prefix": ["el_menu_router_"],
+    "body": [
+      "<el-menu router style=\"display: flex;flex-direction: column;\" :default-active=\"\\$route.path\"",
+      "  background-color=\"#ffffff\" text-color=\"#303133\" active-text-color=\"#409eff\">",
+      "  <el-menu-item style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-all;padding: 8px;\"",
+      "    index=\"/${1:路由地址}\">",
+      "    ${2:路由标签}",
+      "  </el-menu-item>",
+      "",
+      "</el-menu>",
       ""
     ],
-    "description": ["element-plus 容器模板: 侧边栏导航"]
+    "description": ["el-menu 路由菜单"]
+  },
+  "el-menu-item 路由选项": {
+    "prefix": ["el_menu_item_router_"],
+    "body": [
+      "<el-menu-item style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-all;padding: 8px;\"",
+      "  index=\"/${1:路由地址}\">",
+      "  ${2:路由标签}",
+      "</el-menu-item>",
+      ""
+    ],
+    "description": ["el-menu-item 路由选项"]
   }
 }

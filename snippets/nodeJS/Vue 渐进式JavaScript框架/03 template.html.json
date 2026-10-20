@@ -3,5 +3,10 @@
     "prefix": ["div_class_"],
     "body": ["<div class='${2:}'>", "  ${1:div}", "</div>", ""],
     "description": ["div class=''"]
+  },
+  "style 标签内样式": {
+    "prefix": ["style_", "ste_"],
+    "body": ["style=\"${1:}\""],
+    "description": ["style 标签内样式"]
   }
 }
