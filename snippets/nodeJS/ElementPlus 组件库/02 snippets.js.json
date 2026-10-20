@@ -64,5 +64,40 @@
       ""
     ],
     "description": ["ElMessage,ElMessageBox 消息提示|消息弹框 帮助"]
+  },
+  "引入 ElNotification 通知": {
+    "prefix": ["impt_ElNotification-element-plus"],
+    "body": [
+      "import { ElNotification } from 'element-plus'",
+      "/**",
+      " * # 引入 element-plus 组件 ElNotification-通知",
+      " *   type: string 提示框类型 'primary' | 'success' | 'info' | 'warning' | 'error'",
+      " *   title: string 通知标题",
+      " *   message: string 通知内容",
+      " *   duration: number 通知显示时间（毫秒）",
+      " *   position: string 通知位置 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'",
+      " *   onClick: () => void 点击通知时回调函数",
+      " *   onClose: () => void 通知关闭时回调函数",
+      " */",
+      ""
+    ],
+    "description": ["引入 ElNotification 通知"]
+  },
+  "ElNotification 通知 帮助": {
+    "prefix": ["##ElNotification-element-plus"],
+    "body": [
+      "/**",
+      " * # 引入 element-plus 组件 ElNotification-通知",
+      " *   type: string 提示框类型 'primary' | 'success' | 'info' | 'warning' | 'error'",
+      " *   title: string 通知标题",
+      " *   message: string 通知内容",
+      " *   duration: number 通知显示时间（毫秒）",
+      " *   position: string 通知位置 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'",
+      " *   onClick: () => void 点击通知时回调函数",
+      " *   onClose: () => void 通知关闭时回调函数",
+      " */",
+      ""
+    ],
+    "description": ["ElNotification 通知 帮助"]
   }
 }
