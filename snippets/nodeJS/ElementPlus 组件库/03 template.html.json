@@ -5,8 +5,9 @@
       "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
       "    <el-aside :width=\"false ? '64px' : '120px'\" style=\"min-width: 64px;scrollbar-width: thin;\">",
-      "      <el-menu router style=\"display: flex;flex-direction: column;\" :default-active=\"\\$route.path\"",
-      "        background-color=\"#ffffff\" text-color=\"#303133\" active-text-color=\"#409eff\">",
+      "      <el-menu router",
+      "        style=\"display: flex;flex-direction: column;--el-menu-bg-color:#28272C;--el-menu-text-color:#FFFFFF;--el-menu-active-color:#41BC6C;--el-menu-hover-bg-color:#FFFFFF20\"",
+      "        :default-active=\"\\$route.path\">",
       "        <el-menu-item style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\"",
       "          index=\"/${1:路由地址}\">",
       "          ${2:路由标签}",
@@ -29,8 +30,9 @@
   "el-menu 路由菜单": {
     "prefix": ["el_menu_router_"],
     "body": [
-      "<el-menu router style=\"display: flex;flex-direction: column;\" :default-active=\"\\$route.path\"",
-      "  background-color=\"#ffffff\" text-color=\"#303133\" active-text-color=\"#409eff\">",
+      "<el-menu router",
+      "  style=\"display: flex;flex-direction: column;--el-menu-bg-color:#28272C;--el-menu-text-color:#FFFFFF;--el-menu-active-color:#41BC6C;--el-menu-hover-bg-color:#FFFFFF20\"",
+      "  :default-active=\"\\$route.path\">",
       "  <el-menu-item style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\"",
       "    index=\"/${1:路由地址}\">",
       "    ${2:路由标签}",
