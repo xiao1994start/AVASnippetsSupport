@@ -5,8 +5,18 @@
     "description": ["div class=''"]
   },
   "style 标签内样式": {
-    "prefix": ["style_", "ste_"],
+    "prefix": ["sss_-style"],
     "body": ["style=\"${1:}\""],
     "description": ["style 标签内样式"]
+  },
+  "style 弹性-垂直样式": {
+    "prefix": ["sss_flex_column-style"],
+    "body": ["style=\"display: flex;flex-direction: column;\" $0"],
+    "description": ["style 弹性-垂直样式"]
+  },
+  "style 填充-换行样式": {
+    "prefix": ["sss_flex_normal_break-style"],
+    "body": ["style=\"flex: 1;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\" $0"],
+    "description": ["style 填充-换行样式"]
   }
 }
