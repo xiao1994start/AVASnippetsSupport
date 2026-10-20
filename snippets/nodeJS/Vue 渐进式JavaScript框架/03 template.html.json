@@ -9,6 +9,11 @@
     "body": ["style=\"${1:}\""],
     "description": ["style 标签内样式"]
   },
+  "style 内外间距0": {
+    "prefix": ["sss_init_padding_margin-style"],
+    "body": ["style=\"padding: 0;margin: 0;\" $0"],
+    "description": ["style 内外间距0"]
+  },
   "style 弹性-垂直样式": {
     "prefix": ["sss_flex_column-style"],
     "body": ["style=\"display: flex;flex-direction: column;\" $0"],
