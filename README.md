@@ -24,7 +24,7 @@
   - 日志高亮：注入式高亮 debug/info/warning/error 日志格式
 
 - **数百个高质量代码片段**  
-  Python：requests、pandas、selenium、tkinter、flet、nicegui、reflex、asyncio、PyInstaller、FastAPI、Django 等  
+  Python：requests、pandas、selenium、tkinter、flet、nicegui、reflex、asyncio、PyInstaller、FastAPI 等  
   BAT：7z、curl、git、npm、uiautomation、uv、注册表、进程管理等  
   JS：axios、element-plus、Vue 基础  
   JSON / Markdown / XML：实用模板  
