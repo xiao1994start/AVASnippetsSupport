@@ -1,4 +1,14 @@
 {
+  "翻译": {
+    "prefix": ["translate_strings_"],
+    "body": ["translate ${1:schinese} strings:", "    old \"${2:}\"", "    new \"${2:}\"", "", ""],
+    "description": ["翻译"]
+  },
+  "添加翻译": {
+    "prefix": ["old_new_"],
+    "body": ["old \"${1:}\"", "new \"${1:}\"", "", "    $0"],
+    "description": ["添加翻译"]
+  },
   "自动添加语言按钮入口": {
     "prefix": ["textbutton_schinese_=-action_Language"],
     "body": ["textbutton '简体中文' action Language('schinese')", ""],
