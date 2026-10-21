@@ -1,4 +1,24 @@
 {
+  "模板字符串: 标题": {
+    "prefix": ["template_title-vue"],
+    "body": ["<template #title>${1:标题}</template>"],
+    "description": ["模板字符串: 标题"]
+  },
+  "模板字符串: 内部前缀": {
+    "prefix": ["template_prefix-vue"],
+    "body": ["<template #prefix>${1:内部前缀}</template>"],
+    "description": ["模板字符串: 内部前缀"]
+  },
+  "模板字符串: 外部前缀": {
+    "prefix": ["template_prepend-vue"],
+    "body": ["<template #prepend>${1:外部前缀}</template>"],
+    "description": ["模板字符串: 外部前缀"]
+  },
+  "模板字符串: 外部后缀": {
+    "prefix": ["template_append-vue"],
+    "body": ["<template #append>${1:外部后缀}</template>"],
+    "description": ["模板字符串: 外部后缀"]
+  },
   "div class=''": {
     "prefix": ["div_class_"],
     "body": ["<div class='${2:}'>", "  ${1:div}", "</div>", ""],
