@@ -3,12 +3,13 @@
     "prefix": ["impt_useDark_useToggle_-vueuse"],
     "body": [
       "import { useDark } from '@vueuse/core'",
-      "import 'element-plus/theme-chalk/dark/css-vars.css' // * 引入 element-plus 暗黑主题样式",
       "/**",
       " * # 夜间模式（主题模式）切换",
       " * ? 响应式数据绑定: const isDark = useDark() => v-model=\"isDark\"",
       " * ? useToggle调用函数: import { useToggle } from '@vueuse/core'",
       " *   const toggleDark = useToggle(isDark) => @click=\"toggleDark()\" 必须带()",
+      " * - ./src/main.ts => 引入 element-plus 暗黑主题样式",
+      " *   import 'element-plus/theme-chalk/dark/css-vars.css' // * 引入 element-plus 暗黑主题样式",
       " */",
       "const isDark = useDark() // ? 响应式数据 v-model 绑定: isDark",
       ""
