@@ -99,5 +99,10 @@
       ""
     ],
     "description": ["ElNotification 通知 帮助"]
+  },
+  "引入 element-plus 暗黑主题样式": {
+    "prefix": ["impt_dark-element-plus"],
+    "body": ["import 'element-plus/theme-chalk/dark/css-vars.css' // * 引入 element-plus 暗黑主题样式", ""],
+    "description": ["引入 element-plus 暗黑主题样式"]
   }
 }
