@@ -16,11 +16,11 @@
       "      </el-menu>",
       "    </el-aside>",
       "    <el-container>",
-      "      <el-header style=\"flex: 1;padding: 8px;text-align: center;\">Header_顶部栏</el-header>",
+      "      <el-header style=\"flex: 1;padding: 8px;text-align: center;--el-header-height: normal;\">Header_顶部栏</el-header>",
       "",
       "      <el-main style=\"padding: 8px;\"> <router-view></router-view> </el-main>",
       "",
-      "      <el-footer style=\"flex: 1;padding: 8px;text-align: center;\">footer_底部栏</el-footer>",
+      "      <el-footer style=\"flex: 1;padding: 8px;text-align: center;--el-footer-height: normal;\">footer_底部栏</el-footer>",
       "    </el-container>",
       "  </el-container>",
       "</div>"
