@@ -4,10 +4,10 @@
     "body": [
       "<template>",
       "  <!-- * 组件模板/视图结构 -->",
-      "  ",
+      "  ${1:}",
       "</template>",
       "",
-      "<script setup ${1:lang='ts'}>",
+      "<script setup lang='ts'>",
       "  // * 组件逻辑/业务逻辑",
       "</script>",
       "",
