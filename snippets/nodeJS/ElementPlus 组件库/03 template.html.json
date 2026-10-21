@@ -16,7 +16,7 @@
       "",
       "      </el-menu>",
       "      <el-footer style=\"padding: 4px;text-align: center;--el-footer-height: normal;\">",
-      "        <el-switch v-model=\"isDark\" size=\"large\" active-text=\"暗黑\" inactive-text=\"明亮\"",
+      "        <el-switch v-model=\"isDark\" size=\"large\" inline-prompt active-text=\"暗黑\" inactive-text=\"明亮\"",
       "          style=\"--el-switch-on-color: #2A2A2C; --el-switch-off-color: #1E90FF;\">",
       "          <template #active-action>",
       "            <svg viewBox=\"0 0 24 24\" style=\"color: #F3B940;background-color: #2A2A2C;border-radius: 50%;\">",
