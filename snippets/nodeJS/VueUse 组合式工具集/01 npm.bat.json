@@ -1,0 +1,11 @@
+{
+  "安装 VueUse 组合式工具集": {
+    "prefix": ["npm_vueuse"],
+    "body": [
+      "ECHO.* 安装 VueUse 组合式工具集 :: https://vueuse.org/ - https://vueuse.nodejs.cn/",
+      "call npm i @vueuse/core --registry https://registry.npmmirror.com/",
+      ""
+    ],
+    "description": ["安装 VueUse 组合式工具集"]
+  }
+}

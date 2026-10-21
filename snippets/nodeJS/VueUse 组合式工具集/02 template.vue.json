@@ -1,0 +1,16 @@
+{
+  "引入 useDark 夜间模式（主题模式）": {
+    "prefix": ["impt_useDark_useToggle_-vueuse"],
+    "body": [
+      "import { useDark } from '@vueuse/core'",
+      "/**",
+      " * # 夜间模式（主题模式）切换",
+      " * ? 响应式数据绑定: const isDark = useDark() => v-model=\"isDark\"",
+      " * ? useToggle调用函数: const toggleDark = useToggle(isDark) => @click=\"toggleDark()\" 必须带()",
+      " */",
+      "const isDark = useDark() // ? 响应式数据 v-model 绑定: isDark",
+      ""
+    ],
+    "description": ["引入 useDark 夜间模式（主题模式）"]
+  }
+}
