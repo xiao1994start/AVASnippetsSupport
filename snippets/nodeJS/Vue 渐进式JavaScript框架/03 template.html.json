@@ -30,17 +30,17 @@
     "description": ["style 标签内样式"]
   },
   "style 内外间距0": {
-    "prefix": ["s_init_padding_margin-style"],
+    "prefix": ["s_padding_margin_-style"],
     "body": ["style=\"padding: 0;margin: 0;\" $0"],
     "description": ["style 内外间距0"]
   },
   "style 弹性-垂直样式": {
-    "prefix": ["s_display_flex_column-style"],
+    "prefix": ["s_display_flex_column_-style"],
     "body": ["style=\"display: flex;flex-direction: column;\" $0"],
     "description": ["style 弹性-垂直样式"]
   },
   "style 填充-换行样式": {
-    "prefix": ["s_flex_height_auto-style"],
+    "prefix": ["s_flex_height_auto_-style"],
     "body": ["style=\"flex: 1;height: auto;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\" $0"],
     "description": ["style 填充-换行样式"]
   }
