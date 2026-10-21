@@ -1,6 +1,6 @@
 {
   "element-plus 侧边栏路由导航": {
-    "prefix": ["div_el_aside_menu_router_"],
+    "prefix": ["el_aside_menu_router_"],
     "body": [
       "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
