@@ -15,6 +15,7 @@
       "@REM    import * as ElementPlusIconsVue from '@element-plus/icons-vue' // * （可选）引入 ElementPlus 图标组件库",
       "@REM    ...const app = createApp(App)...",
       "@REM    app.use(ElementPlus, { locale: zhCn }) // = 配置 ElementPlus 组件库，使用中文语言包",
+      "@REM    = 注册 ElementPlus 图标组件库（可选）",
       "@REM    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {",
       "@REM      app.component(key, component) // - 注册全局组件",
       "@REM    } // * （可选）循环注册 ElementPlus 图标组件库",
