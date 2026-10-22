@@ -1,0 +1,33 @@
+{
+  "引入 unplugin vue/vite 自动导入插件系统": {
+    "prefix": ["impt_unplugin_vue_vite_"],
+    "body": [
+      "import AutoImport from 'unplugin-auto-import/vite' // * 引入 AutoImport 插件",
+      "import Components from 'unplugin-vue-components/vite' // * 引入 Components 插件",
+      "import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // * 引入 ElementPlusResolver 解析器",
+      "import Icons from 'unplugin-icons/vite'",
+      "import IconsResolver from 'unplugin-icons/resolver'",
+      "/**",
+      " * # unplugin vue/vite 自动导入插件系统配置文件 => ./vite.config.ts",
+      " * = > import { fileURLToPath, URL } from 'node:url'",
+      " * export default defineConfig({",
+      " * plugins: [...",
+      " *   AutoImport({ imports: ['vue'], resolvers: [ElementPlusResolver()], dts: 'src/auto-imports.d.ts' }),",
+      " *   Components({",
+      " *     resolvers: [ElementPlusResolver(), IconsResolver({ enabledCollections: ['ep'] })],",
+      " *     dts: 'src/components.d.ts',",
+      " *   }),",
+      " *   Icons({ autoInstall: true, scale: 1 }), // * 挂载 Icons 插件",
+      " *   ],",
+      " *   resolve: {",
+      " *     alias: {",
+      " *       // * 配置import路径别名: @ => ./src",
+      " *       '@': fileURLToPath(new URL('./src', import.meta.url)),",
+      " *     },",
+      " *   },",
+      " * })",
+      ""
+    ],
+    "description": ["引入 unplugin vue/vite 自动导入插件系统"]
+  }
+}
