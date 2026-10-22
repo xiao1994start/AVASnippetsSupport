@@ -1,6 +1,6 @@
 {
   "引入 unplugin vue/vite 自动导入插件系统": {
-    "prefix": ["impt_unplugin_vue_vite_"],
+    "prefix": ["impt_unplugin_vite_-vue"],
     "body": [
       "import AutoImport from 'unplugin-auto-import/vite' // * 引入 AutoImport 插件",
       "import Components from 'unplugin-vue-components/vite' // * 引入 Components 插件",
