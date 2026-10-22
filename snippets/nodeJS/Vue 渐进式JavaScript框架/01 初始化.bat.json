@@ -154,7 +154,7 @@
       "            \"  ' * # unplugin 自动导入插件配置文件',\" ^",
       "            \"  ' * @use ./vite.config.ts 中引入 =>',\" ^",
       "            \"  ' *   import unplugin_Config from ''./vite.config_unplugin.ts''',\" ^",
-      "            \"  ' *     plugins: [vue(), ...],',\" ^",
+      "            \"  ' *     plugins: [vue(), ...unplugin_Config.plugins], // * 使用 ...[] 解构赋值合并插件数组',\" ^",
       "            \"  ' *   })',\" ^",
       "            \"  ' */',\" ^",
       "            \"  'import AutoImport from ''unplugin-auto-import/vite'' // * 引入 AutoImport 插件',\" ^",
