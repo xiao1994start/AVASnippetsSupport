@@ -1,8 +1,8 @@
 {
-  "翻译": {
+  "文本翻译块": {
     "prefix": ["translate_strings_"],
     "body": ["translate ${1:schinese} strings:", "    old \"${2:}\"", "    new \"${2:}\"", "", ""],
-    "description": ["翻译"]
+    "description": ["文本翻译块"]
   },
   "添加翻译": {
     "prefix": ["old_new_"],
