@@ -238,7 +238,7 @@
       "            \"  '        resolve: resolve_Config.resolve.alias,',\" ^",
       "            \"  ' *    })',\" ^",
       "            \"  ' * @配置 tsconfig.json =>',\" ^",
-      "            \"  '    \"types\": [\"node\"],',\" ^",
+      "            \"  '    \"types\": [\"node\", \"vite/client\"],',\" ^",
       "            \"  '    \"compilerOptions\": {',\" ^",
       "            \"  '      \"baseUrl\": \".\",',\" ^",
       "            \"  '      \"paths\": {',\" ^",
