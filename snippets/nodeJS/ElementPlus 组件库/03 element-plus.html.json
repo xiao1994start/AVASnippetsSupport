@@ -1,6 +1,6 @@
 {
   "element-plus 侧边栏路由导航": {
-    "prefix": ["el_container_aside_menu_-router"],
+    "prefix": ["el_aside_-router"],
     "body": [
       "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
@@ -68,7 +68,7 @@
     ],
     "description": ["el-menu 路由菜单"]
   },
-  "el-menu-item 路由选项": {
+  "el-menu-item 路由菜单选项": {
     "prefix": ["el_menu_item_-index_router"],
     "body": [
       "<el-menu-item index=\"/${1:路由地址}\"",
@@ -77,7 +77,7 @@
       "</el-menu-item>",
       ""
     ],
-    "description": ["el-menu-item 路由选项"]
+    "description": ["el-menu-item 路由菜单选项"]
   },
   "el-image 开启图片预览功能": {
     "prefix": ["el_image_-preview"],
