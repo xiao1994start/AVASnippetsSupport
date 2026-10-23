@@ -1,11 +1,12 @@
 {
   "element-plus 侧边栏路由导航": {
-    "prefix": ["el_aside_menu_router_"],
+    "prefix": ["el_container_aside_menu_-router"],
     "body": [
       "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
       "    <el-aside :width=\"true ? '120px' : '160px'\"",
       "      style=\"display: flex;flex-direction: column;overflow: hidden;border: 2px solid #723CB460;border-radius: 6px;\">",
+      "",
       "      <el-menu router",
       "        style=\"flex: 1;overflow: auto;scrollbar-width: thin;font-weight: bold;--el-menu-active-color:#FC0FC0;\"",
       "        :default-active=\"\\$route.path || '/'\">",
@@ -15,6 +16,7 @@
       "        </el-menu-item>",
       "",
       "      </el-menu>",
+      "",
       "      <el-footer style=\"padding: 4px;text-align: center;--el-footer-height: normal;\">",
       "        <el-switch v-model=\"isDark\" size=\"large\" inline-prompt active-text=\"暗黑\" inactive-text=\"明亮\"",
       "          style=\"--el-switch-on-color: #2A2A2C; --el-switch-off-color: #1E90FF;\">",
@@ -35,12 +37,15 @@
       "        </el-switch>",
       "      </el-footer>",
       "    </el-aside>",
+      "",
       "    <el-container>",
+      "",
       "      <el-header style=\"flex: 1;padding: 8px;text-align: center;--el-header-height: normal;\">Header_顶部栏</el-header>",
       "",
       "      <el-main style=\"padding: 8px;\"> <router-view></router-view> </el-main>",
       "",
       "      <el-footer style=\"flex: 1;padding: 8px;text-align: center;--el-footer-height: normal;\">footer_底部栏</el-footer>",
+      "",
       "    </el-container>",
       "  </el-container>",
       "</div>"
@@ -48,7 +53,7 @@
     "description": ["element-plus 侧边栏路由导航"]
   },
   "el-menu 路由菜单": {
-    "prefix": ["el_menu_router_"],
+    "prefix": ["el_menu_-router"],
     "body": [
       "<el-menu router",
       "  style=\"flex: 1;overflow: auto;scrollbar-width: thin;font-weight: bold;--el-menu-active-color:#41BC6C;\"",
@@ -64,7 +69,7 @@
     "description": ["el-menu 路由菜单"]
   },
   "el-menu-item 路由选项": {
-    "prefix": ["el_menu_item_router_"],
+    "prefix": ["el_menu_item_-index_router"],
     "body": [
       "<el-menu-item index=\"/${1:路由地址}\"",
       "  style=\"height: auto;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\">",
