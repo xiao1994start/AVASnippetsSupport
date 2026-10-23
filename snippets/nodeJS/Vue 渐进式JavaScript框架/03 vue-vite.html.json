@@ -1,23 +1,33 @@
 {
-  "模板字符串: 标题": {
-    "prefix": ["template_title-vue"],
+  "模板插槽": {
+    "prefix": ["temp_-vue", "temp#_-vue"],
+    "body": ["<template #${1:slots}>", "  $0", "</template>"],
+    "description": ["模板插槽"]
+  },
+  "模板插槽: 标题": {
+    "prefix": ["temp#title-vue", "temp_title-vue"],
     "body": ["<template #title>${1:标题}</template>"],
-    "description": ["模板字符串: 标题"]
+    "description": ["模板插槽: 标题"]
   },
-  "模板字符串: 内部前缀": {
-    "prefix": ["template_prefix-vue"],
+  "模板插槽: 错误": {
+    "prefix": ["temp#error-vue", "temp_error-vue"],
+    "body": ["<template #error>${1:错误}</template>"],
+    "description": ["模板插槽: 错误"]
+  },
+  "模板插槽: 内部前缀": {
+    "prefix": ["temp#prefix-vue", "temp_prefix-vue"],
     "body": ["<template #prefix>${1:内部前缀}</template>"],
-    "description": ["模板字符串: 内部前缀"]
+    "description": ["模板插槽: 内部前缀"]
   },
-  "模板字符串: 外部前缀": {
-    "prefix": ["template_prepend-vue"],
+  "模板插槽: 外部前缀": {
+    "prefix": ["temp#prepend-vue", "temp_prepend-vue"],
     "body": ["<template #prepend>${1:外部前缀}</template>"],
-    "description": ["模板字符串: 外部前缀"]
+    "description": ["模板插槽: 外部前缀"]
   },
-  "模板字符串: 外部后缀": {
-    "prefix": ["template_append-vue"],
+  "模板插槽: 外部后缀": {
+    "prefix": ["temp#append-vue", "temp_append-vue"],
     "body": ["<template #append>${1:外部后缀}</template>"],
-    "description": ["模板字符串: 外部后缀"]
+    "description": ["模板插槽: 外部后缀"]
   },
   "div class=''": {
     "prefix": ["div_class_"],
