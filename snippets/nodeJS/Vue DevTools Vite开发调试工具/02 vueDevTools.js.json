@@ -9,7 +9,7 @@
       " *   plugins: [",
       " *     vue(),",
       " *     ...,",
-      " *     vueDevTools(), // * 挂载 vueDevTools 插件",
+      "       vueDevTools(), // * 挂载 vueDevTools 插件",
       " *   ],",
       " * })",
       " */",
