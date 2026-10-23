@@ -86,7 +86,7 @@
   "el-image 开启图片预览功能": {
     "prefix": ["el_image_-preview"],
     "body": [
-      "<el-image style=\"width: 100%; height: 100%;border-radius: 8px;justify-content: center;display: flex;\" loading=\"lazy\" lazy",
+      "<el-image style=\"width: 100%;height: 100%;border-radius: 8px;justify-content: center;display: flex;\" loading=\"lazy\" lazy",
       "  show-progress fit='cover' :initial-index=\"4\" :zoom-rate=\"1.2\" :max-scale=\"7\" :hide-on-click-modal=\"true\"",
       "  :src=\"${1:URL_图片地址}\" :preview-src-list=\"[${1:URL_图片地址}]\" v-loading=\"ref_加载状态\" @load=\"${1:加载成功回调}\">",
       "  <template #error>",
