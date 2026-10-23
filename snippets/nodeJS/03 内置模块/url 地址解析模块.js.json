@@ -1,0 +1,17 @@
+{
+  "引入 url.fileURLToPath URL转路径模块": {
+    "prefix": ["impt_fileURLToPath_-url"],
+    "body": ["import { fileURLToPath } from 'node:url'", ""],
+    "description": ["引入 url.fileURLToPath URL转路径模块"]
+  },
+  "import.meta.url": {
+    "prefix": ["import_meta_url"],
+    "body": ["import.meta.url"],
+    "description": ["import.meta.url"]
+  },
+  "fileURLToPath": {
+    "prefix": ["fileURLToPath_URL_-url"],
+    "body": ["fileURLToPath(new URL('./${1:path}', import.meta.url))"],
+    "description": ["fileURLToPath"]
+  }
+}
