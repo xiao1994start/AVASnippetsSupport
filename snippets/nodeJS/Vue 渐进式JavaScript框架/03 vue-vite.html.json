@@ -4,30 +4,30 @@
     "body": ["<template #${1:slots}>", "  $0", "</template>"],
     "description": ["模板插槽"]
   },
-  "模板插槽: 标题": {
+  "标题 插槽": {
     "prefix": ["temp#title-vue"],
     "body": ["<template #title>${1:标题}</template>"],
-    "description": ["模板插槽: 标题"]
+    "description": ["标题 插槽"]
   },
-  "模板插槽: 错误": {
+  "错误 插槽": {
     "prefix": ["temp#error-vue"],
     "body": ["<template #error>${1:错误}</template>"],
-    "description": ["模板插槽: 错误"]
+    "description": ["错误 插槽"]
   },
-  "模板插槽: 内部前缀": {
+  "内部前缀 插槽": {
     "prefix": ["temp#prefix-vue"],
     "body": ["<template #prefix>${1:内部前缀}</template>"],
-    "description": ["模板插槽: 内部前缀"]
+    "description": ["内部前缀 插槽"]
   },
-  "模板插槽: 外部前缀": {
+  "外部前缀 插槽": {
     "prefix": ["temp#prepend-vue"],
     "body": ["<template #prepend>${1:外部前缀}</template>"],
-    "description": ["模板插槽: 外部前缀"]
+    "description": ["外部前缀 插槽"]
   },
-  "模板插槽: 外部后缀": {
+  "外部后缀 插槽": {
     "prefix": ["temp#append-vue"],
     "body": ["<template #append>${1:外部后缀}</template>"],
-    "description": ["模板插槽: 外部后缀"]
+    "description": ["外部后缀 插槽"]
   },
   "div class=''": {
     "prefix": ["div_class_"],

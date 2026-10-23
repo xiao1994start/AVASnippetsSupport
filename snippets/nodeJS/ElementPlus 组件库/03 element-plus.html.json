@@ -4,7 +4,7 @@
     "body": [
       "<div style=\"padding: 0;margin: 0;\">",
       "  <el-container style=\"height: 100vh;\">",
-      "    <el-aside :width=\"true ? '120px' : '160px'\"",
+      "    <el-aside :width=\"true ? '128px' : '192px'\"",
       "      style=\"display: flex;flex-direction: column;overflow: hidden;border: 2px solid #723CB460;border-radius: 6px;\">",
       "",
       "      <el-menu router",
