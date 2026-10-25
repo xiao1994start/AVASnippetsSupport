@@ -126,6 +126,21 @@
     ],
     "description": "windows系统路径环境变量常用"
   },
+  "%%~fi": {
+    "prefix": ["fi"],
+    "body": ["%%~fi"],
+    "description": ["%%~fi"]
+  },
+  "%%~ni": {
+    "prefix": ["ni"],
+    "body": ["%%~ni"],
+    "description": ["%%~ni"]
+  },
+  "%%~nxi": {
+    "prefix": ["nxi"],
+    "body": ["%%~nxi"],
+    "description": ["%%~nxi"]
+  },
   "%%~应用说明": {
     "prefix": ["var_Info", "let_Info", "set_Info"],
     "body": [
