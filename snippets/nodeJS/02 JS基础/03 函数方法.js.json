@@ -9,10 +9,10 @@
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   },
-  "() => import(...)": {
+  "() => import(...) 动态导入依赖": {
     "prefix": ["new_lambda_import_", "nlami_"],
     "body": ["() => import($0)"],
-    "description": ["() => import(...)"]
+    "description": ["() => import(...) 动态导入依赖"]
   },
   "export 导出声明": {
     "prefix": ["export_", "expt_"],
