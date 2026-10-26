@@ -9,6 +9,11 @@
     "body": ["import ${2:module_name} from '${1:module}'"],
     "description": ["import 导入依赖 [ESM]"]
   },
+  "() => import(...)": {
+    "prefix": ["new_lambda_import_", "nlami_"],
+    "body": ["() => import($0)"],
+    "description": ["() => import(...)"]
+  },
   "export 导出声明": {
     "prefix": ["export_", "expt_"],
     "body": ["export $0"],
@@ -104,15 +109,10 @@
     "body": ["function ${1:name}(${2:params}) {$0}"],
     "description": ["function () {...}"]
   },
-  "() => ...": {
+  "() => return ...": {
     "prefix": ["new_lambda_", "nlam_"],
-    "body": ["($1) => $0"],
-    "description": ["() => ..."]
-  },
-  "() => import(...)": {
-    "prefix": ["new_lambda_import_", "nlami_"],
-    "body": ["() => import($0)"],
-    "description": ["() => import(...)"]
+    "body": ["($1) => ($0)"],
+    "description": ["() => return ..."]
   },
   "() => {...}": {
     "prefix": ["new_arrow_def_function_", "nadf_"],
