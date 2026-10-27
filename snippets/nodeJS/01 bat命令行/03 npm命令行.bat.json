@@ -70,30 +70,35 @@
     ],
     "description": ["切换npm国内镜像源"]
   },
-  "npm 安装模块": {
+  "npm 安装模块(生产依赖)": {
     "prefix": ["npm_install"],
     "body": ["npm i ${1:express} --registry https://registry.npmmirror.com/", ""],
-    "description": ["npm 安装模块"]
+    "description": ["npm 安装模块(生产依赖)"]
   },
-  "npm 安装模块 D(开发环境)": {
+  "npm 安装模块 D(开发依赖)": {
     "prefix": ["npm_install_D"],
-    "body": ["npm i -D ${1:express} --registry https://registry.npmmirror.com/", ""],
-    "description": ["npm 安装模块 D(开发环境)"]
+    "body": ["npm i ${1:express} -D --registry https://registry.npmmirror.com/", ""],
+    "description": ["npm 安装模块 D(开发依赖)"]
   },
-  "npm 全局安装模块": {
+  "npm 安装模块 g(全局依赖)": {
     "prefix": ["npm_install_g"],
     "body": ["npm i ${1:express} -g --registry https://registry.npmmirror.com/", ""],
-    "description": ["npm 全局安装模块"]
+    "description": ["npm 安装模块 g(全局依赖)"]
   },
   "npm 卸载模块": {
     "prefix": ["npm_uninstall"],
     "body": ["npm un ${1:express}", ""],
     "description": ["npm 卸载模块"]
   },
-  "npm 全局卸载模块": {
+  "npm 卸载模块 D(开发依赖)": {
+    "prefix": ["npm_uninstall_D"],
+    "body": ["npm un ${1:express} -D", ""],
+    "description": ["npm 卸载模块 D(开发依赖)"]
+  },
+  "npm 卸载模块 g(全局依赖)": {
     "prefix": ["npm_uninstall_g"],
     "body": ["npm un ${1:express} -g", ""],
-    "description": ["npm 全局卸载模块"]
+    "description": ["npm 卸载模块 g(全局依赖)"]
   },
   "npm 更新模块": {
     "prefix": ["npm_update"],
@@ -104,9 +109,10 @@
     "prefix": ["npm_ts_"],
     "body": [
       "ECHO.+ 【本地开发必装】安装 @types/node 类型定义",
-      "call npm i @types/node -g --registry https://registry.npmmirror.com/",
+      "call npm i @types/node -D --registry https://registry.npmmirror.com/",
       "ECHO.+ 【TypeScript】安装 tsx 运行时加速器",
       "call npm i tsx -g --registry https://registry.npmmirror.com/",
+      "call npm i @vscode/prompt-tsx -D --registry https://registry.npmmirror.com/",
       "",
       ""
     ],

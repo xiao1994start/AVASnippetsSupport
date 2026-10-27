@@ -5,13 +5,13 @@
       "set \"TARGET_FILE=.\\${1:写入文件路径_后缀}\"",
       "@REM  = ' 转义符: 当写入内容中存在单引号时 => ''",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
-      "    \"$lines = @(\" ^",
+      "    \"\\$lines = @(\" ^",
       "    \"  '${2:写入内容}',\" ^",
       "    \"  '',\" ^",
       "    \"  ''\" ^",
       "    \");\" ^",
-      "    \"$content =$lines -join [Environment]::NewLine;\" ^",
-      "    \"[System.IO.File]::WriteAllText('!TARGET_FILE!', $content, [System.Text.Encoding]::UTF8)\"",
+      "    \"\\$content =\\$lines -join [Environment]::NewLine;\" ^",
+      "    \"[System.IO.File]::WriteAllText('!TARGET_FILE!', \\$content, [System.Text.Encoding]::UTF8)\"",
       ""
     ],
     "description": ["powershell写入文件"]
