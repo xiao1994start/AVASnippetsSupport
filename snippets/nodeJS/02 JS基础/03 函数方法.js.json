@@ -109,20 +109,15 @@
     "body": ["function ${1:name}(${2:params}) {$0}"],
     "description": ["function () {...}"]
   },
-  "() => return ...": {
+  "() => (return ...)": {
     "prefix": ["new_lambda_", "nlam_"],
     "body": ["($1) => ($0)"],
-    "description": ["() => return ..."]
+    "description": ["() => (return ...)"]
   },
   "() => {...}": {
-    "prefix": ["new_arrow_def_function_", "nadf_"],
+    "prefix": ["new_def_function_arrow_", "ndfa_"],
     "body": ["(${1:}) => {$0}"],
     "description": ["() => {...}"]
-  },
-  "const () => {...}": {
-    "prefix": ["new_const_arrow_def_function_", "ncadf_"],
-    "body": ["const ${1:name} = (${2:params}) => {$0}"],
-    "description": ["const () => {...}"]
   },
   "class 类定义": {
     "prefix": ["new_class_"],
