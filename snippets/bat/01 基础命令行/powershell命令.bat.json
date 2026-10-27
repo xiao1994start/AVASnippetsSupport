@@ -2,16 +2,16 @@
   "powershell写入文件": {
     "prefix": ["powershell_write_file"],
     "body": [
-      "set \"TARGET_FILE=\\${1:写入文件路径_后缀}\"",
+      "set \"TARGET_FILE=${1:写入文件路径_后缀}\"",
       "@REM  = REM  = 转义符: 当写入内容中存在单引号时''...''; 当写入内容中存在双引号时\"\"...\"\"",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
-      "    \"\\$lines = @(\" ^",
-      "    \"  '${2:写入内容} ',\" ^",
-      "    \"  ' ',\" ^",
+      "    \"\\$filePath = '!TARGET_FILE!';\" ^",
+      "    \"\\$content = @(\" ^",
+      "    \"  '${2:第一行} ',\" ^",
+      "    \"  '${3:第二行} ',\" ^",
       "    \"  ''\" ^",
       "    \");\" ^",
-      "    \"\\$content =\\$lines -join [Environment]::NewLine;\" ^",
-      "    \"[System.IO.File]::WriteAllText('!TARGET_FILE!', \\$content, [System.Text.Encoding]::UTF8)\"",
+      "\"[System.IO.File]::WriteAllLines(\\$filePath, \\$content, [System.Text.Encoding]::UTF8)\"",
       ""
     ],
     "description": ["powershell写入文件"]
