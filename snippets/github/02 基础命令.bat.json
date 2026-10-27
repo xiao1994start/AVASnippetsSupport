@@ -1,7 +1,7 @@
 {
   "Git 版本号": {
     "prefix": ["git_version"],
-    "body": ["ECHO Git 版本号:", "call git -v", ""],
+    "body": ["ECHO Git 版本号: && call git -v", ""],
     "description": ["Git 版本号"]
   },
   "git 初始化仓库": {

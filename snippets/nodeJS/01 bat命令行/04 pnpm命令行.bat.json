@@ -6,7 +6,7 @@
   },
   "pnpm 版本号": {
     "prefix": ["pnpm_version"],
-    "body": ["ECHO.= 检查 pnpm 版本号:", "call pnpm --version", ""],
+    "body": ["ECHO.= 检查 pnpm 版本号: && call pnpm --version", ""],
     "description": ["pnpm 版本号"]
   },
   "pnpm 配置国内源": {

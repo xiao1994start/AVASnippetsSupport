@@ -1,7 +1,7 @@
 {
   "node.js 版本号": {
     "prefix": ["node_version"],
-    "body": ["ECHO = node 版本号:", "call node -v", ""],
+    "body": ["ECHO = node 版本号: && call node -v", ""],
     "description": ["node.js 版本号"]
   },
   "node.js 临时环境设置": {
@@ -18,11 +18,8 @@
       "set \"XPATH=%PATH%\"",
       "set \"PATH=%NODE_PATH%;%XPATH%;\"",
       "",
-      "ECHO.= node 版本号:",
-      "call node -v",
-      "ECHO.= npm 版本号:",
-      "call npm -v",
-      "ECHO.",
+      "ECHO.= node 版本号: && call node -v",
+      "ECHO.= npm 版本号: && call npm -v",
       "",
       "",
       "$0",

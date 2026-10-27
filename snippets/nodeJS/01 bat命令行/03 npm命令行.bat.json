@@ -16,7 +16,7 @@
   },
   "npm 版本号": {
     "prefix": ["npm_version"],
-    "body": ["ECHO = npm 版本号:", "call npm -v", ""],
+    "body": ["ECHO = npm 版本号: && call npm -v", ""],
     "description": ["npm 版本号"]
   },
   "npm 初始化新项目": {
