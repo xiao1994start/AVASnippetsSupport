@@ -14,7 +14,7 @@
       "@REM * Python解释器名称标准化",
       "for /D %%i in (\"*python*\") do ( ren \"%%i\" \"python\" )",
       "@REM * 定义 Python 环境变量",
-      "set \"local_python=.\\python\"",
+      "set \"local_python=%~dp0python\"",
       "",
       "@REM * 初始化 .vscode 配置文件",
       "if not exist \".\\.vscode\" ( ECHO 初始化 .vscode 配置文件 && md \".\\.vscode\" )",
