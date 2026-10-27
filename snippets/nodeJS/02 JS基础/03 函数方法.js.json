@@ -19,15 +19,15 @@
     "body": ["export $0"],
     "description": ["export 导出 声明"]
   },
-  "export 导出模块 [CommonJS]": {
+  "module.exports 导出模块 [CommonJS]": {
     "prefix": ["module_exports_", "mod_expt_"],
     "body": ["module.exports = {$0}"],
-    "description": ["export 导出 模块 [CommonJS]"]
+    "description": ["module.exports 导出模块 [CommonJS]"]
   },
-  "export 默认导出 [ESM]": {
+  "export default 默认导出 [ESM]": {
     "prefix": ["export_default_", "expt_def_"],
     "body": ["export default {$0}"],
-    "description": ["export 默认导出 [ESM]"]
+    "description": ["export default 默认导出 [ESM]"]
   },
   "async 异步声明": {
     "prefix": ["async_", "asc_"],
@@ -40,7 +40,7 @@
     "description": ["await 等待Promise完成"]
   },
   "type 定义类型": {
-    "prefix": ["type_", "tp_"],
+    "prefix": ["new_type_", "ntyp_"],
     "body": [
       "type Type_Name = {",
       "  // * 属性: 属性类型",
@@ -55,12 +55,12 @@
     "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
   },
   "typeof 类型查询": {
-    "prefix": ["typeof_", "tpof_"],
+    "prefix": ["typeof_", "typof_"],
     "body": ["typeof ${1:value_变量}"],
     "description": ["typeof 类型查询"]
   },
   "interface 接口定义结构": {
-    "prefix": ["interface_", "intf_"],
+    "prefix": ["new_interface_", "nintf_"],
     "body": [
       "interface Interface_Name {",
       "  // * 属性: 属性类型",
