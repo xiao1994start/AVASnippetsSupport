@@ -2,14 +2,14 @@
   "vue 快速创建模板": {
     "prefix": ["aaa_tmpl_vue"],
     "body": [
+      "<script setup lang='ts'>",
+      "  // * 组件逻辑/业务逻辑",
+      "</script>",
+      "",
       "<template>",
       "  <!-- * 组件模板/视图结构 -->",
       "  ${1:}",
       "</template>",
-      "",
-      "<script setup lang='ts'>",
-      "  // * 组件逻辑/业务逻辑",
-      "</script>",
       "",
       "<style scoped>",
       "  /* * 组件的样式 (scoped: 局部样式) */",
