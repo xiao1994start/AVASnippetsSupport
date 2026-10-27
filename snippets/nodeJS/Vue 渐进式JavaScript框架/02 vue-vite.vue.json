@@ -12,7 +12,7 @@
       "</template>",
       "",
       "<style scoped>",
-      "  /* * 组件的样式 (scoped: 局部样式) */",
+      "  /* * 组件样式 (scoped: 局部样式) */",
       "</style>",
       ""
     ],
