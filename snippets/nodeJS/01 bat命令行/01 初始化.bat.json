@@ -213,7 +213,7 @@
       "    ECHO.写入 tsdown 项目构建配置文件",
       "    powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "        \"\\$lines = @(\" ^",
-      "        \"  'import { defineConfig } from ''tsdown''',\" ^",
+      "        \"  'import { defineConfig } from ''tsdown'' ',\" ^",
       "        \"  '',\" ^",
       "        \"  'export default defineConfig({',\" ^",
       "        \"  '  dts: {',\" ^",
