@@ -1,6 +1,6 @@
 {
   "powershell写入文件": {
-    "prefix": ["powershell_write_file"],
+    "prefix": ["powershell_write_text"],
     "body": [
       "setlocal DisableDelayedExpansion",
       "@REM  setlocal DisableDelayedExpansion::临时禁用延迟扩展-避免感叹号被展开为环境变量",
