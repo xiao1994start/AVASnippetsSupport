@@ -37,7 +37,7 @@
       "  \"  '${2:写入文件内容} ',\" ^",
       "  \"  ''\" ^",
       "  \") -join [Environment]::NewLine;\" ^",
-      "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$lines, (New-Object System.Text.UTF8Encoding(\\$false)))\"",
+      "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$lines, [System.Text.UTF8Encoding]::new(\\$false))\"",
       "setlocal EnableDelayedExpansion",
       ""
     ],
@@ -62,7 +62,8 @@
       "  \"\\$json = \\$json  -replace '(?ms)/\\*.*?\\*/' -replace '(?m)(?<=^([^'']|''[^'']*'')*)//.*' | ConvertFrom-Json;\" ^",
       "  \"if (\\$null -eq \\$json) { \\$json = [pscustomobject]@{} };\" ^",
       "  \"if (-not \\$json.PSObject.Properties['属性名']) { Add-Member -InputObject \\$json -MemberType NoteProperty -Name 属性名 -Value (属性值) };\" ^",
-      "  \"\\$json | ConvertTo-Json -Depth 100 | Set-Content -Path \\$path -Encoding UTF8\"",
+      "  \"\\$json | ConvertTo-Json -Depth 100;\" ^",
+      "  \"[System.IO.File]::WriteAllText(\\$path, \\$json, [System.Text.UTF8Encoding]::new(\\$false))\"",
       "setlocal EnableDelayedExpansion",
       ""
     ],
