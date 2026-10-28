@@ -1,5 +1,5 @@
 {
-  "Vite 创建 Vue 项目": {
+  "Vite 构建 Vue 项目": {
     "prefix": ["init_vite_-vue"],
     "body": [
       "@ECHO OFF",
@@ -517,6 +517,6 @@
       "endlocal",
       ""
     ],
-    "description": ["Vite 创建 Vue 项目"]
+    "description": ["Vite 构建 Vue 项目"]
   }
 }
