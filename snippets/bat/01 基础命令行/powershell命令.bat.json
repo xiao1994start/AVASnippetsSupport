@@ -1,5 +1,5 @@
 {
-  "powershell写入文件": {
+  "powershell写入文本": {
     "prefix": ["powershell_write_text"],
     "body": [
       "setlocal DisableDelayedExpansion",
@@ -17,6 +17,32 @@
       "setlocal EnableDelayedExpansion",
       ""
     ],
-    "description": ["powershell写入文件"]
+    "description": ["powershell写入文本"]
+  },
+  "powershell写入JSON": {
+    "prefix": ["powershell_write_json"],
+    "body": [
+      "setlocal DisableDelayedExpansion",
+      "set \"JSON_FILE=${1:JSON_文件路径}\"",
+      "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
+      "  \"\\$path = \\$env:JSON_FILE;\" ^",
+      "  \"<# 读取JSON文件内容根对象并赋值=\\$cfg #>;\" ^",
+      "  \"<# \\$cfg = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json #>;\" ^",
+      "  \"\\$cfg = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;\" ^",
+      "  \"<# Add-Member -InputObject \\$变量名[.属性名] -NotePropertyName 属性名 -NotePropertyValue 属性值 -Force #>;\" ^",
+      "  \"<# 属性值-boolean: \\$true \\$false  #>;\" ^",
+      "  \"<# 属性值-string[]: @('value_1', 'value_2', ...)  #>;\" ^",
+      "  \"Add-Member -InputObject \\$cfg -NotePropertyName ${2:属性名} -NotePropertyValue ${3:属性值} -Force;\" ^",
+      "  \"<# 判断属性是否存在，若不存在则创建为空对象 #>;\" ^",
+      "  \"<# if (-not \\$cfg.PSObject.Properties['属性名']) { Add-Member -InputObject \\$cfg -NotePropertyName 属性名 -NotePropertyValue ([pscustomobject]@{}) -Force } #>;\" ^",
+      "  \"<# 读取\\$cfg.[属性名] 并赋值=\\$[变量名] #>;\" ^",
+      "  \"<# \\$[变量名] = \\$cfg.[属性名] #>;\" ^",
+      "  \"<# $json = $cfg | ConvertTo-Json -Depth 100 序列化JSON字符串对象 #>;\" ^",
+      "  \"$json = $cfg | ConvertTo-Json -Depth 100;\" ^",
+      "  \"[System.IO.File]::WriteAllText($path, $json, (New-Object System.Text.UTF8Encoding $false))\"",
+      "setlocal EnableDelayedExpansion",
+      ""
+    ],
+    "description": ["powershell写入JSON"]
   }
 }
