@@ -1,6 +1,6 @@
 {
   "powershell定义变量": {
-    "prefix": ["ps_let_", "ps_nc_", "ps_var_"],
+    "prefix": ["ps_let_"],
     "body": ["\\$${1:val} = $0"],
     "description": ["powershell定义变量"]
   },
@@ -56,9 +56,11 @@
       "@REM  * -Value （建议括号）::空数组=(@())/@()  数组=(@('a','b'))/@('a','b')",
       "@REM  * -Value （必须括号）::空对象=([pscustomobject]@{})  复杂对象=([pscustomobject]@{ name='x'; config=[pscustomobject]@{} })",
       "@REM  - 或 \\$ 开头的参数，都可以嵌套在 () 内",
+      "@REM  * -replace :: 替换字符串中的子字符串",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
-      "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;\" ^",
+      "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path;\" ^",
+      "  \"\\$json = \\$json  -replace '(?ms)/\\*.*?\\*/' -replace '(?m)(?<=^([^'']|''[^'']*'')*)//.*' | ConvertFrom-Json;\" ^",
       "  \"if (\\$null -eq \\$json) { \\$json = [pscustomobject]@{} };\" ^",
       "  \"if (-not \\$json.PSObject.Properties['属性名']) { Add-Member -InputObject \\$json -MemberType NoteProperty -Name 属性名 -Value (属性值) };\" ^",
       "  \"\\$json | ConvertTo-Json -Depth 100 | Set-Content -Path \\$path -Encoding UTF8\"",
