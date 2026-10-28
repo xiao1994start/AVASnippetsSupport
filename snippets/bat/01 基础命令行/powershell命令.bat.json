@@ -21,7 +21,7 @@
   },
   "powershell-对象": {
     "prefix": ["ps_object_", "ps_dict_"],
-    "body": ["[pscustomobject]@{'${1:属性名}'='${2:属性值}'}"],
+    "body": ["[pscustomobject]@{'${1:属性名}'=${2:属性值}}"],
     "description": ["powershell-对象"]
   },
   "powershell写入文本": {
