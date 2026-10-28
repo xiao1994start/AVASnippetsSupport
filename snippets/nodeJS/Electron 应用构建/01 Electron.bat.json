@@ -37,7 +37,7 @@
       "@REM ====================== Forge 构建 Electron 项目 ======================",
       "",
       "",
-      "set \"project_name=electron-vite-project-ts\"",
+      "set \"project_name=electron-vite-project-${1:ts}\"",
       "",
       "",
       "if not exist \"%~dp0%project_name%\\\" (",
