@@ -30,6 +30,7 @@
       "@REM  * -Value ::字符串='content'  数字=0  布尔值=\\$false/\\$true",
       "@REM  * -Value （建议括号）::空数组=(@())/@()  数组=(@('a','b'))/@('a','b')",
       "@REM  * -Value （必须括号）::空对象=([pscustomobject]@{})  复杂对象=([pscustomobject]@{ name='x'; config=[pscustomobject]@{} })",
+      "@REM  - 或 \\$ 开头的参数，都可以嵌套在 () 内",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
       "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;\" ^",
