@@ -60,7 +60,7 @@
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
       "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;\" ^",
       "  \"if (\\$null -eq \\$json) { \\$json = [pscustomobject]@{} };\" ^",
-      "  \"if (-not \\$json.PSObject.Properties['属性名']) { Add-Member -InputObject \\$json -MemberType NoteProperty -Name 属性名 -Value ('属性值') };\" ^",
+      "  \"if (-not \\$json.PSObject.Properties['属性名']) { Add-Member -InputObject \\$json -MemberType NoteProperty -Name 属性名 -Value (属性值) };\" ^",
       "  \"\\$json | ConvertTo-Json -Depth 100 | Set-Content -Path \\$path -Encoding UTF8\"",
       "setlocal EnableDelayedExpansion",
       ""
