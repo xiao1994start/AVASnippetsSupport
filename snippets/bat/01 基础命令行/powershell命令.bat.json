@@ -12,8 +12,8 @@
       "    \"  '${2:内容} ',\" ^",
       "    \"  '${3:内容} ',\" ^",
       "    \"  ''\" ^",
-      "    \");\" ^",
-      "    \"[System.IO.File]::WriteAllLines(\\$filePath, \\$content, [System.Text.Encoding]::UTF8)\"",
+      "    \") -join [Environment]::NewLine;\" ^",
+      "    \"[System.IO.File]::WriteAllText(\\$filePath, \\$content, [System.Text.Encoding]::UTF8)\"",
       "setlocal EnableDelayedExpansion",
       ""
     ],
