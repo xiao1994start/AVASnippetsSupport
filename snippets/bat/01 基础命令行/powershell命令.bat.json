@@ -33,7 +33,6 @@
       "set \"TARGET_FILE=${1:写入文件路径_后缀}\"",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$filePath = \\$env:TARGET_FILE;\" ^",
-      "  \"<# \\$lines = @('写入文件内容') #>\" ^",
       "  \"\\$lines = @(\" ^",
       "  \"  '${2:写入文件内容} ',\" ^",
       "  \"  ''\" ^",
