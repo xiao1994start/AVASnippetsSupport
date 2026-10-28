@@ -24,7 +24,7 @@
     "body": ["[pscustomobject]@{'${1:属性名}'=${2:属性值}}"],
     "description": ["powershell-对象"]
   },
-  "powershell写入文本": {
+  "powershell写入文本(UTF8)": {
     "prefix": ["powershell_write_text", "ps_w_text"],
     "body": [
       "setlocal DisableDelayedExpansion",
@@ -41,7 +41,24 @@
       "setlocal EnableDelayedExpansion",
       ""
     ],
-    "description": ["powershell写入文本"]
+    "description": ["powershell写入文本(UTF8)"]
+  },
+  "powershell写入文本(GBK)": {
+    "prefix": ["powershell_write_text-GBK", "ps_w_text-GBK"],
+    "body": [
+      "setlocal DisableDelayedExpansion",
+      "set \"TARGET_FILE=${1:写入文件路径_后缀}\"",
+      "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
+      "  \"\\$filePath = \\$env:TARGET_FILE;\" ^",
+      "  \"\\$lines = @(\" ^",
+      "  \"  '${2:写入文件内容} ',\" ^",
+      "  \"  ''\" ^",
+      "  \") -join [Environment]::NewLine;\" ^",
+      "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$lines, [System.Text.Encoding]::GetEncoding(936))\"",
+      "setlocal EnableDelayedExpansion",
+      ""
+    ],
+    "description": ["powershell写入文本(GBK)"]
   },
   "powershell写入JSON": {
     "prefix": ["powershell_write_json", "ps_w_json"],
