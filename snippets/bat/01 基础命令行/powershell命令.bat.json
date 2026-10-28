@@ -1,6 +1,6 @@
 {
   "powershell写入文本": {
-    "prefix": ["powershell_write_text"],
+    "prefix": ["powershell_write_text", "ps_w_text"],
     "body": [
       "setlocal DisableDelayedExpansion",
       "@REM  * 临时禁用延迟扩展-避免感叹号被展开为环境变量",
@@ -20,27 +20,21 @@
     "description": ["powershell写入文本"]
   },
   "powershell写入JSON": {
-    "prefix": ["powershell_write_json"],
+    "prefix": ["powershell_write_json", "ps_w_json"],
     "body": [
       "setlocal DisableDelayedExpansion",
       "set \"JSON_FILE=${1:JSON_文件路径}\"",
+      "@REM  ? 变量\\$json获取JSON内容:  \\$json = Get-Content -Raw -Encoding UTF8 $path | ConvertFrom-Json;",
+      "@REM  ? 如果 '属性名' 不存在 :  if (-not \\$json[.二级属性名].PSObject.Properties['属性名']) {};",
+      "@REM  ? 添加属性:   \\$json[.二级属性名] | Add-Member -MemberType NoteProperty -Name \"属性名\" -Value \"属性值\"",
+      "@REM  * -Value ::字符串='content'  数字=0  布尔值=\\$false/\\$true",
+      "@REM  * -Value （建议括号）::空数组=(@())/@()  数组=(@('a','b'))/@('a','b')",
+      "@REM  * -Value （必须括号）::空对象=([pscustomobject]@{})  复杂对象=([pscustomobject]@{ name='x'; config=[pscustomobject]@{} })",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
-      "  \"<# 读取JSON文件内容根对象并赋值=\\$json #>;\" ^",
-      "  \"<# \\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json #>;\" ^",
       "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;\" ^",
-      "  \"<# Add-Member -InputObject \\$变量名[.属性名] -NotePropertyName 属性名 -NotePropertyValue 属性值 -Force #>;\" ^",
-      "  \"<# 属性值-string: 'value' #>;\" ^",
-      "  \"<# 属性值-boolean: \\$true \\$false #>;\" ^",
-      "  \"<# 属性值-string[]: @('value_1', 'value_2', ...) #>;\" ^",
-      "  \"Add-Member -InputObject \\$json -NotePropertyName ${2:属性名} -NotePropertyValue ${3:属性值} -Force;\" ^",
-      "  \"<# 判断属性是否存在，若不存在则创建为空对象 #>;\" ^",
-      "  \"<# if (-not \\$json.PSObject.Properties['属性名']) { Add-Member -InputObject \\$json -NotePropertyName 属性名 -NotePropertyValue ([pscustomobject]@{}) -Force } #>;\" ^",
-      "  \"<# 读取\\$json.[属性名] 并赋值=\\$[变量名] #>;\" ^",
-      "  \"<# \\$[变量名] = \\$json.[属性名] #>;\" ^",
-      "  \"<# \\$json = \\$json | ConvertTo-Json -Depth 100 序列化JSON字符串对象 #>;\" ^",
-      "  \"\\$json = \\$json | ConvertTo-Json -Depth 100;\" ^",
-      "  \"[System.IO.File]::WriteAllText(\\$path, \\$json, (New-Object System.Text.UTF8Encoding \\$false))\"",
+      "  \"if (\\$null -eq $json) { \\$json = [pscustomobject]@{} };;\" ^",
+      "  \"\\$json | ConvertTo-Json -Depth 100 | Set-Content -Path \\$path -Encoding UTF8\"",
       "setlocal EnableDelayedExpansion",
       ""
     ],
