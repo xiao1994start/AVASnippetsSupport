@@ -1,4 +1,29 @@
 {
+  "powershell定义变量": {
+    "prefix": ["ps_let_", "ps_nc_", "ps_var_"],
+    "body": ["\\$${1:val} = $0"],
+    "description": ["powershell定义变量"]
+  },
+  "powershell-false": {
+    "prefix": ["ps_ff_false"],
+    "body": ["\\$false"],
+    "description": ["powershell-false"]
+  },
+  "powershell-true": {
+    "prefix": ["ps_tt_true"],
+    "body": ["\\$true"],
+    "description": ["powershell-true"]
+  },
+  "powershell-数组": {
+    "prefix": ["ps_array_", "ps_list_"],
+    "body": ["@($0)"],
+    "description": ["powershell-数组"]
+  },
+  "powershell-对象": {
+    "prefix": ["ps_object_", "ps_dict_"],
+    "body": ["[pscustomobject]@{'${1:属性名}'='${2:属性值}'}"],
+    "description": ["powershell-对象"]
+  },
   "powershell写入文本": {
     "prefix": ["powershell_write_text", "ps_w_text"],
     "body": [
