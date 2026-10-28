@@ -116,6 +116,7 @@
       "call npm i @types/node -D --registry https://registry.npmmirror.com/",
       "ECHO.+ 【TypeScript】安装 tsx 运行时加速器",
       "call npm i tsx -g --registry https://registry.npmmirror.com/",
+      "call npm i tsx --registry https://registry.npmmirror.com/",
       "",
       ""
     ],
