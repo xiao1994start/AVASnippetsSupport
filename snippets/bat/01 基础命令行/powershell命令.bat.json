@@ -37,7 +37,7 @@
       "  \"  '${2:写入文件内容} ',\" ^",
       "  \"  ''\" ^",
       "  \") -join [Environment]::NewLine;\" ^",
-      "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$lines, [System.Text.Encoding]::UTF8)\"",
+      "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$lines, (New-Object System.Text.UTF8Encoding(\\$false)))\"",
       "setlocal EnableDelayedExpansion",
       ""
     ],
