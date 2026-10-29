@@ -8,5 +8,10 @@
       "\n zip() 函数返回一个迭代器对象, 可以通过 next() 函数获取元素",
       "\n 如需展示列表, 需手动 list() 转换"
     ]
+  },
+  "zip 打包可迭代对象 -> tuple": {
+    "prefix": ["zip_iterable_-zip"],
+    "body": ["zip($0)"],
+    "description": ["zip 打包可迭代对象 -> tuple"]
   }
 }
