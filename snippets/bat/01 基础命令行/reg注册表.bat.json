@@ -64,7 +64,7 @@
       "@REM */ve 指定[默认值]",
       "@REM */v [EntryName] 指定特点的键",
       "@REM */t DataType 指定数据类型",
-      "    @REM *REG_SZ REG_MULTI_SZ REG_EXPAND_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR",
+      "@REM *REG_SZ REG_MULTI_SZ REG_EXPAND_SZ REG_DWORD_BIG_ENDIAN REG_DWORD REG_BINARY REG_DWORD_LITTLE_ENDIAN REG_LINK REG_FULL_RESOURCE_DESCRIPTOR",
       "@REM */d [value] 指定新注册表项的值",
       "@REM */f 不用询问信息而直接添加子项或项",
       ""
