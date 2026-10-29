@@ -35,7 +35,7 @@
       "",
       "@REM ====================== Vite 构建 Vue 项目 ======================",
       "",
-      "set \"project_name=vite-project-${1:ts}\"",
+      "set \"project_name=vite-${1:ts}\"",
       "",
       "if not exist \"%~dp0%project_name%\\\" (",
       "  ECHO.Vite 构建 Vue 项目",
