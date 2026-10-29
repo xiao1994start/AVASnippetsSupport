@@ -1,7 +1,6 @@
 @ECHO OFF
-setlocal enabledelayedexpansion
+setlocal EnableDelayedExpansion
 CD /D "%~dp0"
-
 
 for %%v in ("AVASnippetsSupport*.vsix") do ( ECHO 清理旧版插件 %%v && del /F /Q "%%v" )
 
@@ -40,11 +39,11 @@ call ECHO.|"%~dp0package.exe"
 ECHO 封装插件
 call vsce package
 for %%i in ("*.vsix") do (
-    ECHO 更新: %%i
-    call code --install-extension "%%i" 
-    @REM  del /F /Q "..\%%i"
-    @REM  copy /V /Y "%%i" "..\%%i"
+  ECHO 更新: %%i
+  call code --install-extension "%%i"
+  @REM  del /F /Q "..\%%i"
+  @REM  copy /V /Y "%%i" "..\%%i"
 )
 
-
 endlocal
+EXIT /B
