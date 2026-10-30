@@ -639,6 +639,7 @@
       "  \"  '    show: false, // * 未完成初始化时不显示窗口 ',\" ^",
       "  \"  '    title: ''ElectronApp-Vite&Vue'', // * 窗口标题 ',\" ^",
       "  \"  '    // icon: path.join(__dirname, ''../assets/icon.ico''), // * 图标 ',\" ^",
+      "  \"  '    frame: false, // * 窗口无边框 ',\" ^",
       "  \"  '    webPreferences: { ',\" ^",
       "  \"  '      // 加载预加载脚本 ',\" ^",
       "  \"  '      preload: path.join(__dirname, ''preload.cjs''), ',\" ^",
