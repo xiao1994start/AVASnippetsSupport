@@ -24,7 +24,6 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 @REM  call npm -v
 @REM  ECHO 检查 软件仓库位置:
 @REM  call npm root -g
-
 @REM  ECHO 安装 - 更新 自定义插件必备库
 @REM  ECHO 正在安装 @vscode/vsce 打包库 (使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension)
 @REM  call npm i @vscode/vsce -g --registry https://registry.npmmirror.com/
@@ -33,14 +32,11 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 @REM  ECHO 安装 - 更新 完成
 
 CD /D "%~dp0"
-ECHO.生成 package.json 文件
-call ECHO.|"%~dp0package.exe"
+ECHO.生成 package.json 文件 && call ECHO.|"%~dp0package.exe"
 
-ECHO 封装插件
-call vsce package
+ECHO 封装插件 && call vsce package
 for %%i in ("*.vsix") do (
-  ECHO 更新: %%i
-  call code --install-extension "%%i"
+  ECHO 更新: %%i && call code --install-extension "%%i"
   @REM  del /F /Q "..\%%i"
   @REM  copy /V /Y "%%i" "..\%%i"
 )
