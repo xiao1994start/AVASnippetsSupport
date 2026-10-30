@@ -62,20 +62,5 @@
     "prefix": ["set_cwd"],
     "body": ["set \"cwd=%~dp0\"", "if \"!cwd:~-1!\"==\"\\\" set \"cwd=!cwd:~0,-1!\"", ""],
     "description": "获取当前工作目录变量"
-  },
-  "%%For循环中的元变量": {
-    "prefix": ["let"],
-    "body": ["%%${1:i}"],
-    "description": ["%%For循环中的元变量", ""]
-  },
-  "%环境变量%": {
-    "prefix": ["new_const"],
-    "body": ["%${1:i}%"],
-    "description": ["%环境变量%"]
-  },
-  "!延迟环境变量扩展!": {
-    "prefix": ["var"],
-    "body": ["!${1:i}!"],
-    "description": ["!延迟环境变量扩展!", ""]
   }
 }
