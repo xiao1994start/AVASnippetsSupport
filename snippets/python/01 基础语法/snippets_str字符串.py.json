@@ -66,7 +66,7 @@
   },
   "str.encode 编码": {
     "prefix": ["str_encode"],
-    "body": ["encode($0)"],
+    "body": ["encode(${0})"],
     "description": ["str.encode 返回str的编码版本"]
   },
   "str.encode 示例1": {
@@ -151,7 +151,7 @@
   },
   "str.format 指定值的格式": {
     "prefix": ["str_format_-str"],
-    "body": ["format($0)"],
+    "body": ["format(${0})"],
     "description": ["str.format: Formats 设置str中指定值的格式"]
   },
   "str.format 示例": {
@@ -170,7 +170,7 @@
   },
   "str.format_map 指定值的格式": {
     "prefix": ["str_format_map"],
-    "body": ["format_map($0)"],
+    "body": ["format_map(${0})"],
     "description": ["str.format_map: Formats 设置str中指定值的格式"]
   },
   "str.format_map 示例": {

@@ -1,7 +1,7 @@
 {
   "ECHO 控制台输出": {
     "prefix": ["cslg_", "pprt_"],
-    "body": ["ECHO.$0"],
+    "body": ["ECHO.${0}"],
     "description": ["ECHO 控制台输出", "不添加内容默认输出`空行`"]
   },
   "ECHO | clip 设置剪切板内容": {

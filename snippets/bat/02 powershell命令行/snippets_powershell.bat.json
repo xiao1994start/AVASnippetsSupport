@@ -1,7 +1,7 @@
 {
   "powershell定义变量": {
     "prefix": ["ps_let_"],
-    "body": ["\\$${1:val} = $0"],
+    "body": ["\\$${1:val} = ${0}"],
     "description": ["powershell定义变量"]
   },
   "powershell-false": {
@@ -16,7 +16,7 @@
   },
   "powershell-数组": {
     "prefix": ["ps_array_", "ps_list_"],
-    "body": ["@($0)"],
+    "body": ["@(${0})"],
     "description": ["powershell-数组"]
   },
   "powershell-对象": {

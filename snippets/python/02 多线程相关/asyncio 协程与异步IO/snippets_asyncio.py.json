@@ -6,7 +6,7 @@
   },
   "asyncio 协程异步IO函数": {
     "prefix": ["asyncio_"],
-    "body": ["asyncio.$0"],
+    "body": ["asyncio.${0}"],
     "description": ["asyncio 协程异步IO函数"]
   },
   "asyncio.Event 异步事件对象": {

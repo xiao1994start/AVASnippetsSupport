@@ -16,7 +16,7 @@
   },
   "win32print.SetDefaultPrinter 设置默认打印机": {
     "prefix": ["win32print_SetDefaultPrinter"],
-    "body": ["win32print.SetDefaultPrinter($0)  # 参数为打印机名称"],
+    "body": ["win32print.SetDefaultPrinter(${0})  # 参数为打印机名称"],
     "description": ["win32print.SetDefaultPrinter 设置默认打印机"]
   },
   "win32print.OpenPrinter 打开指定打印机": {

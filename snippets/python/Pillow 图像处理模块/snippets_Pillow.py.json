@@ -11,7 +11,7 @@
   },
   "PIL.Image.save 打开图形文件": {
     "prefix": ["Image_save_-PIL"],
-    "body": ["Image.save($0)"],
+    "body": ["Image.save(${0})"],
     "description": ["PIL.Image.open 打开图形文件"]
   },
   "PIL.Image.convert('RGB') 转换图像格式RGB彩色": {

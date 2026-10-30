@@ -1,7 +1,7 @@
 {
   "console.log(...) 控制台输出日志": {
     "prefix": ["cslg_", "pprt_-console_log"],
-    "body": ["console.log($0)"],
+    "body": ["console.log(${0})"],
     "description": ["console.log(...) 控制台输出日志"]
   },
   "alert(...) 弹窗输出": {

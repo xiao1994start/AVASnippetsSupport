@@ -1,7 +1,7 @@
 {
   "type 数据类型": {
     "prefix": ["type"],
-    "body": ["type($0)"],
+    "body": ["type(${0})"],
     "description": ["type 数据类型"]
   },
   "isinstance 判断对象类型是否一致": {

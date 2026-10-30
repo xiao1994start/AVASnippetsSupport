@@ -11,7 +11,7 @@
   },
   "bs4.select 选择器匹配->list": {
     "prefix": ["bs4_select_-bs4"],
-    "body": ["select('$0')"],
+    "body": ["select('${0}')"],
     "description": [
       "bs4.select 选择器(Selector)来定位和提取 HTML 页面中的元素",
       "\n用法: ",

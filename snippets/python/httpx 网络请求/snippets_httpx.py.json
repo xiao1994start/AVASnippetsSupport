@@ -122,7 +122,7 @@
       "httpx.post(",
       "    url=${1:'url'},",
       "    headers={'Content-Type': 'application/json'},",
-      "    json={$0},  # json=直接转换dict为json格式[推荐]; data=json.dumps(转换dict为json格式)",
+      "    json={${0}},  # json=直接转换dict为json格式[推荐]; data=json.dumps(转换dict为json格式)",
       "    timeout=None,  # 设置超时时间 (None[推荐]:无限制等待时间,避免超时请求失败)",
       ")"
     ],

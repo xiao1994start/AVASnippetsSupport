@@ -28,7 +28,7 @@
       "  // ! 调用: pinia仓库名().函数名()",
       "",
       "  // = 暴露",
-      "  return { $0 } // - 返回仓库中 属性、计算属性、方法",
+      "  return { ${0} } // - 返回仓库中 属性、计算属性、方法",
       "})",
       "// = 导出 pinia 状态管理库",
       "export default Store_仓库名",
@@ -69,7 +69,7 @@
       "  console.log('有关状态变更的信息:', mutation, '当前状态对象:', state)",
       "  // - 本地存储状态同步更新：",
       "  // localStorage.setItem('pinia仓库对象', JSON.stringify(state.pinia仓库对象))",
-      "  $0",
+      "  ${0}",
       "})",
       ""
     ],

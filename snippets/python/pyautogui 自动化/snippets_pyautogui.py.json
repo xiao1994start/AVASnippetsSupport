@@ -21,7 +21,7 @@
   },
   "pyautogui.locateCenterOnScreen 定位图片中心点坐标": {
     "prefix": ["pg_locateCenterOnScreen_-pyautogui"],
-    "body": ["pg.locateCenterOnScreen($0)"],
+    "body": ["pg.locateCenterOnScreen(${0})"],
     "description": ["pyautogui.locateCenterOnScreen 定位图片中心点坐标"]
   },
   "pyautogui.moveTo 移动鼠标到指定(绝对)位置": {

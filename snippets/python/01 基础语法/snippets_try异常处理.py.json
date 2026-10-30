@@ -3,7 +3,7 @@
     "prefix": ["try_except_=-try"],
     "body": [
       "try:",
-      "    $0",
+      "    ${0}",
       "    ...",
       "except Exception as e:",
       "    print(f'🔴 错误类型:{type(e)}')",

@@ -13,7 +13,7 @@
   },
   "os.environ 设置临时环境变量": {
     "prefix": ["os_environ_set"],
-    "body": ["os.environ['PATH'] = f'{\";\".join([$0])};{os.getenv(\"PATH\")}'"],
+    "body": ["os.environ['PATH'] = f'{\";\".join([${0}])};{os.getenv(\"PATH\")}'"],
     "description": ["os.environ 设置临时环境变量"]
   },
   "os.environ.get 获取环境变量值": {
@@ -25,7 +25,7 @@
   },
   "os.startfile 打开文件 或 文件夹": {
     "prefix": ["os_startfile"],
-    "body": ["os.startfile($0)"],
+    "body": ["os.startfile(${0})"],
     "description": ["os.startfile 打开文件 或 文件夹"]
   },
   "os.popen 从一个命令打开一个管道": {
@@ -40,7 +40,7 @@
   },
   "os.popen.read 获取全部结果": {
     "prefix": ["os_popen_read"],
-    "body": ["os.popen($0)read()"],
+    "body": ["os.popen(${0})read()"],
     "description": ["获取全部结果"]
   },
   "os.pathsep 操作系统通常用于分隔搜索路径": {
@@ -55,7 +55,7 @@
   },
   "os.system 执行操作系统命令": {
     "prefix": ["os_system"],
-    "body": ["os.system('$0')"],
+    "body": ["os.system('${0}')"],
     "description": ["os.system 执行操作系统命令"]
   },
   "os.system 执行操作系统命令 - cls♻️清屏": {

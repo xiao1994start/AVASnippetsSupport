@@ -9,7 +9,7 @@
     "body": [
       "with open(${1:file_path}, '${2|r,rb,r+,w,wb,w+,wb+,a,ab,a+,t,x,b|}', ${3:encoding='utf-8'}) as file:",
       "    # b 模式下, 删除 encoding 配置",
-      "    ${4:pass}$0",
+      "    ${4:pass}${0}",
       "    file.flush()  # 写文件刷新缓存"
     ],
     "description": ["open -文件操作"]
@@ -23,7 +23,7 @@
   },
   "open.readline 返回一行": {
     "prefix": ["open_readline_-open"],
-    "body": ["readline($0)"],
+    "body": ["readline(${0})"],
     "description": ["open.readline 返回一行"]
   },
   "open.readlines 按行读取->list": {
@@ -33,7 +33,7 @@
   },
   "open.write 写入文件": {
     "prefix": ["open_write_-open"],
-    "body": ["write($0)"],
+    "body": ["write(${0})"],
     "description": ["open.write 如果要写入字符串以外的数据,先将他转换为字符串"]
   },
   "open.flush 刷新缓存": {
@@ -48,12 +48,12 @@
   },
   "open -r 只读模式": {
     "prefix": ["with_open_r"],
-    "body": ["with open(${1:file_path}, 'r', encoding='utf-8') as f:", "    content = f.read()", "    $0"],
+    "body": ["with open(${1:file_path}, 'r', encoding='utf-8') as f:", "    content = f.read()", "    ${0}"],
     "description": ["open -r 以只读方式打开文件文件的指针将会放在文件的开头这是默认模式", "文件必须存在, 不存在抛出错误"]
   },
   "open -rb 二进制只读": {
     "prefix": ["with_open_rb"],
-    "body": ["with open(${1:file_path}, 'rb') as f:", "    f.read()", "    $0"],
+    "body": ["with open(${1:file_path}, 'rb') as f:", "    f.read()", "    ${0}"],
     "description": ["open -rb 以二进制格式打开一个文件用于只读常用于读取图片、声音、视频等文件"]
   },
   "open -r+ 读写 |->开头": {

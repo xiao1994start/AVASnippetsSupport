@@ -11,7 +11,7 @@
   },
   "str(Path(...)) ->Path类型转换为字符串": {
     "prefix": ["strPath_"],
-    "body": ["str(Path($0))"],
+    "body": ["str(Path(${0}))"],
     "description": ["str(Path(...)) ->Path类型转换为字符串"]
   },
   "Path.cwd 当前路径": {

@@ -77,7 +77,7 @@
       "# TODO:配置文件数据更新操作",
       "# json_data = {}",
       "# json_data[key] = value",
-      "$0",
+      "${0}",
       "",
       "with open(${1:json_path}, 'w', encoding='utf-8') as f_JSON:",
       "    # w 只写(清空文件), 不可读, 文件不存在创建新文件, 文件存在清空文件, 文件指针在开头",

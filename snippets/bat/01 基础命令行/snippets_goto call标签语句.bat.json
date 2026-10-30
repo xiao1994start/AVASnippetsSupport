@@ -1,12 +1,12 @@
 {
   "跳转到标签": {
     "prefix": ["goto_label"],
-    "body": ["goto :$0"],
+    "body": ["goto :${0}"],
     "description": ["跳转到标签"]
   },
   "临时运行标签": {
     "prefix": ["call_label"],
-    "body": ["call :$0"],
+    "body": ["call :${0}"],
     "description": [
       "临时运行标签",
       "\t call :label 临时跳转标签代码段需要使用 goto :eof 为结束语句",
@@ -15,7 +15,7 @@
   },
   "新建子标签": {
     "prefix": ["new_label"],
-    "body": [":label", "$0", "goto :eof"],
+    "body": [":label", "${0}", "goto :eof"],
     "description": ["新建子标签"]
   },
   "从子标签/子程序中返回": {

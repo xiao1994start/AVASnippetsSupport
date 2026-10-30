@@ -133,7 +133,7 @@
   },
   "winreg.CloseKey 关闭注册表键": {
     "prefix": ["winreg_CloseKey"],
-    "body": ["winreg.CloseKey($0)"],
+    "body": ["winreg.CloseKey(${0})"],
     "description": ["winreg.CloseKey 关闭注册表键"]
   }
 }

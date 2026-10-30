@@ -96,7 +96,7 @@
       "            cls._instance = super().__new__(cls)",
       "        # 返回已有的单例实例",
       "        return cls._instance",
-      "$0",
+      "${0}",
       ""
     ],
     "description": ["创建 class 单实例对象"]
@@ -120,7 +120,7 @@
       "    # ==================== 全局状态存储 ====================",
       "    def __init__(self) -> None:",
       "        # * ${3:_summary_}",
-      "        $0",
+      "        ${0}",
       "        ...",
       "        return",
       "    ",
@@ -132,7 +132,7 @@
   },
   "class 初始化(继承父类)": {
     "prefix": ["class_def_init_super_init_"],
-    "body": ["def __init__(self) -> None:", "    $0", "    super().__init__()", ""],
+    "body": ["def __init__(self) -> None:", "    ${0}", "    super().__init__()", ""],
     "description": ["class 初始化(继承父类)"]
   },
   "class super().__init__() 继承父类": {
@@ -142,22 +142,22 @@
   },
   "class类self": {
     "prefix": ["slf_"],
-    "body": ["self$0"],
+    "body": ["self${0}"],
     "description": ["class类self"]
   },
   "创建class - def 函数": {
     "prefix": ["new_class_def_function_", "ncdf_"],
-    "body": ["def ${1:name}(self):", "    $0", "    return"],
+    "body": ["def ${1:name}(self):", "    ${0}", "    return"],
     "description": ["创建class - def 函数"]
   },
   "创建class - async def 函数": {
     "prefix": ["new_async_def_self"],
-    "body": ["async def ${1:name}(self):", "    $0", "    return"],
+    "body": ["async def ${1:name}(self):", "    ${0}", "    return"],
     "description": ["创建class - async def 函数"]
   },
   "创建def函数": {
     "prefix": ["new_def_function_", "ndf_"],
-    "body": ["def ${1:name}():", "    $0", "    return"],
+    "body": ["def ${1:name}():", "    ${0}", "    return"],
     "description": ["创建def函数"]
   },
   "async def 创建异步IO协程函数": {
@@ -170,7 +170,7 @@
       "    # asyncio.create_task(async_task) 建立事件循环, 运行异步任务事件",
       "    # ! 注意: 调用异步协程函数 await 的函数本身也必须是 async def 函数",
       "    # asyncio.run(async_func) 运行事件循环的异步协程函数",
-      "    $0",
+      "    ${0}",
       "    ...",
       "    return",
       ""
@@ -191,7 +191,7 @@
   },
   "if_main:运行入口 | 调试运行": {
     "prefix": ["if_name==main"],
-    "body": ["if __name__ == '__main__':", "    \"\"\" === * 运行入口 | 调试运行 * === \"\"\"", "    $0", "    ..."],
+    "body": ["if __name__ == '__main__':", "    \"\"\" === * 运行入口 | 调试运行 * === \"\"\"", "    ${0}", "    ..."],
     "description": ["if_main:运行入口 | 调试运行"]
   },
   "if_in_main:运行入口 | 调试运行": {
@@ -199,7 +199,7 @@
     "body": [
       "if __name__ in {'__main__', '__mp_main__'}:",
       "    \"\"\" === * 运行入口 | 调试运行 | 多进程[multiprocessing]运行 * === \"\"\"",
-      "    $0",
+      "    ${0}",
       "    ...",
       ""
     ],

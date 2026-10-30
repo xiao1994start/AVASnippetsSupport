@@ -1,7 +1,7 @@
 {
   "Region 创建新的折叠区域": {
     "prefix": ["#region_", "region_"],
-    "body": "#region ${1:Region name}\n$0\n#endregion ${1:Region name}",
+    "body": "#region ${1:Region name}\n${0}\n#endregion ${1:Region name}",
     "description": "创建新的折叠区域."
   },
   "label 创建新标签": {
@@ -46,7 +46,7 @@
   },
   "Pause 等待几秒钟, 然后显示下一个屏幕": {
     "prefix": ["pause_", "pass_"],
-    "body": "with Pause($1)\n$2",
+    "body": "with Pause(${1})\n${2}",
     "description": "等待几秒钟, 然后显示下一个屏幕."
   },
   "执行一行Python": {
@@ -61,7 +61,7 @@
   },
   "python语句块": {
     "prefix": ["init_py_", "init_python_"],
-    "body": ["init python:", "    # *python语句块*", "    $0"],
+    "body": ["init python:", "    # *python语句块*", "    ${0}"],
     "description": ["python语句块"]
   },
   "Init Block 在初始化时运行代码": {
@@ -96,7 +96,7 @@
   },
   "Renpy 暂停": {
     "prefix": ["rpause_"],
-    "body": "$ renpy.pause($1)\n$2",
+    "body": "$ renpy.pause(${1})\n${2}",
     "description": "Ren'Py 暂停."
   },
   "电影过场动画": {
@@ -191,72 +191,72 @@
   },
   "Assert Equal 断言相等": {
     "prefix": [",ase_"],
-    "body": "self.assertEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
+    "body": "self.assertEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})${0}",
     "description": "Assert Equal 断言相等"
   },
   "Assert Not Equal 断言不等": {
     "prefix": [",asne_"],
-    "body": "self.assertNotEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
+    "body": "self.assertNotEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})${0}",
     "description": "Assert Not Equal 断言不等"
   },
   "Assert Raises 断言异常": {
     "prefix": [",asr_"],
-    "body": "self.assertRaises(${1:exception}, ${2:callable})$0",
+    "body": "self.assertRaises(${1:exception}, ${2:callable})${0}",
     "description": "Assert Raises 断言异常"
   },
   "Assert True 断言真": {
     "prefix": [",ast_"],
-    "body": "self.assertTrue(${1:actual}${2:, '${3:message}'})$0",
+    "body": "self.assertTrue(${1:actual}${2:, '${3:message}'})${0}",
     "description": "Assert True 断言真"
   },
   "Assert False 断言假": {
     "prefix": [",asf_"],
-    "body": "self.assertFalse(${1:actual}${2:, '${3:message}'})$0",
+    "body": "self.assertFalse(${1:actual}${2:, '${3:message}'})${0}",
     "description": "Assert False 断言假"
   },
   "Assert Is 断言是...": {
     "prefix": [",asi_"],
-    "body": "self.assertIs(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
+    "body": "self.assertIs(${1:expected}, ${2:actual}${3:, '${4:message}'})${0}",
     "description": "Assert Is 断言是..."
   },
   "Assert Is Not 断言非...": {
     "prefix": [",asint_"],
-    "body": "self.assertIsNot(${1:expected}, ${2:actual}${3:, '${4:message}'})$0",
+    "body": "self.assertIsNot(${1:expected}, ${2:actual}${3:, '${4:message}'})${0}",
     "description": "Assert Is Not 断言非..."
   },
   "Assert Is None 断言为空...": {
     "prefix": [",asino_"],
-    "body": "self.assertIsNone(${1:actual}${2:, '${3:message}'})$0",
+    "body": "self.assertIsNone(${1:actual}${2:, '${3:message}'})${0}",
     "description": "Assert Is None 断言为空..."
   },
   "Assert Is Not None 断言不为空...": {
     "prefix": [",asinno_"],
-    "body": "self.assertIsNotNone(${1:actual}${2:, '${3:message}'})$0",
+    "body": "self.assertIsNotNone(${1:actual}${2:, '${3:message}'})${0}",
     "description": "Assert Is Not None 断言不为空..."
   },
   "Assert In 断言包含...": {
     "prefix": [",asin_"],
-    "body": "self.assertIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
+    "body": "self.assertIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})${0}",
     "description": "Assert In 断言包含..."
   },
   "Assert Not In 断言不包含...": {
     "prefix": [",asni_"],
-    "body": "self.assertNotIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0",
+    "body": "self.assertNotIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})${0}",
     "description": "Assert Not In 断言不包含..."
   },
   "Assert 断言...": {
     "prefix": [",as_"],
-    "body": "self.assert_(${1:boolean expression}${2:, '${3:message}'})$0",
+    "body": "self.assert_(${1:boolean expression}${2:, '${3:message}'})${0}",
     "description": "Assert 断言..."
   },
   "Fail (a test) 失败(测试)": {
     "prefix": ["fail_"],
-    "body": "self.fail('${1:message}')$0",
+    "body": "self.fail('${1:message}')${0}",
     "description": "Fail (a test) 失败(测试)"
   },
   "New Class 新类": {
     "prefix": ["new_class"],
-    "body": "class ${1:ClassName}(${2:object}):\n\t\"\"\"${3:docstring for $1}\"\"\"\n\tdef __init__(self, ${4:arg}):\n\t\t${5:super($1, self).__init__()}\n\t\tself.arg = arg\n\t\t$0",
+    "body": "class ${1:ClassName}(${2:object}):\n\t\"\"\"${3:docstring for ${1}}\"\"\"\n\tdef __init__(self, ${4:arg}):\n\t\t${5:super(${1}, self).__init__()}\n\t\tself.arg = arg\n\t\t${0}",
     "description": "New Class 新类"
   },
   "New Method 新方法": {
@@ -271,7 +271,7 @@
   },
   "New Property 新样式特性": {
     "prefix": ["new_property"],
-    "body": "def ${1:foo}():\n    doc = \"${2:The $1 property.}\"\n    def fget(self):\n        ${3:return self._$1}\n    def fset(self, value):\n        ${4:self._$1 = value}\n    def fdel(self):\n        ${5:del self._$1}\n    return locals()\n$1 = property(**$1())$0",
+    "body": "def ${1:foo}():\n    doc = \"${2:The ${1} property.}\"\n    def fget(self):\n        ${3:return self._${1}}\n    def fset(self, value):\n        ${4:self._${1} = value}\n    def fdel(self):\n        ${5:del self._${1}}\n    return locals()\n${1} = property(**${1}())${0}",
     "description": "New Property 新样式特性"
   },
   "For (Loop) 循环": {
@@ -316,12 +316,12 @@
   },
   "hbox 水平容器": {
     "prefix": ["hbox_"],
-    "body": ["hbox:", "    $0"],
+    "body": ["hbox:", "    ${0}"],
     "description": "hbox 水平容器"
   },
   "vbox 垂直容器": {
     "prefix": ["vbox_"],
-    "body": ["vbox:", "    $0"],
+    "body": ["vbox:", "    ${0}"],
     "description": "vbox 垂直容器"
   },
   "button 按钮": {
@@ -368,7 +368,7 @@
   },
   "text 文本": {
     "prefix": ["text_"],
-    "body": ["text _(\"$0\")"],
+    "body": ["text _(\"${0}\")"],
     "description": "text 文本"
   }
 }

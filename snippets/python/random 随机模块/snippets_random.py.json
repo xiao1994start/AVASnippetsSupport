@@ -38,7 +38,7 @@
     "prefix": ["random_TextGen="],
     "body": [
       "x = \"\" # import string",
-      "length = 5$0 # import random",
+      "length = 5${0} # import random",
       "for i in range(length):",
       "\tx = x + random.choice(string.ascii_letters)",
       "# end for",

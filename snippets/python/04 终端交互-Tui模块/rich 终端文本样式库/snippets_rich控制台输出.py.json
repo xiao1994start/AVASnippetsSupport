@@ -9,7 +9,7 @@
   },
   "Console().print(...)": {
     "prefix": ["Console_print_"],
-    "body": ["Console().print($0)"],
+    "body": ["Console().print(${0})"],
     "description": ["Console().print(...)"]
   }
 }

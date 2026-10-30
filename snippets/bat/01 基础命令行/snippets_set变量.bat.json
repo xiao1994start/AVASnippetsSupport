@@ -1,12 +1,12 @@
 {
   "设置变量": {
     "prefix": ["set_var"],
-    "body": ["set $0"],
+    "body": ["set ${0}"],
     "description": "设置变量"
   },
   "提示输入信息": {
     "prefix": ["set_p_-input"],
-    "body": ["set /p \"name=$0\""],
+    "body": ["set /p \"name=${0}\""],
     "description": "提示输入信息"
   },
   "执行算术运算": {
@@ -40,7 +40,7 @@
       "@REM * 设置临时系统环境变量",
       "@REM set \"XPATH=%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin32;%CommonProgramFiles(x86)%\\Intel\\Shared Libraries\\bin;%SystemRoot%;%SystemRoot%\\system32;%SystemRoot%\\System32\\Wbem;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\;%SystemRoot%\\System32\\OpenSSH\\\"",
       "set \"XPATH=%PATH%\"",
-      "$0",
+      "${0}",
       "set \"PATH=;%XPATH%;\"",
       ""
     ],
@@ -54,7 +54,7 @@
       ")",
       "ECHO 当前用户桌面路径:%desktop_dir%",
       "",
-      "$0"
+      "${0}"
     ],
     "description": ["当前用户桌面路径"]
   },

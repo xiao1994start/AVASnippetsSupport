@@ -11,7 +11,7 @@
   },
   "time.ctime 转换可读时间格式": {
     "prefix": ["time_ctime_-time"],
-    "body": ["ctime(${1:time.time()})$0"],
+    "body": ["ctime(${1:time.time()})${0}"],
     "description": ["将时间戳转换为可读的时间格式"]
   },
   "time.strftime 格式化当前时间戳": {

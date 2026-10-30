@@ -6,7 +6,7 @@
   },
   "case -switch条件判断开关": {
     "prefix": ["case"],
-    "body": ["case ($0):", "    pass"],
+    "body": ["case (${0}):", "    pass"],
     "description": ["case -switch条件判断开关"]
   }
 }

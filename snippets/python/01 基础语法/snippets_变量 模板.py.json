@@ -20,7 +20,7 @@
       "# @File    : $TM_FILENAME",
       "# @version : 0.0.1",
       "# @Desc    : ${2:描述}",
-      "$0"
+      "${0}"
     ],
     "description": ["Python 注释_描述"]
   },
@@ -36,7 +36,7 @@
       "",
       "from rich import print  # * rich.print 替代 print 函数[https://www.osgeo.cn/rich/index.html]",
       "",
-      "$0"
+      "${0}"
     ],
     "description": ["Python 常用导入"]
   }

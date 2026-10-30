@@ -96,7 +96,7 @@
   },
   "list.pop 删除指定位置的元素": {
     "prefix": ["list_pop"],
-    "body": ["pop($0)"],
+    "body": ["pop(${0})"],
     "description": ["list.pop 删除list中指定位置的元素"]
   },
   "list.pop 示例": {

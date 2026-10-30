@@ -53,7 +53,7 @@
   },
   "pandas.loc 提取索引取值": {
     "prefix": ["pd_loc", "pandas_loc", "loc_-pd", "loc_-pandas"],
-    "body": ["loc[$0]"],
+    "body": ["loc[${0}]"],
     "description": [
       "pandas.loc 提取索引取值",
       "Series: .loc[index]",

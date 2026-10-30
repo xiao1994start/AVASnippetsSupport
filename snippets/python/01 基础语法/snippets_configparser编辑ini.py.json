@@ -25,7 +25,7 @@
   },
   "configparser.sections 读取节点": {
     "prefix": ["configparser_sections_-configparser"],
-    "body": ["sections($0)"],
+    "body": ["sections(${0})"],
     "description": ["configparser.sections 读取节点"]
   },
   "configparser.item 读取节点下键-值": {
@@ -40,7 +40,7 @@
   },
   "configparser.has_section 判断存在节点": {
     "prefix": ["configparser_has_section_-configparser"],
-    "body": ["has_section($0)"],
+    "body": ["has_section(${0})"],
     "description": ["configparser.has_section 判断存在节点, 返回bool"]
   },
   "configparser.has_option 判断存在节点": {

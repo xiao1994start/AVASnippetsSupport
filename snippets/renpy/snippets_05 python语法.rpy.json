@@ -1,7 +1,7 @@
 {
   "print(...) for renpy": {
     "prefix": ["cslg_", "ppr_-print"],
-    "body": "print($0)",
+    "body": "print(${0})",
     "description": ["print 语句的代码片段"]
   },
   "self for renpy": {

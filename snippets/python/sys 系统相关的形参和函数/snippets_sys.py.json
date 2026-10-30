@@ -22,7 +22,7 @@
   },
   "sys.path.append 添加python环境依赖路径": {
     "prefix": ["sys_path_append"],
-    "body": ["sys.path.append($0)", ""],
+    "body": ["sys.path.append(${0})", ""],
     "description": ["sys.path.append 添加python环境依赖路径"]
   },
   "sys.path.append_file 添加当前文件所在目录到python环境依赖路径": {

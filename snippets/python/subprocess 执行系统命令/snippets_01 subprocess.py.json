@@ -6,12 +6,12 @@
   },
   "subprocess.run 运行命令": {
     "prefix": ["subprocess_run"],
-    "body": ["subprocess.run('$0')"],
+    "body": ["subprocess.run('${0}')"],
     "description": ["subprocess.run 运行命令", "用于可执行程序命令调用(如:git,python,ffmpeg.exe或其他可执行命令程序)"]
   },
   "subprocess.run shell运行命令": {
     "prefix": ["subprocess_run_shell"],
-    "body": ["subprocess.run('$0', shell=True)"],
+    "body": ["subprocess.run('${0}', shell=True)"],
     "description": [
       "subprocess.run shell运行命令",
       "使用系统的shell(命令解释器)去解析和执行",
@@ -20,12 +20,12 @@
   },
   "subprocess.run 清空终端": {
     "prefix": ["subprocess_run_cls", "subprocess_run_clear"],
-    "body": ["subprocess.run('cls', shell=True) if os.name == 'nt' else subprocess.run('clear')", "$0"],
+    "body": ["subprocess.run('cls', shell=True) if os.name == 'nt' else subprocess.run('clear')", "${0}"],
     "description": ["subprocess.run 清空终端"]
   },
   "subprocess.run 捕获输出": {
     "prefix": ["subprocess_run_capture_output"],
-    "body": ["subprocess.run('$0', capture_output=True, text=True).stdout.strip()", ""],
+    "body": ["subprocess.run('${0}', capture_output=True, text=True).stdout.strip()", ""],
     "description": [
       "subprocess.run 运行外部命令并等待其完成",
       "    args: 一个列表或字符串, 表示要执行的命令. 使用列表形式更安全, 因为它可以避免 shell 注入风险. 例如 ['ls', '-l'] 而不是 'ls -l'. ",
@@ -40,7 +40,7 @@
   },
   "subprocess.run shell 捕获输出": {
     "prefix": ["subprocess_run_shell_capture_output"],
-    "body": ["subprocess.run('$0', shell=True, capture_output=True, text=True).stdout.strip()", ""],
+    "body": ["subprocess.run('${0}', shell=True, capture_output=True, text=True).stdout.strip()", ""],
     "description": [
       "subprocess.run 运行外部命令并等待其完成",
       "    args: 一个列表或字符串, 表示要执行的命令. 使用列表形式更安全, 因为它可以避免 shell 注入风险. 例如 ['ls', '-l'] 而不是 'ls -l'. ",

@@ -26,7 +26,7 @@
   },
   "uiautomation.WalkControl 遍历控件": {
     "prefix": ["uiautomation_WalkControl", "WalkControl_-uiautomation"],
-    "body": ["WalkControl(${1:Control}, maxDepth=4294967295)$0"],
+    "body": ["WalkControl(${1:Control}, maxDepth=4294967295)${0}"],
     "description": [
       "uiautomation.WalkControl 遍历控件",
       "遍历搜索控件对象, c: 控件对象, d: 控件深度; maxDepth: 最大遍历深度(减少需要检查的控件数量,提升效率"

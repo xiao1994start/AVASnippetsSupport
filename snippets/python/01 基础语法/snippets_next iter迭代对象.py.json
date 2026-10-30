@@ -1,7 +1,7 @@
 {
   "next 返回迭代器的下一个项目": {
     "prefix": ["next_iterable_-next"],
-    "body": ["next($0)"],
+    "body": ["next(${0})"],
     "description": ["next 返回迭代器的下一个项目"]
   },
   "next.list[dict[str] 匹配 list[dict[str]] 列表嵌套字典对象中指定键的值 -> dict": {
@@ -11,7 +11,7 @@
   },
   "iter 生成迭代器": {
     "prefix": ["iter_iterable_-iter"],
-    "body": ["iter($0)"],
+    "body": ["iter(${0})"],
     "description": ["iter 生成迭代器"]
   }
 }

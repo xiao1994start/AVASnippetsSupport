@@ -11,7 +11,7 @@
   },
   "enum.object 创建枚举类对象.tmpl": {
     "prefix": ["new_class_enum_=-enum"],
-    "body": ["class ${1:EnumObject}(Enum):", "    # *NAME = value: int | str | ...", "    $0", "    ...", ""],
+    "body": ["class ${1:EnumObject}(Enum):", "    # *NAME = value: int | str | ...", "    ${0}", "    ...", ""],
     "description": ["enum.object 创建枚举类对象.tmpl"]
   }
 }

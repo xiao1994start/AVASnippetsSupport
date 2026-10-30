@@ -11,22 +11,22 @@
   },
   "() => import(...) 动态导入依赖": {
     "prefix": ["new_lambda_import_", "nlami_"],
-    "body": ["() => import($0)"],
+    "body": ["() => import(${0})"],
     "description": ["() => import(...) 动态导入依赖"]
   },
   "export 导出声明": {
     "prefix": ["export_", "expt_"],
-    "body": ["export $0"],
+    "body": ["export ${0}"],
     "description": ["export 导出 声明"]
   },
   "module.exports 导出模块 [CommonJS]": {
     "prefix": ["module_exports_", "mod_expt_"],
-    "body": ["module.exports = {$0}"],
+    "body": ["module.exports = {${0}}"],
     "description": ["module.exports 导出模块 [CommonJS]"]
   },
   "export default 默认导出 [ESM]": {
     "prefix": ["export_default_", "expt_def_"],
-    "body": ["export default {$0}"],
+    "body": ["export default {${0}}"],
     "description": ["export default 默认导出 [ESM]"]
   },
   "async 异步声明": {
@@ -106,17 +106,17 @@
   },
   "function () {...}": {
     "prefix": ["new_def_function_", "ndf_"],
-    "body": ["function ${1:name}(${2:params}) {$0}"],
+    "body": ["function ${1:name}(${2:params}) {${0}}"],
     "description": ["function () {...}"]
   },
   "() => (return ...)": {
     "prefix": ["new_lambda_", "nlam_"],
-    "body": ["($1) => ($0)"],
+    "body": ["(${1}) => (${0})"],
     "description": ["() => (return ...)"]
   },
   "() => {...}": {
     "prefix": ["new_def_function_arrow_", "ndfa_"],
-    "body": ["(${1:}) => {$0}"],
+    "body": ["(${1:}) => {${0}}"],
     "description": ["() => {...}"]
   },
   "class 类定义": {
@@ -149,7 +149,7 @@
       "class name extends ParentClassName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
       "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
-      "  $0",
+      "  ${0}",
       "",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
       "  constructor() {",
@@ -177,7 +177,7 @@
       "class name implements interfaceName {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
       "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
-      "    $0",
+      "    ${0}",
       "",
       "  // # 构造函数 => constructor( 参数名: 参数类型 ) { super(继承父类的构造函数参数); 初始化属性 }",
       "  constructor() {}",
@@ -264,7 +264,7 @@
   },
   "setTimeout": {
     "prefix": ["settimeout_", "time_sleep_"],
-    "body": ["setTimeout(() => {", "  $0", "}, ${1:timeout});"],
+    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],
     "description": ["setTimeout"]
   }
 }

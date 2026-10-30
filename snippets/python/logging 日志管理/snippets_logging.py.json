@@ -54,27 +54,27 @@
   },
   "logging.debug(...)": {
     "prefix": ["log_debug_-logging"],
-    "body": ["logging.debug($0)"],
+    "body": ["logging.debug(${0})"],
     "description": ["logging.debug(...)"]
   },
   "logging.info(...)": {
     "prefix": ["log_info_-logging"],
-    "body": ["logging.info($0)"],
+    "body": ["logging.info(${0})"],
     "description": ["logging.info(...)"]
   },
   "logging.warning(...)": {
     "prefix": ["log_warning_-logging"],
-    "body": ["logging.warning($0)"],
+    "body": ["logging.warning(${0})"],
     "description": ["logging.warning(...)"]
   },
   "logging.error(...)": {
     "prefix": ["log_error_-logging"],
-    "body": ["logging.error($0)"],
+    "body": ["logging.error(${0})"],
     "description": ["logging.error(...)"]
   },
   "logging.critical(...)": {
     "prefix": ["log_debug_-logging"],
-    "body": ["logging.critical($0)"],
+    "body": ["logging.critical(${0})"],
     "description": ["logging.critical(...)"]
   }
 }
