@@ -39,8 +39,7 @@
       "\") -join [Environment]::NewLine;\" ^",
       "\"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "\"[System.IO.File]::WriteAllText(\\$filePath, [string]\\$lines, \\$utf8NoBom)\"",
-      "setlocal EnableDelayedExpansion",
-      ""
+      "setlocal EnableDelayedExpansion"
     ],
     "description": ["powershell写入文本(UTF8)"]
   },
@@ -63,8 +62,7 @@
       "\"  if (\\$content.Length -gt 0 -and -not \\$content.EndsWith([string][char]10)) { \\$prefix = \\$nl; };\" ^",
       "\"  [System.IO.File]::AppendAllText(\\$filePath, \\$prefix + \\$line + \\$nl, (New-Object System.Text.UTF8Encoding(\\$false)));\" ^",
       "\"}\"",
-      "setlocal EnableDelayedExpansion",
-      ""
+      "setlocal EnableDelayedExpansion"
     ],
     "description": ["powershell增量写入文本(UTF8)"]
   },
@@ -81,8 +79,7 @@
       "\") -join [Environment]::NewLine;\" ^",
       "\"\\$gbk = [System.Text.Encoding]::GetEncoding(936);\" ^",
       "\"[System.IO.File]::WriteAllText(\\$filePath, [string]\\$lines, \\$gbk)\"",
-      "setlocal EnableDelayedExpansion",
-      ""
+      "setlocal EnableDelayedExpansion"
     ],
     "description": ["powershell写入文本(GBK)"]
   },
@@ -118,8 +115,7 @@
       "\"\\$json = \\$json | ConvertTo-Json -Depth 100;\" ^",
       "\"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "\"[System.IO.File]::WriteAllText(\\$path, [string]\\$json, \\$utf8NoBom)\"",
-      "setlocal EnableDelayedExpansion",
-      ""
+      "setlocal EnableDelayedExpansion"
     ],
     "description": ["powershell写入JSON"]
   }
