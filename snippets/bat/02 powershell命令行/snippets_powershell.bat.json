@@ -44,6 +44,30 @@
     ],
     "description": ["powershell写入文本(UTF8)"]
   },
+  "powershell增量写入文本(UTF8)": {
+    "prefix": ["powershell_appand_text", "ps_a_text"],
+    "body": [
+      "setlocal DisableDelayedExpansion",
+      "set \"TARGET_FILE=${1:增量写入文件路径_后缀}\"",
+      "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
+      "\"\\$filePath = \\$env:TARGET_FILE;\" ^",
+      "\"\\$line = '${2:增量写入文件内容}';\" ^",
+      "\"\\$nl = [Environment]::NewLine;\" ^",
+      "\"\\$content = [System.IO.File]::ReadAllText(\\$filePath);\" ^",
+      "\"\\$exists = \\$false;\" ^",
+      "\"foreach (\\$l in (\\$content -split '\\r?\\n')) {\" ^",
+      "\"  if (\\$l.Trim() -eq \\$line) { \\$exists = \\$true; break; };\" ^",
+      "\"};\" ^",
+      "\"if (-not \\$exists) {\" ^",
+      "\"  \\$prefix = '';\" ^",
+      "\"  if (\\$content.Length -gt 0 -and -not \\$content.EndsWith([string][char]10)) { \\$prefix = \\$nl; };\" ^",
+      "\"  [System.IO.File]::AppendAllText(\\$filePath, \\$prefix + \\$line + \\$nl, (New-Object System.Text.UTF8Encoding(\\$false)));\" ^",
+      "\"}\"",
+      "setlocal EnableDelayedExpansion",
+      ""
+    ],
+    "description": ["powershell增量写入文本(UTF8)"]
+  },
   "powershell写入文本(GBK)": {
     "prefix": ["powershell_write_text-GBK", "ps_w_text-GBK"],
     "body": [
@@ -63,7 +87,7 @@
     "description": ["powershell写入文本(GBK)"]
   },
   "powershell写入JSON": {
-    "prefix": ["powershell_write_json", "ps_w_json"],
+    "prefix": ["powershell_json", "ps_json"],
     "body": [
       "setlocal DisableDelayedExpansion",
       "set \"JSON_FILE=${1:JSON_文件路径}\"",
@@ -78,7 +102,10 @@
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "\"\\$path = \\$env:JSON_FILE;\" ^",
       "\"\\$json = Get-Content -Raw -Encoding UTF8 \\$path;\" ^",
-      "\"\\$json = \\$json  -replace '(?ms)/\\*.*?\\*/' -replace '(?m)(?<=^([^'']|''[^'']*'')*)//.*' | ConvertFrom-Json;\" ^",
+      "\"\\$pattern = '(?<s>\\x22(?:\\\\.|[^\\x22\\\\])*\\x22)|(?<b>/\\*(?!\\*/)[\\s\\S]*?\\*/)|(?<l>//[^\\r\\n]*)';\" ^",
+      "\"\\$evaluator = [System.Text.RegularExpressions.MatchEvaluator]{ param(\\$m) if (\\$m.Groups['s'].Success) { \\$m.Value } else { '' } };\" ^",
+      "\"\\$json = [regex]::Replace(\\$json, \\$pattern, \\$evaluator);\" ^",
+      "\"\\$json = \\$json | ConvertFrom-Json;\" ^",
       "\"if (\\$null -eq \\$json) { \\$json = [pscustomobject]@{} };\" ^",
       "\"\\$obj = \\$json;\" ^",
       "\"\\$key = '属性名';\" ^",
