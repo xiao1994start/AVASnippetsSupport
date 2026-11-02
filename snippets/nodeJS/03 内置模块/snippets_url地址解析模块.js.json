@@ -1,6 +1,6 @@
 {
   "引入 url.fileURLToPath URL转路径模块": {
-    "prefix": ["impt_fileURLToPath_-url"],
+    "prefix": ["imp_fileURLToPath_-url"],
     "body": ["import { fileURLToPath } from 'node:url'", ""],
     "description": ["引入 url.fileURLToPath URL转路径模块"]
   },
