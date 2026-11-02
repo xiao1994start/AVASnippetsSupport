@@ -122,8 +122,9 @@
   "class 类定义": {
     "prefix": ["new_class_"],
     "body": [
-      "class ${1:name} {",
+      "class ${1:类名} {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // ? private 私有属性; const 常量属性; readonly 只读属性",
       "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "  ",
       "",
@@ -146,8 +147,9 @@
   "class extends 类继承": {
     "prefix": ["new_class_extends_"],
     "body": [
-      "class name extends ParentClassName {",
+      "class ${1:类名} extends ${2:父类名} {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // ? private 私有属性; const 常量属性; readonly 只读属性",
       "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "  ${0}",
       "",
@@ -174,8 +176,9 @@
   "class implements 接口约束类": {
     "prefix": ["new_class_implements_"],
     "body": [
-      "class name implements interfaceName {",
+      "class ${1:类名} implements ${2:接口名} {",
       "  // # 属性 => 属性名: 属性类型 = 初始值",
+      "  // ? private 私有属性; const 常量属性; readonly 只读属性",
       "  // this 标识类实例的self内部对象，使用 this.属性名 来访问属性",
       "    ${0}",
       "",
