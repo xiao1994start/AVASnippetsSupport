@@ -74,6 +74,23 @@
     ],
     "description": ["interface 接口定义结构（支持重复声明自动合并）"]
   },
+  "声明全局类型.d.ts": {
+    "prefix": ["declare_global_", "dec_g_"],
+    "body": [
+      "declare global {",
+      "  // * 全局类型",
+      "  interface Window {",
+      "    electronAPI: IElectronAPI",
+      "  }",
+      "  // function globalFunction_全局函数(): void",
+      "  // let globalVar_全局变量: number",
+      "}",
+      "${0}",
+      "export {} // TypeScript: 确保把此文件作为模块处理",
+      ""
+    ],
+    "description": ["声明全局类型.d.ts"]
+  },
   "this 访问属性": {
     "prefix": ["this_", "ths_"],
     "body": ["this${1:.属性名}"],
