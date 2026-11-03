@@ -1,36 +1,65 @@
 {
-  "vue 快速创建模板": {
-    "prefix": ["aaa_tmpl_vue"],
+  "App.vue 设置html_body全局样式": {
+    "prefix": ["App_vue-tmpl"],
     "body": [
       "<template>",
-      "  <!-- * 组件模板/视图结构 -->",
       "  <div>${1:}</div>",
       "</template>",
       "",
       "<script setup lang='ts'>",
-      "  // * 组件逻辑/业务逻辑",
+      "  // * 组件-业务逻辑",
       "</script>",
       "",
-      "<style scoped>",
-      "  /* * 组件样式 (scoped: 局部样式) */",
-      "</style>",
-      ""
-    ],
-    "description": ["vue 快速创建模板"]
-  },
-  "App.vue 设置html_body全局样式": {
-    "prefix": ["style_html_body_-App_vue"],
-    "body": [
       "<style>",
-      "  /* * 全局样式 */",
-      "  html,",
-      "  body {",
-      "    display: block;",
-      "    margin: 0;",
+      "  * {",
+      "    /* 为 Electron/Chrome 等 WebKit 内核兼容 */",
+      "    -webkit-user-select: none;",
+      "    /* 为 Firefox 兼容 */",
+      "    -moz-user-select: none;",
+      "    /* 为 IE/Edge 兼容 */",
+      "    -ms-user-select: none;",
+      "    /* 标准属性 */",
+      "    user-select: none;",
       "  }",
+      "",
+      "  html,",
+      "  body,",
+      "  #app {",
+      "    padding: 0;",
+      "    margin: 0;",
+      "    height: 100%;",
+      "    overflow: hidden;",
+      "  }",
+      "",
+      "  ::view-transition-old(root),",
+      "  ::view-transition-new(root) {",
+      "    /* 禁用默认动画 */",
+      "    animation: none;",
+      "  }",
+      "</style>",
+      "<style scoped>",
+      "  /* scoped:局部组件样式 */",
       "</style>",
       ""
     ],
     "description": ["App.vue 设置html_body全局样式"]
+  },
+  "vue 快速创建模板": {
+    "prefix": ["aaa_tmpl_vue"],
+    "body": [
+      "<template>",
+      "  <div>${1:}</div>",
+      "</template>",
+      "",
+      "<script setup lang='ts'>",
+      "  // * 组件-业务逻辑",
+      "</script>",
+      "",
+      "<style scoped>",
+      "  /* scoped:局部组件样式 */",
+      "</style>",
+      ""
+    ],
+    "description": ["vue 快速创建模板"]
   }
 }
