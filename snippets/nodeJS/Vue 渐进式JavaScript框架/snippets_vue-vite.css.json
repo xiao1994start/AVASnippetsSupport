@@ -1,6 +1,6 @@
 {
-  "样式：禁止选取": {
-    "prefix": ["**select_none_"],
+  "样式基础模板": {
+    "prefix": ["***"],
     "body": [
       "* {",
       "  /* 为 Electron/Chrome 等 WebKit 内核兼容 */",
@@ -10,10 +10,52 @@
       "  /* 为 IE/Edge 兼容 */",
       "  -ms-user-select: none;",
       "  /* 标准属性 */",
-      "  user-select: none;${0}",
+      "  user-select: none;",
+      "  /* height/width 不受 padding/border 影响 */",
+      "  box-sizing: border-box;",
+      "}",
+      "",
+      "html,",
+      "body {",
+      "  padding: 0;",
+      "  margin: 0;",
+      "  height: 100%;",
+      "  width: 100%;",
+      "  overflow: hidden;",
       "}",
       ""
     ],
-    "description": ["样式：禁止选取"]
+    "description": ["样式基础模板"]
+  },
+  "height/width 百分比": {
+    "prefix": ["height_width_per"],
+    "body": ["height: 100%;", "width: 100%;", "${0}"],
+    "description": ["height/width 百分比"]
+  },
+  "height/width 视口": {
+    "prefix": ["height_width_v"],
+    "body": ["height: 100vh;", "width: 100vw;", "${0}"],
+    "description": ["height/width 视口"]
+  },
+  "flex 容器 列方向": {
+    "prefix": ["display_flex-direction_"],
+    "body": ["display: flex;", "flex-direction: column;", "justify-content: flex-start;", "align-items: stretch;", "${0}"],
+    "description": ["flex 容器 列方向"]
+  },
+  "": {
+    "prefix": ["overflow-wrap_anywhere_"],
+    "body": [
+      "/* 仅在必要时（无其他断点可用时）允许在任意点断行 */",
+      "overflow-wrap: anywhere;",
+      "/* 强制换行 word-break: break-all; */",
+      "word-break: normal;",
+      "white-space: normal;",
+      "line-height: normal;",
+      "flex-shrink: 0;",
+      "height: auto;",
+      "/* * 容器随内容自适应换行自动调整高度 * */",
+      "${0}"
+    ],
+    "description": [""]
   }
 }
