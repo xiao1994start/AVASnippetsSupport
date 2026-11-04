@@ -42,7 +42,7 @@
     "body": ["display: flex;", "flex-direction: column;", "justify-content: flex-start;", "align-items: stretch;", "${0}"],
     "description": ["flex 容器 列方向"]
   },
-  "": {
+  "容器随内容自适应换行自动调整高度": {
     "prefix": ["overflow-wrap_anywhere_"],
     "body": [
       "/* 仅在必要时（无其他断点可用时）允许在任意点断行 */",
@@ -56,6 +56,11 @@
       "/* * 容器随内容自适应换行自动调整高度 * */",
       "${0}"
     ],
-    "description": [""]
+    "description": ["容器随内容自适应换行自动调整高度"]
+  },
+  "padding/margin 0": {
+    "prefix": ["padding_margin_0"],
+    "body": ["padding: 0;", "margin: 0;", ""],
+    "description": ["padding/margin 0"]
   }
 }
