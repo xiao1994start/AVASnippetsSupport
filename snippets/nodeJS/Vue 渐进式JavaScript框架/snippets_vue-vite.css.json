@@ -1,6 +1,6 @@
 {
   "样式：禁止选取": {
-    "prefix": ["select_none_"],
+    "prefix": ["**select_none_"],
     "body": [
       "* {",
       "  /* 为 Electron/Chrome 等 WebKit 内核兼容 */",
@@ -10,7 +10,7 @@
       "  /* 为 IE/Edge 兼容 */",
       "  -ms-user-select: none;",
       "  /* 标准属性 */",
-      "  user-select: none;",
+      "  user-select: none;${0}",
       "}",
       ""
     ],
