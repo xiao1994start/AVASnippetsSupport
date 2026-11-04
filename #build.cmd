@@ -16,10 +16,10 @@ set "PATH=%NODE_HOME%;%systemPATH%;"
 @REM  ECHO Node.js 版本号: && call node -v
 @REM  ECHO npm 版本号: && call npm i npm -g --registry https://registry.npmmirror.com/ && call npm -v
 @REM  ECHO 检查 软件仓库位置: && call npm root -g
-@REM  call npm approve-scripts --allow-scripts-pending && call npm install-scripts approve --all
 @REM  @REM  * 自定义插件必备库
 @REM  ECHO 正在安装 yo generate-code 库 && call npm i yo generator-code -g --registry https://registry.npmmirror.com/
 @REM  ECHO 正在安装 @vscode/vsce 打包库（使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension） && call npm i @vscode/vsce -g --registry https://registry.npmmirror.com/
+@REM  call npm approve-scripts --allow-scripts-pending && call npm install-scripts approve --all && call npm rebuild
 
 CD /D "%~dp0"
 ECHO.生成 package.json 文件 && call ECHO.|"%~dp0package.exe"
