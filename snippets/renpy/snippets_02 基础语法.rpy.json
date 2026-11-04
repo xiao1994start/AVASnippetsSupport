@@ -156,32 +156,32 @@
   },
   "If (条件语句)": {
     "prefix": ["if_"],
-    "body": "if ${1:condition}:\n\t${2:#block of code to run}",
+    "body": "if ${1:condition}:\n\t${2:pass}",
     "description": "If (条件语句)"
   },
   "Else If (条件语句)": {
     "prefix": ["elif_"],
-    "body": "elif ${1:condition}:\n\t${2:#block of code to run}",
+    "body": "elif ${1:condition}:\n\t${2:pass}",
     "description": "Else If (条件语句)"
   },
   "Else (条件语句)": {
     "prefix": ["else_"],
-    "body": "else:\n\t${1:#block of code to run}",
+    "body": "else:\n\t${1:pass}",
     "description": "Else (条件语句)"
   },
   "While (循环)": {
     "prefix": ["while_"],
-    "body": "while ${1:condition}:\n\t${2:#block of code to run}",
+    "body": "while ${1:condition}:\n\t${2:pass}",
     "description": "While (循环)"
   },
   "选择菜单": {
     "prefix": ["menu_"],
-    "body": "menu${1: optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\t#block of code to run\n\t\"${4:Choice 2}\":\n\t\t#block of code to run\n\t${5:}",
+    "body": "menu${1: optional_name}:\n\t\"${2:Say Statement}\"\n\t\"${3:Choice 1}\":\n\t\tpass\n\t\"${4:Choice 2}\":\n\t\tpass\n\t${5:}",
     "description": "选择菜单"
   },
   "菜单选择": {
     "prefix": ["choice_"],
-    "body": "\"${1:Choice N}\":\n\t${2:#block of code to run}\n\t$3",
+    "body": "\"${1:Choice N}\":\n\t${2:pass}\n\t$3",
     "description": "菜单选择"
   },
   "Ren'Py Docs 文档": {
