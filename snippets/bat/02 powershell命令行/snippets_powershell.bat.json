@@ -35,7 +35,7 @@
       "  \"\\$filePath = \\$env:TARGET_FILE;\" ^",
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$filePath, (\\$lines -join [Environment]::NewLine), \\$utf8NoBom)\"",
-      "@REM  ! powershell 下方代码必须缩进",
+      "@REM  ! powershell 下方代码注意缩进",
       "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!",
       ""
     ],
@@ -56,7 +56,7 @@
       "  \"\\$result = \\$commented.TrimEnd() + [Environment]::NewLine + \\$insertLine + [Environment]::NewLine;\" ^",
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$result, \\$utf8NoBom)\"",
-      "@REM  ! powershell 下方代码必须缩进",
+      "@REM  ! powershell 下方代码注意缩进",
       "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!",
       ""
     ],
@@ -82,7 +82,7 @@
       "  \"Add-Member -InputObject \\$obj -MemberType NoteProperty -Name \\$key -Value \\$val -Force;\" ^",
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$path, (\\$json | ConvertTo-Json -Depth 100), \\$utf8NoBom)\"",
-      "@REM  ! powershell 下方代码必须缩进",
+      "@REM  ! powershell 下方代码注意缩进",
       "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!",
       "@REM  ? 变量\\$json获取JSON内容:  \\$json = Get-Content -Raw -Encoding UTF8 \\$path | ConvertFrom-Json;",
       "@REM  ? 如果 '属性名' 不存在 :  if (-not \\$json[.二级属性名].PSObject.Properties['属性名']) {};",
