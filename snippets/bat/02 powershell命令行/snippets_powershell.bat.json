@@ -36,13 +36,12 @@
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$filePath, (\\$lines -join [Environment]::NewLine), \\$utf8NoBom)\"",
       "@REM  ! powershell 下方代码注意缩进",
-      "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!",
-      ""
+      "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!"
     ],
     "description": ["powershell 写入文本(UTF8)"]
   },
   "powershell 查找并插入字符串": {
-    "prefix": ["ps_fa_text"],
+    "prefix": ["ps_regex_text"],
     "body": [
       "set \"TARGET_FILE=${1:写入文件路径_后缀}\"",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
@@ -57,28 +56,27 @@
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$filePath, \\$result, \\$utf8NoBom)\"",
       "@REM  ! powershell 下方代码注意缩进",
-      "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!",
-      ""
+      "@REM  * '/\" 转义 ''/\"\" ; % 转义 %% ; ! 转义 ^!"
     ],
     "description": "powershell 查找并插入字符串"
   },
   "powershell 写入JSON": {
     "prefix": ["ps_json"],
     "body": [
-      "set \"JSON_FILE=%~dp0${1:JSON_文件路径}\"",
+      "set \"JSON_FILE=${1:JSON_文件路径}\"",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
       "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path;\" ^",
-      "  \"\\$pattern = '(?<s>\"\"(?:\\\\\\.|[^^\"\"\\\\\\])*\"\")|(?<b>/\\*(?^!\\*/)[\\s\\S]*?\\*/)|(?<l>//[^^\\r\\n]*)';\" ^",
+      "  \"\\$pattern = '(?m)^[ \\t]*(?://[^\\r\\n]*|/\\*[\\s\\S]*?\\*/)[ \\t]*(?:\\r?\\n|\\r|$)';\" ^",
       "  \"\\$evaluator = [System.Text.RegularExpressions.MatchEvaluator]{ param(\\$m) if (\\$m.Groups['s'].Success) { \\$m.Value } else { '' } };\" ^",
       "  \"\\$json = [regex]::Replace(\\$json, \\$pattern, \\$evaluator) | ConvertFrom-Json;\" ^",
       "  \"\\$obj = \\$json;\" ^",
       "  \"\\$key = '${2:属性名}';\" ^",
-      "  \"\\$val = (${3:'属性值'});\" ^",
+      "  \"\\$val = (${3:属性值});\" ^",
       "  \"if (-not \\$obj.PSObject.Properties[\\$key]) { Add-Member -InputObject \\$obj -MemberType NoteProperty -Name \\$key -Value \\$val -Force };\" ^",
       "  \"\\$obj = \\$json.属性名;\" ^",
       "  \"\\$key = '${4:属性名}';\" ^",
-      "  \"\\$val = (${5:'属性值'});\" ^",
+      "  \"\\$val = (${5:属性值});\" ^",
       "  \"Add-Member -InputObject \\$obj -MemberType NoteProperty -Name \\$key -Value \\$val -Force;\" ^",
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$path, (\\$json | ConvertTo-Json -Depth 100), \\$utf8NoBom)\"",
@@ -91,8 +89,7 @@
       "@REM  * -Value （建议括号）::空数组=(@())/@()  数组=(@('a','b'))/@('a','b')",
       "@REM  * -Value （必须括号）::空对象=([pscustomobject]@{})  复杂对象=([pscustomobject]@{ name='x'; config=[pscustomobject]@{} })",
       "@REM  - 或 \\$ 开头的参数，都可以嵌套在 () 内",
-      "@REM  * -replace :: 替换字符串中的子字符串",
-      ""
+      "@REM  * -replace :: 替换字符串中的子字符串"
     ],
     "description": ["powershell 写入JSON"]
   }
