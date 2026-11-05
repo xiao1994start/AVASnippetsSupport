@@ -1,7 +1,20 @@
 {
   "BAT|CMD.脚本模板": {
     "prefix": ["aaa_tmpl_BAT_=-CMD"],
-    "body": ["@ECHO OFF", "setlocal EnableDelayedExpansion", "CD /D \"%~dp0\"", "", "", "", "${0}", "", "", "", "endlocal", ""],
+    "body": [
+      "@ECHO OFF",
+      "setlocal EnableDelayedExpansion",
+      "CD /D \"%~dp0\"",
+      "",
+      "",
+      "",
+      "${0}",
+      "",
+      "",
+      "",
+      "endlocal && EXIT /B",
+      ""
+    ],
     "description": ["BAT|CMD.脚本模板"]
   },
   "开启延迟变量扩展": {
