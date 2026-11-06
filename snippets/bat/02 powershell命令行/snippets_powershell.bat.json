@@ -29,8 +29,8 @@
     "body": [
       "set \"TARGET_FILE=${1:写入文件路径_后缀}\"",
       "powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
-      "  \"\\$lines = '${2:首行内容}',\" ^",
-      "  \"'${3:多行内容}',\" ^",
+      "  \"\\$lines = '${2:首行内容} ',\" ^",
+      "  \"'${3:多行内容} ',\" ^",
       "  \"'';\" ^",
       "  \"\\$filePath = \\$env:TARGET_FILE;\" ^",
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",

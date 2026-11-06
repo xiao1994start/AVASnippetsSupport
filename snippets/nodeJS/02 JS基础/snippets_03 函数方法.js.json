@@ -40,7 +40,7 @@
     "description": ["async 异步声明"]
   },
   "await 等待Promise完成": {
-    "prefix": ["await_", "aw_"],
+    "prefix": ["await_", "awt_"],
     "body": ["await ${1:}"],
     "description": ["await 等待Promise完成"]
   },
