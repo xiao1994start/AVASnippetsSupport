@@ -174,7 +174,7 @@
       "  powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
       "  \"\\$path = \\$env:JSON_FILE;\" ^",
       "  \"\\$json = Get-Content -Raw -Encoding UTF8 \\$path;\" ^",
-      "  \"\\$pattern = '(?<s>\\x22(?:\\\\.|[^\\x22\\])*\\x22)|(?<b>/\\*(?!\\*/)[\\s\\S]*?\\*/)|(?<l>//[^\\r\\n]*)';\" ^",
+      "  \"\\$pattern = '(?<s>\\x22(?:\\\\\\.|[^\\x22\\])*\\x22)|(?<b>/\\*(?!\\*/)[\\s\\S]*?\\*/)|(?<l>//[^\\r\\n]*)';\" ^",
       "  \"\\$evaluator = [System.Text.RegularExpressions.MatchEvaluator]{ param(\\$m) if (\\$m.Groups['s'].Success) { \\$m.Value } else { '' } };\" ^",
       "  \"\\$json = [regex]::Replace(\\$json, \\$pattern, \\$evaluator);\" ^",
       "  \"\\$json = \\$json | ConvertFrom-Json;\" ^",
