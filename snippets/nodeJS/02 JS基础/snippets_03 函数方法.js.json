@@ -4,10 +4,15 @@
     "body": ["const ${2:name} = require('${1:JS_path}')"],
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
-  "import 导入依赖 [ESM]": {
+  "import 导入依赖": {
     "prefix": ["ipt_"],
     "body": ["import ${2:module_name} from '${1:module}'"],
-    "description": ["import 导入依赖 [ESM]"]
+    "description": ["import 导入依赖"]
+  },
+  "import 导入类型依赖": {
+    "prefix": ["ipt_typ_"],
+    "body": ["import type ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入类型依赖"]
   },
   "() => import(...) 动态导入依赖": {
     "prefix": ["new_lambda_import_", "nlami_"],
@@ -24,10 +29,10 @@
     "body": ["module.exports = {${0}}"],
     "description": ["module.exports 导出模块 [CommonJS]"]
   },
-  "export default 默认导出 [ESM]": {
+  "export default 默认导出": {
     "prefix": ["export_default_", "expt_def_"],
     "body": ["export default {${0}}"],
-    "description": ["export default 默认导出 [ESM]"]
+    "description": ["export default 默认导出"]
   },
   "async 异步声明": {
     "prefix": ["async_", "asc_"],
