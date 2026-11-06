@@ -1,6 +1,6 @@
 {
   "引入 keyboard 监听和模拟键盘事件": {
-    "prefix": ["impt_keyboard"],
+    "prefix": ["impo_keyboard"],
     "body": ["import keyboard  # * 监听和模拟键盘事件"],
     "description": ["监听和模拟键盘事件"]
   },

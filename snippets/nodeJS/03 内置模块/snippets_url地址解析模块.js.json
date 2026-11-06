@@ -1,6 +1,6 @@
 {
   "引入 url.fileURLToPath URL转路径模块": {
-    "prefix": ["impt_fileURLToPath_-url"],
+    "prefix": ["impo_fileURLToPath_-url"],
     "body": [
       "import { fileURLToPath } from 'node:url' // * 引入 url.fileURLToPath 方法将文件URL地址转换为本地文件系统路径",
       ""

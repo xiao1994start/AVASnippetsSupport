@@ -1,11 +1,11 @@
 {
   "引入 enum 枚举类": {
-    "prefix": ["impt_enum_Enum"],
+    "prefix": ["impo_enum_Enum"],
     "body": ["from enum import Enum  # * 引入 enum 枚举类"],
     "description": ["引入 enum 枚举类"]
   },
   "引入 enum 枚举类.常用模块": {
-    "prefix": ["impt_enum_=-enum"],
+    "prefix": ["impo_enum_=-enum"],
     "body": ["from enum import Enum, IntEnum, StrEnum, auto  # * 引入 enum 枚举类"],
     "description": ["引入 enum 枚举类.常用模块"]
   },

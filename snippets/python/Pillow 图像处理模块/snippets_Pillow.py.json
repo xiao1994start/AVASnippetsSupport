@@ -1,6 +1,6 @@
 {
   "引入 PIL.Image 图像处理模块": {
-    "prefix": ["impt_PIL_Image"],
+    "prefix": ["impo_PIL_Image"],
     "body": ["from PIL import Image"],
     "description": ["引入 PIL.Image 图像处理模块"]
   },

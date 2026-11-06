@@ -1,6 +1,6 @@
 {
   "引入 functools 高阶函数": {
-    "prefix": ["impt_functools"],
+    "prefix": ["impo_functools"],
     "body": ["import functools"],
     "description": ["引入 functools 高阶函数"]
   },

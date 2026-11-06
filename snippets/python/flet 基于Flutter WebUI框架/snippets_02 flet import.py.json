@@ -1,11 +1,11 @@
 {
   "引入 flet WebUI框架": {
-    "prefix": ["impt_flet"],
+    "prefix": ["impo_flet"],
     "body": ["import flet  # * 引入 flet WebUI框架", ""],
     "description": ["引入 flet WebUI框架"]
   },
   "引入 flet WebUI框架 && darkdetect 智能主题模式检测库": {
-    "prefix": ["impt_flet_darkdetect"],
+    "prefix": ["impo_flet_darkdetect"],
     "body": ["import flet  # * 引入 flet WebUI框架", "import darkdetect  # * 引入 darkdetect 智能主题模式检测库", ""],
     "description": ["引入 flet WebUI框架 && darkdetect 智能主题模式检测库"]
   }
