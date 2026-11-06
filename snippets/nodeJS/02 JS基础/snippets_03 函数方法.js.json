@@ -126,10 +126,15 @@
     "body": ["extends ${1:继承}"],
     "description": ["extends 继承关键字"]
   },
-  "function () {...}": {
+  "function () {...} 初始化提升|构造函数": {
     "prefix": ["new_def_function_", "ndf_"],
     "body": ["function ${1:name}(${2:params}) {${0}}"],
-    "description": ["function () {...}"]
+    "description": ["function () {...} 初始化提升|构造函数"]
+  },
+  "const = () => {...} 箭头函数": {
+    "prefix": ["const_def_function_", "cdf_"],
+    "body": ["const ${1:fn_Name} = (${2:params}) => { ${0} }"],
+    "description": ["const = () => {...}"]
   },
   "() => (return ...)": {
     "prefix": ["new_lambda_", "nlam_"],
@@ -267,7 +272,7 @@
       "}",
       ""
     ],
-    "description": "decorator 声明方法装饰器"
+    "description": ["decorator 声明方法装饰器"]
   },
   "decorator 声明装饰器工厂": {
     "prefix": ["new_decorator_factory_", "new_dec_fact_"],
