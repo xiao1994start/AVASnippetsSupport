@@ -1,6 +1,6 @@
 {
   "引入 winreg 注册表管理库": {
-    "prefix": ["ipt_winreg"],
+    "prefix": ["impt_winreg"],
     "body": ["import winreg"],
     "description": ["引入 winreg 注册表管理库"]
   },
