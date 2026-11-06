@@ -5,7 +5,7 @@
     "description": ["print 语句的代码片段"]
   },
   "input(...)": {
-    "prefix": ["ipt_-input"],
+    "prefix": ["input"],
     "body": "input(${0})",
     "description": ["input 语句的代码片段"]
   }

@@ -1,6 +1,6 @@
 {
   "引入 useDark 夜间模式（主题模式）": {
-    "prefix": ["imp_useDark_useToggle_-vueuse"],
+    "prefix": ["ipt_useDark_useToggle_-vueuse"],
     "body": [
       "import { useDark } from '@vueuse/core'",
       "/**",

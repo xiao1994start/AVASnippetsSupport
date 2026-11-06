@@ -1,6 +1,6 @@
 {
   "引入 argparse 命令行参数模块": {
-    "prefix": ["imp_argparse"],
+    "prefix": ["ipt_argparse"],
     "body": [
       "import argparse  # * 命令行参数模块",
       "",

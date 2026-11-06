@@ -1,6 +1,6 @@
 {
   "引入 platform 访问系统底层平台标识数据模块": {
-    "prefix": ["imp_platform"],
+    "prefix": ["ipt_platform"],
     "body": ["import platform  # 引入 platform 访问系统底层平台标识数据模块"],
     "description": ["引入 platform 访问系统底层平台标识数据模块"]
   },

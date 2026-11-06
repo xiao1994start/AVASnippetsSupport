@@ -1,6 +1,6 @@
 {
   "引入 urllib URL处理模块": {
-    "prefix": ["imp_urllib_request"],
+    "prefix": ["ipt_urllib_request"],
     "body": ["import urllib.request  # 引入 urllib URL处理模块", ""],
     "description": ["引入 urllib URL处理模块"]
   }
