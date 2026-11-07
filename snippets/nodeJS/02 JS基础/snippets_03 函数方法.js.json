@@ -132,7 +132,7 @@
     "description": ["function () {...} 初始化声明提升|构造函数"]
   },
   "const = () => {...} 箭头函数": {
-    "prefix": ["const_arrow_def_function_", "cadf_"],
+    "prefix": ["const_def_function_arrow_", "cdfa_"],
     "body": ["const ${1:name} = (${2:params}) => { ${0} }"],
     "description": ["const = () => {...} 箭头函数"]
   },
