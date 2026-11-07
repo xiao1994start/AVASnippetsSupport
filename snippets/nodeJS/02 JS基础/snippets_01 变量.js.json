@@ -20,7 +20,7 @@
     "description": ["let 变量-块级作用域"]
   },
   "const 常量-块级作用域": {
-    "prefix": ["new_const_", "nc_", "cos_"],
+    "prefix": ["new_const_", "ncs_"],
     "body": ["const ${0}"],
     "description": ["const 常量-块级作用域"]
   },

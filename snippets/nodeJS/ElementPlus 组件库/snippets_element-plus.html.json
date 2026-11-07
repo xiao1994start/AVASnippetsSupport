@@ -2,28 +2,16 @@
   "el-menu 路由菜单": {
     "prefix": ["el_menu_-router"],
     "body": [
-      "<el-menu router",
-      "  style=\"flex: 1;overflow: auto;scrollbar-width: thin;font-weight: bold;--el-menu-active-color:#41BC6C;\"",
-      "  :default-active=\"\\$route.path || '/'\">",
-      "  <el-menu-item index=\"/${1:路由地址}\"",
-      "    style=\"height: auto;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\">",
-      "    ${2:路由标签}",
-      "  </el-menu-item>",
-      "",
-      "</el-menu>",
+      "<el-menu router :default-active=\"\\$route.path ?? '/'\">",
+      "  <el-menu-item v-for=\"routes in routers\" :index=\"routes.path\" :key=\"routes.path\">",
+      "    {{ routes.name }}</el-menu-item></el-menu>",
       ""
     ],
     "description": ["el-menu 路由菜单"]
   },
   "el-menu-item 路由菜单选项": {
     "prefix": ["el_menu_item_-index_router"],
-    "body": [
-      "<el-menu-item index=\"/${1:路由地址}\"",
-      "  style=\"height: auto;white-space: normal;line-height: normal;word-break: break-word;padding: 8px;\">",
-      "  ${2:路由标签}",
-      "</el-menu-item>",
-      ""
-    ],
+    "body": ["<el-menu-item index=\"/${1:路由地址}\">", "  ${2:路由标签}", "</el-menu-item>", ""],
     "description": ["el-menu-item 路由菜单选项"]
   },
   "el-image 开启图片预览功能": {
@@ -39,5 +27,23 @@
       ""
     ],
     "description": ["el-image 开启图片预览功能"]
+  },
+  "el-upload 文件上传组件": {
+    "prefix": ["el-upload_-tmpl"],
+    "body": [
+      "<el-upload ref=\"uploadRef\" :drag=\"true\" :multiple=\"uploadMultiple\" :limit=\"uploadLimit\" :auto-upload=\"false\"",
+      "  :show-file-list=\"true\" :list-type=\"'text'\" v-model:file-list=\"uploadList\" :on-change=\"handleUploadChange\"",
+      "  :on-exceed=\"handleUploadExceed\">",
+      "  <el-icon :size=\"32\">",
+      "    <i-ep-upload-filled />",
+      "  </el-icon>",
+      "  <div class=\"el-upload__text\">",
+      "    拖拽文件到此处，或 <em>点击选择文件</em>",
+      "    <div class=\"el-upload__tip\">Tip: 文件上传组件提示信息</div>",
+      "  </div>",
+      "</el-upload>",
+      ""
+    ],
+    "description": ["el-upload 文件上传组件"]
   }
 }

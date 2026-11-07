@@ -99,5 +99,38 @@
       ""
     ],
     "description": ["ElNotification 通知 帮助"]
+  },
+  "el-upload 上传组件事件函数": {
+    "prefix": ["impo_ElUpload"],
+    "body": [
+      "import type { UploadFile, UploadFiles, UploadUserFile, UploadInstance, UploadRawFile } from 'element-plus'",
+      "const uploadRef = ref<UploadInstance>()",
+      "const uploadLimit = ref(1)",
+      "const uploadMultiple = ref(uploadLimit.value > 1 ? true : false)",
+      "const uploadList = ref([])",
+      "/**",
+      " * # 文件状态改变时的钩子，添加文件、上传成功和上传失败时都会被调用",
+      " * @param {UploadFile}  uploadFile ",
+      " * @param {UploadFiles}  uploadFiles ",
+      " */",
+      "const handleUploadChange = async (uploadFile: UploadFile, uploadFiles: UploadFiles) => {",
+      "  const rawFile = uploadFile.raw",
+      "  if (!rawFile) return",
+      "  // - 通过 invoke 链路获取路径（返回 Promise）",
+      "  const realPath = await window.electronAPI.getPathForFile(rawFile)",
+      "  console.log('[渲染进程] 文件真实路径:', realPath) // 在 Electron 控制台（DevTools）打印",
+      "}",
+      "/**",
+      " * # 当超出限制时，执行的钩子函数",
+      " * @param {File[]}  files ",
+      " * @param {UploadUserFile[]}  uploadFiles ",
+      " */",
+      "const handleUploadExceed = (files: File[], uploadFiles: UploadUserFile[]) => {",
+      "  uploadRef.value?.clearFiles() // 清空文件列表",
+      "  uploadRef.value?.handleStart(files[0] as UploadRawFile)",
+      "}",
+      ""
+    ],
+    "description": ["el-upload 上传组件事件函数"]
   }
 }

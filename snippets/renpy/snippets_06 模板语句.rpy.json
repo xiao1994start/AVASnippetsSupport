@@ -54,7 +54,7 @@
     "description": ["刷新当前界面"]
   },
   "快速配置 options.rpy 模板": {
-    "prefix": ["init_options_template"],
+    "prefix": ["init_options_tmpl"],
     "body": [
       "# ====================== options自动配置 ======================",
       "init python:",
