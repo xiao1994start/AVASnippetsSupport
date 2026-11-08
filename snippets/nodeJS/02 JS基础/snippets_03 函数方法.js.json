@@ -147,7 +147,7 @@
     "description": ["() => (return ...)"]
   },
   "() => {...}": {
-    "prefix": ["new_arrow_def_function_", "nadf_"],
+    "prefix": ["new_def_function_arrow_", "ndfa_"],
     "body": ["(${1:}) => {${0}}"],
     "description": ["() => {...}"]
   },

@@ -6,7 +6,7 @@
   },
   "判断文件夹不存在": {
     "prefix": ["if_not_exists"],
-    "body": ["if not exist ${1:判断目标} ( ECHO 目标不存在 )"],
+    "body": ["if not exist ${1:判断目标} (${2: ECHO 目标不存在 })"],
     "description": ["判断文件夹不存在"]
   },
   "判断字符串相等且忽略大小写": {
