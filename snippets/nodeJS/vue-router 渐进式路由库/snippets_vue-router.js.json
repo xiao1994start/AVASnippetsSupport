@@ -1,6 +1,6 @@
 {
   "引入 vue-router.createRouter 创建路由方法": {
-    "prefix": ["impo_createRouter_-vue-router"],
+    "prefix": ["impt_createRouter_-vue-router"],
     "body": [
       "import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'",
       "/**",
@@ -36,7 +36,7 @@
     "description": ["引入 vue-router.createRouter 创建路由方法"]
   },
   "导入 vue-router.RouterLink 路由组件类型": {
-    "prefix": ["impo_RouterLink_-vue-router"],
+    "prefix": ["impt_RouterLink_-vue-router"],
     "body": [
       "import type { RouterLink } from 'vue-router'",
       "/**",
@@ -68,7 +68,7 @@
     "description": ["导入 vue-router.RouterLink 路由组件类型"]
   },
   "导入 vue-router.useRoute 路由参数查询组件": {
-    "prefix": ["impo_useRoute_-vue-router"],
+    "prefix": ["impt_useRoute_-vue-router"],
     "body": [
       "import { useRoute } from 'vue-router' // * 获取路由参数",
       "// ? <RouterLink||router-link :to=\"/url?查询参数=\\${查询参数值}&...\">",

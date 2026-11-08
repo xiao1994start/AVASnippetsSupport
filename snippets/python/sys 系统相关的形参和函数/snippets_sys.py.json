@@ -1,6 +1,6 @@
 {
   "导入 sys 模块": {
-    "prefix": ["impo_sys"],
+    "prefix": ["impt_sys"],
     "body": ["import sys"],
     "description": ["导入 sys 模块"]
   },

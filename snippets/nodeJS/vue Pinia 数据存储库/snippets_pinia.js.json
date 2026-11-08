@@ -1,11 +1,12 @@
 {
   "引入 pinia.defineStore 定义状态管理库": {
-    "prefix": ["impo_defineStore_-pinia"],
+    "prefix": ["impt_defineStore_-pinia"],
     "body": [
       "import { defineStore } from 'pinia' // * 引入 pinia 状态管理库",
       "import { ref, reactive, computed } from 'vue'",
       "// * 定义 pinia 状态管理库",
-      "const Store_仓库名 = defineStore('StoreID_仓库ID', () => {",
+      "export const userStoreID = 'userStore' // * 仓库ID",
+      "const Store_仓库名 = defineStore(userStoreID, () => {",
       "  // - 定义状态、数据、方法、计算属性（默认自带响应式）",
       "  // * state 状态数据/状态管理数据",
       "  // let 属性名 = ref||reactive(初始值)",
@@ -51,7 +52,7 @@
     "description": ["引入 pinia.defineStore 定义状态管理库"]
   },
   "引入 pinia.storeToRefs 仓库属性响应式解构方法": {
-    "prefix": ["impo_storeToRefs_-pinia"],
+    "prefix": ["impt_storeToRefs_-pinia"],
     "body": [
       "import { storeToRefs } from 'pinia' // * 引入 pinia.storeToRefs 方法将仓库属性转换为ref响应式数据",
       "/*  # storeToRefs 方法将仓库属性转换为ref响应式数据",

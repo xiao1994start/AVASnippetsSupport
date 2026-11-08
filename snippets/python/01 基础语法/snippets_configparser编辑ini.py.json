@@ -1,6 +1,6 @@
 {
   "引入 configparser 模块": {
-    "prefix": ["impo_onfigparser"],
+    "prefix": ["impt_onfigparser"],
     "body": ["import configparser"],
     "description": ["引入configparser->ini控制模块"]
   },
