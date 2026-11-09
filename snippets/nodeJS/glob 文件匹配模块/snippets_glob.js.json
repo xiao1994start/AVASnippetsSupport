@@ -1,0 +1,19 @@
+{
+  "引入 glob 模块匹配文件路径": {
+    "prefix": ["impt_glob_"],
+    "body": [
+      "import { glob } from 'glob' // * 引入 glob 模块匹配文件路径",
+      "/**",
+      " * # glob 递归查找目录下所有指定扩展名的文件",
+      " * @async 异步函数，返回 Promise 对象",
+      " *   await globFiles(pattern, options?)",
+      " * @pattern 文件路径模式，例如: 'src/**_/*.js'",
+      " * @options 常用选项参数",
+      " *   @cwd 工作目录，默认当前目录",
+      " *   @absolute 是否返回绝对路径，默认 false",
+      " */",
+      ""
+    ],
+    "description": ["引入 glob 模块匹配文件路径"]
+  }
+}
