@@ -7,6 +7,17 @@
     ],
     "description": ["引入 url.fileURLToPath URL转路径模块"]
   },
+  "获取当前脚本所在目录的Path对象": {
+    "prefix": ["impt_url_path_dir"],
+    "body": [
+      "import { fileURLToPath } from 'node:url' // * 引入 url.fileURLToPath 方法将文件URL地址转换为本地文件系统路径",
+      "import path from 'node:path' // * 引入 path 路径模块",
+      "const __filename = fileURLToPath(import.meta.url) // * import.meta.url返回当前模块（文件）的绝对URL地址",
+      "const __dirname = path.dirname(__filename)",
+      ""
+    ],
+    "description": ["获取当前脚本所在目录的Path对象"]
+  },
   "import.meta.url": {
     "prefix": ["import_meta_url"],
     "body": ["import.meta.url"],
@@ -16,15 +27,5 @@
     "prefix": ["fileURLToPath_URL_-url"],
     "body": ["fileURLToPath(new URL('./${1:path}', import.meta.url))"],
     "description": ["将文件URL地址转换为本地文件系统路径"]
-  },
-  "获取当前脚本所在目录的Path对象": {
-    "prefix": ["const_dir_url_path_", "cdir_url_"],
-    "body": [
-      "const __filename = fileURLToPath(import.meta.url) // * import.meta.url返回当前模块（文件）的绝对URL地址",
-      "const __dirname = path.dirname(__filename)",
-      "",
-      ""
-    ],
-    "description": ["获取当前脚本所在目录的Path对象"]
   }
 }
