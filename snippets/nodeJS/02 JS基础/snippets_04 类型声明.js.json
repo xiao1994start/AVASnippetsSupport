@@ -1,6 +1,6 @@
 {
   "type 定义类型": {
-    "prefix": ["new_type_", "ntyp_"],
+    "prefix": ["new_type_", "ntp_"],
     "body": [
       "type Type_Name = {",
       "  // * 属性: 属性类型",
@@ -15,7 +15,7 @@
     "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
   },
   "typeof 类型查询": {
-    "prefix": ["typeof_", "typof_"],
+    "prefix": ["typeof_", "tpof_"],
     "body": ["typeof ${1:value_变量}"],
     "description": ["typeof 类型查询"]
   },
