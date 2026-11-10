@@ -17,7 +17,6 @@
       "    console.log(html)",
       "  })",
       "  .catch(console.error)",
-      "",
       ""
     ],
     "description": ["fetch 获取HTML数据"]

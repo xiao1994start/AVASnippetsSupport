@@ -24,7 +24,6 @@
       "  .filter((item) => item !== '')",
       "  .join(';')",
       "process.env.PATH = [new_env, system_env].join(';')",
-      "",
       ""
     ],
     "description": ["配置子进程的 PATH 环境变量"]
