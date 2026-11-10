@@ -1,6 +1,6 @@
 {
   "引入 uvicorn ASGI Web 服务器实现": {
-    "prefix": ["impt_uvicorn"],
+    "prefix": ["impo_uvicorn"],
     "body": ["import uvicorn"],
     "description": ["引入 uvicorn ASGI Web 服务器实现"]
   },

@@ -1,6 +1,6 @@
 {
   "引入 util.promisify 方法将回调函数转换为 Promise 函数": {
-    "prefix": ["impt_util_promisify"],
+    "prefix": ["impo_util_promisify"],
     "body": ["import { promisify } from 'util' // * 引入 util.promisify 方法将回调函数转换为 Promise 函数", ""],
     "description": ["引入 util.promisify 方法将回调函数转换为 Promise 函数"]
   }

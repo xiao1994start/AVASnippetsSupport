@@ -1,6 +1,6 @@
 {
   "引入 selenium 模块": {
-    "prefix": ["impt_selenium_webdriver"],
+    "prefix": ["impo_selenium_webdriver"],
     "body": [
       "from pathlib import Path  # 路径设置",
       "from selenium import webdriver  # 实例化网络请求模块",

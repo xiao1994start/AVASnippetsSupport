@@ -1,21 +1,21 @@
 {
   "import module": {
-    "prefix": ["impt_"],
+    "prefix": ["impo_"],
     "body": ["import ${1:module}"],
     "description": ["import module"]
   },
   "import module as alias": {
-    "prefix": ["impt_a_"],
+    "prefix": ["impo_a_"],
     "body": ["import ${1:module} as ${2:alias}"],
     "description": ["import module as alias"]
   },
   "from module import name": {
-    "prefix": ["impt_f_"],
+    "prefix": ["impo_f_"],
     "body": ["from ${1:module} import ${2:name}"],
     "description": ["from module import name"]
   },
   "from module import name as alias": {
-    "prefix": ["impt_f_a_"],
+    "prefix": ["impo_f_a_"],
     "body": ["from ${1:module} import ${2:name} as ${3:alias}"],
     "description": ["from module import name as alias"]
   }

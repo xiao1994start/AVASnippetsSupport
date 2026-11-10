@@ -1,0 +1,112 @@
+{
+  "const ... = require('...') 导入依赖 [CommonJS]": {
+    "prefix": ["new_require_", "nreq_"],
+    "body": ["const ${2:name} = require('${1:JS_path}')"],
+    "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
+  },
+  "import 导入依赖": {
+    "prefix": ["impo_"],
+    "body": ["import ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入依赖"]
+  },
+  "import 导入类型依赖": {
+    "prefix": ["impo_typ_"],
+    "body": ["import type ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入类型依赖"]
+  },
+  "() => import(...) 动态导入依赖": {
+    "prefix": ["new_lambda_import_", "nlami_"],
+    "body": ["() => import(${0})"],
+    "description": ["() => import(...) 动态导入依赖"]
+  },
+  "export 导出声明": {
+    "prefix": ["expo_", "expt_"],
+    "body": ["export ${0}"],
+    "description": ["export 导出 声明"]
+  },
+  "module.exports 导出模块 [CommonJS]": {
+    "prefix": ["mod_expo_", "mod_expt_"],
+    "body": ["module.exports = {${0}}"],
+    "description": ["module.exports 导出模块 [CommonJS]"]
+  },
+  "export default 默认导出": {
+    "prefix": ["expo_def_", "expt_def_"],
+    "body": ["export default {${0}}"],
+    "description": ["export default 默认导出"]
+  },
+  "function () {...} 初始化声明提升|构造函数": {
+    "prefix": ["new_def_function_", "ndf_"],
+    "body": ["function ${1:name}(${2:params}) {${0}}"],
+    "description": ["function () {...} 初始化声明提升|构造函数"]
+  },
+  "const = () => {...} 箭头函数": {
+    "prefix": ["const_def_function_arrow_", "cdfa_"],
+    "body": ["const ${1:name} = (${2:params}) => { ${0} }"],
+    "description": ["const = () => {...} 箭头函数"]
+  },
+  "const = function () => {...}": {
+    "prefix": ["const_def_function_", "cdf_"],
+    "body": ["const ${1:name} = function (${2:params}) { ${0} }"],
+    "description": ["const = function () => {...}"]
+  },
+  "() => (return ...)": {
+    "prefix": ["new_lambda_", "nlam_"],
+    "body": ["(${1}) => (${0})"],
+    "description": ["() => (return ...)"]
+  },
+  "() => {...}": {
+    "prefix": ["new_def_function_arrow_", "ndfa_"],
+    "body": ["(${1:}) => {${0}}"],
+    "description": ["() => {...}"]
+  },
+  "if (import.meta.main) {...} 脚本调试": {
+    "prefix": ["if_main_"],
+    "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "}", ""],
+    "description": ["if (import.meta.main) {...} 脚本调试"]
+  },
+  "setTimeout": {
+    "prefix": ["settimeout_", "time_sleep_"],
+    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],
+    "description": ["setTimeout"]
+  },
+  "async 异步声明": {
+    "prefix": ["async_", "asc_"],
+    "body": ["async ${1:}"],
+    "description": ["async 异步声明"]
+  },
+  "await 等待Promise完成": {
+    "prefix": ["await_", "awt_"],
+    "body": ["await ${1:}"],
+    "description": ["await 等待Promise完成"]
+  },
+  "this 访问属性": {
+    "prefix": ["this_", "ths_"],
+    "body": ["this${1:.属性名}"],
+    "description": ["this 访问属性"]
+  },
+  "then 处理成功回调": {
+    "prefix": ["then_", "thn_"],
+    "body": ["then((${1:value_可选}) => { ${2:callback_回调} })"],
+    "description": ["then 处理成功回调"]
+  },
+  "catch 异常状态处理": {
+    "prefix": ["catch_", "cach_"],
+    "body": ["catch((${1:error_可选}) => { ${2:callback_回调} })"],
+    "description": ["catch 异常状态处理"]
+  },
+  "throw 抛出异常": {
+    "prefix": ["throw_err", "thw_"],
+    "body": ["throw ${1:err}"],
+    "description": ["throw 抛出异常"]
+  },
+  "throw 抛出自定义异常": {
+    "prefix": ["throw_new_Error_", "thwne_"],
+    "body": ["throw new Error(`${1:example_Err}`)"],
+    "description": ["throw 抛出自定义异常"]
+  },
+  "extends 继承关键字": {
+    "prefix": ["extends_", "extds_"],
+    "body": ["extends ${1:继承}"],
+    "description": ["extends 继承关键字"]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "引入 glob 模块匹配文件路径": {
-    "prefix": ["impt_glob_"],
+    "prefix": ["impo_glob_"],
     "body": [
       "import { glob } from 'glob' // * 引入 glob 模块匹配文件路径",
       "/**",
