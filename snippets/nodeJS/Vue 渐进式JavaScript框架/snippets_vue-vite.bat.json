@@ -53,6 +53,8 @@
       "  ECHO.+ 【TypeScript】安装 tsx 运行时加速器",
       "  call npm i tsx -g --registry https://registry.npmmirror.com/",
       "  call npm i tsx --registry https://registry.npmmirror.com/",
+      "  ECHO.+ 安装 glob 文件匹配模块",
+      "  call npm i glob --registry https://registry.npmmirror.com/",
       "  @REM  * axios 请求库",
       "  ECHO.* 安装 axios 请求库 :: https://www.axios-http.cn/",
       "  call npm i axios --registry https://registry.npmmirror.com/",

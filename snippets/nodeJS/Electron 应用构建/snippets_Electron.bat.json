@@ -60,6 +60,8 @@
       "  ECHO.+ 【TypeScript】安装 tsx 运行时加速器",
       "  call npm i tsx -g --registry https://registry.npmmirror.com/",
       "  call npm i tsx --registry https://registry.npmmirror.com/",
+      "  ECHO.+ 安装 glob 文件匹配模块",
+      "  call npm i glob --registry https://registry.npmmirror.com/",
       "  @REM  * vite_vue 依赖项",
       "  ECHO.* 安装 vite_vue 依赖项",
       "  call npm i vue --registry https://registry.npmmirror.com/",

@@ -128,6 +128,8 @@
       "call npm i tsx -g --registry https://registry.npmmirror.com/",
       "call npm i tsx --registry https://registry.npmmirror.com/",
       "",
+      "ECHO.+ 安装 glob 文件匹配模块",
+      "call npm i glob --registry https://registry.npmmirror.com/",
       ""
     ],
     "description": ["npm TypeScript 必备库"]
