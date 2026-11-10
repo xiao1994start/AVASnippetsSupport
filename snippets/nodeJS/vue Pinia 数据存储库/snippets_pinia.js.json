@@ -34,7 +34,7 @@
       "  }",
       "})",
       "// = 导出 pinia 状态管理库",
-      "export default Store_仓库名",
+      "export { Store_仓库名 }",
       "/**",
       " * # 调用方法：vue文件中使用 storeToRefs 方法将仓库属性转换为ref响应式数据",
       " * = import { storeToRefs } from 'pinia' // * 引入 pinia.storeToRefs 方法将仓库属性转换为ref响应式数据",
