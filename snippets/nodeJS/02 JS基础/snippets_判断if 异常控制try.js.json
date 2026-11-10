@@ -8,5 +8,10 @@
     "prefix": ["try_catch_"],
     "body": ["try {", "  ${1:}", "} catch (error) {", "  ", "}"],
     "description": ["try ... catch ..."]
+  },
+  "try ... finally ...": {
+    "prefix": ["try_finally_"],
+    "body": ["try {", "  ${1:}", "} finally {", "  ", "}"],
+    "description": ["try ... finally ..."]
   }
 }
