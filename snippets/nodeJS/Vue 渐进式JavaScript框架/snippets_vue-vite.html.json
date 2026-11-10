@@ -1,4 +1,14 @@
 {
+  "true": {
+    "prefix": ["tt_true"],
+    "body": "true",
+    "description": ["true"]
+  },
+  "false": {
+    "prefix": ["ff_false"],
+    "body": "false",
+    "description": ["false"]
+  },
   "模板标签": {
     "prefix": ["tmpl_-vue"],
     "body": ["<template>", "  ${0}", "</template>"],
