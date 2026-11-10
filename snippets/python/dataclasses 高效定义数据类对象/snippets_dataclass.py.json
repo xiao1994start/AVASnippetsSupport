@@ -1,6 +1,6 @@
 {
   "引入 dataclass 高效定义数据类对象": {
-    "prefix": ["impo_dataclass"],
+    "prefix": ["ipt_dataclass"],
     "body": ["from dataclasses import dataclass, field  # * 引入 dataclass(高效定义数据类对象) | field(属性)"],
     "description": ["引入 dataclass 高效定义数据类对象"]
   },

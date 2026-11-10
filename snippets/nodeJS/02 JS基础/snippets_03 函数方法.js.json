@@ -5,12 +5,12 @@
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
   "import 导入依赖": {
-    "prefix": ["impo_"],
+    "prefix": ["ipt_"],
     "body": ["import {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入依赖"]
   },
   "import 导入类型依赖": {
-    "prefix": ["impo_typ_"],
+    "prefix": ["ipt_typ_"],
     "body": ["import type {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入类型依赖"]
   },
@@ -20,17 +20,17 @@
     "description": ["() => import(...) 动态导入依赖"]
   },
   "export 导出声明": {
-    "prefix": ["expo_", "expt_"],
+    "prefix": ["expt_", "ept_"],
     "body": ["export ${0}"],
     "description": ["export 导出 声明"]
   },
   "module.exports 导出模块 [CommonJS]": {
-    "prefix": ["mod_expo_", "mod_expt_"],
+    "prefix": ["mod_expt_", "mod_ept_"],
     "body": ["module.exports = {${0}}"],
     "description": ["module.exports 导出模块 [CommonJS]"]
   },
   "export default 默认导出": {
-    "prefix": ["expo_def_", "expt_def_"],
+    "prefix": ["expt_def_", "ept_def_"],
     "body": ["export default {${0}}"],
     "description": ["export default 默认导出"]
   },

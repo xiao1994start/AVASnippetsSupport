@@ -1,6 +1,6 @@
 {
   "引入 vueDevTools 插件": {
-    "prefix": ["impo_vueDevTools"],
+    "prefix": ["ipt_vueDevTools"],
     "body": [
       "import vueDevTools from 'vite-plugin-vue-devtools' // * 引入 vueDevTools 插件",
       "/**",

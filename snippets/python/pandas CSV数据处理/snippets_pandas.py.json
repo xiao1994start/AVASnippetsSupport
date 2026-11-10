@@ -1,6 +1,6 @@
 {
   "引入 pandas 模块": {
-    "prefix": ["impo_pandas"],
+    "prefix": ["ipt_pandas"],
     "body": ["import pandas as pd  # *pandas 数据处理模块"],
     "description": ["引入 pandas 数据处理模块"]
   },
