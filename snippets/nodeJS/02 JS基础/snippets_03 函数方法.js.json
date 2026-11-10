@@ -6,12 +6,12 @@
   },
   "import 导入依赖": {
     "prefix": ["impo_"],
-    "body": ["import ${2:module_name} from '${1:module}'"],
+    "body": ["import {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入依赖"]
   },
   "import 导入类型依赖": {
     "prefix": ["impo_typ_"],
-    "body": ["import type ${2:module_name} from '${1:module}'"],
+    "body": ["import type {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入类型依赖"]
   },
   "() => import(...) 动态导入依赖": {
