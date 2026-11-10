@@ -64,11 +64,6 @@
     "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "}", ""],
     "description": ["if (import.meta.main) {...} 脚本调试"]
   },
-  "setTimeout": {
-    "prefix": ["settimeout_", "time_sleep_"],
-    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],
-    "description": ["setTimeout"]
-  },
   "async 异步声明": {
     "prefix": ["async_", "asc_"],
     "body": ["async ${1:}"],
@@ -108,5 +103,10 @@
     "prefix": ["extends_", "extds_"],
     "body": ["extends ${1:继承}"],
     "description": ["extends 继承关键字"]
+  },
+  "setTimeout": {
+    "prefix": ["settimeout_", "time_sleep_"],
+    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],
+    "description": ["setTimeout"]
   }
 }
