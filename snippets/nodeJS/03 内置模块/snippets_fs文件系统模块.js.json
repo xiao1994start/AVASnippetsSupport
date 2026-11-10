@@ -19,5 +19,10 @@
       ""
     ],
     "description": ["引入 fs 文件系统模块"]
+  },
+  "fs.promises.rm 递归|强制": {
+    "prefix": ["fs_promises_rm_"],
+    "body": ["fs.promises.rm(${1:path}, { ${2:force: true} }) // 删除文件/目录(recursive: 递归删除目录; force: 强制删除)"],
+    "description": ["fs.promises.rm 递归|强制"]
   }
 }
