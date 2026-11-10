@@ -8,5 +8,10 @@
     "prefix": ["try_catch_"],
     "body": ["try {", "  ${1:}", "} catch (error) {", "  ", "}"],
     "description": ["try ... catch ..."]
+  },
+  "if (import.meta.main) {...} 脚本调试": {
+    "prefix": ["if_main_"],
+    "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "}", ""],
+    "description": ["if (import.meta.main) {...} 脚本调试"]
   }
 }

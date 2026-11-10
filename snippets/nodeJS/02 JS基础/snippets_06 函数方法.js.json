@@ -1,0 +1,32 @@
+{
+  "function () {...} 初始化声明提升|构造函数": {
+    "prefix": ["new_def_function_", "ndf_"],
+    "body": ["function ${1:name}(${2:params}) {${0}}"],
+    "description": ["function () {...} 初始化声明提升|构造函数"]
+  },
+  "const = () => {...} 箭头函数": {
+    "prefix": ["const_def_function_arrow_", "cdfa_"],
+    "body": ["const ${1:name} = (${2:params}) => { ${0} }"],
+    "description": ["const = () => {...} 箭头函数"]
+  },
+  "const = function () => {...}": {
+    "prefix": ["const_def_function_", "cdf_"],
+    "body": ["const ${1:name} = function (${2:params}) { ${0} }"],
+    "description": ["const = function () => {...}"]
+  },
+  "() => (return ...)": {
+    "prefix": ["new_lambda_", "nlam_"],
+    "body": ["(${1}) => (${0})"],
+    "description": ["() => (return ...)"]
+  },
+  "() => {...}": {
+    "prefix": ["new_def_function_arrow_", "ndfa_"],
+    "body": ["(${1:}) => {${0}}"],
+    "description": ["() => {...}"]
+  },
+  "setTimeout": {
+    "prefix": ["settimeout_", "time_sleep_"],
+    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],
+    "description": ["setTimeout"]
+  }
+}

@@ -23,5 +23,21 @@
     "prefix": ["if_elif_else_"],
     "body": ["if ${1:}:", "    pass", "elif ${3:}:", "    pass", "else:", "    pass"],
     "description": ["if_elif_else判断的代码片段"]
+  },
+  "if_main:运行入口 | 调试运行": {
+    "prefix": ["if_main_"],
+    "body": ["if __name__ == '__main__':", "    \"\"\" === * 运行入口 | 调试运行 * === \"\"\"", "    ${0}", "    ..."],
+    "description": ["if_main:运行入口 | 调试运行"]
+  },
+  "if_in_main:运行入口 | 调试运行": {
+    "prefix": ["if_mp_main_"],
+    "body": [
+      "if __name__ in {'__main__', '__mp_main__'}:",
+      "    \"\"\" === * 运行入口 | 调试运行 | 多进程[multiprocessing]运行 * === \"\"\"",
+      "    ${0}",
+      "    ...",
+      ""
+    ],
+    "description": ["if_in_main:运行入口 | 调试运行"]
   }
 }

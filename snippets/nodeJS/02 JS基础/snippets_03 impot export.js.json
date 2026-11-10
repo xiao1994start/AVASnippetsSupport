@@ -1,0 +1,37 @@
+{
+  "const ... = require('...') 导入依赖 [CommonJS]": {
+    "prefix": ["new_require_", "nreq_"],
+    "body": ["const ${2:name} = require('${1:JS_path}')"],
+    "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
+  },
+  "import 导入依赖": {
+    "prefix": ["impt_"],
+    "body": ["import ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入依赖"]
+  },
+  "import 导入类型依赖": {
+    "prefix": ["impt_typ_"],
+    "body": ["import type ${2:module_name} from '${1:module}'"],
+    "description": ["import 导入类型依赖"]
+  },
+  "() => import(...) 动态导入依赖": {
+    "prefix": ["new_lambda_import_", "nlami_"],
+    "body": ["() => import(${0})"],
+    "description": ["() => import(...) 动态导入依赖"]
+  },
+  "export 导出声明": {
+    "prefix": ["export_", "expt_"],
+    "body": ["export ${0}"],
+    "description": ["export 导出 声明"]
+  },
+  "module.exports 导出模块 [CommonJS]": {
+    "prefix": ["module_exports_", "mod_expt_"],
+    "body": ["module.exports = {${0}}"],
+    "description": ["module.exports 导出模块 [CommonJS]"]
+  },
+  "export default 默认导出": {
+    "prefix": ["export_default_", "expt_def_"],
+    "body": ["export default {${0}}"],
+    "description": ["export default 默认导出"]
+  }
+}

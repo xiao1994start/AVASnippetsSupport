@@ -1,0 +1,54 @@
+{
+  "type 定义类型": {
+    "prefix": ["new_type_", "ntyp_"],
+    "body": [
+      "type Type_Name = {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Type_Properties: Type",
+      "}",
+      ""
+    ],
+    "description": ["type 定义类型（支持类型别名，不能重复声明合并。如果需要合并是，使用 & 运算符）"]
+  },
+  "typeof 类型查询": {
+    "prefix": ["typeof_", "typof_"],
+    "body": ["typeof ${1:value_变量}"],
+    "description": ["typeof 类型查询"]
+  },
+  "interface 接口定义结构": {
+    "prefix": ["new_interface_", "nintf_"],
+    "body": [
+      "interface Interface_Name {",
+      "  // * 属性: 属性类型",
+      "  // * readonly 只读属性: 只读属性类型",
+      "  // * 可选属性?: 可选属性类型",
+      "  // * (函数参数: 参数类型): 返回类型（如 : void）",
+      "  // * 方法(参数: 参数类型): 返回类型（如 : void）",
+      "  Interface_Properties: Type",
+      "}",
+      ""
+    ],
+    "description": ["interface 接口定义结构（支持重复声明自动合并）"]
+  },
+  "声明全局类型.d.ts": {
+    "prefix": ["declare_global_", "dec_g_"],
+    "body": [
+      "declare global {",
+      "  // * 全局类型",
+      "  interface Window {",
+      "    electronAPI: IElectronAPI",
+      "  }",
+      "  // function globalFunction_全局函数(): void",
+      "  // let globalVar_全局变量: number",
+      "}",
+      "${0}",
+      "export {} // TypeScript: 确保把此文件作为模块处理",
+      ""
+    ],
+    "description": ["声明全局类型.d.ts"]
+  }
+}

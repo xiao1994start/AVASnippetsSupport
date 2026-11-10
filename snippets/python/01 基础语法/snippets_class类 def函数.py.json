@@ -188,21 +188,5 @@
     "prefix": ["new_lambda_", "nadf_"],
     "body": ["lambda ${1:e}: ${2:expr表达式}"],
     "description": ["lambda(匿名函数)", "lambda(匿名函数) [参数]: 表达式"]
-  },
-  "if_main:运行入口 | 调试运行": {
-    "prefix": ["if_name==main"],
-    "body": ["if __name__ == '__main__':", "    \"\"\" === * 运行入口 | 调试运行 * === \"\"\"", "    ${0}", "    ..."],
-    "description": ["if_main:运行入口 | 调试运行"]
-  },
-  "if_in_main:运行入口 | 调试运行": {
-    "prefix": ["if_name_in_mp_main"],
-    "body": [
-      "if __name__ in {'__main__', '__mp_main__'}:",
-      "    \"\"\" === * 运行入口 | 调试运行 | 多进程[multiprocessing]运行 * === \"\"\"",
-      "    ${0}",
-      "    ...",
-      ""
-    ],
-    "description": ["if_in_main:运行入口 | 调试运行"]
   }
 }
