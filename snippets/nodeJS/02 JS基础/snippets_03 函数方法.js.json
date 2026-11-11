@@ -49,10 +49,10 @@
     "body": ["const ${1:name} = function (${2:params}) { ${0} }"],
     "description": ["const = function () => {...}"]
   },
-  "() => (return ...)": {
+  "() => return": {
     "prefix": ["new_lambda_", "nlam_"],
     "body": ["(${1}) => (${0})"],
-    "description": ["() => (return ...)"]
+    "description": ["() => return"]
   },
   "() => {...}": {
     "prefix": ["new_def_function_arrow_", "ndfa_"],
