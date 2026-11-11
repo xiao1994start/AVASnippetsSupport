@@ -119,6 +119,16 @@
     "body": ["import.meta.dirname"],
     "description": ["import.meta.dirname"]
   },
+  "const __dirname": {
+    "prefix": ["const_dir_import_meta_dir_", "cdirmt_"],
+    "body": ["const __dirname = import.meta.dirname"],
+    "description": ["const __dirname"]
+  },
+  "const __filename": {
+    "prefix": ["const_file_import_meta_file_", "cfilemt_"],
+    "body": ["const __filename = import.meta.filename"],
+    "description": ["const __filename"]
+  },
   "import.meta.url": {
     "prefix": ["import_meta_url", "ipt_mt_url"],
     "body": ["import.meta.url"],
