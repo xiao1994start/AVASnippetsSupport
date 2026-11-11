@@ -104,6 +104,26 @@
     "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "${0}", "}", ""],
     "description": ["if (import.meta.main) {...} 脚本调试"]
   },
+  "import.meta": {
+    "prefix": ["import_meta", "ipt_mt"],
+    "body": ["import.meta${0}"],
+    "description": ["import.meta"]
+  },
+  "import.meta.filename": {
+    "prefix": ["import_meta_filename", "ipt_mt_file"],
+    "body": ["import.meta.filename"],
+    "description": ["import.meta.filename"]
+  },
+  "import.meta.dirname": {
+    "prefix": ["import_meta_dirname", "ipt_mt_dir"],
+    "body": ["import.meta.dirname"],
+    "description": ["import.meta.dirname"]
+  },
+  "import.meta.url": {
+    "prefix": ["import_meta_url", "ipt_mt_url"],
+    "body": ["import.meta.url"],
+    "description": ["返回当前模块（文件）的绝对URL地址"]
+  },
   "setTimeout": {
     "prefix": ["settimeout_", "time_sleep_"],
     "body": ["setTimeout(() => {", "  ${0}", "}, ${1:timeout});"],

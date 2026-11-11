@@ -7,16 +7,6 @@
     ],
     "description": ["引入 url.fileURLToPath URL转路径模块"]
   },
-  "import.meta": {
-    "prefix": ["import_meta", "ipt_mt"],
-    "body": ["import.meta${0}"],
-    "description": ["import.meta"]
-  },
-  "import.meta.url": {
-    "prefix": ["import_meta_url", "ipt_mt_url"],
-    "body": ["import.meta.url"],
-    "description": ["返回当前模块（文件）的绝对URL地址"]
-  },
   "fileURLToPath": {
     "prefix": ["fileURLToPath_URL_-url"],
     "body": ["fileURLToPath(new URL('./${1:path}', import.meta.url))"],
