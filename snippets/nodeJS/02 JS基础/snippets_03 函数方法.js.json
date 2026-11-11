@@ -59,11 +59,6 @@
     "body": ["(${1:}) => {${0}}"],
     "description": ["() => {...}"]
   },
-  "if (import.meta.main) {...} 脚本调试": {
-    "prefix": ["if_main_"],
-    "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "}", ""],
-    "description": ["if (import.meta.main) {...} 脚本调试"]
-  },
   "async 异步声明": {
     "prefix": ["async_", "asc_"],
     "body": ["async ${1:}"],
@@ -103,6 +98,11 @@
     "prefix": ["extends_", "extds_"],
     "body": ["extends ${1:继承}"],
     "description": ["extends 继承关键字"]
+  },
+  "if (import.meta.main) {...} 脚本调试": {
+    "prefix": ["if_main_"],
+    "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "${0}", "}", ""],
+    "description": ["if (import.meta.main) {...} 脚本调试"]
   },
   "setTimeout": {
     "prefix": ["settimeout_", "time_sleep_"],
