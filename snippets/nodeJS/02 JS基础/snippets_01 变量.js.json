@@ -33,5 +33,10 @@
     "prefix": ["dirpath"],
     "body": ["__dirname"],
     "description": ["获取当前脚本文件的目录路径"]
+  },
+  "event": {
+    "prefix": ["evn_"],
+    "body": ["event"],
+    "description": ["event"]
   }
 }
