@@ -60,7 +60,7 @@
     ],
     "description": ["引入 ElMessage,ElMessageBox,ElNotification 消息提示|消息弹框|通知"]
   },
-  "ElMessage,ElMessageBox 消息提示|消息弹框 帮助": {
+  "引入 ElMessage,ElMessageBox 消息提示|消息弹框 帮助": {
     "prefix": ["ipt_ElMessage_ElMessageBox_-element-plus"],
     "body": [
       "import { ElMessage, ElMessageBox } from 'element-plus'",
@@ -82,9 +82,9 @@
       " */",
       ""
     ],
-    "description": ["ElMessage,ElMessageBox 消息提示|消息弹框 帮助"]
+    "description": ["引入 ElMessage,ElMessageBox 消息提示|消息弹框 帮助"]
   },
-  "ElNotification 通知 帮助": {
+  "引入 ElNotification 通知 帮助": {
     "prefix": ["ipt_ElNotification_-element-plus"],
     "body": [
       "import { ElNotification } from 'element-plus'",
@@ -100,7 +100,31 @@
       " */",
       ""
     ],
-    "description": ["ElNotification 通知 帮助"]
+    "description": ["引入 ElNotification 通知 帮助"]
+  },
+  "引入 ElLoading 加载服务组件": {
+    "prefix": ["ipt_ElLoading_-element-plus"],
+    "body": [
+      "  import { ElLoading } from 'element-plus' // * 引入 element-plus.ElLoading 加载服务组件",
+      "  /**",
+      "   * # 全屏加载提示框",
+      "   * @async",
+      "   * @param promise_function 要执行的异步函数",
+      "   * @param args 函数参数",
+      "   */",
+      "  const loadingFullScreen = async (promise_function: (param?: any) => Promise<any>, args?: any[], loadingText?: string) => {",
+      "    const loadingInstance = ElLoading.service({",
+      "      lock: true, // 是否锁定背景",
+      "      fullscreen: true, // 是否全屏",
+      "      text: loadingText || '加载中...', // 加载中提示信息",
+      "      background: 'rgba(0, 0, 0, 0.7)',",
+      "    })",
+      "    if (args) { await promise_function(...args) } else { await promise_function() }",
+      "    loadingInstance.close()",
+      "  }",
+      ""
+    ],
+    "description": ["引入 ElLoading 加载服务组件"]
   },
   "el-upload 上传组件事件函数": {
     "prefix": ["ipt_ElUpload"],
