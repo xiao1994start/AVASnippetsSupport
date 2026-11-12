@@ -34,6 +34,11 @@
     "body": ["__dirname"],
     "description": ["获取当前脚本文件的目录路径"]
   },
+  "error": {
+    "prefix": ["err"],
+    "body": ["error"],
+    "description": ["error"]
+  },
   "event": {
     "prefix": ["ev"],
     "body": ["event"],
