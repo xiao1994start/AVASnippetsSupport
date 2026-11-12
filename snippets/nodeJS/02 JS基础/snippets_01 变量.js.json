@@ -35,12 +35,12 @@
     "description": ["获取当前脚本文件的目录路径"]
   },
   "event": {
-    "prefix": ["evn_"],
+    "prefix": ["ev"],
     "body": ["event"],
     "description": ["event"]
   },
   "_event": {
-    "prefix": ["_evn"],
+    "prefix": ["_ev"],
     "body": ["_event"],
     "description": ["_event"]
   }
