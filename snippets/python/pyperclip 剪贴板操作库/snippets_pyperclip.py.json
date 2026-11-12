@@ -1,6 +1,6 @@
 {
   "引入 pyperclip 剪贴板模块": {
-    "prefix": ["ipt_pyperclip"],
+    "prefix": ["impt_pyperclip"],
     "body": ["import pyperclip  # * 剪贴板模块", ""],
     "description": ["引入 pyperclip 剪贴板模块"]
   },

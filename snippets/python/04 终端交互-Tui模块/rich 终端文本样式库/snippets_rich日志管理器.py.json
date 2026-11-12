@@ -1,6 +1,6 @@
 {
   "引入 rich.logging.RichHandler 日志记录处理程序": {
-    "prefix": ["ipt_rich_logging_=-rich--basicConfig"],
+    "prefix": ["impt_rich_logging_=-rich--basicConfig"],
     "body": [
       "import logging",
       "",

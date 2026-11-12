@@ -1,6 +1,6 @@
 {
   "引入 ElementPlus 模块": {
-    "prefix": ["ipt_ElementPlus-element-plus"],
+    "prefix": ["impt_ElementPlus-element-plus"],
     "body": [
       "import ElementPlus from 'element-plus'",
       "import zhCn from 'element-plus/es/locale/lang/zh-cn' // * 国际化: 中文语言包",
@@ -21,12 +21,12 @@
     "description": ["引入 ElementPlus 模块"]
   },
   "引入 element-plus 暗黑主题样式": {
-    "prefix": ["ipt_dark-element-plus"],
+    "prefix": ["impt_dark-element-plus"],
     "body": ["import 'element-plus/theme-chalk/dark/css-vars.css' // * 引入 element-plus 暗黑主题样式", ""],
     "description": ["引入 element-plus 暗黑主题样式"]
   },
   "引入 ElMessage,ElMessageBox,ElNotification 消息提示|消息弹框|通知": {
-    "prefix": ["ipt_ElMessage_ElMessageBox_ElNotification_-element-plus"],
+    "prefix": ["impt_ElMessage_ElMessageBox_ElNotification_-element-plus"],
     "body": [
       "import { ElMessage, ElMessageBox } from 'element-plus' // * 引入 ElMessage-消息提示, ElMessageBox-消息弹框",
       "/** ",
@@ -61,7 +61,7 @@
     "description": ["引入 ElMessage,ElMessageBox,ElNotification 消息提示|消息弹框|通知"]
   },
   "引入 ElMessage,ElMessageBox 消息提示|消息弹框 帮助": {
-    "prefix": ["ipt_ElMessage_ElMessageBox_-element-plus"],
+    "prefix": ["impt_ElMessage_ElMessageBox_-element-plus"],
     "body": [
       "import { ElMessage, ElMessageBox } from 'element-plus'",
       "/**",
@@ -85,7 +85,7 @@
     "description": ["引入 ElMessage,ElMessageBox 消息提示|消息弹框 帮助"]
   },
   "引入 ElNotification 通知 帮助": {
-    "prefix": ["ipt_ElNotification_-element-plus"],
+    "prefix": ["impt_ElNotification_-element-plus"],
     "body": [
       "import { ElNotification } from 'element-plus'",
       "/**",
@@ -103,7 +103,7 @@
     "description": ["引入 ElNotification 通知 帮助"]
   },
   "引入 ElLoading 加载服务组件": {
-    "prefix": ["ipt_ElLoading_-element-plus"],
+    "prefix": ["impt_ElLoading_-element-plus"],
     "body": [
       "import { ElLoading } from 'element-plus' // * 引入 element-plus.ElLoading 加载服务组件",
       "/** * # 全屏加载提示框",
@@ -126,7 +126,7 @@
     "description": ["引入 ElLoading 加载服务组件"]
   },
   "el-upload 上传组件事件函数": {
-    "prefix": ["ipt_ElUpload"],
+    "prefix": ["impt_ElUpload"],
     "body": [
       "import type { UploadFile, UploadFiles, UploadUserFile, UploadInstance, UploadRawFile } from 'element-plus'",
       "const uploadRef = ref<UploadInstance>()",

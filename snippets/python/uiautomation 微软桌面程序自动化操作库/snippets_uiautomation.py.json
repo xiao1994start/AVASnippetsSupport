@@ -1,6 +1,6 @@
 {
   "引入 uiautomation Windows桌面程序自动化控制依赖": {
-    "prefix": ["ipt_uiautomation"],
+    "prefix": ["impt_uiautomation"],
     "body": [
       "from uiautomation import ButtonControl, ListItemControl, MenuControl, WalkControl, WindowControl  # Windows桌面程序自动化控制依赖",
       ""

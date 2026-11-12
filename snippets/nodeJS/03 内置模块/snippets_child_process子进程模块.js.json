@@ -5,7 +5,7 @@
     "description": ["引入 child_process 子进程模块 [CommonJS]"]
   },
   "引入 child_process 子进程模块": {
-    "prefix": ["ipt_child_process"],
+    "prefix": ["impt_child_process"],
     "body": [
       "import { exec, execFile, fork, spawn, execSync, execFileSync } from 'node:child_process' // * 引入 child_process 子进程模块",
       "import { promisify } from 'util' // * 引入 util.promisify 方法将回调函数转换为 Promise 函数",
