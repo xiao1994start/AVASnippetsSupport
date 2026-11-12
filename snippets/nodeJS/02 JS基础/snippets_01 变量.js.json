@@ -43,10 +43,5 @@
     "prefix": ["ev"],
     "body": ["event"],
     "description": ["event"]
-  },
-  "_event": {
-    "prefix": ["_ev"],
-    "body": ["_event"],
-    "description": ["_event"]
   }
 }
