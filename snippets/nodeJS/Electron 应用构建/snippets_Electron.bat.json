@@ -556,7 +556,7 @@
       "  \"' ',\" ^",
       "  \"'    // # 窗口外观与行为 ',\" ^",
       "  \"'    show: false, // * false:未完成初始化时不显示窗口 ',\" ^",
-      "  \"'    title: ''ElectronApp-Vite&Vue'', // * 窗口标题 ',\" ^",
+      "  \"'    title: ''ElectronApp_Vue@Vite'', // * 窗口标题 ',\" ^",
       "  \"'    icon: icon.isEmpty() ? undefined : icon, // * 原生边框图标 ',\" ^",
       "  \"'    frame: false, // * false:窗口无边框 ',\" ^",
       "  \"'    roundedCorners: true, // * 系统原生圆角 true:启用 false:禁用 ',\" ^",
