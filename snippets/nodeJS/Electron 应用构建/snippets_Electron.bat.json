@@ -254,7 +254,7 @@
       "  \"'  packagerConfig: { ',\" ^",
       "  \"'    // asar: true, // - true: 开启 ASAR 资源压缩打包，提升安全性与加载速度 (/out/*-win32-x64/resources/app.asar) ',\" ^",
       "  \"'    // name: ''myElectronApp'', // * 应用名称 (默认 package.json 项目名) ',\" ^",
-      "  \"'    icon: ''./assets/icon.ico'', // 应用图标 ',\" ^",
+      "  \"'    icon: ''./resources/assets/icon.ico'', // 应用图标 ',\" ^",
       "  \"'    extraResource: [ ',\" ^",
       "  \"'      // - 配置需要额外打包到外部 resources 目录的文件夹或文件 ',\" ^",
       "  \"'      ''./resources/assets'', // 将项目根目录下的 /resources/assets 整体打包 ',\" ^",
