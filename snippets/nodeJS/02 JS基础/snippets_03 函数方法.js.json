@@ -60,12 +60,12 @@
     "description": ["() => {...}"]
   },
   "async 异步声明": {
-    "prefix": ["async_", "asc_"],
+    "prefix": ["async_", "asc_", "ac"],
     "body": ["async ${1:}"],
     "description": ["async 异步声明"]
   },
   "await 等待Promise完成": {
-    "prefix": ["await_", "awt_", "awa"],
+    "prefix": ["await_", "awt_", "aw"],
     "body": ["await ${1:}"],
     "description": ["await 等待Promise完成"]
   },
