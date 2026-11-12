@@ -38,5 +38,10 @@
     "prefix": ["evn_"],
     "body": ["event"],
     "description": ["event"]
+  },
+  "_event": {
+    "prefix": ["_evn"],
+    "body": ["_event"],
+    "description": ["_event"]
   }
 }
