@@ -135,8 +135,13 @@
     "description": ["返回当前模块（文件）的绝对URL地址"]
   },
   "setTimeout": {
-    "prefix": ["settimeout_", "time_sleep_"],
-    "body": ["setTimeout(() => ${1:ms});"],
+    "prefix": ["settimeout_", "set_sleep_"],
+    "body": ["setTimeout(() => {${1:console.log('回调')}}, ${2:1000});"],
     "description": ["setTimeout"]
+  },
+  "setInterval": {
+    "prefix": ["setinterval_", "set_loop_"],
+    "body": ["setInterval(() => {${1:console.log('回调')}}, ${2:1000});"],
+    "description": ["setInterval"]
   }
 }
