@@ -60,7 +60,7 @@
     "description": ["() => {...}"]
   },
   "async 异步声明": {
-    "prefix": ["async_", "asc_", "ac"],
+    "prefix": ["async_", "asc_"],
     "body": ["async ${1:}"],
     "description": ["async 异步声明"]
   },
