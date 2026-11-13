@@ -498,7 +498,6 @@
       "  \"'  } ',\" ^",
       "  \"'} ',\" ^",
       "  \"'export {} // TypeScript: 确保把此文件作为模块处理 ',\" ^",
-      "  \"'export default {} ',\" ^",
       "  \"'// - 不识别 .d.ts: 重命名为 interface[.名称].d.ts 或  放在 src/types/ 目录下 ',\" ^",
       "  \"'';\" ^",
       "  \"\\$filePath = \\$env:TARGET_FILE;\" ^",

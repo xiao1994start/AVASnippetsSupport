@@ -13,12 +13,12 @@ ECHO 设置临时系统环境变量
 set "NODE_HOME=%~dp0..\node;%~dp0..\node\node_modules;"
 set "PATH=%NODE_HOME%;%XPATH%;"
 
-ECHO Node.js 版本号: && call node -v
-ECHO npm 版本号: && call npm i npm -g --registry https://registry.npmmirror.com/ && call npm -v
-ECHO 检查 软件仓库位置: && call npm root -g
-@REM  * 自定义插件必备库
-ECHO 正在安装 yo generate-code 库 && call npm i yo generator-code -g --registry https://registry.npmmirror.com/
-ECHO 正在安装 @vscode/vsce 打包库（使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension） && call npm i @vscode/vsce -g --registry https://registry.npmmirror.com/
+@REM  ECHO Node.js 版本号: && call node -v
+@REM  ECHO npm 版本号: && call npm i npm -g --registry https://registry.npmmirror.com/ && call npm -v
+@REM  ECHO 检查 软件仓库位置: && call npm root -g
+@REM  @REM  * 自定义插件必备库
+@REM  ECHO 正在安装 yo generate-code 库 && call npm i yo generator-code -g --registry https://registry.npmmirror.com/
+@REM  ECHO 正在安装 @vscode/vsce 打包库（使用Yeoman进行创建:https://code.visualstudio.com/api/get-started/your-first-extension） && call npm i @vscode/vsce -g --registry https://registry.npmmirror.com/
 
 CD /D "%~dp0"
 ECHO.生成 package.json 文件 && call ECHO.|"%~dp0package.exe"
