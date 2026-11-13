@@ -99,6 +99,11 @@
     "body": ["extends ${1:继承}"],
     "description": ["extends 继承关键字"]
   },
+  "return": {
+    "prefix": ["return_", "ret_"],
+    "body": ["return ${0}"],
+    "description": ["return 返回值"]
+  },
   "if (import.meta.main) {...} 脚本调试": {
     "prefix": ["if_main_"],
     "body": ["if (import.meta.main) {", "  // * 调试当前脚本", "${0}", "}", ""],
