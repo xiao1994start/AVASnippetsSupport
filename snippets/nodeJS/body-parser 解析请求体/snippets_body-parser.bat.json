@@ -1,6 +1,6 @@
 {
   "安装 body-parser 解析请求体": {
-    "prefix": ["npm_express"],
+    "prefix": ["npm_body-parser"],
     "body": [
       "ECHO.+ 安装 body-parser 解析请求体 类型提示",
       "call npm i body-parser @types/body-parser --registry https://registry.npmmirror.com/",
