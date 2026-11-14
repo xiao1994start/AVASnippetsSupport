@@ -247,7 +247,7 @@
       "  \"  '       },',\" ^",
       "  \"  ' *   })',\" ^",
       "  \"  ' */',\" ^",
-      "  \"  'import { UserConfig } from ''vite''',\" ^",
+      "  \"  'import type { UserConfig } from ''vite''',\" ^",
       "  \"  'const server_proxy_Config: UserConfig = {',\" ^",
       "  \"  '  server: {',\" ^",
       "  \"  '    // * 开发服务器选项:https://cn.vitejs.dev/config/server-options',\" ^",
