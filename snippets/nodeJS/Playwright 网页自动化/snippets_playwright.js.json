@@ -1,12 +1,42 @@
 {
-  "安装 inquirer 终端交互模块": {
-    "prefix": ["npm_inquirer"],
+  "获取最终页面 HTML 内容": {
+    "prefix": ["impt_playwright_"],
     "body": [
-      "ECHO.+ 安装 inquirer 终端交互模块",
-      "call npm i inquirer -g --registry https://registry.npmmirror.com/",
-      "call npm i inquirer --registry https://registry.npmmirror.com/",
+      "import { chromium } from 'playwright'",
+      "/** * # 获取最终页面 HTML 内容",
+      " * @async",
+      " * @param {string} url 目标 URL",
+      " * @returns {unknown} 最终页面 HTML 内容",
+      " */",
+      "export async function getHtml(url: string) {",
+      "  await using browser = await chromium.launch({})",
+      "  await using context = await browser.newContext({",
+      "    ignoreHTTPSErrors: true, // 忽略自签/无效证书",
+      "    serviceWorkers: 'allow', // 必须允许 Service Worker",
+      "    userAgent:",
+      "      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' + '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',",
+      "  })",
+      "  await using page = await context.newPage()",
+      "  // * 记录所有导航",
+      "  page.on('framenavigated', (frame) => {",
+      "    if (frame === page.mainFrame()) {",
+      "      console.log('[framenavigated:框架导航]', frame.url())",
+      "    }",
+      "  })",
+      "  await page.goto(url, {",
+      "    waitUntil: 'domcontentloaded',",
+      "    timeout: 60_000,",
+      "  })",
+      "  const startUrl = page.url() // 等待 URL 真正变化（loading 壳 → 最终页面）",
+      "  await page.waitForFunction((u) => window.location.href !== u, startUrl, { timeout: 60_000 })",
+      "  await page.waitForLoadState('networkidle', { timeout: 60_000 }) // 再等页面网络空闲，确保最终内容渲染完",
+      "  const finalUrl = page.url()",
+      "  const finalHtml = await page.content()",
+      "  await browser.close()",
+      "  return { finalUrl, finalHtml }",
+      "}",
       ""
     ],
-    "description": ["安装 inquirer 终端交互模块"]
+    "description": ["获取最终页面 HTML 内容"]
   }
 }
