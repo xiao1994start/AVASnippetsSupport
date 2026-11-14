@@ -1,0 +1,13 @@
+{
+  "安装 Playwright 网页自动化命令行工具": {
+    "prefix": ["npm_glob"],
+    "body": [
+      "ECHO.安装 Playwright 网页自动化命令行工具 :: https://playwright.nodejs.cn/",
+      "call npm i @playwright/cli@latest --registry https://registry.npmmirror.com/",
+      "set PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright",
+      "call npx playwright install",
+      ""
+    ],
+    "description": ["安装 Playwright 网页自动化命令行工具"]
+  }
+}

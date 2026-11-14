@@ -1,7 +1,0 @@
-{
-  "安装 glob 文件匹配模块": {
-    "prefix": ["npm_glob"],
-    "body": ["ECHO.+ 安装 glob 文件匹配模块", "call npm i glob --registry https://registry.npmmirror.com/", ""],
-    "description": ["安装 glob 文件匹配模块"]
-  }
-}

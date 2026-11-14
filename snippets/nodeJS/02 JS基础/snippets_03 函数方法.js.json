@@ -64,10 +64,20 @@
     "body": ["async ${1:}"],
     "description": ["async 异步声明"]
   },
-  "await 等待Promise完成": {
+  "await 等待Promise异步完成": {
     "prefix": ["await_", "awt_", "aw"],
     "body": ["await ${1:}"],
-    "description": ["await 等待Promise完成"]
+    "description": ["await 等待Promise异步完成"]
+  },
+  "using 同步释放资源": {
+    "prefix": ["using_", "us"],
+    "body": ["using ${1:}"],
+    "description": ["using 同步释放资源"]
+  },
+  "await using 等待Promise异步释放资源": {
+    "prefix": ["await_using_", "awt_us_", "awus"],
+    "body": ["await using ${1:}"],
+    "description": ["await using 等待Promise异步释放资源"]
   },
   "this 访问属性": {
     "prefix": ["this_", "ths_"],
