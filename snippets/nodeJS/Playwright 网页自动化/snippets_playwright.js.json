@@ -30,10 +30,10 @@
       "  const startUrl = page.url() // 等待 URL 真正变化（loading 壳 → 最终页面）",
       "  await page.waitForFunction((u) => window.location.href !== u, startUrl, { timeout: 60_000 })",
       "  await page.waitForLoadState('networkidle', { timeout: 60_000 }) // 再等页面网络空闲，确保最终内容渲染完",
-      "  const finalUrl = page.url()",
-      "  const finalHtml = await page.content()",
+      "  const redirectURL = page.url()",
+      "  const redirectHtml = await page.content()",
       "  await browser.close()",
-      "  return { finalUrl, finalHtml }",
+      "  return { redirectURL: redirectURL, redirectHtml: redirectHtml }",
       "}",
       ""
     ],
