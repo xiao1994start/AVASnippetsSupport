@@ -1,6 +1,6 @@
 {
   "当前工作目录 => string": {
-    "prefix": ["process_cwd", "cwd"],
+    "prefix": ["process_cwd", "pcwd"],
     "body": ["process.cwd()"],
     "description": ["当前工作目录 => string"]
   },
