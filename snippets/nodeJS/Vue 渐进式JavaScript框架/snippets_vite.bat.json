@@ -543,7 +543,7 @@
       "  \"\\$utf8NoBom = New-Object System.Text.UTF8Encoding(\\$false);\" ^",
       "  \"[System.IO.File]::WriteAllText(\\$filePath, (\\$lines -join [Environment]::NewLine), \\$utf8NoBom)\"",
       ")",
-      "if not exist \"%~dp0%project_name%\\src\\App.vue\" (",
+      "if exist \"%~dp0%project_name%\\src\\App.vue\" (",
       "  ECHO.写入 src/App.vue 根组件文件",
       "  set \"TARGET_FILE=%~dp0%project_name%\\src\\App.vue\"",
       "  powershell -NoProfile -ExecutionPolicy Bypass -Command ^",
