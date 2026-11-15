@@ -62,10 +62,12 @@
   "npm 切换国内镜像源": {
     "prefix": ["npm_config_set_registry"],
     "body": [
-      "ECHO npm 设置为淘宝镜像源",
-      "call npm config set registry https://registry.npmmirror.com/",
-      "@REM ECHO npm 还原为官方源",
-      "@REM call npm config set registry https://registry.npmjs.org/",
+      "@REM  ECHO npm 设置为淘宝镜像源",
+      "@REM  call npm config set registry https://registry.npmmirror.com/",
+      "@REM  @REM ECHO npm 还原为官方源",
+      "@REM  @REM call npm config set registry https://registry.npmjs.org/",
+      "@REM * 替换 npm 国内镜像源（临时）",
+      "set registry=https://registry.npmmirror.com/",
       ""
     ],
     "description": ["切换npm国内镜像源"]

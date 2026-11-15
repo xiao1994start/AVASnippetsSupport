@@ -2,7 +2,7 @@
   "安装 unplugin vue/vite 插件系统": {
     "prefix": ["npm_unplugin_vue_vite"],
     "body": [
-      "ECHO.* 安装 unplugin-vue-components unplugin-auto-import 自动导入插件 :: https://element-plus.org/zh-CN/guide/quickstart#%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%85%A5-%E6%8E%A8%E8%8D%90",
+      "ECHO.* 安装 unplugin-vue-components unplugin-auto-import 自动导入插件 :: https://element-plus.org/zh-CN/guide/quickstart#自动导入-推荐",
       "call npm i -D unplugin-vue-components unplugin-auto-import --registry https://registry.npmmirror.com/",
       "ECHO.* 安装 unplugin-icons 图标组件 :: https://unplugin.unjs.io/showcase/unplugin-icons.html",
       "call npm i -D unplugin-icons --registry https://registry.npmmirror.com/",
