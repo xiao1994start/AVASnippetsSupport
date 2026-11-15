@@ -24,16 +24,6 @@
     "body": ["const ${0}"],
     "description": ["const 常量-块级作用域"]
   },
-  "获取当前脚本文件的路径": {
-    "prefix": ["filepath"],
-    "body": ["__filename"],
-    "description": ["获取当前脚本文件的路径"]
-  },
-  "获取当前脚本文件的目录路径": {
-    "prefix": ["dirpath"],
-    "body": ["__dirname"],
-    "description": ["获取当前脚本文件的目录路径"]
-  },
   "error": {
     "prefix": ["err"],
     "body": ["error"],

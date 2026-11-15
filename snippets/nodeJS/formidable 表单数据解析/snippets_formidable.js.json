@@ -14,7 +14,7 @@
     "body": [
       "const form = new formidable.IncomingForm({",
       "  encoding: 'utf-8', // 编码 (默认 utf-8)",
-      "  uploadDir: ${1:path.join(__dirname, './public/')}, // 上传文件目录 (默认 os.tmpdir())",
+      "  uploadDir: ${1:'./public/'}, // 上传文件目录 (默认 os.tmpdir())",
       "  keepExtensions: true, // 保持文件扩展名 (默认 false)",
       "  maxFiles: Infinity, // 限制上传文件数量 (默认 Infinity)",
       "  maxFileSize: Infinity, // 限制每次上传文件的大小 (默认 200 * 1024 * 1024 => 200MB)",

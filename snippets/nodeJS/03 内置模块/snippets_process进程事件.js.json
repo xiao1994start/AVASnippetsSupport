@@ -1,24 +1,29 @@
 {
-  "接收传入的命令行参数 => arr": {
+  "当前工作目录 => string": {
+    "prefix": ["process_cwd", "cwd"],
+    "body": ["process.cwd()"],
+    "description": ["当前工作目录 => string"]
+  },
+  "接收传入的命令行参数 => array": {
     "prefix": ["process_argv"],
     "body": ["process.argv"],
-    "description": ["接收传入的命令行参数 => arr"]
+    "description": ["接收传入的命令行参数 => array"]
   },
-  "环境变量": {
+  "环境变量 => object": {
     "prefix": ["process_env"],
     "body": ["process.env${1:.PATH}"],
-    "description": ["环境变量"]
+    "description": ["环境变量 => object"]
   },
-  "声明 环境变量": {
+  "声明 环境变量 => object": {
     "prefix": ["let_process_env"],
     "body": ["let env = process.env${1:.PATH}"],
-    "description": ["声明 环境变量"]
+    "description": ["声明 环境变量 => object"]
   },
-  "配置子进程的 PATH 环境变量": {
+  "配置子进程的 PATH 环境变量 => object": {
     "prefix": ["process_env_PATH_"],
     "body": [
       "// # 配置子进程的 PATH 环境变量",
-      "let new_env = [path.join(__dirname, ${1:PATH环境变量})].join(';')",
+      "let new_env = [path.join(${1:PATH环境变量})].join(';')",
       "let system_env = String(process.env.PATH)",
       "  .split(';')",
       "  .filter((item) => item !== '')",
@@ -26,11 +31,11 @@
       "process.env.PATH = [new_env, system_env].join(';')",
       ""
     ],
-    "description": ["配置子进程的 PATH 环境变量"]
+    "description": ["配置子进程的 PATH 环境变量 => object"]
   },
-  "立即终止当前 Node 进程": {
+  "立即终止当前 Node 进程 => number": {
     "prefix": ["process_exit"],
     "body": ["process.exit(${1|0,1|})"],
-    "description": ["立即终止当前 Node 进程"]
+    "description": ["立即终止当前 Node 进程 => number"]
   }
 }
