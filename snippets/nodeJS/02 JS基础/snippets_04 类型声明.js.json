@@ -1,6 +1,6 @@
 {
   "type 定义类型": {
-    "prefix": ["new_type_", "ntp_"],
+    "prefix": ["new_type_", "tp_"],
     "body": [
       "type Type_Name = {",
       "  // * 属性: 属性类型",
