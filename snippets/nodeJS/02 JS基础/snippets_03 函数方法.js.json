@@ -20,17 +20,17 @@
     "description": ["() => import(...) 动态导入依赖"]
   },
   "export 导出声明": {
-    "prefix": ["expt_", "expt_"],
+    "prefix": ["expt_"],
     "body": ["export ${0}"],
     "description": ["export 导出 声明"]
   },
   "module.exports 导出模块 [CommonJS]": {
-    "prefix": ["mod_expt_", "mod_ept_"],
+    "prefix": ["mod_expt_"],
     "body": ["module.exports = {${0}}"],
     "description": ["module.exports 导出模块 [CommonJS]"]
   },
   "export default 默认导出": {
-    "prefix": ["expt_def_", "expt_def_"],
+    "prefix": ["expt_def_"],
     "body": ["export default {${0}}"],
     "description": ["export default 默认导出"]
   },
