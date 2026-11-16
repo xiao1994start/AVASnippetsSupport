@@ -3,7 +3,6 @@
     "prefix": ["req_body_parser"],
     "body": [
       "const bodyParser = require('body-parser') // * 引入 body-parser 解析请求体模块",
-      "",
       "// - [中间件] 解析 JSON 请求体",
       "const jsonParser = bodyParser.json()",
       "// - [中间件] 解析表单上传编码格式 URL 请求体",
@@ -17,7 +16,6 @@
     "prefix": ["impt_body_parser"],
     "body": [
       "import bodyParser from 'body-parser' // * 引入 body-parser 解析请求体模块",
-      "",
       "// - [中间件] 解析 JSON 请求体",
       "const jsonParser = bodyParser.json()",
       "// - [中间件] 解析表单上传编码格式 URL 请求体",
