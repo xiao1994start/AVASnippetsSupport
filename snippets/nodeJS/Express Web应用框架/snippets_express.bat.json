@@ -40,7 +40,7 @@
       "@REM * 替换 npm 国内镜像源（临时）",
       "set registry=https://registry.npmmirror.com/",
       "",
-      "@REM ====================== Void 构建 Vue 项目 ======================",
+      "@REM ====================== 构建 express 项目 ======================",
       "",
       "set \"project_name=express-${1:111}\"",
       "",
