@@ -1,0 +1,15 @@
+{
+  "cheerio 网页数据提取库 解析 HTML 字符串为 Cheerio 元素对象": {
+    "prefix": ["impt_cheerio_load_"],
+    "body": [
+      "import { load } from 'cheerio' // * 引入 cheerio 解析 HTML 库",
+      "/** * # 解析 HTML 字符串为 Cheerio 元素对象",
+      " * @load方法 解析 HTML 字符串为 Cheerio 元素对象",
+      " * const $ = load(HTML字符串)",
+      " * @returns Cheerio 元素对象，使用 $(选择器) 符号访问元素内容",
+      " */",
+      ""
+    ],
+    "description": ["cheerio 网页数据提取库 解析 HTML 字符串为 Cheerio 元素对象"]
+  }
+}
