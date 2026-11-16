@@ -50,6 +50,7 @@
       "@REM     \"type\": \"module:推荐/commonjs:旧版\" ",
       "",
       "ECHO.+ TypeScript :: @types/node 类型定义; typescript 构建工具; tsx 运行时加速器（监听文件变化 tsx watch filePath）",
+      "call npm i -g @types/node typescript tsx --registry https://registry.npmmirror.com/",
       "call npm i -D @types/node typescript tsx --registry https://registry.npmmirror.com/",
       "",
       "ECHO.+ 安装 glob 文件匹配模块",

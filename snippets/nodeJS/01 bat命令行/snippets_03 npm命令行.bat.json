@@ -125,6 +125,7 @@
     "prefix": ["npm_ts_"],
     "body": [
       "ECHO.+ TypeScript :: @types/node 类型定义; typescript 构建工具; tsx 运行时加速器（监听文件变化 tsx watch filePath）",
+      "call npm i -g @types/node typescript tsx --registry https://registry.npmmirror.com/",
       "call npm i -D @types/node typescript tsx --registry https://registry.npmmirror.com/",
       ""
     ],
