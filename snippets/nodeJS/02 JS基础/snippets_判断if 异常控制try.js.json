@@ -6,7 +6,7 @@
   },
   "try ... catch ...": {
     "prefix": ["try_catch_"],
-    "body": ["try {", "  ${1:}", "} catch (error) {", "  ", "}"],
+    "body": ["try {", "  ${1:}", "} catch (err) {", "  ", "}"],
     "description": ["try ... catch ..."]
   },
   "try ... finally ...": {
