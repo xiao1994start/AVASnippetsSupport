@@ -1,0 +1,31 @@
+{
+  "引入 os 操作系统模块": {
+    "prefix": ["impt_os"],
+    "body": ["import os from 'node:os' // * 引入 os 操作系统模块", ""],
+    "description": ["引入 os 操作系统模块"]
+  },
+  "使用 os 模块获取局域网内IPs": {
+    "prefix": ["getLanIPs_-os"],
+    "body": [
+      "/** * # 获取局域网 IP 地址 */",
+      "function getLanIPs(): string[] {",
+      "  const nets = os.networkInterfaces()",
+      "  const ips: string[] = []",
+      "  for (const name of Object.keys(nets)) {",
+      "    for (const net of nets[name] ?? []) {",
+      "      // 过滤 IPv4、非回环、非内部",
+      "      if (net.family === 'IPv4' && !net.internal) {",
+      "        ips.push(net.address)",
+      "      }",
+      "    }",
+      "  }",
+      "  console.log('LanIPs:', ips)",
+      "  return ips",
+      "}",
+      "const ips = getLanIPs()",
+      "const ip = ips[0]",
+      ""
+    ],
+    "description": ["使用 os 模块获取局域网内IPs"]
+  }
+}
