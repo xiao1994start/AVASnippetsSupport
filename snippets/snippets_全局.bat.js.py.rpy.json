@@ -13,5 +13,15 @@
     "prefix": ["gbk"],
     "body": ["${1|gbk,chcp 936|}"],
     "description": ["编码: GBK"]
+  },
+  "define": {
+    "prefix": ["define_", "defi_"],
+    "body": ["define "],
+    "description": ["define"]
+  },
+  "default": {
+    "prefix": ["default_", "deft_"],
+    "body": ["default "],
+    "description": ["default"]
   }
 }
