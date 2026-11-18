@@ -1,6 +1,6 @@
 {
   "引入 os 操作系统模块": {
-    "prefix": ["imp_os"],
+    "prefix": ["im_os"],
     "body": ["import os from 'node:os' // * 引入 os 操作系统模块", ""],
     "description": ["引入 os 操作系统模块"]
   },

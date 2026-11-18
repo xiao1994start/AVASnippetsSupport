@@ -1,6 +1,6 @@
 {
   "引入 glob 模块匹配文件路径": {
-    "prefix": ["imp_glob_"],
+    "prefix": ["im_glob_"],
     "body": [
       "import { glob } from 'glob' // * 引入 glob 模块匹配文件路径",
       "/** * # glob 递归查找目录下所有指定扩展名的文件",

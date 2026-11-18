@@ -13,7 +13,7 @@
     "description": ["引入 body-parser 模块 [CommonJS]"]
   },
   "引入 body-parser 模块": {
-    "prefix": ["imp_body_parser"],
+    "prefix": ["im_body_parser"],
     "body": [
       "import bodyParser from 'body-parser' // * 引入 body-parser 请求体解析中间件",
       "// - [中间件] 解析 JSON 请求体",
