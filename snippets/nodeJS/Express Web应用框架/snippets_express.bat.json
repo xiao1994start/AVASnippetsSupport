@@ -42,7 +42,7 @@
       "",
       "@REM ====================== Void 构建 Vue 项目 ======================",
       "",
-      "set \"project_name=express-${1:111}\"",
+      "set \"project_name=${1:111}-express\"",
       "",
       "@REM  ===  初始化项目 ===",
       "if not exist \"%~dp0%project_name%\\\" (",

@@ -33,7 +33,7 @@
       "",
       "@REM ====================== Vite 构建 Vue 项目 ======================",
       "",
-      "set \"project_name=viteVue-${1:111}\"",
+      "set \"project_name=${1:111}-viteVue\"",
       "",
       "@REM  ===  初始化项目 ===",
       "if not exist \"%~dp0%project_name%\\\" (",

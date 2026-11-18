@@ -33,7 +33,7 @@
       "",
       "@REM ====================== Forge 构建 Electron 项目 ======================",
       "",
-      "set \"project_name=electronVite-${1:111}\"",
+      "set \"project_name=${1:111}-electronVite\"",
       "",
       "@REM  ===  初始化项目 ===",
       "if not exist \"%~dp0%project_name%\\\" (",
