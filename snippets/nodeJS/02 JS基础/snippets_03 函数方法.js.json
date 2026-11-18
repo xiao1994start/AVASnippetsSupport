@@ -6,13 +6,8 @@
   },
   "import 导入": {
     "prefix": ["im_"],
-    "body": ["import '${1:module}'"],
-    "description": ["import 导入"]
-  },
-  "import from 导入": {
-    "prefix": ["im_f_"],
     "body": ["import {${2:module_name}} from '${1:module}'"],
-    "description": ["import from 导入"]
+    "description": ["import 导入"]
   },
   "import 导入类型": {
     "prefix": ["im_tp_f_"],
