@@ -1,6 +1,6 @@
 {
   "inquirer 终端交互模块常用方法": {
-    "prefix": ["impt_inquirer"],
+    "prefix": ["imp_inquirer"],
     "body": [
       "import inquirer from 'inquirer' // * 引入 inquirer 终端交互模块",
       "/** * # inquirer 终端交互模块常用方法",

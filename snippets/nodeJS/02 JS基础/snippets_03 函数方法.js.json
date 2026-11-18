@@ -4,20 +4,25 @@
     "body": ["const ${2:name} = require('${1:JS_path}')"],
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
-  "import 导入依赖": {
-    "prefix": ["impt_"],
+  "import 导入": {
+    "prefix": ["imp_"],
+    "body": ["import '${1:module}'"],
+    "description": ["import 导入"]
+  },
+  "import from 导入": {
+    "prefix": ["imp_f_"],
     "body": ["import {${2:module_name}} from '${1:module}'"],
-    "description": ["import 导入依赖"]
+    "description": ["import from 导入"]
   },
-  "import 导入类型依赖": {
-    "prefix": ["impt_typ_"],
+  "import 导入类型": {
+    "prefix": ["imp_tp_f_"],
     "body": ["import type {${2:module_name}} from '${1:module}'"],
-    "description": ["import 导入类型依赖"]
+    "description": ["import 导入类型"]
   },
-  "() => import(...) 动态导入依赖": {
+  "() => import(...) 动态导入": {
     "prefix": ["new_lambda_import_", "nlami_"],
     "body": ["() => import(${0})"],
-    "description": ["() => import(...) 动态导入依赖"]
+    "description": ["() => import(...) 动态导入"]
   },
   "export 导出声明": {
     "prefix": ["expt_"],
@@ -120,22 +125,22 @@
     "description": ["if (import.meta.main) {...} 脚本调试"]
   },
   "import.meta": {
-    "prefix": ["import_meta", "impt_mt"],
+    "prefix": ["import_meta", "imp_mt"],
     "body": ["import.meta${0}"],
     "description": ["import.meta"]
   },
   "import.meta.filename": {
-    "prefix": ["import_meta_filename", "impt_mt_file"],
+    "prefix": ["import_meta_filename", "imp_mt_file"],
     "body": ["import.meta.filename"],
     "description": ["import.meta.filename"]
   },
   "import.meta.dirname": {
-    "prefix": ["import_meta_dirname", "impt_mt_dir"],
+    "prefix": ["import_meta_dirname", "imp_mt_dir"],
     "body": ["import.meta.dirname"],
     "description": ["import.meta.dirname"]
   },
   "import.meta.url": {
-    "prefix": ["import_meta_url", "impt_mt_url"],
+    "prefix": ["import_meta_url", "imp_mt_url"],
     "body": ["import.meta.url"],
     "description": ["返回当前模块（文件）的绝对URL地址"]
   },

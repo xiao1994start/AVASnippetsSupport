@@ -1,6 +1,6 @@
 {
   "获取最终页面 HTML 内容": {
-    "prefix": ["impt_playwright_"],
+    "prefix": ["imp_playwright_"],
     "body": [
       "import { chromium } from 'playwright'",
       "/** * # 获取最终页面 HTML 内容",

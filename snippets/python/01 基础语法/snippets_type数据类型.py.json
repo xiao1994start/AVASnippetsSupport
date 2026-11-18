@@ -1,6 +1,6 @@
 {
   "type 数据类型": {
-    "prefix": ["type"],
+    "prefix": ["type_"],
     "body": ["type(${0})"],
     "description": ["type 数据类型"]
   },
