@@ -1,6 +1,6 @@
 {
   "cheerio 网页数据提取库 解析 HTML 字符串为 Cheerio 元素对象": {
-    "prefix": ["im_cheerio_load_"],
+    "prefix": ["impt_cheerio_load_"],
     "body": [
       "import { load } from 'cheerio' // * 引入 cheerio 解析 HTML 库",
       "/** * # 解析 HTML 字符串为 Cheerio 元素对象",

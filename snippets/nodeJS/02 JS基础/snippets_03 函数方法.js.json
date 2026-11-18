@@ -5,12 +5,12 @@
     "description": ["const ... = require('...') 导入依赖 [CommonJS]"]
   },
   "import 导入": {
-    "prefix": ["im_"],
+    "prefix": ["impt_"],
     "body": ["import {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入"]
   },
   "import 导入类型": {
-    "prefix": ["im_tp_f_"],
+    "prefix": ["impt_tp_"],
     "body": ["import type {${2:module_name}} from '${1:module}'"],
     "description": ["import 导入类型"]
   },
@@ -120,22 +120,22 @@
     "description": ["if (import.meta.main) {...} 脚本调试"]
   },
   "import.meta": {
-    "prefix": ["import_meta", "im_mt"],
+    "prefix": ["import_meta", "impt_mt"],
     "body": ["import.meta${0}"],
     "description": ["import.meta"]
   },
   "import.meta.filename": {
-    "prefix": ["import_meta_filename", "im_mt_file"],
+    "prefix": ["import_meta_filename", "impt_mt_file"],
     "body": ["import.meta.filename"],
     "description": ["import.meta.filename"]
   },
   "import.meta.dirname": {
-    "prefix": ["import_meta_dirname", "im_mt_dir"],
+    "prefix": ["import_meta_dirname", "impt_mt_dir"],
     "body": ["import.meta.dirname"],
     "description": ["import.meta.dirname"]
   },
   "import.meta.url": {
-    "prefix": ["import_meta_url", "im_mt_url"],
+    "prefix": ["import_meta_url", "impt_mt_url"],
     "body": ["import.meta.url"],
     "description": ["返回当前模块（文件）的绝对URL地址"]
   },
