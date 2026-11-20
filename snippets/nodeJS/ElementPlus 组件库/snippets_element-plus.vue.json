@@ -1,6 +1,6 @@
 {
   "element-plus 侧边栏路由导航": {
-    "prefix": ["aaa_app_el_aside_router_-vue"],
+    "prefix": ["EP_app_el_aside_router_"],
     "body": [
       "<template>",
       "  <el-container class=\"window\">",
@@ -222,7 +222,7 @@
     "description": ["element-plus 侧边栏路由导航"]
   },
   "element-plus 弹窗模板": {
-    "prefix": ["aaa_el_dialog_-vue"],
+    "prefix": ["EP_el_dialog_"],
     "body": [
       "<template>",
       "  <el-dialog class=\"task_dialog\" v-model=\"visible\" :title=\"dialogTitle\" :align-center=\"align_center\"",
