@@ -6,7 +6,7 @@
       "call npm i -D unplugin-vue-components unplugin-auto-import --registry https://registry.npmmirror.com/",
       "ECHO.* 安装 unplugin-icons 图标组件 :: https://unplugin.unjs.io/showcase/unplugin-icons.html",
       "call npm i -D unplugin-icons --registry https://registry.npmmirror.com/",
-      "ECHO.* 安装 iconify-json/ep 开源图标集 :: https://icon-sets.iconify.design/ep/",
+      "ECHO.* 安装 iconify-json 开源图标集",
       "call npm i -D @iconify-json/ep --registry https://registry.npmmirror.com/",
       "@REM  # 配置方法",
       "@REM  - vite.config.ts 配置自动导入插件：",
