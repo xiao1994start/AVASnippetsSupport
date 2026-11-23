@@ -549,7 +549,7 @@
       "  \"' ',\" ^",
       "  \"'<script setup lang=''ts''> ',\" ^",
       "  \"'import { useDark, useToggle } from ''@vueuse/core'' ',\" ^",
-      "  \"'const isDark = useDark() // ? 响应式数据 v-model 绑定: isDark ',\" ^",
+      "  \"'const isDark = useDark({ selector: ''html'', attribute: ''class'', valueDark: ''dark'', valueLight: ''light'' }) // ? 响应式数据 v-model 绑定: isDark ',\" ^",
       "  \"'const toggleDark = useToggle(isDark) ',\" ^",
       "  \"'function toggleThemeWithAnimation(event: MouseEvent) { ',\" ^",
       "  \"'  // = el-switch 组件属性 :model-value 绑定状态仅展示值，不触发实际切换事件；v-model 会对绑定状态进行切换 ',\" ^",
