@@ -1,6 +1,6 @@
 {
   "Electron Forge构建Electron-Vite-EP项目": {
-    "prefix": ["init_electronViteEP-Electron_Forge"],
+    "prefix": ["init_electronVite_EP-Electron_Forge"],
     "body": [
       "@ECHO OFF",
       "setlocal EnableDelayedExpansion",
