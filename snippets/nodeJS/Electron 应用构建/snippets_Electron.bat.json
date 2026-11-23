@@ -1,5 +1,5 @@
 {
-  "Electron Forge 构建 Electron - Vite 项目": {
+  "Electron Forge构建Electron-Vite-EP项目": {
     "prefix": ["init_electronViteEP-Electron_Forge"],
     "body": [
       "@ECHO OFF",
@@ -42,12 +42,12 @@
       "  ECHO.Forge 构建 Electron 项目",
       "  @REM  中文官网::https://www.electronjs.org/zh/",
       "  @REM  帮助文档::https://www.electronforge.io/",
-      "  ECHO.*  Ok to proceed? ^(y^) :  Yes/y/Enter",
-      "  ECHO.*  ? Select a package manager -------- npm",
-      "  ECHO.*  ? Select a bundler ---------------- Vite",
-      "  ECHO.*  ? Select a programming language --- TypeScript",
-      "  ECHO.*  ? Select an Electron release ------ electron@latest",
-      "  ECHO.*  ? Would you like to initialize Git in your new project? --- n",
+      "  ECHO.*  Ok to proceed? （y） : ------------------------------------- Yes/y/Enter",
+      "  ECHO.*  ? Select a package manager --------------------------------- npm",
+      "  ECHO.*  ? Select a bundler ----------------------------------------- Vite",
+      "  ECHO.*  ? Select a programming language ---------------------------- TypeScript",
+      "  ECHO.*  ? Select an Electron release ------------------------------- electron@latest",
+      "  ECHO.*  ? Would you like to initialize Git in your new project? ---- n",
       "  @REM  ? 模板配置项: --template vite --typescript",
       "  call npx create-electron-app@latest %project_name%",
       "  @REM * 进入项目目录安装必备依赖",
@@ -62,8 +62,8 @@
       "",
       "  call npm i -D @electron-forge/plugin-vite --registry https://registry.npmmirror.com/",
       "",
-      "  @REM  * viteVue 依赖项",
-      "  ECHO.* 安装 viteVue 依赖项",
+      "  @REM  * vue 依赖项",
+      "  ECHO.* 安装 vue 依赖项",
       "  call npm i vue --registry https://registry.npmmirror.com/",
       "  call npm i -D @vitejs/plugin-vue --registry https://registry.npmmirror.com/",
       "  @REM  * VueUse 组合式工具集",
@@ -175,6 +175,7 @@
       "  if not exist \"%~dp0%project_name%\\resources\\assets\" ( ECHO.创建 resources/assets 静态资源目录 && md \"%~dp0%project_name%\\resources\\assets\" )",
       "  if not exist \"%~dp0%project_name%\\resources\\assets\\bin\" ( ECHO.创建 resources/assets/bin 执行文件目录 && md \"%~dp0%project_name%\\resources\\assets\\bin\" )",
       "  if not exist \"%~dp0%project_name%\\src\\components\" ( ECHO.创建 src/components 组件库目录 && md \"%~dp0%project_name%\\src\\components\" )",
+      "  if not exist \"%~dp0%project_name%\\src\\pages\" ( ECHO.创建 src/pages 页面目录 && md \"%~dp0%project_name%\\src\\pages\" )",
       "  if not exist \"%~dp0%project_name%\\src\\hooks\" ( ECHO.创建 src/hooks 钩子事件目录 && md \"%~dp0%project_name%\\src\\hooks\" )",
       "  if not exist \"%~dp0%project_name%\\src\\utils\" ( ECHO.创建 src/utils 工具函数目录 && md \"%~dp0%project_name%\\src\\utils\" )",
       "  CD /D \"%~dp0\"",
@@ -949,8 +950,8 @@
       "  \"'<el-container class=\\\"window_content\\\" :direction=\\\"''horizontal''\\\"> ',\" ^",
       "  \"'<el-aside :width=\\\"true ? ''128px'' : ''192px''\\\"> ',\" ^",
       "  \"'<el-menu router :default-active=\\\"\\$route.path ?? ''/''\\\"> ',\" ^",
-      "  \"'<el-menu-item v-for=\\\"routes in routers\\\" :index=\\\"routes.path\\\" :key=\\\"routes.path\\\"> ',\" ^",
-      "  \"'{{ routes.name }}</el-menu-item> ',\" ^",
+      "  \"'<el-menu-item v-for=\\\"item in routers\\\" :index=\\\"item.path\\\" :key=\\\"item.path\\\"> ',\" ^",
+      "  \"'{{ item.name }}</el-menu-item> ',\" ^",
       "  \"'</el-menu></el-aside> ',\" ^",
       "  \"'<el-container><el-main> ',\" ^",
       "  \"'<router-view></router-view> ',\" ^",
@@ -1399,6 +1400,6 @@
       "endlocal && EXIT /B",
       ""
     ],
-    "description": ["Electron Forge 构建 Electron - Vite 项目"]
+    "description": ["Electron Forge构建Electron-Vite-EP项目"]
   }
 }
