@@ -3,7 +3,7 @@
     "prefix": ["npm_cheerio"],
     "body": [
       "ECHO.安装 cheerio 网页数据提取库 :: https://cheerio.nodejs.cn/",
-      "call npm i cheerio --registry https://registry.npmmirror.com/",
+      "call npm i cheerio --registry https://registry.npmmirror.com",
       ""
     ],
     "description": ["安装 cheerio 网页数据提取库"]

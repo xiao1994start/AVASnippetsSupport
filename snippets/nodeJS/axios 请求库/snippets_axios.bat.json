@@ -3,7 +3,7 @@
     "prefix": ["npm_axios"],
     "body": [
       "ECHO.* 安装 axios 请求库 :: https://www.axios-http.cn/",
-      "call npm i axios --registry https://registry.npmmirror.com/",
+      "call npm i axios --registry https://registry.npmmirror.com",
       ""
     ],
     "description": ["安装 axios 请求库"]
