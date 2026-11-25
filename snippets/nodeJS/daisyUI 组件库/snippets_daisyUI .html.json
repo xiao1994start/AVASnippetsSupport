@@ -1,0 +1,25 @@
+{
+  "dialog对话框-daisyUI": {
+    "prefix": ["dialog_-daisyUI"],
+    "body": [
+      "<dialog ref=\"dialogRef\" class=\"modal select-none\" :class=\"{ 'modal-open': false }\" @keydown.esc.prevent>",
+      "  <form method=\"dialog\" class=\"modal-backdrop\"><button>点击外部时关闭Modal</button></form>",
+      "  <div class=\"modal-box\">",
+      "    <h3 class=\"text-lg font-bold mb-4\">提示：Dialog模态框（modal）</h3>",
+      "    <p>在dialog元素标签内声明 ref=模板引用，通过useTemplateRef()访问模板引用元素</p>",
+      "    <p>@keydown.esc.prevent 阻止 ESC 按键关闭模态框</p>",
+      "    <p>@cancel.prevent 阻止 ESC 关闭模态框事件（兜底）</p>",
+      "    <p>modal-open 类 保持Modal模态框持久化打开</p>",
+      "    <a href=\"https://daisyui.com/components/modal/\" class=\"btn\" target=\"_blank\">Modal组件文档</a>",
+      "    <div class=\"modal-action\">",
+      "      <form method=\"dialog\">",
+      "        <button class=\"btn btn-primary\" @click=\"dialogRef.close()\">关闭</button>",
+      "      </form>",
+      "    </div>",
+      "  </div>",
+      "</dialog>",
+      ""
+    ],
+    "description": ["dialog对话框-daisyUI"]
+  }
+}

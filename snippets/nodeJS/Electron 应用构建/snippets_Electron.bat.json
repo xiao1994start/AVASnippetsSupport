@@ -1160,7 +1160,7 @@
       "  \"'  let { uploadFilePath, uploadFileDir } = storeToRefs(useStore()) ',\" ^",
       "  \"'  import type { UploadFile, UploadFiles, UploadUserFile, UploadInstance, UploadRawFile } from ''element-plus'' ',\" ^",
       "  \"'  const rawFile = ref<UploadRawFile>() ',\" ^",
-      "  \"'  const uploadRef = ref<UploadInstance>() ',\" ^",
+      "  \"'  const uploadRef = useTemplateRef(''uploadRef'') ',\" ^",
       "  \"'  const uploadLimit = ref(1) ',\" ^",
       "  \"'  const uploadMultiple = ref(uploadLimit.value > 1 ? true : false) ',\" ^",
       "  \"'  const uploadList = ref<UploadFile[]>([]) ',\" ^",
