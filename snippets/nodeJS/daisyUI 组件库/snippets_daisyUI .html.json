@@ -5,7 +5,7 @@
       "<dialog ref=\"dialogRef\" class=\"modal select-none\" :class=\"{ 'modal-open': false }\" @keydown.esc.prevent>",
       "  <form method=\"dialog\" class=\"modal-backdrop\"><button>点击外部时关闭Modal</button></form>",
       "  <div class=\"modal-box\">",
-      "    <h3 class=\"text-lg font-bold mb-4\">提示：Dialog模态框（modal）</h3>",
+      "    <h2 class=\"text-lg font-bold mb-4\">提示：Dialog模态框（modal）</h2>",
       "    <p>在dialog元素标签内声明 ref=模板引用，通过useTemplateRef()访问模板引用元素</p>",
       "    <p>@keydown.esc.prevent 阻止 ESC 按键关闭模态框</p>",
       "    <p>@cancel.prevent 阻止 ESC 关闭模态框事件（兜底）</p>",
