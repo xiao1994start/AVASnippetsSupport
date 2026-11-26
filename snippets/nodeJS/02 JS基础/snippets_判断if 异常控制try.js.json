@@ -1,16 +1,16 @@
 {
   "... else if(...){...}": {
-    "prefix": ["else_if_", "elif_"],
+    "prefix": ["elif_"],
     "body": ["else if (${1:}) {${2:}}"],
     "description": ["... else if(...){...}"]
   },
   "try ... catch ...": {
-    "prefix": ["try_catch_"],
+    "prefix": ["tryca_"],
     "body": ["try {", "  ${1:}", "} catch (err) {", "  ", "}"],
     "description": ["try ... catch ..."]
   },
   "try ... finally ...": {
-    "prefix": ["try_finally_"],
+    "prefix": ["tryfi_"],
     "body": ["try {", "  ${1:}", "} finally {", "  ", "}"],
     "description": ["try ... finally ..."]
   }
