@@ -110,7 +110,7 @@
     "description": ["extends 继承关键字"]
   },
   "return": {
-    "prefix": ["return_", "ret_"],
+    "prefix": ["return_", "re_"],
     "body": ["return ${0}"],
     "description": ["return 返回值"]
   },
