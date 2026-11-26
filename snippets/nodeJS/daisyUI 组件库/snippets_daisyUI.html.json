@@ -9,7 +9,7 @@
       "    <p>在dialog元素标签内声明 ref=模板引用，通过useTemplateRef()访问模板引用元素</p>",
       "    <p>@keydown.esc.prevent 阻止 ESC 按键关闭模态框</p>",
       "    <p>@cancel.prevent 阻止 ESC 关闭模态框事件（兜底）</p>",
-      "    <p>modal-open 类 保持Modal模态框持久化打开</p>",
+      "    <p>modal-open 类 保持Modal模态框持久化打开（或作为showModal和close方法的替代）</p>",
       "    <a href=\"https://daisyui.com/components/modal/\" class=\"btn\" target=\"_blank\">Modal组件文档</a>",
       "    <div class=\"modal-action\">",
       "      <form method=\"dialog\">",
