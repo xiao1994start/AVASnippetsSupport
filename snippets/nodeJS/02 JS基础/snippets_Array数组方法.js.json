@@ -58,10 +58,5 @@
     "prefix": ["unshift_-array"],
     "body": ["unshift(${1:items})"],
     "description": ["unshift 在数组开头添加元素"]
-  },
-  "forEach(callback) 循环数组中的元素": {
-    "prefix": ["forEach_-array"],
-    "body": ["forEach((item) => {console.log(item)})"],
-    "description": ["forEach(callback) 循环数组中的元素"]
   }
 }
