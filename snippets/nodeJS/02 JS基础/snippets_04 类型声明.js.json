@@ -1,11 +1,11 @@
 {
   "type": {
-    "prefix": ["type_", "tp_"],
+    "prefix": ["type_", "tp"],
     "body": ["type ${0}"],
     "description": ["type"]
   },
   "typeof 类型查询": {
-    "prefix": ["typeof_", "tpof_"],
+    "prefix": ["typeof_", "tpo"],
     "body": ["typeof ${1:value_变量}"],
     "description": ["typeof 类型查询"]
   },
