@@ -65,7 +65,7 @@
     "description": ["async 异步声明"]
   },
   "await 等待Promise异步完成": {
-    "prefix": ["await_", "awt_", "aw"],
+    "prefix": ["await_", "awa", "aw"],
     "body": ["await ${1:}"],
     "description": ["await 等待Promise异步完成"]
   },
